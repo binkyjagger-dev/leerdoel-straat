@@ -66,19 +66,36 @@ Rules
 
 ## 2. Syllabus adapter (v1)
 
-Input: a text-based PDF from CvTE. Steps performed by the ingest agent:
+### Principles (decided 2026-10-11 on the economie VWO 2026 syllabus)
+
+- **P1 — The leaf is the numbered specification.** CvTE syllabi state one
+  global eindterm per subdomein ("De kandidaat kan analyseren welke invloed …")
+  followed by numbered specifications (D1.1 … D1.24). Coverage is owed at the
+  specification level: `kind: "eindterm"`, `unit_id` = `<subdomein><n>` as
+  printed (e.g. `D1.8`). The subdomein unit carries the global eindterm in its
+  `text`; its verb(s) give the planner the source-implied Bloom ceiling for all
+  its leaves, refined by the specification's own wording.
+- **P2 — Only content domains in CE scope.** Skills domains (domein A
+  *Vaardigheden* and comparable "vaardigheden"/"onderzoek" domains) are not
+  ingested as units. Skills are expressed through the Bloom levels and
+  observable performances of the criteria, not as goals of their own. Domains
+  that the syllabus marks as school-exam-only and does not specify are skipped
+  as well. The ingest notes list every skipped domain.
+- **P3 — Specification sub-items stay inside the leaf.** Roman-numeral or
+  bullet sub-items under one specification (e.g. the four market forms under
+  D2.1) remain in that leaf's `text`; the planner decides how many groups the
+  leaf needs.
+
+### Steps performed by the ingest agent
 
 1. Extract text per page (`pdftotext -layout` or PyMuPDF; the agent uses whatever is available).
-2. Locate the specification section ("Specificatie van de globale eindtermen"
-   or equivalent). Ignore front matter, toelichting and appendices unless they
-   contain eindtermen.
-3. Build domein / subdomein / eindterm units using the printed codes. If the
-   syllabus numbers eindtermen only within a subdomein, compose
-   `unit_id` as `<subdomein>.<n>`.
-4. Where a subdomein lists bullet-level specifications under one eindterm,
-   keep them inside the eindterm's `text` (one eindterm = one leaf). Do not
-   split bullets into separate leaves; the planner decides how many groups a
-   leaf needs.
+2. Locate the specification chapter ("Specificatie domeinen" or equivalent).
+   Ignore front matter, toelichting and appendices unless they contain
+   specifications.
+3. Apply P2: select the content domains.
+4. Build domein / subdomein / eindterm units using the printed codes (P1).
+   Subdomein `text` = the global eindterm sentence(s). Leaf `text` = the
+   specification text including sub-items (P3), literal.
 5. Record the page number per unit.
 
 Deterministic validation (`scripts/validate.py source_units`):

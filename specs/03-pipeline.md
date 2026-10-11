@@ -48,9 +48,13 @@ Output `02_plan.json`: `{ "units": [ { "unit_id", "target_bloom_max", "groups": 
 Validation: every leaf appears exactly once; slots ≥ 1; `target_bloom_max` is a valid level.
 
 ### 2.3 generator
-Runs **once per leaf unit** (parallel Agent calls, batched by the orchestrator,
-e.g. 6 at a time). Input is only that unit, its ancestors' titles, its plan
-entry and the rule files. It writes expert-language goal and criteria per
+Runs **once per parent of leaves** (a subdomein: all its specifications in
+one call; parallel Agent calls, batched by the orchestrator, e.g. 4 at a time).
+Working per subdomein keeps the groups of neighbouring specifications distinct
+(rule J5) and consistent in terminology, at a fraction of the calls of
+per-leaf generation. Input is only that subdomein: its global eindterm, its
+leaves, their plan entries and the rule files. Output stays one file per leaf
+(`03_groups_raw/<unit_id>.json`), so repair rounds can target a single leaf. It writes expert-language goal and criteria per
 planned slot, with `bloom_verb` and `bloom` per criterion and the literal
 `source_quote`. It does **not** write student language and does not set
 `goal.bloom` (computed later).
@@ -110,7 +114,7 @@ groups stay in the CSV with `status = rejected` so the teacher sees them.
   "input": "input/syllabus.pdf",
   "source_type": "syllabus",
   "max_repair_rounds": 2,
-  "generator_batch_size": 6,
+  "generator_batch_size": 4,
   "models": { "ingest": "sonnet", "planner": "opus", "generator": "opus", "student_language": "sonnet", "verifier": "opus" },
   "rounds_completed": 0,
   "status": "running"

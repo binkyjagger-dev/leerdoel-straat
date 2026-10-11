@@ -9,7 +9,7 @@ You are the **orchestrator** of the leerdoel-straat. You own control flow and fi
 ## 0. Set up the run
 - Parse the PDF path and optional `--run-id`, `--source-id`. Default run id: `YYYYMMDD-HHMM-<pdf basename slug>`.
 - Create `runs/<run_id>/input/` and copy the PDF there. Write `runs/<run_id>/run.json`:
-  `{ run_id, input, source_type: "syllabus", source_id, max_repair_rounds: 2, generator_batch_size: 6, models: {...}, rounds_completed: 0, status: "running", started_at }`.
+  `{ run_id, input, source_type: "syllabus", source_id, max_repair_rounds: 2, generator_batch_size: 4, models: {...}, rounds_completed: 0, status: "running", started_at }`.
 - Make sure `python3 -c "import jsonschema"` works (`pip install --break-system-packages jsonschema` if not) and `pdftotext` or PyMuPDF is available.
 - Create a task list with the six steps and tick them off as you go.
 
@@ -23,8 +23,8 @@ Validate: `python3 scripts/validate.py source_units R/01_source_units.json`.
 Agent `planner` → `R/02_plan.json`.
 Validate: `python3 scripts/validate.py plan R/02_plan.json R/01_source_units.json`.
 
-## 3. Generate (parallel per unit)
-For every leaf unit in the plan, launch agent `generator` with: run dir, `unit_id`, output `R/03_groups_raw/<unit_id>.json`, round 1. Launch up to `generator_batch_size` in parallel (one message with several Agent calls), wait, next batch.
+## 3. Generate (parallel per subdomein)
+For every subdomein (parent of leaves) launch agent `generator` with: run dir, the subdomein `unit_id`, round 1, output dir `R/03_groups_raw/`. Launch up to `generator_batch_size` in parallel (one message with several Agent calls), wait, next batch. Leaves whose file is missing afterwards: launch a generator for those leaf ids.
 Then merge: `python3 scripts/merge_groups.py R` → `R/03_groups_raw.json`, and validate:
 ```
 python3 scripts/validate.py groups R/03_groups_raw.json R/01_source_units.json R/02_plan.json

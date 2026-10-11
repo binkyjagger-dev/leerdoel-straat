@@ -14,18 +14,19 @@ A run directory path. The PDF is at `<run_dir>/input/*.pdf`. `run.json` has `sou
 
 ## Procedure
 1. Extract text per page. Prefer `pdftotext -layout <pdf> -` (poppler). If unavailable, use Python `fitz` (PyMuPDF) or `pypdf`. Keep page numbers.
-2. Find the specification section of the eindtermen. For CvTE syllabi this is the chapter that specifies the global eindtermen per domein/subdomein. Skip front matter, toelichting, bijlagen — unless they contain eindtermen.
-3. Build units:
-   - `domein` (code letter, title), `subdomein` (code like `D1`, title), `eindterm` (leaf).
-   - `unit_id` = printed code; if eindtermen are only numbered within a subdomein, use `<subdomein>.<n>`.
-   - One eindterm = one leaf. Bullet specifications under an eindterm stay inside its `text`.
-   - `text` is **literal**: repair hyphenation and line breaks only. Never paraphrase or summarise.
-4. Write `<run_dir>/01_source_units.json` (schema above). Set `is_leaf: true` only on eindtermen.
-5. Write `<run_dir>/01_ingest_notes.md`: what you skipped and anything uncertain (page breaks inside an eindterm, ambiguous numbering, text you could not place). Short bullets. Empty file if nothing.
-6. Run `python3 scripts/validate.py source_units <run_dir>/01_source_units.json` and fix until it passes.
+2. Find the specification chapter ("Specificatie domeinen"). Skip front matter, toelichting, bijlagen — unless they contain specifications.
+3. Apply principle **P2** (specs/01 §2): ingest only **content domains** that are in central-exam scope. Skip skills domains (domein A *Vaardigheden*, and any "onderzoek"/"vaardigheden" domain) and domains the syllabus marks as school-exam-only without specification. List every skipped domain in the notes.
+4. Build units (principles **P1/P3**):
+   - `domein` (code letter, title; `text` may hold its introductory sentence).
+   - `subdomein` (code like `D1`, title): `text` = the global eindterm sentence(s) ("De kandidaat kan …"). Not a leaf.
+   - `eindterm` = **each numbered specification** (e.g. `1.8` under D1 → `unit_id` `D1.8`, `code` `1.8`). This is the leaf. Sub-items (roman numerals, bullets, footnote markers like "(1)") stay inside its `text`.
+   - `text` is **literal**: repair hyphenation, line breaks and page-header noise only. Never paraphrase or summarise.
+5. Write `<run_dir>/01_source_units.json` (schema above). Set `is_leaf: true` only on eindtermen (specifications).
+6. Write `<run_dir>/01_ingest_notes.md`: what you skipped and anything uncertain (page breaks inside an eindterm, ambiguous numbering, text you could not place). Short bullets. Empty file if nothing.
+7. Run `python3 scripts/validate.py source_units <run_dir>/01_source_units.json` and fix until it passes.
 
 ## Do not
-- Do not invent structure that is not printed. If the syllabus has no subdomeinen, omit that level (eindterm's parent is the domein).
+- Do not invent structure that is not printed. If a domein has no subdomeinen, specifications hang directly under the domein.
 - Do not drop an eindterm because it looks redundant.
 - Do not write anything downstream (plan, groups).
 
