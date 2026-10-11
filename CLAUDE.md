@@ -40,3 +40,9 @@ bash tests/run_fixture.sh                         # exercise all scripts on the 
 - Bloom levels (ordinal): onthouden < begrijpen < toepassen < analyseren < evalueren < creëren.
 - `goal.bloom` is computed (`bloom_check.py --write`), never hand-set.
 - Never paste file contents into subagent prompts; pass paths.
+
+## Lessons from run 1 (economie VWO 2026, 2026-10-11)
+- Verification of 163 groups is split over 3 verifier agents by domain (fresh contexts), then merged into one `05_verification.roundN.json`; round 2 re-judges only the repaired groups.
+- Most round-1 issues were J6 (student text dropped/softened a performance) and J2 (sorting/predicting criteria labelled toepassen). Repair = generator sharpens expert text where ambiguous, then student-language redoes only the changed groups (`redo_student.roundN.json`).
+- `student_language_check.py` counts formula symbols as words; formula criteria trip L3 at 20 words. Advisory only.
+- Planner ceiling comes from the subdomein lead-in ("herkennen en toepassen" → toepassen), not the domein verb "analyseren"; the +1 allowance is an allowance, not a target.
