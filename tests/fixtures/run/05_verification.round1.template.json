@@ -1,0 +1,7 @@
+{"round": 1, "coverage": {},
+ "groups": [
+   {"group_id": "D1.1-01", "verdict": "pass", "issues": [], "suggested_fix": null},
+   {"group_id": "D1.1-02", "verdict": "pass", "issues": [], "suggested_fix": null},
+   {"group_id": "D1.2-01", "verdict": "revise", "issues": [{"rule": "J4", "criterion_id": null, "reason": "Teken van de elasticiteit (negatief) wordt niet verklaard; leerling kan niet beoordelen waarom de uitkomst negatief is."}], "suggested_fix": "Voeg een criterium toe dat de leerling uitlegt waarom de prijselasticiteit van de vraag negatief is."}
+ ],
+ "unit_findings": []}

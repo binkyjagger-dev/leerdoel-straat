@@ -1,0 +1,1 @@
+- D1.2 stond over een paginagrens (p. 15–16); tekst samengevoegd.

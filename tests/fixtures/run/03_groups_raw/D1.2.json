@@ -1,0 +1,8 @@
+{"groups": [
+  {"group_id": "D1.2-01", "unit_id": "D1.2", "source_quote": "de prijselasticiteit van de vraag berekenen en de uitkomst interpreteren",
+   "goal": {"text_expert": "De leerling kan de prijselasticiteit van de vraag berekenen en de uitkomst interpreteren.", "text_student": null, "bloom": null},
+   "criteria": [
+     {"criterion_id": "D1.2-01-a", "text_expert": "Berekent de prijselasticiteit van de vraag als procentuele verandering van de gevraagde hoeveelheid gedeeld door procentuele verandering van de prijs.", "text_student": null, "bloom": "toepassen", "bloom_verb": "berekenen"},
+     {"criterion_id": "D1.2-01-b", "text_expert": "Interpreteert een uitkomst tussen 0 en -1 als inelastisch en kleiner dan -1 als elastisch.", "text_student": null, "bloom": "begrijpen", "bloom_verb": "interpreteren"}
+   ], "provenance": {"generated_round": 1, "generator_notes": ""}}
+]}

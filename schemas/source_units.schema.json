@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SourceUnits",
+  "type": "object",
+  "required": ["source", "units"],
+  "properties": {
+    "source": {
+      "type": "object",
+      "required": ["source_id", "source_type", "title", "subject", "file"],
+      "properties": {
+        "source_id": {"type": "string", "minLength": 1},
+        "source_type": {"enum": ["syllabus", "textbook"]},
+        "title": {"type": "string"},
+        "subject": {"type": "string"},
+        "level": {"type": ["string", "null"]},
+        "file": {"type": "string"},
+        "ingested_at": {"type": "string"}
+      }
+    },
+    "units": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["unit_id", "parent_id", "kind", "text", "is_leaf"],
+        "properties": {
+          "unit_id": {"type": "string", "minLength": 1},
+          "parent_id": {"type": ["string", "null"]},
+          "kind": {"enum": ["domein", "subdomein", "eindterm", "hoofdstuk", "paragraaf", "blok"]},
+          "code": {"type": ["string", "null"]},
+          "title": {"type": ["string", "null"]},
+          "text": {"type": "string"},
+          "is_leaf": {"type": "boolean"},
+          "page": {"type": ["integer", "null"]},
+          "related_unit_ids": {"type": ["array", "null"], "items": {"type": "string"}}
+        }
+      }
+    }
+  }
+}

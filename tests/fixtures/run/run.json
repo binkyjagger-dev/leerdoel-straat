@@ -1,0 +1,1 @@
+{"run_id": "fixture", "input": "input/fixture.pdf", "source_type": "syllabus", "source_id": "fixture-economie-vwo", "max_repair_rounds": 2, "generator_batch_size": 6, "rounds_completed": 1, "status": "done"}

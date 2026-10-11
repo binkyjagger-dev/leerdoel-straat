@@ -1,0 +1,35 @@
+{
+  "_comment": "Revised Bloom (Anderson & Krathwohl 2001), cognitive process dimension. Dutch infinitives. 'ambiguous' verbs list all levels they may legitimately take; the generator picks one and the verifier checks it against the described performance. Edit this file, not the prompts.",
+  "levels": ["onthouden", "begrijpen", "toepassen", "analyseren", "evalueren", "creëren"],
+  "verbs": {
+    "onthouden": ["benoemen", "noemen", "opnoemen", "opsommen", "omschrijven", "definiëren", "herkennen", "aangeven", "weergeven", "reproduceren", "herhalen", "aanwijzen", "labelen", "ordenen (in gegeven volgorde)", "opzoeken"],
+    "begrijpen": ["uitleggen", "toelichten", "samenvatten", "parafraseren", "in eigen woorden weergeven", "een voorbeeld geven", "illustreren", "classificeren", "indelen", "vergelijken", "het verschil aangeven", "interpreteren", "beschrijven", "verduidelijken", "voorspellen (op basis van een gegeven verband)", "concluderen (uit gegeven informatie)", "herleiden tot"],
+    "toepassen": ["berekenen", "toepassen", "uitvoeren", "gebruiken", "aflezen", "oplossen", "invullen", "hanteren", "bepalen", "uitrekenen", "omrekenen", "demonstreren", "uitwerken", "tekenen (volgens een gegeven model)", "schetsen (volgens een gegeven model)", "schatten", "bewerken"],
+    "analyseren": ["analyseren", "onderscheiden", "verband leggen", "afleiden", "ontleden", "structureren", "vergelijken en verklaren", "onderbouwen met gegevens", "uit een bron halen", "selecteren (relevante informatie)", "organiseren", "toeschrijven", "oorzaak en gevolg aangeven", "relateren"],
+    "evalueren": ["beoordelen", "beargumenteren", "afwegen", "kritisch bespreken", "een standpunt innemen", "verdedigen", "bekritiseren", "toetsen (aan criteria)", "controleren", "evalueren", "rechtvaardigen", "kiezen en onderbouwen", "voor- en nadelen afwegen"],
+    "creëren": ["ontwerpen", "opstellen", "construeren", "formuleren (eigen hypothese of model)", "bedenken", "ontwikkelen", "samenstellen", "produceren", "plannen", "genereren", "creëren"]
+  },
+  "ambiguous": {
+    "verklaren": ["begrijpen", "analyseren"],
+    "tekenen": ["toepassen", "creëren"],
+    "beschrijven": ["onthouden", "begrijpen"],
+    "vergelijken": ["begrijpen", "analyseren"],
+    "voorspellen": ["begrijpen", "toepassen", "analyseren"],
+    "concluderen": ["begrijpen", "analyseren", "evalueren"],
+    "bepalen": ["toepassen", "analyseren"],
+    "aangeven": ["onthouden", "begrijpen"],
+    "onderbouwen": ["analyseren", "evalueren"],
+    "schetsen": ["toepassen", "creëren"],
+    "toelichten": ["begrijpen", "analyseren"]
+  },
+  "forbidden_criterion_verbs": ["weten", "kennen", "begrijpen", "inzien", "beseffen", "bekend zijn met", "leren", "zich bewust zijn van", "inzicht hebben in", "snappen", "waarderen", "bewust worden van", "op de hoogte zijn van", "zich realiseren"],
+  "source_verb_hints": {
+    "_comment": "Verbs as used by CvTE eindtermen → implied maximum level, for the planner's target_bloom_max.",
+    "noemen": "onthouden", "benoemen": "onthouden", "omschrijven": "onthouden", "herkennen": "onthouden",
+    "beschrijven": "begrijpen", "uitleggen": "begrijpen", "toelichten": "begrijpen", "verklaren": "begrijpen",
+    "berekenen": "toepassen", "toepassen": "toepassen", "aflezen": "toepassen", "tekenen": "toepassen", "bepalen": "toepassen",
+    "analyseren": "analyseren", "afleiden": "analyseren", "verband leggen": "analyseren", "onderscheiden": "analyseren", "verklaren aan de hand van": "analyseren",
+    "beoordelen": "evalueren", "beargumenteren": "evalueren", "afwegen": "evalueren", "een standpunt innemen": "evalueren", "evalueren": "evalueren",
+    "ontwerpen": "creëren", "opstellen": "creëren", "formuleren": "creëren"
+  }
+}

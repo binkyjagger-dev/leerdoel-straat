@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Plan",
+  "type": "object",
+  "required": ["units"],
+  "properties": {
+    "units": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["unit_id", "target_bloom_max", "groups", "rationale"],
+        "properties": {
+          "unit_id": {"type": "string"},
+          "target_bloom_max": {"enum": ["onthouden", "begrijpen", "toepassen", "analyseren", "evalueren", "creëren"]},
+          "groups": {
+            "type": "array", "minItems": 1, "maxItems": 4,
+            "items": {
+              "type": "object",
+              "required": ["slot", "focus"],
+              "properties": {"slot": {"type": "integer", "minimum": 1}, "focus": {"type": "string", "minLength": 5}}
+            }
+          },
+          "rationale": {"type": "string"}
+        }
+      }
+    }
+  }
+}

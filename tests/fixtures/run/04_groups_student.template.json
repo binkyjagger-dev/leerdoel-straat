@@ -1,0 +1,21 @@
+{"groups": [
+  {"group_id": "D1.1-01", "unit_id": "D1.1", "source_quote": "verklaren hoe de evenwichtsprijs en de evenwichtshoeveelheid op een markt van volkomen concurrentie tot stand komen",
+   "goal": {"text_expert": "De leerling kan verklaren hoe de evenwichtsprijs en evenwichtshoeveelheid op een markt van volkomen concurrentie ontstaan.", "text_student": "Ik kan uitleggen hoe de evenwichtsprijs en evenwichtshoeveelheid ontstaan op een markt van volkomen concurrentie.", "bloom": "begrijpen"},
+   "criteria": [
+     {"criterion_id": "D1.1-01-a", "text_expert": "Benoemt dat bij de evenwichtsprijs de gevraagde en aangeboden hoeveelheid aan elkaar gelijk zijn.", "text_student": "Ik kan benoemen dat bij de evenwichtsprijs de gevraagde en aangeboden hoeveelheid gelijk zijn.", "bloom": "onthouden", "bloom_verb": "benoemen"},
+     {"criterion_id": "D1.1-01-b", "text_expert": "Legt uit waarom een prijs boven het evenwicht tot een aanbodoverschot leidt en daardoor daalt.", "text_student": "Ik kan uitleggen waarom een prijs boven het evenwicht een aanbodoverschot geeft en daardoor daalt.", "bloom": "begrijpen", "bloom_verb": "uitleggen"},
+     {"criterion_id": "D1.1-01-c", "text_expert": "Legt uit waarom een prijs onder het evenwicht tot een vraagoverschot leidt en daardoor stijgt.", "text_student": "Ik kan uitleggen waarom een prijs onder het evenwicht een vraagoverschot geeft en daardoor stijgt.", "bloom": "begrijpen", "bloom_verb": "uitleggen"}
+   ], "provenance": {"generated_round": 1, "generator_notes": ""}},
+  {"group_id": "D1.1-02", "unit_id": "D1.1", "source_quote": "berekenen uit gegeven vraag- en aanbodfuncties",
+   "goal": {"text_expert": "De leerling kan de evenwichtsprijs en evenwichtshoeveelheid berekenen uit gegeven vraag- en aanbodfuncties.", "text_student": "Ik kan de evenwichtsprijs en evenwichtshoeveelheid berekenen uit een vraagfunctie en een aanbodfunctie.", "bloom": "toepassen"},
+   "criteria": [
+     {"criterion_id": "D1.1-02-a", "text_expert": "Stelt de vraagfunctie gelijk aan de aanbodfunctie om de evenwichtsprijs te berekenen.", "text_student": "Ik kan de evenwichtsprijs berekenen door de vraagfunctie gelijk te stellen aan de aanbodfunctie.", "bloom": "toepassen", "bloom_verb": "berekenen"},
+     {"criterion_id": "D1.1-02-b", "text_expert": "Berekent de evenwichtshoeveelheid door de evenwichtsprijs in een van de functies in te vullen.", "text_student": "Ik kan de evenwichtshoeveelheid berekenen door de evenwichtsprijs in te vullen in een van de functies.", "bloom": "toepassen", "bloom_verb": "berekenen"}
+   ], "provenance": {"generated_round": 1, "generator_notes": ""}},
+  {"group_id": "D1.2-01", "unit_id": "D1.2", "source_quote": "de prijselasticiteit van de vraag berekenen en de uitkomst interpreteren",
+   "goal": {"text_expert": "De leerling kan de prijselasticiteit van de vraag berekenen en de uitkomst interpreteren.", "text_student": "Ik kan de prijselasticiteit van de vraag berekenen en uitleggen wat de uitkomst betekent.", "bloom": "toepassen"},
+   "criteria": [
+     {"criterion_id": "D1.2-01-a", "text_expert": "Berekent de prijselasticiteit van de vraag als procentuele verandering van de gevraagde hoeveelheid gedeeld door procentuele verandering van de prijs.", "text_student": "Ik kan de prijselasticiteit van de vraag berekenen met de procentuele veranderingen van hoeveelheid en prijs.", "bloom": "toepassen", "bloom_verb": "berekenen"},
+     {"criterion_id": "D1.2-01-b", "text_expert": "Interpreteert een uitkomst tussen 0 en -1 als inelastisch en kleiner dan -1 als elastisch.", "text_student": "Ik kan uitleggen dat een uitkomst tussen 0 en -1 inelastisch is en kleiner dan -1 elastisch.", "bloom": "begrijpen", "bloom_verb": "interpreteren"}
+   ], "provenance": {"generated_round": 1, "generator_notes": ""}}
+]}

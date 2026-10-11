@@ -1,0 +1,23 @@
+{
+  "_comment": "Operationalisation of Clarke / Hattie / Wiliam / SLO guidance on learning intentions and success criteria in student language. Read by the student-language agent AND by scripts/student_language_check.py. See specs/02-learning-goal-groups.md §4.",
+  "required_opener": "Ik kan ",
+  "forbidden_openers": ["Ik weet", "Ik begrijp", "Ik ken", "Ik snap", "Ik heb inzicht", "Ik ben bekend", "Ik besef", "Ik zie in", "Ik leer", "De leerling", "De kandidaat", "Je kan", "Je kunt"],
+  "forbidden_phrases": [
+    "de kandidaat", "in de context van", "met inachtneming van", "aan de hand van onderstaande",
+    "in grote lijnen", "globaal", "een aantal", "enkele", "ongeveer", "zo nodig", "al dan niet",
+    "c.q.", "respectievelijk", "middels", "ten aanzien van", "met betrekking tot", "inzicht hebben in",
+    "er wordt", "er worden", "het verklaren van", "het berekenen van", "het uitleggen van"
+  ],
+  "max_words_per_sentence": 20,
+  "max_sentences": 1,
+  "keep_subject_terms": true,
+  "guidance": [
+    "Begin elke zin met 'Ik kan' en een handelingswerkwoord dat de leerling zelf kan controleren.",
+    "Één zin, één idee: hoofdzin met maximaal één bijzin; geen opsommingen in de zin — splits in criteria.",
+    "Actief, tegenwoordige tijd. Geen lijdende vorm, geen naamwoordstijl.",
+    "Vaktermen blijven staan (evenwichtsprijs, elasticiteit, marginale kosten); curriculumtaal gaat weg.",
+    "Houd een korte, concrete contextaanduiding als de eindterm die noemt ('bij een markt die niet goed werkt, zoals bij vervuiling').",
+    "Betekenis blijft gelijk aan de expertformulering: geen handeling toevoegen, weglaten of afzwakken; de Bloom-categorie van het werkwoord blijft behouden.",
+    "Geen vage hoeveelheden of afzwakkingen, tenzij de eindterm schatten vraagt — maak het dan concreet ('schatten')."
+  ]
+}

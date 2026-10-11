@@ -1,0 +1,4 @@
+{"units": [
+  {"unit_id": "D1.1", "target_bloom_max": "toepassen", "groups": [{"slot": 1, "focus": "verklaren van het ontstaan van marktevenwicht"}, {"slot": 2, "focus": "berekenen van evenwichtsprijs en -hoeveelheid uit functies"}], "rationale": "Twee werkwoorden met verschillende objecten: verklaren (begrijpen) en berekenen (toepassen)."},
+  {"unit_id": "D1.2", "target_bloom_max": "toepassen", "groups": [{"slot": 1, "focus": "berekenen en interpreteren van de prijselasticiteit van de vraag"}], "rationale": "Eén concept; berekenen en interpreteren horen bij elkaar."}
+]}

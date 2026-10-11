@@ -1,0 +1,15 @@
+{"groups": [
+  {"group_id": "D1.1-01", "unit_id": "D1.1", "source_quote": "verklaren hoe de evenwichtsprijs en de evenwichtshoeveelheid op een markt van volkomen concurrentie tot stand komen",
+   "goal": {"text_expert": "De leerling kan verklaren hoe de evenwichtsprijs en evenwichtshoeveelheid op een markt van volkomen concurrentie ontstaan.", "text_student": null, "bloom": null},
+   "criteria": [
+     {"criterion_id": "D1.1-01-a", "text_expert": "Benoemt dat bij de evenwichtsprijs de gevraagde en aangeboden hoeveelheid aan elkaar gelijk zijn.", "text_student": null, "bloom": "onthouden", "bloom_verb": "benoemen"},
+     {"criterion_id": "D1.1-01-b", "text_expert": "Legt uit waarom een prijs boven het evenwicht tot een aanbodoverschot leidt en daardoor daalt.", "text_student": null, "bloom": "begrijpen", "bloom_verb": "uitleggen"},
+     {"criterion_id": "D1.1-01-c", "text_expert": "Legt uit waarom een prijs onder het evenwicht tot een vraagoverschot leidt en daardoor stijgt.", "text_student": null, "bloom": "begrijpen", "bloom_verb": "uitleggen"}
+   ], "provenance": {"generated_round": 1, "generator_notes": ""}},
+  {"group_id": "D1.1-02", "unit_id": "D1.1", "source_quote": "berekenen uit gegeven vraag- en aanbodfuncties",
+   "goal": {"text_expert": "De leerling kan de evenwichtsprijs en evenwichtshoeveelheid berekenen uit gegeven vraag- en aanbodfuncties.", "text_student": null, "bloom": null},
+   "criteria": [
+     {"criterion_id": "D1.1-02-a", "text_expert": "Stelt de vraagfunctie gelijk aan de aanbodfunctie om de evenwichtsprijs te berekenen.", "text_student": null, "bloom": "toepassen", "bloom_verb": "berekenen"},
+     {"criterion_id": "D1.1-02-b", "text_expert": "Berekent de evenwichtshoeveelheid door de evenwichtsprijs in een van de functies in te vullen.", "text_student": null, "bloom": "toepassen", "bloom_verb": "berekenen"}
+   ], "provenance": {"generated_round": 1, "generator_notes": ""}}
+]}

@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Verification",
+  "type": "object",
+  "required": ["round", "groups", "unit_findings"],
+  "properties": {
+    "round": {"type": "integer", "minimum": 1},
+    "coverage": {"type": "object"},
+    "groups": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["group_id", "verdict", "issues"],
+        "properties": {
+          "group_id": {"type": "string"},
+          "verdict": {"enum": ["pass", "revise", "reject"]},
+          "issues": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["rule", "reason"],
+              "properties": {
+                "rule": {"type": "string", "pattern": "^(J[1-8]|G6)$"},
+                "criterion_id": {"type": ["string", "null"]},
+                "reason": {"type": "string"}
+              }
+            }
+          },
+          "suggested_fix": {"type": ["string", "null"]}
+        }
+      }
+    },
+    "unit_findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["unit_id", "finding"],
+        "properties": {"unit_id": {"type": "string"}, "finding": {"type": "string"}}
+      }
+    }
+  }
+}
