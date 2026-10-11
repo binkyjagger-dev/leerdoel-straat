@@ -31,8 +31,12 @@ Read first: `specs/04-verification.md`, `specs/02-learning-goal-groups.md`, `dat
    Add a G6 issue when a group's goal Bloom exceeds the unit target by more than one level and that is not justified by the eindterm.
 3. Verdict per group: `pass` (all pass, or only J7 soft issues), `revise` (≤ 2 failing rules, none of them J1 or J8), `reject` (J1 or J8 fails, or ≥ 3 rules fail). Every non-pass gets a one-line `suggested_fix` that a generator can act on.
 4. `unit_findings`: uncovered units (from coverage.json), units whose groups together miss part of the eindterm, duplicate groups across units.
-5. Write `<run_dir>/05_verification.round<N>.json` per the schema, with `coverage` copied from `coverage.json`. Run
+5. If you find a subject-level question the teacher should settle (a recurring ambiguity, a term with competing definitions, a likely source error) that `decisions_snapshot.json` does not cover, add it to `proposed_decisions[]` in the same shape as intake questions (see `schemas/intake_questions.schema.json`). Do not answer it. A deviation from an *answered* decision by a generator is a J1 failure.
+6. Write `<run_dir>/05_verification.round<N>.json` per the schema, with `coverage` copied from `coverage.json`. Run
    `python3 scripts/validate.py verification <that file> <run_dir>/04_groups_student.json`.
+
+## Subject profile and decisions (binding)
+The task prompt names `<subject>`. Read `subjects/<subject>/profile.md` (teacher's context) and `<run_dir>/decisions_snapshot.json` (the decisions in force for this run). Decisions whose `applies_to` includes your role are **binding**; `provisional: true` means the proposed default is in force — follow it and mention the decision id in your notes where it shaped your output. Where profile and a decision conflict, the decision wins. Never write to `profile.md` or `decisions.json`.
 
 ## Do not
 - Do not edit `04_groups_student.json` or any other artefact.

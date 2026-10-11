@@ -1,0 +1,167 @@
+{
+  "subject": "economie",
+  "decisions": [
+    {
+      "id": "economie-001",
+      "question": "Welk werkwoord bepaalt het Bloom-plafond per specificatie: de aanhef van het subdomein ('De kandidaat kan in contexten herkennen en toepassen') of het werkwoord van het domein ('De kandidaat kan analyseren …')?",
+      "context": "Alle inhoudsdomeinen D–I zeggen op domeinniveau 'analyseren'; 19 van de 21 subdomeinen hebben alleen de aanhef 'herkennen en toepassen'. In run 1 is de subdomein-aanhef gebruikt: plafond toepassen (de generator mag één niveau hoger). Gevolg: slechts 6 van 579 criteria op analyseren, niets op evalueren. Met het domeinwerkwoord zouden o.a. H4.5 (doelmatigheid vs rechtvaardigheid) en I4.6 (economische scholen) naar analyseren gaan.",
+      "options": [
+        "Subdomein-aanhef: plafond toepassen (zoals run 1)",
+        "Domeinwerkwoord: plafond analyseren voor alle specificaties",
+        "Subdomein-aanhef, maar analyseren toestaan waar de specificatie zelf een verband/oorzaak-gevolg vraagt ('de invloed van … op …')"
+      ],
+      "proposed": "Subdomein-aanhef: plafond toepassen (zoals run 1)",
+      "impact": "high",
+      "applies_to": [
+        "planner",
+        "generator",
+        "verifier"
+      ],
+      "affects_units": [
+        "*"
+      ],
+      "status": "open",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null,
+      "source_run": "20261011-1150-economie-vwo-2026",
+      "raised_by": "verifier",
+      "supersedes": null
+    },
+    {
+      "id": "economie-002",
+      "question": "Is 'herkennen in een context' een criterium op het niveau onthouden (zoals de werkwoordenlijst nu zegt) of op begrijpen (classificeren van een nieuw voorbeeld, zoals Anderson & Krathwohl het lezen)?",
+      "context": "Komt voor in E1.2, F2.1, G1.1, G1.2, G2.1, G2.2, G3.2 en elders. Verandert het leerdoel-Bloom niet (er is altijd een hoger criterium), maar wel de Bloom-verdeling en de koppeling met de toetsbank (Bloom per criterium).",
+      "options": [
+        "Onthouden (huidige werkwoordenlijst)",
+        "Begrijpen (classificeren van een nieuw voorbeeld)"
+      ],
+      "proposed": "Begrijpen (classificeren van een nieuw voorbeeld)",
+      "impact": "medium",
+      "applies_to": [
+        "generator",
+        "verifier"
+      ],
+      "affects_units": [
+        "E1.2",
+        "F2.1",
+        "G1.1",
+        "G1.2",
+        "G2.1",
+        "G2.2",
+        "G3.2"
+      ],
+      "status": "open",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null,
+      "source_run": "20261011-1150-economie-vwo-2026",
+      "raised_by": "verifier",
+      "supersedes": null
+    },
+    {
+      "id": "economie-003",
+      "question": "Wat verstaan we onder een 'normaal goed' bij de inkomenselasticiteit: 0 < Ey < 1 (naast inferieur en luxe), of alles met Ey > 0 (met primair/luxe als subtypen)?",
+      "context": "D1.8 noemt drie categorieën (inferieur, normaal, luxe). Run 1 koos 0 < Ey < 1. Methodes verschillen hierin; de keuze moet aansluiten bij jullie methode.",
+      "options": [
+        "Normaal = 0 < Ey < 1 (drie categorieën naast elkaar)",
+        "Normaal = Ey > 0, met primair (0–1) en luxe (>1) als subtypen"
+      ],
+      "proposed": "Normaal = 0 < Ey < 1 (drie categorieën naast elkaar)",
+      "impact": "low",
+      "applies_to": [
+        "generator",
+        "verifier"
+      ],
+      "affects_units": [
+        "D1.8"
+      ],
+      "status": "open",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null,
+      "source_run": "20261011-1150-economie-vwo-2026",
+      "raised_by": "verifier",
+      "supersedes": null
+    },
+    {
+      "id": "economie-004",
+      "question": "Hoe onderscheiden we 'onvolledige informatie' van 'asymmetrische informatie' in G2.2: onvolledig = beide partijen missen informatie (tegenover asymmetrisch = één partij weet meer), of onvolledig als overkoepelende term waarvan asymmetrisch een bijzondere vorm is?",
+      "context": "Syllabus G2 zegt 'onvolledige en / of asymmetrische informatie'. Run 1 koos het contrast 'beide partijen missen informatie'. Als dat niet is hoe jullie het doceren, is G2.2-01-b economisch onjuist (J8).",
+      "options": [
+        "Contrast: onvolledig = beide partijen missen informatie; asymmetrisch = één partij weet meer",
+        "Overkoepelend: onvolledig is de algemene term, asymmetrisch een bijzondere vorm"
+      ],
+      "proposed": "Contrast: onvolledig = beide partijen missen informatie; asymmetrisch = één partij weet meer",
+      "impact": "medium",
+      "applies_to": [
+        "generator",
+        "verifier"
+      ],
+      "affects_units": [
+        "G2.1",
+        "G2.2"
+      ],
+      "status": "open",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null,
+      "source_run": "20261011-1150-economie-vwo-2026",
+      "raised_by": "verifier",
+      "supersedes": null
+    },
+    {
+      "id": "economie-005",
+      "question": "De syllabustekst van I4.2 zegt 'stijging van autonome bestedingen (bijvoorbeeld door lagere autonome consumptie …)'. Behandelen we dit als drukfout ('hogere') en formuleren we de leerdoelen economisch correct, of citeren we de syllabus letterlijk?",
+      "context": "Run 1 citeert letterlijk in source_quote maar formuleert de criteria correct. Raakt I4.2-02.",
+      "options": [
+        "Drukfout: criteria economisch correct, bronfout noteren in het dekkingsrapport",
+        "Letterlijk volgen zoals gedrukt"
+      ],
+      "proposed": "Drukfout: criteria economisch correct, bronfout noteren in het dekkingsrapport",
+      "impact": "low",
+      "applies_to": [
+        "generator",
+        "verifier",
+        "exporter"
+      ],
+      "affects_units": [
+        "I4.2"
+      ],
+      "status": "open",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null,
+      "source_run": "20261011-1150-economie-vwo-2026",
+      "raised_by": "verifier",
+      "supersedes": null
+    },
+    {
+      "id": "economie-006",
+      "question": "Specificaties die in de syllabus alleen een kopregel zijn (H4.3 'Inkomensverdeling …', H5.3 'Soorten werkloosheid …') zijn in run 1 ingevuld met gangbare lesstof (bij H5.3: zoek-/frictie-, mismatch- en institutionele verklaringen). Is die invulling akkoord, of wil je per kopregel zelf aangeven welke inhoud erbij hoort (in het vakprofiel)?",
+      "context": "Zonder invulling kan de straat bij kopregels alleen een leeg leerdoel maken. Raakt H4.3, H5.3 en vergelijkbare eenheden in latere syllabi.",
+      "options": [
+        "Gangbare lesstof invullen, docent controleert achteraf via de twijfellijst (zoals run 1)",
+        "Straat vraagt bij elke kopregel in de intake welke inhoud erbij hoort",
+        "Docent vult de inhoud per kopregel vooraf in het vakprofiel in"
+      ],
+      "proposed": "Gangbare lesstof invullen, docent controleert achteraf via de twijfellijst (zoals run 1)",
+      "impact": "medium",
+      "applies_to": [
+        "generator",
+        "verifier"
+      ],
+      "affects_units": [
+        "H4.3",
+        "H5.3"
+      ],
+      "status": "open",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null,
+      "source_run": "20261011-1150-economie-vwo-2026",
+      "raised_by": "verifier",
+      "supersedes": null
+    }
+  ]
+}

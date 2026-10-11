@@ -26,11 +26,11 @@ Zie `specs/00-overview.md`.
 pip install --break-system-packages jsonschema
 # poppler (pdftotext) of PyMuPDF beschikbaar hebben
 claude            # in deze map
-> /generate input/syllabus-economie-vwo.pdf
+> /generate input/syllabus-economie-vwo.pdf --subject economie
 ```
 
-Scripts los testen op de fixture: `bash tests/run_fixture.sh`.
+Handleiding: `docs/HANDLEIDING.md`. Scripts los testen op de fixture: `bash tests/run_fixture.sh`.
 
 ## Status
 
-v0.1 — spec en scaffold. Nog niet gedraaid op een echte syllabus. Zie `specs/00-overview.md §6` voor de definition of done.
+v0.2 — eerste echte run gedaan (economie VWO CE 2026: 126 eindtermen, 163 leerdoelgroepen, 100 % dekking, zie `runs/`); vakprofielen en intake-pauze toegevoegd. Zie `specs/00-overview.md §6` voor de definition of done.

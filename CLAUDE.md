@@ -12,6 +12,7 @@ report + doubt list.
   `data/student_language_rules.json`. Agents and validators read the same files.
 - **Deterministic where possible.** Scripts in `scripts/` validate; agents never skip them.
 - **Verifier is independent.** Always a fresh Agent call; it critiques, never rewrites.
+- **One human checkpoint.** The intake step (1b) asks subject-specific questions and records answers in `subjects/<vak>/decisions.json` via `scripts/decisions.py`; nothing else writes there, and nothing writes `profile.md`.
 - **Bounded loops.** Max 2 repair rounds; leftovers go to the doubt list, nothing is dropped.
 - Domain language in code, specs and prompts: English. Output artefacts (goals, criteria, reports): Dutch.
 
@@ -20,8 +21,10 @@ report + doubt list.
 specs/            00-overview … 05-export
 schemas/          JSON schemas per artefact
 data/             rule files (Bloom verbs, student-language rules)
-scripts/          validate.py bloom_check.py student_language_check.py coverage.py merge_groups.py apply_verdicts.py export.py
-.claude/agents/   ingest planner generator student-language verifier
+scripts/          validate.py bloom_check.py student_language_check.py coverage.py merge_groups.py apply_verdicts.py export.py decisions.py
+subjects/<vak>/   profile.md (human) + decisions.json (straat, via decisions.py) — see specs/06
+docs/             HANDLEIDING.md (one-page tutorial, Dutch)
+.claude/agents/   ingest intake planner generator student-language verifier
 .claude/commands/ generate   (the orchestrator)
 runs/<run_id>/    one folder per run (git-ignored except .gitkeep)
 tests/fixtures/   small synthetic run used to exercise the scripts
@@ -30,7 +33,7 @@ tests/fixtures/   small synthetic run used to exercise the scripts
 ## Running
 ```
 pip install --break-system-packages jsonschema   # once
-/generate input/syllabus-economie-vwo.pdf
+/generate input/syllabus-economie-vwo.pdf --subject economie
 python3 scripts/export.py runs/<run_id>          # re-export only
 bash tests/run_fixture.sh                         # exercise all scripts on the fixture
 ```

@@ -8,6 +8,7 @@ R="$TMP/run"
 mv "$R/04_groups_student.template.json" "$R/04_groups_student.json"
 mv "$R/05_verification.round1.template.json" "$R/05_verification.round1.json"
 S=scripts
+echo "== decisions snapshot";    python3 $S/decisions.py snapshot economie $R
 echo "== validate source_units";  python3 $S/validate.py source_units $R/01_source_units.json
 echo "== validate plan";          python3 $S/validate.py plan $R/02_plan.json $R/01_source_units.json
 echo "== merge";                  python3 $S/merge_groups.py $R

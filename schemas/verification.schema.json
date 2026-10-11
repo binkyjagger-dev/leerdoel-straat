@@ -2,31 +2,70 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Verification",
   "type": "object",
-  "required": ["round", "groups", "unit_findings"],
+  "required": [
+    "round",
+    "groups",
+    "unit_findings"
+  ],
   "properties": {
-    "round": {"type": "integer", "minimum": 1},
-    "coverage": {"type": "object"},
+    "round": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "coverage": {
+      "type": "object"
+    },
     "groups": {
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["group_id", "verdict", "issues"],
+        "required": [
+          "group_id",
+          "verdict",
+          "issues"
+        ],
         "properties": {
-          "group_id": {"type": "string"},
-          "verdict": {"enum": ["pass", "revise", "reject"]},
+          "group_id": {
+            "type": "string"
+          },
+          "verdict": {
+            "enum": [
+              "pass",
+              "revise",
+              "reject"
+            ]
+          },
           "issues": {
             "type": "array",
             "items": {
               "type": "object",
-              "required": ["rule", "reason"],
+              "required": [
+                "rule",
+                "reason"
+              ],
               "properties": {
-                "rule": {"type": "string", "pattern": "^(J[1-8]|G6)$"},
-                "criterion_id": {"type": ["string", "null"]},
-                "reason": {"type": "string"}
+                "rule": {
+                  "type": "string",
+                  "pattern": "^(J[1-8]|G6)$"
+                },
+                "criterion_id": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "reason": {
+                  "type": "string"
+                }
               }
             }
           },
-          "suggested_fix": {"type": ["string", "null"]}
+          "suggested_fix": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
         }
       }
     },
@@ -34,8 +73,86 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["unit_id", "finding"],
-        "properties": {"unit_id": {"type": "string"}, "finding": {"type": "string"}}
+        "required": [
+          "unit_id",
+          "finding"
+        ],
+        "properties": {
+          "unit_id": {
+            "type": "string"
+          },
+          "finding": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "proposed_decisions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "key",
+          "question",
+          "context",
+          "options",
+          "proposed",
+          "impact",
+          "applies_to"
+        ],
+        "properties": {
+          "key": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$"
+          },
+          "question": {
+            "type": "string",
+            "minLength": 10
+          },
+          "context": {
+            "type": "string"
+          },
+          "options": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 4,
+            "items": {
+              "type": "string"
+            }
+          },
+          "proposed": {
+            "type": "string"
+          },
+          "impact": {
+            "enum": [
+              "high",
+              "medium",
+              "low"
+            ]
+          },
+          "applies_to": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "ingest",
+                "planner",
+                "generator",
+                "student-language",
+                "verifier",
+                "exporter"
+              ]
+            }
+          },
+          "affects_units": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": "string"
+            }
+          }
+        }
       }
     }
   }

@@ -25,7 +25,7 @@ Load the subdomein (its global eindterm `text`), its leaves and their plan entri
   - `text_expert`: third person, present tense, starting with the verb ("Berekent …", "Legt uit waarom …"). Never a forbidden verb (weten, kennen, begrijpen, inzien, …).
 - Criteria together must make the goal checkable; they must be distinct; scaffolding criteria at lower levels are welcome, but the highest criterion must not exceed the unit's `target_bloom_max` by more than one level.
 - Leave `goal.bloom` and all `text_student` fields `null` — they are set downstream.
-- `provenance.generated_round` = the round you were told; `generator_notes` = anything the verifier should know (e.g. why you resolved an ambiguous verb a certain way).
+- `provenance.generated_round` = the round you were told; `generator_notes` = anything the verifier should know (e.g. why you resolved an ambiguous verb a certain way, which decision id you applied, or — rarely — why you deviated from a decision).
 
 ## Before finishing
 Write each leaf file as `{"groups": [ ... ]}` and run, per file:
@@ -34,6 +34,9 @@ python3 scripts/validate.py groups <out> <run_dir>/01_source_units.json
 python3 scripts/bloom_check.py <out> <run_dir>/02_plan.json
 ```
 (validate.py without the plan argument, because the file holds one leaf.) Fix until both pass (G6 warnings are allowed but think twice).
+
+## Subject profile and decisions (binding)
+The task prompt names `<subject>`. Read `subjects/<subject>/profile.md` (teacher's context) and `<run_dir>/decisions_snapshot.json` (the decisions in force for this run). Decisions whose `applies_to` includes your role are **binding**; `provisional: true` means the proposed default is in force — follow it and mention the decision id in your notes where it shaped your output. Where profile and a decision conflict, the decision wins. Never write to `profile.md` or `decisions.json`.
 
 ## Do not
 - Do not write student language.

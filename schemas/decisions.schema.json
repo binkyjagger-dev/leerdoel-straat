@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SubjectDecisions",
+  "type": "object",
+  "required": ["subject", "decisions"],
+  "properties": {
+    "subject": {"type": "string", "minLength": 1},
+    "decisions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "question", "proposed", "impact", "applies_to", "status", "raised_by"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-z0-9-]+-[0-9]{3}$"},
+          "question": {"type": "string", "minLength": 10},
+          "context": {"type": ["string", "null"]},
+          "options": {"type": ["array", "null"], "items": {"type": "string"}},
+          "proposed": {"type": "string"},
+          "impact": {"enum": ["high", "medium", "low"]},
+          "applies_to": {"type": "array", "items": {"enum": ["ingest", "planner", "generator", "student-language", "verifier", "exporter"]}},
+          "affects_units": {"type": ["array", "null"], "items": {"type": "string"}},
+          "status": {"enum": ["open", "answered", "superseded"]},
+          "answer": {"type": ["string", "null"]},
+          "answered_by": {"type": ["string", "null"]},
+          "answered_at": {"type": ["string", "null"]},
+          "source_run": {"type": ["string", "null"]},
+          "raised_by": {"enum": ["intake", "verifier", "ingest", "human"]},
+          "supersedes": {"type": ["string", "null"]}
+        }
+      }
+    }
+  }
+}

@@ -25,6 +25,7 @@ implement; they do not restate rules that live in `data/*.json`, they read them.
 | # | Role | Reads | Writes | Tools | Model |
 |---|---|---|---|---|---|
 | 1 | `ingest` | input PDF | `01_source_units.json`, `01_ingest_notes.md` | Bash (pdftotext/python), Read, Write | sonnet |
+| 1b | `intake` | `01_source_units.json`, `01_ingest_notes.md`, `subjects/<s>/profile.md`, `subjects/<s>/decisions.json` | `01b_intake_questions.json` → orchestrator pauses, writes answers to `decisions.json` | Read, Write | opus, fresh context |
 | 2 | `planner` | `01_source_units.json`, `data/bloom_verbs_nl.json` | `02_plan.json` | Read, Write | opus |
 | 3 | `generator` | `02_plan.json` (one unit), unit text, `data/*.json`, spec §02 | `03_groups_raw/<unit_id>.json` | Read, Write | opus |
 | 4 | `student-language` | `03_groups_raw.json` (merged), `data/student_language_rules.json` | `04_groups_student.json` | Read, Write | sonnet |
@@ -33,6 +34,9 @@ implement; they do not restate rules that live in `data/*.json`, they read them.
 
 ### 2.1 ingest
 See 01-source-units §2. Outputs literal text per leaf. Never infers goals.
+
+### 2.1b intake
+See [06-subject-profiles.md](06-subject-profiles.md) §3. The only human checkpoint of the straat.
 
 ### 2.2 planner
 For every leaf unit decides:

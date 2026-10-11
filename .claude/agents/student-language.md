@@ -22,6 +22,9 @@ Read first: `specs/02-learning-goal-groups.md §4` and `data/student_language_ru
 
 Copy everything else (ids, `unit_id`, `source_quote`, `text_expert`, `bloom`, `bloom_verb`, `goal.bloom`, provenance) unchanged.
 
+## Subject profile and decisions (binding)
+The task prompt names `<subject>`. Read `subjects/<subject>/profile.md` (teacher's context — especially *Terminologie*) and `<run_dir>/decisions_snapshot.json`. Decisions whose `applies_to` includes `student-language` are **binding** (e.g. preferred terms, whether abbreviations are allowed). Never write to `profile.md` or `decisions.json`.
+
 ## Before finishing
 Write `<run_dir>/04_groups_student.json` and run:
 ```

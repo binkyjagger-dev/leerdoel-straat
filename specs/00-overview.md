@@ -21,7 +21,7 @@ doubt list for the teacher.
 In scope
 - Input: one text-based PDF of a CvTE syllabus (no OCR).
 - Source structure: domein → subdomein → eindterm, with literal text per eindterm.
-- Fully autonomous run; no human pause. Teacher reviews afterwards using the
+- Autonomous run with one human checkpoint: the intake step after ingest (06-subject-profiles). Teacher reviews afterwards using the
   coverage report and doubt list.
 - Each run starts blank — no mapping to existing canonical goals.
 - Same formulation for HAVO and VWO (no level-specific variants).
@@ -54,6 +54,9 @@ syllabus.pdf
    │
    ▼
 [1 ingest]  ──► runs/<id>/01_source_units.json      ─┐ validate (schema)
+   │
+   ▼
+[1b intake] ──► 01b_intake_questions.json ──► PAUSE: user answers → subjects/<s>/decisions.json
    │                                                  │
    ▼                                                  │
 [2 planner] ──► runs/<id>/02_plan.json               ─┤ validate (schema + every unit planned)
@@ -94,6 +97,7 @@ Principles
 | [03-pipeline.md](03-pipeline.md) | Roles, inputs/outputs, prompts' responsibilities, orchestration & repair loop |
 | [04-verification.md](04-verification.md) | Deterministic checks, judge rubric, coverage definition, doubt list |
 | [05-export.md](05-export.md) | Provisional CSV schema, coverage report, run folder layout |
+| [06-subject-profiles.md](06-subject-profiles.md) | Subject profile (`profile.md`), recorded decisions, the intake checkpoint |
 
 ## 6. Definition of done for v1
 

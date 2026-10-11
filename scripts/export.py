@@ -126,6 +126,14 @@ def main(argv: list[str]) -> None:
              f"- Leerdoelgroepen: {cov['groups_total']} · criteria: {sum(cov['bloom_distribution'].values())}", ""]
     if cov["units_uncovered"]:
         lines += ["## Niet gedekt", ""] + [f"- {u}" for u in cov["units_uncovered"]] + [""]
+    snap_path = run_dir / "decisions_snapshot.json"
+    snap = load_json(snap_path)["decisions"] if snap_path.exists() else []
+    if snap:
+        lines += ["## Toegepaste vakbeslissingen", "", "| id | status | vraag | antwoord |", "|---|---|---|---|"]
+        for d in snap:
+            st = "voorlopig (voorstel)" if d["provisional"] else "beantwoord"
+            lines += [f"| {d['id']} | {st} | {d['question']} | {d['effective_answer']} |"]
+        lines.append("")
     lines += ["## Bloom-verdeling (criteria)", "", "| Niveau | Aantal |", "|---|---|"]
     lines += [f"| {lvl} | {cov['bloom_distribution'][lvl]} |" for lvl in BLOOM_ORDER]
     lines += ["", "## Per eindterm", "", "| Domein | Eindterm | Gepland | Gemaakt | Geaccepteerd | Bloom-niveaus |", "|---|---|---|---|---|---|"]
@@ -157,6 +165,13 @@ def main(argv: list[str]) -> None:
         warns = [i for i in load_json(bloom_report)["items"] if i["severity"] == "warn"]
         if warns:
             d += ["## Bloom-waarschuwingen (G6)", ""] + [f"- {w['message']}" for w in warns] + [""]
+    open_dec = [d for d in snap if d["provisional"]]
+    if open_dec:
+        d += ["## Openstaande vakbeslissingen (voorlopig op voorstel gedraaid)", ""]
+        for x in open_dec:
+            units = ", ".join(x.get("affects_units") or []) or "—"
+            d += [f"- **{x['id']}** — {x['question']}", f"  - *Voorlopig:* {x['effective_answer']}  (eenheden: {units})"]
+        d.append("")
     notes = run_dir / "01_ingest_notes.md"
     if notes.exists() and notes.read_text(encoding="utf-8").strip():
         d += ["## Opmerkingen uit de ingest", "", notes.read_text(encoding="utf-8").strip(), ""]

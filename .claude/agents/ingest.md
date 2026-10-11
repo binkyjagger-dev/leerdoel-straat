@@ -10,7 +10,7 @@ You are the **ingest** role of the leerdoel-straat. You structure a source; you 
 Read first: `specs/01-source-units.md` and `schemas/source_units.schema.json`.
 
 ## Input
-A run directory path. The PDF is at `<run_dir>/input/*.pdf`. `run.json` has `source_type` and `source_id`.
+A run directory path and `<subject>`. Read `subjects/<subject>/profile.md` first: its *Scope* section may name domains to skip or include, overriding the P2 default. The PDF is at `<run_dir>/input/*.pdf`. `run.json` has `source_type` and `source_id`.
 
 ## Procedure
 1. Extract text per page. Prefer `pdftotext -layout <pdf> -` (poppler). If unavailable, use Python `fitz` (PyMuPDF) or `pypdf`. Keep page numbers.
