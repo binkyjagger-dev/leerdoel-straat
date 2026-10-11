@@ -20,10 +20,10 @@
       "affects_units": [
         "*"
       ],
-      "status": "open",
-      "answer": null,
-      "answered_by": null,
-      "answered_at": null,
+      "status": "answered",
+      "answer": "Subdomein-aanhef bepaalt het plafond (toepassen), maar analyseren is toegestaan waar de specificatie zelf een verband of oorzaak-gevolg vraagt ('de invloed van … op …', 'het verband tussen …', 'de samenhang tussen …').",
+      "answered_by": "Martijn",
+      "answered_at": "2026-10-11T18:13:02Z",
       "source_run": "20261011-1150-economie-vwo-2026",
       "raised_by": "verifier",
       "supersedes": null
@@ -51,10 +51,10 @@
         "G2.2",
         "G3.2"
       ],
-      "status": "open",
-      "answer": null,
-      "answered_by": null,
-      "answered_at": null,
+      "status": "answered",
+      "answer": "Begrijpen: 'herkennen in een context' is het classificeren van een nieuw voorbeeld. Alleen het herkennen van een definitie of term zonder context blijft onthouden.",
+      "answered_by": "Martijn",
+      "answered_at": "2026-10-11T18:13:02Z",
       "source_run": "20261011-1150-economie-vwo-2026",
       "raised_by": "verifier",
       "supersedes": null
@@ -76,10 +76,10 @@
       "affects_units": [
         "D1.8"
       ],
-      "status": "open",
-      "answer": null,
-      "answered_by": null,
-      "answered_at": null,
+      "status": "answered",
+      "answer": "Normaal goed = 0 < Ey < 1, als categorie naast inferieur (Ey < 0) en luxe (Ey > 1).",
+      "answered_by": "Martijn",
+      "answered_at": "2026-10-11T18:13:02Z",
       "source_run": "20261011-1150-economie-vwo-2026",
       "raised_by": "verifier",
       "supersedes": null
@@ -102,10 +102,10 @@
         "G2.1",
         "G2.2"
       ],
-      "status": "open",
-      "answer": null,
-      "answered_by": null,
-      "answered_at": null,
+      "status": "answered",
+      "answer": "Contrast: onvolledige informatie = beide partijen missen informatie; asymmetrische informatie = één partij weet meer dan de andere.",
+      "answered_by": "Martijn",
+      "answered_at": "2026-10-11T18:13:02Z",
       "source_run": "20261011-1150-economie-vwo-2026",
       "raised_by": "verifier",
       "supersedes": null
@@ -128,10 +128,10 @@
       "affects_units": [
         "I4.2"
       ],
-      "status": "open",
-      "answer": null,
-      "answered_by": null,
-      "answered_at": null,
+      "status": "answered",
+      "answer": "Drukfout: criteria economisch correct formuleren ('hogere autonome consumptie'); de bronfout wordt in het dekkingsrapport genoteerd en source_quote blijft letterlijk.",
+      "answered_by": "Martijn",
+      "answered_at": "2026-10-11T18:13:02Z",
       "source_run": "20261011-1150-economie-vwo-2026",
       "raised_by": "verifier",
       "supersedes": null
@@ -155,10 +155,10 @@
         "H4.3",
         "H5.3"
       ],
-      "status": "open",
-      "answer": null,
-      "answered_by": null,
-      "answered_at": null,
+      "status": "answered",
+      "answer": "Gangbare lesstof invullen bij kopregel-specificaties; de docent controleert achteraf via de twijfellijst, waar deze eenheden gemarkeerd worden.",
+      "answered_by": "Martijn",
+      "answered_at": "2026-10-11T18:13:02Z",
       "source_run": "20261011-1150-economie-vwo-2026",
       "raised_by": "verifier",
       "supersedes": null
