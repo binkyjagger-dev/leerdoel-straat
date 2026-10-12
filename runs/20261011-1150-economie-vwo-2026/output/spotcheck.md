@@ -192,7 +192,7 @@ Opmerking:
 
 | Klopt het? | Bruikbaar? | Leerling snapt 'kan ik dit al'? | Bloom geloofwaardig? |
 |---|---|---|---|
-|  |  |  |  |
+| J | J | J | J |
 
 Opmerking: 
 
