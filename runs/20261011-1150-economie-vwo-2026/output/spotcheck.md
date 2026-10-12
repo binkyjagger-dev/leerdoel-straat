@@ -23,9 +23,9 @@ Lees elke groep alsof je hem morgen aan je klas geeft. Vul per groep de vier vra
 
 | Klopt het? | Bruikbaar? | Leerling snapt 'kan ik dit al'? | Bloom geloofwaardig? |
 |---|---|---|---|
-|  |  |  |  |
+| J | J | J | J |
 
-Opmerking: 
+Opmerking: Heel volledig en goed geformuleerd voor leerlingen.
 
 ## 2. D2.1-01 — leerdoel-Bloom: analyseren — status run 1: pass
 
