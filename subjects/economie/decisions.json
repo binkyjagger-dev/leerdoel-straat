@@ -162,6 +162,304 @@
       "source_run": "20261011-1150-economie-vwo-2026",
       "raised_by": "verifier",
       "supersedes": null
+    },
+    {
+      "id": "economie-007",
+      "question": "Moet elke leerdoelgroep minstens één criterium op toepassen hebben, omdat de subdomein-aanhef zegt 'in contexten herkennen en toepassen', of mogen eenvoudige eindtermen (definities, feitelijke uitspraken) op begrijpen eindigen?",
+      "context": "Besluit economie-001 legt het plafond vast, niet de ondergrens. In run 1 eindigden 29 van de 163 leerdoelgroepen op begrijpen, o.a. D1.6, D1.8, D1.22, D3.11, E1.4, E1.7, E1.9, E1.10, G2.2, H2.1, H2.3, H2.4, H3.2, H3.4, H4.2, H5.2, H5.3, I1.3, I1.5, I2.1, I2.2, I3.1, I3.3, I3.5, I3.6, I3.7, I3.9. Een deel daarvan is feitelijk of institutioneel (I3.1 'De ECB voert monetair beleid', H3.4 welzijn vs welvaart), een deel vraagt duidelijk om toepassen in een context (I2.1 anticyclisch beleid, H2.4 groeibevorderend beleid). Dit verandert de Bloom-verdeling en de koppeling met de toetsbank.",
+      "options": [
+        "Ondergrens toepassen voor elke groep: altijd minstens één criterium waarin de leerling het begrip in een nieuwe context gebruikt",
+        "Geen ondergrens: de specificatie bepaalt; begrijpen is prima als de eindterm niet meer vraagt (zoals run 1)",
+        "Ondergrens toepassen, behalve bij zuiver feitelijke/institutionele eindtermen (bijv. I3.1, I3.3, H3.4); die markeren in de twijfellijst"
+      ],
+      "proposed": "Ondergrens toepassen, behalve bij zuiver feitelijke/institutionele eindtermen; die markeren in de twijfellijst. De aanhef 'in contexten … toepassen' vraagt om gebruik in een context, maar een toepassen-criterium forceren bij een feit levert kunstmatige criteria op.",
+      "impact": "high",
+      "applies_to": [
+        "planner",
+        "generator",
+        "verifier"
+      ],
+      "affects_units": [
+        "*"
+      ],
+      "status": "answered",
+      "answer": "Ondergrens toepassen, behalve bij zuiver feitelijke/institutionele eindtermen; die markeren in de twijfellijst. De aanhef 'in contexten … toepassen' vraagt om gebruik in een context, maar een toepassen-criterium forceren bij een feit levert kunstmatige criteria op.",
+      "answered_by": "Martijn",
+      "answered_at": "2026-10-12T20:34:09Z",
+      "source_run": "20261012-2220-economie-vwo-2026-run2",
+      "raised_by": "intake",
+      "supersedes": null
+    },
+    {
+      "id": "economie-008",
+      "question": "Als hetzelfde mechanisme of dezelfde handeling in twee eindtermen voorkomt, hoort die dan bij één eindterm (en de andere verwijst er hooguit kort naar als opstap), of mag het in beide als volwaardig criterium terugkomen?",
+      "context": "Run 1 liet na twee reparatierondes 12 overlapparen open: F1.4/F1.6 (Nash-evenwichten bepalen), F1.7/F1.11 (zelfbinding in spelboom), F1.9/F1.10 (pay-off over perioden), G4.1/G4.2 (wel/niet verzekeren), G5.1/G5.2 (keuze belegger), E1.8/E2.2 (begrotingstekort en staatsschuld), E1.4/E1.5 (risico-opslag op rente), I1.5/I2.1 (stimulerend/verkrappend indelen), H2.2/H2.4 (indelen naar A, K, L), D1.13/D3.9 (verschuiving aanbodlijn door heffing), E1.3/G1.2 (risicoaversie omschrijven) en I3.4/I3.5 (rente CB → kredietverlening → geldhoeveelheid; staat bewust alleen in I3.4, waardoor een bullet van I3.5 daar niet zelf getoetst wordt). Raakt ca. 24 eindtermen en de toetsbankkoppeling (een opgave hoort bij één criterium).",
+      "options": [
+        "Eén eigenaar: de meest specifieke eindterm (bijv. F1.6 voor meerdere evenwichten, I3.4 voor geldschepping) bezit de handeling; de andere eindterm heeft hooguit één opstapcriterium in andere woorden",
+        "Herhaling toegestaan als spiraal: beide eindtermen krijgen het als volwaardig criterium",
+        "Eén eigenaar, maar elke bullet van een eindterm moet ook in de eigen leerdoelgroep terugkomen (geen dekking via een andere eindterm)"
+      ],
+      "proposed": "Eén eigenaar: de meest specifieke eindterm bezit de handeling; de andere eindterm heeft hooguit één opstapcriterium in andere woorden, en dekking van een bullet via een andere eindterm wordt in het dekkingsrapport vermeld. Dat sluit aan bij wat de controleur in run 1 adviseerde.",
+      "impact": "high",
+      "applies_to": [
+        "planner",
+        "generator",
+        "verifier"
+      ],
+      "affects_units": [
+        "F1.4",
+        "F1.6",
+        "F1.7",
+        "F1.11",
+        "F1.9",
+        "F1.10",
+        "G4.1",
+        "G4.2",
+        "G5.1",
+        "G5.2",
+        "E1.8",
+        "E2.2",
+        "E1.4",
+        "E1.5",
+        "I1.5",
+        "I2.1",
+        "H2.2",
+        "H2.4",
+        "D1.13",
+        "D3.9",
+        "E1.3",
+        "G1.2",
+        "I3.4",
+        "I3.5"
+      ],
+      "status": "answered",
+      "answer": "Eén eigenaar: de meest specifieke eindterm bezit de handeling; de andere eindterm heeft hooguit één opstapcriterium in andere woorden, en dekking van een bullet via een andere eindterm wordt in het dekkingsrapport vermeld. Dat sluit aan bij wat de controleur in run 1 adviseerde.",
+      "answered_by": "Martijn",
+      "answered_at": "2026-10-12T20:34:09Z",
+      "source_run": "20261012-2220-economie-vwo-2026-run2",
+      "raised_by": "intake",
+      "supersedes": null
+    },
+    {
+      "id": "economie-009",
+      "question": "Hoe streng lezen we de syllabusmarkeringen (1) 'alleen grafische onderbouwing' en (2) 'alleen rekenkundige onderbouwing': mogen er bij die eindtermen dan géén criteria in de andere vorm staan?",
+      "context": "Komt voor bij 7 eindtermen: (1) bij D1.4a, D1.4b, D1.11, D1.12, D2.1 en H2.2 (productiefunctie Y = Af(K, L)); (2) bij D1.7 (inkomenselasticiteit). Bij strikte lezing krijgt H2.2 geen rekencriterium met de productiefunctie en D1.7 geen grafiekcriterium. Run 1 noemde de markering in de planning, maar controleerde niet of criteria in de andere vorm wegbleven.",
+      "options": [
+        "Strikt: alleen criteria in de aangegeven vorm (bij (1) geen berekeningen, bij (2) geen grafieken)",
+        "Nadruk: minstens één criterium in de aangegeven vorm; de andere vorm mag ook",
+        "Negeren: de markering gaat over het centraal examen, niet over de leerdoelen"
+      ],
+      "proposed": "Strikt: alleen criteria in de aangegeven vorm. De markering beperkt wat de leerling moet kunnen; een criterium daarbuiten zou meer vragen dan de syllabus.",
+      "impact": "medium",
+      "applies_to": [
+        "planner",
+        "generator",
+        "verifier"
+      ],
+      "affects_units": [
+        "D1.4a",
+        "D1.4b",
+        "D1.7",
+        "D1.11",
+        "D1.12",
+        "D2.1",
+        "H2.2"
+      ],
+      "status": "answered",
+      "answer": "Strikt: alleen criteria in de aangegeven vorm. De markering beperkt wat de leerling moet kunnen; een criterium daarbuiten zou meer vragen dan de syllabus.",
+      "answered_by": "Martijn",
+      "answered_at": "2026-10-12T20:34:09Z",
+      "source_run": "20261012-2220-economie-vwo-2026-run2",
+      "raised_by": "intake",
+      "supersedes": null
+    },
+    {
+      "id": "economie-010",
+      "question": "Moeten voorbeelden die de syllabus geeft met 'bijvoorbeeld', 'zoals' of 'te denken valt aan' elk in een criterium terugkomen, of zijn het illustraties waaruit de straat mag kiezen?",
+      "context": "Komt voor in 13 eindtermen: E1.4, E1.7, F1.11, F1.12 (arbeidsrelaties, kartelafspraken, internationale handel), G3.2 (drie principaal-agentparen), G4.5 (eigen risico, bonus-malussysteem), H3.1, H3.2, H4.5 (werken, sparen, …), H4.6 (btw, accijnzen), I3.3 (FED), I3.8, I4.2. Bepaalt of het dekkingsrapport een ontbrekend voorbeeld als gat telt, en hoe vol de criteria worden (max. 4 per groep).",
+      "options": [
+        "Illustraties: minstens één voorbeeld gebruiken, de rest mag; ontbreken telt niet als gat",
+        "Alle voorbeelden verplicht dekken, zo nodig verspreid over criteria of een extra groep",
+        "Alleen 'te denken valt aan'-lijsten (G3.2) volledig dekken; 'bijvoorbeeld'/'zoals' zijn illustraties"
+      ],
+      "proposed": "Illustraties: minstens één voorbeeld gebruiken, de rest mag; ontbreken telt niet als gat. 'Bijvoorbeeld' is in CvTE-taal niet limitatief, en volledige dekking zou criteria overladen.",
+      "impact": "medium",
+      "applies_to": [
+        "planner",
+        "generator",
+        "verifier"
+      ],
+      "affects_units": [
+        "E1.4",
+        "E1.7",
+        "F1.11",
+        "F1.12",
+        "G3.2",
+        "G4.5",
+        "H3.1",
+        "H3.2",
+        "H4.5",
+        "H4.6",
+        "I3.3",
+        "I3.8",
+        "I4.2"
+      ],
+      "status": "answered",
+      "answer": "Illustraties: minstens één voorbeeld gebruiken, de rest mag; ontbreken telt niet als gat. 'Bijvoorbeeld' is in CvTE-taal niet limitatief, en volledige dekking zou criteria overladen.",
+      "answered_by": "Martijn",
+      "answered_at": "2026-10-12T20:34:09Z",
+      "source_run": "20261012-2220-economie-vwo-2026-run2",
+      "raised_by": "intake",
+      "supersedes": null
+    },
+    {
+      "id": "economie-011",
+      "question": "Wat valt onder 'structurele werkloosheid': alle niet-conjuncturele werkloosheid (frictie, mismatch én institutionele oorzaken zoals minimumloon en uitkeringen), of alleen langdurige mismatch, met frictie als aparte soort?",
+      "context": "De syllabus is hier niet eenduidig: H5.2 zegt 'Structurele werkloosheid, waaronder frictiewerkloosheid', H5.3 spreekt van 'structurele en frictiewerkloosheid' als twee, en I1.2 definieert natuurlijke werkloosheid als structurele werkloosheid bij potentiële productie. Run 1 definieerde structureel in H5.2 als 'langdurige mismatch' en noemde in H5.3 ook institutionele oorzaken structureel; de controleur markeerde dat als inconsistent. Raakt 4 eindtermen en de juistheid van de criteria.",
+      "options": [
+        "Breed: structureel = alle niet-conjuncturele werkloosheid, met frictie, mismatch en institutionele oorzaken als vormen (volgt H5.2 en I1.2)",
+        "Smal: structureel = mismatch (kwalitatief/regionaal); frictie en institutionele werkloosheid apart",
+        "Breed in H5.2/I1.2, maar in H5.3 frictie apart behandelen zoals de kop doet"
+      ],
+      "proposed": "Breed: structureel = alle niet-conjuncturele werkloosheid, met frictie, mismatch en institutionele oorzaken als vormen. Dat volgt de letterlijke tekst van H5.2 en sluit aan op natuurlijke werkloosheid in I1.2.",
+      "impact": "medium",
+      "applies_to": [
+        "generator",
+        "verifier"
+      ],
+      "affects_units": [
+        "H5.2",
+        "H5.3",
+        "I1.2",
+        "I4.5"
+      ],
+      "status": "answered",
+      "answer": "Breed: structureel = alle niet-conjuncturele werkloosheid, met frictie, mismatch en institutionele oorzaken als vormen. Dat volgt de letterlijke tekst van H5.2 en sluit aan op natuurlijke werkloosheid in I1.2.",
+      "answered_by": "Martijn",
+      "answered_at": "2026-10-12T20:34:09Z",
+      "source_run": "20261012-2220-economie-vwo-2026-run2",
+      "raised_by": "intake",
+      "supersedes": null
+    },
+    {
+      "id": "economie-012",
+      "question": "Mogen afkortingen en symbolen (TO, TK, GTK, MK, MO, GO, p/q, bbp, Y*, IS/MB/GA) in de leerlingzinnen blijven staan, en zo ja in welke notatie?",
+      "context": "Het vakprofiel laat dit open ('ja/nee'). De syllabus gebruikt zelf afkortingen in 17 eindtermen (o.a. D1.14 'prijs (p of GO), afzet (q of Q)', D1.16, D1.17, H1.1, I4.2-I4.6) en ze komen in de criteria van D1.18-D2.2 en D3 terug. Run 1 gebruikte ze wisselend (soms 'p × q', soms 'prijs maal afzet'); de leerlingtaalcontrole telt symbolen als woorden.",
+      "options": [
+        "Ja, afkortingen mogen; notatie zoals de syllabus (p en q kleine letters, GO, GTK, TO enz.)",
+        "Ja, maar bij eerste gebruik in een groep voluit met afkorting tussen haakjes ('gemiddelde totale kosten (GTK)')",
+        "Nee, in leerlingtaal altijd voluit; afkortingen alleen in de vakinhoudelijke tekst"
+      ],
+      "proposed": "Ja, maar bij eerste gebruik in een groep voluit met afkorting tussen haakjes; notatie zoals de syllabus (p en q, GO, GTK, TO). Houdt de zinnen leesbaar zonder dat leerlingen de examennotatie missen.",
+      "impact": "medium",
+      "applies_to": [
+        "generator",
+        "student-language",
+        "verifier"
+      ],
+      "affects_units": [
+        "D1.14",
+        "D1.16",
+        "D1.17",
+        "D1.18",
+        "D1.19",
+        "D1.20",
+        "D1.21",
+        "D2.2",
+        "D3.6",
+        "E2.2",
+        "H1.1",
+        "H2.3",
+        "H3.2",
+        "H3.5",
+        "I3.1",
+        "I3.3",
+        "I3.5",
+        "I3.7",
+        "I3.9",
+        "I4.2",
+        "I4.3",
+        "I4.4",
+        "I4.6"
+      ],
+      "status": "answered",
+      "answer": "Ja, maar bij eerste gebruik in een groep voluit met afkorting tussen haakjes; notatie zoals de syllabus (p en q, GO, GTK, TO). Houdt de zinnen leesbaar zonder dat leerlingen de examennotatie missen.",
+      "answered_by": "Martijn",
+      "answered_at": "2026-10-12T20:34:09Z",
+      "source_run": "20261012-2220-economie-vwo-2026-run2",
+      "raised_by": "intake",
+      "supersedes": null
+    },
+    {
+      "id": "economie-013",
+      "question": "Gebruiken we de Engelse termen uit de syllabus (moral hazard, pay-off matrix, dead weight loss, output gap, break-even, learning-by-doing, animal spirits) of Nederlandse equivalenten (moreel risico, uitbetalingsmatrix, welvaartsverlies)?",
+      "context": "Het vakprofiel noemt dit als open punt. Komt voor in 13 eindtermen: D1.20, D3.6, F1.2, F1.7, F1.8, F1.9, G3.2, G4.5, H2.3, I1.1, I1.2, I4.1, I4.5. Run 1 schreef in E1.4 'moreel risico' terwijl G3.2/G4.5 'moral hazard' gebruiken; de controleur merkte dat op.",
+      "options": [
+        "Syllabusterm overal, precies zoals gedrukt",
+        "Syllabusterm, met Nederlands equivalent tussen haakjes bij eerste gebruik",
+        "Nederlandse term, met syllabusterm tussen haakjes"
+      ],
+      "proposed": "Syllabusterm overal, precies zoals gedrukt. Zo herkennen leerlingen de term in het examen en blijft het consistent over eindtermen.",
+      "impact": "low",
+      "applies_to": [
+        "generator",
+        "student-language",
+        "verifier"
+      ],
+      "affects_units": [
+        "D1.20",
+        "D3.6",
+        "F1.2",
+        "F1.7",
+        "F1.8",
+        "F1.9",
+        "G3.2",
+        "G4.5",
+        "H2.3",
+        "I1.1",
+        "I1.2",
+        "I4.1",
+        "I4.5",
+        "E1.4",
+        "E1.5"
+      ],
+      "status": "answered",
+      "answer": "Syllabusterm overal, precies zoals gedrukt. Zo herkennen leerlingen de term in het examen en blijft het consistent over eindtermen.",
+      "answered_by": "Martijn",
+      "answered_at": "2026-10-12T20:34:09Z",
+      "source_run": "20261012-2220-economie-vwo-2026-run2",
+      "raised_by": "intake",
+      "supersedes": null
+    },
+    {
+      "id": "economie-014",
+      "question": "Passen we de regel van besluit economie-005 (drukfout: criteria economisch correct, bronfout melden in het dekkingsrapport, citaat letterlijk) voortaan op elke duidelijke drukfout in de syllabus toe, zonder het per geval te vragen?",
+      "context": "Besluit economie-005 gaat alleen over I4.2. De invoer bevat meer verschrijvingen die de betekenis raken of kunnen raken: I4.1 ('een steilere (vlakkere) helling van de bestedingslijn steiler / vlakker wordt'), H2.3 ('geografische ligging politieke stabiliteit', komma mist), I4.6 ('Neo- en Nieuw klassieken'), H3.2 ('gezinshuishoudens'), F1.9 ('keuze (s)'). Raakt 5 eindtermen, alleen de formulering.",
+      "options": [
+        "Ja, algemene regel: economisch correct formuleren, citaat letterlijk, melden in het dekkingsrapport",
+        "Alleen verschrijvingen zonder inhoudelijk gevolg stil corrigeren; inhoudelijke afwijkingen per geval aan de docent voorleggen"
+      ],
+      "proposed": "Ja, algemene regel: economisch correct formuleren, citaat letterlijk, melden in het dekkingsrapport. Geen van deze gevallen verandert de economische inhoud.",
+      "impact": "low",
+      "applies_to": [
+        "generator",
+        "verifier",
+        "exporter"
+      ],
+      "affects_units": [
+        "I4.1",
+        "H2.3",
+        "I4.6",
+        "H3.2",
+        "F1.9"
+      ],
+      "status": "answered",
+      "answer": "Ja, algemene regel: economisch correct formuleren, citaat letterlijk, melden in het dekkingsrapport. Geen van deze gevallen verandert de economische inhoud.",
+      "answered_by": "Martijn",
+      "answered_at": "2026-10-12T20:34:09Z",
+      "source_run": "20261012-2220-economie-vwo-2026-run2",
+      "raised_by": "intake",
+      "supersedes": null
     }
   ]
 }

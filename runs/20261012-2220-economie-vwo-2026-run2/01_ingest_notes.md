@@ -1,0 +1,10 @@
+- Skipped (P2 / profile Scope): domein A (Vaardigheden, A1-A3), domeinen B, C, J, K (alleen schoolexamen, niet gespecificeerd in de CE-syllabus). Front matter, toelichting, hoofdstuk 4 (Het centraal examen) en bijlagen 1-2 niet ingelezen.
+- Domein titles are sentence-cased from the printed capitals (e.g. "MARKT" -> "Markt"); subdomein titles as printed (e.g. "Vraag en Aanbod").
+- D1 has 1.4a and 1.4b as printed: unit_id D1.4a / D1.4b (no D1.4).
+- "I.3" is printed with a dot in the heading of subdomein 3 of domein I; normalised to unit_id/code I3.
+- Subdomein H3 and H5 lead-ins are printed without a colon ("De kandidaat kan in contexten herkennen en toepassen"); kept literal.
+- Subdomein I4 title wraps over two lines; joined. G2 lead-in is non-standard ("... het verschijnsel onvolledige en / of asymmetrische informatie herkennen en toepassen:").
+- Footnote markers kept inside text as printed: "(1)", "(2)" after D1/D2/D1.11-1.12/H2.2, "moral hazard2" in G3.2, "gezinshuishoudingen1" in domein E intro. Footnote bodies (domein E footnote 1, G footnote 2) dropped; the E footnote falls inside eindterm E2.1 across a page break (p13/14), E2.1 starts on p13.
+- Eindtermen die over een paginagrens lopen: H4.5 (p20-21; page = 20), E2.1 (p13-14; page = 13), I4.3 (p24-25). Tekst aaneengesloten hersteld.
+- Hyphen repairs: "vergele-ken" -> "vergeleken" (E1.1). Kept real hyphens: "bonus-malussysteem" (G4.5), "GA-curve" (I4.4). Line-break "optimisme/ pessimisme" joined as "optimisme/pessimisme" (I4.1).
+- Bullets (•, o, -) normalised to separate lines; sub-levels "o" kept as printed.
