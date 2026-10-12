@@ -42,7 +42,7 @@ Opmerking: Heel volledig en goed geformuleerd voor leerlingen.
 
 | Klopt het? | Bruikbaar? | Leerling snapt 'kan ik dit al'? | Bloom geloofwaardig? |
 |---|---|---|---|
-|  |  |  |  |
+| J | J | J | J |
 
 Opmerking: 
 
