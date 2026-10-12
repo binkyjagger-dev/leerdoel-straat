@@ -460,6 +460,62 @@
       "source_run": "20261012-2220-economie-vwo-2026-run2",
       "raised_by": "intake",
       "supersedes": null
+    },
+    {
+      "id": "economie-015",
+      "question": "Moet bij het verband tussen individuele aanbodlijn en MK-lijn (D1.18) de ondergrens worden genoemd (de aanbodlijn begint bij het minimum van de GVK of GTK), of volstaat 'het stijgende deel van de MK-lijn' omdat GVK niet in de syllabus staat?",
+      "context": "In run 1 (J4) en run 2 opnieuw gemarkeerd. De syllabus noemt TK, TCK, TVK, GTK en MK, maar niet GVK. Zonder ondergrens is de uitspraak bij een U-vormige MK-lijn onvolledig.",
+      "options": [
+        "Ondergrens noemen met GVK (korte termijn) en GTK (lange termijn)",
+        "Ondergrens noemen met alleen GTK (syllabusbegrip)",
+        "Geen ondergrens; uitgaan van een overal stijgende MK-lijn en die aanname expliciet noemen"
+      ],
+      "proposed": "Geen ondergrens; uitgaan van een overal stijgende MK-lijn en die aanname expliciet noemen",
+      "impact": "low",
+      "applies_to": [
+        "generator",
+        "verifier"
+      ],
+      "affects_units": [
+        "D1.18",
+        "D2.2"
+      ],
+      "status": "open",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null,
+      "source_run": "20261012-2220-economie-vwo-2026-run2",
+      "raised_by": "verifier",
+      "supersedes": null
+    },
+    {
+      "id": "economie-016",
+      "question": "Hoe schrijven we 'IS' (uit het Engelse investment-saving) bij eerste gebruik voluit volgens economie-012: als letterlijke vertaling ('investeringen-besparingencurve (IS-curve)'), als betekenisomschrijving ('IS-curve (evenwichtscurve van de goederenmarkt)') of allebei?",
+      "context": "Economie-012 vraagt 'voluit met afkorting tussen haakjes'. Bij MB (monetaire beleidsregel) en GA (geaggregeerd aanbod) is dat eenduidig, bij IS niet: de letters komen uit het Engels en de syllabus definieert de curve als evenwicht op de goederenmarkt. In deze ronde gebruikt I4.2 de omschrijving, I4.6-01 de vertaling, en de leerlingteksten laten het vaak helemaal weg.",
+      "options": [
+        "Letterlijke vertaling: 'investeringen-besparingencurve (IS-curve)'",
+        "Betekenisomschrijving: 'IS-curve (evenwichtscurve van de goederenmarkt)'",
+        "Beide bij eerste gebruik, daarna alleen 'IS-curve'"
+      ],
+      "proposed": "Betekenisomschrijving: 'IS-curve (evenwichtscurve van de goederenmarkt)'. Die zegt een leerling meer dan de vertaling en sluit aan op de definitie in de syllabus.",
+      "impact": "low",
+      "applies_to": [
+        "generator",
+        "student-language",
+        "verifier"
+      ],
+      "affects_units": [
+        "I4.2",
+        "I4.3",
+        "I4.6"
+      ],
+      "status": "open",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null,
+      "source_run": "20261012-2220-economie-vwo-2026-run2",
+      "raised_by": "verifier",
+      "supersedes": null
     }
   ]
 }

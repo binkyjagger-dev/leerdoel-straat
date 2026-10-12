@@ -49,3 +49,9 @@ bash tests/run_fixture.sh                         # exercise all scripts on the 
 - Most round-1 issues were J6 (student text dropped/softened a performance) and J2 (sorting/predicting criteria labelled toepassen). Repair = generator sharpens expert text where ambiguous, then student-language redoes only the changed groups (`redo_student.roundN.json`).
 - `student_language_check.py` counts formula symbols as words; formula criteria trip L3 at 20 words. Advisory only.
 - Planner ceiling comes from the subdomein lead-in ("herkennen en toepassen" → toepassen), not the domein verb "analyseren"; the +1 allowance is an allowance, not a target.
+
+## Lessons from run 2 (2026-10-12)
+- Decisions drive the Bloom profile: economie-001/007 moved goals from 29 begrijpen → 7, analyseren 6 → 30, with the same verdict rate as run 1 (round 1 ≈ 75 % pass; round 2 ≈ 99 %). Verifiers must be told how to grade decision deviations in the *student* text (economie-012): J7, not J1 — the D verifier used J1 and had to be harmonised at merge.
+- The reliable J2 fix for "classification labelled toepassen" is a data-based application inside the unit's own focus; check it does not take over a calculation another unit owns (economie-008).
+- The verifier's `proposed_decisions` route works: 2 new questions (aanbodlijn-ondergrens, voluit-is-curve) are open for the next intake.
+- economie-012 (spell out abbreviations) lengthens student sentences; L3 warnings rose from 38 to 160. Advisory, but consider raising the limit or exempting the bracketed abbreviation from the word count.
