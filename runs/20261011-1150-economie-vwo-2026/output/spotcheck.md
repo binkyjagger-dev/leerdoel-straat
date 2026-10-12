@@ -11,6 +11,8 @@ Lees elke groep alsof je hem morgen aan je klas geeft. Vul per groep de vier vra
 
 ## 1. D1.16-01 — leerdoel-Bloom: toepassen — status run 1: pass
 
+**Andere leerdoelgroepen bij deze eindterm:** geen (dit is de enige groep)
+
 **Eindterm D1.16:** De onderverdeling van totale kosten (TK) in vaste/constante kosten (TCK) en variabele kosten (TVK).
 
 **Leerdoel:** Ik kan de totale kosten (TK) onderverdelen in constante (TCK) en variabele (TVK) kosten en deze berekenen.
@@ -28,6 +30,8 @@ Lees elke groep alsof je hem morgen aan je klas geeft. Vul per groep de vier vra
 Opmerking: Heel volledig en goed geformuleerd voor leerlingen.
 
 ## 2. D2.1-01 — leerdoel-Bloom: analyseren — status run 1: pass
+
+**Andere leerdoelgroepen bij deze eindterm:** geen (dit is de enige groep)
 
 **Eindterm D2.1:** Het onderscheid tussen de marktvormen op basis van het aantal marktpartijen, heterogeniteit van de goederen en toetredingsmogelijkheden (1) / I Volledige mededinging/ volkomen concurrentie: veel aanbieders, een homogeen goed en vrije toetreding. / Marktvormen waarbij sprake is van onvolkomen concurrentie kennen beperkte toetredingsmogelijkheden: / II Monopolistische concurrentie: veel aanbieders en hete…
 
@@ -48,6 +52,8 @@ Opmerking:
 
 ## 3. E1.1-01 — leerdoel-Bloom: toepassen — status run 1: pass
 
+**Andere leerdoelgroepen bij deze eindterm:** geen (dit is de enige groep)
+
 **Eindterm E1.1:** De intertemporele ruil waarbij niet in de tijd samenvallende rendementen vergeleken worden: afweging tussen individuele prijs van tijd en marktprijs van tijd.
 
 **Leerdoel:** Ik kan bij een keuze tussen rendementen op verschillende momenten mijn eigen prijs van tijd afwegen tegen de rente.
@@ -66,6 +72,8 @@ Opmerking:
 Opmerking: 
 
 ## 4. E2.1-02 — leerdoel-Bloom: toepassen — status run 1: pass
+
+**Andere leerdoelgroepen bij deze eindterm:** E2.1-01 — Ik kan het verschil tussen welvaartsvaste en waardevaste pensioenen of inkomens toepassen door de indexering door te rekenen.
 
 **Eindterm E2.1:** De levensloop binnen gezinshuishoudingen en de rol van de overheid met daarbij: / - welvaartsvaste- of waardevaste pensioenen / inkomens / - het omslagstelsel en het kapitaaldekkingsstelsel als het gaat om de financiering van het pensioen / inkomen / - intergenerationele ruil
 
@@ -86,6 +94,8 @@ Opmerking:
 
 ## 5. F1.2-01 — leerdoel-Bloom: toepassen — status run 1: pass
 
+**Andere leerdoelgroepen bij deze eindterm:** F1.2-02 — Ik kan een spel waarin spelers na elkaar kiezen weergeven in een spelboom (beslisboom) en een spelboom aflezen.
+
 **Eindterm F1.2:** De weergave van het spel in een pay-off matrix of een spelboom (beslisboom).
 
 **Leerdoel:** Ik kan een spel met twee spelers weergeven in een pay-off matrix en een pay-off matrix aflezen.
@@ -99,11 +109,13 @@ Opmerking:
 
 | Klopt het? | Bruikbaar? | Leerling snapt 'kan ik dit al'? | Bloom geloofwaardig? |
 |---|---|---|---|
-|  |  |  |  |
+| J (met F1.2-02 erbij) | J | J | J |
 
-Opmerking: 
+Opmerking: Spelboom/beslisboom ontbreekt in dit leerdoel; als die niet apart is opgenomen is het leerdoel te eng (alleen pay-off matrix). → Zit in F1.2-02 (slot 2 van dezelfde eindterm); dekking is dus compleet. Les: toon zustergroepen in het formulier.
 
 ## 6. G1.1-01 — leerdoel-Bloom: toepassen — status run 1: pass
+
+**Andere leerdoelgroepen bij deze eindterm:** geen (dit is de enige groep)
 
 **Eindterm G1.1:** De aard en de omvang van het risico dat ontstaat bij het nemen van een beslissing in een situatie van onzekerheid (onzeker voorval).
 
@@ -124,6 +136,8 @@ Opmerking:
 
 ## 7. H1.1-02 — leerdoel-Bloom: toepassen — status run 1: pass
 
+**Andere leerdoelgroepen bij deze eindterm:** H1.1-01 — Ik kan het bbp (inkomen) berekenen met de bestedingsmethode, de objectieve methode en de subjectieve methode.; H1.1-03 — Ik kan de loonkosten per eenheid product en de arbeidsinkomensquote (AIQ) berekenen en de ontwikkeling uitleggen.
+
 **Eindterm H1.1:** Macro-economische begrippen / • Inkomen: de vorming van het bbp (Bruto Binnenlands Product) waarbij de volgende methoden kunnen worden onderscheiden: / - Bestedingsmethode: inkomen = consumptie + investeringen + overheidsbestedingen + export – import / - Objectieve methode: inkomen = som toegevoegde waarde = totale omzet – totale kosten leveringen van derden / - Subjectieve methode: inkomen = arbeidsinkom…
 
 **Leerdoel:** Ik kan de verdeling van het nationaal inkomen over arbeidsinkomen en soorten kapitaalinkomen berekenen en uitleggen wat die verdeling zegt.
@@ -142,6 +156,8 @@ Opmerking:
 Opmerking: 
 
 ## 8. H2.3-01 — leerdoel-Bloom: begrijpen — status run 1: pass
+
+**Andere leerdoelgroepen bij deze eindterm:** geen (dit is de enige groep)
 
 **Eindterm H2.3:** Factoren die de totale factorproductiviteit bepalen / De totale factorproductiviteit stijgt (A hoger) door innovatie (proces- en product-), R&D, learning-by-doing, onderwijs, onderzoek, handel, betere instituties, betere infrastructuur, beter milieu, gunstige geografische ligging politieke stabiliteit; / • Onder instituties wordt onder meer verstaan: kwaliteit overheid, eigendomsrechten en rechtsstaat…
 
@@ -162,6 +178,8 @@ Opmerking:
 
 ## 9. I3.3-01 — leerdoel-Bloom: begrijpen — status run 1: pass
 
+**Andere leerdoelgroepen bij deze eindterm:** geen (dit is de enige groep)
+
 **Eindterm I3.3:** Doelstelling monetair beleid centrale bank / • Enkelvoudig mandaat: prijsstabiliteit (ECB) / • Duaal mandaat: prijsstabiliteit en economische groei (bijvoorbeeld FED)
 
 **Leerdoel:** Ik kan het enkelvoudige mandaat van de ECB onderscheiden van een duaal mandaat, zoals dat van de FED.
@@ -179,6 +197,8 @@ Opmerking:
 Opmerking: 
 
 ## 10. I4.6-02 — leerdoel-Bloom: toepassen — status run 1: pass
+
+**Andere leerdoelgroepen bij deze eindterm:** I4.6-01 — Ik kan de opvattingen van Keynesianen en monetaristen over begrotings- en monetair beleid weergeven en verklaren met IS- en MB-curve.
 
 **Eindterm I4.6:** Economische scholen en IS-MB-GA / • Keynesianen: begrotingsbeleid is krachtig, monetair beleid is zwak; / o IS-curve is steil: bestedingen reageren weinig op de renteveranderingen; / o MB verschuift weinig: centrale bank verhoogt rente weinig bij stijgende inflatie. / • Monetaristen: begrotingsbeleid is zwak, monetair beleid is sterk; / o IS-curve is vlak: bestedingen reageren sterk op de rente; / o MB versch…
 
