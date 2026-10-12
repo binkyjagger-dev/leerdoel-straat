@@ -213,16 +213,15 @@ Opmerking:
 
 | Klopt het? | Bruikbaar? | Leerling snapt 'kan ik dit al'? | Bloom geloofwaardig? |
 |---|---|---|---|
-|  |  |  |  |
+| J | J | J | J |
 
 Opmerking: 
 
 ## Patronen (dit is wat we gebruiken)
 
-1. 
-2. 
-3. 
+1. Geen inhoudelijke of talige patronen: 10/10 groepen J op alle vier vragen (spot check 12 okt 2026).
+2. Bij een eindterm met meerdere groepen is uit één groep niet te zien dat de rest elders zit (F1.2) → formulier en CSV tonen zustergroepen / 'groep n van m'.
 
 ## Losse fouten (gaan naar de twijfellijst / herstel)
 
-- 
+- geen
