@@ -97,8 +97,11 @@ def main(argv: list[str]) -> None:
         w.writerows(rows)
 
     # --- CSV per group
-    gcols = ["run_id", "domein_code", "subdomein_code", "unit_id", "group_id", "leerdoel_leerling", "leerdoel_bloom",
+    gcols = ["run_id", "domein_code", "subdomein_code", "unit_id", "group_id", "groep_n_van_m", "leerdoel_leerling", "leerdoel_bloom",
              "succescriteria_leerling", "bloom_per_criterium", "status"]
+    per_unit_ids = defaultdict(list)
+    for g in groups:
+        per_unit_ids[g["unit_id"]].append(g["group_id"])
     with open(out / "leerdoelgroepen_per_leerdoel.csv", "w", encoding="utf-8-sig", newline="") as f:
         w = csv.DictWriter(f, fieldnames=gcols, delimiter=";", quoting=csv.QUOTE_ALL)
         w.writeheader()
@@ -109,6 +112,7 @@ def main(argv: list[str]) -> None:
                 "domein_code": anc[0].get("code", "") if anc else "",
                 "subdomein_code": anc[1].get("code", "") if len(anc) > 1 else "",
                 "unit_id": g["unit_id"], "group_id": g["group_id"],
+                "groep_n_van_m": f"{per_unit_ids[g['unit_id']].index(g['group_id']) + 1} van {len(per_unit_ids[g['unit_id']])}",
                 "leerdoel_leerling": g["goal"].get("text_student", ""), "leerdoel_bloom": g["goal"].get("bloom", ""),
                 "succescriteria_leerling": " | ".join(c.get("text_student", "") for c in g["criteria"]),
                 "bloom_per_criterium": " | ".join(c["bloom"] for c in g["criteria"]),
