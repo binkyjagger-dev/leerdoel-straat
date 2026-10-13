@@ -188,6 +188,10 @@ def main(argv: list[str]) -> None:
         print(__doc__)
         sys.exit(2)
     cmd, subject, rest = argv[1], argv[2], argv[3:]
+    slug = re.sub(r"[^a-z0-9-]+", "-", subject.strip().lower()).strip("-")
+    if slug != subject:
+        print(f"[decisions] subject name normalised: '{subject}' -> '{slug}' (use this with --subject)")
+        subject = slug
 
     def opt(flag: str) -> str | None:
         return rest[rest.index(flag) + 1] if flag in rest else None

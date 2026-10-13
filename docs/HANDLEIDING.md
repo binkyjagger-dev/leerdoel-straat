@@ -16,8 +16,9 @@ Je hebt ook `pdftotext` nodig (macOS: `brew install poppler`; Ubuntu: `apt insta
 ## 2. Vakprofiel invullen (5 minuten, per vak)
 
 ```bash
-python3 scripts/decisions.py init economie      # maakt subjects/economie/
+python3 scripts/decisions.py init economie      # Windows: python scripts/decisions.py init economie
 ```
+Gebruik een vaknaam in kleine letters zonder spaties (`economie`, `bedrijfseconomie`, `wiskunde-a`); dezelfde naam geef je straks aan `--subject`.
 Open `subjects/economie/profile.md` en vul in wat jij als docent weet en de syllabus niet zegt: methode en editie, voorkeurstermen (bijv. *moral hazard* of *moreel risico*), sectie-afspraken, wat buiten scope valt. Dit bestand is van jou; de straat leest het in elke stap en schrijft er nooit in. Een leeg profiel werkt ook, maar dan stelt de straat meer vragen.
 
 ## 3. Een run draaien (≈ 45 min machinetijd, 5 min van jou)
@@ -61,6 +62,8 @@ Zie je een patroon in de spot check? Pas dan de **regel** aan, niet de losse lee
 | leerlingentaal te lang / te vaag | `data/student_language_rules.json` |
 | een interpretatie die je anders wilt | `python3 scripts/decisions.py answer economie <id> "<antwoord>"` |
 | openstaande vragen | `python3 scripts/decisions.py list economie --open` |
+
+(Windows: overal `python` in plaats van `python3`.)
 
 Daarna opnieuw `/generate`. Elke run krijgt een eigen map; niets wordt overschreven.
 
