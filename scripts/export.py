@@ -183,7 +183,7 @@ def main(argv: list[str]) -> None:
         d.append("Geen openstaande twijfels.")
     (out / "doubt_list.md").write_text("\n".join(d) + "\n", encoding="utf-8")
 
-    print(f"[export] {len(rows)} criterion rows, {len(groups)} groups → {out}")
+    print(f"[export] {len(rows)} criterion rows, {len(groups)} groups -> {out}")
     print(f"[export] coverage {cov['coverage_pct']}% · open doubts: {len(open_groups)} groups, {len(cov['units_uncovered'])} uncovered units")
 
 

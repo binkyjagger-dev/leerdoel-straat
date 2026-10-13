@@ -30,7 +30,7 @@ def main(argv: list[str]) -> None:
         groups.extend(load_json(f)["groups"])
     groups.sort(key=lambda g: (order.get(g["unit_id"], 10**6), g["group_id"]))
     save_json(run_dir / "03_groups_raw.json", {"groups": groups})
-    print(f"[merge] {len(groups)} groups from {len(set(g['unit_id'] for g in groups))} units → {run_dir / '03_groups_raw.json'}")
+    print(f"[merge] {len(groups)} groups from {len(set(g['unit_id'] for g in groups))} units -> {run_dir / '03_groups_raw.json'}")
 
 
 if __name__ == "__main__":

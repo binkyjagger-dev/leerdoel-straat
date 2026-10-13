@@ -6,6 +6,13 @@ import re
 import sys
 from pathlib import Path
 
+# Windows consoles default to cp1252; make every script print UTF-8 safely.
+for _stream in (sys.stdout, sys.stderr):
+    try:
+        _stream.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:  # pragma: no cover
+        pass
+
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 SCHEMAS = ROOT / "schemas"

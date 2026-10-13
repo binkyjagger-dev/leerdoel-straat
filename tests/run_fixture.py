@@ -13,12 +13,17 @@ import tempfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+for _s in (sys.stdout, sys.stderr):
+    try:
+        _s.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
 PY = sys.executable
 
 
 def run(label: str, *args: str, allow_fail: bool = False) -> bool:
     print(f"== {label}")
-    r = subprocess.run([PY, *args], cwd=ROOT, text=True, capture_output=True)
+    r = subprocess.run([PY, *args], cwd=ROOT, text=True, capture_output=True, encoding="utf-8", errors="replace")
     print(r.stdout, end="")
     if r.returncode != 0 and not allow_fail:
         print(r.stderr, end="")

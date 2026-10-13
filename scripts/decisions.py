@@ -106,7 +106,7 @@ def cmd_list(subject: str, open_only: bool) -> None:
         if open_only and d["status"] != "open":
             continue
         ans = d.get("answer") or f"(voorgesteld: {d['proposed']})"
-        print(f"{d['id']} [{d['status']}/{d['impact']}] {d['question']}\n    → {ans}")
+        print(f"{d['id']} [{d['status']}/{d['impact']}] {d['question']}\n    -> {ans}")
 
 
 def cmd_add(subject: str, questions_path: str, run_id: str | None) -> None:
@@ -172,7 +172,7 @@ def cmd_snapshot(subject: str, run_dir: str) -> None:
                           for d in data["decisions"] if d["status"] != "superseded"]}
     save_json(Path(run_dir) / "decisions_snapshot.json", snap)
     n_open = sum(1 for d in snap["decisions"] if d["provisional"])
-    print(f"[decisions] snapshot: {len(snap['decisions'])} decisions ({n_open} provisional) → {run_dir}/decisions_snapshot.json")
+    print(f"[decisions] snapshot: {len(snap['decisions'])} decisions ({n_open} provisional) -> {run_dir}/decisions_snapshot.json")
 
 
 def cmd_render(subject: str, open_only: bool) -> None:
