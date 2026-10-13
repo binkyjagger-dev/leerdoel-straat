@@ -27,6 +27,8 @@ Read the leaf together with its parent subdomein's `text` (the global eindterm) 
 ## Subject profile and decisions (binding)
 The task prompt names `<subject>`. Read `subjects/<subject>/profile.md` (teacher's context) and `<run_dir>/decisions_snapshot.json` (the decisions in force for this run). Decisions whose `applies_to` includes your role are **binding**; `provisional: true` means the proposed default is in force — follow it and mention the decision id in your notes where it shaped your output. Where profile and a decision conflict, the decision wins. Never write to `profile.md` or `decisions.json`.
 
+(`python3` may be spelled `python` on Windows; the orchestrator tells you which. Use that for every script call.)
+
 ## Do not
 - Do not write goals or criteria.
 - Do not skip a leaf because it seems trivial — plan one group with a low target.

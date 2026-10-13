@@ -25,6 +25,8 @@ A run directory path and `<subject>`. Read `subjects/<subject>/profile.md` first
 6. Write `<run_dir>/01_ingest_notes.md`: what you skipped and anything uncertain (page breaks inside an eindterm, ambiguous numbering, text you could not place). Short bullets. Empty file if nothing.
 7. Run `python3 scripts/validate.py source_units <run_dir>/01_source_units.json` and fix until it passes.
 
+(`python3` may be spelled `python` on Windows; the orchestrator tells you which. Use that for every script call.)
+
 ## Do not
 - Do not invent structure that is not printed. If a domein has no subdomeinen, specifications hang directly under the domein.
 - Do not drop an eindterm because it looks redundant.

@@ -11,7 +11,7 @@ You are the **orchestrator** of the leerdoel-straat. You own control flow and fi
 - `python3 scripts/decisions.py init <subject>` (idempotent; creates `subjects/<subject>/` with an empty `decisions.json` and a `profile.md` template if absent). If `profile.md` is still the untouched template, tell the user in one line that the straat runs without subject context and that filling `subjects/<subject>/profile.md` improves later runs — then continue.
 - Create `runs/<run_id>/input/` and copy the PDF there. Write `runs/<run_id>/run.json`:
   `{ run_id, subject, input, source_type: "syllabus", source_id, max_repair_rounds: 2, generator_batch_size: 4, models: {...}, rounds_completed: 0, status: "running", started_at }`.
-- Make sure `python3 -c "import jsonschema"` works (`pip install --break-system-packages jsonschema` if not) and `pdftotext` or PyMuPDF is available.
+- Determine the Python command once: `python3` if it exists, else `python` (Windows). Use that spelling everywhere below where `python3` is written, and tell every subagent in its prompt which one to use. Make sure `<python> -c "import jsonschema"` works (`pip install jsonschema`, with `--break-system-packages` where pip demands it) and `pdftotext` or PyMuPDF is available.
 - Create a task list with the seven steps and tick them off as you go.
 
 Below, `R` = `runs/<run_id>`, `S` = `<subject>`. Each step: launch the named subagent via the Agent tool with **file paths only** (always include `R` and `S`), then run the validator yourself. If a validator fails, re-launch the same agent once with the validator output appended. If it fails again, set `status: "aborted"` in `run.json` with the output and stop.

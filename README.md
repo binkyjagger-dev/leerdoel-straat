@@ -29,7 +29,7 @@ claude            # in deze map
 > /generate input/syllabus-economie-vwo.pdf --subject economie
 ```
 
-Handleiding: `docs/HANDLEIDING.md`. Scripts los testen op de fixture: `bash tests/run_fixture.sh`.
+Handleiding: `docs/HANDLEIDING.md`. Scripts los testen op de fixture: `python3 tests/run_fixture.py`.
 
 ## Status
 

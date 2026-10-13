@@ -35,7 +35,7 @@ tests/fixtures/   small synthetic run used to exercise the scripts
 pip install --break-system-packages jsonschema   # once
 /generate input/syllabus-economie-vwo.pdf --subject economie
 python3 scripts/export.py runs/<run_id>          # re-export only
-bash tests/run_fixture.sh                         # exercise all scripts on the fixture
+python3 tests/run_fixture.py                         # exercise all scripts on the fixture
 ```
 
 ## Conventions

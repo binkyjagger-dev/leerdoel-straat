@@ -9,7 +9,9 @@ git clone https://github.com/binkyjagger-dev/leerdoel-straat
 cd leerdoel-straat
 pip install --break-system-packages jsonschema
 ```
-Je hebt ook `pdftotext` nodig (macOS: `brew install poppler`; Ubuntu: `apt install poppler-utils`) en Claude Code met toegang tot Opus en Sonnet. Test de installatie: `bash tests/run_fixture.sh` — alles moet `fail=0` geven.
+Je hebt ook `pdftotext` nodig (macOS: `brew install poppler`; Ubuntu: `apt install poppler-utils`; Windows: `winget install oschwartz10612.Poppler` of PyMuPDF via `pip install pymupdf`) en Claude Code met toegang tot Opus en Sonnet. Test de installatie: `python tests/run_fixture.py` — de laatste regel moet `RESULT: OK` zijn.
+
+**Windows:** gebruik `python` waar hieronder `python3` staat (of `py -3`); in PowerShell werken alle `python scripts/...`-commando's gewoon. Bash is niet nodig.
 
 ## 2. Vakprofiel invullen (5 minuten, per vak)
 
