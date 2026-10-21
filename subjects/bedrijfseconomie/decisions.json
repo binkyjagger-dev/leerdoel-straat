@@ -706,10 +706,10 @@
       "affects_units": [
         "B3.13.1"
       ],
-      "status": "open",
-      "answer": null,
-      "answered_by": null,
-      "answered_at": null,
+      "status": "answered",
+      "answer": "Akkoord met voorstel: Optie 3: houdt het criterium kort en leert geen onjuiste verplichting aan; het structuurregime gaat verder dan de syllabus vraagt.",
+      "answered_by": "Martijn Overgaag",
+      "answered_at": "2026-10-21T16:05:29Z",
       "source_run": "20261021-1647-bedrijfseconomie-vwo-2028-run2",
       "raised_by": "verifier",
       "supersedes": null
@@ -736,10 +736,10 @@
         "D2.21.8",
         "D2.21.9"
       ],
-      "status": "open",
-      "answer": null,
-      "answered_by": null,
-      "answered_at": null,
+      "status": "answered",
+      "answer": "Akkoord met voorstel: 'interestpercentage van de obligatie' (sluit aan op syllabustaal 'interest')",
+      "answered_by": "Martijn Overgaag",
+      "answered_at": "2026-10-21T16:05:29Z",
       "source_run": "20261021-1647-bedrijfseconomie-vwo-2028-run2",
       "raised_by": "verifier",
       "supersedes": null
@@ -763,10 +763,10 @@
         "E2.25.1",
         "B4.14.1"
       ],
-      "status": "open",
-      "answer": null,
-      "answered_by": null,
-      "answered_at": null,
+      "status": "answered",
+      "answer": "Akkoord met voorstel: Absoluut = % van de totale marktomvang; relatief = t.o.v. de grootste concurrent (huidige tekst)",
+      "answered_by": "Martijn Overgaag",
+      "answered_at": "2026-10-21T16:05:29Z",
       "source_run": "20261021-1647-bedrijfseconomie-vwo-2028-run2",
       "raised_by": "verifier",
       "supersedes": null
@@ -791,10 +791,10 @@
       "affects_units": [
         "C2.17.10"
       ],
-      "status": "open",
-      "answer": null,
-      "answered_by": null,
-      "answered_at": null,
+      "status": "answered",
+      "answer": "Akkoord met voorstel: Opnemen in source.concept_corrections: 'ontslag met wederzijds goedvinden' en 'redenen voor ontslag op staande voet en via de kantonrechter'",
+      "answered_by": "Martijn Overgaag",
+      "answered_at": "2026-10-21T16:05:29Z",
       "source_run": "20261021-1647-bedrijfseconomie-vwo-2028-run2",
       "raised_by": "verifier",
       "supersedes": null
@@ -819,10 +819,10 @@
         "G.32.2",
         "G.32.4"
       ],
-      "status": "open",
-      "answer": null,
-      "answered_by": null,
-      "answered_at": null,
+      "status": "answered",
+      "answer": "Akkoord met voorstel: Huidige lijn vastleggen: cashflow en resultaat per aandeel na belasting; RTV = resultaat voor belasting + interestkosten (EBIT); REV voor en na belasting; hefboomformule voor belasting.",
+      "answered_by": "Martijn Overgaag",
+      "answered_at": "2026-10-21T16:05:29Z",
       "source_run": "20261021-1647-bedrijfseconomie-vwo-2028-run2",
       "raised_by": "verifier",
       "supersedes": null
@@ -846,10 +846,10 @@
       "affects_units": [
         "F2.31.1"
       ],
-      "status": "open",
-      "answer": null,
-      "answered_by": null,
-      "answered_at": null,
+      "status": "answered",
+      "answer": "Akkoord met voorstel: Optie 1: sluit aan op de definitie van het budgetresultaat in bijlage 4 en houdt het budgetresultaat eenduidig; de verschillenanalyse gebruikt het begrote bezettingsresultaat dan als onderdeel van het voorcalculatorische resultaat.",
+      "answered_by": "Martijn Overgaag",
+      "answered_at": "2026-10-21T16:05:29Z",
       "source_run": "20261021-1647-bedrijfseconomie-vwo-2028-run2",
       "raised_by": "verifier",
       "supersedes": null
