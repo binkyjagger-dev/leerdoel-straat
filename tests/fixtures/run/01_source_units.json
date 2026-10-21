@@ -24,7 +24,10 @@
         "ingested": false,
         "page": 7
       }
-    ]
+    ],
+    "concept_corrections": {
+      "aanbodoversschot": "aanbodoverschot"
+    }
   },
   "units": [
     {
@@ -62,7 +65,7 @@
         "evenwichtshoeveelheid",
         "vraagfunctie",
         "aanbodfunctie",
-        "aanbodoverschot",
+        "aanbodoversschot",
         "vraagoverschot",
         "volkomen concurrentie"
       ]

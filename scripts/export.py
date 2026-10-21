@@ -17,7 +17,7 @@ from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 
-from common import BLOOM_ORDER, exam_for, load_json
+from common import BLOOM_ORDER, corrected_concept, exam_for, load_json
 from coverage import compute as compute_coverage
 
 CSV_COLUMNS = [
@@ -89,7 +89,7 @@ def main(argv: list[str]) -> None:
                 "criterium_id": c["criterion_id"], "criterium_volgorde": i,
                 "criterium_expert": c["text_expert"], "criterium_leerling": c.get("text_student", ""),
                 "criterium_bloom": c["bloom"], "criterium_bloom_werkwoord": c["bloom_verb"],
-                "bron_citaat": g["source_quote"], "kernbegrippen": " | ".join(g.get("concepts") or []), "status": status,
+                "bron_citaat": g["source_quote"], "kernbegrippen": " | ".join(corrected_concept(t, src) for t in g.get("concepts") or []), "status": status,
                 "verificatie_opmerking": " | ".join(issues.get(g["group_id"], [])),
             })
     with open(out / "leerdoelgroepen.csv", "w", encoding="utf-8-sig", newline="") as f:
@@ -116,7 +116,7 @@ def main(argv: list[str]) -> None:
                 "groep_n_van_m": f"{per_unit_ids[g['unit_id']].index(g['group_id']) + 1} van {len(per_unit_ids[g['unit_id']])}",
                 "leerdoel_leerling": g["goal"].get("text_student", ""), "leerdoel_bloom": g["goal"].get("bloom", ""),
                 "succescriteria_leerling": " | ".join(c.get("text_student", "") for c in g["criteria"]),
-                "kernbegrippen": " | ".join(g.get("concepts") or []),
+                "kernbegrippen": " | ".join(corrected_concept(t, src) for t in g.get("concepts") or []),
                 "bloom_per_criterium": " | ".join(c["bloom"] for c in g["criteria"]),
                 "status": g.get("status") or verdict.get(g["group_id"], ""),
             })
@@ -148,7 +148,7 @@ def main(argv: list[str]) -> None:
         lines += ["## Begrippen zonder leerdoel", "",
                   "Begrippen uit de begrippenlijst van de bron die geen leerdoelgroep noemt (C3).", "",
                   "| Eenheid | Begrip |", "|---|---|"]
-        lines += [f"| {c['unit_id']} | {c['concept']} |" for c in cov["concepts_uncovered"]]
+        lines += [f"| {c['unit_id']} | {corrected_concept(c['concept'], src)} |" for c in cov["concepts_uncovered"]]
         lines.append("")
     if alloc:
         rest = [r for r in alloc if not r["ingested"]]

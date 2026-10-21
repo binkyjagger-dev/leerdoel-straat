@@ -128,6 +128,12 @@ Rules
   is paraphrased, merged, singularised or de-duplicated across units. A source
   without concept lists (economie) has no `concepts` fields; the concepts of
   its goals are then taken from the eindterm text itself (02 §5).
+  **Obvious typos** in a printed list (bedrijfseconomie 2028 v2: "explotatiebegroting",
+  "liquiditatiewaarde", a stray comma or colon) stay literal in `concepts`, and
+  the ingest records the correction in `source.concept_corrections`
+  (`{"<printed>": "<corrected>"}`, decided 2026-10-21, bedrijfsecon-019). All
+  concept matching (G8, C3) and the export use the corrected form; the printed
+  form stays in the source file so the correction is auditable.
 - **P4 — Exam allocation is recorded, not interpreted (decided 2026-10-21).**
   CvTE syllabi open with a table "Toedeling van de examenstof … aan centraal
   examen en schoolexamen" with, per (sub)domein, the columns *in CE* and *moet

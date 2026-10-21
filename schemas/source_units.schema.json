@@ -88,6 +88,17 @@
               }
             }
           }
+        },
+        "concept_corrections": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": "Obvious typos in printed concept lists: printed form -> corrected form (specs/01 §1, decision bedrijfsecon-019)"
         }
       }
     },

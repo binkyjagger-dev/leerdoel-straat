@@ -62,7 +62,28 @@ def exam_label(value: str | None) -> str:
 def normalise_term(term: str) -> str:
     """Case/whitespace-insensitive key for a concept; a bracketed abbreviation is dropped."""
     t = re.sub(r"\s*\([^)]*\)", "", term)
-    return normalise_ws(t)
+    return normalise_ws(t).strip(" ,:;.")
+
+
+def concept_corrections(src: dict) -> dict[str, str]:
+    """printed-form key -> corrected-form key, both normalised (specs/01 §1, source.concept_corrections)."""
+    raw = (src.get("source") or {}).get("concept_corrections") or {}
+    return {normalise_term(k): normalise_term(v) for k, v in raw.items()}
+
+
+def concept_key(term: str, corrections: dict[str, str] | None = None) -> str:
+    """Canonical key for matching: normalised, with a recorded typo mapped to its corrected form."""
+    k = normalise_term(term)
+    return (corrections or {}).get(k, k)
+
+
+def corrected_concept(term: str, src: dict) -> str:
+    """Display form for export: the corrected spelling when the term is a recorded typo, else as given."""
+    raw = (src.get("source") or {}).get("concept_corrections") or {}
+    for k, v in raw.items():
+        if normalise_term(k) == normalise_term(term):
+            return v
+    return term
 
 
 def concept_pool(by_id: dict, unit_id: str) -> list[tuple[str, str]]:
@@ -85,13 +106,13 @@ def concept_texts(by_id: dict, unit_id: str) -> str:
     return normalise_ws(" ".join(parts))
 
 
-def concept_admissible(term: str, by_id: dict, unit_id: str) -> bool:
-    key = normalise_term(term)
+def concept_admissible(term: str, by_id: dict, unit_id: str, corrections: dict[str, str] | None = None) -> bool:
+    key = concept_key(term, corrections)
     if not key:
         return False
-    if any(normalise_term(c) == key for c, _ in concept_pool(by_id, unit_id)):
+    if any(concept_key(c, corrections) == key for c, _ in concept_pool(by_id, unit_id)):
         return True
-    return key in concept_texts(by_id, unit_id)
+    return key in concept_texts(by_id, unit_id) or normalise_term(term) in concept_texts(by_id, unit_id)
 
 
 def normalise_ws(s: str) -> str:

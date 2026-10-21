@@ -168,7 +168,9 @@ goal. Rules:
    and whitespace-insensitive; a bracketed abbreviation may be dropped) in the
    leaf's `text` or in its parent subdomein's `text`. No textbook terms, no
    synonyms, no terms the generator considers implied. Spelling as the source
-   prints it.
+   prints it — except an obvious typo the ingest recorded in
+   `source.concept_corrections` (01 §1): then the **corrected** spelling is
+   used, and both forms count as the same term in every check.
 2. **The criteria decide.** A group lists the concepts its criteria actually
    use or presuppose, typically 2–8, never the whole pool. The same concept may
    appear in several groups of one unit when each really uses it.

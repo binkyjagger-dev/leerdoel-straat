@@ -14,7 +14,7 @@ from __future__ import annotations
 import sys
 from collections import Counter
 
-from common import Report, concept_admissible, exam_for, load_json, normalise_ws, validate_schema
+from common import Report, concept_admissible, concept_corrections, exam_for, load_json, normalise_ws, validate_schema
 
 
 def check_source_units(path: str) -> Report:
@@ -106,6 +106,7 @@ def check_groups(path: str, units_path: str, plan_path: str | None = None) -> Re
         return rep
     by_id = {u["unit_id"]: u for u in src["units"]}
     leaves = {u["unit_id"] for u in src["units"] if u["is_leaf"]}
+    corr = concept_corrections(src)
     groups = data["groups"]
     gids = Counter(g["group_id"] for g in groups)
     for gid, n in gids.items():
@@ -133,7 +134,7 @@ def check_groups(path: str, units_path: str, plan_path: str | None = None) -> Re
             rep.fail("G8", f"{gid}: no concepts (1-10 source terms required)")
         else:
             for t in concepts:
-                if not concept_admissible(t, by_id, uid):
+                if not concept_admissible(t, by_id, uid, corr):
                     rep.fail("G8", f"{gid}: concept {t!r} is neither in the unit's concept pool nor verbatim in the unit/subdomein text")
     if plan_path:
         plan = load_json(plan_path)

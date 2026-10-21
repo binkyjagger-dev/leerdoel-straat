@@ -14,7 +14,7 @@ from __future__ import annotations
 import sys
 from collections import defaultdict
 
-from common import BLOOM_ORDER, bloom_rank, load_json, normalise_term, normalise_ws, save_json
+from common import BLOOM_ORDER, bloom_rank, concept_corrections, concept_key, load_json, normalise_ws, save_json
 
 
 def compute(units_path: str, groups_path: str, plan_path: str | None = None) -> dict:
@@ -60,11 +60,12 @@ def compute(units_path: str, groups_path: str, plan_path: str | None = None) -> 
                     out.add(u["unit_id"])
                     frontier.append(u["unit_id"])
         return out
+    corr = concept_corrections(src)
     listed_by_unit: dict[str, set[str]] = defaultdict(set)
     for g in grp["groups"]:
         if g.get("status") != "reject":
             for t in g.get("concepts") or []:
-                listed_by_unit[g["unit_id"]].add(normalise_term(t))
+                listed_by_unit[g["unit_id"]].add(concept_key(t, corr))
     concepts_total, concepts_uncovered = 0, []
     for u in src["units"]:
         if not u.get("concepts"):
@@ -73,7 +74,7 @@ def compute(units_path: str, groups_path: str, plan_path: str | None = None) -> 
         listed = set().union(*(listed_by_unit.get(x, set()) for x in scope))
         for c in u["concepts"]:
             concepts_total += 1
-            if normalise_term(c) not in listed:
+            if concept_key(c, corr) not in listed:
                 concepts_uncovered.append({"unit_id": u["unit_id"], "concept": c})
 
     return {

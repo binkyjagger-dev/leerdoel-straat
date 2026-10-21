@@ -18,7 +18,8 @@ reported, not failed.
   source concept list (01 §1 `concepts`) appears in the `concepts` of at least
   one non-rejected group of that leaf (list on the leaf) or of a leaf under
   that subdomein (list on the subdomein). Matching is case- and
-  whitespace-insensitive. A C3 gap is reported in `coverage.json`
+  whitespace-insensitive and applies `source.concept_corrections` (01 §1), so a
+  corrected spelling covers the printed one. A C3 gap is reported in `coverage.json`
   (`concepts_total`, `concepts_uncovered`, `concept_coverage_pct`), the
   coverage report and the doubt list; it does **not** make `complete` false
   and does not by itself trigger a repair round — the verifier's J9 does when
