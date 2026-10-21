@@ -1,0 +1,99 @@
+{
+  "source": {
+    "source_id": "cvte-bedrijfseconomie-vwo-ce-2028-v2",
+    "title": "Bijlage 3 Uitleg bij de handelingswerkwoorden",
+    "pages": [
+      37
+    ],
+    "extracted_by": "ingest"
+  },
+  "level_labels": {
+    "onthouden": "Memoriseren",
+    "begrijpen": "Begrijpen",
+    "toepassen": "Toepassen",
+    "analyseren": "Analyseren",
+    "evalueren": "Evalueren",
+    "creëren": "Creëren"
+  },
+  "head_verbs": {
+    "onthouden": [
+      "noemen"
+    ],
+    "begrijpen": [
+      "uitleggen"
+    ],
+    "toepassen": [
+      "berekenen",
+      "opstellen"
+    ],
+    "analyseren": [
+      "analyseren"
+    ],
+    "evalueren": [
+      "beoordelen"
+    ],
+    "creëren": [
+      "adviseren"
+    ]
+  },
+  "verbs": {
+    "onthouden": [
+      "noemen",
+      "herkennen",
+      "aanwijzen",
+      "definiëren",
+      "vinden",
+      "kiezen",
+      "onderstrepen",
+      "invullen",
+      "citeren",
+      "arceren"
+    ],
+    "begrijpen": [
+      "uitleggen",
+      "verklaren",
+      "verhelderen",
+      "beschrijven",
+      "voorbeelden geven",
+      "toelichten",
+      "onderbouwen",
+      "aantonen"
+    ],
+    "toepassen": [
+      "berekenen",
+      "opstellen",
+      "hanteren",
+      "een overzicht geven",
+      "schatten",
+      "voorspellen",
+      "vormgeven",
+      "vragen formuleren"
+    ],
+    "analyseren": [
+      "analyseren",
+      "vergelijken",
+      "selecteren",
+      "indelen",
+      "kenmerken bepalen",
+      "determineren",
+      "structureren",
+      "ontleden"
+    ],
+    "evalueren": [
+      "beoordelen",
+      "bekritiseren",
+      "testen",
+      "doorlichten",
+      "afwegen"
+    ],
+    "creëren": [
+      "adviseren",
+      "rapporteren",
+      "hypothese opstellen",
+      "ontwerpen",
+      "construeren",
+      "maken"
+    ]
+  },
+  "notes": "Transcribed literally from bijlage 3 (p. 37). The printed list for 'toepassen' has no comma between 'vormgeven' and 'vragen formuleren'; read as two verbs (vormgeven; vragen formuleren). Head verbs ('samenvattend/overkoepelend handelingswerkwoord in gespecificeerde eindterm') are also listed in their level's verbs, as printed."
+}

@@ -475,7 +475,7 @@
         "E2.25.4",
         "E2.25.5"
       ],
-      "status": "answered",
+      "status": "superseded",
       "answer": "Akkoord met voorstel: customer solution, customer cost, convenience, communication (sluit aan op 'oplossing' in de CE-zin)",
       "answered_by": "Martijn Overgaag",
       "answered_at": "2026-10-21T13:20:33Z",
@@ -537,6 +537,321 @@
       "answered_at": "2026-10-21T13:20:33Z",
       "source_run": "20261013-2016-syllabus-bedrijfseconomie-vwo-2028-versie-2",
       "raised_by": "intake",
+      "supersedes": null
+    },
+    {
+      "id": "bedrijfsecon-017",
+      "question": "Vergroot een term uit de lijst 'Belangrijkste begrippen' die de specificatie zelf niet noemt ook wat de leerling moet kunnen (bijvoorbeeld een berekening), of is zo'n term alleen vakwoordenschat bij de prestatie die de specificatie vraagt?",
+      "context": "Van de 446 begrippen staan er 298 niet letterlijk in de tekst van de specificaties. Meestal is dat gewoon woordenschat die onder de specificatie valt (werving, functioneringsgesprek onder C2.17.2; legitieme portie, onterven onder B1.11.4 erven). Bij een aantal termen hangt er een extra handeling aan die de specificatie niet noemt: G.32.2 somt op welke kengetallen berekend worden (current ratio, quick ratio, EV/VV/TV, resultaat per aandeel, REV, RTV, IVV, cashflow per aandeel), maar de begrippenlijst van G noemt ook dividendrendement, beleggersrendement, 'hefboomwerking en interestmarge' en EBIT(DA), en bijlage 4 rekent dividendrendement, beleggersrendement en de hefboomformule tot de vwo-standaardformules die 'niet gegeven worden'. Verder: 'bruto uitgaven / netto uitgaven' (nieuw in versie 2, B1.11.3, waar de specificatie alleen interest en aflossing laat berekenen), 'bruto dividend / netto dividend / dividendbelasting' (F2.30.5), 'Full Time Equivalent / FTE' (C2, bij loonkosten 17.8). Bedrijfsecon-007 (opsommingen limitatief) ging over voorbeelden van buiten de syllabus; de begrippenlijst en bijlage 4 zijn de syllabus zelf, dus die beslissing dekt dit niet. Raakt ongeveer 7 specificaties en bepaalt of criteria minder vragen dan het CE.",
+      "options": [
+        "Alleen woordenschat: de term komt in een criterium op het niveau van het werkwoord van de specificatie (uitleggen/noemen); geen extra berekening.",
+        "Begrippenlijst en bijlage 4 tellen mee: waar een term een bijlage-4-formule of een te berekenen bedrag is (dividendrendement, beleggersrendement, hefboomformule, bruto/netto uitgaven, bruto/netto dividend, FTE), krijgt hij een berekencriterium bij de best passende specificatie (G.32.2, D2.22.1, B1.11.3, F2.30.5, C2.17.8); andere termen blijven woordenschat.",
+        "Strikt de specificatietekst: termen zonder steun in de specificatie komen niet in criteria en staan in het dekkingsrapport onder 'Begrippen zonder leerdoel'."
+      ],
+      "proposed": "Optie 2: bijlage 4 zegt dat deze formules in het CE gebruikt worden zonder dat ze gegeven worden; als ze ontbreken vragen de criteria minder dan het examen (dezelfde redenering als bedrijfsecon-016). Het niveau blijft toepassen, er komt geen hoger niveau bij.",
+      "impact": "high",
+      "applies_to": [
+        "planner",
+        "generator",
+        "verifier"
+      ],
+      "affects_units": [
+        "G.32.2",
+        "G.32.4",
+        "D2.22.1",
+        "B1.11.3",
+        "F2.30.5",
+        "C2.17.8",
+        "G"
+      ],
+      "status": "answered",
+      "answer": "Akkoord met voorstel: Optie 2: bijlage 4 zegt dat deze formules in het CE gebruikt worden zonder dat ze gegeven worden; als ze ontbreken vragen de criteria minder dan het examen (dezelfde redenering als bedrijfsecon-016). Het niveau blijft toepassen, er komt geen hoger niveau bij.",
+      "answered_by": "Martijn Overgaag",
+      "answered_at": "2026-10-21T15:04:44Z",
+      "source_run": "20261021-1647-bedrijfseconomie-vwo-2028-run2",
+      "raised_by": "intake",
+      "supersedes": null
+    },
+    {
+      "id": "bedrijfsecon-018",
+      "question": "Nemen we voor de vier C's de namen uit de begrippenlijst van E2 over (customer solution, customer cost to satisfy, customer convenience to buy, communication) in plaats van de kortere namen van bedrijfsecon-014?",
+      "context": "Bedrijfsecon-014 koos 'customer solution, customer cost, convenience, communication', met als context 'de syllabus noemt de C's niet'. De begrippenlijst van E2 (p23-24) noemt ze wel: 'customer solution', 'customer cost to satisfy', 'customer convenience to buy', 'communication'. De kolom kernbegrippen neemt deze termen letterlijk over, dus met de huidige beslissing staan in het criterium andere namen dan in de kernbegrippen ernaast. Raakt 3 specificaties (E2.25.2, 25.4, 25.5).",
+      "options": [
+        "Namen uit de begrippenlijst overnemen (customer solution, customer cost to satisfy, customer convenience to buy, communication).",
+        "Bij bedrijfsecon-014 blijven (customer cost, convenience); de kernbegrippen tonen de lange namen.",
+        "Volledige naam bij het eerste gebruik in een groep, daarna de korte naam."
+      ],
+      "proposed": "Optie 1: de begrippenlijst is de eigen woordkeus van de syllabus en het CE; criterium en kernbegrippen gebruiken dan hetzelfde woord. Vervangt bedrijfsecon-014.",
+      "impact": "low",
+      "applies_to": [
+        "generator",
+        "student-language",
+        "verifier"
+      ],
+      "affects_units": [
+        "E2.25.2",
+        "E2.25.4",
+        "E2.25.5",
+        "E2"
+      ],
+      "status": "answered",
+      "answer": "Akkoord met voorstel: Optie 1: de begrippenlijst is de eigen woordkeus van de syllabus en het CE; criterium en kernbegrippen gebruiken dan hetzelfde woord. Vervangt bedrijfsecon-014. Vervangt bedrijfsecon-014.",
+      "answered_by": "Martijn Overgaag",
+      "answered_at": "2026-10-21T15:04:44Z",
+      "source_run": "20261021-1647-bedrijfseconomie-vwo-2028-run2",
+      "raised_by": "intake",
+      "supersedes": null
+    },
+    {
+      "id": "bedrijfsecon-019",
+      "question": "Schrijven we kennelijke tikfouten in de begrippenlijsten in de kolom kernbegrippen hersteld (bijvoorbeeld 'exploitatiebegroting', 'liquidatiewaarde'), of letterlijk zoals gedrukt?",
+      "context": "Gevonden: 'explotatiebegroting' (F1, p25), 'liquiditatiewaarde' (F2, p29; bedoeld is liquidatiewaarde), 'bestuurverslag' (G), 'lening overige vermogensverschaffers,' met komma (D2.20.1), 'immateriële vaste activa:' en 'financiële vaste activa:' met dubbele punt (G), 'constante/variabele Kosten' met hoofdletter (F2). Bedrijfsecon-010 herstelt kennelijke fouten stil in de leerdoelen, maar de werkwijze schrijft voor dat kernbegrippen letterlijk uit de bron komen en de controle vergelijkt ze letterlijk; zonder besluit blijven de fouten dus in de kolom staan. Raakt 4 begrippenlijsten (D2.20.1, F1, F2, G), alleen de kolom kernbegrippen.",
+      "options": [
+        "Herstellen, net als bedrijfsecon-010 (spelling, losse komma's en dubbele punten weg).",
+        "Letterlijk laten zoals gedrukt.",
+        "Letterlijk laten en elk geval op de twijfellijst zetten."
+      ],
+      "proposed": "Optie 1: in lijn met bedrijfsecon-010; wie 'liquiditatiewaarde' ziet, leert een woord dat niet bestaat. Daarvoor moet de controle van de kernbegrippen de herstelde vorm accepteren.",
+      "impact": "low",
+      "applies_to": [
+        "generator",
+        "verifier",
+        "exporter"
+      ],
+      "affects_units": [
+        "D2.20.1",
+        "F1",
+        "F2",
+        "G"
+      ],
+      "status": "answered",
+      "answer": "Akkoord met voorstel: Optie 1: in lijn met bedrijfsecon-010; wie 'liquiditatiewaarde' ziet, leert een woord dat niet bestaat. Daarvoor moet de controle van de kernbegrippen de herstelde vorm accepteren. Uitvoering: de ingest legt de kennelijke fouten vast in source.concept_corrections (gedrukt -> hersteld); de controles G8 en C3 vergelijken via de herstelde vorm; de kolom kernbegrippen toont de herstelde vorm.",
+      "answered_by": "Martijn Overgaag",
+      "answered_at": "2026-10-21T15:04:44Z",
+      "source_run": "20261021-1647-bedrijfseconomie-vwo-2028-run2",
+      "raised_by": "intake",
+      "supersedes": null
+    },
+    {
+      "id": "bedrijfsecon-020",
+      "question": "Betekent 'duurzaamheid' in de lijst voorwaarden van vermogensverschaffers (D2.22.2) duurzaamheidseisen (milieu en maatschappij, zoals bij MVO) of de duurzaamheid (levensduur en waardevastheid) van het onderpand?",
+      "context": "De begrippenlijst bij D2.22.2 noemt: voorwaarden vermogensverschaffers, onderpand, duurzaamheid, rendementseis, solvabiliteitseis, liquiditeitseis. Elders in de syllabus betekent 'duurzaamheid' steeds milieu en maatschappij (B4 bij MVO en people-planet-profit, G 'duurzaamheid jaarverslag'). Methoden behandelen bij kredietverlening ook de levensduur van het onderpand. Het criterium over deze voorwaarde valt anders uit. Raakt 1 specificatie.",
+      "options": [
+        "Duurzaamheidseisen van banken en beleggers (milieu en maatschappij).",
+        "Levensduur en waardevastheid van het onderpand.",
+        "Allebei noemen in het criterium."
+      ],
+      "proposed": "Optie 1: past bij de betekenis die de syllabus elders aan 'duurzaamheid' geeft, en het onderpand staat al als eigen term in de lijst.",
+      "impact": "low",
+      "applies_to": [
+        "generator",
+        "verifier"
+      ],
+      "affects_units": [
+        "D2.22.2"
+      ],
+      "status": "answered",
+      "answer": "Akkoord met voorstel: Optie 1: past bij de betekenis die de syllabus elders aan 'duurzaamheid' geeft, en het onderpand staat al als eigen term in de lijst.",
+      "answered_by": "Martijn Overgaag",
+      "answered_at": "2026-10-21T15:04:44Z",
+      "source_run": "20261021-1647-bedrijfseconomie-vwo-2028-run2",
+      "raised_by": "intake",
+      "supersedes": null
+    },
+    {
+      "id": "bedrijfsecon-021",
+      "question": "Welke benamingen gebruiken we voor de vier C's van de vraaggerichte marketingmix: 'customer value, cost, convenience, communication', 'customer solution, customer cost, convenience, communication', of Nederlandse termen?",
+      "context": "E2.25.4-01 en E2.25.5-01 gebruiken 'customer value'. De syllabus noemt de C's niet, maar de E2 CE-zin spreekt van 'de specifieke oplossing die een product biedt voor de klanten', wat bij 'customer solution' past. Methoden en het origineel van Lauterborn (consumer wants and needs) verschillen; leerlingen moeten de termen herkennen die in het CE en hun methode staan.",
+      "options": [
+        "customer value, cost, convenience, communication (huidige tekst)",
+        "customer solution, customer cost, convenience, communication (sluit aan op 'oplossing' in de CE-zin)",
+        "Nederlandse termen (klantoplossing, kosten, gemak, communicatie) met de Engelse term tussen haakjes",
+        "de benaming van de methode die de sectie gebruikt (vastleggen in profile.md)"
+      ],
+      "proposed": "customer solution, customer cost, convenience, communication (sluit aan op 'oplossing' in de CE-zin)",
+      "impact": "low",
+      "applies_to": [
+        "generator",
+        "student-language",
+        "verifier"
+      ],
+      "affects_units": [
+        "E2.25.2",
+        "E2.25.4",
+        "E2.25.5"
+      ],
+      "status": "answered",
+      "answer": "Vervangen door bedrijfsecon-018: de namen uit de begrippenlijst van E2 (customer solution, customer cost to satisfy, customer convenience to buy, communication).",
+      "answered_by": "Martijn Overgaag",
+      "answered_at": "2026-10-21T15:04:44Z",
+      "source_run": "20261021-1647-bedrijfseconomie-vwo-2028-run2",
+      "raised_by": "intake",
+      "supersedes": "bedrijfsecon-014"
+    },
+    {
+      "id": "bedrijfsecon-022",
+      "question": "Moeten criteria bij 13.1.4 aangeven welke organen per rechtsvorm verplicht zijn en welke facultatief (raad van commissarissen bij bv/nv, raad van toezicht bij stichting), of volstaat noemen welke organen bij een rechtsvorm kunnen horen?",
+      "context": "B3.13.1-03-a zegt 'welke organen bij de rechtsvorm horen: raad van bestuur, raad van commissarissen en algemene vergadering van aandeelhouders bij bv en nv; bestuur en raad van toezicht bij de stichting'. Een RvC is bij de meeste bv's en nv's facultatief (verplicht bij het structuurregime) en een raad van toezicht bij een stichting is buiten zorg en onderwijs facultatief. De syllabus geeft alleen de begrippenlijst, zonder dit onderscheid; methoden verschillen hierin.",
+      "options": [
+        "Vereenvoudigd: noemen welke organen bij een rechtsvorm kunnen horen, zonder verplicht/facultatief (huidige tekst).",
+        "Precies: per orgaan aangeven of het verplicht of facultatief is (RvC verplicht bij structuurregime, raad van toezicht facultatief buiten zorg en onderwijs).",
+        "Middenweg: de verplichte kern noemen (bestuur, AVA, ALV) en RvC/raad van toezicht als orgaan dat een organisatie kan hebben."
+      ],
+      "proposed": "Optie 3: houdt het criterium kort en leert geen onjuiste verplichting aan; het structuurregime gaat verder dan de syllabus vraagt.",
+      "impact": "low",
+      "applies_to": [
+        "generator",
+        "verifier"
+      ],
+      "affects_units": [
+        "B3.13.1"
+      ],
+      "status": "open",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null,
+      "source_run": "20261021-1647-bedrijfseconomie-vwo-2028-run2",
+      "raised_by": "verifier",
+      "supersedes": null
+    },
+    {
+      "id": "bedrijfsecon-023",
+      "question": "Welke term gebruiken we in leerdoelen en criteria voor de vaste rente die een obligatie over de nominale waarde betaalt: 'interestpercentage van de obligatie' of 'couponrente'?",
+      "context": "D2 is door twee generatoren gemaakt; D2.20.2.4-02 gebruikt 'couponrente', D2.21.8-01 en D2.21.9-01 'interestpercentage van de obligatie'. Geen van beide staat in de begrippenlijst van D2; de syllabus spreekt elders van 'interest' en 'interestpercentage op vreemd vermogen' (D2.22.1) en alleen van 'rente' in 'marktrente'.",
+      "options": [
+        "'interestpercentage van de obligatie' (sluit aan op syllabustaal 'interest')",
+        "'couponrente' (gangbaar in financiele pers en methodes)",
+        "'interestpercentage (couponrente)' bij eerste vermelding per groep, daarna 'interestpercentage'"
+      ],
+      "proposed": "'interestpercentage van de obligatie' (sluit aan op syllabustaal 'interest')",
+      "impact": "low",
+      "applies_to": [
+        "generator",
+        "student-language",
+        "verifier"
+      ],
+      "affects_units": [
+        "D2.20.2.4",
+        "D2.21.6",
+        "D2.21.8",
+        "D2.21.9"
+      ],
+      "status": "open",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null,
+      "source_run": "20261021-1647-bedrijfseconomie-vwo-2028-run2",
+      "raised_by": "verifier",
+      "supersedes": null
+    },
+    {
+      "id": "bedrijfsecon-024",
+      "question": "Wat betekenen 'absoluut' en 'relatief' in de E2-begrippenlijst bij marktomvang en marktaandeel?",
+      "context": "De begrippenlijst van E2 zet 'marktomvang', 'absoluut', 'relatief', 'marktaandeel' achter elkaar zonder definitie. E2.25.1-02 kiest: absoluut marktaandeel = aandeel in de totale marktomvang (%), relatief marktaandeel = eigen marktaandeel t.o.v. dat van de grootste concurrent. Andere methodes gebruiken absoluut = in stuks of euro's en relatief = in procenten van de markt; de lijst kan ook marktomvang absoluut/relatief bedoelen.",
+      "options": [
+        "Absoluut = % van de totale marktomvang; relatief = t.o.v. de grootste concurrent (huidige tekst)",
+        "Absoluut = afzet/omzet in stuks of euro's; relatief = in procenten van de marktomvang",
+        "Beide: absoluut/relatief als stuks/euro's versus procenten, plus het relatieve marktaandeel t.o.v. de grootste concurrent"
+      ],
+      "proposed": "Absoluut = % van de totale marktomvang; relatief = t.o.v. de grootste concurrent (huidige tekst)",
+      "impact": "medium",
+      "applies_to": [
+        "generator",
+        "verifier"
+      ],
+      "affects_units": [
+        "E2.25.1",
+        "B4.14.1"
+      ],
+      "status": "open",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null,
+      "source_run": "20261021-1647-bedrijfseconomie-vwo-2028-run2",
+      "raised_by": "verifier",
+      "supersedes": null
+    },
+    {
+      "id": "bedrijfsecon-025",
+      "question": "Herstellen we in de kernbegrippen van C2 de gedrukte ontslagbegrippen 'ontslag met wederzijds goedkeuren' en 'redenen voor ontslag op staande voet via kantonrechter', of tonen we ze zoals gedrukt?",
+      "context": "De juridische term is 'ontslag met wederzijds goedvinden' (beeindigingsovereenkomst); ontslag op staande voet geeft de werkgever zelf en de kantonrechter toetst het pas achteraf, terwijl ontbinding via de kantonrechter voor persoonlijke redenen een eigen route is. C2.17.10-01-a gebruikt de juiste termen, maar de kolom kernbegrippen toont de gedrukte vorm. bedrijfsecon-019 regelt alleen kennelijke tikfouten via source.concept_corrections; dit zijn woordkeuzes.",
+      "options": [
+        "Opnemen in source.concept_corrections: 'ontslag met wederzijds goedvinden' en 'redenen voor ontslag op staande voet en via de kantonrechter'",
+        "Alleen 'goedkeuren' -> 'goedvinden' herstellen, de kantonrechter-regel laten zoals gedrukt",
+        "Alles zoals gedrukt laten in de kernbegrippen; de criteria gebruiken de juiste termen (huidige situatie)"
+      ],
+      "proposed": "Opnemen in source.concept_corrections: 'ontslag met wederzijds goedvinden' en 'redenen voor ontslag op staande voet en via de kantonrechter'",
+      "impact": "low",
+      "applies_to": [
+        "ingest",
+        "generator",
+        "verifier",
+        "exporter"
+      ],
+      "affects_units": [
+        "C2.17.10"
+      ],
+      "status": "open",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null,
+      "source_run": "20261021-1647-bedrijfseconomie-vwo-2028-run2",
+      "raised_by": "verifier",
+      "supersedes": null
+    },
+    {
+      "id": "bedrijfsecon-026",
+      "question": "Welk resultaat (voor of na belasting) bedoelen we in de bijlage-4-formules waar alleen 'resultaat' staat: cashflow, REV, RTV ('resultaat + interestkosten') en resultaat per aandeel?",
+      "context": "Bijlage 4 schrijft 'cashflow = resultaat + afschrijvingen', 'REV = resultaat / gemiddeld EV', 'RTV = (resultaat + interestkosten) / gemiddeld TV' en de hefboomformule expliciet 'REV voor belasting'. De generator gebruikt nu: cashflow en resultaat per aandeel na belasting (F2.30.6-01, G.32.2-04, G.32.4-02), RTV met EBIT (voor belasting, G.32.2-03), REV voor en na belasting (G.32.2-03) en REV voor belasting in de hefboom (G.32.4-02). Dat is intern consistent, maar bedrijfsecon-009/016 leggen niet vast welke variant geldt; examenopgaven vermelden dit meestal in de opgave.",
+      "options": [
+        "Huidige lijn vastleggen: cashflow en resultaat per aandeel na belasting; RTV = resultaat voor belasting + interestkosten (EBIT); REV voor en na belasting; hefboomformule voor belasting.",
+        "Overal 'resultaat' laten staan zoals bijlage 4, zonder voor/na belasting te noemen; de opgave bepaalt de variant.",
+        "Overal na belasting, behalve waar bijlage 4 expliciet 'voor belasting' zegt (hefboomformule)."
+      ],
+      "proposed": "Huidige lijn vastleggen: cashflow en resultaat per aandeel na belasting; RTV = resultaat voor belasting + interestkosten (EBIT); REV voor en na belasting; hefboomformule voor belasting.",
+      "impact": "medium",
+      "applies_to": [
+        "generator",
+        "verifier"
+      ],
+      "affects_units": [
+        "F2.30.6",
+        "G.32.2",
+        "G.32.4"
+      ],
+      "status": "open",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null,
+      "source_run": "20261021-1647-bedrijfseconomie-vwo-2028-run2",
+      "raised_by": "verifier",
+      "supersedes": null
+    },
+    {
+      "id": "bedrijfsecon-027",
+      "question": "Waar hoort het begrote bezettingsresultaat (B - N) x C/N uit bijlage 4 thuis: in het voorcalculatorische resultaat (31.1), als aparte post in de verschillenanalyse (31.1.2), of allebei?",
+      "context": "31.1.2 noemt als onderdelen van het budgetresultaat alleen 'prijsresultaat, efficiencyresultaat en bezettingsresultaat'; bijlage 4 rekent het budgetresultaat als 'gerealiseerde afzet x kostprijs - werkelijke kosten' (daarin zit alleen het gerealiseerde bezettingsresultaat) en zet het begrote bezettingsresultaat onder 'Verschillenanalyse'. In ronde 2 berekent F2.31.1-02-b beide bezettingsresultaten en telt c 'de bezettingsresultaten' bij het budgetresultaat op, wat onjuist leesbaar is. Raakt F2.31.1-01 en -02.",
+      "options": [
+        "In het voorcalculatorische resultaat: begroot resultaat = begrote afzet x (verkoopprijs - kostprijs) + begroot bezettingsresultaat (F2.31.1-01); het budgetresultaat bevat alleen het gerealiseerde bezettingsresultaat.",
+        "Als aparte post in de verschillenanalyse (F2.31.1-02): verschil = verschil in verkoopresultaat + budgetresultaat - begroot bezettingsresultaat.",
+        "Allebei: berekenen bij het voorcalculatorische resultaat en expliciet gebruiken bij het verklaren van het verschil, met in elk criterium dezelfde opbouw."
+      ],
+      "proposed": "Optie 1: sluit aan op de definitie van het budgetresultaat in bijlage 4 en houdt het budgetresultaat eenduidig; de verschillenanalyse gebruikt het begrote bezettingsresultaat dan als onderdeel van het voorcalculatorische resultaat.",
+      "impact": "medium",
+      "applies_to": [
+        "planner",
+        "generator",
+        "verifier"
+      ],
+      "affects_units": [
+        "F2.31.1"
+      ],
+      "status": "open",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null,
+      "source_run": "20261021-1647-bedrijfseconomie-vwo-2028-run2",
+      "raised_by": "verifier",
       "supersedes": null
     }
   ]

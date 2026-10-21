@@ -1,0 +1,22 @@
+{
+  "run_id": "20261021-1647-bedrijfseconomie-vwo-2028-run2",
+  "subject": "bedrijfseconomie",
+  "input": "input/syllabus-bedrijfseconomie-vwo-2028-versie-2.pdf",
+  "source_type": "syllabus",
+  "source_id": "cvte-bedrijfseconomie-vwo-ce-2028-v2",
+  "max_repair_rounds": 2,
+  "generator_batch_size": 4,
+  "models": {
+    "ingest": "sonnet",
+    "intake": "opus",
+    "planner": "opus",
+    "generator": "opus",
+    "student_language": "sonnet",
+    "verifier": "opus"
+  },
+  "rounds_completed": 2,
+  "status": "done",
+  "started_at": "2026-10-21T14:48:08Z",
+  "notes": "Run 2 for bedrijfseconomie: 16 decisions answered, subject verb table (bijlage 3) installed, corrections 1 (exam allocation) and 2 (key concepts) in force.",
+  "finished_at": "2026-10-21T15:58:40Z"
+}
