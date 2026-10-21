@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "VerbTable",
+  "description": "A source-specific verb -> Bloom level table (specs/02 §2 rule 6, specs/06 §7). Used for <run_dir>/01_verb_table.json (extracted by ingest, candidate) and subjects/<subject>/bloom_verbs.json (installed after an answered decision).",
+  "type": "object",
+  "required": ["source", "verbs"],
+  "properties": {
+    "subject": {"type": "string", "minLength": 1},
+    "source": {
+      "type": "object",
+      "required": ["source_id", "title"],
+      "properties": {
+        "source_id": {"type": "string"},
+        "title": {"type": "string", "description": "Printed title of the table/appendix, e.g. 'Bijlage 3 Uitleg bij de handelingswerkwoorden'"},
+        "pages": {"type": "array", "items": {"type": "integer", "minimum": 1}},
+        "extracted_by": {"enum": ["ingest", "human"]}
+      }
+    },
+    "decision": {"type": ["string", "null"], "description": "Id of the answered decision that adopted this table (set by verb_table.py install)"},
+    "installed_at": {"type": ["string", "null"]},
+    "level_labels": {
+      "type": "object",
+      "description": "The source's own label per level, e.g. onthouden -> 'Memoriseren'",
+      "additionalProperties": {"type": "string"}
+    },
+    "head_verbs": {
+      "type": "object",
+      "description": "Per level, the overarching verb(s) the source uses in its eindtermen (bijlage 3: 'samenvattend/overkoepelend handelingswerkwoord')",
+      "additionalProperties": {"type": "array", "items": {"type": "string"}}
+    },
+    "verbs": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "onthouden": {"type": "array", "items": {"type": "string", "minLength": 2}},
+        "begrijpen": {"type": "array", "items": {"type": "string", "minLength": 2}},
+        "toepassen": {"type": "array", "items": {"type": "string", "minLength": 2}},
+        "analyseren": {"type": "array", "items": {"type": "string", "minLength": 2}},
+        "evalueren": {"type": "array", "items": {"type": "string", "minLength": 2}},
+        "creëren": {"type": "array", "items": {"type": "string", "minLength": 2}}
+      }
+    },
+    "ambiguous": {
+      "type": "object",
+      "additionalProperties": {"type": "array", "minItems": 2, "items": {"enum": ["onthouden", "begrijpen", "toepassen", "analyseren", "evalueren", "creëren"]}}
+    },
+    "forbidden_criterion_verbs_extra": {"type": "array", "items": {"type": "string"}},
+    "notes": {"type": ["string", "null"]}
+  }
+}

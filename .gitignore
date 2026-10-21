@@ -5,6 +5,7 @@ runs/*/*
 !runs/*/output/
 !runs/*/run.json
 !runs/*/01_ingest_notes.md
+!runs/*/01_verb_table.json
 input/*
 !input/.gitkeep
 __pycache__/

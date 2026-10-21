@@ -58,7 +58,8 @@ Zie je een patroon in de spot check? Pas dan de **regel** aan, niet de losse lee
 | Zie je… | Pas aan |
 |---|---|
 | een term die anders moet | `subjects/<vak>/profile.md` → Terminologie |
-| een werkwoord op het verkeerde Bloom-niveau | `data/bloom_verbs_nl.json` |
+| een werkwoord op het verkeerde Bloom-niveau, voor alle vakken | `data/bloom_verbs_nl.json` |
+| een werkwoord dat jouw syllabus anders indeelt | `subjects/<vak>/bloom_verbs.json` (zie hieronder) |
 | leerlingentaal te lang / te vaag | `data/student_language_rules.json` |
 | een interpretatie die je anders wilt | `python3 scripts/decisions.py answer economie <id> "<antwoord>"` |
 | openstaande vragen | `python3 scripts/decisions.py list economie --open` |
@@ -71,5 +72,6 @@ Daarna opnieuw `/generate`. Elke run krijgt een eigen map; niets wordt overschre
 
 **Kan ik een deel opnieuw draaien?** Ja, elke stap leest en schrijft bestanden in `runs/<id>/`; in Claude Code kun je bijvoorbeeld alleen stap 6 herhalen met `python3 scripts/export.py runs/<id>`.
 **Ander vak?** `decisions.py init <vak>`, profiel invullen, `--subject <vak>`.
+**Heeft de syllabus een eigen tabel met handelingswerkwoorden?** (bedrijfseconomie: bijlage 3.) De straat vindt die zelf: het inlezen zet de tabel letterlijk in `runs/<id>/01_verb_table.json`, de intake laat je de verschillen met de generieke tabel zien en vraagt of je de syllabustabel overneemt. Zeg je ja, dan komt ze in `subjects/<vak>/bloom_verbs.json` en wint ze per werkwoord van de generieke tabel; voor alle volgende runs van dat vak. Bekijk het resultaat met `python3 scripts/verb_table.py effective <vak>`.
 **Methode/boek als bron?** Komt in een volgende versie; het datamodel is er al op voorbereid (`specs/01-source-units.md §3`).
 **Waar staat de verantwoording?** `specs/` — met name `00-overview.md` (wetenschappelijke ankers) en `04-verification.md` (de rubric).

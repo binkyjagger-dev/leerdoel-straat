@@ -40,6 +40,108 @@ def normalise_ws(s: str) -> str:
     return re.sub(r"\s+", " ", s.replace("­", "")).strip().lower()
 
 
+# ---------------------------------------------------------------------------
+# Bloom verb tables: generic (data/bloom_verbs_nl.json) + optional subject
+# overlay (subjects/<subject>/bloom_verbs.json). specs/02 §2 rule 6, specs/06 §7.
+# ---------------------------------------------------------------------------
+
+SUBJECTS = ROOT / "subjects"
+GENERIC_VERBS = DATA / "bloom_verbs_nl.json"
+
+
+def stem_verb(verb: str) -> str:
+    """Strip bracketed qualifiers: 'tekenen (volgens een gegeven model)' -> 'tekenen'."""
+    return re.sub(r"\s*\(.*?\)\s*", " ", verb).strip().lower()
+
+
+def subject_verb_table_path(subject: str | None) -> Path | None:
+    if not subject:
+        return None
+    p = SUBJECTS / subject / "bloom_verbs.json"
+    return p if p.exists() else None
+
+
+def subject_for(path: str | Path) -> str | None:
+    """Find the `subject` of the run a file belongs to: nearest run.json up the tree (at most 3 levels)."""
+    p = Path(path).resolve()
+    d = p if p.is_dir() else p.parent
+    for _ in range(3):
+        rj = d / "run.json"
+        if rj.exists():
+            try:
+                return load_json(rj).get("subject")
+            except Exception:  # pragma: no cover
+                return None
+        d = d.parent
+    return None
+
+
+def merge_verb_rules(generic: dict, overlay: dict | None, subject: str | None = None,
+                     overlay_path: str | Path | None = None) -> dict:
+    """Return the effective verb table: generic with the overlay applied per verb.
+
+    - a verb in the overlay is removed from every generic level and from `ambiguous`,
+      then placed at its overlay level; two overlay levels -> ambiguous between them;
+    - `source_verb_hints` gets the overlay level for those verbs;
+    - `forbidden_criterion_verbs_extra` is appended; nothing is ever un-forbidden;
+    - `_effective` records subject, paths, decision and the list of overrides.
+    """
+    import copy
+    eff = copy.deepcopy(generic)
+    eff.setdefault("ambiguous", {})
+    eff.setdefault("source_verb_hints", {})
+    meta = {"subject": subject, "generic": str(GENERIC_VERBS), "overlay": str(overlay_path) if overlay_path else None,
+            "decision": (overlay or {}).get("decision"), "overrides": []}
+    if not overlay:
+        eff["_effective"] = meta
+        return eff
+
+    # collect overlay verb -> levels (by stem)
+    ov: dict[str, list[str]] = {}
+    for lvl, verbs in (overlay.get("verbs") or {}).items():
+        for v in verbs:
+            ov.setdefault(stem_verb(v), [])
+            if lvl not in ov[stem_verb(v)]:
+                ov[stem_verb(v)].append(lvl)
+    for v, lvls in (overlay.get("ambiguous") or {}).items():
+        ov[stem_verb(v)] = list(lvls)
+
+    for verb, lvls in ov.items():
+        was_levels = [l for l, vs in eff["verbs"].items() if any(stem_verb(x) == verb for x in vs)]
+        was_amb = next((k for k in eff["ambiguous"] if stem_verb(k) == verb), None)
+        was_hint = next((eff["source_verb_hints"][k] for k in eff["source_verb_hints"]
+                         if not k.startswith("_") and stem_verb(k) == verb), None)
+        for l in eff["verbs"]:
+            eff["verbs"][l] = [x for x in eff["verbs"][l] if stem_verb(x) != verb]
+        if was_amb is not None:
+            del eff["ambiguous"][was_amb]
+        for l in lvls:
+            eff["verbs"].setdefault(l, []).append(verb)
+        if len(lvls) > 1:
+            eff["ambiguous"][verb] = list(lvls)
+        for k in [k for k in eff["source_verb_hints"] if not k.startswith("_") and stem_verb(k) == verb]:
+            del eff["source_verb_hints"][k]
+        eff["source_verb_hints"][verb] = lvls[0] if len(lvls) == 1 else max(lvls, key=bloom_rank)
+        changed = sorted(was_levels) != sorted(lvls) or (was_amb is not None and len(lvls) == 1) \
+            or (was_hint is not None and was_hint != eff["source_verb_hints"][verb])
+        meta["overrides"].append({"verb": verb, "level": lvls if len(lvls) > 1 else lvls[0],
+                                  "generic_levels": was_levels, "generic_ambiguous": bool(was_amb),
+                                  "generic_hint": was_hint, "changed": changed})
+    for f in overlay.get("forbidden_criterion_verbs_extra") or []:
+        if f.lower() not in [x.lower() for x in eff["forbidden_criterion_verbs"]]:
+            eff["forbidden_criterion_verbs"].append(f)
+    eff["_effective"] = meta
+    return eff
+
+
+def load_bloom_rules(subject: str | None = None) -> dict:
+    """The effective verb table for a subject (generic when the subject has no table)."""
+    generic = load_json(GENERIC_VERBS)
+    op = subject_verb_table_path(subject)
+    overlay = load_json(op) if op else None
+    return merge_verb_rules(generic, overlay, subject, op)
+
+
 def validate_schema(data, schema_name: str) -> list[str]:
     """Return a list of schema error messages (empty when valid)."""
     try:

@@ -24,26 +24,37 @@ implement; they do not restate rules that live in `data/*.json`, they read them.
 
 | # | Role | Reads | Writes | Tools | Model |
 |---|---|---|---|---|---|
-| 1 | `ingest` | input PDF | `01_source_units.json`, `01_ingest_notes.md` | Bash (pdftotext/python), Read, Write | sonnet |
-| 1b | `intake` | `01_source_units.json`, `01_ingest_notes.md`, `subjects/<s>/profile.md`, `subjects/<s>/decisions.json` | `01b_intake_questions.json` → orchestrator pauses, writes answers to `decisions.json` | Read, Write | opus, fresh context |
-| 2 | `planner` | `01_source_units.json`, `data/bloom_verbs_nl.json` | `02_plan.json` | Read, Write | opus |
-| 3 | `generator` | `02_plan.json` (one unit), unit text, `data/*.json`, spec §02 | `03_groups_raw/<unit_id>.json` | Read, Write | opus |
+| 1 | `ingest` | input PDF | `01_source_units.json`, `01_ingest_notes.md`, `01_verb_table.json` (only if the source defines a verb table) | Bash (pdftotext/python), Read, Write | sonnet |
+| 1b | `intake` | `01_source_units.json`, `01_ingest_notes.md`, `01_verb_table.json` (if present), `subjects/<s>/profile.md`, `subjects/<s>/decisions.json`, `subjects/<s>/bloom_verbs.json` (if present) | `01b_intake_questions.json` → orchestrator pauses, writes answers to `decisions.json`; an adopted verb table is installed to `subjects/<s>/bloom_verbs.json` and `bloom_verbs_effective.json` is written | Read, Write | opus, fresh context |
+| 2 | `planner` | `01_source_units.json`, `bloom_verbs_effective.json` | `02_plan.json` | Read, Write | opus |
+| 3 | `generator` | `02_plan.json` (one unit), unit text, `bloom_verbs_effective.json`, `data/*.json`, spec §02 | `03_groups_raw/<unit_id>.json` | Read, Write | opus |
 | 4 | `student-language` | `03_groups_raw.json` (merged), `data/student_language_rules.json` | `04_groups_student.json` | Read, Write | sonnet |
-| 5 | `verifier` | `01_source_units.json`, `04_groups_student.json`, `02_plan.json`, `data/*.json`, spec §02/§04 | `05_verification.json` | Read, Write, Bash (run scripts) | opus, **fresh context** |
+| 5 | `verifier` | `01_source_units.json`, `04_groups_student.json`, `02_plan.json`, `bloom_verbs_effective.json`, `data/*.json`, spec §02/§04 | `05_verification.json` | Read, Write, Bash (run scripts) | opus, **fresh context** |
 | 6 | exporter | `04_groups_student.json`, `05_verification.json`, `01_ingest_notes.md` | `output/*` | script, no model | — |
 
 ### 2.1 ingest
 See 01-source-units §2. Outputs literal text per leaf. Never infers goals.
+Also runs `scripts/verb_table.py scan` on the PDF and, when the source defines
+its own handelingswerkwoorden table, transcribes it to `01_verb_table.json`
+(01 §2 step 2b). The file is a candidate; nothing uses it until the teacher
+adopts it at the intake.
 
 ### 2.1b intake
 See [06-subject-profiles.md](06-subject-profiles.md) §3. The only human checkpoint of the straat.
+If `01_verb_table.json` exists and the subject has no `bloom_verbs.json` yet,
+the intake runs `verb_table.py diff` and asks **one** question (impact high)
+whether to adopt the source's table, listing the conflicts with the generic
+table in the context (06 §7). After the pause the orchestrator installs an
+adopted table and always writes `<run_dir>/bloom_verbs_effective.json`
+(`verb_table.py effective`), the single verb table every later step reads.
 
 ### 2.2 planner
 For every leaf unit decides:
 - `n_groups` (1–4): one per distinct concept/skill bundled in the eindterm.
   Signals: multiple main verbs, enumerations, "en"/"of" joining concepts.
 - `target_bloom_max`: highest level implied by the eindterm's own verbs
-  (lookup in verb list; ambiguous verbs resolved by context, resolution noted).
+  (lookup in the effective verb table's `source_verb_hints`; ambiguous verbs
+  resolved by context, resolution noted).
 - `focus` per planned group: one line stating the concept/skill the group
   must address, so parallel generators do not overlap.
 - `rationale`: one or two sentences, for the audit trail.
@@ -69,8 +80,10 @@ Hard requirements it must satisfy before writing:
 - `source_quote` is a verbatim substring of the unit `text`.
 
 The orchestrator merges `03_groups_raw/*.json` into `03_groups_raw.json` and
-runs `bloom_check.py` (verb-in-list, forbidden verbs, compute `goal.bloom`,
-alignment with `target_bloom_max` + 1).
+runs `bloom_check.py --subject <s>` (verb-in-effective-table, forbidden verbs,
+compute `goal.bloom`, alignment with `target_bloom_max` + 1). Without
+`--subject` the script reads `subject` from the nearest `run.json`; without
+either it uses the generic table.
 
 ### 2.4 student-language
 Rewrites `text_expert` → `text_student` for all goals and criteria, per

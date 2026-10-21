@@ -20,6 +20,8 @@ generation and records the answers so later runs don't ask again.
 subjects/<subject>/
   profile.md        human-written context, read by every agent (free text)
   decisions.json    straat-written record of intake questions and answers
+  bloom_verbs.json  optional, straat-written (verb_table.py install): the subject's
+                    verb → Bloom table adopted from the source, overrides the generic table (§7)
   glossary.json     optional: preferred terms and forbidden synonyms
 ```
 
@@ -114,7 +116,9 @@ decisions path. Rules:
   orchestrator appends them to `decisions.json` with `status: open` after the
   run; they are presented at the next run's intake. The verifier never answers
   them.
-- Nothing in the straat writes `profile.md`.
+- Nothing in the straat writes `profile.md`. Only `scripts/decisions.py`
+  writes `decisions.json` and only `scripts/verb_table.py install` writes
+  `bloom_verbs.json`, and the latter only against an *answered* decision.
 
 ## 5. Orchestration changes
 
@@ -133,3 +137,62 @@ The six questions run 1 raised in its doubt list are entered in
 `subjects/economie/decisions.json` with `status: open`, `raised_by: verifier`,
 `source_run: 20261011-1150-economie-vwo-2026`, so Martijn can answer them in
 one pass and run 2 starts from settled ground.
+
+## 7. Subject verb table (decided 2026-10-21)
+
+**Why.** Run 3 (bedrijfseconomie VWO 2028) showed that the verb → Bloom table
+is subject-bound: the CvTE syllabus carries its own table (*Bijlage 3*) that
+puts "opstellen" at toepassen and "indelen"/"vergelijken" at analyseren, where
+`data/bloom_verbs_nl.json` says creëren and begrijpen. Economie's syllabus has
+no such table. Decision bedrijfsecon-002 ("pas bijlage 3 toe") could not be
+executed because `bloom_check.py` G3 only knew the generic table. Rule: 02 §2
+rule 6.
+
+**How the straat finds out whether a subject table is needed** — three steps,
+each in an existing role, no new checkpoint:
+
+1. **Ingest detects and transcribes.** `scripts/verb_table.py scan <pdf>`
+   reports the pages that mention *handelingswerkwoord*, *beheersingsniveau*
+   or *taxonomie van Bloom*. If those pages hold a table mapping verbs to
+   levels, the ingest agent transcribes it **literally** to
+   `<run_dir>/01_verb_table.json` (schema `schemas/verb_table.schema.json`) and
+   validates it (`verb_table.py validate`). No table → no file; the notes say
+   so. The file is a candidate: nothing reads it yet.
+2. **Intake compares and asks.** If `01_verb_table.json` exists and
+   `subjects/<subject>/bloom_verbs.json` does not, the intake runs
+   `verb_table.py diff <run_dir>/01_verb_table.json --subject <subject>` and
+   puts **one** question in `01b_intake_questions.json`, key
+   `handelingswerkwoorden-tabel`, impact `high`, `affects_units: ["*"]`,
+   `applies_to: ["planner", "generator", "verifier"]`: adopt the source's table
+   (proposed), keep the generic table, or adopt it with named exceptions. The
+   context lists the conflicts the diff found (verb, source level, generic
+   level). If the subject already has a table, the intake lists the question
+   under `skipped_as_already_decided`.
+3. **Orchestrator installs, after the answer.** When the decision is answered
+   with adoption, the orchestrator runs
+   `verb_table.py install <subject> <run_dir>/01_verb_table.json --decision <id>`,
+   which refuses unless that decision is `answered` and refuses to overwrite an
+   existing table without `--force`. Exceptions named in the answer are applied
+   by the orchestrator as `--drop <verb>` (the verb keeps its generic level).
+   Then, always: `verb_table.py effective <subject> --out <run_dir>/bloom_verbs_effective.json`.
+   Every later role reads that file; `bloom_check.py` recomputes the same merge
+   from `--subject`.
+
+**Merge semantics** (`verb_table.py effective`, `common.load_bloom_rules`):
+generic table first; every verb in the subject table is removed from all
+generic levels and from `ambiguous`, then placed at its subject level
+(two subject levels → ambiguous between them); `source_verb_hints` gets the
+subject level for those verbs; `forbidden_criterion_verbs_extra` is appended;
+everything else stays generic. The effective file records the overrides under
+`_effective.overrides` so a reader can see what changed and why
+(`_effective.decision`).
+
+**Later runs of the same subject** skip steps 2 and 3: the decision is answered
+and the table is installed. A new syllabus version with a changed table shows
+up as a diff against the installed table; the intake then asks again (new
+decision, old one superseded).
+
+**Backfill for bedrijfseconomie.** Bijlage 3 of the 2028 v2 syllabus is
+transcribed to the run's `01_verb_table.json` and installed against
+bedrijfsecon-002 (answered 2026-10-21). The bedrijfseconomie run of 2026-10-13
+predates this and must be regenerated to honour it.

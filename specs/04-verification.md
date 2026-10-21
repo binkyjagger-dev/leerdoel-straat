@@ -34,7 +34,7 @@ reported, not failed.
 | P1 | every leaf planned exactly once; slots ≥ 1 | planner | fail |
 | G1 | #groups per unit == planned slots | generator | fail (retry once) |
 | G2 | 2 ≤ #criteria ≤ 4 | generator | fail |
-| G3 | `bloom_verb` in verb list for `bloom` (ambiguous verbs: level in allowed set) | generator | fail |
+| G3 | `bloom_verb` in the **effective** verb table for `bloom` (generic table + subject overrides, 02 §2 rule 6; ambiguous verbs: level in allowed set) | generator | fail |
 | G4 | no forbidden verb as criterion main verb | generator | fail |
 | G5 | `goal.bloom` == max(criteria.bloom) (computed & overwritten) | generator | auto-fix |
 | G6 | `goal.bloom` ≤ `target_bloom_max` + 1 | generator | warn → verifier |

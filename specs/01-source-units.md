@@ -81,6 +81,11 @@ Rules
   observable performances of the criteria, not as goals of their own. Domains
   that the syllabus marks as school-exam-only and does not specify are skipped
   as well. The ingest notes list every skipped domain.
+  Appendices are not units either, with one exception: an appendix (or
+  introduction section) that defines the syllabus's own **handelingswerkwoorden
+  → Bloom level** table is extracted literally to `<run_dir>/01_verb_table.json`
+  (schema `schemas/verb_table.schema.json`; see 02 §2 rule 6 and 06 §7). It is
+  source material for a decision, not a unit.
 - **P3 — Specification sub-items stay inside the leaf.** Roman-numeral or
   bullet sub-items under one specification (e.g. the four market forms under
   D2.1) remain in that leaf's `text`; the planner decides how many groups the
@@ -92,6 +97,13 @@ Rules
 2. Locate the specification chapter ("Specificatie domeinen" or equivalent).
    Ignore front matter, toelichting and appendices unless they contain
    specifications.
+2b. Run `scripts/verb_table.py scan <pdf>` (deterministic: pages mentioning
+   *handelingswerkwoord*, *beheersingsniveau* or *taxonomie van Bloom*). If it
+   finds a table that maps verbs to levels, transcribe it literally into
+   `01_verb_table.json` (verbs lower-case, infinitive as printed; the source's
+   own level labels in `level_labels`; its overarching verbs in `head_verbs`;
+   page numbers) and run `verb_table.py validate` on it. If the scan finds
+   nothing, write no file and say so in the notes.
 3. Apply P2: select the content domains.
 4. Build domein / subdomein / eindterm units using the printed codes (P1).
    Subdomein `text` = the global eindterm sentence(s). Leaf `text` = the

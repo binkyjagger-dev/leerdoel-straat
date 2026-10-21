@@ -17,8 +17,8 @@ You are the **orchestrator** of the leerdoel-straat. You own control flow and fi
 Below, `R` = `runs/<run_id>`, `S` = `<subject>`. Each step: launch the named subagent via the Agent tool with **file paths only** (always include `R` and `S`), then run the validator yourself. If a validator fails, re-launch the same agent once with the validator output appended. If it fails again, set `status: "aborted"` in `run.json` with the output and stop.
 
 ## 1. Ingest
-Agent `ingest` → `R/01_source_units.json`, `R/01_ingest_notes.md`.
-Validate: `python3 scripts/validate.py source_units R/01_source_units.json`.
+Agent `ingest` → `R/01_source_units.json`, `R/01_ingest_notes.md`, and — only when the source defines its own handelingswerkwoorden table — `R/01_verb_table.json`.
+Validate: `python3 scripts/validate.py source_units R/01_source_units.json`; if `R/01_verb_table.json` exists: `python3 scripts/verb_table.py validate R/01_verb_table.json`.
 
 ## 1b. Intake — the only pause
 1. Agent `intake` (fresh context) → `R/01b_intake_questions.json`.
@@ -26,7 +26,8 @@ Validate: `python3 scripts/validate.py source_units R/01_source_units.json`.
 3. Collect all **open** decisions: `python3 scripts/decisions.py list S --open`. If there are none, continue to step 2 without pausing.
 4. **Pause and ask the user.** Use AskUserQuestion, at most 4 questions per call, `high` impact first; each question's options are the decision's `options` (the proposed one first, marked "(voorgesteld)"); the user can always type a free answer. Repeat calls until all open decisions are presented. Write each answer: `python3 scripts/decisions.py answer S <id> "<answer>" --by user --run <run_id>`. Skipped or unanswered decisions stay `open` — the proposed default applies, and the run is marked provisional for the affected units.
    If no user is present (headless run, or AskUserQuestion unavailable), do not wait: continue on proposed defaults and say so in the final report.
-5. `python3 scripts/decisions.py snapshot S R` → `R/decisions_snapshot.json`. Every later agent reads this file; never the live `decisions.json`.
+5. **Verb table** (specs/06 §7). If the intake asked `handelingswerkwoorden-tabel` and the user answered with adoption: `python3 scripts/verb_table.py install S R/01_verb_table.json --decision <id>` (add `--drop <verb>` for every verb the answer excepts; the script refuses unless the decision is answered). Then, always: `python3 scripts/verb_table.py effective S --out R/bloom_verbs_effective.json`. Every later agent reads that file as its verb table.
+6. `python3 scripts/decisions.py snapshot S R` → `R/decisions_snapshot.json`. Every later agent reads this file; never the live `decisions.json`.
 
 ## 2. Plan
 Agent `planner` → `R/02_plan.json`.
@@ -37,7 +38,7 @@ For every subdomein (parent of leaves) launch agent `generator` with: `R`, `S`, 
 Then merge: `python3 scripts/merge_groups.py R` → `R/03_groups_raw.json`, and validate:
 ```
 python3 scripts/validate.py groups R/03_groups_raw.json R/01_source_units.json R/02_plan.json
-python3 scripts/bloom_check.py R/03_groups_raw.json R/02_plan.json --write
+python3 scripts/bloom_check.py R/03_groups_raw.json R/02_plan.json --write --subject S
 ```
 Units whose file fails validation: re-launch their generator once with the output.
 
@@ -70,11 +71,11 @@ Update `rounds_completed` in `run.json` after each round.
 `python3 scripts/export.py R` → `R/output/leerdoelgroepen.csv`, `leerdoelgroepen_per_leerdoel.csv`, `coverage_report.md`, `doubt_list.md`. Set `status: "done"`, `finished_at`.
 
 ## 7. Report (≤ 10 lines)
-Units, groups, criteria, coverage %, verdict counts per round, decisions answered / still open, doubt-list size, output paths. Nothing else.
+Units, groups, criteria, coverage %, verdict counts per round, decisions answered / still open, verb table (generic, or subject table + number of reclassified verbs), doubt-list size, output paths. Nothing else.
 
 ## Rules
 - Never paste file contents into agent prompts; pass paths.
 - Never edit goal/criteria text yourself. If something is wrong, re-run the responsible agent with the evidence.
-- Never answer a decision yourself and never write `profile.md`; only `scripts/decisions.py` touches `decisions.json`.
+- Never answer a decision yourself and never write `profile.md`; only `scripts/decisions.py` touches `decisions.json` and only `scripts/verb_table.py install` touches `subjects/<S>/bloom_verbs.json`.
 - Never skip a validator.
 - Keep all intermediate files; never overwrite a previous round's file (copy to `.round<N>` first).

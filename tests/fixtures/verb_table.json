@@ -1,0 +1,16 @@
+{
+  "source": {
+    "source_id": "fixture-economie-vwo",
+    "title": "Bijlage X Handelingswerkwoorden (fixture)",
+    "pages": [99],
+    "extracted_by": "human"
+  },
+  "head_verbs": {
+    "toepassen": ["berekenen", "opstellen"]
+  },
+  "verbs": {
+    "toepassen": ["opstellen"],
+    "analyseren": ["indelen"]
+  },
+  "notes": "Synthetic table for tests/run_fixture.py: reclassifies 'opstellen' (generic creëren) to toepassen and 'indelen' (generic begrijpen) to analyseren; everything else stays generic."
+}

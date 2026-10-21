@@ -55,6 +55,8 @@ Six levels, Dutch labels used throughout:
 | evalueren | evaluate | beoordelen, beargumenteren, afwegen, kritisch bespreken, een standpunt innemen en verdedigen |
 | creëren | create | ontwerpen, opstellen (van een plan/model), formuleren (van een eigen hypothese), construeren |
 
+The generic table is `data/bloom_verbs_nl.json`; a subject table (rule 6) may reclassify any of these verbs for that subject.
+
 Rules
 1. **Bloom is a property of the criterion.** Every criterion has `bloom` and
    `bloom_verb`. `bloom_verb` must be the infinitive of the main verb in
@@ -76,6 +78,24 @@ Rules
    toepassen or creëren) are resolved by context in the generator and checked by
    the verifier; the verb list marks these as `ambiguous: true` with the
    allowed levels.
+6. **Subject verb table (decided 2026-10-21).** A syllabus may define its own
+   verb → level table (CvTE bedrijfseconomie: *Bijlage 3 Uitleg bij de
+   handelingswerkwoorden*, which puts "opstellen" at toepassen and "indelen" at
+   analyseren where the generic table says creëren and begrijpen). The verb
+   table is therefore **subject-bound, not generic**. When the teacher adopts
+   such a table (an answered decision; flow in 06 §7) it lives in
+   `subjects/<subject>/bloom_verbs.json` (schema `schemas/verb_table.schema.json`)
+   and **overrides the generic table per verb**: a verb listed there is removed
+   from every generic level and from `ambiguous` and placed at the subject's
+   level; a verb the subject table lists at two levels becomes ambiguous
+   between those; verbs the subject table does not mention keep their generic
+   classification; forbidden verbs stay forbidden (the subject table may add,
+   never remove). The merged result is the **effective table**, written by
+   `scripts/verb_table.py effective <subject>` to
+   `<run_dir>/bloom_verbs_effective.json`. Validators (`bloom_check.py`) and
+   agents (intake, planner, generator, verifier) use the effective table, never
+   the generic file alone. A subject without a table runs on the generic table
+   unchanged.
 
 ## 3. Quality rules for the expert formulation
 

@@ -15,6 +15,7 @@ A run directory path and `<subject>`. Read `subjects/<subject>/profile.md` first
 ## Procedure
 1. Extract text per page. Prefer `pdftotext -layout <pdf> -` (poppler). If unavailable, use Python `fitz` (PyMuPDF) or `pypdf`. Keep page numbers.
 2. Find the specification chapter ("Specificatie domeinen"). Skip front matter, toelichting, bijlagen — unless they contain specifications.
+2b. **Verb table detection** (specs/01 §2 step 2b, specs/06 §7). Run `python3 scripts/verb_table.py scan <pdf>`. It lists the pages that mention *handelingswerkwoord*, *beheersingsniveau* or *taxonomie van Bloom*. Read those pages. If the source defines its own table mapping verbs to Bloom levels (CvTE bedrijfseconomie: "Bijlage 3 Uitleg bij de handelingswerkwoorden"), transcribe it **literally** to `<run_dir>/01_verb_table.json` per `schemas/verb_table.schema.json`: `verbs` per level (lower-case infinitives exactly as printed, multi-word verbs kept whole, e.g. "hypothese opstellen"), the source's own level names in `level_labels` (e.g. onthouden → "Memoriseren"), its overarching verbs per level in `head_verbs`, `source.pages`, `source.title`, `source.extracted_by: "ingest"`. Then run `python3 scripts/verb_table.py validate <run_dir>/01_verb_table.json`. Do not interpret or complete the table; do not compare it with the generic list — that is the intake's job. If the scan finds nothing that maps verbs to levels, write no file and say "geen eigen handelingswerkwoordentabel" in the notes.
 3. Apply principle **P2** (specs/01 §2): ingest only **content domains** that are in central-exam scope. Skip skills domains (domein A *Vaardigheden*, and any "onderzoek"/"vaardigheden" domain) and domains the syllabus marks as school-exam-only without specification. List every skipped domain in the notes.
 4. Build units (principles **P1/P3**):
    - `domein` (code letter, title; `text` may hold its introductory sentence).
@@ -32,4 +33,4 @@ A run directory path and `<subject>`. Read `subjects/<subject>/profile.md` first
 - Do not drop an eindterm because it looks redundant.
 - Do not write anything downstream (plan, groups).
 
-Final message: one line with counts (domeinen / subdomeinen / eindtermen) and whether validation passed.
+Final message: one line with counts (domeinen / subdomeinen / eindtermen), whether validation passed, and whether `01_verb_table.json` was written (with page numbers).

@@ -8,11 +8,13 @@ report + doubt list.
 ## Ground rules
 - **Spec first.** `specs/` is the source of truth. Change the spec before changing behaviour.
 - **Files are the contract.** Each step reads one JSON and writes one; see `specs/03-pipeline.md`.
-- **Rules live in data, not prompts.** Bloom verbs: `data/bloom_verbs_nl.json`. Student language:
+- **Rules live in data, not prompts.** Bloom verbs: `data/bloom_verbs_nl.json` (generic) overridden per verb by
+  `subjects/<vak>/bloom_verbs.json` when the syllabus defines its own table (specs/06 §7); agents read the merged
+  `runs/<run_id>/bloom_verbs_effective.json`, validators recompute it from `--subject`. Student language:
   `data/student_language_rules.json`. Agents and validators read the same files.
 - **Deterministic where possible.** Scripts in `scripts/` validate; agents never skip them.
 - **Verifier is independent.** Always a fresh Agent call; it critiques, never rewrites.
-- **One human checkpoint.** The intake step (1b) asks subject-specific questions and records answers in `subjects/<vak>/decisions.json` via `scripts/decisions.py`; nothing else writes there, and nothing writes `profile.md`.
+- **One human checkpoint.** The intake step (1b) asks subject-specific questions and records answers in `subjects/<vak>/decisions.json` via `scripts/decisions.py`; `scripts/verb_table.py install` writes `subjects/<vak>/bloom_verbs.json` only against an answered decision; nothing else writes there, and nothing writes `profile.md`.
 - **Bounded loops.** Max 2 repair rounds; leftovers go to the doubt list, nothing is dropped.
 - Domain language in code, specs and prompts: English. Output artefacts (goals, criteria, reports): Dutch.
 
@@ -21,8 +23,8 @@ report + doubt list.
 specs/            00-overview … 05-export
 schemas/          JSON schemas per artefact
 data/             rule files (Bloom verbs, student-language rules)
-scripts/          validate.py bloom_check.py student_language_check.py coverage.py merge_groups.py apply_verdicts.py export.py decisions.py
-subjects/<vak>/   profile.md (human) + decisions.json (straat, via decisions.py) — see specs/06
+scripts/          validate.py bloom_check.py student_language_check.py coverage.py merge_groups.py apply_verdicts.py export.py decisions.py verb_table.py
+subjects/<vak>/   profile.md (human) + decisions.json (straat, via decisions.py) + bloom_verbs.json (optional, via verb_table.py) — see specs/06
 docs/             HANDLEIDING.md (one-page tutorial, Dutch)
 .claude/agents/   ingest intake planner generator student-language verifier
 .claude/commands/ generate   (the orchestrator)
@@ -55,3 +57,9 @@ python3 tests/run_fixture.py                         # exercise all scripts on t
 - The reliable J2 fix for "classification labelled toepassen" is a data-based application inside the unit's own focus; check it does not take over a calculation another unit owns (economie-008).
 - The verifier's `proposed_decisions` route works: 2 new questions (aanbodlijn-ondergrens, voluit-is-curve) are open for the next intake.
 - economie-012 (spell out abbreviations) lengthens student sentences; L3 warnings rose from 38 to 160. Advisory, but consider raising the limit or exempting the bracketed abbreviation from the word count.
+
+## Lessons from run 3 (bedrijfseconomie VWO 2028 v2, 2026-10-13; reviewed 2026-10-21)
+- The run was done without the intake pause: all 10 questions stayed `open` and the proposals were used. The teacher answered all 16 (10 intake + 6 verifier) on 2026-10-21; the run must be regenerated.
+- The verb → Bloom table is **subject-bound**: the CvTE bedrijfseconomie syllabus has its own (bijlage 3: "opstellen" = toepassen, "indelen"/"vergelijken" = analyseren, "onderbouwen" = begrijpen, "voorspellen" = toepassen). Economie's syllabus has none. Hence `subjects/<vak>/bloom_verbs.json` + `verb_table.py` (scan → intake question → install → effective). Against bijlage 3, 37 criteria of run 3 fail G3.
+- Ingest skipped the bijlagen, so the intake proposed "met gegeven formule" (009) while bijlage 4 says standard formulas are *not* given; the verifier caught it (10 J4 issues, new decision 016). Appendices that define rules (verbs, formulas) are source material even when they are not units.
+- J6 (student text drops a condition or element) is again the largest repair category (10 of 27 round-1 issues), as in runs 1 and 2.

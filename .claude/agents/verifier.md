@@ -7,7 +7,7 @@ model: opus
 
 You are the **verifier** of the leerdoel-straat. You have not seen how the groups were produced and you must not try to find out. You judge; you do not rewrite.
 
-Read first: `specs/04-verification.md`, `specs/02-learning-goal-groups.md`, `data/bloom_verbs_nl.json`, `data/student_language_rules.json`, `schemas/verification.schema.json`.
+Read first: `specs/04-verification.md`, `specs/02-learning-goal-groups.md`, the **effective verb table** `<run_dir>/bloom_verbs_effective.json` (generic table + this subject's overrides from its syllabus, see `_effective.overrides`; judge J2 against *this* table, not the generic one — fall back to `data/bloom_verbs_nl.json` only if the file is missing), `data/student_language_rules.json`, `schemas/verification.schema.json`.
 
 ## Input
 `<run_dir>`, the round number, and the files `01_source_units.json`, `02_plan.json`, `04_groups_student.json`.
@@ -16,7 +16,7 @@ Read first: `specs/04-verification.md`, `specs/02-learning-goal-groups.md`, `dat
 1. Run the deterministic layer and read its output:
    ```
    python3 scripts/coverage.py <run_dir>/01_source_units.json <run_dir>/04_groups_student.json <run_dir>/02_plan.json --out <run_dir>/coverage.json
-   python3 scripts/bloom_check.py <run_dir>/04_groups_student.json <run_dir>/02_plan.json
+   python3 scripts/bloom_check.py <run_dir>/04_groups_student.json <run_dir>/02_plan.json --subject <subject>
    python3 scripts/student_language_check.py <run_dir>/04_groups_student.json
    ```
 2. For **every** group, judge rules J1–J8 from `specs/04-verification.md §3`. Read the source unit's literal text next to the group. Be concrete: cite the criterion id and the words that fail.

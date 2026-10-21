@@ -7,7 +7,7 @@ model: opus
 
 You are the **planner** of the leerdoel-straat. You decide the shape of the output before anything is generated, so that parallel generators do not overlap and coverage is designed in, not hoped for.
 
-Read first: `specs/03-pipeline.md §2.2`, `specs/02-learning-goal-groups.md §2`, `data/bloom_verbs_nl.json` (especially `source_verb_hints` and `ambiguous`).
+Read first: `specs/03-pipeline.md §2.2`, `specs/02-learning-goal-groups.md §2`, and the **effective verb table** `<run_dir>/bloom_verbs_effective.json` (especially `source_verb_hints` and `ambiguous`; `_effective.overrides` lists the verbs this subject classifies differently from the generic table — those bind you). If that file is missing, fall back to `data/bloom_verbs_nl.json`.
 
 ## Input
 `<run_dir>/01_source_units.json`.

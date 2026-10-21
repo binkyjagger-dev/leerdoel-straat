@@ -34,6 +34,27 @@ def run(label: str, *args: str, allow_fail: bool = False) -> bool:
     return True
 
 
+def check_merge() -> bool:
+    """The fixture verb table must reclassify 'opstellen' to toepassen and leave unlisted verbs generic."""
+    print("== merge semantics (fixture verb table over generic)")
+    sys.path.insert(0, str(ROOT / "scripts"))
+    from common import GENERIC_VERBS, load_json, merge_verb_rules, stem_verb  # noqa: E402
+    eff = merge_verb_rules(load_json(GENERIC_VERBS), load_json(ROOT / "tests" / "fixtures" / "verb_table.json"), "fixture")
+    checks = {
+        "opstellen -> toepassen": "opstellen" in eff["verbs"]["toepassen"] and not any(stem_verb(v) == "opstellen" for v in eff["verbs"]["creëren"]),
+        "indelen -> analyseren only": [l for l, vs in eff["verbs"].items() if "indelen" in vs] == ["analyseren"],
+        "hint opstellen = toepassen": eff["source_verb_hints"]["opstellen"] == "toepassen",
+        "unlisted verb stays generic": "berekenen" in eff["verbs"]["toepassen"] and "uitleggen" in eff["verbs"]["begrijpen"],
+        "forbidden verbs kept": "weten" in eff["forbidden_criterion_verbs"],
+        "overrides recorded": any(o["verb"] == "opstellen" and o["changed"] for o in eff["_effective"]["overrides"]),
+    }
+    for k, v in checks.items():
+        print(f"  {'ok  ' if v else 'FAIL'} {k}")
+    if not all(checks.values()):
+        print("!! FAILED: merge semantics")
+    return all(checks.values())
+
+
 def main() -> int:
     tmp = Path(tempfile.mkdtemp())
     r = tmp / "run"
@@ -48,6 +69,12 @@ def main() -> int:
     ok &= run("merge", f"{s}/merge_groups.py", str(r))
     ok &= run("validate groups", f"{s}/validate.py", "groups", f"{r}/03_groups_raw.json", f"{r}/01_source_units.json", f"{r}/02_plan.json")
     ok &= run("bloom_check --write", f"{s}/bloom_check.py", f"{r}/03_groups_raw.json", f"{r}/02_plan.json", "--write")
+    ok &= run("bloom_check --subject economie (generic table)", f"{s}/bloom_check.py", f"{r}/03_groups_raw.json", f"{r}/02_plan.json", "--subject", "economie")
+    ok &= run("verb_table validate", f"{s}/verb_table.py", "validate", str(ROOT / "tests" / "fixtures" / "verb_table.json"))
+    ok &= run("verb_table diff (vs generic)", f"{s}/verb_table.py", "diff", str(ROOT / "tests" / "fixtures" / "verb_table.json"), "--subject", "economie", "--out", f"{r}/verb_diff.json")
+    ok &= run("verb_table effective economie", f"{s}/verb_table.py", "effective", "economie", "--out", f"{r}/bloom_verbs_effective.json")
+    ok &= run("verb_table install refuses without answered decision", f"{s}/verb_table.py", "install", "economie", str(ROOT / "tests" / "fixtures" / "verb_table.json"), "--decision", "econ-999", allow_fail=True)
+    ok &= check_merge()
     ok &= run("student_language_check", f"{s}/student_language_check.py", f"{r}/04_groups_student.json", f"{r}/03_groups_raw.json")
     ok &= run("coverage", f"{s}/coverage.py", f"{r}/01_source_units.json", f"{r}/04_groups_student.json", f"{r}/02_plan.json", "--out", f"{r}/coverage.json")
     ok &= run("validate verification", f"{s}/validate.py", "verification", f"{r}/05_verification.round1.json", f"{r}/04_groups_student.json")
