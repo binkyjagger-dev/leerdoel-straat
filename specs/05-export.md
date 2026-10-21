@@ -15,6 +15,7 @@ provisional; they will be redefined when the Doelstellr import is designed.
 | domein_titel | Concept markt | |
 | subdomein_code | D1 | may be empty |
 | subdomein_titel | Vraag en aanbod | |
+| examen | CE+SE | CE / SE / CE+SE from the source's allocation table (01 §2 P4), inherited from the (sub)domein; empty when the source has no table |
 | unit_id | D1.1 | leaf id (eindterm / paragraaf) |
 | unit_tekst | De kandidaat kan … | literal leaf text |
 | group_id | D1.1-01 | |
@@ -28,19 +29,27 @@ provisional; they will be redefined when the Doelstellr import is designed.
 | criterium_bloom | onthouden | |
 | criterium_bloom_werkwoord | benoemen | |
 | bron_citaat | … verklaren hoe prijsvorming … | verbatim |
+| kernbegrippen | evenwichtsprijs \| vraag \| aanbod | the group's `concepts` (02 §5), joined with ` \| `; repeats per criterion row |
 | status | pass / revise / reject | final verdict |
 | verificatie_opmerking | | issues joined, empty when pass |
 
 Encoding UTF-8, `;` delimiter (Dutch Excel default), quoted fields, header row.
 A second file `leerdoelgroepen_per_leerdoel.csv` with one row per group (no
 criteria columns, criteria concatenated with ` | `) is written as a
-convenience for quick reading.
+convenience for quick reading; it carries `examen` as well, after `unit_id`,
+and `kernbegrippen` after `succescriteria_leerling`.
 
 ## 2. Coverage report (`output/coverage_report.md`)
 
-- Header: run id, source, date, rounds, totals, coverage %.
-- Table per domein: subdomein / eindterm → planned, produced, Bloom levels
-  present, status.
+- Header: run id, source, date, rounds, totals, coverage %; when the source
+  has an allocation table also the split of leaves over CE / SE / CE+SE.
+- Table per domein: subdomein / eindterm → examen, planned, produced, Bloom
+  levels present, status.
+- *Niet in deze bron*: the allocation rows with `ingested: false` (SE-only
+  (sub)domeinen a CE syllabus does not specify), code and title, so the
+  teacher sees what the school exam still has to cover from another source.
+- Concept coverage (C3) when the source has concept lists: totals and the
+  list *Begrippen zonder leerdoel* per unit.
 - List of uncovered units (should be empty).
 - Bloom distribution across all criteria (counts per level) — informational,
   no target.

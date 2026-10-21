@@ -34,6 +34,9 @@ implement; they do not restate rules that live in `data/*.json`, they read them.
 
 ### 2.1 ingest
 See 01-source-units §2. Outputs literal text per leaf. Never infers goals.
+Reads the source's CE/SE allocation table into `source.exam_allocation` and
+sets `exam` on the (sub)domein units it names (01 §2 P4). No later role reads
+`exam`; it is carried to the export unchanged.
 Also runs `scripts/verb_table.py scan` on the PDF and, when the source defines
 its own handelingswerkwoorden table, transcribes it to `01_verb_table.json`
 (01 §2 step 2b). The file is a candidate; nothing uses it until the teacher
@@ -56,7 +59,10 @@ For every leaf unit decides:
   (lookup in the effective verb table's `source_verb_hints`; ambiguous verbs
   resolved by context, resolution noted).
 - `focus` per planned group: one line stating the concept/skill the group
-  must address, so parallel generators do not overlap.
+  must address, so parallel generators do not overlap. When the unit (or its
+  subdomein) carries a source concept list (01 §1 `concepts`), the foci
+  together name every concept of that list, so pool coverage (02 §5) is
+  designed in.
 - `rationale`: one or two sentences, for the audit trail.
 
 Output `02_plan.json`: `{ "units": [ { "unit_id", "target_bloom_max", "groups": [ { "slot": 1, "focus": "…" } ], "rationale": "…" } ] }`.
@@ -78,6 +84,8 @@ Hard requirements it must satisfy before writing:
 - Exactly the planned number of groups, `focus` honoured.
 - 2–4 criteria per group; verbs from the list; no forbidden verbs.
 - `source_quote` is a verbatim substring of the unit `text`.
+- `concepts` per group (02 §5): 1–10 source terms from the unit's concept pool
+  or verbatim from the unit/subdomein text (G8).
 
 The orchestrator merges `03_groups_raw/*.json` into `03_groups_raw.json` and
 runs `bloom_check.py --subject <s>` (verb-in-effective-table, forbidden verbs,
@@ -88,7 +96,7 @@ either it uses the generic table.
 ### 2.4 student-language
 Rewrites `text_expert` → `text_student` for all goals and criteria, per
 02 §4. Works on the whole file (consistency of phrasing across groups
-matters). Must not change `bloom`, `bloom_verb`, ids, or the number of
+matters). Must not change `bloom`, `bloom_verb`, `concepts`, ids, or the number of
 criteria. Validator: `student_language_check.py` (openers, forbidden verbs,
 sentence length, forbidden phrases).
 

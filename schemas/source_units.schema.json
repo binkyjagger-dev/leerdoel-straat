@@ -2,19 +2,93 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "SourceUnits",
   "type": "object",
-  "required": ["source", "units"],
+  "required": [
+    "source",
+    "units"
+  ],
   "properties": {
     "source": {
       "type": "object",
-      "required": ["source_id", "source_type", "title", "subject", "file"],
+      "required": [
+        "source_id",
+        "source_type",
+        "title",
+        "subject",
+        "file"
+      ],
       "properties": {
-        "source_id": {"type": "string", "minLength": 1},
-        "source_type": {"enum": ["syllabus", "textbook"]},
-        "title": {"type": "string"},
-        "subject": {"type": "string"},
-        "level": {"type": ["string", "null"]},
-        "file": {"type": "string"},
-        "ingested_at": {"type": "string"}
+        "source_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_type": {
+          "enum": [
+            "syllabus",
+            "textbook"
+          ]
+        },
+        "title": {
+          "type": "string"
+        },
+        "subject": {
+          "type": "string"
+        },
+        "level": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "file": {
+          "type": "string"
+        },
+        "ingested_at": {
+          "type": "string"
+        },
+        "exam_allocation": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "description": "The source's complete CE/SE allocation table (specs/01 §2 P4); null when the source has none",
+          "items": {
+            "type": "object",
+            "required": [
+              "code",
+              "in_ce",
+              "must_in_se",
+              "ingested"
+            ],
+            "properties": {
+              "code": {
+                "type": "string",
+                "minLength": 1
+              },
+              "title": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "in_ce": {
+                "type": "boolean"
+              },
+              "must_in_se": {
+                "type": "boolean"
+              },
+              "ingested": {
+                "type": "boolean",
+                "description": "true when this row became a unit"
+              },
+              "page": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              }
+            }
+          }
+        }
       }
     },
     "units": {
@@ -22,17 +96,87 @@
       "minItems": 1,
       "items": {
         "type": "object",
-        "required": ["unit_id", "parent_id", "kind", "text", "is_leaf"],
+        "required": [
+          "unit_id",
+          "parent_id",
+          "kind",
+          "text",
+          "is_leaf"
+        ],
         "properties": {
-          "unit_id": {"type": "string", "minLength": 1},
-          "parent_id": {"type": ["string", "null"]},
-          "kind": {"enum": ["domein", "subdomein", "eindterm", "hoofdstuk", "paragraaf", "blok"]},
-          "code": {"type": ["string", "null"]},
-          "title": {"type": ["string", "null"]},
-          "text": {"type": "string"},
-          "is_leaf": {"type": "boolean"},
-          "page": {"type": ["integer", "null"]},
-          "related_unit_ids": {"type": ["array", "null"], "items": {"type": "string"}}
+          "unit_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "parent_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "kind": {
+            "enum": [
+              "domein",
+              "subdomein",
+              "eindterm",
+              "hoofdstuk",
+              "paragraaf",
+              "blok"
+            ]
+          },
+          "code": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "title": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "text": {
+            "type": "string"
+          },
+          "is_leaf": {
+            "type": "boolean"
+          },
+          "page": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "related_unit_ids": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": "string"
+            }
+          },
+          "exam": {
+            "enum": [
+              "CE",
+              "SE",
+              "CE+SE",
+              null
+            ],
+            "description": "Exam allocation of this unit's content (specs/01 §2 P4); set where the table assigns it, inherited by descendants"
+          },
+          "concepts": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "description": "Literal terms of the concept list the source prints for this unit (specs/01 §2 P5); null when none"
+          }
         }
       }
     }

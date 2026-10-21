@@ -1,9 +1,81 @@
 {
-  "source": {"source_id": "fixture-economie-vwo", "source_type": "syllabus", "title": "Fixture syllabus economie VWO", "subject": "economie", "level": "vwo", "file": "input/fixture.pdf", "ingested_at": "2026-10-11T10:00:00Z"},
+  "source": {
+    "source_id": "fixture-economie-vwo",
+    "source_type": "syllabus",
+    "title": "Fixture syllabus economie VWO",
+    "subject": "economie",
+    "level": "vwo",
+    "file": "input/fixture.pdf",
+    "ingested_at": "2026-10-11T10:00:00Z",
+    "exam_allocation": [
+      {
+        "code": "D1",
+        "title": "Vraag en aanbod",
+        "in_ce": true,
+        "must_in_se": true,
+        "ingested": true,
+        "page": 7
+      },
+      {
+        "code": "K",
+        "title": "Keuzeonderwerpen (fixture, alleen SE)",
+        "in_ce": false,
+        "must_in_se": true,
+        "ingested": false,
+        "page": 7
+      }
+    ]
+  },
   "units": [
-    {"unit_id": "D", "parent_id": null, "kind": "domein", "code": "D", "title": "Concept markt", "text": "", "is_leaf": false, "page": 14},
-    {"unit_id": "D1", "parent_id": "D", "kind": "subdomein", "code": "D1", "title": "Vraag en aanbod", "text": "", "is_leaf": false, "page": 14},
-    {"unit_id": "D1.1", "parent_id": "D1", "kind": "eindterm", "code": "D1.1", "title": null, "text": "De kandidaat kan verklaren hoe de evenwichtsprijs en de evenwichtshoeveelheid op een markt van volkomen concurrentie tot stand komen en kan deze berekenen uit gegeven vraag- en aanbodfuncties.", "is_leaf": true, "page": 14},
-    {"unit_id": "D1.2", "parent_id": "D1", "kind": "eindterm", "code": "D1.2", "title": null, "text": "De kandidaat kan de prijselasticiteit van de vraag berekenen en de uitkomst interpreteren.", "is_leaf": true, "page": 15}
+    {
+      "unit_id": "D",
+      "parent_id": null,
+      "kind": "domein",
+      "code": "D",
+      "title": "Concept markt",
+      "text": "",
+      "is_leaf": false,
+      "page": 14
+    },
+    {
+      "unit_id": "D1",
+      "parent_id": "D",
+      "kind": "subdomein",
+      "code": "D1",
+      "title": "Vraag en aanbod",
+      "text": "",
+      "is_leaf": false,
+      "page": 14,
+      "exam": "CE+SE"
+    },
+    {
+      "unit_id": "D1.1",
+      "parent_id": "D1",
+      "kind": "eindterm",
+      "code": "D1.1",
+      "title": null,
+      "text": "De kandidaat kan verklaren hoe de evenwichtsprijs en de evenwichtshoeveelheid op een markt van volkomen concurrentie tot stand komen en kan deze berekenen uit gegeven vraag- en aanbodfuncties.",
+      "is_leaf": true,
+      "page": 14,
+      "concepts": [
+        "evenwichtsprijs",
+        "evenwichtshoeveelheid",
+        "vraagfunctie",
+        "aanbodfunctie",
+        "aanbodoverschot",
+        "vraagoverschot",
+        "volkomen concurrentie"
+      ]
+    },
+    {
+      "unit_id": "D1.2",
+      "parent_id": "D1",
+      "kind": "eindterm",
+      "code": "D1.2",
+      "title": null,
+      "text": "De kandidaat kan de prijselasticiteit van de vraag berekenen en de uitkomst interpreteren.",
+      "is_leaf": true,
+      "page": 15
+    }
   ]
 }

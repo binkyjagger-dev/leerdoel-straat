@@ -24,6 +24,7 @@ Load the subdomein (its global eindterm `text`), its leaves and their plan entri
   - `bloom`: the level;
   - `text_expert`: third person, present tense, starting with the verb ("Berekent …", "Legt uit waarom …"). Never a forbidden verb (weten, kennen, begrijpen, inzien, …).
 - Criteria together must make the goal checkable; they must be distinct; scaffolding criteria at lower levels are welcome, but the highest criterion must not exceed the unit's `target_bloom_max` by more than one level.
+- `concepts` (specs/02 §5): 1–10 key terms the group's criteria use or presuppose. Admissible are **only** terms from the unit's concept pool — the leaf's `concepts` plus its ancestors' (`01_source_units.json`) — or terms that appear verbatim in the leaf's `text` or the subdomein's `text`. Spelling as the source prints it. No textbook terms, no synonyms, no implied concepts. Together the groups of a unit must list every concept of the leaf's list (the plan's foci tell you which concept belongs where); a concept may recur in several groups when each really uses it. Validator G8 rejects anything outside the pool.
 - Leave `goal.bloom` and all `text_student` fields `null` — they are set downstream.
 - `provenance.generated_round` = the round you were told; `generator_notes` = anything the verifier should know (e.g. why you resolved an ambiguous verb a certain way, which decision id you applied, or — rarely — why you deviated from a decision).
 

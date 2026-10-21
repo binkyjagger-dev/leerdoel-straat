@@ -6,7 +6,7 @@ Usage: student_language_check.py <04_groups_student.json> [<03_groups_raw.json>]
   L1  every text_student starts with the required opener ("Ik kan ")
   L2  no forbidden openers / phrases
   L3  single sentence, <= max words (warning)
-  L4  ids, bloom, bloom_verb, criterion counts unchanged versus the raw file (if given)
+  L4  ids, bloom, bloom_verb, concepts, criterion counts unchanged versus the raw file (if given)
 """
 from __future__ import annotations
 
@@ -70,6 +70,8 @@ def main(argv: list[str]) -> None:
                 rep.fail("L4", f"{g['group_id']}: unit_id/source_quote changed")
             if g["goal"]["text_expert"] != r["goal"]["text_expert"]:
                 rep.fail("L4", f"{g['group_id']}: goal.text_expert changed")
+            if g.get("concepts") != r.get("concepts"):
+                rep.fail("L4", f"{g['group_id']}: concepts changed")
             if len(g["criteria"]) != len(r["criteria"]):
                 rep.fail("L4", f"{g['group_id']}: criterion count changed")
                 continue

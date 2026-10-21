@@ -36,6 +36,64 @@ def bloom_rank(level: str) -> int:
     return BLOOM_ORDER.index(level)
 
 
+EXAM_VALUES = ["CE", "SE", "CE+SE"]
+
+
+def exam_for(by_id: dict, unit_id: str) -> str | None:
+    """Exam allocation of a unit (specs/01 §2 P4): its own `exam`, else the nearest ancestor's; None if unknown."""
+    cur, seen = by_id.get(unit_id), set()
+    while cur is not None and cur["unit_id"] not in seen:
+        if cur.get("exam"):
+            return cur["exam"]
+        seen.add(cur["unit_id"])
+        cur = by_id.get(cur["parent_id"]) if cur.get("parent_id") else None
+    return None
+
+
+def exam_label(value: str | None) -> str:
+    """Dutch report/CSV label for an exam value."""
+    return value or ""
+
+
+# ---------------------------------------------------------------------------
+# Key concepts (specs/01 §2 P5, specs/02 §5, specs/04 C3/G8)
+# ---------------------------------------------------------------------------
+
+def normalise_term(term: str) -> str:
+    """Case/whitespace-insensitive key for a concept; a bracketed abbreviation is dropped."""
+    t = re.sub(r"\s*\([^)]*\)", "", term)
+    return normalise_ws(t)
+
+
+def concept_pool(by_id: dict, unit_id: str) -> list[tuple[str, str]]:
+    """(concept, carrier_unit_id) for the unit's own `concepts` and those of its ancestors."""
+    out, cur, seen = [], by_id.get(unit_id), set()
+    while cur is not None and cur["unit_id"] not in seen:
+        for c in cur.get("concepts") or []:
+            out.append((c, cur["unit_id"]))
+        seen.add(cur["unit_id"])
+        cur = by_id.get(cur["parent_id"]) if cur.get("parent_id") else None
+    return out
+
+
+def concept_texts(by_id: dict, unit_id: str) -> str:
+    """Normalised leaf text + parent subdomein text, the verbatim fallback for G8."""
+    u = by_id.get(unit_id)
+    parts = [u["text"]] if u else []
+    if u and u.get("parent_id") and by_id.get(u["parent_id"]):
+        parts.append(by_id[u["parent_id"]]["text"])
+    return normalise_ws(" ".join(parts))
+
+
+def concept_admissible(term: str, by_id: dict, unit_id: str) -> bool:
+    key = normalise_term(term)
+    if not key:
+        return False
+    if any(normalise_term(c) == key for c, _ in concept_pool(by_id, unit_id)):
+        return True
+    return key in concept_texts(by_id, unit_id)
+
+
 def normalise_ws(s: str) -> str:
     return re.sub(r"\s+", " ", s.replace("­", "")).strip().lower()
 

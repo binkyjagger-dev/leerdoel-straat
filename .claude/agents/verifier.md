@@ -28,9 +28,10 @@ Read first: `specs/04-verification.md`, `specs/02-learning-goal-groups.md`, the 
    - J6 Meaning preserved between `text_expert` and `text_student`.
    - J7 Student usability (unaided reading, "kan ik dit al?", terms kept, jargon gone).
    - J8 Economic correctness and consistency with the syllabus's use of terms.
+   - J9 Concept fit (specs/02 §5): the group's `concepts` are the terms its criteria actually use or presuppose — nothing listed that the criteria never touch, and no concept from the unit's source list (`concepts` in `01_source_units.json`) that belongs to this group's focus is missing. `coverage.json` → `concepts_uncovered` tells you which source concepts no group of the unit lists; attribute each to the group whose focus it belongs to, or to `unit_findings` when no group fits. J9 is a normal rule (revise), never reject on its own. G8 already guarantees every listed term is admissible; do not re-check that.
    Add a G6 issue when a group's goal Bloom exceeds the unit target by more than one level and that is not justified by the eindterm.
 3. Verdict per group: `pass` (all pass, or only J7 soft issues), `revise` (≤ 2 failing rules, none of them J1 or J8), `reject` (J1 or J8 fails, or ≥ 3 rules fail). Every non-pass gets a one-line `suggested_fix` that a generator can act on.
-4. `unit_findings`: uncovered units (from coverage.json), units whose groups together miss part of the eindterm, duplicate groups across units.
+4. `unit_findings`: uncovered units (from coverage.json), units whose groups together miss part of the eindterm, duplicate groups across units, and source concepts (C3) that fit none of the unit's groups.
 5. If you find a subject-level question the teacher should settle (a recurring ambiguity, a term with competing definitions, a likely source error) that `decisions_snapshot.json` does not cover, add it to `proposed_decisions[]` in the same shape as intake questions (see `schemas/intake_questions.schema.json`). Do not answer it. A deviation from an *answered* decision by a generator is a J1 failure.
 6. Write `<run_dir>/05_verification.round<N>.json` per the schema, with `coverage` copied from `coverage.json`. Run
    `python3 scripts/validate.py verification <that file> <run_dir>/04_groups_student.json`.

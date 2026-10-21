@@ -48,6 +48,8 @@ Wat er gebeurt:
 
 - `leerdoelgroepen_per_leerdoel.csv` — één rij per leerdoel, criteria erachter. **Begin hier** voor je spot check.
 - `leerdoelgroepen.csv` — één rij per succescriterium (Bloom op het criterium), voor import en analyse. Puntkomma-gescheiden, opent direct in Excel.
+- Beide CSV's hebben een kolom `kernbegrippen`: de vakbegrippen die bij het leerdoel horen, letterlijk uit de begrippenlijst of de eindtermtekst van de syllabus, gescheiden met ` | `. Begrippen uit de syllabus die bij geen leerdoel terechtkwamen staan in het dekkingsrapport en de twijfellijst.
+- Beide CSV's hebben een kolom `examen` (CE, SE of CE+SE) uit de toedelingstabel van de syllabus. Subdomeinen die alleen in het schoolexamen zitten en die de syllabus niet uitwerkt, staan in het dekkingsrapport onder *Niet in deze bron*.
 - `coverage_report.md` — dekking per eindterm, Bloom-verdeling, toegepaste vakbeslissingen.
 - `doubt_list.md` — wat de straat niet zelf kon oplossen: afgekeurde groepen met voorstel, bronfouten, openstaande beslissingen. Dit is je nakijklijst; meestal minuten werk.
 

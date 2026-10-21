@@ -5,6 +5,8 @@ Usage: coverage.py <01_source_units.json> <groups.json> [<02_plan.json>] [--out 
 
 Forward:  every leaf unit has >= 1 group with status != rejected.
 Backward: every group points to an existing leaf; source_quote verbatim in unit text.
+C3:       every source concept (unit `concepts`) is listed by >= 1 non-rejected group of that leaf
+          (or, for a subdomein-level list, of a leaf under it). Reported, never a reason for exit 1.
 Exit code 1 when coverage is incomplete (so the orchestrator can trigger a repair round).
 """
 from __future__ import annotations
@@ -12,7 +14,7 @@ from __future__ import annotations
 import sys
 from collections import defaultdict
 
-from common import BLOOM_ORDER, bloom_rank, load_json, normalise_ws, save_json
+from common import BLOOM_ORDER, bloom_rank, load_json, normalise_term, normalise_ws, save_json
 
 
 def compute(units_path: str, groups_path: str, plan_path: str | None = None) -> dict:
@@ -48,6 +50,32 @@ def compute(units_path: str, groups_path: str, plan_path: str | None = None) -> 
         for c in g["criteria"]:
             dist[c["bloom"]] += 1
 
+    # C3 — concept coverage (specs/04 §1)
+    def descendants(uid: str) -> set[str]:
+        out, frontier = set(), [uid]
+        while frontier:
+            cur = frontier.pop()
+            for u in src["units"]:
+                if u["parent_id"] == cur and u["unit_id"] not in out:
+                    out.add(u["unit_id"])
+                    frontier.append(u["unit_id"])
+        return out
+    listed_by_unit: dict[str, set[str]] = defaultdict(set)
+    for g in grp["groups"]:
+        if g.get("status") != "reject":
+            for t in g.get("concepts") or []:
+                listed_by_unit[g["unit_id"]].add(normalise_term(t))
+    concepts_total, concepts_uncovered = 0, []
+    for u in src["units"]:
+        if not u.get("concepts"):
+            continue
+        scope = {u["unit_id"]} | descendants(u["unit_id"])
+        listed = set().union(*(listed_by_unit.get(x, set()) for x in scope))
+        for c in u["concepts"]:
+            concepts_total += 1
+            if normalise_term(c) not in listed:
+                concepts_uncovered.append({"unit_id": u["unit_id"], "concept": c})
+
     return {
         "units_total": len(leaves),
         "units_covered": len(leaves) - len(uncovered),
@@ -59,6 +87,9 @@ def compute(units_path: str, groups_path: str, plan_path: str | None = None) -> 
         "complete": not uncovered and not orphan and not mismatch,
         "bloom_distribution": dist,
         "per_unit": per_unit,
+        "concepts_total": concepts_total,
+        "concepts_uncovered": concepts_uncovered,
+        "concept_coverage_pct": round(100 * (concepts_total - len(concepts_uncovered)) / concepts_total, 1) if concepts_total else None,
     }
 
 
@@ -83,6 +114,11 @@ def main(argv: list[str]) -> None:
         print(f"  ORPHAN    {gid}")
     for gid in cov["groups_quote_mismatch"]:
         print(f"  QUOTE     {gid}")
+    if cov["concepts_total"]:
+        print(f"[coverage] C3 concepts: {cov['concepts_total'] - len(cov['concepts_uncovered'])}/{cov['concepts_total']} "
+              f"listed by a group ({cov['concept_coverage_pct']}%)")
+        for c in cov["concepts_uncovered"]:
+            print(f"  CONCEPT   {c['unit_id']}: {c['concept']!r} not listed by any group")
     sys.exit(0 if cov["complete"] else 1)
 
 

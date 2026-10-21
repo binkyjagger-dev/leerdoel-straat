@@ -7,14 +7,14 @@ Usage:
   validate.py groups       <groups.json>  <01_source_units.json> [<02_plan.json>]
   validate.py verification <05_verification.json> <groups.json>
 
-Rules: S1, S2, P1, G1, G2, G7 (see specs/04-verification.md). Bloom rules are in bloom_check.py.
+Rules: S1, S2, S3, P1, G1, G2, G7, G8 (see specs/04-verification.md). Bloom rules are in bloom_check.py.
 """
 from __future__ import annotations
 
 import sys
 from collections import Counter
 
-from common import Report, load_json, normalise_ws, validate_schema
+from common import Report, concept_admissible, exam_for, load_json, normalise_ws, validate_schema
 
 
 def check_source_units(path: str) -> Report:
@@ -50,6 +50,26 @@ def check_source_units(path: str) -> Report:
     if not leaves:
         rep.fail("S2", "no leaf units")
     rep.info("S2", f"{len(units)} units, {len(leaves)} leaves")
+    # S3 — exam allocation (specs/01 §2 P4)
+    alloc = data["source"].get("exam_allocation")
+    if alloc:
+        codes = {u.get("code") for u in units} | {u["unit_id"] for u in units}
+        for row in alloc:
+            if row["ingested"] and row["code"] not in codes:
+                rep.fail("S3", f"exam_allocation row {row['code']!r} is marked ingested but no unit has that code")
+            if not row["in_ce"] and not row["must_in_se"]:
+                rep.warn("S3", f"exam_allocation row {row['code']!r} is in neither CE nor SE")
+        missing = [u["unit_id"] for u in leaves if exam_for(by_id, u["unit_id"]) is None]
+        for uid in missing:
+            rep.fail("S3", f"{uid}: no exam value on the leaf or any ancestor")
+        dist = Counter(exam_for(by_id, u["unit_id"]) for u in leaves)
+        not_ingested = [r["code"] for r in alloc if not r["ingested"]]
+        rep.info("S3", f"exam allocation: leaves {dict(dist)}; not in this source: {not_ingested or 'none'}")
+    else:
+        carriers = [u["unit_id"] for u in units if u.get("exam")]
+        for uid in carriers:
+            rep.fail("S3", f"{uid}: has exam but source.exam_allocation is absent")
+        rep.info("S3", "exam allocation unknown (source has no CE/SE table)")
     return rep
 
 
@@ -107,6 +127,14 @@ def check_groups(path: str, units_path: str, plan_path: str | None = None) -> Re
         for c in g["criteria"]:
             if not c["criterion_id"].startswith(gid + "-"):
                 rep.fail("G1", f"{c['criterion_id']}: criterion_id must start with '{gid}-'")
+        # G8 — key concepts (specs/02 §5)
+        concepts = g.get("concepts")
+        if not concepts:
+            rep.fail("G8", f"{gid}: no concepts (1-10 source terms required)")
+        else:
+            for t in concepts:
+                if not concept_admissible(t, by_id, uid):
+                    rep.fail("G8", f"{gid}: concept {t!r} is neither in the unit's concept pool nor verbatim in the unit/subdomein text")
     if plan_path:
         plan = load_json(plan_path)
         for p in plan["units"]:

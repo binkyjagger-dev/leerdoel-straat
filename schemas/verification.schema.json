@@ -46,7 +46,7 @@
               "properties": {
                 "rule": {
                   "type": "string",
-                  "pattern": "^(J[1-8]|G6)$"
+                  "pattern": "^(J[1-9]|G6)$"
                 },
                 "criterion_id": {
                   "type": [

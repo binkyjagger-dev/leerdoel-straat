@@ -30,6 +30,7 @@ A **learning goal group** is the unit of output.
       "bloom_verb": "uitleggen"
     }
   ],
+  "concepts": ["evenwichtsprijs", "vraag", "aanbod", "aanbodoverschot"],   // §5: from the unit's concept pool
   "provenance": {
     "generated_round": 1,
     "generator_notes": "Eindterm bevat ook 'berekenen'; apart in groep D1.1-02."
@@ -154,3 +155,32 @@ they have met them. The rules below operationalise that.
 Reference for later tuning: when Martijn has classroom feedback, the rules
 above are the knobs; they live in `data/student_language_rules.json` so the
 agent prompt and the validator read the same list.
+
+## 5. Key concepts per group (decided 2026-10-21)
+
+Every group carries `concepts`: the subject terms (kernbegrippen) a student
+must command to meet this goal, so the teacher has the vocabulary next to the
+goal. Rules:
+
+1. **Source only.** A concept is admissible when it is (a) a term in the
+   **concept pool** of the group's unit — the unit's own `concepts` plus those
+   of its ancestors (01 §1) — or (b) a term that appears **verbatim** (case-
+   and whitespace-insensitive; a bracketed abbreviation may be dropped) in the
+   leaf's `text` or in its parent subdomein's `text`. No textbook terms, no
+   synonyms, no terms the generator considers implied. Spelling as the source
+   prints it.
+2. **The criteria decide.** A group lists the concepts its criteria actually
+   use or presuppose, typically 2–8, never the whole pool. The same concept may
+   appear in several groups of one unit when each really uses it.
+3. **Pool coverage.** Every concept in a unit's pool that was attached to that
+   leaf must appear in at least one non-rejected group of the leaf; a concept
+   attached at subdomein level must appear in at least one group under that
+   subdomein. Gaps are coverage findings (04 §1 C3), not automatic repairs: the
+   planner is expected to spread the pool over the slots' `focus`, the
+   generator to pick them up, the verifier to flag a concept that belongs to a
+   group's focus but is missing (J9).
+4. **Student language does not touch concepts.** They are source terms; the
+   student-language step copies the list unchanged.
+5. Deterministic check G8 (`validate.py groups`): `concepts` present with 1–10
+   entries; every entry admissible under rule 1. Export: column
+   `kernbegrippen`, entries joined with ` | ` (05 §1).
