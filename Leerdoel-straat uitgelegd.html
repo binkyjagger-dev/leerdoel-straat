@@ -1,0 +1,188 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Leerdoel-straat uitgelegd</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one column, 760px measure, a horizontal step-rail for the pipeline, two-column cards where they help. */
+:root{
+  --bg:#f7f6f2; --fg:#1d2420; --muted:#5d665f; --line:#d9d6cc;
+  --card:#ffffff; --accent:#1f6f5a; --accent-soft:#dcebe3;
+  --human:#b8611b; --human-soft:#f6e6d6; --script:#3b4b7a; --script-soft:#dfe4f1;
+  --display:"Fraunces",Georgia,serif; --body:"Public Sans",system-ui,sans-serif; --mono:"JetBrains Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#141917; --fg:#e8e9e3; --muted:#a3aba4; --line:#2e3733; --card:#1c2320;
+  --accent:#6fc4a4; --accent-soft:#1e3a30; --human:#e9a060; --human-soft:#3a2a18; --script:#9fb0e4; --script-soft:#232c42; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#141917; --fg:#e8e9e3; --muted:#a3aba4; --line:#2e3733; --card:#1c2320;
+  --accent:#6fc4a4; --accent-soft:#1e3a30; --human:#e9a060; --human-soft:#3a2a18; --script:#9fb0e4; --script-soft:#232c42; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);line-height:1.5;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:32px 64px}
+main{max-width:860px;margin:0 auto}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.15;margin:0}
+h1{font-size:clamp(2rem,5vw,3rem);font-weight:700}
+h2{font-size:1.5rem;font-weight:600;margin-top:56px;margin-bottom:12px}
+h3{font-size:1.1rem;font-weight:600}
+p{max-width:65ch;margin:8px 0}
+.lede{font-size:1.15rem;color:var(--muted);max-width:60ch}
+.eyebrow{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600}
+section{margin-top:8px}
+code,.mono{font-family:var(--mono);font-size:.85em}
+.legend{display:flex;gap:16px;flex-wrap:wrap;margin:16px 0 8px;font-size:.85rem;color:var(--muted)}
+.legend span::before{content:"";display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.legend .a::before{background:var(--accent)} .legend .h::before{background:var(--human)} .legend .s::before{background:var(--script)}
+/* pipeline rail */
+.rail{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:16px}
+.step{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 12px 10px;min-width:0;position:relative;border-top:4px solid var(--accent)}
+.step.human{border-top-color:var(--human)} .step.script{border-top-color:var(--script)}
+.step .n{font-family:var(--mono);font-size:.72rem;color:var(--muted)}
+.step h3{font-size:1rem;margin-top:2px}
+.step p{font-size:.85rem;color:var(--muted);margin:6px 0 0}
+.step .out{margin-top:8px;font-family:var(--mono);font-size:.72rem;color:var(--fg);background:var(--accent-soft);border-radius:4px;padding:2px 6px;display:inline-block}
+.step.human .out{background:var(--human-soft)} .step.script .out{background:var(--script-soft)}
+/* anatomy card */
+.anat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px;margin-top:16px}
+.anat .src{font-size:.85rem;color:var(--muted);border-left:3px solid var(--line);padding-left:10px;margin-bottom:14px}
+.goal{font-family:var(--display);font-size:1.2rem;font-weight:600;display:flex;gap:10px;align-items:flex-start;flex-wrap:wrap}
+.crit{list-style:none;padding:0;margin:12px 0 0;display:grid;gap:8px}
+.crit li{display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:start}
+.pill{font-family:var(--mono);font-size:.7rem;padding:2px 8px;border-radius:999px;border:1px solid var(--line);white-space:nowrap;background:var(--bg)}
+.pill.top{background:var(--accent-soft);border-color:var(--accent);color:var(--fg)}
+.note{font-size:.85rem;color:var(--muted);margin-top:12px}
+/* two-col */
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;min-width:0}
+.card h3{margin-bottom:6px}
+.card ul{margin:0;padding-left:18px;font-size:.92rem}
+.card li{margin:4px 0}
+/* loop diagram */
+.loop{margin-top:16px;overflow-x:auto}
+.loop svg{width:100%;max-width:760px;height:auto;display:block}
+/* numbers */
+.nums{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-top:16px}
+.num{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px}
+.num b{font-family:var(--display);font-size:1.6rem;display:block;font-variant-numeric:tabular-nums}
+.num span{font-size:.8rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin-top:12px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.tbl{overflow-x:auto}
+footer{margin-top:56px;font-size:.8rem;color:var(--muted);border-top:1px solid var(--line);padding-top:12px}
+@media (prefers-reduced-motion:no-preference){.step{transition:transform .15s}.step:hover{transform:translateY(-2px)}}
+</style>
+
+<main>
+<p class="eyebrow">Leerdoel-straat · versie 0.2 · oktober 2026</p>
+<h1>Van syllabus naar leerdoelen die een leerling zelf kan afvinken</h1>
+<p class="lede">Je geeft een syllabus-pdf en een vak. De straat levert per eindterm een of meer <strong>leerdoelgroepen</strong>: een leerdoel met 2–4 succescriteria, elk met een Bloom-niveau, in leerlingentaal. Elke eindterm is gedekt en elk leerdoel is terug te leiden naar de bron. Jij beantwoordt één keer een handvol vragen; de rest gaat vanzelf.</p>
+
+<section>
+<h2>Wat eruit komt</h2>
+<p>Eén echt voorbeeld uit de run op de syllabus economie VWO 2026, eindterm D1.16.</p>
+<div class="anat">
+  <div class="src"><span class="eyebrow">Eindterm D1.16 (letterlijk)</span><br>De onderverdeling van totale kosten (TK) in vaste/constante kosten (TCK) en variabele kosten (TVK).</div>
+  <div class="goal"><span class="pill top">leerdoel · toepassen</span><span>Ik kan in een context totale kosten (TK) onderverdelen in totale constante (TCK) en variabele kosten (TVK) en berekenen.</span></div>
+  <ul class="crit">
+    <li><span class="pill">begrijpen</span><span>Ik kan kostenposten in een context indelen als constante (vaste) of variabele kosten, zoals huur van een pand en grondstoffen.</span></li>
+    <li><span class="pill">begrijpen</span><span>Ik kan uitleggen waarom TCK bij een andere productieomvang gelijk blijven en TVK met de productieomvang veranderen.</span></li>
+    <li><span class="pill">toepassen</span><span>Ik kan TCK, TVK en TK berekenen uit gegevens of een kostenfunctie, zoals TK = 4q + 2000.</span></li>
+  </ul>
+  <p class="note">Het Bloom-niveau van het leerdoel is altijd het hoogste niveau van zijn criteria; dat wordt uitgerekend, niet verzonnen. De criteria samen maken het leerdoel afvinkbaar: wie alle drie kan, beheerst het doel.</p>
+</div>
+</section>
+
+<section>
+<h2>Hoe de straat loopt</h2>
+<p>Zeven stappen. Elke stap leest één bestand en schrijft één bestand; tussen de stappen controleert een script of het klopt. Agenten weten niets van elkaars werk — alleen van de bestanden.</p>
+<div class="legend"><span class="a">AI-agent (eigen rol, eigen prompt)</span><span class="h">jij</span><span class="s">script, deterministisch</span></div>
+<div class="rail">
+  <div class="step"><div class="n">1</div><h3>Inlezen</h3><p>Pdf → domein, subdomein, specificatie. Tekst letterlijk, niets geïnterpreteerd.</p><span class="out">01_source_units.json</span></div>
+  <div class="step human"><div class="n">1b</div><h3>Intake</h3><p>De straat vraagt wat de uitkomst stuurt: Bloom-plafond, dubbelzinnige termen, bronfouten. Jij kiest. Antwoorden blijven bewaard per vak.</p><span class="out">decisions.json</span></div>
+  <div class="step"><div class="n">2</div><h3>Plannen</h3><p>Per specificatie: hoeveel groepen, welke focus, welk Bloom-plafond. Overlap tussen eindtermen krijgt één eigenaar.</p><span class="out">02_plan.json</span></div>
+  <div class="step"><div class="n">3</div><h3>Genereren</h3><p>Per subdomein parallel: leerdoel + criteria in vaktaal, met Bloom-werkwoord en letterlijk broncitaat.</p><span class="out">03_groups_raw.json</span></div>
+  <div class="step"><div class="n">4</div><h3>Leerlingentaal</h3><p>“Ik kan …”, één zin, vaktermen blijven, betekenis blijft gelijk.</p><span class="out">04_groups_student.json</span></div>
+  <div class="step"><div class="n">5</div><h3>Verifiëren</h3><p>Onafhankelijke beoordelaars in een schone context: dekking twee kanten op én acht kwaliteitsregels per groep.</p><span class="out">05_verification.json</span></div>
+  <div class="step script"><div class="n">6</div><h3>Exporteren</h3><p>CSV per leerdoel en per criterium, dekkingsrapport, twijfellijst.</p><span class="out">output/</span></div>
+</div>
+</section>
+
+<section>
+<h2>Waarom je het resultaat kunt vertrouwen</h2>
+<div class="loop">
+<svg viewBox="0 0 760 230" role="img" aria-label="Verificatielus: genereren, verifiëren, herstellen, maximaal twee rondes, rest naar twijfellijst">
+  <defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="currentColor"/></marker></defs>
+  <g font-family="Public Sans, system-ui, sans-serif" font-size="13" fill="currentColor" color="currentColor">
+    <rect x="20" y="70" width="150" height="56" rx="8" fill="var(--accent-soft)" stroke="var(--accent)"/>
+    <text x="95" y="93" text-anchor="middle" font-weight="600">Genereren</text><text x="95" y="111" text-anchor="middle" font-size="11" fill="var(--muted)">162 groepen</text>
+    <rect x="240" y="70" width="170" height="56" rx="8" fill="var(--accent-soft)" stroke="var(--accent)"/>
+    <text x="325" y="93" text-anchor="middle" font-weight="600">Verifiëren</text><text x="325" y="111" text-anchor="middle" font-size="11" fill="var(--muted)">pass · revise · reject</text>
+    <rect x="480" y="20" width="150" height="48" rx="8" fill="var(--script-soft)" stroke="var(--script)"/>
+    <text x="555" y="49" text-anchor="middle" font-weight="600">Export</text>
+    <rect x="480" y="130" width="150" height="56" rx="8" fill="var(--human-soft)" stroke="var(--human)"/>
+    <text x="555" y="153" text-anchor="middle" font-weight="600">Twijfellijst</text><text x="555" y="171" text-anchor="middle" font-size="11" fill="var(--muted)">voor jou, minuten werk</text>
+    <line x1="170" y1="98" x2="236" y2="98" stroke="currentColor" stroke-width="1.5" marker-end="url(#ar)"/>
+    <line x1="410" y1="86" x2="476" y2="50" stroke="currentColor" stroke-width="1.5" marker-end="url(#ar)"/>
+    <text x="430" y="52" font-size="11" fill="var(--muted)">pass</text>
+    <line x1="410" y1="110" x2="476" y2="150" stroke="currentColor" stroke-width="1.5" marker-end="url(#ar)"/>
+    <text x="418" y="150" font-size="11" fill="var(--muted)">na ronde 2</text>
+    <path d="M325 126 L325 190 L95 190 L95 130" fill="none" stroke="currentColor" stroke-width="1.5" marker-end="url(#ar)"/>
+    <text x="210" y="208" text-anchor="middle" font-size="11" fill="var(--muted)">revise / reject → herstel, max. 2 rondes</text>
+  </g>
+</svg>
+</div>
+<div class="cols">
+  <div class="card"><h3>Deterministisch waar het kan</h3><ul>
+    <li>Schema per bestand; een stap die niet klopt gaat niet door.</li>
+    <li>Bloom-werkwoord moet in de lijst van dat niveau staan; verboden werkwoorden (weten, kennen, begrijpen) worden afgewezen.</li>
+    <li>Broncitaat moet letterlijk in de eindterm voorkomen.</li>
+    <li>Dekking: elke eindterm ≥ 1 groep én elke groep → precies één eindterm.</li>
+  </ul></div>
+  <div class="card"><h3>Oordeel waar het moet</h3><ul>
+    <li>Verifiers zien alleen bron en resultaat, nooit de redenering van de generator.</li>
+    <li>Acht regels: aansluiting op de eindterm, Bloom past bij de handeling, waarneembaar, volledig, geen dubbelen, betekenis behouden, leesbaar voor een leerling, economisch juist.</li>
+    <li>Afgekeurd wordt hersteld door de generator met de kritiek erbij; wat na twee rondes nog openstaat, komt op de twijfellijst. Niets verdwijnt stil.</li>
+  </ul></div>
+</div>
+</section>
+
+<section>
+<h2>Wat jij doet</h2>
+<div class="cols">
+  <div class="card"><h3>Vooraf · vakprofiel</h3><p>Een kort tekstbestand per vak: methode, voorkeurstermen, wat buiten scope valt. De straat leest het in elke stap en schrijft er nooit in.</p></div>
+  <div class="card"><h3>Tijdens · de intake</h3><p>De enige pauze. Een handvol vragen met een voorgesteld antwoord. Een beantwoorde vraag komt bij een volgende run niet terug; de verifier mag nieuwe vragen voorstellen.</p></div>
+  <div class="card"><h3>Achteraf · twijfellijst en spot check</h3><p>De twijfellijst is je nakijklijst. Een spot check van tien groepen zegt of je de set in de klas kunt gebruiken; patronen gaan in de regels, niet in losse leerdoelen.</p></div>
+</div>
+</section>
+
+<section>
+<h2>De wetenschappelijke ankers</h2>
+<div class="tbl"><table>
+  <tr><th>Anker</th><th>Waar het in de straat zit</th></tr>
+  <tr><td>Herziene Bloom (Anderson &amp; Krathwohl, 2001)</td><td>Bloom per succescriterium; werkwoordenlijst per niveau als harde check; leerdoel = hoogste criterium.</td></tr>
+  <tr><td>Constructive alignment (Biggs)</td><td>Elk leerdoel is herleidbaar naar een eindterm en zit op het niveau dat de eindterm vraagt; Bloom-plafond uit de syllabus.</td></tr>
+  <tr><td>Learning intentions &amp; success criteria (Clarke, Hattie, Wiliam)</td><td>Scheiding leerdoel/criteria; criteria observeerbaar; “Ik kan …” zodat de leerling zichzelf kan beoordelen.</td></tr>
+  <tr><td>Observeerbare doelen (Mager)</td><td>Geen “weten”, “inzien”, “begrijpen” als criterium; altijd een handeling die een docent kan zien.</td></tr>
+</table></div>
+</section>
+
+<section>
+<h2>Wat twee runs op economie VWO opleverden</h2>
+<div class="nums">
+  <div class="num"><b>126</b><span>eindtermen (specificaties D–I)</span></div>
+  <div class="num"><b>162</b><span>leerdoelgroepen</span></div>
+  <div class="num"><b>551</b><span>succescriteria</span></div>
+  <div class="num"><b>100 %</b><span>dekking, beide richtingen</span></div>
+  <div class="num"><b>161 / 162</b><span>goedgekeurd na herstel</span></div>
+  <div class="num"><b>10 / 10</b><span>spot check: bruikbaar zonder herschrijven</span></div>
+</div>
+<p class="note">Run 2 draaide met 14 vakbeslissingen uit de intake. Die verschoven de Bloom-verdeling precies zoals bedoeld: leerdoelen die op begrijpen eindigden van 29 naar 7, op analyseren van 6 naar 30, bij gelijke goedkeuringsgraad.</p>
+</section>
+
+<section>
+<h2>Zo start je een run</h2>
+<p><code>python scripts/decisions.py init &lt;vak&gt;</code> · vul <code>subjects/&lt;vak&gt;/profile.md</code> in · in Claude Code: <code>/generate input/syllabus.pdf --subject &lt;vak&gt;</code>. Resultaat in <code>runs/&lt;id&gt;/output/</code>. De volledige handleiding staat in <code>docs/HANDLEIDING.md</code>; de specificaties in <code>specs/</code>.</p>
+</section>
+
+<footer>Leerdoel-straat · github.com/binkyjagger-dev/leerdoel-straat · Claude Code-pipeline met zes rollen, één menselijk controlepunt en deterministische validatie.</footer>
+</main>
+
+</body></html>
