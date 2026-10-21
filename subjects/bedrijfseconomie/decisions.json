@@ -1,0 +1,543 @@
+{
+  "subject": "bedrijfseconomie",
+  "decisions": [
+    {
+      "id": "bedrijfsecon-001",
+      "question": "Bepaalt het werkwoord in de specificatie het Bloom-plafond, of tilt de zin 'Voor het centraal examen betekent dit ...' het plafond van het hele subdomein op?",
+      "context": "In bijna elk subdomein ligt de CE-toelichting hoger dan de specificaties eronder. B1: CE 'onderbouwen en een advies uitbrengen' (evalueren), specificaties vooral noemen/uitleggen/berekenen. B2: CE 'beoordelen'. B3: CE 'bepalen welke rechtsvorm geschikt is', specificatie 13.1 'uitleggen'. C2: CE 'keuzes maken' bij werving, selectie en uitstroom, terwijl alle 10 specificaties 'uitleggen/noemen/berekenen' zijn. E2: CE 'beoordelen'. G: CE 'tot besluitvorming komen vanuit het perspectief van derden'. Omgekeerd ligt de CE-zin bij D2 eindterm 20-2 lager ('kan begrijpen'). Raakt alle 64 specificaties en bepaalt hoeveel doelen op analyseren/evalueren uitkomen.",
+      "options": [
+        "De specificatie bepaalt het plafond (+1 niveau speelruimte); de CE-zin is alleen context.",
+        "De CE-zin is het plafond voor het hele subdomein; elke specificatie mag tot dat niveau gaan.",
+        "De specificatie bepaalt het plafond, maar per subdomein bereikt minstens één leerdoel het niveau van de CE-zin (bij de specificatie die er het dichtst bij ligt, bv. B3.13.1.3 voor 'bepalen welke rechtsvorm', G.32.4 voor besluitvorming)."
+      ],
+      "proposed": "Optie 3: specificaties blijven leidend zodat 'noemen' geen 'beoordelen' wordt, maar het CE-niveau wordt per subdomein wel gedekt; de globale eindterm (de zin met het nummer) telt alleen mee waar geen CE-zin is (F2).",
+      "impact": "high",
+      "applies_to": [
+        "planner",
+        "generator",
+        "student-language",
+        "verifier"
+      ],
+      "affects_units": [
+        "*"
+      ],
+      "status": "answered",
+      "answer": "Akkoord met voorstel: Optie 3: specificaties blijven leidend zodat 'noemen' geen 'beoordelen' wordt, maar het CE-niveau wordt per subdomein wel gedekt; de globale eindterm (de zin met het nummer) telt alleen mee waar geen CE-zin is (F2).",
+      "answered_by": "Martijn Overgaag",
+      "answered_at": "2026-10-21T13:20:33Z",
+      "source_run": "20261013-2016-syllabus-bedrijfseconomie-vwo-2028-versie-2",
+      "raised_by": "intake",
+      "supersedes": null
+    },
+    {
+      "id": "bedrijfsecon-002",
+      "question": "Telt 'opstellen' van een vast financieel overzicht (balans, liquiditeitsoverzicht, break-even analyse, winstverdeling, verschillenanalyse) als creëren, of als toepassen?",
+      "context": "De werkwoordenlijst zet 'opstellen' op creëren. In bedrijfseconomie gaat het meestal om een vaste procedure met gegeven getallen, wat eerder toepassen is. Een ondernemingsplan opstellen (B2.12.2: persoonlijk, marketing- en financieel plan) is wel echt ontwerpen. Raakt 5 specificaties: B2.12.2, F1.28.3, F2.30.4 (ook 'grafisch opstellen' in 30.4.2), F2.30.5 en F2.31.1 (31.1.2).",
+      "options": [
+        "Altijd creëren, zoals de werkwoordenlijst zegt.",
+        "Vaste overzichten opstellen = toepassen; alleen het ondernemingsplan (B2.12.2) = creëren.",
+        "Altijd toepassen; ook het ondernemingsplan is op het CE een invuloefening."
+      ],
+      "proposed": "Optie 2: een balans of break-even analyse opstellen volgt een vast schema (toepassen); het verband tussen de overzichten analyseren (F1.28.3) blijft analyseren; het ondernemingsplan is eigen ontwerp.",
+      "impact": "high",
+      "applies_to": [
+        "planner",
+        "generator",
+        "student-language",
+        "verifier"
+      ],
+      "affects_units": [
+        "B2.12.2",
+        "F1.28.3",
+        "F2.30.4",
+        "F2.30.5",
+        "F2.31.1"
+      ],
+      "status": "answered",
+      "answer": "Pas bijlage 3 van de syllabus toe. Daar is 'opstellen' het overkoepelende handelingswerkwoord op niveau toepassen (naast 'berekenen'); dus elk 'opstellen' in de specificaties (balans, liquiditeitsoverzicht, exploitatiebegroting, break-even analyse, resultaatverdeling, resultatenrekening, verschillenanalyse, en ook de onderdelen van het ondernemingsplan in B2.12.2) is toepassen. 'Analyseren' blijft analyseren waar de specificatie dat zegt (F1.28.3). Creëren alleen bij de bijlage-3-werkwoorden adviseren, rapporteren, ontwerpen, construeren, maken, hypothese opstellen; de syllabus gebruikt die niet in eindtermen of specificaties. Algemeen: bijlage 3 is voor dit vak de werkwoord-naar-Bloom-tabel voor het plafond (noemen=onthouden; uitleggen/onderbouwen/beschrijven/aantonen=begrijpen; berekenen/opstellen/schatten/voorspellen/hanteren=toepassen; vergelijken/indelen/selecteren/kenmerken bepalen=analyseren; beoordelen/afwegen/bekritiseren=evalueren; adviseren/ontwerpen=creëren), ook waar data/bloom_verbs_nl.json anders zegt.",
+      "answered_by": "Martijn Overgaag",
+      "answered_at": "2026-10-21T13:20:33Z",
+      "source_run": "20261013-2016-syllabus-bedrijfseconomie-vwo-2028-versie-2",
+      "raised_by": "intake",
+      "supersedes": null
+    },
+    {
+      "id": "bedrijfsecon-003",
+      "question": "Hoe verdelen we een specificatie met veel deelpunten (bv. 11.2.1 t/m 11.2.12) over leerdoelgroepen, en welk werkwoord bepaalt dan het plafond: de kopzin of de deelpunten?",
+      "context": "15 specificaties hebben deelpunten: B1.11.1, 11.2 (12 deelpunten; kopzin 'Analyseren van ...' zonder eigen werkwoordgroep), 11.3 (5), 11.4 (5), B2.12.2, B3.13.1 (6), B4.14.1, 14.2, F2.30.1 t/m 30.4, 30.6, 31.1 en 31.2. De kopzin ligt vaak hoger dan de deelpunten: 11.2 'analyseren' boven noemen/uitleggen/berekenen; 30.4 'opstellen' boven berekenen. B1.11.2 gaat over vier onderwerpen (verzekeren, lenen, sparen, beleggen) en past niet in één groep van maximaal 4 criteria.",
+      "options": [
+        "Eén groep per specificatie; deelpunten worden criteria (samengevoegd waar nodig); plafond = kopzin.",
+        "Meerdere groepen per specificatie, geclusterd per onderwerp (bv. 11.2: verzekeren / lenen / interest / sparen en beleggen); elk deelpunt valt onder een criterium; plafond per groep = hoogste deelpunt, en het niveau van de kopzin wordt in minstens één groep gehaald.",
+        "Eén groep per deelpunt."
+      ],
+      "proposed": "Optie 2: houdt groepen hanteerbaar (2-4 criteria), dekt elk deelpunt en laat het 'analyseren' van de kopzin terugkomen in één afsluitende groep in plaats van in alle groepen.",
+      "impact": "high",
+      "applies_to": [
+        "planner",
+        "generator",
+        "verifier"
+      ],
+      "affects_units": [
+        "B1.11.1",
+        "B1.11.2",
+        "B1.11.3",
+        "B1.11.4",
+        "B2.12.2",
+        "B3.13.1",
+        "B4.14.1",
+        "B4.14.2",
+        "F2.30.1",
+        "F2.30.2",
+        "F2.30.3",
+        "F2.30.4",
+        "F2.30.6",
+        "F2.31.1",
+        "F2.31.2"
+      ],
+      "status": "answered",
+      "answer": "Akkoord met voorstel: Optie 2: houdt groepen hanteerbaar (2-4 criteria), dekt elk deelpunt en laat het 'analyseren' van de kopzin terugkomen in één afsluitende groep in plaats van in alle groepen.",
+      "answered_by": "Martijn Overgaag",
+      "answered_at": "2026-10-21T13:20:33Z",
+      "source_run": "20261013-2016-syllabus-bedrijfseconomie-vwo-2028-versie-2",
+      "raised_by": "intake",
+      "supersedes": null
+    },
+    {
+      "id": "bedrijfsecon-004",
+      "question": "Welke specificatie 'bezit' een berekening of begrip dat op meerdere plekken voorkomt, zodat het niet dubbel wordt uitgewerkt?",
+      "context": "Overlappen in deze syllabus: (a) hypothecair krediet berekenen in B1.11.2.5 én B1.11.3.4 (en hypothecaire lening in D2.21.5); (b) financieel plan in B2.12.2.3 én beginbalans/liquiditeitsoverzicht/exploitatiebegroting in F1.28.3; (c) arbeidsrelatie versus zelfstandige in B2.12.1, C2.17.3 en C2.17.4; (d) financieringsmogelijkheden in D2.20.1, 20.2.1 en 21.7; (e) faillissement in B3.13.1.6 en D2.22.1; (f) niet-financiële informatie in F1.29.1, 29.2, F2.31.2 en G.32.5; (g) winst versus cashflow in F2.30.6 en G.32.2/32.4. Raakt 20 specificaties.",
+      "options": [
+        "Elk mechanisme heeft één eigenaar (de meest specifieke specificatie); andere specificaties gebruiken het alleen als context, zonder eigen rekencriterium.",
+        "Dubbeling toestaan: elke specificatie krijgt haar eigen volledige uitwerking.",
+        "Eén eigenaar per mechanisme, maar herhaling mag als het perspectief echt anders is (persoon versus organisatie, bv. hypotheek in B1 versus D2)."
+      ],
+      "proposed": "Optie 3, met als eigenaren: annuïteit/lineair berekenen = B1.11.3.4 (B1.11.2.5 doet consumptief krediet); financiële overzichten = F1.28.3 (B2.12.2.3 gebruikt ze in het plan); vormen van arbeidsrelatie = C2.17.3/17.4 (B2.12.1 weegt af vanuit de persoon); niet-financiële informatie = F1.29; cashflow als begrip = F2.30.6, als kengetal = G.32.2.",
+      "impact": "high",
+      "applies_to": [
+        "planner",
+        "generator",
+        "verifier"
+      ],
+      "affects_units": [
+        "B1.11.2",
+        "B1.11.3",
+        "B2.12.1",
+        "B2.12.2",
+        "B3.13.1",
+        "C2.17.3",
+        "C2.17.4",
+        "D2.20.1",
+        "D2.20.2.1",
+        "D2.21.5",
+        "D2.21.7",
+        "D2.22.1",
+        "F1.28.3",
+        "F1.29.1",
+        "F1.29.2",
+        "F2.30.6",
+        "F2.31.2",
+        "G.32.2",
+        "G.32.4",
+        "G.32.5"
+      ],
+      "status": "answered",
+      "answer": "Akkoord met voorstel: Optie 3, met als eigenaren: annuïteit/lineair berekenen = B1.11.3.4 (B1.11.2.5 doet consumptief krediet); financiële overzichten = F1.28.3 (B2.12.2.3 gebruikt ze in het plan); vormen van arbeidsrelatie = C2.17.3/17.4 (B2.12.1 weegt af vanuit de persoon); niet-financiële informatie = F1.29; cashflow als begrip = F2.30.6, als kengetal = G.32.2.",
+      "answered_by": "Martijn Overgaag",
+      "answered_at": "2026-10-21T13:20:33Z",
+      "source_run": "20261013-2016-syllabus-bedrijfseconomie-vwo-2028-versie-2",
+      "raised_by": "intake",
+      "supersedes": null
+    },
+    {
+      "id": "bedrijfsecon-005",
+      "question": "Gebruiken we in leerdoelen en criteria 'resultaat' of 'winst' (de syllabus noemt ze synoniem en het CE gebruikt 'resultaat')?",
+      "context": "Voetnoot bij F2.30.5: 'winst' en 'resultaat' zijn synoniemen; in de centrale examens wordt 'resultaat' gebruikt. De syllabus zelf wisselt (winstopslag, winstverdeling, resultaatverdeling, 'het resultaat/winst', resultaat per aandeel). Raakt 9 specificaties: F1.28.2, F2.30.2, 30.3, 30.4, 30.5, 30.6, 31.1, 31.2, G.32.2.",
+      "options": [
+        "Overal 'resultaat'; vaste samenstellingen als 'winstopslag' blijven.",
+        "'Resultaat', met '(winst)' erachter bij eerste gebruik in een groep.",
+        "Overal 'winst' (begrijpelijker voor leerlingen).",
+        "Per specificatie de syllabustekst volgen."
+      ],
+      "proposed": "Optie 1: sluit aan op de examentaal; 'winstopslag' en 'winst versus cashflow' (F2.30.6.1) blijven zoals gedrukt.",
+      "impact": "medium",
+      "applies_to": [
+        "generator",
+        "student-language",
+        "verifier"
+      ],
+      "affects_units": [
+        "F1.28.2",
+        "F2.30.2",
+        "F2.30.3",
+        "F2.30.4",
+        "F2.30.5",
+        "F2.30.6",
+        "F2.31.1",
+        "F2.31.2",
+        "G.32.2"
+      ],
+      "status": "answered",
+      "answer": "Akkoord met voorstel: Optie 1: sluit aan op de examentaal; 'winstopslag' en 'winst versus cashflow' (F2.30.6.1) blijven zoals gedrukt.",
+      "answered_by": "Martijn Overgaag",
+      "answered_at": "2026-10-21T13:20:33Z",
+      "source_run": "20261013-2016-syllabus-bedrijfseconomie-vwo-2028-versie-2",
+      "raised_by": "intake",
+      "supersedes": null
+    },
+    {
+      "id": "bedrijfsecon-006",
+      "question": "Mogen afkortingen (EV/VV/TV, REV/RTV/IVV, btw, cao, zzp, MVO, OR, bv/nv/vof, 4P/4C) in de 'Ik kan ...'-zinnen blijven staan, of schrijven we ze voluit?",
+      "context": "Het profiel zegt 'vaktermen blijven staan' maar niets over afkortingen. Ze komen voor in 13 specificaties: B4.14.2, C2.17.4, 17.6, 17.9, D2.20.1, 20.2.1, E2.25.2 t/m 25.5, F2.30.3, G.32.2, 32.4. Voluit schrijven maakt zinnen merkbaar langer, vooral bij de kengetallen.",
+      "options": [
+        "Gangbare afkortingen (btw, cao, bv, nv, vof, zzp, 4P/4C) blijven; kengetallen voluit met afkorting tussen haakjes, bv. 'rentabiliteit van het eigen vermogen (REV)'.",
+        "Alles voluit, afkorting tussen haakjes.",
+        "Afkortingen zoals in de syllabus."
+      ],
+      "proposed": "Optie 1: algemene afkortingen zijn voor leerlingen gewone taal; bij de kengetallen moeten ze juist de naam aan de afkorting leren koppelen.",
+      "impact": "medium",
+      "applies_to": [
+        "generator",
+        "student-language",
+        "verifier"
+      ],
+      "affects_units": [
+        "B4.14.2",
+        "C2.17.4",
+        "C2.17.6",
+        "C2.17.9",
+        "D2.20.1",
+        "D2.20.2.1",
+        "E2.25.2",
+        "E2.25.3",
+        "E2.25.4",
+        "E2.25.5",
+        "F2.30.3",
+        "G.32.2",
+        "G.32.4"
+      ],
+      "status": "answered",
+      "answer": "Akkoord met voorstel: Optie 1: algemene afkortingen zijn voor leerlingen gewone taal; bij de kengetallen moeten ze juist de naam aan de afkorting leren koppelen.",
+      "answered_by": "Martijn Overgaag",
+      "answered_at": "2026-10-21T13:20:33Z",
+      "source_run": "20261013-2016-syllabus-bedrijfseconomie-vwo-2028-versie-2",
+      "raised_by": "intake",
+      "supersedes": null
+    },
+    {
+      "id": "bedrijfsecon-007",
+      "question": "Zijn de opsommingen in de syllabus (financieringsvormen, kengetallen, rechtsvormen, vermogenstitels) de volledige lijst, of mogen criteria ook andere voorbeelden noemen?",
+      "context": "Voorbeelden: D2.21.5 en 21.10 sommen vormen van lang en kort vreemd vermogen op na 'i.c.m.' (vermoedelijk bedoeld als 'namelijk'; letterlijk betekent het 'in combinatie met'); G.32.2 noemt precies welke ratio's; B3.13.1.2 noemt zes rechtsvormen en vijf aspecten; D2.20.1 zegt alleen 'verschillende financieringsmogelijkheden' (lease, crowdfunding, subsidie?). Raakt 8 specificaties.",
+      "options": [
+        "Limitatief: criteria noemen alleen wat de syllabus noemt; 'i.c.m.' lezen als 'namelijk'.",
+        "De opsommingen zijn de kern; voorbeelden daarbuiten mogen als illustratie, niet als eis.",
+        "Waar de syllabus 'verschillende' zegt zonder lijst, kiest de generator gangbare voorbeelden uit de methode."
+      ],
+      "proposed": "Optie 1; bij open formuleringen ('verschillende financieringsmogelijkheden') geen uitputtende lijst in het criterium, maar de context uit de CE-zin (startende eenmanszaak/vof, bv/nv).",
+      "impact": "medium",
+      "applies_to": [
+        "planner",
+        "generator",
+        "verifier"
+      ],
+      "affects_units": [
+        "B1.11.2",
+        "B3.13.1",
+        "D2.20.1",
+        "D2.20.2.1",
+        "D2.21.5",
+        "D2.21.10",
+        "G.32.2",
+        "G.32.4"
+      ],
+      "status": "answered",
+      "answer": "Akkoord met voorstel: Optie 1; bij open formuleringen ('verschillende financieringsmogelijkheden') geen uitputtende lijst in het criterium, maar de context uit de CE-zin (startende eenmanszaak/vof, bv/nv).",
+      "answered_by": "Martijn Overgaag",
+      "answered_at": "2026-10-21T13:20:33Z",
+      "source_run": "20261013-2016-syllabus-bedrijfseconomie-vwo-2028-versie-2",
+      "raised_by": "intake",
+      "supersedes": null
+    },
+    {
+      "id": "bedrijfsecon-008",
+      "question": "Houden we de contextafbakening van de syllabus strikt aan (dienstverlenende/niet-industriële organisatie bij kostprijs en resultaat; startende eenmanszaak/vof versus bv/nv bij financiering)?",
+      "context": "F2 eindterm 31 zegt 'voor niet-industriële organisatie' en 30.2 rekent met diensten (tarief per activiteit); productiebedrijven met normale productie en fabricagekostprijs zijn dus niet bedoeld. D2: CE 20-1 gaat over de startende eenmanszaak/vof, 20-2 over bv en nv, eindterm 21 over 'een onderneming met aandeelhouders'. Deze context staat niet in de tekst van de specificaties zelf. Raakt 8 specificaties in F2 en 18 in D2.",
+      "options": [
+        "Strikt: criteria noemen steeds de context (dienstverlenende of handelsonderneming; eenmanszaak/vof versus bv/nv).",
+        "Context alleen noemen waar die de berekening of het antwoord verandert; verder neutraal 'een organisatie', maar geen industriële voorbeelden.",
+        "Geen afbakening; ook industriële voorbeelden toestaan."
+      ],
+      "proposed": "Optie 2: voorkomt onnodig lange zinnen, maar houdt kostprijsberekeningen bij diensten/handel en de aandelen-specificaties bij bv/nv.",
+      "impact": "medium",
+      "applies_to": [
+        "planner",
+        "generator",
+        "verifier"
+      ],
+      "affects_units": [
+        "D2.20.1",
+        "D2.20.2.1",
+        "D2.20.2.2",
+        "D2.20.2.3",
+        "D2.20.2.4",
+        "D2.20.2.5",
+        "D2.21.1",
+        "D2.21.2",
+        "D2.21.3",
+        "D2.21.4",
+        "D2.21.5",
+        "D2.21.6",
+        "D2.21.7",
+        "D2.21.8",
+        "D2.21.9",
+        "D2.21.10",
+        "D2.22.1",
+        "D2.22.2",
+        "F2.30.1",
+        "F2.30.2",
+        "F2.30.3",
+        "F2.30.4",
+        "F2.30.5",
+        "F2.30.6",
+        "F2.31.1",
+        "F2.31.2"
+      ],
+      "status": "answered",
+      "answer": "Akkoord met voorstel: Optie 2: voorkomt onnodig lange zinnen, maar houdt kostprijsberekeningen bij diensten/handel en de aandelen-specificaties bij bv/nv.",
+      "answered_by": "Martijn Overgaag",
+      "answered_at": "2026-10-21T13:20:33Z",
+      "source_run": "20261013-2016-syllabus-bedrijfseconomie-vwo-2028-versie-2",
+      "raised_by": "intake",
+      "supersedes": null
+    },
+    {
+      "id": "bedrijfsecon-009",
+      "question": "Gaan criteria ervan uit dat formules van kengetallen en fiscale/wettelijke tarieven gegeven worden of paraat moeten zijn, en welke definitie gebruiken we bij kengetallen met meerdere varianten?",
+      "context": "Kengetallen hebben in methodes verschillende definities (REV over gemiddeld of begin-EV, voor of na belasting; RTV met of zonder interest; IVV). De syllabus heeft een formulebijlage (bijlage 4), die niet is ingelezen. Fiscale berekeningen (B1.11.3.5 hypotheekrenteaftrek, 11.4.4 schenkbelasting, 11.4.5 erfbelasting, 11.4.3 'gegeven de inhoud van de wet') en C2.17.10 ontslagrecht (bv. transitievergoeding) hangen af van jaarlijks wijzigende tarieven. Raakt 6 specificaties.",
+      "options": [
+        "Formules volgens bijlage 4 van de syllabus; tarieven en wetsregels worden gegeven ('met gegeven tarieven').",
+        "Formules volgens de methode van de sectie; tarieven worden gegeven.",
+        "Formules en tarieven moeten paraat zijn."
+      ],
+      "proposed": "Optie 1: volgt het examen; criteria zeggen 'met gegeven tarieven/regels', zodat ze niet verouderen.",
+      "impact": "medium",
+      "applies_to": [
+        "generator",
+        "verifier"
+      ],
+      "affects_units": [
+        "B1.11.3",
+        "B1.11.4",
+        "C2.17.10",
+        "D2.22.1",
+        "G.32.2",
+        "G.32.4"
+      ],
+      "status": "answered",
+      "answer": "Optie 1, beperkt tot fiscale en wettelijke tarieven en regels: criteria zeggen alleen bij belasting-, premie- en wetstarieven 'met gegeven tarieven/regels'. Formules van kengetallen en andere standaardformules vallen hier niet onder; daarvoor geldt bedrijfsecon-016 (bijlage 4: paraat, niet gegeven).",
+      "answered_by": "Martijn Overgaag",
+      "answered_at": "2026-10-21T13:20:33Z",
+      "source_run": "20261013-2016-syllabus-bedrijfseconomie-vwo-2028-versie-2",
+      "raised_by": "intake",
+      "supersedes": null
+    },
+    {
+      "id": "bedrijfsecon-010",
+      "question": "Mogen kennelijke fouten en restanten in de syllabustekst stilzwijgend worden hersteld in de leerdoelen, of komen die als twijfelpunt op de lijst?",
+      "context": "Gevonden: F2.30.6 heeft geen kopzin en de deelpunten eindigen op '(31.1.4 oude versie)' / '(31.1.5 oude versie)'; 30.6.2 'het gekozen afschrijvingsperiode' (na doorhalen van 'systeem'); 30.2.1, 30.4.2 en 30.4.3 'kunnen opstellen/toepassen'; B4: de zin over MVO staat zonder nummer tussen 14.2 en 14.3 (nu bij 14.2 ingedeeld); de CE-zin bij F1 eindterm 29 is na doorhalen grammaticaal onaf; 11.4.3 mist een komma ('partnerpensioenrechten kinderalimentatie'). Raakt 6 specificaties; bij 14.2/14.3 gaat het om welk leerdoel MVO krijgt.",
+      "options": [
+        "Stil herstellen (grammatica, verwijzingen naar de oude versie weg); MVO bij 14.2 houden.",
+        "Herstellen, maar MVO als eigen leerdoel (los van 14.2 en 14.3).",
+        "Niet herstellen; alle gevallen op de twijfellijst."
+      ],
+      "proposed": "Optie 1: de bedoeling is in alle gevallen duidelijk; MVO hoort inhoudelijk bij het bestaansrecht (14.2) en true pricing (14.3) bouwt erop voort.",
+      "impact": "low",
+      "applies_to": [
+        "planner",
+        "generator",
+        "verifier"
+      ],
+      "affects_units": [
+        "F2.30.2",
+        "F2.30.4",
+        "F2.30.6",
+        "B4.14.2",
+        "B4.14.3",
+        "B1.11.4"
+      ],
+      "status": "answered",
+      "answer": "Akkoord met voorstel: Optie 1: de bedoeling is in alle gevallen duidelijk; MVO hoort inhoudelijk bij het bestaansrecht (14.2) en true pricing (14.3) bouwt erop voort.",
+      "answered_by": "Martijn Overgaag",
+      "answered_at": "2026-10-21T13:20:33Z",
+      "source_run": "20261013-2016-syllabus-bedrijfseconomie-vwo-2028-versie-2",
+      "raised_by": "intake",
+      "supersedes": null
+    },
+    {
+      "id": "bedrijfsecon-011",
+      "question": "Welke verplichtingen bij de oprichting van een eenmanszaak gelden als leerstof bij B2.12.3 ('de verschillende verplichtingen ... noemen'), nu de syllabus geen lijst geeft?",
+      "context": "De syllabus laat de lijst open. De generator nam een lijst uit de planfocus over, inclusief 'verplichte verzekeringen' en 'aanmelding bij de Belastingdienst', die voor een eenmanszaak niet (meer) kloppen. Methoden verschillen in wat ze noemen; een AOV-plicht voor zelfstandigen is aangekondigd maar niet ingevoerd.",
+      "options": [
+        "Lijst van de methode die de sectie gebruikt (docent geeft die op)",
+        "Alleen wettelijke verplichtingen als voorbeelden: inschrijving KvK, btw-aangifte en -afdracht, administratie- en bewaarplicht, vergunningen waar nodig",
+        "Wettelijke verplichtingen plus verstandige keuzes (verzekeringen), duidelijk gescheiden"
+      ],
+      "proposed": "Optie 2: alleen wat wettelijk verplicht is, als voorbeelden ('zoals'), zodat het criterium niet veroudert en geen niet-bestaande verplichting aanleert.",
+      "impact": "low",
+      "applies_to": [
+        "planner",
+        "generator",
+        "verifier"
+      ],
+      "affects_units": [
+        "B2.12.3"
+      ],
+      "status": "answered",
+      "answer": "Akkoord met voorstel: Optie 2: alleen wat wettelijk verplicht is, als voorbeelden ('zoals'), zodat het criterium niet veroudert en geen niet-bestaande verplichting aanleert.",
+      "answered_by": "Martijn Overgaag",
+      "answered_at": "2026-10-21T13:20:33Z",
+      "source_run": "20261013-2016-syllabus-bedrijfseconomie-vwo-2028-versie-2",
+      "raised_by": "intake",
+      "supersedes": null
+    },
+    {
+      "id": "bedrijfsecon-012",
+      "question": "Omvat 'de verschillende indelingscriteria voor een organisatie uitleggen' (14.1) alleen omvang en doelstelling (14.1.1-14.1.2), of ook andere indelingen zoals rechtsvorm, sector/bedrijfstak en plaats in de bedrijfskolom?",
+      "context": "De kopzin is open geformuleerd, de deelpunten noemen er twee. bedrijfsecon-007 (opsommingen zijn volledig) noemt B4.14.1 niet in affects_units. De huidige groepen dekken alleen de twee deelpunten.",
+      "options": [
+        "Alleen de twee deelpunten (omvang, doelstelling)",
+        "De twee deelpunten plus een criterium met andere indelingscriteria als voorbeelden"
+      ],
+      "proposed": "Optie 1: de deelpunten zijn de specificatie; rechtsvorm komt al in B3 aan bod.",
+      "impact": "low",
+      "applies_to": [
+        "planner",
+        "generator",
+        "verifier"
+      ],
+      "affects_units": [
+        "B4.14.1"
+      ],
+      "status": "answered",
+      "answer": "Akkoord met voorstel: Optie 1: de deelpunten zijn de specificatie; rechtsvorm komt al in B3 aan bod.",
+      "answered_by": "Martijn Overgaag",
+      "answered_at": "2026-10-21T13:20:33Z",
+      "source_run": "20261013-2016-syllabus-bedrijfseconomie-vwo-2028-versie-2",
+      "raised_by": "intake",
+      "supersedes": null
+    },
+    {
+      "id": "bedrijfsecon-013",
+      "question": "Gebruiken we overal 'financieringsmogelijkheid', de term die de syllabus na correctie in 20.1 en in de CE-zin van 21 gebruikt, in plaats van 'financieringswijze'?",
+      "context": "In 20.1 is 'financieringswijzen' doorgestreept en vervangen door 'financieringsmogelijkheden'. B2.12.2-03 gebruikt nog 'financieringswijze', D2-groepen gebruiken 'financieringsmogelijkheid'. Twee termen voor hetzelfde verwarren leerlingen.",
+      "options": [
+        "Overal 'financieringsmogelijkheid'",
+        "Beide termen toestaan als synoniemen"
+      ],
+      "proposed": "Optie 1: volgt de gecorrigeerde syllabustekst.",
+      "impact": "low",
+      "applies_to": [
+        "generator",
+        "student-language",
+        "verifier"
+      ],
+      "affects_units": [
+        "B2.12.2",
+        "D2.20.1",
+        "D2.21.7"
+      ],
+      "status": "answered",
+      "answer": "Akkoord met voorstel: Optie 1: volgt de gecorrigeerde syllabustekst.",
+      "answered_by": "Martijn Overgaag",
+      "answered_at": "2026-10-21T13:20:33Z",
+      "source_run": "20261013-2016-syllabus-bedrijfseconomie-vwo-2028-versie-2",
+      "raised_by": "intake",
+      "supersedes": null
+    },
+    {
+      "id": "bedrijfsecon-014",
+      "question": "Welke benamingen gebruiken we voor de vier C's van de vraaggerichte marketingmix: 'customer value, cost, convenience, communication', 'customer solution, customer cost, convenience, communication', of Nederlandse termen?",
+      "context": "E2.25.4-01 en E2.25.5-01 gebruiken 'customer value'. De syllabus noemt de C's niet, maar de E2 CE-zin spreekt van 'de specifieke oplossing die een product biedt voor de klanten', wat bij 'customer solution' past. Methoden en het origineel van Lauterborn (consumer wants and needs) verschillen; leerlingen moeten de termen herkennen die in het CE en hun methode staan.",
+      "options": [
+        "customer value, cost, convenience, communication (huidige tekst)",
+        "customer solution, customer cost, convenience, communication (sluit aan op 'oplossing' in de CE-zin)",
+        "Nederlandse termen (klantoplossing, kosten, gemak, communicatie) met de Engelse term tussen haakjes",
+        "de benaming van de methode die de sectie gebruikt (vastleggen in profile.md)"
+      ],
+      "proposed": "customer solution, customer cost, convenience, communication (sluit aan op 'oplossing' in de CE-zin)",
+      "impact": "low",
+      "applies_to": [
+        "generator",
+        "student-language",
+        "verifier"
+      ],
+      "affects_units": [
+        "E2.25.2",
+        "E2.25.4",
+        "E2.25.5"
+      ],
+      "status": "answered",
+      "answer": "Akkoord met voorstel: customer solution, customer cost, convenience, communication (sluit aan op 'oplossing' in de CE-zin)",
+      "answered_by": "Martijn Overgaag",
+      "answered_at": "2026-10-21T13:20:33Z",
+      "source_run": "20261013-2016-syllabus-bedrijfseconomie-vwo-2028-versie-2",
+      "raised_by": "intake",
+      "supersedes": null
+    },
+    {
+      "id": "bedrijfsecon-015",
+      "question": "Valt loondoorbetaling bij ziekte en re-integratie (BW en Wet verbetering poortwachter) onder 'Arborecht' in C2.17.10, of beperken we Arborecht tot de Arbowet (RI&E, preventie, arbodienst/bedrijfsarts)?",
+      "context": "C2.17.10-02 behandelt onder 'Arborecht' ook loondoorbetaling bij langdurig ziekteverzuim en de kosten daarvan. Juridisch is dat niet de Arbowet maar BW/Poortwachter; veel methoden behandelen het samen onder ziekteverzuim. De keuze bepaalt of de verzuimkostenberekening hier hoort.",
+      "options": [
+        "Ruim: Arbowet plus loondoorbetaling en re-integratie bij ziekte (huidige tekst)",
+        "Strikt: alleen Arbowet-verplichtingen; verzuimkosten alleen als gevolg van arbeidsomstandigheden"
+      ],
+      "proposed": "Ruim: Arbowet plus loondoorbetaling en re-integratie bij ziekte (huidige tekst)",
+      "impact": "low",
+      "applies_to": [
+        "planner",
+        "generator",
+        "verifier"
+      ],
+      "affects_units": [
+        "C2.17.10"
+      ],
+      "status": "answered",
+      "answer": "Akkoord met voorstel: Ruim: Arbowet plus loondoorbetaling en re-integratie bij ziekte (huidige tekst)",
+      "answered_by": "Martijn Overgaag",
+      "answered_at": "2026-10-21T13:20:33Z",
+      "source_run": "20261013-2016-syllabus-bedrijfseconomie-vwo-2028-versie-2",
+      "raised_by": "intake",
+      "supersedes": null
+    },
+    {
+      "id": "bedrijfsecon-016",
+      "question": "Gelden de standaardformules uit bijlage 4 (kengetallen, cashflow, hefboomformule, break-even, verschillenanalyse) in criteria als paraat, of als 'gegeven formule'?",
+      "context": "Bijlage 4 van de syllabus zegt letterlijk: 'Deze formules worden niet gegeven in de examenopgaven'; alleen niet-standaardformules en de somformule van de meetkundige reeks worden gegeven. Planner en generator hebben bedrijfsecon-009 (optie 1: 'formules volgens bijlage 4; tarieven en wetsregels gegeven') gelezen als 'formules gegeven': G.32.2-01..04 en G.32.4-02 zeggen 'met de gegeven formule'. Daarmee vragen de criteria minder dan het examen.",
+      "options": [
+        "Bijlage-4-formules paraat: criteria zeggen niet 'met de gegeven formule'; alleen tarieven, wetsregels en niet-standaardformules zijn gegeven.",
+        "Alle formules behandelen als gegeven (lagere drempel, wijkt af van het CE).",
+        "Formules paraat, plus per groep kengetallen een apart criterium 'kan de formule van ... opschrijven'."
+      ],
+      "proposed": "Optie 1: volgt bijlage 4 en het CE letterlijk, zonder extra onthoudcriteria; verduidelijkt bedrijfsecon-009.",
+      "impact": "medium",
+      "applies_to": [
+        "planner",
+        "generator",
+        "verifier"
+      ],
+      "affects_units": [
+        "F2.30.4",
+        "F2.31.1",
+        "G.32.2",
+        "G.32.4"
+      ],
+      "status": "answered",
+      "answer": "Akkoord met voorstel: Optie 1: volgt bijlage 4 en het CE letterlijk, zonder extra onthoudcriteria; verduidelijkt bedrijfsecon-009.",
+      "answered_by": "Martijn Overgaag",
+      "answered_at": "2026-10-21T13:20:33Z",
+      "source_run": "20261013-2016-syllabus-bedrijfseconomie-vwo-2028-versie-2",
+      "raised_by": "intake",
+      "supersedes": null
+    }
+  ]
+}

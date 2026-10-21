@@ -1,0 +1,33 @@
+{
+  "source": {
+    "source_id": "cvte-bedrijfseconomie-vwo-ce-2028-v2",
+    "title": "Bijlage 3 Uitleg bij de handelingswerkwoorden",
+    "pages": [5, 37],
+    "extracted_by": "human"
+  },
+  "level_labels": {
+    "onthouden": "Memoriseren",
+    "begrijpen": "Begrijpen",
+    "toepassen": "Toepassen",
+    "analyseren": "Analyseren",
+    "evalueren": "Evalueren",
+    "creëren": "Creëren"
+  },
+  "head_verbs": {
+    "onthouden": ["noemen"],
+    "begrijpen": ["uitleggen"],
+    "toepassen": ["berekenen", "opstellen"],
+    "analyseren": ["analyseren"],
+    "evalueren": ["beoordelen"],
+    "creëren": ["adviseren"]
+  },
+  "verbs": {
+    "onthouden": ["noemen", "herkennen", "aanwijzen", "definiëren", "vinden", "kiezen", "onderstrepen", "invullen", "citeren", "arceren"],
+    "begrijpen": ["uitleggen", "verklaren", "verhelderen", "beschrijven", "voorbeelden geven", "toelichten", "onderbouwen", "aantonen"],
+    "toepassen": ["berekenen", "opstellen", "hanteren", "een overzicht geven", "schatten", "voorspellen", "vormgeven", "vragen formuleren"],
+    "analyseren": ["analyseren", "vergelijken", "selecteren", "indelen", "kenmerken bepalen", "determineren", "structureren", "ontleden"],
+    "evalueren": ["beoordelen", "bekritiseren", "testen", "doorlichten", "afwegen"],
+    "creëren": ["adviseren", "rapporteren", "hypothese opstellen", "ontwerpen", "construeren", "maken"]
+  },
+  "notes": "Transcribed literally from bijlage 3 (p. 37) of the syllabus bedrijfseconomie vwo CE 2028 versie 2; the head verbs ('samenvattend/overkoepelend handelingswerkwoord in gespecificeerde eindterm') are included in their level's list. P. 5 explains the scheme: a verb at one level implies the lower levels; eindtermen use the highest verb of their specifications; 'adviseren' (creëren) is not used in eindtermen or specifications; 'noemen' with wetskennis means 'kunnen definiëren'. Transcribed on 2026-10-21 after the run, as backfill (specs/06 §7)."
+}
