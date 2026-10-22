@@ -1,0 +1,1 @@
+{"run_id": "fixture-koppel", "subject": "economie", "method_id": "fixture-methode", "from_run": "fixture", "chapters": [1], "part": "A", "max_repair_rounds": 1, "judge_batch": 4, "status": "running", "scope_paragraphs": ["H1.1", "H1.2", "H1.3"]}

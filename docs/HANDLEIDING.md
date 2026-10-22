@@ -77,3 +77,28 @@ Daarna opnieuw `/generate`. Elke run krijgt een eigen map; niets wordt overschre
 **Heeft de syllabus een eigen tabel met handelingswerkwoorden?** (bedrijfseconomie: bijlage 3.) De straat vindt die zelf: het inlezen zet de tabel letterlijk in `runs/<id>/01_verb_table.json`, de intake laat je de verschillen met de generieke tabel zien en vraagt of je de syllabustabel overneemt. Zeg je ja, dan komt ze in `subjects/<vak>/bloom_verbs.json` en wint ze per werkwoord van de generieke tabel; voor alle volgende runs van dat vak. Bekijk het resultaat met `python3 scripts/verb_table.py effective <vak>`.
 **Methode/boek als bron?** Komt in een volgende versie; het datamodel is er al op voorbereid (`specs/01-source-units.md §3`).
 **Waar staat de verantwoording?** `specs/` — met name `00-overview.md` (wetenschappelijke ankers) en `04-verification.md` (de rubric).
+
+---
+
+# Methode-straat (`/koppel`) — paragrafen koppelen aan succescriteria
+
+Koppelt de succescriteria uit een `/generate`-run aan de paragrafen van een methode, met gradatie (*leert* = eerste uitleg in boekvolgorde, *herhaalt*, *oefent*, *noemt*), citaat en zekerheid. Plan: `docs/plan-methode-straat.html`; specs 10–15.
+
+## 1. Eenmalig
+- Tesseract voor gescande pdf's: Windows `winget install UB-Mannheim.TesseractOCR` (en Nederlands taalbestand `nld.traineddata` in de tessdata-map); macOS `brew install tesseract tesseract-lang`. Zonder tesseract leest de ingest-agent pagina's zelf als afbeelding — werkt, maar langzamer.
+- Test: `python tests/run_koppel_fixture.py` → `RESULT: OK`.
+
+## 2. Per methode
+- Zet de pdf's in `input/<methode>/` (niet in git; auteursrecht).
+- Vul `subjects/<vak>/methodes/<methode-id>/profile.md` in — vooral de **boekvolgorde** (bepaalt wat "eerste keer" is). Template: `docs/templates/methode-profile.md`.
+- Nulmeting (aanbevolen): koppel 15 criteria met de hand in een csv zoals `docs/templates/nulmeting-template.csv` (criterium-id's uit de CSV van de `/generate`-run, paragraafcode zoals in het boek, gradatie). De straat meet zichzelf daaraan.
+
+## 3. Draaien
+```
+claude
+> /koppel input/<methode>/boek.pdf --subject economie --method <methode-id> --from <generate-run-id> --answers input/<methode>/antwoorden.pdf --chapters 1,2 --baseline nulmeting.csv
+```
+Eén pauze (intake). Resultaat in `runs/<id>/output/`: `koppelingen_paragraaf.csv`, `methode_eenheden.csv`, `dekking_methode.md`, `gaten_methode.md`, `buiten_syllabus.md`, `steekproef.md`, `vergelijking_nulmeting.md`.
+
+## 4. Nakijken
+`steekproef.md`: 20 koppelingen (10 hoge, 10 lage zekerheid), vier J/N-vragen per koppeling. Patronen → methodeprofiel (terminologie), `subjects/<vak>/glossary.json` (synoniemen) of een beslissing; losse fouten → `status` in de CSV.

@@ -1,0 +1,9 @@
+{"method": {"method_id": "fixture-methode", "subject": "economie", "publisher": "Fixture", "title": "Vraag en aanbod (fixture)", "edition": "1", "level": "vwo", "volume_order": 1, "files": ["input/fixture.pdf"], "text_extraction": "ocr", "ocr_pages": [1,2,3]},
+ "units": [
+  {"unit_id": "H1", "parent_id": null, "kind": "hoofdstuk", "code": "1", "title": "De markt", "page_from": 1, "page_to": 6},
+  {"unit_id": "H1.1", "parent_id": "H1", "kind": "paragraaf", "code": "1.1", "title": "Marktevenwicht", "page_from": 1, "page_to": 2, "order": 1, "concepts": ["evenwichtsprijs", "marktevenwicht", "aanbodoverschot"], "text_ref": "text/H1.1.txt"},
+  {"unit_id": "H1.2", "parent_id": "H1", "kind": "paragraaf", "code": "1.2", "title": "Elasticiteit", "page_from": 3, "page_to": 4, "order": 2, "concepts": ["prijselasticiteit", "elastisch", "inelastisch"], "text_ref": "text/H1.2.txt"},
+  {"unit_id": "H1.3", "parent_id": "H1", "kind": "paragraaf", "code": "1.3", "title": "Transfer", "page_from": 5, "page_to": 6, "order": 3, "concepts": [], "text_ref": "text/H1.3.txt"},
+  {"unit_id": "H1.1-opg1.1", "parent_id": "H1.1", "kind": "opgave", "code": "1.1", "page_from": 2},
+  {"unit_id": "H1.1-opg1.1a", "parent_id": "H1.1-opg1.1", "kind": "deelvraag", "code": "1.1a", "page_from": 2, "text_ref": "text/H1.1-opg1.1a.txt", "answer_ref": "text/H1.1-opg1.1a.answer.txt"}
+ ]}

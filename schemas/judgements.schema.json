@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MappingJudgements",
+  "type": "object",
+  "required": ["judge", "unit_id", "judgements"],
+  "properties": {
+    "judge": {"enum": ["A", "B", "R"]},
+    "unit_id": {"type": "string"},
+    "judgements": {
+      "type": "array",
+      "items": {"type": "object", "required": ["criterion_id", "treatment"],
+        "properties": {
+          "criterion_id": {"type": "string"},
+          "treatment": {"enum": ["explains", "practises", "mentions", "none"]},
+          "quote": {"type": ["string", "null"]},
+          "quote_page": {"type": ["integer", "null"]},
+          "second_quote": {"type": ["string", "null"]},
+          "aspect": {"type": ["string", "null"]},
+          "reason": {"type": ["string", "null"]}
+        }}
+    }
+  }
+}

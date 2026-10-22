@@ -1,0 +1,15 @@
+{
+ "links": [
+  {
+   "criterion_id": "D1.1-02-a",
+   "unit_id": "H1.1",
+   "verdict": "pass",
+   "treatment_should_be": null,
+   "confidence_adjust": "up",
+   "reason": "uitwerking is toepassing, citaat draagt het"
+  }
+ ],
+ "missing_links": [],
+ "gradation_findings": [],
+ "proposed_decisions": []
+}

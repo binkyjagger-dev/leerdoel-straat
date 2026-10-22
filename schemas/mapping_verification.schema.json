@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MappingVerification",
+  "type": "object",
+  "required": ["links", "missing_links", "gradation_findings"],
+  "properties": {
+    "links": {"type": "array", "items": {"type": "object", "required": ["criterion_id", "unit_id", "verdict"],
+      "properties": {"criterion_id": {"type": "string"}, "unit_id": {"type": "string"},
+        "verdict": {"enum": ["pass", "dispute"]}, "treatment_should_be": {"type": ["string", "null"]},
+        "confidence_adjust": {"enum": ["up", "down", null]}, "reason": {"type": ["string", "null"]}}}},
+    "missing_links": {"type": "array", "items": {"type": "object", "required": ["criterion_id", "unit_id", "treatment", "quote"],
+      "properties": {"criterion_id": {"type": "string"}, "unit_id": {"type": "string"},
+        "treatment": {"enum": ["explains", "practises"]}, "quote": {"type": "string"}, "reason": {"type": ["string", "null"]}}}},
+    "gradation_findings": {"type": "array", "items": {"type": "object", "required": ["criterion_id", "finding"],
+      "properties": {"criterion_id": {"type": "string"}, "finding": {"type": "string"}, "unit_id": {"type": ["string", "null"]}}}},
+    "proposed_decisions": {"type": "array"}
+  }
+}

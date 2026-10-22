@@ -2,25 +2,92 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "IntakeQuestions",
   "type": "object",
-  "required": ["subject", "questions"],
+  "required": [
+    "subject",
+    "questions"
+  ],
   "properties": {
-    "subject": {"type": "string"},
-    "skipped_as_already_decided": {"type": "array", "items": {"type": "string"}},
+    "subject": {
+      "type": "string"
+    },
+    "skipped_as_already_decided": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
     "questions": {
       "type": "array",
       "maxItems": 15,
       "items": {
         "type": "object",
-        "required": ["key", "question", "context", "options", "proposed", "impact", "applies_to"],
+        "required": [
+          "key",
+          "question",
+          "context",
+          "options",
+          "proposed",
+          "impact",
+          "applies_to"
+        ],
         "properties": {
-          "key": {"type": "string", "pattern": "^[a-z0-9-]+$"},
-          "question": {"type": "string", "minLength": 10},
-          "context": {"type": "string"},
-          "options": {"type": "array", "minItems": 2, "maxItems": 4, "items": {"type": "string"}},
-          "proposed": {"type": "string"},
-          "impact": {"enum": ["high", "medium", "low"]},
-          "applies_to": {"type": "array", "items": {"enum": ["ingest", "planner", "generator", "student-language", "verifier", "exporter"]}},
-          "affects_units": {"type": ["array", "null"], "items": {"type": "string"}}
+          "key": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$"
+          },
+          "question": {
+            "type": "string",
+            "minLength": 10
+          },
+          "context": {
+            "type": "string"
+          },
+          "options": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 4,
+            "items": {
+              "type": "string"
+            }
+          },
+          "proposed": {
+            "type": "string"
+          },
+          "impact": {
+            "enum": [
+              "high",
+              "medium",
+              "low"
+            ]
+          },
+          "applies_to": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "ingest",
+                "planner",
+                "generator",
+                "student-language",
+                "verifier",
+                "exporter"
+              ]
+            }
+          },
+          "affects_units": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": "string"
+            }
+          },
+          "scope": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
         }
       }
     }

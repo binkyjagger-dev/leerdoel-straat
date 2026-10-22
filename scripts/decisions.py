@@ -122,7 +122,7 @@ def cmd_add(subject: str, questions_path: str, run_id: str | None) -> None:
             "options": q.get("options"), "proposed": q["proposed"], "impact": q["impact"],
             "applies_to": q["applies_to"], "affects_units": q.get("affects_units"),
             "status": "open", "answer": None, "answered_by": None, "answered_at": None,
-            "source_run": run_id, "raised_by": iq.get("raised_by", "intake"), "supersedes": None,
+            "source_run": run_id, "raised_by": iq.get("raised_by", "intake"), "supersedes": None, "scope": q.get("scope"),
         })
         existing.add(_norm(q["question"]))
         added += 1

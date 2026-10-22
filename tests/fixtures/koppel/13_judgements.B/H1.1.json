@@ -1,0 +1,69 @@
+{
+ "judge": "B",
+ "unit_id": "H1.1",
+ "judgements": [
+  {
+   "criterion_id": "D1.1-01-a",
+   "treatment": "explains",
+   "quote": "De evenwichtsprijs is de prijs waarbij de gevraagde hoeveelheid gelijk is aan de aangeboden hoeveelheid.",
+   "quote_page": 1,
+   "second_quote": null,
+   "aspect": null,
+   "reason": null
+  },
+  {
+   "criterion_id": "D1.1-01-b",
+   "treatment": "explains",
+   "quote": "Ligt de prijs boven het evenwicht, dan is er een aanbodoverschot en zal de prijs dalen.",
+   "quote_page": 1,
+   "second_quote": null,
+   "aspect": null,
+   "reason": null
+  },
+  {
+   "criterion_id": "D1.1-01-c",
+   "treatment": "explains",
+   "quote": "Ligt de prijs eronder, dan is er een vraagoverschot en stijgt de prijs.",
+   "quote_page": 1,
+   "second_quote": null,
+   "aspect": null,
+   "reason": null
+  },
+  {
+   "criterion_id": "D1.1-02-a",
+   "treatment": "explains",
+   "quote": "vinden we het evenwicht door Qv = Qa te stellen: P = 5.",
+   "quote_page": 1,
+   "second_quote": null,
+   "aspect": null,
+   "reason": null
+  },
+  {
+   "criterion_id": "D1.1-02-b",
+   "treatment": "none",
+   "quote": null,
+   "quote_page": 1,
+   "second_quote": null,
+   "aspect": null,
+   "reason": null
+  },
+  {
+   "criterion_id": "D1.2-01-a",
+   "treatment": "none",
+   "quote": null,
+   "quote_page": 1,
+   "second_quote": null,
+   "aspect": null,
+   "reason": null
+  },
+  {
+   "criterion_id": "D1.2-01-b",
+   "treatment": "none",
+   "quote": null,
+   "quote_page": 1,
+   "second_quote": null,
+   "aspect": null,
+   "reason": null
+  }
+ ]
+}

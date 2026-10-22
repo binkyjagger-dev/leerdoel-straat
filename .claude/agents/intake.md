@@ -24,6 +24,9 @@ If both files exist: compare them with the same diff; if they agree, list `hande
 5. **Conventions the generator will need** — preferred terminology, notation (p/q vs P/Q, GO/GTK), whether abbreviations may be used in student text — only where the profile does not say.
 6. **Classification conventions** in the Bloom verb list that the subject may want differently (e.g. "herkennen in een context" as onthouden vs begrijpen) — only for verbs the source's own table (if any) does not settle.
 
+## Mapping mode (`/koppel`, specs/13 M1b)
+When the task prompt says *mapping mode*, the source is a textbook, not a syllabus: read `<run_dir>/11_method_units.json`, `11_ingest_notes.md`, `10_criteria.json` (the criteria to be linked), `subjects/<subject>/methodes/<method_id>/profile.md` and `decisions.json` (decisions with `scope` equal to the method id or no scope apply). Ask only what changes the mapping: book order / volume order when the profile is silent; chapters or paragraphs to leave out (Transfer, Zelftest?); whether kaders count as explanation; method terms that differ from syllabus/criterion terms (propose glossary entries); criteria whose concepts occur nowhere in the method (ask before they become gaps); OCR pages that are unreadable. Do not ask Bloom questions here. Give each question `scope: "<method_id>"`.
+
 ## Rules
 - First read `decisions.json`. **Do not ask what is already answered** (same meaning, not just same wording) or what `profile.md` settles. List those under `skipped_as_already_decided` by decision id or a short phrase.
 - Each question: `key` (slug), `question` (one clear sentence, Dutch), `context` (why it matters, how many units it touches — count them), 2–4 `options`, a `proposed` default (what you would do and why, briefly), `impact` (high = touches the Bloom ceiling or >10 units or correctness; medium = a handful of units; low = wording), `applies_to` roles, `affects_units` (ids or `["*"]`).

@@ -20,14 +20,17 @@ report + doubt list.
 
 ## Layout
 ```
-specs/            00-overview … 05-export
+specs/            00–06 leerdoel-straat (/generate) · 10–15 methode-straat (/koppel)
 schemas/          JSON schemas per artefact
 data/             rule files (Bloom verbs, student-language rules)
 scripts/          validate.py bloom_check.py student_language_check.py coverage.py merge_groups.py apply_verdicts.py export.py decisions.py verb_table.py
 subjects/<vak>/   profile.md (human) + decisions.json (straat, via decisions.py) + bloom_verbs.json (optional, via verb_table.py) — see specs/06
 docs/             HANDLEIDING.md (one-page tutorial, Dutch)
 .claude/agents/   ingest intake planner generator student-language verifier
-.claude/commands/ generate   (the orchestrator)
+.claude/commands/ generate (/generate orchestrator) · koppel (/koppel orchestrator)
+.claude/agents/   method-ingest mapping-judge mapping-verifier   (methode-straat; intake is shared, mapping mode)
+scripts/mapping/  ocr_pdf validate_method candidates gradation check_mappings export_mappings compare_baseline
+subjects/<vak>/methodes/<methode-id>/profile.md   (human) — book order, structure, terms
 runs/<run_id>/    one folder per run (git-ignored except .gitkeep)
 tests/fixtures/   small synthetic run used to exercise the scripts
 ```
@@ -37,7 +40,9 @@ tests/fixtures/   small synthetic run used to exercise the scripts
 pip install --break-system-packages jsonschema   # once
 /generate input/syllabus-economie-vwo.pdf --subject economie
 python3 scripts/export.py runs/<run_id>          # re-export only
-python3 tests/run_fixture.py                         # exercise all scripts on the fixture
+python3 tests/run_fixture.py                         # exercise all /generate scripts on the fixture
+python3 tests/run_koppel_fixture.py                  # exercise all /koppel scripts on the koppel fixture
+/koppel input/<m>/boek.pdf --subject economie --method <id> --from <generate-run> --chapters 1,2 --baseline nulmeting.csv
 ```
 
 ## Conventions
@@ -75,3 +80,9 @@ python3 tests/run_fixture.py                         # exercise all scripts on t
 - `validate.py verification` on a partial file reports "has no verdict" for every out-of-scope group; add a `--partial` flag.
 - L3 fired 352 times; formula criteria and enumerations cannot stay under 20 words. Count a formula as one word or make the limit a subject setting.
 - An intake proposal can require a straat change to be executable (019 → `source.concept_corrections`). Intake should flag that so the orchestrator pauses for the build before planning.
+
+## Methode-straat ground rules (specs/10–15, decided 2026-10-22)
+- Links are criterion × paragraph; judges output treatment (explains/practises/mentions) + verbatim quote (≤ 25 words); the gradation is computed from book order (first explains = leert). Never let an agent set gradations.
+- Two judges (A, B) per paragraph in separate Agent calls; confidence from agreement + quote validity; verifier in fresh context does precision (sample), recall (per paragraph) and gradation checks; one repair round (judge R).
+- Method text lives only in `runs/<id>/text/` (git-ignored); PDFs under `input/` are not committed.
+- Criterion ids from /generate are the key everywhere; `10_criteria.json` is a copy of the source run's `04_groups_student.json`.

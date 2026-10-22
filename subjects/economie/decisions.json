@@ -516,6 +516,186 @@
       "source_run": "20261012-2220-economie-vwo-2026-run2",
       "raised_by": "verifier",
       "supersedes": null
+    },
+    {
+      "id": "economie-017",
+      "question": "Welke gradaties krijgt een koppeling criterium–paragraaf, en hoe wordt 'leert' bepaald?",
+      "context": "Plan methode-straat 22 okt 2026.",
+      "options": [
+        "vier gradaties, leert = eerste uitleg in boekvolgorde",
+        "alleen wel/niet gekoppeld"
+      ],
+      "proposed": "Vier gradaties (leert, herhaalt, oefent, noemt); leert = eerste paragraaf in boekvolgorde die het criterium uitlegt, precies één per criterium; bij uitleg in twee delen: eerste = leert, tweede = herhaalt met opmerking 'breidt uit'.",
+      "impact": "high",
+      "applies_to": [
+        "generator",
+        "verifier",
+        "exporter"
+      ],
+      "affects_units": [
+        "*"
+      ],
+      "status": "answered",
+      "answer": "Vier gradaties (leert, herhaalt, oefent, noemt); leert = eerste paragraaf in boekvolgorde die het criterium uitlegt, precies één per criterium; bij uitleg in twee delen: eerste = leert, tweede = herhaalt met opmerking 'breidt uit'.",
+      "answered_by": "Martijn",
+      "answered_at": "2026-10-22T14:01:04Z",
+      "source_run": "plan-2026-10-22",
+      "raised_by": "human",
+      "supersedes": null,
+      "scope": "methode-straat"
+    },
+    {
+      "id": "economie-018",
+      "question": "Hoeveel onafhankelijke beoordelaars per koppeling?",
+      "context": "Overeenstemming bepaalt de zekerheidsscore.",
+      "options": [
+        "twee",
+        "één plus verifier"
+      ],
+      "proposed": "Twee onafhankelijke beoordelaars (A en B) per koppeling; overeenstemming en citaatgeldigheid bepalen de zekerheid.",
+      "impact": "high",
+      "applies_to": [
+        "verifier"
+      ],
+      "affects_units": [
+        "*"
+      ],
+      "status": "answered",
+      "answer": "Twee onafhankelijke beoordelaars (A en B) per koppeling; overeenstemming en citaatgeldigheid bepalen de zekerheid.",
+      "answered_by": "Martijn",
+      "answered_at": "2026-10-22T14:01:04Z",
+      "source_run": "plan-2026-10-22",
+      "raised_by": "human",
+      "supersedes": null,
+      "scope": "methode-straat"
+    },
+    {
+      "id": "economie-019",
+      "question": "Nulmeting met de hand vóór of parallel aan de bouw, en op welk materiaal?",
+      "context": "",
+      "options": [
+        "eerst nulmeting",
+        "parallel"
+      ],
+      "proposed": "Nulmeting door de docent op LWEO lesbrief Vraag en aanbod, hoofdstuk 1 en 2; de straat wordt parallel gebouwd en daartegen gemeten.",
+      "impact": "medium",
+      "applies_to": [
+        "verifier"
+      ],
+      "affects_units": [
+        "*"
+      ],
+      "status": "answered",
+      "answer": "Nulmeting door de docent op LWEO lesbrief Vraag en aanbod, hoofdstuk 1 en 2; de straat wordt parallel gebouwd en daartegen gemeten.",
+      "answered_by": "Martijn",
+      "answered_at": "2026-10-22T14:01:04Z",
+      "source_run": "plan-2026-10-22",
+      "raised_by": "human",
+      "supersedes": null,
+      "scope": "methode-straat"
+    },
+    {
+      "id": "economie-020",
+      "question": "Welke id's zijn de sleutel voor criteria in de koppelingen?",
+      "context": "",
+      "options": [
+        "id's uit de leerdoel-straat",
+        "Doelstellr-id's"
+      ],
+      "proposed": "Criterium-id's uit de leerdoel-straat (bijv. D1.16-01-c) als vaste sleutel; Doelstellr-id's in een vertaaltabel.",
+      "impact": "high",
+      "applies_to": [
+        "exporter"
+      ],
+      "affects_units": [
+        "*"
+      ],
+      "status": "answered",
+      "answer": "Criterium-id's uit de leerdoel-straat (bijv. D1.16-01-c) als vaste sleutel; Doelstellr-id's in een vertaaltabel.",
+      "answered_by": "Martijn",
+      "answered_at": "2026-10-22T14:01:04Z",
+      "source_run": "plan-2026-10-22",
+      "raised_by": "human",
+      "supersedes": null,
+      "scope": "methode-straat"
+    },
+    {
+      "id": "economie-021",
+      "question": "Aparte repo of dezelfde repo?",
+      "context": "",
+      "options": [
+        "zelfde repo, /koppel naast /generate",
+        "aparte repo"
+      ],
+      "proposed": "Zelfde repo; één /koppel-command naast /generate; specs 10–15.",
+      "impact": "low",
+      "applies_to": [
+        "exporter"
+      ],
+      "affects_units": [
+        "*"
+      ],
+      "status": "answered",
+      "answer": "Zelfde repo; één /koppel-command naast /generate; specs 10–15.",
+      "answered_by": "Martijn",
+      "answered_at": "2026-10-22T14:01:04Z",
+      "source_run": "plan-2026-10-22",
+      "raised_by": "human",
+      "supersedes": null,
+      "scope": "methode-straat"
+    },
+    {
+      "id": "economie-022",
+      "question": "Hoe lang mag een opgeslagen citaat zijn en wordt methodetekst bewaard?",
+      "context": "Auteursrecht.",
+      "options": [
+        "25 woorden, tekst alleen in run-map",
+        "geen limiet"
+      ],
+      "proposed": "Citaten maximaal 25 woorden; de methodetekst blijft in de run-map (git-ignored) en komt nooit in de uitvoer.",
+      "impact": "medium",
+      "applies_to": [
+        "generator",
+        "verifier",
+        "exporter"
+      ],
+      "affects_units": [
+        "*"
+      ],
+      "status": "answered",
+      "answer": "Citaten maximaal 25 woorden; de methodetekst blijft in de run-map (git-ignored) en komt nooit in de uitvoer.",
+      "answered_by": "Martijn",
+      "answered_at": "2026-10-22T14:01:04Z",
+      "source_run": "plan-2026-10-22",
+      "raised_by": "human",
+      "supersedes": null,
+      "scope": "methode-straat"
+    },
+    {
+      "id": "economie-023",
+      "question": "Waar wordt de boekvolgorde (boekjes, leerjaren) vastgelegd?",
+      "context": "Bepaalt wat 'eerste keer' is.",
+      "options": [
+        "in het methodeprofiel",
+        "straat leidt het af"
+      ],
+      "proposed": "In het methodeprofiel (subjects/<vak>/methodes/<methode>/profile.md), door de docent.",
+      "impact": "medium",
+      "applies_to": [
+        "generator",
+        "verifier"
+      ],
+      "affects_units": [
+        "*"
+      ],
+      "status": "answered",
+      "answer": "In het methodeprofiel (subjects/<vak>/methodes/<methode>/profile.md), door de docent.",
+      "answered_by": "Martijn",
+      "answered_at": "2026-10-22T14:01:04Z",
+      "source_run": "plan-2026-10-22",
+      "raised_by": "human",
+      "supersedes": null,
+      "scope": "methode-straat"
     }
   ]
 }

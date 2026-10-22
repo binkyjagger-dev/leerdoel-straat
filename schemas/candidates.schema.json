@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MappingCandidates",
+  "type": "object",
+  "required": ["per_criterion", "per_paragraph"],
+  "properties": {
+    "scope_paragraphs": {"type": "array", "items": {"type": "string"}},
+    "per_criterion": {
+      "type": "array",
+      "items": {"type": "object", "required": ["criterion_id", "candidates"],
+        "properties": {"criterion_id": {"type": "string"},
+          "candidates": {"type": "array", "items": {"type": "object", "required": ["unit_id", "score"],
+            "properties": {"unit_id": {"type": "string"}, "score": {"type": "number"}, "why": {"type": "string"}}}}}}
+    },
+    "per_paragraph": {
+      "type": "array",
+      "items": {"type": "object", "required": ["unit_id", "criteria"],
+        "properties": {"unit_id": {"type": "string"},
+          "criteria": {"type": "array", "items": {"type": "object", "required": ["criterion_id", "score"],
+            "properties": {"criterion_id": {"type": "string"}, "score": {"type": "number"}}}}}}
+    }
+  }
+}

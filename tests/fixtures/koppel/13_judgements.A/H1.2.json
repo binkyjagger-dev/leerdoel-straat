@@ -1,0 +1,42 @@
+{
+ "judge": "A",
+ "unit_id": "H1.2",
+ "judgements": [
+  {
+   "criterion_id": "D1.2-01-a",
+   "treatment": "explains",
+   "quote": "de procentuele verandering van de gevraagde hoeveelheid gedeeld door de procentuele verandering van de prijs",
+   "quote_page": 1,
+   "second_quote": null,
+   "aspect": null,
+   "reason": null
+  },
+  {
+   "criterion_id": "D1.2-01-b",
+   "treatment": "explains",
+   "quote": "Is de uitkomst tussen 0 en -1, dan noemen we de vraag inelastisch; is hij kleiner dan -1, dan is de vraag elastisch.",
+   "quote_page": 1,
+   "second_quote": null,
+   "aspect": null,
+   "reason": null
+  },
+  {
+   "criterion_id": "D1.1-01-a",
+   "treatment": "mentions",
+   "quote": "In hoofdstuk 1 zagen we al dat de evenwichtsprijs ontstaat waar vraag en aanbod gelijk zijn.",
+   "quote_page": 1,
+   "second_quote": null,
+   "aspect": null,
+   "reason": null
+  },
+  {
+   "criterion_id": "D1.1-02-a",
+   "treatment": "none",
+   "quote": null,
+   "quote_page": 1,
+   "second_quote": null,
+   "aspect": null,
+   "reason": null
+  }
+ ]
+}

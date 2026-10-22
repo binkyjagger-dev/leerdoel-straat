@@ -1,0 +1,1 @@
+Bereken de evenwichtsprijs als Qv = -2P + 20 en Qa = 3P - 5.

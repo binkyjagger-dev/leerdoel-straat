@@ -3,6 +3,8 @@ runs/*
 !runs/*/
 runs/*/*
 !runs/*/output/
+runs/*/text/
+runs/*/text/**
 !runs/*/run.json
 !runs/*/01_ingest_notes.md
 !runs/*/01_verb_table.json
@@ -11,3 +13,5 @@ input/*
 __pycache__/
 *.pyc
 .DS_Store
+input/*/
+!input/.gitkeep

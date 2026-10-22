@@ -1,0 +1,24 @@
+{
+ "judge": "B",
+ "unit_id": "H1.3",
+ "judgements": [
+  {
+   "criterion_id": "D1.1-01-a",
+   "treatment": "none",
+   "quote": null,
+   "quote_page": 1,
+   "second_quote": null,
+   "aspect": null,
+   "reason": null
+  },
+  {
+   "criterion_id": "D1.2-01-a",
+   "treatment": "none",
+   "quote": null,
+   "quote_page": 1,
+   "second_quote": null,
+   "aspect": null,
+   "reason": null
+  }
+ ]
+}
