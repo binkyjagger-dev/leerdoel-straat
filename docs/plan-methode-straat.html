@@ -1,0 +1,144 @@
+<title>Plan methode-straat</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: single column plan with a step rail, decision table and phase cards; same identity as the uitleg page. */
+:root{--bg:#f7f6f2;--fg:#1d2420;--muted:#5d665f;--line:#d9d6cc;--card:#fff;--accent:#1f6f5a;--accent-soft:#dcebe3;--human:#b8611b;--human-soft:#f6e6d6;--script:#3b4b7a;--script-soft:#dfe4f1;--warn:#9b2c2c;--warn-soft:#f7e1e1;
+--display:"Fraunces",Georgia,serif;--body:"Public Sans",system-ui,sans-serif;--mono:"JetBrains Mono",ui-monospace,monospace}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141917;--fg:#e8e9e3;--muted:#a3aba4;--line:#2e3733;--card:#1c2320;--accent:#6fc4a4;--accent-soft:#1e3a30;--human:#e9a060;--human-soft:#3a2a18;--script:#9fb0e4;--script-soft:#232c42;--warn:#f0908a;--warn-soft:#3a1f1f;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#141917;--fg:#e8e9e3;--muted:#a3aba4;--line:#2e3733;--card:#1c2320;--accent:#6fc4a4;--accent-soft:#1e3a30;--human:#e9a060;--human-soft:#3a2a18;--script:#9fb0e4;--script-soft:#232c42;--warn:#f0908a;--warn-soft:#3a1f1f;color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);line-height:1.5;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:32px 64px}
+main{max-width:860px;margin:0 auto}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.15;margin:0}
+h1{font-size:clamp(2rem,5vw,2.8rem);font-weight:700}
+h2{font-size:1.45rem;font-weight:600;margin-top:52px;margin-bottom:10px}
+h3{font-size:1.05rem;font-weight:600}
+p{max-width:68ch;margin:8px 0}
+.lede{font-size:1.1rem;color:var(--muted);max-width:62ch}
+.eyebrow{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600}
+code{font-family:var(--mono);font-size:.85em}
+.rail{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:14px}
+.step{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px;min-width:0;border-top:4px solid var(--accent)}
+.step.human{border-top-color:var(--human)} .step.script{border-top-color:var(--script)}
+.step .n{font-family:var(--mono);font-size:.72rem;color:var(--muted)} .step h3{font-size:.98rem} .step p{font-size:.84rem;color:var(--muted);margin:6px 0 0}
+.legend{display:flex;gap:16px;flex-wrap:wrap;margin:12px 0 4px;font-size:.85rem;color:var(--muted)}
+.legend span::before{content:"";display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.legend .a::before{background:var(--accent)}.legend .h::before{background:var(--human)}.legend .s::before{background:var(--script)}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin-top:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;min-width:0}
+.card ul{margin:6px 0 0;padding-left:18px;font-size:.92rem}.card li{margin:4px 0}
+.tbl{overflow-x:auto;margin-top:12px}
+table{border-collapse:collapse;width:100%;font-size:.9rem}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.pill{font-family:var(--mono);font-size:.72rem;padding:2px 8px;border-radius:999px;border:1px solid var(--line);white-space:nowrap;background:var(--accent-soft)}
+.pill.h{background:var(--human-soft)} .pill.w{background:var(--warn-soft);border-color:var(--warn)}
+.ex{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;margin-top:14px}
+.ex .q{font-size:.85rem;color:var(--muted);border-left:3px solid var(--line);padding-left:10px;margin:8px 0}
+.phase{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-top:10px}
+.phase .n{font-family:var(--display);font-size:1.6rem;color:var(--accent);line-height:1}
+.phase p{margin:4px 0 0;font-size:.92rem}
+.decide{background:var(--human-soft);border:1px solid var(--human);border-radius:10px;padding:14px 16px;margin-top:14px}
+.decide ol{margin:6px 0 0;padding-left:20px}.decide li{margin:6px 0}
+footer{margin-top:52px;font-size:.8rem;color:var(--muted);border-top:1px solid var(--line);padding-top:12px}
+</style>
+<main>
+<p class="eyebrow">Plan van aanpak · 22 oktober 2026 · concept voor besluit</p>
+<h1>Methode-straat: leerdoelgroepen koppelen aan paragrafen en opgaven</h1>
+<p class="lede">Een tweede straat die de uitvoer van de leerdoel-straat (succescriteria met vaste id's) koppelt aan de hoofdstukken en paragrafen van een methode, en daarna aan de deelvragen van de opgaven. Leerlingen zien per leerdoelgroep waar ze het leren en waar ze het oefenen; docenten zien gaten in de methode en stof buiten de syllabus.</p>
+
+<h2>1. Wat anders is dan bij de leerdoel-straat</h2>
+<p>Daar maakten we iets nieuws uit één bron. Hier leggen we een verband tussen twee bestaande dingen, en dat kan op twee manieren mis: een koppeling die er had moeten zijn ontbreekt (<em>recall</em>), of een koppeling is gelegd die niet klopt (<em>precision</em>). Daarom draait deze straat om drie dingen: <strong>bewijs</strong> (geen koppeling zonder citaat uit de paragraaf), <strong>eigenaarschap</strong> (per criterium precies één plek waar het geleerd wordt) en <strong>verificatie in twee richtingen</strong>.</p>
+
+<h2>2. De koppeling zelf</h2>
+<div class="ex">
+  <div class="eyebrow">Voorbeeld</div>
+  <p><strong>Criterium D1.16-01-c</strong> · <em>Ik kan TCK, TVK en TK berekenen uit gegevens of een kostenfunctie.</em></p>
+  <div class="tbl"><table>
+    <tr><th>Paragraaf</th><th>Gradatie</th><th>Bewijs (citaat)</th><th>Zekerheid</th></tr>
+    <tr><td>H2 §2.3 Kosten</td><td><span class="pill">leert</span></td><td>“De totale kosten zijn de som van de constante kosten en de variabele kosten: TK = TCK + TVK …”</td><td>hoog</td></tr>
+    <tr><td>H2 §2.5 Winst</td><td><span class="pill">oefent</span></td><td>“Bereken eerst de totale kosten bij een productie van 400 stuks …”</td><td>hoog</td></tr>
+    <tr><td>H4 §4.1 Marktvormen</td><td><span class="pill">herhaalt</span></td><td>“Zoals in hoofdstuk 2 besproken, …”</td><td>middel</td></tr>
+  </table></div>
+  <p class="q">Opgaven volgen daarna op deelvraagniveau: <strong>§2.3 opg. 7b</strong> → D1.16-01-c, Bloom: toepassen, zekerheid hoog, citaat uit de vraag.</p>
+</div>
+<div class="cols">
+  <div class="card"><h3>Gradaties (vier, vast)</h3><ul>
+    <li><strong>leert</strong> — de paragraaf introduceert en legt uit wat het criterium vraagt. Precies één per criterium.</li>
+    <li><strong>oefent</strong> — de paragraaf past het toe of laat het berekenen zonder het opnieuw uit te leggen.</li>
+    <li><strong>herhaalt</strong> — verwijst terug of gebruikt het als bekend.</li>
+    <li><strong>noemt</strong> — de term komt voor, maar het criterium wordt niet bediend. Wordt opgeslagen, niet aan leerlingen getoond.</li>
+  </ul></div>
+  <div class="card"><h3>Regels</h3><ul>
+    <li>Koppeling op <strong>succescriterium</strong>; het leerdoel erft de paragrafen van zijn criteria.</li>
+    <li>Geen citaat = geen koppeling. Het citaat is letterlijk en wordt deterministisch gecontroleerd.</li>
+    <li>Zekerheid komt uit twee bronnen: overeenstemming van twee onafhankelijke beoordelaars, en de sterkte van het citaat. Lage zekerheid gaat naar de steekproeflijst.</li>
+    <li>Alleen structuur (hoofdstuk, paragraaf, titel, paginanummer, opgavenummer) en citaten van hooguit twee zinnen worden bewaard; geen methode-tekst.</li>
+  </ul></div>
+</div>
+
+<h2>3. De straat (deel A: paragrafen)</h2>
+<div class="legend"><span class="a">AI-agent</span><span class="h">jij</span><span class="s">script</span></div>
+<div class="rail">
+  <div class="step"><div class="n">M1</div><h3>Inlezen methode</h3><p>Pdf (met foto's, dus OCR waar nodig) → hoofdstuk, paragraaf, kernbegrippen per paragraaf, opgavenummers met pagina. Tekst tijdelijk in de run, niet in de uitvoer.</p></div>
+  <div class="step human"><div class="n">M1b</div><h3>Intake</h3><p>Dezelfde pauze als nu: welke hoofdstukken horen bij welk leerjaar, hoe telt een “herhalingsparagraaf”, wat te doen met stof buiten de syllabus.</p></div>
+  <div class="step script"><div class="n">M2</div><h3>Kandidaten</h3><p>Per criterium de 3–6 meest waarschijnlijke paragrafen, via kernbegrippen (die zitten al in de leerdoelgroepen) en tekstgelijkenis. Goedkoop, reproduceerbaar.</p></div>
+  <div class="step"><div class="n">M3</div><h3>Beoordelen</h3><p>Per criterium × kandidaat: koppeling ja/nee, gradatie, citaat. Twee beoordelaars onafhankelijk; verschil = lage zekerheid.</p></div>
+  <div class="step"><div class="n">M4</div><h3>Eigenaar kiezen</h3><p>Per criterium precies één “leert”-paragraaf. Bij twijfel: intake-vraag, geen stille keuze.</p></div>
+  <div class="step"><div class="n">M5</div><h3>Verifiëren</h3><p>Precisie: steekproef koppelingen met citaat. Recall: per paragraaf “welk criterium hoort hier dat niet gekoppeld is?” Plus de twee gatenrapporten.</p></div>
+  <div class="step script"><div class="n">M6</div><h3>Exporteren</h3><p>CSV koppelingen, gatenrapport methode, rapport stof-buiten-syllabus, steekproeflijst.</p></div>
+</div>
+
+<h2>4. Deel B: opgaven</h2>
+<p>Bouwt op deel A en wordt daardoor veel kleiner. Een deelvraag in §2.3 hoort bij een criterium dat §2.3 (of een eerdere paragraaf) <em>leert</em> of <em>oefent</em>; dat snoeit de kandidaten tot een handvol. Per deelvraag: criterium (meestal één, soms twee), Bloom-niveau van wat de vraag doet, citaat uit de vraag, en — als de antwoordenpdf er is — controle van het citaat tegen het antwoord (een vraag die om een berekening vraagt en een getal als antwoord heeft, is toepassen, hoe de vraag ook geformuleerd is).</p>
+<div class="cols">
+  <div class="card"><h3>Wat het oplevert</h3><ul><li>Per criterium: waar leren, waar oefenen, hoeveel opgaven, op welk Bloom-niveau.</li><li>Per paragraaf: criteria zonder opgave (de methode oefent het niet) en opgaven zonder criterium (oefenstof buiten de syllabus).</li><li>Bloom-gat: criterium op toepassen met alleen onthouden-opgaven.</li></ul></div>
+  <div class="card"><h3>Hergebruik</h3><ul><li>Dezelfde koppeling (deelvraag → criterium, Bloom, citaat) is wat de toetsbank nodig heeft voor examenopgaven. Eén datamodel, twee bronnen.</li><li>De opgave-ingest voor LWEO (vragen in het boek, antwoorden apart) wordt de eerste adapter; losse werkboekjes zijn een tweede adapter op hetzelfde model.</li></ul></div>
+</div>
+
+<h2>5. Datamodel (voorstel voor Doelstellr)</h2>
+<div class="tbl"><table>
+  <tr><th>Tabel</th><th>Sleutel</th><th>Velden</th></tr>
+  <tr><td>methode</td><td>methode_id</td><td>vak, naam, uitgever, editie, niveau, leerjaar</td></tr>
+  <tr><td>methode_eenheid</td><td>eenheid_id</td><td>methode_id, soort (hoofdstuk/paragraaf), code, titel, pagina_van, pagina_tot, ouder_id</td></tr>
+  <tr><td>koppeling_paragraaf</td><td>criterium_id + eenheid_id</td><td>gradatie, citaat, zekerheid, bron_run, status (voorstel/bevestigd/afgewezen)</td></tr>
+  <tr><td>opgave</td><td>opgave_id</td><td>eenheid_id, nummer, deelvraag, pagina, heeft_antwoord</td></tr>
+  <tr><td>koppeling_opgave</td><td>criterium_id + opgave_id</td><td>bloom, citaat, zekerheid, bron_run, status</td></tr>
+</table></div>
+<p>Sleutel voor criteria is de id uit de leerdoel-straat (<code>D1.16-01-c</code>); Doelstellr's eigen id staat in een vertaaltabel die één keer gevuld wordt. Zo werken leerdoel-straat, methode-straat en toetsbank op dezelfde sleutel. Een <code>status</code>-veld laat de docent bevestigen of afwijzen zonder de straat opnieuw te draaien.</p>
+
+<h2>6. Hoe je weet dat het klopt</h2>
+<div class="cols">
+  <div class="card"><h3>Deterministisch</h3><ul><li>Elk citaat komt letterlijk voor in de paragraaf (of de vraag).</li><li>Precies één “leert” per criterium; geen criterium zonder “leert” tenzij gemarkeerd als gat.</li><li>Elke paragraaf heeft ≥ 1 koppeling of staat op de lijst stof-buiten-syllabus.</li><li>Schema's en id-consistentie, zoals nu.</li></ul></div>
+  <div class="card"><h3>Oordeel</h3><ul><li>Twee beoordelaars per koppeling in schone contexten; overeenstemming bepaalt de zekerheid.</li><li>Verifier doet de recall-test per paragraaf: zonder de bestaande koppelingen te zien, welke criteria horen hier? Verschil met de koppelingen = kandidaat-gemiste koppeling.</li><li>Jouw steekproef: 20 koppelingen, gestratificeerd (10 hoog, 10 laag zekerheid). Als “hoog” ≥ 95 % klopt en “laag” onder de 70 % zit, doet de zekerheidsscore wat hij moet doen.</li></ul></div>
+</div>
+
+<h2>7. Fasering en inschatting</h2>
+<div class="phase"><div class="n">0</div><div><h3>Nulmeting met de hand (1 avond, geen code)</h3><p>Jij koppelt 15 criteria uit twee hoofdstukken LWEO aan paragrafen, met gradatie. Dat is de gouden standaard waar de straat tegen gemeten wordt. Zonder dit weten we nooit of “90 % goed” iets betekent.</p></div></div>
+<div class="phase"><div class="n">1</div><div><h3>Deel A op twee hoofdstukken (3–4 dagen)</h3><p>Ingest LWEO (incl. OCR-pad), kandidaten, beoordeling, verificatie, export. Meten tegen de nulmeting; intake-vragen oogsten. Afsluiten als precisie ≥ 90 % en recall ≥ 85 % op de nulmeting.</p></div></div>
+<div class="phase"><div class="n">2</div><div><h3>Deel A op het hele boek + steekproef (1–2 dagen)</h3><p>Alle hoofdstukken, gatenrapporten, jouw gestratificeerde steekproef. Datamodel vastleggen voor Doelstellr.</p></div></div>
+<div class="phase"><div class="n">3</div><div><h3>Deel B opgaven op twee hoofdstukken (3 dagen)</h3><p>Opgave-ingest LWEO met antwoordenpdf, koppeling op deelvraag, Bloom per deelvraag, Bloom-gatrapport. Nulmeting: 30 deelvragen door jou gekoppeld.</p></div></div>
+<div class="phase"><div class="n">4</div><div><h3>Hele boek, tweede vak, tweede methode (daarna)</h3><p>Bedrijfseconomie met zijn methode als generaliseerbaarheidstest; adapter voor losse werkboekjes. Daarna pas de koppeling met Doelstellr bouwen, op het in fase 2 vastgelegde model.</p></div></div>
+<p>Inschatting is machinetijd plus mijn bouwtijd; jouw tijd zit in de nulmetingen (2 × een avond), de intake (10 min per run) en de steekproeven (30 min per run).</p>
+
+<h2>8. Risico's die ik nu al zie</h2>
+<div class="cols">
+  <div class="card"><h3>OCR op foto-pdf's</h3><p>Als de pdf's scans zijn, wordt tekst rommelig en breken citaten. Mitigatie: citaten controleren met tolerantie voor OCR-fouten, en pagina's met slechte OCR in de intake melden. Fase 0/1 laat zien hoe erg het is.</p></div>
+  <div class="card"><h3>Methode-indeling ≠ syllabus</h3><p>Een paragraaf die drie criteria half bedient, of één criterium verdeeld over drie paragrafen. De gradaties en het “één leert”-principe vangen dit op, maar verwacht hier de meeste intake-vragen.</p></div>
+  <div class="card"><h3>Auteursrecht</h3><p>We bewaren structuur en korte citaten; de brontekst blijft in de run-map en gaat niet mee de uitvoer in. Het juridische punt dat bij de toetsbank speelt, geldt hier minder, maar wil je een citaatlimiet (bijv. 25 woorden), zeg het.</p></div>
+</div>
+
+<div class="decide">
+<h3>Wat jij nu beslist</h3>
+<ol>
+  <li><strong>De vier gradaties</strong> (leert / oefent / herhaalt / noemt) en de regel “precies één leert per criterium” — akkoord?</li>
+  <li><strong>Twee onafhankelijke beoordelaars</strong> per koppeling (kost ~2× de generatie, levert de zekerheidsscore) — akkoord, of één beoordelaar plus verifier?</li>
+  <li><strong>Nulmeting eerst</strong>: 15 criteria × 2 hoofdstukken LWEO met de hand, voordat ik bouw — akkoord? En welke twee hoofdstukken?</li>
+  <li><strong>Sleutel</strong>: id's uit de leerdoel-straat als vaste sleutel, Doelstellr-id's in een vertaaltabel — akkoord?</li>
+  <li><strong>Plek</strong>: aparte repo <code>methode-straat</code> die de CSV van de leerdoel-straat als input neemt, of een tweede command in dezelfde repo? (Mijn voorkeur: zelfde repo, gedeelde scripts en vakprofielen; één `/koppel`-command naast `/generate`.)</li>
+  <li><strong>Citaatlimiet</strong> voor wat we opslaan: 25 woorden, of anders?</li>
+</ol>
+</div>
+
+<footer>Methode-straat · concept-plan · hoort bij github.com/binkyjagger-dev/leerdoel-straat</footer>
+</main>
