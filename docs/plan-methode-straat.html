@@ -64,10 +64,10 @@ footer{margin-top:52px;font-size:.8rem;color:var(--muted);border-top:1px solid v
 </div>
 <div class="cols">
   <div class="card"><h3>Gradaties (vier, vast)</h3><ul>
-    <li><strong>leert</strong> — de paragraaf introduceert en legt uit wat het criterium vraagt. Precies één per criterium.</li>
+    <li><strong>leert</strong> — de <em>eerste</em> paragraaf in boekvolgorde die uitlegt wat het criterium vraagt. Precies één per criterium.</li>
     <li><strong>oefent</strong> — de paragraaf past het toe of laat het berekenen zonder het opnieuw uit te leggen.</li>
-    <li><strong>herhaalt</strong> — verwijst terug of gebruikt het als bekend.</li>
-    <li><strong>noemt</strong> — de term komt voor, maar het criterium wordt niet bediend. Wordt opgeslagen, niet aan leerlingen getoond.</li>
+    <li><strong>herhaalt</strong> — een latere paragraaf die het opnieuw uitlegt, erop terugkomt of het als bekend gebruikt.</li>
+    <li><strong>noemt</strong> — de term komt voor (kader, vooruitwijzing) maar het criterium wordt niet uitgelegd of geoefend. Wordt opgeslagen, niet aan leerlingen getoond — en telt niet mee als “eerste keer”.</li>
   </ul></div>
   <div class="card"><h3>Regels</h3><ul>
     <li>Koppeling op <strong>succescriterium</strong>; het leerdoel erft de paragrafen van zijn criteria.</li>
@@ -83,8 +83,8 @@ footer{margin-top:52px;font-size:.8rem;color:var(--muted);border-top:1px solid v
   <div class="step"><div class="n">M1</div><h3>Inlezen methode</h3><p>Pdf (met foto's, dus OCR waar nodig) → hoofdstuk, paragraaf, kernbegrippen per paragraaf, opgavenummers met pagina. Tekst tijdelijk in de run, niet in de uitvoer.</p></div>
   <div class="step human"><div class="n">M1b</div><h3>Intake</h3><p>Dezelfde pauze als nu: welke hoofdstukken horen bij welk leerjaar, hoe telt een “herhalingsparagraaf”, wat te doen met stof buiten de syllabus.</p></div>
   <div class="step script"><div class="n">M2</div><h3>Kandidaten</h3><p>Per criterium de 3–6 meest waarschijnlijke paragrafen, via kernbegrippen (die zitten al in de leerdoelgroepen) en tekstgelijkenis. Goedkoop, reproduceerbaar.</p></div>
-  <div class="step"><div class="n">M3</div><h3>Beoordelen</h3><p>Per criterium × kandidaat: koppeling ja/nee, gradatie, citaat. Twee beoordelaars onafhankelijk; verschil = lage zekerheid.</p></div>
-  <div class="step"><div class="n">M4</div><h3>Eigenaar kiezen</h3><p>Per criterium precies één “leert”-paragraaf. Bij twijfel: intake-vraag, geen stille keuze.</p></div>
+  <div class="step"><div class="n">M3</div><h3>Beoordelen</h3><p>Per criterium × kandidaat: wordt het criterium hier <em>uitgelegd</em>, <em>geoefend</em> of alleen <em>genoemd</em>? Met citaat. Twee beoordelaars onafhankelijk; verschil = lage zekerheid.</p></div>
+  <div class="step script"><div class="n">M4</div><h3>Gradatie toekennen</h3><p>Script, op boekvolgorde: eerste paragraaf met een uitleg-citaat = <em>leert</em>; latere uitleg = <em>herhaalt</em>; oefening = <em>oefent</em>; vermelding = <em>noemt</em>. Geen oordeel meer nodig, dus reproduceerbaar.</p></div>
   <div class="step"><div class="n">M5</div><h3>Verifiëren</h3><p>Precisie: steekproef koppelingen met citaat. Recall: per paragraaf “welk criterium hoort hier dat niet gekoppeld is?” Plus de twee gatenrapporten.</p></div>
   <div class="step script"><div class="n">M6</div><h3>Exporteren</h3><p>CSV koppelingen, gatenrapport methode, rapport stof-buiten-syllabus, steekproeflijst.</p></div>
 </div>
@@ -131,12 +131,13 @@ footer{margin-top:52px;font-size:.8rem;color:var(--muted);border-top:1px solid v
 <div class="decide">
 <h3>Wat jij nu beslist</h3>
 <ol>
-  <li><strong>De vier gradaties</strong> (leert / oefent / herhaalt / noemt) en de regel “precies één leert per criterium” — akkoord?</li>
+  <li><strong>De vier gradaties</strong> en de regel “leert = eerste uitleg in boekvolgorde” (besproken 22 okt, akkoord). Nog te kiezen: als de methode een criterium in twee delen uitlegt (berekening in H2, interpretatie in H4) — eerste = leert en tweede = herhaalt “breidt uit” (voorstel), of beide leert met deelaanduiding?</li>
   <li><strong>Twee onafhankelijke beoordelaars</strong> per koppeling (kost ~2× de generatie, levert de zekerheidsscore) — akkoord, of één beoordelaar plus verifier?</li>
   <li><strong>Nulmeting eerst</strong>: 15 criteria × 2 hoofdstukken LWEO met de hand, voordat ik bouw — akkoord? En welke twee hoofdstukken?</li>
   <li><strong>Sleutel</strong>: id's uit de leerdoel-straat als vaste sleutel, Doelstellr-id's in een vertaaltabel — akkoord?</li>
   <li><strong>Plek</strong>: aparte repo <code>methode-straat</code> die de CSV van de leerdoel-straat als input neemt, of een tweede command in dezelfde repo? (Mijn voorkeur: zelfde repo, gedeelde scripts en vakprofielen; één `/koppel`-command naast `/generate`.)</li>
   <li><strong>Citaatlimiet</strong> voor wat we opslaan: 25 woorden, of anders?</li>
+  <li><strong>Boekvolgorde</strong> bij meerdere boekjes of leerjaren: vastleggen in het vakprofiel (4 VWO vóór 5 VWO, boekje 1 vóór 2) — akkoord?</li>
 </ol>
 </div>
 
