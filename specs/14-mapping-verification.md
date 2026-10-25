@@ -13,6 +13,7 @@
 | MG4 | the same quote (normalised) on criteria of two different groups | finding (J-M5) |
 | MC1 | confidence computed per 12 §4 from judges A/B and quote validity | fail |
 | MB1 | (part B) `bloom` in the subject's effective verb levels; answer-form rule applied when answer exists | fail |
+| MB2 | (part B) `bloom_verb` is the question's own asking verb (found in the question text, separable verbs included) | warn |
 
 ## 2. Judge rubric (what a mapping-judge must satisfy)
 
@@ -75,3 +76,24 @@ and `14_mappings.json`. Reports, on *leert* and *oefent* links:
 20 links, stratified: 10 `high`, 10 `low`/disputed; each with criterion text,
 paragraph code/title/page, quote, gradation, confidence and the judges' and
 verifier's views. Four columns to tick, like the spot check.
+
+## 6. Exercise mode (part B, `19_ex_verification.json`)
+
+Same agent, `mode: exercises`. Inputs: `17_ex_candidates.json`,
+`18_ex_mappings.json`, sub-question and answer texts, criteria, effective
+verb table, decisions.
+
+- **Precision** — every `low`/`medium` link plus a random 20 % of `high`
+  (seed = run id): is it the right criterion, does the quote show the ask,
+  is `bloom` right given verb and answer? `pass | dispute`, with
+  `criterion_should_be` (or `none`) and/or `bloom_should_be`.
+- **Recall** — every sub-question in *oefenstof buiten syllabus* and every
+  criterion in scope that is *niet geoefend*: is there a sub-question that
+  does practise it? ⇒ `missing_links` (unit, criterion, bloom, quote).
+- **Bloom gaps** — for *bloom niet bereikt*: is a linked question rated too
+  low? ⇒ dispute with `bloom_should_be`.
+
+`check_ex_mappings.py --verification` applies verdicts idempotently
+(confidence adjusts from the judged value, never twice). A dispute that the
+repair judge settled the verifier's way is recorded as `resolved`; so is a
+disputed link the repair judge removed.

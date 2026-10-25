@@ -4,7 +4,7 @@
 Usage: gradation.py <run_dir> [--judges A,B] [--repair 13_judgements.R]
 
 Reads 11_method_units.json (+text/), 10_criteria.json, 13_judgements.<J>/<unit>.json per judge.
-A repair judgement file set (judge "R") replaces the weaker of A/B for the pairs it contains.
+A repair judgement file set (judge "R") decides the pairs it contains: it replaces the judge(s) that disagree with it.
 Writes 13_judgements.json (merged), 14_mappings.json, 14_findings.json.
 """
 from __future__ import annotations
@@ -48,7 +48,7 @@ def main(argv: list[str]) -> None:
 
     J = {j: load_judge(run_dir, j) for j in judges}
     R = load_judge(run_dir, "R") if (run_dir / "13_judgements.R").exists() else {}
-    pairs = set().union(*(set(d) for d in J.values()))
+    pairs = set().union(*(set(d) for d in J.values())) | set(R)  # R may add a missing link
     texts = {}
 
     def text_of(uid):
@@ -70,11 +70,14 @@ def main(argv: list[str]) -> None:
             rep.warn("MS1", f"judgement on unknown pair {cid} x {uid}")
             continue
         js = {j: J[j].get((cid, uid), {"treatment": "none", "quote": None}) for j in judges}
+        overruled = False
         if (cid, uid) in R:
-            # repair replaces the weaker judgement
-            weakest = min(js, key=lambda j: STRENGTH[js[j]["treatment"]])
-            js[weakest] = R[(cid, uid)]
-            js[weakest]["_repaired"] = True
+            # repair decides the pair: it replaces every judge that disagrees with it
+            r = R[(cid, uid)]
+            against = [j for j in js if js[j]["treatment"] != r["treatment"]]
+            for j in against:
+                js[j] = dict(r, _repaired=True)
+            overruled = len(against) == len(js)
         tr = {j: js[j]["treatment"] for j in js}
         vq = {j: valid(js[j], uid) for j in js}
         strengths = sorted(((STRENGTH[tr[j]], j) for j in js), reverse=True)
@@ -85,7 +88,7 @@ def main(argv: list[str]) -> None:
         # confidence (specs/12 §4)
         tset = set(tr.values())
         if len(tset) == 1:
-            conf = "high" if all(v[0] for v in vq.values()) else "medium"
+            conf = "high" if all(v[0] for v in vq.values()) and not overruled else "medium"
         elif "none" in tset:
             conf = "low"
         elif tset == {"explains", "practises"}:
@@ -120,6 +123,9 @@ def main(argv: list[str]) -> None:
         by_crit[m["criterion_id"]].append(m)
     links, findings = [], []
     scope = set(load_json(run_dir / "12_candidates.json")["scope_paragraphs"]) if (run_dir / "12_candidates.json").exists() else set(units)
+    cand = load_json(run_dir / "12_candidates.json") if (run_dir / "12_candidates.json").exists() else None
+    in_scope = (cand.get("scope_criteria") or [c["criterion_id"] for c in cand["per_criterion"]]) if cand else list(crit)
+    in_scope_set = set(in_scope)
     for cid, ms in by_crit.items():
         ms.sort(key=lambda m: order[m["unit_id"]])
         first_explain = next((m for m in ms if m["treatment"] == "explains"), None)
@@ -143,11 +149,9 @@ def main(argv: list[str]) -> None:
                 note = (note + "; " if note else "") + f"tweede citaat: {m['second_quote']}"
             links.append({k: m[k] for k in ("criterion_id", "group_id", "unit_id", "treatment", "quote", "quote_page", "confidence", "judges")}
                          | {"gradation": grad, "verifier": None, "note": note, "status": "proposed"})
-        if first_explain is None:
+        if first_explain is None and cid in in_scope_set:
             findings.append({"criterion_id": cid, "unit_id": None, "finding": "alleen geoefend" if any(m["treatment"] == "practises" for m in ms) else "alleen genoemd"})
     # criteria in scope without any link
-    cand = load_json(run_dir / "12_candidates.json") if (run_dir / "12_candidates.json").exists() else None
-    in_scope = [c["criterion_id"] for c in cand["per_criterion"]] if cand else list(crit)
     for cid in in_scope:
         if cid not in by_crit:
             findings.append({"criterion_id": cid, "unit_id": None, "finding": "niet in deze methode"})

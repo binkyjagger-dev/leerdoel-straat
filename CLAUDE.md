@@ -28,8 +28,8 @@ subjects/<vak>/   profile.md (human) + decisions.json (straat, via decisions.py)
 docs/             HANDLEIDING.md (one-page tutorial, Dutch)
 .claude/agents/   ingest intake planner generator student-language verifier
 .claude/commands/ generate (/generate orchestrator) · koppel (/koppel orchestrator)
-.claude/agents/   method-ingest mapping-judge mapping-verifier   (methode-straat; intake is shared, mapping mode)
-scripts/mapping/  ocr_pdf validate_method candidates gradation check_mappings export_mappings compare_baseline
+.claude/agents/   method-ingest mapping-judge mapping-verifier exercise-judge   (methode-straat; intake is shared, mapping mode)
+scripts/mapping/  ocr_pdf validate_method candidates gradation check_mappings export_mappings compare_baseline · part B: ex_candidates ex_merge check_ex_mappings export_exercises
 subjects/<vak>/methodes/<methode-id>/profile.md   (human) — book order, structure, terms
 runs/<run_id>/    one folder per run (git-ignored except .gitkeep)
 tests/fixtures/   small synthetic run used to exercise the scripts
@@ -86,3 +86,11 @@ python3 tests/run_koppel_fixture.py                  # exercise all /koppel scri
 - Two judges (A, B) per paragraph in separate Agent calls; confidence from agreement + quote validity; verifier in fresh context does precision (sample), recall (per paragraph) and gradation checks; one repair round (judge R).
 - Method text lives only in `runs/<id>/text/` (git-ignored); PDFs under `input/` are not committed.
 - Criterion ids from /generate are the key everywhere; `10_criteria.json` is a copy of the source run's `04_groups_student.json`.
+
+## Lessons from koppel run 1 (LWEO Vraag en aanbod H1–H2, 2026-10-22/23)
+- The source run's `04_groups_student.json` was gone (only `output/*.csv` is kept); `10_criteria.json` was rebuilt from the export CSV (script in the run folder). Keep the generate run's JSON, or make the CSV rebuild a straat script.
+- A lesbrief covers a fraction of the syllabus: `scope_criteria` (decision economie-024) is needed, otherwise ~140 groups land in the gap report and every paragraph gets 250–500 candidates.
+- The repair judge must *decide* the pairs it re-judges (both parts). "Replace the weaker judge" let the explains/practises default overrule R in 3 of 5 part-A repairs; found only when part B's findings looked wrong.
+- Part B: judges substitute a verb for juist/onjuist and fill-in items (MB2 warns); the "antwoord is een berekening" raise must not fire when the verb gives a level, the number is given in the question, or R set the level.
+- Candidates for exercises only offer criteria taught in the own or earlier paragraphs; judges repeatedly found criteria taught *later* (oefent vóór uitleg). Consider adding later-taught criteria at low priority.
+- New agent types are not loadable in the session that creates them; run them as general-purpose agents that read the definition file.

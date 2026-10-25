@@ -1,0 +1,4 @@
+{"judge": "B", "paragraph_id": "H1.1", "items": [
+ {"unit_id": "H1.1-opg1.1a", "links": [
+  {"criterion_id": "D1.1-02-a", "bloom": "toepassen", "bloom_verb": "berekenen", "quote": "Bereken de evenwichtsprijs", "answer_checked": true, "reason": "berekening"},
+  {"criterion_id": "D1.1-01-a", "bloom": "onthouden", "bloom_verb": "benoemen", "quote": "Bereken de evenwichtsprijs", "answer_checked": false, "reason": "evenwicht als begrip"}], "note": null}]}

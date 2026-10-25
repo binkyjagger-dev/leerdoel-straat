@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ExerciseVerification",
+  "type": "object",
+  "required": ["mode", "links", "missing_links"],
+  "properties": {
+    "mode": {"const": "exercises"},
+    "sample": {"type": ["object", "string", "null"]},
+    "links": {"type": "array", "items": {"type": "object", "required": ["criterion_id", "unit_id", "verdict"],
+      "properties": {"criterion_id": {"type": "string"}, "unit_id": {"type": "string"},
+        "verdict": {"enum": ["pass", "dispute"]},
+        "criterion_should_be": {"type": ["string", "null"], "description": "another criterion id, or 'none'"},
+        "bloom_should_be": {"enum": ["onthouden", "begrijpen", "toepassen", "analyseren", "evalueren", "creëren", null]},
+        "confidence_adjust": {"enum": ["up", "down", null]}, "reason": {"type": ["string", "null"]}}}},
+    "missing_links": {"type": "array", "items": {"type": "object", "required": ["criterion_id", "unit_id", "bloom", "quote"],
+      "properties": {"criterion_id": {"type": "string"}, "unit_id": {"type": "string"},
+        "bloom": {"enum": ["onthouden", "begrijpen", "toepassen", "analyseren", "evalueren", "creëren"]},
+        "quote": {"type": "string"}, "reason": {"type": ["string", "null"]}}}},
+    "findings": {"type": "array"},
+    "proposed_decisions": {"type": "array"}
+  }
+}

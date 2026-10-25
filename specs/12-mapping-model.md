@@ -96,3 +96,47 @@ quote then does not discriminate.
   with a mechanism answer ⇒ *begrijpen*/*analyseren*).
 - A sub-question that matches no criterion is a finding (*oefenstof buiten
   syllabus*), not an error.
+
+### 6.1 Candidates (M7)
+Per sub-question: (a) criteria with a *leert/herhaalt/oefent* link (part A)
+on its own paragraph or any paragraph earlier in `order`; (b) criteria in
+`scope_criteria` without any such link (part-A gaps), so an exercise can
+practise what the text never explains. Ranked by term overlap between the
+question + answer text and the criterion (expert text + goal; idf over
+criteria), the sub-question's own ask and its answer counting three times the
+shared stem, with a bonus for (a) on the own paragraph. Top 8, at least 3
+when any score > 0. The list is a starting point: a judge may link another
+criterion when the quote carries it, and says why.
+
+### 6.2 Merge and confidence (M8b)
+Judges A and B each list, per sub-question, 0–2 criteria with `bloom`,
+`bloom_verb` (the infinitive of the asking verb), a quote from the
+question text and `answer_checked`. A repair judge R may add a link or reject
+one (`treatment: none`). R decides the pairs it re-judges: a rejection
+removes the link; a link replaces the judge that lacked it (else B).
+
+| A vs B on (sub-question, criterion) | confidence |
+|---|---|
+| both link, same `bloom`, both quotes valid | **high** |
+| both link, `bloom` differs or one quote invalid | medium |
+| one links | low |
+| both quotes invalid | voided |
+
+Bloom: equal ⇒ kept; differing ⇒ the level its `bloom_verb` has in the
+effective verb table, else the lower one (note "bloom A/B"). Then MB1: a
+verb whose table level differs from `bloom` ⇒ note and confidence at most
+medium. The answer form corrects the level only where the verb gives none
+(no asking verb, or a verb not in the table) and the link was not set by R:
+an answer that is a calculation result (number with `=`, `€` or `%` that
+does not already occur in the question — a given number read back is not a
+calculation) with `bloom` below *toepassen* ⇒ raised to *toepassen*, note
+"antwoord is een berekening".
+
+### 6.3 Findings
+- *oefenstof buiten syllabus* — sub-question without link;
+- *oefent vóór uitleg* — exercise links a criterion whose *leert* paragraph
+  comes later; *geoefend zonder uitleg* — criterion in scope without *leert*;
+- *bloom niet bereikt* — highest exercise `bloom` below the criterion's
+  `bloom` (criteria in scope); *niet geoefend* — no exercise link.
+A part-A gap (*niet in deze methode*, *alleen genoemd*) with exercise links
+is reported as *alleen geoefend* in the gap report.

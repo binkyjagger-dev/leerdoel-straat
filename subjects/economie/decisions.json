@@ -696,6 +696,482 @@
       "raised_by": "human",
       "supersedes": null,
       "scope": "methode-straat"
+    },
+    {
+      "id": "economie-024",
+      "question": "Welke criteria verwachten we in deze lesbrief (Vraag en aanbod, H1–H2), zodat alleen die als 'gat' tellen als ze niet uitgelegd worden?",
+      "context": "De criteriaset bevat alle 162 leerdoelgroepen (551 criteria) van het hele examenprogramma, maar deze lesbrief behandelt alleen vraag, aanbod, marktevenwicht en elasticiteiten. Inhoudelijk passen alleen D1.1–D1.15 en D1.22–D1.24 (20 groepen, 67 criteria). Kosten en winst (D1.16–D1.21, o.a. de aanbodlijn als MK-lijn), marktvormen (D2), surplus (D3) en de domeinen E–I staan volgens de lesbrievenvolgorde in het profiel in latere lesbrieven (Marktgedrag, Marktresultaat en overheidsinvloed, enz.). §1.1 noemt 'markt van volkomen concurrentie' maar behandelt de vier marktvormen van D2.1 niet. Zonder afbakening komen ruim 140 groepen in het gatenrapport als 'niet in deze methode' terwijl ze in een ander boekje horen.",
+      "options": [
+        "Alleen D1.1–D1.15 en D1.22–D1.24 zijn in scope; koppelingen naar andere criteria (bijv. D2.1 vanuit §1.1) worden wel bewaard, maar het ontbreken ervan telt niet als gat ('niet in dit boekje')",
+        "Heel domein D in scope (D1, D2, D3); de rest van het programma niet",
+        "Alle 162 groepen in scope; het gatenrapport toont alles wat deze lesbrief niet uitlegt"
+      ],
+      "proposed": "Optie 1: de nulmeting gaat over deze lesbrief, en een gatenrapport met D2/D3 en de macro-domeinen zou het echte beeld (wat mist er in vraag en aanbod) verdrinken. Kandidaten en beoordelaars blijven wel naar alle criteria kijken, zodat iets onverwachts (bijv. E1.6 indexcijfers) niet gemist wordt.",
+      "impact": "high",
+      "applies_to": [
+        "generator",
+        "verifier",
+        "exporter"
+      ],
+      "affects_units": [
+        "*"
+      ],
+      "status": "answered",
+      "answer": "Alleen D1.1–D1.15 en D1.22–D1.24 zijn in scope; koppelingen naar andere criteria (bijv. D2.1 vanuit §1.1) worden wel bewaard, maar het ontbreken ervan telt niet als gat ('niet in dit boekje')",
+      "answered_by": "user",
+      "answered_at": "2026-10-22T15:10:53Z",
+      "source_run": "20261022-1634-koppel-lweo-economie-vwo-vraag-en-aanbod-2023",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "lweo-economie-vwo-vraag-en-aanbod-2023"
+    },
+    {
+      "id": "economie-025",
+      "question": "De lesbrief gebruikt 'normale goederen' als verzamelnaam (Ey > 0) met daaronder primaire en luxe goederen, terwijl wij volgens economie-003 normaal = 0 < Ey < 1 hanteren: telt §2.3 dan toch als uitleg ('leert') voor D1.8?",
+      "context": "§2.3 schrijft: 'Normale goederen hebben een positieve inkomenselasticiteit … We onderscheiden hierbij primaire goederen en luxe goederen', en ook de leerdoelenlijst zegt 'normale goederen (luxe goederen en primaire goederen)'. Wat wij 'normaal goed' noemen (0 < Ey < 1), heet in de methode 'primair goed' (inkomensinelastisch). Raakt D1.8-01 (a–c, 3 criteria) en indirect D1.7-01 (interpretatie van Ey, 4 criteria). De keuze bepaalt of D1.8 een 'leert'-koppeling krijgt of als gat/afwijking in het rapport komt.",
+      "options": [
+        "Wel uitleg: 'primair goed' (methode) = 'normaal goed' (syllabus/economie-003) als woordenlijstregel; koppeling 'leert' met de opmerking dat de methode 'normaal' als verzamelnaam gebruikt",
+        "Wel uitleg, maar D1.8-01-a (indeling met grenswaarden) apart melden als 'methode wijkt af van definitie' in het gatenrapport",
+        "Geen uitleg voor D1.8-01-a, want de methode leert een andere indeling; b en c wel koppelen"
+      ],
+      "proposed": "Optie 2: inhoudelijk legt §2.3 de indeling op Ey wel uit (inferieur < 0, primair 0–1, luxe > 1), dus 'leert' is terecht; maar een leerling die de methode volgt noemt een primair goed geen 'normaal goed', en dat verschil wil je als docent in het rapport zien.",
+      "impact": "high",
+      "applies_to": [
+        "generator",
+        "verifier",
+        "exporter"
+      ],
+      "affects_units": [
+        "D1.8",
+        "D1.7"
+      ],
+      "status": "superseded",
+      "answer": "Wel uitleg: 'primair goed' (methode) = 'normaal goed' (syllabus/economie-003) als woordenlijstregel; koppeling 'leert' met de opmerking dat de methode 'normaal' als verzamelnaam gebruikt",
+      "answered_by": "user",
+      "answered_at": "2026-10-22T15:10:53Z",
+      "source_run": "20261022-1634-koppel-lweo-economie-vwo-vraag-en-aanbod-2023",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "lweo-economie-vwo-vraag-en-aanbod-2023"
+    },
+    {
+      "id": "economie-026",
+      "question": "Heffingen en subsidies (D1.13) worden in H1–H2 nergens uitgelegd maar komen wel voor in Transfer- en Zelftestopgaven; is dat een gat in deze lesbrief of hoort de uitleg in een latere lesbrief?",
+      "context": "Geen paragraaftekst noemt heffing, subsidie, accijns of btw. Ze komen wel voor in opgaven: kilometerheffing in Transfer 1.21 en 1.22 (§1.6), opdracht 1.32 (Zelftest §1.7) en accijns in 2.32 (Zelftest §2.5). D1.13-01 heeft 4 criteria (verschuiving aanbodlijn bij heffing/subsidie per stuk en als percentage, nieuwe aanbodfunctie). Waarschijnlijk staat de uitleg in lesbrief 4 (Marktresultaat en overheidsinvloed); dan is het hier 'oefent vóór uitleg'. Hetzelfde patroon kan bij een paar andere criteria optreden; dit is het duidelijkste voorbeeld.",
+      "options": [
+        "Niet in dit boekje: D1.13 uit de scope voor deze nulmeting; opgaven die heffingen gebruiken worden in deel B gemeld als 'oefent vóór uitleg'",
+        "Gat in deze lesbrief: D1.13 blijft in scope en komt in het gatenrapport als 'alleen geoefend'",
+        "Ik controleer zelf in welke lesbrief het staat en vul dat in het methodeprofiel in; tot die tijd als gat melden"
+      ],
+      "proposed": "Optie 2: zolang lesbrief 4 niet gekoppeld is, is 'alleen geoefend' precies wat je wilt zien. Leerlingen krijgen hier opgaven over heffingen zonder dat de lesbrief het uitlegt; dat is een bevinding over de methode, ook als de uitleg later komt.",
+      "impact": "medium",
+      "applies_to": [
+        "generator",
+        "verifier",
+        "exporter"
+      ],
+      "affects_units": [
+        "D1.13"
+      ],
+      "status": "answered",
+      "answer": "Gat in deze lesbrief: D1.13 blijft in scope en komt in het gatenrapport als 'alleen geoefend'",
+      "answered_by": "user",
+      "answered_at": "2026-10-22T15:10:53Z",
+      "source_run": "20261022-1634-koppel-lweo-economie-vwo-vraag-en-aanbod-2023",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "lweo-economie-vwo-vraag-en-aanbod-2023"
+    },
+    {
+      "id": "economie-027",
+      "question": "Hoe behandelen we in deel A (uitleg per paragraaf) de opgaven en de paragrafen Transfer en Zelftest, die vrijwel geen lopende tekst hebben?",
+      "context": "Bij het inlezen zijn alle opgaven uit de paragraaftekst gehaald (66 opgaven, 208 deelvragen; die worden in deel B apart gekoppeld). Daardoor hebben §1.6 Transfer (alleen figuurresten), §1.7 Zelftest, §2.4 Transfer en §2.5 Zelftest (alleen tabel 2.4/figuur 2.9) geen tekst om een koppeling op te baseren. Staan ze in deel A wel in scope, dan falen ze op de regel 'elke paragraaf heeft minstens één koppeling' of komen ze ten onrechte in het rapport 'buiten de syllabus'. Raakt 4 van de 12 paragrafen, en bij optie 2 alle 12 (opgaven in de paragraaf tellen dan als 'oefent').",
+      "options": [
+        "Deel A alleen op uitlegtekst; Transfer en Zelftest gaan uit de scope van deel A (gemeld als 'alleen opgaven, zie deel B'); opgaven tellen pas in deel B",
+        "Beoordelaars lezen in deel A ook de opgaven van de paragraaf; opgaven geven 'oefent', Transfer en Zelftest blijven in scope",
+        "Transfer en Zelftest blijven in scope van deel A zonder koppelingen en komen in het rapport als 'buiten de syllabus'"
+      ],
+      "proposed": "Optie 1: dat sluit aan op de opbouw van de straat (deel A = uitleg, deel B = opgaven) en op de nulmeting. Optie 2 zou elk criterium dat in een opgave voorkomt al in deel A 'oefent' geven, en dan wordt deel B dubbel geteld.",
+      "impact": "medium",
+      "applies_to": [
+        "generator",
+        "verifier",
+        "exporter"
+      ],
+      "affects_units": [
+        "H1.6",
+        "H1.7",
+        "H2.4",
+        "H2.5"
+      ],
+      "status": "answered",
+      "answer": "Deel A alleen op uitlegtekst; Transfer en Zelftest gaan uit de scope van deel A (gemeld als 'alleen opgaven, zie deel B'); opgaven tellen pas in deel B",
+      "answered_by": "user",
+      "answered_at": "2026-10-22T15:10:53Z",
+      "source_run": "20261022-1634-koppel-lweo-economie-vwo-vraag-en-aanbod-2023",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "lweo-economie-vwo-vraag-en-aanbod-2023"
+    },
+    {
+      "id": "economie-028",
+      "question": "Mogen de volgende methodetermen bij het koppelen als gelijk aan de syllabusterm tellen (woordenlijst voor deze methode)?",
+      "context": "Waar de methode een ander woord gebruikt dan het criterium, kan een uitleg gemist worden en onterecht als gat eindigen. Voorgestelde paren (methode → syllabus/criterium): omzet → totale opbrengst (TO); afzet → q; Qv/Qa/P → q/p; evenwichtsprijs (marktprijs) → evenwichtsprijs; aanbodoverschot (vraagtekort) / vraagoverschot (aanbodtekort) → overschot/tekort; marktmechanisme → markt als coördinatiemechanisme (D1.22); leveringsbereidheid / verkoopbereidheid → 'prijs waartegen een aanbieder bereid is aan te bieden'; kruislingse prijselasticiteit van de vraag → kruislingse elasticiteit (D1.9); voorkeuren van vragers → behoeften (D1.4b); verschuiving langs de lijn / van de lijn → beweging langs / verschuiving van de vraag- of aanbodlijn. Twijfelgeval: de methode vat alle kostenfactoren samen als 'productiekosten per stuk (de kostprijs)' en noemt prijzen van productiefactoren en technische ontwikkeling (D1.12) niet apart. Raakt ongeveer 10 groepen in D1.",
+      "options": [
+        "Alle paren overnemen, ook kostprijs → prijzen van productiefactoren en technische ontwikkeling (D1.12 telt dan als uitgelegd)",
+        "Alle paren overnemen, behalve het kostprijs-paar: D1.12 krijgt 'leert' alleen voor het aantal aanbieders en de verschuiving zelf; ontbrekende oorzaken worden als opmerking gemeld",
+        "Geen woordenlijst; beoordelaars beslissen per geval"
+      ],
+      "proposed": "Optie 2: de gewone paren zijn echte synoniemen. 'Kostprijs' legt wel het mechanisme uit (hogere kosten per stuk → minder aanbod), maar niet dat lonen, energieprijzen of techniek de oorzaak zijn. Dan is 'leert' met de opmerking 'oorzaken niet uitgewerkt' eerlijker dan het gat verbergen.",
+      "impact": "medium",
+      "applies_to": [
+        "generator",
+        "verifier"
+      ],
+      "affects_units": [
+        "D1.1",
+        "D1.4b",
+        "D1.9",
+        "D1.10",
+        "D1.11",
+        "D1.12",
+        "D1.14",
+        "D1.22",
+        "D1.23",
+        "D1.24"
+      ],
+      "status": "answered",
+      "answer": "Alle paren overnemen, ook kostprijs → prijzen van productiefactoren en technische ontwikkeling (D1.12 telt dan als uitgelegd)",
+      "answered_by": "user",
+      "answered_at": "2026-10-22T15:10:53Z",
+      "source_run": "20261022-1634-koppel-lweo-economie-vwo-vraag-en-aanbod-2023",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "lweo-economie-vwo-vraag-en-aanbod-2023"
+    },
+    {
+      "id": "economie-029",
+      "question": "De lesbrief is gescand en de figuren zijn bij het inlezen verloren gegaan: telt een uitleg die vooral in een figuur zit als 'uitleg' als de lopende tekst beschrijft wat de figuur laat zien?",
+      "context": "Grafische criteria hangen aan figuren waarvan alleen losse OCR-getallen over zijn: figuur 1.1–1.2 (collectieve vraaglijn met knik, D1.3/D1.4a), 1.3–1.4 (collectieve aanbodlijn, D1.11), 1.5 (evenwicht, D1.23), 1.6–1.8 (verschuivingen, D1.4b, D1.12, D1.24), 2.x (steilheid en elasticiteit, Ey-grafieken, D1.5–D1.8). De lopende tekst verwijst er vaak naar ('In figuur 1.8 is te zien dat … de vraaglijn verschuift naar rechts'). Criteria met 'tekent' (bijv. D1.3, D1.4b-c, D1.10-c, D1.12-c, D1.24-b) kunnen alleen via zo'n zin bewezen worden. Ongeveer 12 groepen. Er zijn geen pagina's die helemaal onleesbaar zijn; ook in de zelftestvragen ontbreken de figuren.",
+      "options": [
+        "Ja: als de tekst beschrijft wat de figuur laat zien, telt het als uitleg, met de opmerking 'uitleg via figuur, niet gecontroleerd op het paginabeeld'",
+        "Alleen als de tekst de werkwijze stap voor stap beschrijft; anders 'oefent' of 'noemt'",
+        "Ja, en de controleur bekijkt bij deze koppelingen steekproefsgewijs het paginabeeld"
+      ],
+      "proposed": "Optie 1: de tekst rond de figuren beschrijft in deze lesbrief meestal het mechanisme. Grafische criteria afwijzen omdat de scan de figuur kwijt is, zou kunstmatige gaten opleveren. Met de opmerking kun je ze bij de nulmeting gericht nakijken.",
+      "impact": "medium",
+      "applies_to": [
+        "generator",
+        "verifier"
+      ],
+      "affects_units": [
+        "D1.3",
+        "D1.4a",
+        "D1.4b",
+        "D1.5",
+        "D1.6",
+        "D1.7",
+        "D1.8",
+        "D1.10",
+        "D1.11",
+        "D1.12",
+        "D1.23",
+        "D1.24"
+      ],
+      "status": "answered",
+      "answer": "Ja: als de tekst beschrijft wat de figuur laat zien, telt het als uitleg, met de opmerking 'uitleg via figuur, niet gecontroleerd op het paginabeeld'",
+      "answered_by": "user",
+      "answered_at": "2026-10-22T15:10:53Z",
+      "source_run": "20261022-1634-koppel-lweo-economie-vwo-vraag-en-aanbod-2023",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "lweo-economie-vwo-vraag-en-aanbod-2023"
+    },
+    {
+      "id": "economie-030",
+      "question": "Hoe tellen kaders en de cartoonteksten in de marge, nu kaders in de scan niet meer van de lopende tekst te onderscheiden zijn?",
+      "context": "Het methodeprofiel laat open of kaders uitleg zijn. In de OCR-tekst zijn kadergrenzen en vet verdwenen; er staat geen 'kader' in de tekst. Wel staan er overal stukjes cartoontekst in hoofdletters tussen de alinea's (bijv. 'CETERIS PARIBUS VERONDERSTELD' in §1.5, cartoon bij §2.3). De standaard van de straat is 'een definitie in een kader is alleen een vermelding, tenzij de lopende tekst het uitlegt'. Raakt alle 8 uitlegparagrafen, vooral de citaten.",
+      "options": [
+        "Alle doorlopende zinnen gelden als lopende tekst; cartoon- en figuurresten (hoofdletterfragmenten, losse getallen) tellen nooit als bewijs, hoogstens als 'noemt'",
+        "Kaders tellen als uitleg, ook als de lopende tekst het niet herhaalt; cartoons tellen niet",
+        "Ik geef in het methodeprofiel per hoofdstuk aan welke kaders er zijn"
+      ],
+      "proposed": "Optie 1: kaders zijn in de scan niet terug te vinden, dus een kaderregel is niet uit te voeren. Cartoonfragmenten zijn OCR-ruis en zouden als citaat geen uitleg bewijzen.",
+      "impact": "low",
+      "applies_to": [
+        "generator",
+        "verifier"
+      ],
+      "affects_units": [
+        "H1.1",
+        "H1.2",
+        "H1.3",
+        "H1.4",
+        "H1.5",
+        "H2.1",
+        "H2.2",
+        "H2.3"
+      ],
+      "status": "answered",
+      "answer": "Alle doorlopende zinnen gelden als lopende tekst; cartoon- en figuurresten (hoofdletterfragmenten, losse getallen) tellen nooit als bewijs, hoogstens als 'noemt'",
+      "answered_by": "user",
+      "answered_at": "2026-10-22T15:10:53Z",
+      "source_run": "20261022-1634-koppel-lweo-economie-vwo-vraag-en-aanbod-2023",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "lweo-economie-vwo-vraag-en-aanbod-2023"
+    },
+    {
+      "id": "economie-031",
+      "question": "Klopt het dat Vraag en aanbod lesbrief nummer 2 is in jullie volgorde (na Levensloop), zodat we dat als boekvolgorde vastleggen?",
+      "context": "Het methodeprofiel noemt de volgorde 1. Levensloop, 2. Vraag en aanbod, 3. Marktgedrag, … maar 'Dit boekje is nummer' is nog leeg, en volume_order staat daarom op leeg. Voor deze run verandert het niets, want alle koppelingen liggen binnen één boekje. Zodra Levensloop of Marktgedrag gekoppeld wordt, bepaalt dit nummer welk boekje de eerste uitleg (leert) krijgt, bijvoorbeeld voor indexcijfers (E1.6, D1.14-d) of begrippen die Levensloop al uitlegt.",
+      "options": [
+        "Ja, nummer 2 (ik vul het ook in het methodeprofiel in)",
+        "Ander nummer (geef aan welk)",
+        "Nog niet vastleggen; alleen volgorde binnen dit boekje"
+      ],
+      "proposed": "Optie 1: dat volgt uit de lijst in het profiel. Vul het nummer zelf in het profiel in, want de straat schrijft daar niet in.",
+      "impact": "low",
+      "applies_to": [
+        "exporter"
+      ],
+      "affects_units": [
+        "*"
+      ],
+      "status": "answered",
+      "answer": "Ja, nummer 2 (ik vul het ook in het methodeprofiel in)",
+      "answered_by": "user",
+      "answered_at": "2026-10-22T15:10:53Z",
+      "source_run": "20261022-1634-koppel-lweo-economie-vwo-vraag-en-aanbod-2023",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "lweo-economie-vwo-vraag-en-aanbod-2023"
+    },
+    {
+      "id": "economie-032",
+      "question": "Tellen de hoofdstukinleidingen en de lijsten 'Leerdoelen – Kennen/Kunnen' aan het eind van elk hoofdstuk mee bij het koppelen?",
+      "context": "Ze horen bij geen paragraaf en zijn apart bewaard. De 'Kunnen'-lijsten lijken sterk op onze criteria (bijv. 'uit individuele vraagfuncties rekenkundig de collectieve vraagfunctie afleiden', 'het verband uitleggen tussen de steilheid van de vraaglijn en de hoogte van de prijselasticiteit'). Als koppelingen zouden ze alleen 'noemt' opleveren. Als controlelijst laten ze zien wat de methode zelf belooft: een 'Kunnen'-punt zonder uitleggende paragraaf is een bevinding.",
+      "options": [
+        "Niet koppelen; wel gebruiken als controlelijst voor de controleur (een 'Kunnen'-punt zonder koppeling wordt gemeld)",
+        "Niet koppelen en niet gebruiken",
+        "Koppelen als 'noemt' aan het hoofdstuk"
+      ],
+      "proposed": "Optie 1: de lijst is geen uitleg, maar wel een goede extra controle of de controleur iets mist.",
+      "impact": "low",
+      "applies_to": [
+        "verifier"
+      ],
+      "affects_units": [
+        "H1",
+        "H2"
+      ],
+      "status": "answered",
+      "answer": "Niet koppelen; wel gebruiken als controlelijst voor de controleur (een 'Kunnen'-punt zonder koppeling wordt gemeld)",
+      "answered_by": "user",
+      "answered_at": "2026-10-22T15:10:53Z",
+      "source_run": "20261022-1634-koppel-lweo-economie-vwo-vraag-en-aanbod-2023",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "lweo-economie-vwo-vraag-en-aanbod-2023"
+    },
+    {
+      "id": "economie-033",
+      "question": "De lesbrief gebruikt 'normale goederen' als verzamelnaam (Ey > 0) met daaronder primaire en luxe goederen, terwijl wij volgens economie-003 normaal = 0 < Ey < 1 hanteren: telt §2.3 dan toch als uitleg ('leert') voor D1.8?",
+      "context": "§2.3 schrijft: 'Normale goederen hebben een positieve inkomenselasticiteit … We onderscheiden hierbij primaire goederen en luxe goederen', en ook de leerdoelenlijst zegt 'normale goederen (luxe goederen en primaire goederen)'. Wat wij 'normaal goed' noemen (0 < Ey < 1), heet in de methode 'primair goed' (inkomensinelastisch). Raakt D1.8-01 (a–c, 3 criteria) en indirect D1.7-01 (interpretatie van Ey, 4 criteria). De keuze bepaalt of D1.8 een 'leert'-koppeling krijgt of als gat/afwijking in het rapport komt.",
+      "options": [
+        "Wel uitleg: 'primair goed' (methode) = 'normaal goed' (syllabus/economie-003) als woordenlijstregel; koppeling 'leert' met de opmerking dat de methode 'normaal' als verzamelnaam gebruikt",
+        "Wel uitleg, maar D1.8-01-a (indeling met grenswaarden) apart melden als 'methode wijkt af van definitie' in het gatenrapport",
+        "Geen uitleg voor D1.8-01-a, want de methode leert een andere indeling; b en c wel koppelen"
+      ],
+      "proposed": "Optie 2: inhoudelijk legt §2.3 de indeling op Ey wel uit (inferieur < 0, primair 0–1, luxe > 1), dus 'leert' is terecht; maar een leerling die de methode volgt noemt een primair goed geen 'normaal goed', en dat verschil wil je als docent in het rapport zien.",
+      "impact": "high",
+      "applies_to": [
+        "generator",
+        "verifier",
+        "exporter"
+      ],
+      "affects_units": [
+        "D1.8",
+        "D1.7"
+      ],
+      "status": "answered",
+      "answer": "Wel uitleg, maar D1.8-01-a (indeling met grenswaarden) apart melden als 'methode wijkt af van definitie' in het gatenrapport",
+      "answered_by": "user",
+      "answered_at": "2026-10-22T15:11:03Z",
+      "source_run": "20261022-1634-koppel-lweo-economie-vwo-vraag-en-aanbod-2023",
+      "raised_by": "intake",
+      "supersedes": "economie-025",
+      "scope": "lweo-economie-vwo-vraag-en-aanbod-2023"
+    },
+    {
+      "id": "economie-034",
+      "question": "Telt een paragraaf die een begrip invoert en in dezelfde passage het gevolg in het voorbeeld laat zien (definitie + één zin gevolg, of tekst die een figuur beschrijft) als uitleg ('leert') voor het bijbehorende begrijpen- of toepassen-criterium?",
+      "context": "Beide beoordelaars gaven in vier gevallen 'noemt' of 'oefent' waar de controleur 'leert' ziet: D1.1-01-b (H1.2: betalingsbereidheid, daarna 'bij € 120 ... vraag gedaald tot nul'), D1.10-01-b (H1.3: aanbodfunctie + tabel aflezen; dezelfde opbouw als D1.2-01-b in H1.2, die wel 'leert' kreeg), D1.23-01-c (H1.4: evenwicht bij € 70 afgelezen uit figuur 1.5) en D1.4a-01-a (H1.4: 'Consumenten die de spijkerbroeken eerst te duur vonden, willen nu wel ... kopen'). De keuze bepaalt of deze vier criteria in het gatenrapport staan als 'alleen genoemd' of 'alleen geoefend'.",
+      "options": [
+        "Ja: definitie + direct gevolg in het voorbeeld telt als uitleg (leert), met aspect 'deels' als het criterium meer vraagt",
+        "Alleen als de tekst de regel algemeen formuleert (niet alleen voor het voorbeeld); anders 'oefent' of 'noemt'",
+        "Nee: uitleg vereist een expliciete redenering (want/omdat/doordat) over het criterium zelf"
+      ],
+      "proposed": "Optie 1: het boek legt deze stof juist zo uit (begrip + voorbeeld), en een leerling leert het hier. Als 'gat' melden zou een leemte suggereren die er niet is. 'deels' houdt zichtbaar wat ontbreekt.",
+      "impact": "medium",
+      "applies_to": [
+        "generator",
+        "verifier"
+      ],
+      "affects_units": [
+        "D1.1",
+        "D1.4a",
+        "D1.10",
+        "D1.23"
+      ],
+      "status": "open",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null,
+      "source_run": "20261022-1634-koppel-lweo-economie-vwo-vraag-en-aanbod-2023",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "lweo-economie-vwo-vraag-en-aanbod-2023"
+    },
+    {
+      "id": "economie-035",
+      "question": "Opgave 2.20b-g (Transfer §2.4) oefent de prijselasticiteit van het aanbod (Ea): formule, teken, berekening, elastisch/inelastisch en korte vs lange termijn. Geen enkel criterium dekt Ea. Hoe behandelen we deze opgaven?",
+      "context": "6 deelvragen staan nu als 'oefenstof buiten syllabus'. De syllabus (D1.5-D1.9) noemt alleen de prijs-, inkomens- en kruislingse elasticiteit van de vraag.",
+      "options": [
+        "Buiten syllabus laten (verrijking); zo melden in het rapport",
+        "Koppelen aan D1.5/D1.6 als 'analoog' met opmerking 'aanbodzijde'",
+        "Nieuw criterium voorstellen via /generate"
+      ],
+      "proposed": "Optie 1: geen eindterm vraagt Ea. Analoog koppelen zou de dekking van D1.5/D1.6 te hoog laten lijken.",
+      "impact": "low",
+      "applies_to": [
+        "verifier",
+        "exporter"
+      ],
+      "affects_units": [
+        "D1.5",
+        "D1.6"
+      ],
+      "status": "open",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null,
+      "source_run": "20261022-1634-koppel-lweo-economie-vwo-vraag-en-aanbod-2023",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "lweo-economie-vwo-vraag-en-aanbod-2023"
+    },
+    {
+      "id": "economie-036",
+      "question": "Tellen opgaven over de oorzaken van een hoge of lage prijselasticiteit (substituten, noodzakelijkheid, termijn) als oefening van D1.6-01-b?",
+      "context": "Het boek ('Kunnen', H2) vraagt dit expliciet; geen criterium noemt het. Nu gekoppeld aan D1.6-01-b als het antwoord redeneert via een relatief sterkere of zwakkere reactie (2.9a/b, 2.10, 2.12a-d, 2.21c). Buiten syllabus waar alleen de oorzaak gevraagd wordt (2.22.5, 2.30a, 2.33c).",
+      "options": [
+        "Zo laten: koppelen alleen bij een redenering via de relatieve reactie, anders buiten syllabus",
+        "Altijd koppelen aan D1.6-01-b",
+        "Nooit koppelen: determinanten zijn buiten syllabus"
+      ],
+      "proposed": "Optie 1: D1.6-01-b vraagt uitleg van 'relatief sterker/minder sterk'. Een antwoord dat alleen een oorzaak noemt, oefent dat niet.",
+      "impact": "medium",
+      "applies_to": [
+        "mapping-judge",
+        "verifier"
+      ],
+      "affects_units": [
+        "D1.6"
+      ],
+      "status": "open",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null,
+      "source_run": "20261022-1634-koppel-lweo-economie-vwo-vraag-en-aanbod-2023",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "lweo-economie-vwo-vraag-en-aanbod-2023"
+    },
+    {
+      "id": "economie-037",
+      "question": "Het drempelinkomen (aflezen, berekenen, statement) komt terug in 2.17d, 2.18c, 2.19a en 2.22.8 en staat in de boeklijst 'Kennen' van H2. Geen criterium noemt het. Buiten syllabus laten of koppelen aan D1.8-01-b (luxe goed herkennen)?",
+      "context": "4 deelvragen staan nu als 'oefenstof buiten syllabus'. D1.8 deelt in op Ey en de reactie op inkomen, niet op een drempelinkomen.",
+      "options": [
+        "Buiten syllabus laten",
+        "Koppelen aan D1.8-01-b als het antwoord het goed als luxe herkent",
+        "Nieuw criterium voorstellen via /generate"
+      ],
+      "proposed": "Optie 1: berekenen of aflezen van het drempelinkomen is geen indelen van een goed. Een vraag die wel indeelt (2.18b) is al gekoppeld.",
+      "impact": "low",
+      "applies_to": [
+        "verifier",
+        "exporter"
+      ],
+      "affects_units": [
+        "D1.8"
+      ],
+      "status": "open",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null,
+      "source_run": "20261022-1634-koppel-lweo-economie-vwo-vraag-en-aanbod-2023",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "lweo-economie-vwo-vraag-en-aanbod-2023"
+    },
+    {
+      "id": "economie-038",
+      "question": "Mogen opgaven met een collectieve (markt)vraag- of aanbodfunctie meetellen als oefening van de criteria voor de individuele lijn (D1.2-01-b/c, D1.10-01-b/c: aflezen, invullen, tekenen)?",
+      "context": "14 links doen dit nu (bijv. 1.12a, 1.22b, 2.6b, 1.19a). De vaardigheid is gelijk. D1.3-01-b en D1.11-01-b gaan over optellen van individuele lijnen, niet over werken met een gegeven collectieve functie.",
+      "options": [
+        "Ja, meetellen (huidige verificatie)",
+        "Nee: alleen opgaven met één vrager of aanbieder",
+        "Ja, maar in de export markeren als 'collectief'"
+      ],
+      "proposed": "Optie 1: de syllabus kent geen apart criterium voor werken met een gegeven collectieve functie, en de leerling oefent dezelfde handeling.",
+      "impact": "medium",
+      "applies_to": [
+        "mapping-judge",
+        "verifier",
+        "exporter"
+      ],
+      "affects_units": [
+        "D1.2",
+        "D1.10"
+      ],
+      "status": "open",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null,
+      "source_run": "20261022-1634-koppel-lweo-economie-vwo-vraag-en-aanbod-2023",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "lweo-economie-vwo-vraag-en-aanbod-2023"
+    },
+    {
+      "id": "economie-039",
+      "question": "Waar horen opgaven die de maximale betalingsbereidheid of minimale leveringsbereidheid laten aflezen of berekenen als snijpunt met de prijsas (Qv = 0 / Qa = 0)?",
+      "context": "De beoordelaars gebruikten D1.1-01-a (omschrijven), D1.10-01-a (uitleg stijgende lijn), D1.2-01-b/D1.10-01-b of niets (1.4b, 1.10, 1.12c, 1.12d, 1.19a, 1.31b, 1.33b). De verificatie zet alles op D1.2-01-b (vraag) of D1.10-01-b (aanbod).",
+      "options": [
+        "D1.2-01-b / D1.10-01-b (aflezen/invullen in de lijn of functie)",
+        "D1.1-01-a (betalingsbereidheid) en D1.10-01-a",
+        "Buiten syllabus"
+      ],
+      "proposed": "Optie 1: de handeling is aflezen of oplossen bij Qv = 0 / Qa = 0 in de lijn of functie. Het begrip omschrijven of het verloop uitleggen vraagt de opgave niet.",
+      "impact": "low",
+      "applies_to": [
+        "mapping-judge",
+        "verifier"
+      ],
+      "affects_units": [
+        "D1.1",
+        "D1.2",
+        "D1.10"
+      ],
+      "status": "open",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null,
+      "source_run": "20261022-1634-koppel-lweo-economie-vwo-vraag-en-aanbod-2023",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "lweo-economie-vwo-vraag-en-aanbod-2023"
     }
   ]
 }

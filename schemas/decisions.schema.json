@@ -67,7 +67,11 @@
                 "generator",
                 "student-language",
                 "verifier",
-                "exporter"
+                "exporter",
+                "method-ingest",
+                "mapping-judge",
+                "exercise-judge",
+                "mapping-verifier"
               ]
             }
           },

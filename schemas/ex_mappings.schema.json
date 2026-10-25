@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ExerciseMappings",
+  "type": "object",
+  "required": ["links", "findings"],
+  "properties": {
+    "links": {"type": "array", "items": {"type": "object",
+      "required": ["criterion_id", "group_id", "unit_id", "paragraph_id", "bloom", "quote", "answer_checked", "confidence", "confidence_judged", "judges", "status"],
+      "properties": {"criterion_id": {"type": "string"}, "group_id": {"type": "string"}, "unit_id": {"type": "string"},
+        "paragraph_id": {"type": "string"},
+        "bloom": {"enum": ["onthouden", "begrijpen", "toepassen", "analyseren", "evalueren", "creëren"]},
+        "bloom_verb": {"type": ["string", "null"]}, "quote": {"type": "string"}, "answer_checked": {"type": "boolean"},
+        "confidence": {"enum": ["high", "medium", "low"]}, "confidence_judged": {"enum": ["high", "medium", "low"]},
+        "judges": {"type": "object"}, "verifier": {"type": ["string", "null"]}, "note": {"type": ["string", "null"]},
+        "status": {"enum": ["proposed", "confirmed", "rejected"]}}}},
+    "voided": {"type": "array"},
+    "findings": {"type": "array", "items": {"type": "object", "required": ["finding"],
+      "properties": {"criterion_id": {"type": ["string", "null"]}, "unit_id": {"type": ["string", "null"]}, "finding": {"type": "string"}}}}
+  }
+}

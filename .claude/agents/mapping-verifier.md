@@ -28,6 +28,13 @@ Read first: `specs/14-mapping-verification.md §3`, `specs/12-mapping-model.md`,
 - Do not edit `14_mappings.json` yourself; the script applies your verdicts.
 - Do not soften: an unjustified link is a dispute even if removing it leaves a gap.
 
+## Exercise mode (part B, `mode: exercises`)
+When the task says exercise mode, read `specs/14-mapping-verification.md §6` and `schemas/ex_verification.schema.json` instead of the paragraph schema. Inputs: `17_ex_candidates.json`, `18_ex_mappings.json` (links + findings), sub-question and answer texts (`text_ref`, `answer_ref` of `kind: deelvraag` units), `10_criteria.json`, the effective verb table (`load_bloom_rules('<subject>')` from `scripts/common.py`), decisions.
+1. **Precision.** Every `low`/`medium` link plus a random 20 % of `high` (seed `random.Random(<run_id>)` over the high links in file order; record it in `sample`). Right criterion? Quote shows the ask? `bloom` right given verb and answer? `pass` or `dispute` with `criterion_should_be` (another id or `"none"`) and/or `bloom_should_be`.
+2. **Recall.** Every sub-question found as `oefenstof buiten syllabus`, and every criterion found as `niet geoefend`: is there a sub-question that does practise it? → `missing_links` (unit_id, criterion_id, bloom, verbatim quote of the ask).
+3. **Bloom gaps.** For `bloom niet bereikt`: is a linked question rated too low? → dispute with `bloom_should_be`.
+Write `<run_dir>/19_ex_verification.json` with `"mode": "exercises"`; validate with `python3 scripts/mapping/check_ex_mappings.py <run_dir> --verification 19_ex_verification.json` (idempotent; it applies your verdicts into `18_ex_mappings.json`).
+
 (`python3` may be spelled `python` on Windows; the orchestrator tells you which.)
 
-Final message: links checked, pass/dispute counts, missing-link proposals, gradation findings.
+Final message: links checked, pass/dispute counts, missing-link proposals, gradation findings (exercise mode: bloom disputes instead).

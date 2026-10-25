@@ -1,0 +1,4 @@
+{"mode": "exercises", "sample": "all links (fixture)", "links": [
+ {"criterion_id": "D1.1-02-a", "unit_id": "H1.1-opg1.1a", "verdict": "pass", "reason": "rekent het evenwicht uit"},
+ {"criterion_id": "D1.1-01-a", "unit_id": "H1.1-opg1.1a", "verdict": "dispute", "criterion_should_be": "none", "confidence_adjust": "down", "reason": "vraagt niets te benoemen"}],
+ "missing_links": [], "findings": []}

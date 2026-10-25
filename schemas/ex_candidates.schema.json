@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ExerciseCandidates",
+  "type": "object",
+  "required": ["scope_paragraphs", "per_subquestion"],
+  "properties": {
+    "scope_paragraphs": {"type": "array", "items": {"type": "string"}},
+    "per_subquestion": {"type": "array", "items": {"type": "object", "required": ["unit_id", "paragraph_id", "candidates"],
+      "properties": {"unit_id": {"type": "string"}, "paragraph_id": {"type": "string"},
+        "candidates": {"type": "array", "items": {"type": "object", "required": ["criterion_id", "score", "source"],
+          "properties": {"criterion_id": {"type": "string"}, "score": {"type": "number"},
+            "source": {"enum": ["own", "earlier", "gap"]}, "taught_in": {"type": ["string", "null"]}}}}}}}
+  }
+}

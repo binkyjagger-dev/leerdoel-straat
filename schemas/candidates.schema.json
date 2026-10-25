@@ -5,6 +5,7 @@
   "required": ["per_criterion", "per_paragraph"],
   "properties": {
     "scope_paragraphs": {"type": "array", "items": {"type": "string"}},
+    "scope_criteria": {"type": "array", "items": {"type": "string"}, "description": "criterion ids that can be a gap (specs/13 §1); absent = all"},
     "per_criterion": {
       "type": "array",
       "items": {"type": "object", "required": ["criterion_id", "candidates"],

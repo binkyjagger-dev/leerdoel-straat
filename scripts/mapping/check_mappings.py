@@ -33,7 +33,8 @@ def main(argv: list[str]) -> None:
     links = data["links"]
     findings = {(f.get("criterion_id"), f.get("unit_id"), f["finding"]) for f in data.get("findings", [])}
     scope = set(load_json(run_dir / "12_candidates.json")["scope_paragraphs"])
-    cand_crit = {c["criterion_id"] for c in load_json(run_dir / "12_candidates.json")["per_criterion"]}
+    cand = load_json(run_dir / "12_candidates.json")
+    cand_crit = set(cand.get("scope_criteria") or [c["criterion_id"] for c in cand["per_criterion"]])
 
     # MQ1
     for l in links:
@@ -73,12 +74,13 @@ def main(argv: list[str]) -> None:
         vq = {j: v["quote_valid"] for j, v in l["judges"].items()}
         tset = set(tr.values())
         if len(tset) == 1:
-            exp = "high" if all(vq.values()) else "medium"
+            overruled = all(v.get("repaired") for v in l["judges"].values())
+            exp = "high" if all(vq.values()) and not overruled else "medium"
         elif "none" in tset or "mentions" in tset:
             exp = "low"
         else:
             exp = "medium"
-        if l["confidence"] != exp and not l.get("verifier"):
+        if l.get("confidence_judged", l["confidence"]) != exp and not l.get("verifier"):
             rep.fail("MC1", f"{l['criterion_id']} x {l['unit_id']}: confidence {l['confidence']} != computed {exp}")
 
     # verification application
@@ -88,13 +90,21 @@ def main(argv: list[str]) -> None:
         for e in validate_schema(ver, "mapping_verification.schema.json"):
             rep.fail("MS1", f"verification: {e}")
         idx = {(l["criterion_id"], l["unit_id"]): l for l in links}
+        # idempotent: start from the judged confidence every time
+        for l in links:
+            l.setdefault("confidence_judged", l["confidence"])
+            l["confidence"], l["verifier"] = l["confidence_judged"], None
         applied = 0
         for v in ver["links"]:
             l = idx.get((v["criterion_id"], v["unit_id"]))
             if not l:
                 rep.warn("MS1", f"verification verdict on unknown link {v['criterion_id']} x {v['unit_id']}")
                 continue
-            l["verifier"] = v["verdict"] + (f": {v['reason']}" if v.get("reason") else "")
+            verdict = v["verdict"]
+            repaired = any(j.get("repaired") for j in l["judges"].values())
+            if verdict == "dispute" and repaired and v.get("treatment_should_be") == l["treatment"]:
+                verdict = "resolved"  # the repair judge settled it the verifier's way
+            l["verifier"] = verdict + (f": {v['reason']}" if v.get("reason") else "")
             adj = v.get("confidence_adjust")
             if adj:
                 i = CONF.index(l["confidence"])

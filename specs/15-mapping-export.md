@@ -40,7 +40,12 @@ No text column.
 ## 3. `output/koppelingen_opgaven.csv` (part B; one row per sub-question × criterion)
 
 criterium_id, eenheid_id (deelvraag), opgave_code, deelvraag_code, paragraaf_id,
-pagina, bloom, citaat, antwoord_gecontroleerd, zekerheid, opmerking, status.
+pagina, bloom, citaat, antwoord_gecontroleerd, zekerheid, opmerking, status;
+plus run_id, methode_id, criterium_leerling, criterium_bloom,
+beoordelaar_a, beoordelaar_b, verifier.
+
+Part B also writes `steekproef_opgaven.md` (20 exercise links, 10 `high`,
+10 `low`/`medium`/disputed; columns: terecht?, bloom juist?, citaat?).
 
 ## 4. Reports
 
@@ -50,7 +55,10 @@ pagina, bloom, citaat, antwoord_gecontroleerd, zekerheid, opmerking, status.
 - `buiten_syllabus.md` — paragraphs (and in part B: sub-questions) without a
   link, with title, page and the method's own concepts for that paragraph.
 - `bloom_gaten.md` (part B) — criteria whose exercises never reach the
-  criterion's Bloom level.
+  criterion's Bloom level; criteria in scope never practised; exercises
+  outside the syllabus; *oefent vóór uitleg*.
+- `gaten_methode.md` also lists the verifier's gradation findings and, when
+  part B ran, moves gaps with exercise links to *alleen geoefend (opgaven)*.
 - `steekproef.md` — 14 §5.
 - `vergelijking_nulmeting.md` — 14 §4, when a baseline file is given.
 - `dekking_methode.md` — per paragraph: linked criteria by gradation; per

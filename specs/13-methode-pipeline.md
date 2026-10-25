@@ -9,6 +9,15 @@
   into the koppel run as `10_criteria.json` so the run is self-contained.
 - `--chapters` limits scope (baseline runs: `1,2`). Criteria outside scope are
   not a gap.
+- `scope_criteria` in `run.json` (optional, set by the orchestrator from an
+  intake decision): the criterion `unit_id`s this method part is expected to
+  teach. Candidates and judges still consider every criterion and links to
+  other criteria are kept, but only criteria of these units can be a gap
+  (`niet in deze methode`, `alleen geoefend`, `alleen genoemd`) and MG1 only
+  checks them. Absent = all criteria. `12_candidates.json` carries the
+  resolved criterion ids as `scope_criteria`; `per_criterion` lists only
+  those, so criteria outside it reach a judge only through a paragraph's own
+  top list (`per_paragraph`).
 - `--part A` (default) stops after M6; `AB` continues with exercises.
 
 Run folder: `runs/<run_id>/` with `run.json`, `text/` (git-ignored), numbered
@@ -65,7 +74,8 @@ uitleg, duplicates across groups).
 See 14. Outputs per link `pass | dispute` with reason, per paragraph the
 recall findings, and confidence adjustments. Disputed links go once to a
 repair judge (fresh context, sees both judgements + the dispute); the result
-replaces the weaker judgement and M4 reruns. What is still disputed goes to
+replaces the judgement(s) that disagree with it — R decides the pair; when
+R disagrees with both, confidence is at most medium — and M4 reruns. What is still disputed goes to
 the sample list.
 
 ### M6 export
@@ -89,3 +99,14 @@ gradation, confidence split, gaps, outside-syllabus, sample size, paths).
 Bloom reconciliation: judge's `bloom` is checked against the subject's
 effective verb table (`verb_table.py effective`) and, when an answer exists,
 against the answer form (12 §6). Disagreement ⇒ medium confidence and a note.
+
+Part B scope: every paragraph of the chapters in scope, including those taken
+out of part A (Transfer/Zelftest: their exercises are the point). Scripts:
+`ex_candidates.py` (M7), `ex_merge.py` (M8b), `check_ex_mappings.py`
+(MQ2, MB1, MC1, verdicts), `export_exercises.py` (M9 export);
+`export_mappings.py` is rerun so the gap report sees exercise links.
+Judges: agent `exercise-judge`, letters A/B per paragraph, R for repair
+(one round: disputed links and `missing_links` of `19_ex_verification.json`).
+Files: `17_ex_candidates.json`, `18_ex_judgements.<J>/<paragraph>.json`,
+`18_ex_mappings.json`, `19_ex_verification.json`; `.round1` copies before
+the repair rerun.

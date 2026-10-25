@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ExerciseJudgements",
+  "type": "object",
+  "required": ["judge", "paragraph_id", "items"],
+  "properties": {
+    "judge": {"enum": ["A", "B", "R"]},
+    "paragraph_id": {"type": "string"},
+    "items": {"type": "array", "items": {"type": "object", "required": ["unit_id", "links"],
+      "properties": {"unit_id": {"type": "string"},
+        "links": {"type": "array", "maxItems": 3, "items": {"type": "object", "required": ["criterion_id"],
+          "properties": {"criterion_id": {"type": "string"},
+            "treatment": {"enum": ["practises", "none"], "description": "R only: none rejects the link"},
+            "bloom": {"enum": ["onthouden", "begrijpen", "toepassen", "analyseren", "evalueren", "creëren"]},
+            "bloom_verb": {"type": ["string", "null"]},
+            "quote": {"type": ["string", "null"]},
+            "answer_checked": {"type": "boolean"},
+            "reason": {"type": ["string", "null"]}}}},
+        "note": {"type": ["string", "null"]}}}}
+  }
+}

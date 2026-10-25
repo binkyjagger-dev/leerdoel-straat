@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import csv
 import random
+import re
 import sys
 from collections import Counter, defaultdict
 from pathlib import Path
@@ -65,15 +66,28 @@ def main(argv: list[str]) -> None:
         c = crit[cid]["c"]
         return c.get("text_student") or c["text_expert"]
 
-    gaps = [f for f in findings if f.get("criterion_id") and f["finding"] in ("alleen geoefend", "alleen genoemd", "niet in deze methode")]
+    gaps = [dict(f) for f in findings if f.get("criterion_id") and f["finding"] in ("alleen geoefend", "alleen genoemd", "niet in deze methode")]
+    # part B: a gap whose criterion is practised in exercises is 'alleen geoefend (opgaven)' (specs/12 §6.3)
+    ex_codes = defaultdict(list)
+    if (run_dir / "18_ex_mappings.json").exists():
+        for l in load_json(run_dir / "18_ex_mappings.json")["links"]:
+            ex_codes[l["criterion_id"]].append(units[l["unit_id"]]["code"])
+    for f in gaps:
+        if f["finding"] != "alleen geoefend" and f["criterion_id"] in ex_codes:
+            f["finding"] = "alleen geoefend (opgaven)"
     L = [f"# Gaten in de methode — {run['run_id']}", "", f"Criteria in scope zonder *leert*-paragraaf ({len(gaps)}).", ""]
-    for kind in ("alleen geoefend", "alleen genoemd", "niet in deze methode"):
+    for kind in ("alleen geoefend", "alleen geoefend (opgaven)", "alleen genoemd", "niet in deze methode"):
         rows = [f for f in gaps if f["finding"] == kind]
         if rows:
-            L += [f"## {kind.capitalize()} ({len(rows)})", ""]
+            L += [f"## {kind[0].upper() + kind[1:]} ({len(rows)})", ""]
             for f in rows:
-                L.append(f"- **{f['criterion_id']}** — {ctext(f['criterion_id'])}")
+                codes = f" — opgaven {', '.join(sorted(set(ex_codes[f['criterion_id']]), key=lambda c: [int(x) if x.isdigit() else x for x in re.split(r'(\d+)', c)]))}" if f["criterion_id"] in ex_codes else ""
+                L.append(f"- **{f['criterion_id']}** — {ctext(f['criterion_id'])}{codes}")
             L.append("")
+    ver_p = run_dir / "15_verification.json"
+    gf = load_json(ver_p).get("gradation_findings", []) if ver_p.exists() else []
+    if gf:
+        L += [f"## Bevindingen controleur ({len(gf)})", ""] + [f"- **{g['criterion_id']}**{' (' + g['unit_id'] + ')' if g.get('unit_id') else ''}: {g['finding']}" for g in gf] + [""]
     (out / "gaten_methode.md").write_text("\n".join(L) + "\n", encoding="utf-8")
 
     outside = [f for f in findings if f.get("unit_id") and f["finding"].startswith("buiten syllabus")]
@@ -88,7 +102,7 @@ def main(argv: list[str]) -> None:
     for l in links:
         by_para[l["unit_id"]].append(l)
     L = [f"# Dekking methode — {run['run_id']}", "", f"- Methode: {method['method']['title']} (`{mid}`)", f"- Bron-run leerdoelen: {run.get('from_run', '')}",
-         f"- Criteria in scope: {len({c['criterion_id'] for c in load_json(run_dir / '12_candidates.json')['per_criterion']})} · paragrafen in scope: {len(load_json(run_dir / '12_candidates.json')['scope_paragraphs'])}",
+         f"- Criteria in scope: {len(load_json(run_dir / '12_candidates.json').get('scope_criteria') or load_json(run_dir / '12_candidates.json')['per_criterion'])} · paragrafen in scope: {len(load_json(run_dir / '12_candidates.json')['scope_paragraphs'])}",
          f"- Koppelingen: {len(links)} — " + ", ".join(f"{k} {v}" for k, v in Counter(l['gradation'] for l in links).items()),
          f"- Zekerheid: " + ", ".join(f"{k} {v}" for k, v in Counter(l['confidence'] for l in links).items()), ""]
     snap = run_dir / "decisions_snapshot.json"

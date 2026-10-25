@@ -1,0 +1,3 @@
+{"judge": "A", "paragraph_id": "H1.1", "items": [
+ {"unit_id": "H1.1-opg1.1a", "links": [
+  {"criterion_id": "D1.1-02-a", "bloom": "toepassen", "bloom_verb": "berekenen", "quote": "Bereken de evenwichtsprijs als Qv = -2P + 20 en Qa = 3P - 5.", "answer_checked": true, "reason": "Qv = Qa stellen; antwoord P = 5"}], "note": null}]}
