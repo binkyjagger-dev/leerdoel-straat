@@ -29,7 +29,7 @@ docs/             HANDLEIDING.md (one-page tutorial, Dutch)
 .claude/agents/   ingest intake planner generator student-language verifier
 .claude/commands/ generate (/generate orchestrator) · koppel (/koppel orchestrator)
 .claude/agents/   method-ingest mapping-judge mapping-verifier exercise-judge   (methode-straat; intake is shared, mapping mode)
-scripts/mapping/  ocr_pdf validate_method candidates gradation check_mappings export_mappings compare_baseline · part B: ex_candidates ex_merge check_ex_mappings export_exercises
+scripts/mapping/  ocr_pdf ocr_images docx_text validate_method candidates gradation check_mappings export_mappings compare_baseline · part B: ex_candidates ex_merge check_ex_mappings export_exercises
 subjects/<vak>/methodes/<methode-id>/profile.md   (human) — book order, structure, terms
 runs/<run_id>/    one folder per run (git-ignored except .gitkeep)
 tests/fixtures/   small synthetic run used to exercise the scripts

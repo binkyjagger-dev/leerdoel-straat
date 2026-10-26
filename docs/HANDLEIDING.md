@@ -90,6 +90,7 @@ Koppelt de succescriteria uit een `/generate`-run aan de paragrafen van een meth
 
 ## 2. Per methode
 - Zet de pdf's in `input/<methode>/` (niet in git; auteursrecht).
+- Boek als foto's? Zet ze in één map (bestandsnamen in boekvolgorde, bijv. `H16_16.1_1.jpg`) en geef de map op in plaats van de pdf. Opgaven in een apart werkboek (.docx of pdf) geef je mee met `--workbook`; elke opgave moet naar zijn paragraaf verwijzen (`16-1 (§ 16.1)`). De ingest-agent leest de foto's zelf; zet in het methodeprofiel onder *Opbouw* hoe de bestanden heten.
 - Vul `subjects/<vak>/methodes/<methode-id>/profile.md` in — vooral de **boekvolgorde** (bepaalt wat "eerste keer" is). Template: `docs/templates/methode-profile.md`.
 - Nulmeting (aanbevolen): koppel 15 criteria met de hand in een csv zoals `docs/templates/nulmeting-template.csv` (criterium-id's uit de CSV van de `/generate`-run, paragraafcode zoals in het boek, gradatie). De straat meet zichzelf daaraan.
 
@@ -97,6 +98,10 @@ Koppelt de succescriteria uit een `/generate`-run aan de paragrafen van een meth
 ```
 claude
 > /koppel input/<methode>/boek.pdf --subject economie --method <methode-id> --from <generate-run-id> --answers input/<methode>/antwoorden.pdf --chapters 1,2 --baseline nulmeting.csv
+```
+Foto's + werkboek, met opgaven (deel B):
+```
+> /koppel "input/<map met foto's>" --workbook "input/<map>/opgaven.docx" --answers "input/<map>/antwoorden.pdf" --subject <vak> --method <methode-id> --from <generate-run-id> --part AB
 ```
 Eén pauze (intake). Resultaat in `runs/<id>/output/`: `koppelingen_paragraaf.csv`, `methode_eenheden.csv`, `dekking_methode.md`, `gaten_methode.md`, `buiten_syllabus.md`, `steekproef.md`, `vergelijking_nulmeting.md`.
 

@@ -1,22 +1,23 @@
 ---
 description: Methode-straat — link the success criteria of a /generate run to the paragraphs of a textbook (part A) and, with --part AB, to its exercises (part B): ingest → intake (one pause) → candidates → two judges → gradation → verifier → export CSV + reports (+ baseline comparison).
-argument-hint: <book.pdf> --subject <slug> --method <method_id> --from <generate-run-id> [--answers <pdf> ...] [--chapters 1,2] [--part A|AB|B] [--baseline <csv>] [--run-id <id>]
+argument-hint: <book.pdf | image-folder> [--workbook <file.docx|pdf> ...] --subject <slug> --method <method_id> --from <generate-run-id> [--answers <pdf> ...] [--chapters 1,2] [--part A|AB|B] [--baseline <csv>] [--run-id <id>]
 allowed-tools: Bash, Read, Write, Glob, Agent, AskUserQuestion, TaskCreate, TaskUpdate
 ---
 
-You are the **orchestrator** of the methode-straat. You own control flow and files; you never judge links yourself. Follow `specs/13-methode-pipeline.md` and `specs/14-mapping-verification.md`. Arguments: `$ARGUMENTS`. Python command: `python3` if it exists, else `python` (Windows) — use that spelling everywhere and tell every subagent which one.
+You are the **orchestrator** of the methode-straat. You own control flow and files; you never judge links yourself. Follow `specs/13-methode-pipeline.md` and `specs/14-mapping-verification.md`. Arguments: `$ARGUMENTS`. Python command: `python3` if `python3 --version` succeeds, else `python` (on Windows `python3` can be the Microsoft Store stub, which exists but fails) — use that spelling everywhere and tell every subagent which one.
 
 ## 0. Set up
-- Parse: book pdf, `--subject`, `--method`, `--from` (a run id under `runs/` with `04_groups_student.json`), optional `--answers` (repeatable), `--chapters` (default: all), `--baseline` (csv), `--part` (`A` default, `AB` = A then B, `B` = part B on an existing finished part-A run given as `--run-id`; skip to M7), `--run-id` (default `YYYYMMDD-HHMM-koppel-<method>`).
+- Parse: book (a PDF, or a folder of page images — specs/11 §2.2), optional `--workbook` (repeatable; a separate exercise file, .docx or PDF), `--subject`, `--method`, `--from` (a run id under `runs/` with `04_groups_student.json`), optional `--answers` (repeatable), `--chapters` (default: all), `--baseline` (csv), `--part` (`A` default, `AB` = A then B, `B` = part B on an existing finished part-A run given as `--run-id`; skip to M7), `--run-id` (default `YYYYMMDD-HHMM-koppel-<method>`).
 - `python3 scripts/decisions.py init <subject>` (idempotent). Ensure `subjects/<subject>/methodes/<method>/profile.md` exists; if not, create it from `docs/templates/methode-profile.md` and tell the user in one line to fill it (book order matters) — continue.
-- Create `runs/<run_id>/{input,text}`; copy the PDFs into `input/`; copy `runs/<from>/04_groups_student.json` to `runs/<run_id>/10_criteria.json`. Write `run.json`: `{run_id, subject, method_id, from_run, chapters, part: "A", max_repair_rounds: 1, judge_batch: 4, status: "running", started_at}`.
+- Create `runs/<run_id>/{input,text}`; copy the book PDF into `input/` (an image folder into `input/book/`, images only), workbooks and answer files into `input/`; copy `runs/<from>/04_groups_student.json` to `runs/<run_id>/10_criteria.json`. Write `run.json`: `{run_id, subject, method_id, from_run, chapters, part: "A", max_repair_rounds: 1, judge_batch: 4, status: "running", started_at}`.
 - Check `pdftotext` and `tesseract` (`tesseract --list-langs`); if tesseract is missing, say so in one line — the ingest agent will transcribe scanned pages itself, which is slower.
 - Task list with steps M1–M6 (+ baseline).
 
 `R` = `runs/<run_id>`, `S` = subject, `M` = method id. Pass paths, never contents. After each step run its validator; on failure re-launch the same agent once with the output; on a second failure set `status: "aborted"` and stop.
 
 ## M1 Ingest
-Agent `method-ingest` with R, S, M, chapters → `R/11_method_units.json`, `R/text/*`, `R/11_ingest_notes.md`. Validate: `python3 scripts/mapping/validate_method.py R`.
+Image-folder book: first `python3 scripts/mapping/ocr_images.py R/input/book R/text/_pages_book --lang nld+eng`, then split the pages (from `pages.json`) into runs of ≤ 15, one per chapter where possible, and launch one `method-ingest` per run in **transcribe-only mode** (same message, parallel). Then the full `method-ingest` below; it skips pages with a `.done` marker.
+Agent `method-ingest` with R, S, M, chapters, and which `input/` file is the book, which the workbook(s) and which the answers → `R/11_method_units.json`, `R/text/*`, `R/11_ingest_notes.md`. Validate: `python3 scripts/mapping/validate_method.py R`.
 Write the scope: paragraphs of the chapters in scope → `scope_paragraphs` in `run.json` (list of unit ids).
 
 ## M1b Intake — the only pause

@@ -11,8 +11,8 @@ Flat list, hierarchy by `parent_id`, same style as the syllabus source units.
     "subject": "economie",
     "publisher": "LWEO", "title": "Vraag en aanbod", "edition": "2024", "level": "vwo",
     "volume_order": 3,                      // position in the book order declared in the method profile
-    "files": ["input/lesbrief-vraag-en-aanbod.pdf", "input/antwoorden-vraag-en-aanbod.pdf"],
-    "text_extraction": "pdftotext|ocr",     // how text was obtained; ocr ⇒ quote matching is tolerant
+    "files": ["input/lesbrief-vraag-en-aanbod.pdf", "input/antwoorden-vraag-en-aanbod.pdf"],   // or input/book/ (image folder), input/<workbook>.docx
+    "text_extraction": "pdftotext|ocr|mixed",  // how text was obtained; ocr/mixed ⇒ quote matching is tolerant (image transcription counts as ocr)
     "ingested_at": "2026-10-23T09:00:00Z"
   },
   "units": [
@@ -56,17 +56,62 @@ Rules
 - Notes list: OCR pages, exercises that could not be attached to a paragraph,
   headings that did not parse.
 
-### 2.2 Other methods (later)
+### 2.2 Page images + separate workbook (v2)
 
-Same model; new adapter per publisher layout. Separate workbooks become a
-second file with `kind: opgave/deelvraag` units attached to paragraphs by the
-workbook's own references ("bij §2.3").
+For methods delivered as photos/scans of pages and a separate exercise file
+(first case: Bedrijfseconomie in Balans, H16–H20, photos + a school
+opgavenbundel in .docx + answers PDF). The layout comes from the method
+profile (*Opbouw*), not from the adapter.
+
+- **Book = folder of images** (jpg/jpeg/png/tif). Page order = natural filename
+  order; when the profile says the filenames encode chapter/paragraph (e.g.
+  `H16_16.1_2.jpg`), that is a structure hint, the printed headings decide.
+  `scripts/mapping/ocr_images.py <dir> <out>` writes a Tesseract draft per
+  page plus `pages.json` (page → file). Photos have skew and show-through, so
+  the ingest agent reads **every** image itself and overwrites
+  `page-NNN.txt` with its transcription of the running text; the draft is a
+  reading aid. Judges quote from these text files, so the transcription is
+  literal (no paraphrase, no summary); illegible words become `[?]`.
+  `text_extraction: "ocr"` (quote matching stays tolerant). `page_from`/
+  `page_to` = the printed page number when visible, else the image index;
+  the notes say which.
+  Long image sets are transcribed by several ingest agents in parallel
+  (≤ 15 pages each, *transcribe-only*); each finished page gets a
+  `page-NNN.done` marker so the structuring agent skips it.
+- **Margin terms** (begrippen in the margin) are the paragraph's `concepts`.
+  A paragraph's own goal box ("Je kunt …") stays in the text file under a
+  line `[Leerdoelen van de methode]` so judges can tell it from explanation.
+- **Workbook = .docx or PDF.** `.docx` goes through
+  `scripts/mapping/docx_text.py <file> <out>` → `document.txt` with Word's
+  automatic list numbering resolved (sub-question letters are numbering, not
+  text) and embedded images extracted to `media/`, marked inline as
+  `[afbeelding: media/…]`. A PDF workbook goes through `ocr_pdf.py`.
+- **Attachment by reference.** An exercise is attached to the paragraph its
+  heading names (`16-1 (§ 16.1)`, "bij §2.3"); exercises without a reference
+  (start/intro/review tasks) are not units unless the profile or a decision
+  says where they belong — list them in the notes. Exercise codes as printed
+  (`16-1`), sub-questions `16-1a`; ids `H16.1-opg16-1`, `H16.1-opg16-1a`.
+- **Pictures in the workbook.** An image that carries content the question
+  needs (a table, a balance sheet pasted as a picture) is transcribed into the
+  sub-question's text file (`[tabel uit afbeelding] …`); icons (level markers
+  etc.) are described in the notes only, with their meaning if the workbook
+  explains it.
+- **Answers**: same as §2.1, matched on exercise code + letter.
+- Planning material in the workbook (periodeplan, leerdoelen, lesson
+  schedule) is not a unit; discrepancies between it and the book (paragraph
+  numbers that do not exist in the images) go to the notes for the intake.
+
+### 2.3 Other methods (later)
+
+Same model; describe the layout in the method profile and reuse §2.1/§2.2
+where possible; a new adapter only for a layout neither covers.
 
 ## 3. Method profile
 
 `subjects/<subject>/methodes/<method_id>/profile.md` (human), suggested headings:
-*Boekvolgorde* (volumes and years, which decides `order`), *Opbouw* (where
-exercises live, how boxes are used), *Terminologie* (method-specific terms vs
+*Boekvolgorde* (volumes and years, which decides `order`), *Opbouw* (files
+and their format, where exercises live and how they refer to paragraphs, how
+boxes are used), *Terminologie* (method-specific terms vs
 syllabus terms), *Niet koppelen* (chapters out of scope). Read by every role;
 never written by the straat. Subject-level `profile.md` and `decisions.json`
 still apply.

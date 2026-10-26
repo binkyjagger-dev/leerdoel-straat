@@ -2,7 +2,10 @@
 
 ## 1. Command
 
-`/koppel <method.pdf> [--answers <answers.pdf>] --subject <slug> --method <method_id> --from <generate-run-id> [--chapters 1,2] [--run-id <id>] [--part A|AB]`
+`/koppel <method.pdf | image-folder> [--workbook <file.docx|pdf> ...] [--answers <answers.pdf> ...] --subject <slug> --method <method_id> --from <generate-run-id> [--chapters 1,2] [--run-id <id>] [--part A|AB|B]`
+
+- The book is a PDF or a folder of page images (11 §2.2). `--workbook` names a
+  separate exercise file (.docx or PDF) whose exercises refer to paragraphs.
 
 - `--from` names the `/generate` run whose `04_groups_student.json` provides
   the criteria (ids, texts, Bloom, concepts). The orchestrator copies that file
@@ -37,7 +40,8 @@ artefacts 10–19, `output/`.
 | M6 | export | mappings, verification | `output/*` | script |
 
 ### M1 method-ingest
-Per 11 §2.1. Writes paragraph texts to `text/<unit_id>.txt`; sub-question
+Per 11 §2.1 (PDF lesbrief) or §2.2 (page images + workbook), as the method
+profile's *Opbouw* says. Writes paragraph texts to `text/<unit_id>.txt`; sub-question
 texts and answers likewise. Validates with `validate_method.py`.
 
 ### M1b intake (mapping mode)
