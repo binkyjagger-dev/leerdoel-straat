@@ -5,9 +5,15 @@
 ```
 examenbank/
   register.json          criteria_run, created_at, exams[]
+  criteria.json          copy of the criteria run's 04_groups_student.json (the bank's criteria version)
+  source_units.json      copy of its 01_source_units.json (domein/subdomein titles)
   links/<exam_id>.json   links of one exam (no exam text)
   output/                rebuilt by bank_export.py after every change
 ```
+
+`runs/` is git-ignored, so the bank keeps its own copy of the criteria it is bound
+to (written once, when the bank is created). Both bank scripts take `--bank <dir>`
+(default `subjects/<subject>/examenbank`), used by the fixture test.
 
 `register.json` (schema `exam_bank`):
 ```json

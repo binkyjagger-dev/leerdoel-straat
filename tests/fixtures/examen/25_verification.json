@@ -1,0 +1,42 @@
+{
+  "mode": "exam",
+  "sample": {
+    "seed": "fixture-examen",
+    "high_indices": [
+      0
+    ]
+  },
+  "links": [
+    {
+      "scorepunt_id": "vwo-2030-tv1-q1-s1",
+      "criterion_id": "X1.1-01-a",
+      "verdict": "pass",
+      "confidence_adjust": null,
+      "reason": null
+    },
+    {
+      "scorepunt_id": "vwo-2030-tv1-q2-s2",
+      "criterion_id": "X1.2-01-a",
+      "verdict": "dispute",
+      "criterion_should_be": "none",
+      "reason": "test: verifier betwist"
+    },
+    {
+      "scorepunt_id": "vwo-2030-tv1-q1-s3",
+      "criterion_id": "X1.1-01-b",
+      "verdict": "pass",
+      "confidence_adjust": "up",
+      "reason": null
+    }
+  ],
+  "missing_links": [
+    {
+      "scorepunt_id": "vwo-2030-tv1-q3-s1",
+      "criterion_id": "X1.2-01-a",
+      "bloom": "onthouden",
+      "quote": null,
+      "reason": "test"
+    }
+  ],
+  "proposed_decisions": []
+}

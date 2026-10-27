@@ -1,0 +1,134 @@
+#!/usr/bin/env python3
+"""Exercise the examen-straat scripts on the examen fixture. Usage: python tests/run_examen_fixture.py
+
+Builds small exam PDFs (opgaven, correctievoorschrift over three pages, bijlage) from
+tests/fixtures/examen/pdf_src.json, then runs ingest → candidates → merge → checks → verification →
+repair → bank → export in a temp dir, with checks on the outcome.
+"""
+from __future__ import annotations
+import csv, html, json, shutil, subprocess, sys, tempfile
+from pathlib import Path
+ROOT = Path(__file__).resolve().parent.parent
+for _s in (sys.stdout, sys.stderr):
+    try: _s.reconfigure(encoding="utf-8", errors="replace")
+    except Exception: pass
+PY = sys.executable
+E = "vwo-2030-tv1"
+
+
+def run(label, *args, expect_fail=False):
+    print(f"== {label}")
+    r = subprocess.run([PY, "-X", "utf8", *args], cwd=ROOT, text=True, capture_output=True, encoding="utf-8", errors="replace")
+    print(r.stdout, end="")
+    failed = r.returncode != 0
+    if failed != expect_fail:
+        print(r.stderr, end="")
+        print(f"!! {'FAILED' if failed else 'UNEXPECTEDLY PASSED'}: {label}")
+        return False
+    return True
+
+
+def check(label, cond):
+    print(f"   {'ok ' if cond else 'NOK'} {label}")
+    return bool(cond)
+
+
+def make_pdfs(src: dict, folder: Path) -> None:
+    import pymupdf
+    folder.mkdir(parents=True, exist_ok=True)
+    for name, pages in src["files"].items():
+        doc = pymupdf.open()
+        for lines in pages:
+            page = doc.new_page()
+            body = "".join(f"<p style='margin:0'>{html.escape(l) if l.strip() else '&nbsp;'}</p>" for l in lines)
+            page.insert_htmlbox(page.rect + (50, 50, -50, -50), body, css="p{font-family:sans-serif;font-size:9px}")
+        doc.save(folder / name)
+
+
+def load(p):
+    return json.loads(Path(p).read_text(encoding="utf-8"))
+
+
+def by_sp(r):
+    return {l["scorepunt_id"].replace(E + "-", ""): l for l in load(r / "24_mappings.json")["links"]}
+
+
+def main():
+    tmp = Path(tempfile.mkdtemp())
+    r = tmp / "run"
+    shutil.copytree(ROOT / "tests" / "fixtures" / "examen", r)
+    src = load(r / "pdf_src.json")
+    exams = tmp / "examens"
+    make_pdfs(src, exams / src["folder"])
+    s, bank, ok = "scripts/exam", tmp / "bank", True
+
+    ok &= run("exam_text", f"{s}/exam_text.py", str(r), str(exams))
+    ok &= run("validate_exam", f"{s}/validate_exam.py", str(r))
+    u = load(r / "21_exam_units.json")
+    sps = [x for x in u["units"] if x["kind"] == "scorepunt"]
+    ok &= check("3 questions, 6 scorepunten (bullet 3, per_item 2, whole 1)",
+                sum(x["kind"] == "question" for x in u["units"]) == 3 and
+                [x["scoring"] for x in sps] == ["bullet"] * 3 + ["per_item"] * 2 + ["whole"])
+    ok &= check("€ and é survive extraction; 'of' route goes to cv_notes",
+                "€ 4.000" in sps[0]["text"] and
+                any("prijselasticiteit" in n for x in u["units"] if x["kind"] == "question" for n in x["cv_notes"]))
+    ok &= check("informatiebron 1 found for opgave 1", u["units"][0]["sources"] == [1] and (r / f"text/{E}-bron1.txt").exists())
+
+    ok &= run("exam_candidates", f"{s}/exam_candidates.py", str(r))
+    cand = {x["scorepunt_id"]: x["candidates"] for x in load(r / "22_candidates.json")["per_scorepunt"]}
+    ok &= check("q1-s1 top candidate is the omzet criterion", cand[f"{E}-q1-s1"][0]["criterion_id"] == "X1.1-01-a")
+
+    ok &= run("exam_merge", f"{s}/exam_merge.py", str(r))
+    ok &= run("check_exam_mappings", f"{s}/check_exam_mappings.py", str(r))
+    m = by_sp(r)
+    ok &= check("confidence: q1-s1 high, q1-s2 medium (quote B invalid), q1-s3 medium (bloom differs), q2-s2 low",
+                [m[k]["confidence"] for k in ("q1-s1", "q1-s2", "q1-s3", "q2-s2")] == ["high", "medium", "medium", "low"])
+    ok &= check("q1-s3 bloom A analyseren / B begrijpen → begrijpen (verb table)", m["q1-s3"]["bloom"] == "begrijpen")
+    ok &= check("q3-s1 unlinked (buiten huidige syllabus)", m["q3-s1"]["criterion_id"] is None and
+                any(f["finding"] == "buiten huidige syllabus" for f in load(r / "24_mappings.json")["findings"]))
+    ok &= check("also_touches kept", m["q1-s1"]["also_touches"] == ["X1.1-01-b"])
+
+    ok &= run("check --verification", f"{s}/check_exam_mappings.py", str(r), "--verification", "25_verification.json")
+    ok &= run("check --verification (again, idempotent)", f"{s}/check_exam_mappings.py", str(r), "--verification", "25_verification.json")
+    m = by_sp(r)
+    ok &= check("verdicts applied; confidence_adjust up on q1-s3", m["q1-s1"]["verifier"] == "pass" and m["q1-s3"]["confidence"] == "high")
+
+    shutil.copytree(r / "_repair" / "23_judgements.R", r / "23_judgements.R")
+    ok &= run("exam_merge (with repair R)", f"{s}/exam_merge.py", str(r))
+    ok &= run("check --verification (after repair)", f"{s}/check_exam_mappings.py", str(r), "--verification", "25_verification.json")
+    m = by_sp(r)
+    ok &= check("R keeps q2-s2 linked and replaces B → high", m["q2-s2"]["criterion_id"] == "X1.2-01-a" and m["q2-s2"]["confidence_judged"] == "high")
+    ok &= check("R without criterion keeps q3-s1 unlinked", m["q3-s1"]["criterion_id"] is None)
+
+    ok &= run("bank_add", f"{s}/bank_add.py", str(r), "--bank", str(bank))
+    ok &= run("bank_export", f"{s}/bank_export.py", "fixturevak", "--bank", str(bank))
+    out = bank / "output"
+    rows = list(csv.reader((out / "punten_per_criterium.csv").open(encoding="utf-8-sig"), delimiter=";"))
+    col = rows[0].index(f"{E}_punten")
+    ok &= check("criterion column sums to 6, 1 point outside the syllabus",
+                sum(int(x[col]) for x in rows[1:]) == 6 and rows[-1][0] == "buiten huidige syllabus" and rows[-1][col] == "1")
+    idx = list(csv.reader((out / "opzoekindex.csv").open(encoding="utf-8-sig"), delimiter=";"))
+    ok &= check("lookup index: 5 linked scorepunten, sorted by criterion", len(idx) == 6 and
+                [x[0] for x in idx[1:]] == ["X1.1-01-a", "X1.1-01-b", "X1.1-01-b", "X1.2-01-a", "X1.2-01-a"])
+    dom = list(csv.reader((out / "punten_per_domein.csv").open(encoding="utf-8-sig"), delimiter=";"))
+    ok &= check("domein X has 5 points", any(x[0] == "domein" and x[1] == "X" and x[3] == "5" for x in dom))
+    ok &= check("bevindingen: X1.2-01-b never tested", "X1.2-01-b" in (out / "bevindingen.md").read_text(encoding="utf-8")
+                .split("## nooit getoetst")[1])
+    ok &= check("bank keeps its own criteria copy", (bank / "criteria.json").exists() and (bank / "source_units.json").exists())
+
+    before = (bank / "links" / f"{E}.json").read_bytes()
+    ok &= run("bank_add again without --replace (must fail)", f"{s}/bank_add.py", str(r), "--bank", str(bank), expect_fail=True)
+    ok &= check("failed add left the bank untouched", (bank / "links" / f"{E}.json").read_bytes() == before)
+    ok &= run("bank_add --replace", f"{s}/bank_add.py", str(r), "--bank", str(bank), "--replace")
+    ok &= check("replace kept a dated copy", len(list((bank / "links").glob(f"{E}.*.json"))) == 1)
+    run_json = load(r / "run.json")
+    run_json["criteria_run"] = "other-generate-run"
+    (r / "run.json").write_text(json.dumps(run_json), encoding="utf-8")
+    ok &= run("bank_add with other criteria run (must fail)", f"{s}/bank_add.py", str(r), "--bank", str(bank), "--replace", expect_fail=True)
+
+    print("\nALL OK" if ok else "\nSOME CHECKS FAILED")
+    sys.exit(0 if ok else 1)
+
+
+if __name__ == "__main__":
+    main()

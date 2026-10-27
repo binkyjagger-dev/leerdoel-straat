@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ExamJudgements",
+  "description": "23_judgements.<A|B|R>/<opgave_id>.json — one judge's verdict per scorepunt (specs/22 §4).",
+  "type": "object",
+  "required": ["judge", "opgave_id", "items"],
+  "properties": {
+    "judge": {"enum": ["A", "B", "R"]},
+    "opgave_id": {"type": "string"},
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["scorepunt_id", "criterion_id"],
+        "properties": {
+          "scorepunt_id": {"type": "string"},
+          "criterion_id": {"type": ["string", "null"]},
+          "bloom": {"enum": ["onthouden", "begrijpen", "toepassen", "analyseren", "evalueren", "creëren", null]},
+          "bloom_verb": {"type": ["string", "null"]},
+          "quote": {"type": ["string", "null"]},
+          "also_touches": {"type": "array", "maxItems": 2, "items": {"type": "string"}},
+          "answer_checked": {"type": "boolean"},
+          "reason": {"type": ["string", "null"]},
+          "note": {"type": ["string", "null"]}
+        },
+        "if": {"properties": {"criterion_id": {"type": "string"}}},
+        "then": {"required": ["bloom", "quote"], "properties": {"bloom": {"type": "string"}, "quote": {"type": "string"}}}
+      }
+    }
+  }
+}

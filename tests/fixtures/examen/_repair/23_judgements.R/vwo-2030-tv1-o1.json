@@ -1,0 +1,28 @@
+{
+  "judge": "R",
+  "opgave_id": "vwo-2030-tv1-o1",
+  "items": [
+    {
+      "scorepunt_id": "vwo-2030-tv1-q2-s2",
+      "criterion_id": "X1.2-01-a",
+      "bloom": "onthouden",
+      "bloom_verb": "noemen",
+      "quote": "Noem twee voordelen van een tweede filiaal.",
+      "also_touches": [],
+      "answer_checked": true,
+      "reason": "per juist antwoord: elk voordeel toetst hetzelfde criterium",
+      "note": null
+    },
+    {
+      "scorepunt_id": "vwo-2030-tv1-q3-s1",
+      "criterion_id": null,
+      "bloom": null,
+      "bloom_verb": null,
+      "quote": null,
+      "also_touches": [],
+      "answer_checked": true,
+      "reason": "rechtsvorm hoort bij geen criterium van de fixture",
+      "note": null
+    }
+  ]
+}

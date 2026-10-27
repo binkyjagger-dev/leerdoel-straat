@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ExamBank",
+  "description": "subjects/<vak>/examenbank/register.json and links/<exam_id>.json (specs/25 §1). Validate a register against the root, a links file against #/$defs/links_file.",
+  "type": "object",
+  "required": ["subject", "criteria_run", "created_at", "exams"],
+  "properties": {
+    "subject": {"type": "string"},
+    "criteria_run": {"type": "string"},
+    "created_at": {"type": "string"},
+    "exams": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["exam_id", "code", "year", "tijdvak", "level", "n_questions", "max_score", "files", "added_by_run", "added_at"],
+        "properties": {
+          "exam_id": {"type": "string"},
+          "code": {"type": "string"},
+          "year": {"type": "integer"},
+          "tijdvak": {"type": "integer"},
+          "level": {"type": "string"},
+          "n_questions": {"type": "integer"},
+          "max_score": {"type": "integer"},
+          "syllabus_note": {"type": ["string", "null"]},
+          "files": {"type": "object", "additionalProperties": {"type": "string"}},
+          "added_by_run": {"type": "string"},
+          "added_at": {"type": "string"}
+        }
+      }
+    }
+  },
+  "$defs": {
+    "links_file": {
+      "type": "object",
+      "required": ["exam_id", "criteria_run", "run_id", "scorepunten"],
+      "properties": {
+        "exam_id": {"type": "string"},
+        "criteria_run": {"type": "string"},
+        "run_id": {"type": "string"},
+        "scorepunten": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["scorepunt_id", "question_id", "opgave_id", "question_number", "opgave_number", "opgave_title",
+                         "scorepunt_seq", "scorepunt_kind", "points", "criterion_id", "group_id", "also_touches",
+                         "bloom", "bloom_verb", "quote", "confidence", "verifier", "note"],
+            "properties": {
+              "scorepunt_id": {"type": "string"},
+              "question_id": {"type": "string"},
+              "opgave_id": {"type": "string"},
+              "question_number": {"type": "integer"},
+              "opgave_number": {"type": "integer"},
+              "opgave_title": {"type": ["string", "null"]},
+              "scorepunt_seq": {"type": "integer"},
+              "scorepunt_kind": {"enum": ["bullet", "per_item", "whole"]},
+              "points": {"type": "integer", "minimum": 1},
+              "criterion_id": {"type": ["string", "null"]},
+              "group_id": {"type": ["string", "null"]},
+              "also_touches": {"type": "array", "items": {"type": "string"}},
+              "bloom": {"type": ["string", "null"]},
+              "bloom_verb": {"type": ["string", "null"]},
+              "quote": {"type": ["string", "null"]},
+              "confidence": {"enum": ["high", "medium", "low", null]},
+              "verifier": {"type": ["string", "null"]},
+              "note": {"type": ["string", "null"]}
+            }
+          }
+        }
+      }
+    }
+  }
+}

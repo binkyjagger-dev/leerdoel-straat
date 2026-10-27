@@ -20,7 +20,7 @@ report + doubt list.
 
 ## Layout
 ```
-specs/            00–06 leerdoel-straat (/generate) · 10–15 methode-straat (/koppel) · 20–25 examen-straat (/examen, specced 2026-10-27, not built; plan: docs/plan-examen-straat.md)
+specs/            00–06 leerdoel-straat (/generate) · 10–15 methode-straat (/koppel) · 20–25 examen-straat (/examen; scripts built, agents + command pending; plan: docs/plan-examen-straat.md)
 schemas/          JSON schemas per artefact
 data/             rule files (Bloom verbs, student-language rules)
 scripts/          validate.py bloom_check.py student_language_check.py coverage.py merge_groups.py apply_verdicts.py export.py decisions.py verb_table.py
@@ -30,7 +30,8 @@ docs/             HANDLEIDING.md (one-page tutorial, Dutch)
 .claude/commands/ generate (/generate orchestrator) · koppel (/koppel orchestrator)
 .claude/agents/   method-ingest mapping-judge mapping-verifier exercise-judge   (methode-straat; intake is shared, mapping mode)
 scripts/mapping/  ocr_pdf ocr_images docx_text validate_method candidates gradation check_mappings export_mappings compare_baseline · part B: ex_candidates ex_merge check_ex_mappings export_exercises
-subjects/<vak>/examenbank/  (examen-straat, planned) register.json + links/<exam>.json + output/ — bound to one criteria run; see specs/25
+scripts/exam/     exam_text validate_exam exam_candidates exam_merge check_exam_mappings bank_add bank_export (ecommon = shared helpers, reuses scripts/mapping)
+subjects/<vak>/examenbank/  (examen-straat) register.json + links/<exam>.json + output/ — bound to one criteria run; see specs/25
 input/examens-<vak>/<jaar TVn>/  CvTE exam PDFs (-o opgaven, -c correctievoorschrift, -b bijlage); not committed
 subjects/<vak>/methodes/<methode-id>/profile.md   (human) — book order, structure, terms
 runs/<run_id>/    one folder per run (git-ignored except .gitkeep)
@@ -44,6 +45,7 @@ pip install --break-system-packages jsonschema   # once
 python3 scripts/export.py runs/<run_id>          # re-export only
 python3 tests/run_fixture.py                         # exercise all /generate scripts on the fixture
 python3 tests/run_koppel_fixture.py                  # exercise all /koppel scripts on the koppel fixture
+python3 tests/run_examen_fixture.py                  # exercise all /examen scripts (builds small exam PDFs itself)
 /koppel input/<m>/boek.pdf --subject economie --method <id> --from <generate-run> --chapters 1,2 --baseline nulmeting.csv
 ```
 

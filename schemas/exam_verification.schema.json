@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ExamVerification",
+  "description": "25_verification.json — mapping-verifier in exam mode (specs/24 §3).",
+  "type": "object",
+  "required": ["mode", "links", "missing_links"],
+  "properties": {
+    "mode": {"const": "exam"},
+    "sample": {"type": ["object", "null"]},
+    "links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["scorepunt_id", "criterion_id", "verdict"],
+        "properties": {
+          "scorepunt_id": {"type": "string"},
+          "criterion_id": {"type": "string"},
+          "verdict": {"enum": ["pass", "dispute"]},
+          "criterion_should_be": {"type": ["string", "null"], "description": "another criterion id, or 'none'"},
+          "bloom_should_be": {"enum": ["onthouden", "begrijpen", "toepassen", "analyseren", "evalueren", "creëren", null]},
+          "confidence_adjust": {"enum": ["up", "down", null]},
+          "reason": {"type": ["string", "null"]}
+        }
+      }
+    },
+    "missing_links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["scorepunt_id", "criterion_id", "bloom"],
+        "properties": {
+          "scorepunt_id": {"type": "string"},
+          "criterion_id": {"type": "string"},
+          "bloom": {"enum": ["onthouden", "begrijpen", "toepassen", "analyseren", "evalueren", "creëren"]},
+          "quote": {"type": ["string", "null"]},
+          "reason": {"type": ["string", "null"]}
+        }
+      }
+    },
+    "points_sanity": {"type": "array"},
+    "findings": {"type": "array"},
+    "proposed_decisions": {"type": "array"}
+  }
+}

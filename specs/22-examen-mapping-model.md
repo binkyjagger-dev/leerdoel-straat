@@ -48,7 +48,16 @@ conclusion; supporting calculation scorepunten are *toepassen*.
 
 Judges A and B each give, per scorepunt, `criterion_id` (or null), `bloom`,
 `bloom_verb`, `quote`, `also_touches`, `answer_checked`. Repair judge R may set or
-clear the criterion of the scorepunten it re-judges; R decides (as 12 §6.2).
+clear the criterion of the scorepunten it re-judges; R decides (as 12 §6.2): R's
+judgement replaces the judge whose criterion differs from R's (B when both differ or
+both agree), then the table below applies; R's `bloom` stands. R with `criterion_id:
+null` leaves the scorepunt unlinked.
+
+Judgement file `23_judgements.<A|B|R>/<opgave_id>.json` (schema `exam_judgements`):
+`{judge, opgave_id, items: [{scorepunt_id, criterion_id | null, bloom, bloom_verb,
+quote, also_touches, answer_checked, reason, note}]}` — one item per scorepunt of the
+opgave (R: only the re-judged ones); `bloom`/`quote` may be null when
+`criterion_id` is null.
 
 | A vs B on a scorepunt | confidence |
 |---|---|

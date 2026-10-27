@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ExamMappings",
+  "description": "24_mappings.json — one record per scorepunt, linked or not (specs/22 §1, §4–§5).",
+  "type": "object",
+  "required": ["links", "findings"],
+  "properties": {
+    "links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["scorepunt_id", "question_id", "opgave_id", "exam_id", "criterion_id", "points",
+                     "bloom", "quote", "also_touches", "confidence", "confidence_judged", "judges", "verifier", "status"],
+        "properties": {
+          "scorepunt_id": {"type": "string"},
+          "question_id": {"type": "string"},
+          "opgave_id": {"type": "string"},
+          "exam_id": {"type": "string"},
+          "criterion_id": {"type": ["string", "null"]},
+          "group_id": {"type": ["string", "null"]},
+          "alt_criterion": {"type": ["string", "null"]},
+          "points": {"type": "integer", "minimum": 1},
+          "bloom": {"enum": ["onthouden", "begrijpen", "toepassen", "analyseren", "evalueren", "creëren", null]},
+          "bloom_verb": {"type": ["string", "null"]},
+          "quote": {"type": ["string", "null"]},
+          "also_touches": {"type": "array", "items": {"type": "string"}},
+          "answer_checked": {"type": "boolean"},
+          "confidence": {"enum": ["high", "medium", "low", null]},
+          "confidence_judged": {"enum": ["high", "medium", "low", null]},
+          "judges": {"type": "object"},
+          "verifier": {"type": ["string", "null"]},
+          "note": {"type": ["string", "null"]},
+          "unlinked_reason": {"enum": ["no_criterion", "invalid_quote", null]},
+          "status": {"enum": ["proposed", "confirmed", "rejected"]}
+        }
+      }
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["finding", "scorepunt_id"],
+        "properties": {
+          "finding": {"type": "string"},
+          "scorepunt_id": {"type": ["string", "null"]},
+          "criterion_id": {"type": ["string", "null"]},
+          "points": {"type": ["integer", "null"]},
+          "note": {"type": ["string", "null"]}
+        }
+      }
+    }
+  }
+}

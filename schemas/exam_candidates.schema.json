@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ExamCandidates",
+  "description": "22_candidates.json — ranked candidate criteria per scorepunt (specs/23 §3 E2).",
+  "type": "object",
+  "required": ["per_scorepunt"],
+  "properties": {
+    "per_scorepunt": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["scorepunt_id", "question_id", "opgave_id", "candidates"],
+        "properties": {
+          "scorepunt_id": {"type": "string"},
+          "question_id": {"type": "string"},
+          "opgave_id": {"type": "string"},
+          "candidates": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["criterion_id", "score"],
+              "properties": {"criterion_id": {"type": "string"}, "score": {"type": "number"}}
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "judge": "B",
+  "opgave_id": "vwo-2030-tv1-o1",
+  "items": [
+    {
+      "scorepunt_id": "vwo-2030-tv1-q1-s1",
+      "criterion_id": "X1.1-01-a",
+      "bloom": "toepassen",
+      "bloom_verb": "berekenen",
+      "quote": "Bereken de omzet per week en leg uit waarom de omzet stijgt als Kruim de prijs verlaagt.",
+      "also_touches": [],
+      "answer_checked": true,
+      "reason": null,
+      "note": null
+    },
+    {
+      "scorepunt_id": "vwo-2030-tv1-q1-s2",
+      "criterion_id": "X1.1-01-b",
+      "bloom": "begrijpen",
+      "bloom_verb": "uitleggen",
+      "quote": "Leg precies uit wat er gebeurt met de omzet.",
+      "also_touches": [],
+      "answer_checked": true,
+      "reason": null,
+      "note": null
+    },
+    {
+      "scorepunt_id": "vwo-2030-tv1-q1-s3",
+      "criterion_id": "X1.1-01-b",
+      "bloom": "begrijpen",
+      "bloom_verb": "uitleggen",
+      "quote": "Bereken de omzet per week en leg uit waarom de omzet stijgt als Kruim de prijs verlaagt.",
+      "also_touches": [],
+      "answer_checked": true,
+      "reason": null,
+      "note": null
+    },
+    {
+      "scorepunt_id": "vwo-2030-tv1-q2-s1",
+      "criterion_id": "X1.2-01-a",
+      "bloom": "onthouden",
+      "bloom_verb": "noemen",
+      "quote": "Noem twee voordelen van een tweede filiaal.",
+      "also_touches": [],
+      "answer_checked": true,
+      "reason": null,
+      "note": null
+    },
+    {
+      "scorepunt_id": "vwo-2030-tv1-q2-s2",
+      "criterion_id": null,
+      "bloom": null,
+      "bloom_verb": null,
+      "quote": null,
+      "also_touches": [],
+      "answer_checked": true,
+      "reason": null,
+      "note": "tweede voordeel: zelfde criterium als s1"
+    },
+    {
+      "scorepunt_id": "vwo-2030-tv1-q3-s1",
+      "criterion_id": null,
+      "bloom": null,
+      "bloom_verb": null,
+      "quote": null,
+      "also_touches": [],
+      "answer_checked": true,
+      "reason": null,
+      "note": "rechtsvorm"
+    }
+  ]
+}

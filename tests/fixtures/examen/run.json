@@ -1,0 +1,9 @@
+{
+  "run_id": "fixture-examen",
+  "subject": "fixturevak",
+  "criteria_run": "fixture-generate",
+  "exams": [],
+  "judge_batch": 4,
+  "max_repair_rounds": 1,
+  "status": "running"
+}
