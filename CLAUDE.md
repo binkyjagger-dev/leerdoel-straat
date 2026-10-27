@@ -20,7 +20,7 @@ report + doubt list.
 
 ## Layout
 ```
-specs/            00–06 leerdoel-straat (/generate) · 10–15 methode-straat (/koppel) · 20–25 examen-straat (/examen; built 2026-10-27, first real run pending; plan: docs/plan-examen-straat.md)
+specs/            00–06 leerdoel-straat (/generate) · 10–15 methode-straat (/koppel) · 20–25 examen-straat (/examen; built and first run 2026-10-27; plan: docs/plan-examen-straat.md)
 schemas/          JSON schemas per artefact
 data/             rule files (Bloom verbs, student-language rules)
 scripts/          validate.py bloom_check.py student_language_check.py coverage.py merge_groups.py apply_verdicts.py export.py decisions.py verb_table.py
@@ -31,7 +31,7 @@ docs/             HANDLEIDING.md (one-page tutorial, Dutch)
 .claude/agents/   method-ingest mapping-judge mapping-verifier exercise-judge   (methode-straat; intake is shared, mapping mode)
 .claude/agents/   exam-ingest exam-judge   (examen-straat; intake exam mode, mapping-verifier exam mode)
 scripts/mapping/  ocr_pdf ocr_images docx_text validate_method candidates gradation check_mappings export_mappings compare_baseline · part B: ex_candidates ex_merge check_ex_mappings export_exercises
-scripts/exam/     exam_text validate_exam exam_candidates exam_merge check_exam_mappings bank_add bank_export (ecommon = shared helpers, reuses scripts/mapping)
+scripts/exam/     exam_text validate_exam exam_candidates exam_merge check_exam_mappings bank_add bank_export exam_sample (ecommon = shared helpers, reuses scripts/mapping)
 subjects/<vak>/examenbank/  (examen-straat) register.json + links/<exam>.json + output/ — bound to one criteria run; see specs/25
 input/examens-<vak>/<jaar TVn>/  CvTE exam PDFs (-o opgaven, -c correctievoorschrift, -b bijlage); not committed
 subjects/<vak>/methodes/<methode-id>/profile.md   (human) — book order, structure, terms
@@ -99,3 +99,14 @@ python3 tests/run_examen_fixture.py                  # exercise all /examen scri
 - Part B: judges substitute a verb for juist/onjuist and fill-in items (MB2 warns); the "antwoord is een berekening" raise must not fire when the verb gives a level, the number is given in the question, or R set the level.
 - Candidates for exercises only offer criteria taught in the own or earlier paragraphs; judges repeatedly found criteria taught *later* (oefent vóór uitleg). Consider adding later-taught criteria at low priority.
 - New agent types are not loadable in the session that creates them; run them as general-purpose agents that read the definition file.
+
+## Lessons from examen run 1 (bedrijfseconomie vwo 2025-I + 2026-I, 2026-10-27)
+- CvTE PDFs have a text layer, but `pdftotext` turns é/ë/€ and the scorepunt bullet into U+FFFD; PyMuPDF keeps them. The correctievoorschrift has two kinds of "of": a complete alternative route (ends the route once the bullets reach the maximumscore) and an alternative answer inside one scorepunt (→ note). `exam_text.py` parsed both exams with 0 issues; a regex bug (`Opmerkingen?` misses the singular "Opmerking") let remarks into scorepunt texts — fixed and now in the fixture.
+- Two `exam-ingest` agents editing the same `21_exam_units.json` in parallel lost part of one agent's edits (10 scorepunt texts of 2026-I kept their remark). Run ingest agents sequentially, or give each exam its own file to merge.
+- Agreement was high: 68 of 89 links high after merge; verifier 32/35 pass (sample of high links 14/14), 3 criterion disputes + 1 missing link, all four repairs followed the verifier. Cost 32 agent calls (2 ingest, 1 intake, 24 judges, 1 verifier, 4 repair) for two exams.
+- The intake decisions did the heavy lifting: "prestatie telt" (bedrijfsecon-042) decides old-syllabus topics, 043 decides an exam's own assessment model (Collin Credit Score), 044 the meetkundige reeks. Judges cited them consistently. 20 of 124 points stay *buiten huidige syllabus* (SWOT, Porter, bedrijfsmodel, off-balance, resultaatmarge, domein-A arithmetic).
+- Recurring disagreement: one scorepunt that tests sibling criteria equally (one point for examples of three groups of fixed assets) or whose alternative model answers fall under different criteria. Open decision proposed (one criterion + "raakt ook" vs. splitting).
+- Candidate retrieval misses scorepunten whose line is bare ("voorwaarde b"); the correctievoorschrift table row that explains it should feed the query (verifier found the missing link).
+- Judges record the verb of a supporting step (`berekenen`) under an "Analyseer" question; MB2 warns correctly — `bloom_verb` is the question's own asking verb, the level of the step is in `bloom`.
+- Judges' prose miscounts points (reported 14 and 8 where the opgave had 9 and 6); scripts take points from the units only — keep it that way.
+- Two exams test 54 of 410 criteria; the per-criterion overview becomes meaningful only with more exams.

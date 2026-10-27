@@ -853,6 +853,672 @@
       "source_run": "20261021-1647-bedrijfseconomie-vwo-2028-run2",
       "raised_by": "verifier",
       "supersedes": null
+    },
+    {
+      "id": "bedrijfsecon-028",
+      "question": "Welke criteria verwachten we in deze aanlevering (H16, H17, H19, H20), zodat alleen die als 'gat' tellen als ze niet uitgelegd of geoefend worden?",
+      "context": "De criteriaset bevat het hele examenprogramma: 119 leerdoelgroepen, 410 criteria (domein B t/m G). Deze hoofdstukken behandelen eigen vermogen (H16), vreemd vermogen (H17), vermogensstructuur en risico (H19) en de vermogensmarkt (H20): inhoudelijk domein D2, dat is 18 eenheden, 21 groepen, 74 criteria (D2.20.1 t/m D2.22.2). Daarbuiten raken drie paragrafen ook andere domeinen: §16.5 (winstverdeling, cash- en stockdividend, dividendbelasting) dekt F2.30.5-02 (bruto/netto dividend, cash- versus stockdividend), maar niet F2.30.5-01 (financieringsresultaat, incidenteel resultaat, vennootschapsbelasting); §16.3 (reserves) raakt G.32.1-03 (algemene reserve, agioreserve); §17.2 (hypothecaire lening) raakt B1.11.3-03, dat het boek zelf aan domein B toeschrijft. Zonder afbakening komen ongeveer 100 groepen als 'niet in deze methode' in het gatenrapport. De beoordelaars blijven naar alle criteria kijken; de afbakening bepaalt alleen wat als gat telt.",
+      "options": [
+        "Alleen domein D2 (D2.20.1, D2.20.2.1–D2.20.2.5, D2.21.1–D2.21.10, D2.22.1, D2.22.2; 18 eenheden) is in scope; koppelingen naar F2.30.5, G.32.1, B1.11.3 enz. blijven bewaard maar het ontbreken ervan telt niet als gat",
+        "D2 plus F2.30.5 (resultaatverdeling en dividend) en G.32.1 (balansposten, o.a. reserves)",
+        "D2 zonder D2.20.1 (financiering van een startende eenmanszaak/vof hoort bij domein B)",
+        "Alle 119 groepen in scope; het gatenrapport toont alles wat deze hoofdstukken niet uitleggen"
+      ],
+      "proposed": "Optie 1: de syllabus plaatst de hele vermogensstof in D2 en dat is wat deze hoofdstukken moeten dekken. F2.30.5 en G.32.1 zouden halve gaten opleveren (vennootschapsbelasting, voorzieningen) die in andere hoofdstukken horen; de koppelingen die §16.3 en §16.5 daar wel leggen blijven zichtbaar. D2.20.1 blijft erin omdat §17.1 crowdfunding en de onderhandse lening noemt.",
+      "impact": "high",
+      "applies_to": [
+        "mapping-judge",
+        "exercise-judge",
+        "mapping-verifier",
+        "exporter"
+      ],
+      "affects_units": [
+        "*"
+      ],
+      "status": "answered",
+      "answer": "Alleen domein D2 (D2.20.1, D2.20.2.1–D2.20.2.5, D2.21.1–D2.21.10, D2.22.1, D2.22.2; 18 eenheden) is in scope; koppelingen naar F2.30.5, G.32.1, B1.11.3 enz. blijven bewaard maar het ontbreken ervan telt niet als gat",
+      "answered_by": "user",
+      "answered_at": "2026-10-26T21:42:29Z",
+      "source_run": "20261026-2133-koppel-vanvlimmeren-bedrijfseconomie-vwo-in-balans",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "vanvlimmeren-bedrijfseconomie-vwo-in-balans"
+    },
+    {
+      "id": "bedrijfsecon-029",
+      "question": "Hoe bepalen we 'leert' (eerste uitleg) nu H1–H15 en H18 niet zijn aangeleverd, terwijl het boek zelf zegt dat sommige stof daar al is uitgelegd?",
+      "context": "Gradatie volgt de boekvolgorde: de eerste paragraaf die een criterium uitlegt krijgt 'leert', latere 'herhaalt'. Het boek verwijst terug naar hoofdstukken die er niet bij zitten: §17.2 'De hypothecaire lening heb je ook al gezien in domein B' (raakt D2.21.5 en B1.11.3-03); §17.3 over obligaties 'Ook hiervan heb je eerder wat gezien in domein B' (D2.21.5, D2.21.8); §20.1 consumentenkrediet 'in hoofdstuk 4 uitgebreid besproken' en staatsobligaties 'in hoofdstuk 6'; §19.4 'Opties hebben we eerder gezien in hoofdstuk 6'; §19.2 'In hoofdstuk 16 en 18 heb je de waardeberekening van een onderneming gezien' (intrinsieke waarde, liquidatiewaarde, rentabiliteitswaarde, DCF). H18 ligt tussen H17 en H19 (gedrukte pagina's 277–291 ontbreken) en kan dus 'leert' zijn voor stof die H19 alleen herhaalt. Raakt minstens 6 paragrafen (§17.2, §17.3, §19.2, §19.4, §20.1, §20.3) en de criteria D2.21.5, D2.21.8, D2.21.2 en D2.22.1.",
+      "options": [
+        "Deze aanlevering is het startpunt: de eerste uitleg hierin is 'leert', met de opmerking 'boek verwijst naar eerdere uitleg in H4/H6/H18' waar de tekst dat zegt",
+        "Waar het boek expliciet naar eerdere uitleg verwijst, wordt de koppeling 'herhaalt' (er is dan geen 'leert' in deze aanlevering)",
+        "Eerst H18 (en zo nodig H4/H6) aanleveren en daarna koppelen"
+      ],
+      "proposed": "Optie 1: H1–H15 zijn domein B en vallen buiten deze koppeling, en de paragrafen hier leggen de stof voor ondernemingen zelfstandig opnieuw uit (§17.2: 'Voor een onderneming verloopt het op dezelfde manier'). Met de opmerking blijft zichtbaar dat de leerling het eerder zag. H18 lijkt vooral over waardering van ondernemingen te gaan, wat grotendeels buiten D2 valt; komt H18 alsnog, dan alleen H19 opnieuw koppelen.",
+      "impact": "high",
+      "applies_to": [
+        "mapping-judge",
+        "mapping-verifier",
+        "exporter"
+      ],
+      "affects_units": [
+        "H17.2",
+        "H17.3",
+        "H19.2",
+        "H19.4",
+        "H20.1",
+        "H20.3",
+        "D2.21.5",
+        "D2.21.8",
+        "D2.21.2",
+        "D2.22.1"
+      ],
+      "status": "answered",
+      "answer": "Deze aanlevering is het startpunt: de eerste uitleg hierin is 'leert', met de opmerking 'boek verwijst naar eerdere uitleg in H4/H6/H18' waar de tekst dat zegt",
+      "answered_by": "user",
+      "answered_at": "2026-10-26T21:42:29Z",
+      "source_run": "20261026-2133-koppel-vanvlimmeren-bedrijfseconomie-vwo-in-balans",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "vanvlimmeren-bedrijfseconomie-vwo-in-balans"
+    },
+    {
+      "id": "bedrijfsecon-030",
+      "question": "Telt een uitgewerkt Voorbeeld in het boek (Gevraagd + Uitwerking) als uitleg van een criterium, of alleen als oefening?",
+      "context": "Het methodeprofiel laat de vraag over kaders open. De kaders in dit boek zijn vrijwel allemaal genummerde Voorbeelden met een uitwerking; de ingest heeft ze in de paragraaftekst laten staan. In de straat telt een uitgewerkt voorbeeld normaal als 'oefent' (toepassen zonder opnieuw uit te leggen). Maar in dit boek is het voorbeeld vaak de enige plek waar een berekening wordt voorgedaan: de conversieprijs en het agio bij conversie staan alleen in Voorbeeld 17.2 (D2.21.6), het netto dividend en het stockdividend in de voorbeelden van §16.5 (F2.30.5-02), de emissie in de voorbeelden van §16.2 (D2.21.4). Als zo'n voorbeeld 'oefent' is, krijgt het rekencriterium geen 'leert' en komt het als 'alleen geoefend' in het gatenrapport. Alle 21 paragrafen bevatten Voorbeelden (1 tot 8 per paragraaf). Het kader 'Je kunt …' is volgens het profiel geen uitleg; dat staat vast.",
+      "options": [
+        "Een Voorbeeld met uitwerking telt als uitleg ('leert') voor een berekening die de lopende tekst niet zelf voordoet; als de tekst de berekening of formule al uitlegt, is het voorbeeld 'oefent'",
+        "Een Voorbeeld telt altijd als uitleg (het is boekstof die de leerling leest)",
+        "Een Voorbeeld telt nooit als uitleg, alleen als oefening"
+      ],
+      "proposed": "Optie 1: in dit boek leert de leerling de rekenmethode juist uit het voorbeeld; een rekencriterium als 'alleen geoefend' melden terwijl het boek het stap voor stap voordoet, zou een vals gat zijn. Waar de tekst de formule al geeft (bijv. 'intrinsieke waarde per aandeel = eigen vermogen / aantal geplaatste aandelen' in §16.4) blijft het voorbeeld 'oefent'.",
+      "impact": "high",
+      "applies_to": [
+        "mapping-judge",
+        "mapping-verifier",
+        "exporter"
+      ],
+      "affects_units": [
+        "H16.1",
+        "H16.2",
+        "H16.3",
+        "H16.4",
+        "H16.5",
+        "H17.1",
+        "H17.2",
+        "H17.3",
+        "H17.4",
+        "H17.5",
+        "H17.6",
+        "H17.7",
+        "H17.8",
+        "H19.1",
+        "H19.2",
+        "H19.3",
+        "H19.4",
+        "H20.1",
+        "H20.2",
+        "H20.3",
+        "H20.4"
+      ],
+      "status": "answered",
+      "answer": "Een Voorbeeld met uitwerking telt als uitleg ('leert') voor een berekening die de lopende tekst niet zelf voordoet; als de tekst de berekening of formule al uitlegt, is het voorbeeld 'oefent'",
+      "answered_by": "user",
+      "answered_at": "2026-10-26T21:42:29Z",
+      "source_run": "20261026-2133-koppel-vanvlimmeren-bedrijfseconomie-vwo-in-balans",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "vanvlimmeren-bedrijfseconomie-vwo-in-balans"
+    },
+    {
+      "id": "bedrijfsecon-031",
+      "question": "Welke termen uit het boek en de opgavenbundel tellen als hetzelfde begrip als de term in de criteria?",
+      "context": "Het boek schrijft 'aandelenkapitaal' (2x 'aandelenvermogen'), de bundel en de antwoorden 'aandelenvermogen' (97x). De criteria gebruiken beide: D2.21.1 'maatschappelijk/geplaatst aandelenkapitaal', F2.30.5-02-a 'nominale aandelenvermogen'. Verder: bundel 'aandelen in portefeuille' (38x) en boek 'ongeplaatst aandelenkapitaal' (6x) tegenover criterium D2.21.1-01-b 'nog niet geplaatst aandelenkapitaal'; boek 'winstreserve' (7x), bundel 'algemene reserve' (40x), criterium G.32.1-03-b 'algemene reserve (ingehouden resultaat)'; boek 'conversieprijs (of conversiekoers)'; boek 'lineaire hypotheek'/'annuïteitenhypotheek' tegenover criterium 'lineaire lening'/'annuïteitenlening'; boek 'korting contant'/'kredietbeperkingstoeslag' tegenover D2.21.10-01-b 'gemiste korting'; boek 'rekening-courant' tegenover 'rekening-courantkrediet'/'bankkrediet'; boek 'winst-en-verliesrekening' tegenover 'resultatenrekening'. Niet gelijk zijn 'liquidatiewaarde' in §19.2 (waarde van de hele onderneming) en in F2.30.6-02 (waarderingsgrondslag van activa); daar beslist de beoordelaar. Raakt de kandidaatselectie en de citaten voor ongeveer 8 criteria-eenheden en vrijwel alle opgaven in H16.",
+      "options": [
+        "Deze paren als woordenlijstregels voor deze methode vastleggen: aandelenvermogen = aandelenkapitaal (ook maatschappelijk/geplaatst); aandelen in portefeuille = ongeplaatst = nog niet geplaatst aandelenkapitaal; winstreserve = algemene reserve; lineaire/annuïteitenhypotheek = lineaire/annuïteitenlening; korting contant = gemiste korting (kosten leverancierskrediet); rekening-courant = rekening-courantkrediet; winst-en-verliesrekening = resultatenrekening",
+        "Alleen aandelenvermogen = aandelenkapitaal (en de geplaatst/maatschappelijk-varianten) vastleggen; de rest weegt de beoordelaar per geval",
+        "Geen woordenlijstregels; de beoordelaars herkennen synoniemen zelf"
+      ],
+      "proposed": "Optie 1: het zijn gangbare synoniemen voor hetzelfde begrip, en zonder regel scoren de opgaven (die 'aandelenvermogen' en 'aandelen in portefeuille' gebruiken) slecht op kandidaten voor D2.21.1. De liquidatiewaarde blijft bewust buiten de lijst.",
+      "impact": "medium",
+      "applies_to": [
+        "mapping-judge",
+        "exercise-judge",
+        "mapping-verifier",
+        "exporter"
+      ],
+      "affects_units": [
+        "D2.21.1",
+        "D2.21.2",
+        "D2.21.6",
+        "D2.21.10",
+        "F2.30.5",
+        "G.32.1",
+        "B1.11.3",
+        "H16.1",
+        "H16.2",
+        "H16.3",
+        "H16.4",
+        "H16.5",
+        "H17.2",
+        "H17.4",
+        "H17.5",
+        "H17.7"
+      ],
+      "status": "answered",
+      "answer": "Deze paren als woordenlijstregels voor deze methode vastleggen: aandelenvermogen = aandelenkapitaal (ook maatschappelijk/geplaatst); aandelen in portefeuille = ongeplaatst = nog niet geplaatst aandelenkapitaal; winstreserve = algemene reserve; lineaire/annuïteitenhypotheek = lineaire/annuïteitenlening; korting contant = gemiste korting (kosten leverancierskrediet); rekening-courant = rekening-courantkrediet; winst-en-verliesrekening = resultatenrekening",
+      "answered_by": "user",
+      "answered_at": "2026-10-26T21:42:29Z",
+      "source_run": "20261026-2133-koppel-vanvlimmeren-bedrijfseconomie-vwo-in-balans",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "vanvlimmeren-bedrijfseconomie-vwo-in-balans"
+    },
+    {
+      "id": "bedrijfsecon-032",
+      "question": "Bij welke paragraaf horen opgaven die twee paragrafen noemen of onder een andere paragraaf staan dan die de stof uitlegt?",
+      "context": "Opgaven worden gekoppeld aan de paragraaf in de kop; voor een opgave worden alleen criteria aangeboden die in die paragraaf of eerder zijn uitgelegd. Drie opgaven noemen twee paragrafen en zijn nu aan de eerste gehangen: 16-18 (§16.2 en §16.5) gaat in alle vier deelvragen over winstverdeling en cash- of stockdividend (§16.5); 16-17 (§16.4 en §16.5) vraagt de intrinsieke waarde (a) maar ook de toevoeging aan de reserve, cashdividend en stockdividend (b–d, §16.5); 17-13 (§17.5 en §17.6) vraagt of vooruitbetaald abonnementsgeld afnemerskrediet is (§17.6). Aan de eerste paragraaf gehangen krijgen ze de criteria van de tweede, latere paragraaf niet aangeboden, of ze komen als 'oefent vóór uitleg' in het rapport. Daarnaast staan de agio- en emissieopgaven 16-7 t/m 16-9 onder §16.4, terwijl agio in §16.2 wordt uitgelegd; omdat §16.2 eerder komt, worden die criteria wel aangeboden. Raakt 3 opgaven (13 deelvragen) direct en 16-7 t/m 16-9 (12 deelvragen) via de melding.",
+      "options": [
+        "Opgaven met twee paragrafen hangen aan de laatst genoemde paragraaf (16-17 en 16-18 → §16.5, 17-13 → §17.6); 16-7 t/m 16-9 blijven onder §16.4 en worden gekoppeld aan de criteria die §16.2 uitlegt, zonder melding",
+        "Opgaven met twee paragrafen blijven aan de eerste paragraaf hangen; de beoordelaars krijgen ook de criteria van de tweede paragraaf aangeboden",
+        "Alles laten zoals de ingest het deed (eerste paragraaf); meldingen 'oefent vóór uitleg' accepteren"
+      ],
+      "proposed": "Optie 1: een leerling maakt een opgave met twee paragrafen pas als beide behandeld zijn, dus de laatste paragraaf is het moment van oefenen. Zo is geen extra straatlogica nodig en ontstaan geen valse 'oefent vóór uitleg'-meldingen. 16-7 t/m 16-9 onder §16.4 is een keuze van de school (oefenen na de uitleg) en geen probleem.",
+      "impact": "medium",
+      "applies_to": [
+        "method-ingest",
+        "exercise-judge",
+        "mapping-verifier",
+        "exporter"
+      ],
+      "affects_units": [
+        "H16.4-opg16-17",
+        "H16.2-opg16-18",
+        "H17.5-opg17-13",
+        "H16.4-opg16-7",
+        "H16.4-opg16-8",
+        "H16.4-opg16-9"
+      ],
+      "status": "answered",
+      "answer": "Opgaven met twee paragrafen hangen aan de laatst genoemde paragraaf (16-17 en 16-18 → §16.5, 17-13 → §17.6); 16-7 t/m 16-9 blijven onder §16.4 en worden gekoppeld aan de criteria die §16.2 uitlegt, zonder melding",
+      "answered_by": "user",
+      "answered_at": "2026-10-26T21:42:29Z",
+      "source_run": "20261026-2133-koppel-vanvlimmeren-bedrijfseconomie-vwo-in-balans",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "vanvlimmeren-bedrijfseconomie-vwo-in-balans"
+    },
+    {
+      "id": "bedrijfsecon-033",
+      "question": "Hoe melden we D2-criteria die deze hoofdstukken niet uitleggen omdat het boek ze naar domein G verschuift (hefboomformule, liquiditeits- en rendementseis) of nergens noemt (duurzaamheidseisen)?",
+      "context": "In de tekst komen niet voor: de hefboomformule en de berekening van de rentabiliteit van het eigen vermogen (D2.22.1-01, 3 criteria); §19.1 noemt de hefboomfactor alleen in woorden en zegt 'In domein G gaan we daar dieper op in'. Bij de voorwaarden van vermogensverschaffers (D2.22.2) noemt §19.3 de solvabiliteitseis en de borgstelling, maar 'De eisen over winstgevendheid en liquiditeit bespreken we in domein G' (D2.22.2-01-c); duurzaamheidseisen van vermogensverschaffers (D2.22.2-01-d) staan nergens. De risico's van veel vreemd vermogen (D2.22.1-02) staan wel kwalitatief in §19.1. Raakt 2 eenheden, 3 groepen, ongeveer 5 criteria.",
+      "options": [
+        "In scope laten en als gat melden ('niet in deze methode'), met de opmerking 'boek verwijst naar domein G' waar dat zo is",
+        "Uit de scope halen: de uitleg wordt in de domein G-hoofdstukken verwacht en telt hier niet als gat",
+        "In scope laten en als gat melden zonder opmerking"
+      ],
+      "proposed": "Optie 1: de syllabus zet deze criteria in D2, dus de docent moet zien dat ze in dit deel ontbreken; de opmerking laat zien waar het boek ze wel behandelt, zodat de docent kan nagaan of dat op tijd is.",
+      "impact": "medium",
+      "applies_to": [
+        "mapping-judge",
+        "mapping-verifier",
+        "exporter"
+      ],
+      "affects_units": [
+        "D2.22.1",
+        "D2.22.2"
+      ],
+      "status": "answered",
+      "answer": "In scope laten en als gat melden ('niet in deze methode'), met de opmerking 'boek verwijst naar domein G' waar dat zo is",
+      "answered_by": "user",
+      "answered_at": "2026-10-26T21:42:29Z",
+      "source_run": "20261026-2133-koppel-vanvlimmeren-bedrijfseconomie-vwo-in-balans",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "vanvlimmeren-bedrijfseconomie-vwo-in-balans"
+    },
+    {
+      "id": "bedrijfsecon-034",
+      "question": "Staat er op de niet-gefotografeerde pagina's 264–265 en 300–301 uitleg die we moeten meenemen?",
+      "context": "De foto's springen van p. 263 (einde §16.5) naar p. 266 (§17.1) en van p. 299 (einde §19.4) naar p. 302 (§20.1); pagina's 277–291 zijn H18 (zie de vraag over eerdere hoofdstukken). §16.5 eindigt op p. 263 met een afgeronde opsomming van voor- en nadelen van stockdividend, dus 264–265 zijn waarschijnlijk een samenvatting of de opener van H17, en 300–301 de opener van H20. Als er toch uitleg staat (bijv. een vervolg op het dividend of een begrippenlijst), kan een criterium ten onrechte als gat verschijnen. Raakt §16.5, §17.1, §19.4 en §20.1; verder zijn alle pagina's leesbaar (geen [?] in de tekst).",
+      "options": [
+        "Aannemen dat het samenvatting/opener is zonder nieuwe uitleg; koppelen op wat er is",
+        "Eerst de pagina's fotograferen en toevoegen",
+        "Koppelen op wat er is, maar §16.5 en §19.4 in het rapport markeren als 'mogelijk onvolledig'"
+      ],
+      "proposed": "Optie 1: de paragrafen ervoor eindigen afgerond en de volgende beginnen met een nieuwe paragraafkop; het risico op gemiste uitleg is klein. Een samenvatting zou hooguit 'noemt' opleveren en verandert de gradatie niet.",
+      "impact": "low",
+      "applies_to": [
+        "method-ingest",
+        "mapping-judge",
+        "mapping-verifier"
+      ],
+      "affects_units": [
+        "H16.5",
+        "H17.1",
+        "H19.4",
+        "H20.1"
+      ],
+      "status": "answered",
+      "answer": "Aannemen dat het samenvatting/opener is zonder nieuwe uitleg; koppelen op wat er is",
+      "answered_by": "user",
+      "answered_at": "2026-10-26T21:42:29Z",
+      "source_run": "20261026-2133-koppel-vanvlimmeren-bedrijfseconomie-vwo-in-balans",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "vanvlimmeren-bedrijfseconomie-vwo-in-balans"
+    },
+    {
+      "id": "bedrijfsecon-035",
+      "question": "Koppelen we ook de paragrafen die vrijwel geen syllabuscriterium raken (§17.8 Leasing, §19.3 Off-balance financiering, §19.4 Opties en termijncontracten)?",
+      "context": "Geen criterium noemt leasing, off-balance financiering, opties, termijncontracten of swaps. Toch raken deze paragrafen zijdelings criteria: §19.3 noemt de solvabiliteitseis en borgstelling (D2.22.2), §17.8 en §19.3 noemen financieringsmogelijkheden (D2.21.7), §19.4 noemt het onderpand (margin call). Opgave 17-14 (§17.8, leasing) wordt dit jaar niet gemaakt en heeft geen antwoorden. Meekoppelen kost per paragraaf twee beoordelingen; weglaten kan een 'noemt' of 'herhaalt' missen.",
+      "options": [
+        "Alle 21 paragrafen koppelen; paragrafen zonder koppeling melden als 'stof buiten syllabus'",
+        "§19.4 overslaan, §17.8 en §19.3 wel koppelen",
+        "§17.8, §19.3 en §19.4 overslaan; opgave 17-14 ook overslaan"
+      ],
+      "proposed": "Optie 1, maar opgave 17-14 overslaan in deel B (wordt niet gemaakt, geen antwoorden): het overzicht van wat het boek buiten de syllabus behandelt is voor de docent nuttig, en §19.3 levert waarschijnlijk een echte koppeling voor D2.22.2.",
+      "impact": "low",
+      "applies_to": [
+        "mapping-judge",
+        "exercise-judge",
+        "exporter"
+      ],
+      "affects_units": [
+        "H17.8",
+        "H19.3",
+        "H19.4",
+        "H17.8-opg17-14"
+      ],
+      "status": "answered",
+      "answer": "Alle 21 paragrafen koppelen; paragrafen zonder koppeling melden als 'stof buiten syllabus'",
+      "answered_by": "user",
+      "answered_at": "2026-10-26T21:42:29Z",
+      "source_run": "20261026-2133-koppel-vanvlimmeren-bedrijfseconomie-vwo-in-balans",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "vanvlimmeren-bedrijfseconomie-vwo-in-balans"
+    },
+    {
+      "id": "bedrijfsecon-036",
+      "question": "Hoe melden we in deel B de criteria die alleen in H19 en H20 worden uitgelegd, nu de bundel daar geen opgaven heeft ('zie Classroom')?",
+      "context": "Het profiel zegt dat deel B alleen H16 en H17 dekt. De criteria over de vermogensmarkt, toezichthouders, koersvorming en nieuws (D2.20.2.2 t/m D2.20.2.5) en over vermogensstructuur en voorwaarden (D2.22.1, D2.22.2) worden alleen in H19/H20 uitgelegd en krijgen dus geen opgavenkoppeling. Zonder afspraak verschijnen ze als 'niet geoefend' en 'Bloom niet bereikt' tussen de echte oefengaten van H16/H17. Raakt 6 eenheden, 8 groepen.",
+      "options": [
+        "Melden als 'niet geoefend (opgaven in Classroom, niet aangeleverd)', apart van de oefengaten in H16/H17",
+        "Niet melden: deel B gaat alleen over criteria die in H16/H17 worden uitgelegd",
+        "Gewoon melden als 'niet geoefend', zonder onderscheid"
+      ],
+      "proposed": "Optie 1: de melding blijft zichtbaar (de Classroom-opgaven kunnen later nog worden aangeleverd), maar vertroebelt de echte oefengaten van H16/H17 niet.",
+      "impact": "low",
+      "applies_to": [
+        "exercise-judge",
+        "mapping-verifier",
+        "exporter"
+      ],
+      "affects_units": [
+        "D2.20.2.2",
+        "D2.20.2.3",
+        "D2.20.2.4",
+        "D2.20.2.5",
+        "D2.22.1",
+        "D2.22.2"
+      ],
+      "status": "answered",
+      "answer": "Melden als 'niet geoefend (opgaven in Classroom, niet aangeleverd)', apart van de oefengaten in H16/H17",
+      "answered_by": "user",
+      "answered_at": "2026-10-26T21:42:29Z",
+      "source_run": "20261026-2133-koppel-vanvlimmeren-bedrijfseconomie-vwo-in-balans",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "vanvlimmeren-bedrijfseconomie-vwo-in-balans"
+    },
+    {
+      "id": "bedrijfsecon-037",
+      "question": "Criterium D2.21.2-01-b zegt dat een aandeel niet onder de nominale waarde mag worden uitgegeven; het boek (§16.2) staat emissie beneden pari toe als de nv de aandelen aan een bank overdraagt. Hoe gaan we daarmee om?",
+      "context": "§16.2: 'Als een nv aandelen plaatst beneden pari, is de emissiekoers lager dan de nominale waarde. Dit mag alleen maar wanneer de nv de aandelen overdraagt aan een bank.' (vgl. art. 2:80 lid 2 BW). §17.3 noemt disagio bij obligaties. Het deel 'mag niet onder nominale waarde' van D2.21.2-01-b heeft daardoor in deze methode geen uitleg, en de opgaven in H16 kunnen het tegendeel vragen.",
+      "options": [
+        "Criterium in de volgende /generate-run aanscherpen: 'niet onder de nominale waarde, behalve bij plaatsing via een bank (art. 2:80 lid 2 BW)'; koppeling nu laten staan met opmerking 'boek noemt uitzondering via bank'",
+        "Criterium laten staan; bij de koppeling opmerken 'boek wijkt af: beneden pari via bank toegestaan' en het deel als gat melden",
+        "Het deel 'mag niet onder de nominale waarde' negeren bij het koppelen"
+      ],
+      "proposed": "Optie 1: het boek volgt de wet, het criterium vereenvoudigt te sterk; zonder aanpassing leren leerlingen iets wat de methode tegenspreekt.",
+      "impact": "medium",
+      "applies_to": [
+        "generator",
+        "mapping-judge",
+        "exercise-judge",
+        "mapping-verifier",
+        "exporter"
+      ],
+      "affects_units": [
+        "D2.21.2",
+        "H16.2"
+      ],
+      "status": "open",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null,
+      "source_run": "20261026-2133-koppel-vanvlimmeren-bedrijfseconomie-vwo-in-balans",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "vanvlimmeren-bedrijfseconomie-vwo-in-balans"
+    },
+    {
+      "id": "bedrijfsecon-038",
+      "question": "Voorbeeld 17.3 (§17.5) berekent de kosten van leverancierskrediet in procenten per jaar (gemiste korting omgerekend naar jaarbasis); geen criterium vraagt die berekening. Hoe melden we dit?",
+      "context": "Geen kandidaat-criterium past op de berekening. D2.21.10-01-b noemt de gemiste korting als kosten (onthouden), D2.21.7-01-a de kosten als voor-/nadeel. Het boek: 'Door de kosten van het leverancierskrediet in procenten per jaar te berekenen, kunnen we deze vorm van kredietverlening vergelijken met andere kredietvormen'. De opgaven bij §17.5 vragen dit waarschijnlijk ook.",
+      "options": [
+        "Als 'stof buiten syllabus (berekening)' melden; D2.21.10-01-b blijft bij §17.5 leert voor het noemen van de kosten",
+        "In de volgende /generate-run een criterium toevoegen onder D2.21.10 of D2.21.7 ('berekent de kosten van leverancierskrediet in procenten per jaar') als de syllabus dat dekt",
+        "De berekening als oefening van D2.21.7-01-a (kosten vergelijken) tellen"
+      ],
+      "proposed": "Optie 1 voor deze run; laat de docent in de syllabus nagaan of optie 2 nodig is.",
+      "impact": "low",
+      "applies_to": [
+        "mapping-judge",
+        "exercise-judge",
+        "exporter"
+      ],
+      "affects_units": [
+        "D2.21.10",
+        "D2.21.7",
+        "H17.5"
+      ],
+      "status": "open",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null,
+      "source_run": "20261026-2133-koppel-vanvlimmeren-bedrijfseconomie-vwo-in-balans",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "vanvlimmeren-bedrijfseconomie-vwo-in-balans"
+    },
+    {
+      "id": "bedrijfsecon-039",
+      "question": "Tellen deze boektermen als hetzelfde begrip als de criteriumterm (aanvulling op bedrijfsecon-031)?",
+      "context": "De kandidaatselectie miste door termverschil: het boek schrijft 'interestvoet / interestpercentage / rente op de obligatie' waar criteria 'couponrente' hebben (D2.20.2.4-02, D2.21.8-01-b, D2.21.9-01-a); 'rentestand (voor nieuw uit te geven obligaties) / marktrentestand / rentepercentage op de kapitaalmarkt' waar criteria 'marktrente' hebben (§17.3, §20.1, §20.3, §20.4); 'openbare / onderhandse kapitaalmarkt' waar D2.20.2.2-01-b 'openbaar / onderhands vermogen' heeft; 'bankkrediet' in §17.7 tegenover 'rekening-courantkrediet'. Gevolg in deze run: §20.3 niet gekoppeld aan D2.20.2.4-02-b, §17.7 niet aan D2.21.7-01-a/b.",
+      "options": [
+        "Als woordenlijstregels vastleggen: couponrente = interestvoet/interestpercentage/rente op de obligatie; marktrente = rentestand/marktrentestand/rentepercentage op de kapitaalmarkt; openbaar/onderhands vermogen = openbare/onderhandse kapitaalmarkt; bankkrediet = rekening-courantkrediet",
+        "Alleen couponrente en marktrente vastleggen",
+        "Geen regels; de beoordelaars herkennen synoniemen zelf"
+      ],
+      "proposed": "Optie 1: gangbare synoniemen; zonder regel scoren §17.7 en §20.3 te laag op de criteria die ze werkelijk uitleggen.",
+      "impact": "low",
+      "applies_to": [
+        "mapping-judge",
+        "exercise-judge",
+        "mapping-verifier"
+      ],
+      "affects_units": [
+        "D2.20.2.2",
+        "D2.20.2.4",
+        "D2.21.7",
+        "D2.21.8",
+        "D2.21.9",
+        "H17.3",
+        "H17.7",
+        "H20.1",
+        "H20.3",
+        "H20.4"
+      ],
+      "status": "open",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null,
+      "source_run": "20261026-2133-koppel-vanvlimmeren-bedrijfseconomie-vwo-in-balans",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "vanvlimmeren-bedrijfseconomie-vwo-in-balans"
+    },
+    {
+      "id": "bedrijfsecon-040",
+      "question": "Opgaven 17-8a, 17-9a en 17-9c laten de conversiekoers van een converteerbare obligatie berekenen (in euro's en in procenten); geen criterium vraagt die berekening. Hoe melden we dit?",
+      "context": "D2.20.2.1-01-d (uitleggen dat converteerbare obligaties bij conversie EV worden) en D2.21.6-01-a..d (verschil en voor- en nadelen) vragen geen berekening; de syllabus noemt bij eindterm 21 alleen het begrip 'converteerbare obligatielening'. De balansmutaties bij conversie (17-8b, 17-9b/d) passen wel bij D2.20.2.1-01-d en D2.21.4-01-c.",
+      "options": [
+        "Als 'oefenstof buiten syllabus (berekening)' melden",
+        "In de volgende /generate-run een criterium toevoegen onder D2.21.6 ('berekent de conversiekoers en de balansmutaties bij conversie') als de docent dat bij eindterm 21 vindt horen",
+        "De berekening als oefening van D2.20.2.1-01-d tellen"
+      ],
+      "proposed": "Optie 1 voor deze run (zelfde lijn als bedrijfsecon-038); de docent beoordeelt of optie 2 nodig is.",
+      "impact": "low",
+      "applies_to": [
+        "exercise-judge",
+        "mapping-verifier",
+        "exporter"
+      ],
+      "affects_units": [
+        "D2.20.2.1",
+        "D2.21.6",
+        "H17.4"
+      ],
+      "status": "open",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null,
+      "source_run": "20261026-2133-koppel-vanvlimmeren-bedrijfseconomie-vwo-in-balans",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "vanvlimmeren-bedrijfseconomie-vwo-in-balans"
+    },
+    {
+      "id": "bedrijfsecon-041",
+      "question": "Voor welke syllabusversie zijn de examens 2025 en 2026 geschreven, zodat dat bij elk examen in de examenbank vermeld wordt?",
+      "context": "Beide examens worden gekoppeld aan de criteria van de syllabus vwo 2028 versie 2, maar zijn geschreven voor de syllabus van hun eigen examenjaar. In de syllabus 2028 vallen de domeinen C1, D1, E1 en E3 alleen onder het schoolexamen; voor die domeinen en voor domein A (vaardigheden) zijn geen criteria gemaakt. De notitie bij elk examen legt uit waarom scorepunten 'buiten huidige syllabus' kunnen vallen. Raakt 2 examens (59 vragen, 124 punten).",
+      "options": [
+        "Per examen het examenjaar noemen: 'geschreven voor de CE-syllabus bedrijfseconomie vwo 2025' en '... vwo 2026'; gekoppeld aan syllabus 2028 versie 2",
+        "De docent geeft per examen de precieze syllabusversie (jaar en versienummer) op",
+        "Geen notitie; alleen het examenjaar staat in de bank"
+      ],
+      "proposed": "Optie 1: het examenjaar bepaalt de syllabus, dus vwo-2025-tv1 = CE-syllabus vwo 2025 en vwo-2026-tv1 = CE-syllabus vwo 2026, beide gekoppeld aan de criteria van syllabus 2028 versie 2. Een precies versienummer kan later nog worden aangevuld.",
+      "impact": "medium",
+      "applies_to": [
+        "exam-judge",
+        "verifier",
+        "exporter"
+      ],
+      "affects_units": [
+        "vwo-2025-tv1",
+        "vwo-2026-tv1"
+      ],
+      "status": "answered",
+      "answer": "Per examen het examenjaar noemen: 'geschreven voor de CE-syllabus bedrijfseconomie vwo 2025' en '... vwo 2026'; gekoppeld aan syllabus 2028 versie 2",
+      "answered_by": "user",
+      "answered_at": "2026-10-27T20:21:13Z",
+      "source_run": "20261027-1812-examen-bedrijfseconomie",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": null
+    },
+    {
+      "id": "bedrijfsecon-042",
+      "question": "Hoe koppelen we scorepunten over onderwerpen die de criteria van 2028 niet noemen, maar die wel een prestatie vragen die een criterium in een andere context beschrijft?",
+      "context": "14 scorepunten in 9 vragen (14 punten) gaan over onderwerpen zonder eigen criterium. 2025: vr 2 resultaatmarge EBIT/omzet en 'graaiflatie' (1), vr 3 inkoop van eigen aandelen, berekend als stijging van het resultaat per aandeel (2), vr 4 aandeleninkoop en beleggersrendement (2), vr 14 off-balance-financiering (1), vr 18 risicovolgorde met call-opties naast aandelen, beleggingsfonds en sparen (1), vr 20 overheidsgarantie op leningen (1). 2026: vr 1 SWOT-analyse (2), vr 5 macht van afnemers uit het vijfkrachtenmodel van Porter (2), vr 6 risico's van een bedrijfsmodel (2). SWOT en Porter staan niet in de CE-syllabus 2028 (mogelijk schoolexamenstof in E1/C1). Bij vr 3, 4, 18 en 20 zit de gevraagde prestatie wel in een criterium (resultaat per aandeel G.32.2-04-a; gevolgen van een converteerbare obligatie of beleggersrendement D2.21.6-01-b/G.32.2-04-d; risico van beleggingsvormen B1.11.2-04-c; zekerheden voor vermogensverschaffers D2.22.2-01-a). Bij SWOT, Porter, off-balance en resultaatmarge niet.",
+      "options": [
+        "Koppelen als de prestatie van het scorepunt in een criterium staat, ook in een nieuwe context (vr 3, 4, 18, 20 gekoppeld); alleen scorepunten waarvan de prestatie zelf ontbreekt (SWOT, Porter, bedrijfsmodel, off-balance, resultaatmarge) als 'buiten huidige syllabus', met het onderwerp in de notitie",
+        "Elk scorepunt over een onderwerp dat niet in de criteria staat als 'buiten huidige syllabus', ook als een verwante prestatie wel in een criterium staat",
+        "Altijd koppelen aan het dichtstbijzijnde criterium; 'buiten huidige syllabus' alleen als er geen enkel criterium in de buurt komt"
+      ],
+      "proposed": "Optie 1: de bank laat dan zien welke 2028-criteria deze vragen nog oefenen, terwijl de echt vervallen stof (SWOT, Porter, off-balance, resultaatmarge) zichtbaar blijft als 'buiten huidige syllabus', met als notitie 'onderwerp niet in de CE-syllabus 2028'.",
+      "impact": "high",
+      "applies_to": [
+        "exam-judge",
+        "verifier",
+        "exporter"
+      ],
+      "affects_units": [
+        "vwo-2025-tv1-q2",
+        "vwo-2025-tv1-q3",
+        "vwo-2025-tv1-q4",
+        "vwo-2025-tv1-q14",
+        "vwo-2025-tv1-q18",
+        "vwo-2025-tv1-q20",
+        "vwo-2026-tv1-q1",
+        "vwo-2026-tv1-q5",
+        "vwo-2026-tv1-q6"
+      ],
+      "status": "answered",
+      "answer": "Koppelen als de prestatie van het scorepunt in een criterium staat, ook in een nieuwe context (vr 3, 4, 18, 20 gekoppeld); alleen scorepunten waarvan de prestatie zelf ontbreekt (SWOT, Porter, bedrijfsmodel, off-balance, resultaatmarge) als 'buiten huidige syllabus', met het onderwerp in de notitie",
+      "answered_by": "user",
+      "answered_at": "2026-10-27T20:21:13Z",
+      "source_run": "20261027-1812-examen-bedrijfseconomie",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": null
+    },
+    {
+      "id": "bedrijfsecon-043",
+      "question": "Hoe koppelen we scorepunten die een beoordelingsmodel uit de eigen informatiebron van het examen toepassen, zoals de Collin Credit Score?",
+      "context": "2026 opgave 5 (Personal Gym) geeft in informatiebron 5 de Collin Credit Score: punten voor zekerheden, solvabiliteit (VV/TV) en afloscapaciteit, opgeteld tot een waardering. Vr 23 (1 scorepunt) berekent VV/TV en leest de waardering af; vr 26 (1 scorepunt, 2 punten) berekent de afloscapaciteit (geen criterium noemt dit kengetal); vr 27 (2 scorepunten) telt de punten op en trekt een conclusie over de financiering. Samen 4 scorepunten, 5 punten. Zulke stappen (informatie uit een bron verwerken, een gegeven norm toepassen, concluderen) horen bij domein A Vaardigheden, waarvoor geen criteria zijn gemaakt. Zonder afspraak verschijnen ze in het overzicht als 'buiten huidige syllabus', alsof de stof vervallen is. Hetzelfde patroon in kleinere vorm: 2025 vr 13 (voorwaarden a–c uit de casus).",
+      "options": [
+        "De rekenstap koppelen aan het kengetalcriterium (vr 23 aan G.32.2-02-b solvabiliteitsratio's); de afloscapaciteit (vr 26) en het alleen aflezen, optellen of concluderen (vr 27) niet koppelen, met als notitie 'vaardigheid uit domein A (geen criteria), geen vervallen stof'",
+        "Zoals optie 1, maar het conclusie-scorepunt van vr 27 koppelen aan het criterium over de eisen van vermogensverschaffers (D2.22.2-01-c)",
+        "Alle scorepunten bij het model als 'buiten huidige syllabus', zonder onderscheid"
+      ],
+      "proposed": "Optie 1: wat een criterium echt vraagt (VV/TV berekenen) telt mee; het model zelf is examenstof van dat jaar en hoort niet als vervallen syllabusstof te worden gemeld. De notitie past in de huidige vorm van het overzicht; een aparte rij 'domein A' zou een aanpassing van de straat vragen.",
+      "impact": "medium",
+      "applies_to": [
+        "exam-judge",
+        "verifier",
+        "exporter"
+      ],
+      "affects_units": [
+        "vwo-2026-tv1-q23",
+        "vwo-2026-tv1-q26",
+        "vwo-2026-tv1-q27",
+        "vwo-2025-tv1-q13"
+      ],
+      "status": "answered",
+      "answer": "De rekenstap koppelen aan het kengetalcriterium (vr 23 aan G.32.2-02-b solvabiliteitsratio's); de afloscapaciteit (vr 26) en het alleen aflezen, optellen of concluderen (vr 27) niet koppelen, met als notitie 'vaardigheid uit domein A (geen criteria), geen vervallen stof'",
+      "answered_by": "user",
+      "answered_at": "2026-10-27T20:21:13Z",
+      "source_run": "20261027-1812-examen-bedrijfseconomie",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": null
+    },
+    {
+      "id": "bedrijfsecon-044",
+      "question": "Aan welk criterium koppelen we berekeningen met de somformule van de meetkundige reeks: contante waarde en eindwaarde van een reeks, of de criteria van de annuïteitenlening?",
+      "context": "2025 vr 19 (3 scorepunten, 4 punten): eindwaarde van een spaarsaldo en van maandelijkse opnames met de somformule (formuleblad), met een conclusie. 2026 vr 28 (eerste scorepunt, 2 punten): restschuld van een hypothecaire annuïteitenlening als contante waarde van de resterende annuïteiten met de somformule. De berekening past bij B1.11.2-03-d (contante waarde en eindwaarde van een reeks gelijke bedragen); de context van 2026 vr 28 past ook bij B1.11.3-03-c (verdeling van de annuïteit en schuldrest bij een annuïteitenlening). 2026 vr 24 (2 scorepunten) haalt interest en aflossing uit een annuïteitentabel. Raakt 3 vragen, 6 scorepunten.",
+      "options": [
+        "Elke berekening met de somformule aan B1.11.2-03-d, ook de restschuld van een annuïteitenlening (B1.11.3-03-c dan als 'raakt ook'); interest en aflossing uit een tabel of aflosschema (2026 vr 24) aan B1.11.3-03-c",
+        "De context bepaalt: lening of hypotheek aan B1.11.3-03-c, sparen aan B1.11.2-03-d",
+        "Per scorepunt laten beoordelen, zonder afspraak"
+      ],
+      "proposed": "Optie 1: het scorepunt beloont de berekening met de reeks, en die prestatie beschrijft B1.11.2-03-d. Zo blijft zichtbaar dat het examen de contante waarde van een reeks toetst, en blijft B1.11.3-03-c voor de schuldrest via het aflosschema.",
+      "impact": "medium",
+      "applies_to": [
+        "exam-judge",
+        "verifier"
+      ],
+      "affects_units": [
+        "vwo-2025-tv1-q19",
+        "vwo-2026-tv1-q28",
+        "vwo-2026-tv1-q24"
+      ],
+      "status": "answered",
+      "answer": "Elke berekening met de somformule aan B1.11.2-03-d, ook de restschuld van een annuïteitenlening (B1.11.3-03-c dan als 'raakt ook'); interest en aflossing uit een tabel of aflosschema (2026 vr 24) aan B1.11.3-03-c",
+      "answered_by": "user",
+      "answered_at": "2026-10-27T20:21:13Z",
+      "source_run": "20261027-1812-examen-bedrijfseconomie",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": null
+    },
+    {
+      "id": "bedrijfsecon-045",
+      "question": "Welke termen uit de examens tellen als hetzelfde begrip als de term in de criteria, en welke juist niet?",
+      "context": "De examens gebruiken soms een andere term of een variant van een kengetal dan de criteria. Voorgestelde paren: 'resultaat voor vennootschapsbelasting' = 'resultaat voor belasting' bij bv/nv (2025 vr 1 en 3, 2026 vr 15); het resultaat vóór vennootschapsbelasting per aandeel (2025 vr 3) telt als 'resultaat per aandeel' (G.32.2-04-a), al legt bedrijfsecon-026 dat kengetal vast als na belasting; 'kostprijs per kg kaasrijping' = de integrale kostprijs van een dienst (2026 vr 7 en 8); 'leverancierskrediet'/'afnemerskrediet' vanuit het eigen bedrijf = 'ontvangen leverancierskrediet'/'ontvangen afnemerskrediet' (2026 vr 17); 'hypotheekrecht' = 'recht van hypotheek' (2026 vr 21). Niet gelijk: 'resultaatmarge' (EBIT/omzet, 2025 vr 2) is niet de 'winstmarge' van F2.30.3-02-b (opslag op de kostprijs). Raakt 8 vragen in beide examens.",
+      "options": [
+        "Alle paren vastleggen zoals voorgesteld, inclusief de variant van het resultaat per aandeel en 'resultaatmarge is niet winstmarge'",
+        "Vastleggen zonder de variant van het resultaat per aandeel: 2025 vr 3 dan niet aan G.32.2-04-a, omdat bedrijfsecon-026 'na belasting' zegt",
+        "Geen woordenlijst; per scorepunt laten beoordelen"
+      ],
+      "proposed": "Optie 1: de leerling voert dezelfde berekening uit (resultaat gedeeld door het aantal geplaatste aandelen); de variant wordt in de notitie bij het scorepunt genoemd. Het expliciete 'niet gelijk' voor resultaatmarge voorkomt een koppeling die alleen op het woord 'marge' rust.",
+      "impact": "medium",
+      "applies_to": [
+        "exam-judge",
+        "verifier"
+      ],
+      "affects_units": [
+        "vwo-2025-tv1-q1",
+        "vwo-2025-tv1-q2",
+        "vwo-2025-tv1-q3",
+        "vwo-2026-tv1-q7",
+        "vwo-2026-tv1-q8",
+        "vwo-2026-tv1-q15",
+        "vwo-2026-tv1-q17",
+        "vwo-2026-tv1-q21"
+      ],
+      "status": "answered",
+      "answer": "Alle paren vastleggen zoals voorgesteld, inclusief de variant van het resultaat per aandeel en 'resultaatmarge is niet winstmarge'",
+      "answered_by": "user",
+      "answered_at": "2026-10-27T20:21:13Z",
+      "source_run": "20261027-1812-examen-bedrijfseconomie",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": null
+    },
+    {
+      "id": "bedrijfsecon-046",
+      "question": "Hoe koppelen we een scorepunt dat gelijkwaardig meerdere zustercriteria toetst, of waarvan de alternatieve modelantwoorden verschillende criteria raken?",
+      "context": "Het model staat één criterium per scorepunt toe; de rest gaat naar also_touches. Dat gaat mis bij: 2026 vr 2 (één 2p-scorepunt over immateriële, materiële en financiële vaste activa = G.32.1-01-b/c/d; alle 2 punten landen op -b), 2025 vr 4 (twee uitwisselbare scorepunten; antwoordroutes via beurskoers D2.20.2.4-01-a of dividend per aandeel G.32.2-04-a), 2025 vr 30 (route promotie- of productbeleid: E2.25.3-02-d of E2.25.3-01-d). Het puntengewicht per criterium in de examenbank is daardoor scheef. Raakt 3 vragen (6 punten) in 2 examens.",
+      "options": [
+        "De punten van het scorepunt naar rato verdelen over de gelijkwaardige criteria (nieuw veld: weights); alternatieve routes blijven één criterium, de meest gegeven route",
+        "Eén criterium houden (eerste of meest gegeven route), de andere in also_touches; de examenbank telt also_touches voor 0 punten mee in een aparte kolom 'raakt ook'",
+        "Koppelen aan de leerdoelgroep (group_id) in plaats van een criterium als alle betrokken criteria uit dezelfde groep komen"
+      ],
+      "proposed": "Optie 2: past in het huidige model zonder schemawijziging en houdt de puntentelling eenduidig. De docent ziet via 'raakt ook' dat G.32.1-01-c/d en de andere route ook getoetst worden. Optie 1 is preciezer maar vraagt een aanpassing van de straat (24_mappings en export).",
+      "impact": "low",
+      "applies_to": [
+        "exam-judge",
+        "verifier",
+        "exporter"
+      ],
+      "affects_units": [
+        "vwo-2026-tv1-q2",
+        "vwo-2025-tv1-q4",
+        "vwo-2025-tv1-q30"
+      ],
+      "status": "open",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null,
+      "source_run": "20261027-1812-examen-bedrijfseconomie",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": null
+    },
+    {
+      "id": "bedrijfsecon-047",
+      "question": "Moeten de rekenvaardigheden uit domein A die de examens elk jaar los toetsen een eigen (vaardigheids)criterium krijgen, zodat ze niet als 'zonder criterium' in de examenbank staan?",
+      "context": "Per examen gaat 3 tot 6 punten naar zuiver rekenwerk zonder bedrijfseconomisch criterium: 2025 vr 21 (kwartaalresultaat uit cumulatieve cijfers, 2p), 2025 vr 13-s1 (voorwaarde toetsen, 1p); 2026 vr 12-s2/s3 (resultaat terugrekenen met procentuele veranderingen en procentuele daling, 2p), vr 26 en 27 (een gegeven beoordelingsmodel toepassen, 4p). Bedrijfsecon-041 en -043 leggen vast dat er voor domein A geen criteria zijn en dat zulke punten een notitie krijgen. Deze vraag gaat over het vervolg: wil de docent die punten als vaardigheid zichtbaar en oefenbaar maken? Raakt 2 examens (circa 9 punten).",
+      "options": [
+        "Zo laten: notitie 'vaardigheid uit domein A', geen criterium (huidige lijn)",
+        "In /generate een kleine set vaardigheidscriteria voor domein A maken (bijv. procentuele verandering berekenen en interpreteren; een gegeven rekenmodel of beslisregel uit een bron toepassen) en die in examenmodus koppelen",
+        "Alleen in de examenbank een aparte rij 'domein A' tonen met de punten, zonder criteria"
+      ],
+      "proposed": "Optie 3 nu (geen nieuwe criteria nodig, de punten zijn wel zichtbaar); optie 2 overwegen bij een volgende /generate-run als de docent domein A wil laten oefenen. Optie 3 vraagt een kleine aanpassing van de exporter; markeer dat voor de orchestrator.",
+      "impact": "medium",
+      "applies_to": [
+        "exporter",
+        "generator",
+        "exam-judge"
+      ],
+      "affects_units": [
+        "vwo-2025-tv1-q13",
+        "vwo-2025-tv1-q21",
+        "vwo-2026-tv1-q12",
+        "vwo-2026-tv1-q26",
+        "vwo-2026-tv1-q27"
+      ],
+      "status": "open",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null,
+      "source_run": "20261027-1812-examen-bedrijfseconomie",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": null
     }
   ]
 }

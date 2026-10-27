@@ -240,7 +240,7 @@ def scorepunten(entry: dict) -> tuple[str, list[dict], list[str], str | None]:
         k = 0
         while k < len(lines):
             s = lines[k]
-            if re.match(r"^Opmerkingen?$", s):
+            if re.match(r"^Opmerking(en)?$", s):
                 close()
                 notes.append(" ".join(x for x in lines[k:] if x))
                 break
@@ -271,7 +271,7 @@ def scorepunten(entry: dict) -> tuple[str, list[dict], list[str], str | None]:
         return "bullet", sps, notes, issue
     route_end = len(lines)
     for k, s in enumerate(lines):
-        if s == "of" or re.match(r"^Opmerkingen?$", s):
+        if s == "of" or re.match(r"^Opmerking(en)?$", s):
             route_end = k
             break
     route, rest = lines[:route_end], lines[route_end:]

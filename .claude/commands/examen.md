@@ -22,7 +22,7 @@ If a new agent type (`exam-ingest`, `exam-judge`) is not available in this sessi
 After each step run its validator; on failure re-launch the same agent once with the output; on a second failure set `status: "aborted"` and stop.
 
 ## E1 Ingest
-`python3 scripts/exam/exam_text.py R <exam folders…>` → `R/21_exam_units.json`, `R/text/*`, PDFs in `R/input/<exam_id>/`. Put the exam ids in `run.json` `exams`. Then one agent `exam-ingest` per exam, all in one message (parallel), with R and the exam id. Validate: `python3 scripts/exam/validate_exam.py R` (must pass).
+`python3 scripts/exam/exam_text.py R <exam folders…>` → `R/21_exam_units.json`, `R/text/*`, PDFs in `R/input/<exam_id>/`. Put the exam ids in `run.json` `exams`. Then one agent `exam-ingest` per exam, **one after the other** (they edit the same `21_exam_units.json`; parallel agents overwrote each other's edits in run 1), with R and the exam id. Validate: `python3 scripts/exam/validate_exam.py R` (must pass).
 
 ## E1b Intake — the only pause
 Agent `intake` in **exam mode** with R and the subject → `R/21b_intake_questions.json`. Then as in `/generate` step 1b: `python3 scripts/decisions.py add S R/21b_intake_questions.json --run <run_id>`, present the open decisions with AskUserQuestion (≤ 4 per call, high impact first, the proposal as first option marked "(Aanbevolen)"), record answers (`decisions.py answer-file … --by user --run <run_id>`), `decisions.py snapshot S R`. Apply the answer about each exam's syllabus version to `exams[].syllabus_note` in `21_exam_units.json` (metadata only) and re-run `validate_exam.py`.
@@ -42,7 +42,7 @@ For every opgave launch agent `exam-judge` twice — letter `A` and letter `B` �
 3. Verifier `proposed_decisions` → write them as `{"questions": [...]}` to `R/25_proposed_decisions.json` and `decisions.py add S R/25_proposed_decisions.json --run <run_id>` (open, for the next intake).
 
 ## E6 Bank and export
-`python3 scripts/exam/bank_add.py R` (add `--replace` when the user chose to replace) → `B/register.json`, `B/links/<exam_id>.json` (and on first use `B/criteria.json`, `B/source_units.json`). Then `python3 scripts/exam/bank_export.py <subject>` → `B/output/`. Set `status: "done"`, `finished_at`.
+`python3 scripts/exam/bank_add.py R` (add `--replace` when the user chose to replace) → `B/register.json`, `B/links/<exam_id>.json` (and on first use `B/criteria.json`, `B/source_units.json`). Then `python3 scripts/exam/bank_export.py <subject>` → `B/output/`, and `python3 scripts/exam/exam_sample.py R` → `R/output/steekproef.md` (10 high + 10 low/medium links for the teacher). Set `status: "done"`, `finished_at`.
 
 ## Report (≤ 10 lines)
 Per exam: scorepunten, points linked / *buiten huidige syllabus* (of max), confidence split, Bloom split, *examen boven/onder criterium*, disputes left. Bank: number of exams, criteria never tested. New open decisions. Paths: `B/output/opzoekindex.csv`, `punten_per_leerdoel.csv`, `examenbank.xlsx`, `overzicht.md`, `bevindingen.md`.

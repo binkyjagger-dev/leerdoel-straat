@@ -40,7 +40,7 @@ max_repair_rounds: 1, status, started_at}`.
 
 ## 3. Steps
 
-- **E1.** `exam_text.py` per exam, then one `exam-ingest` per exam (parallel) to
+- **E1.** `exam_text.py` per exam, then one `exam-ingest` per exam (sequentially: they edit the same units file) to
   resolve `parse_issues`; `validate_exam.py` must pass (21 §6).
 - **E1b.** One pause for all exams of the run. Typical exam-mode questions: syllabus
   version the exam was written for (`syllabus_note`); content in the exam that the
@@ -61,6 +61,12 @@ max_repair_rounds: 1, status, started_at}`.
   Verifier `proposed_decisions` → `decisions.py add` (open).
 - **E6.** `bank_add.py R` merges the run's exams into the bank (25 §2);
   `bank_export.py <subject>` rebuilds `examenbank/output/` from the whole bank.
+  `exam_sample.py R` writes `R/output/steekproef.md` for the teacher: 10 `high`
+  links and 10 `low`/`medium` links (low first), seeded on the run id, each with
+  the scorepunt line from the correctievoorschrift, the quote, the judges, the
+  verifier, and four J/N questions (right criterion? right Bloom? quote carries the
+  ask? would a student practising this criterion be helped by this question?).
+  It stays in the run folder (it contains correctievoorschrift text).
   `status: done`.
 
 ## 4. Report (≤ 10 lines)

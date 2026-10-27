@@ -1,0 +1,41 @@
+{
+  "subject": "bedrijfseconomie",
+  "criteria_run": "20261021-1647-bedrijfseconomie-vwo-2028-run2",
+  "created_at": "2026-10-27",
+  "exams": [
+    {
+      "exam_id": "vwo-2025-tv1",
+      "code": "VW-0400-a-25-1",
+      "year": 2025,
+      "tijdvak": 1,
+      "level": "vwo",
+      "n_questions": 30,
+      "max_score": 63,
+      "syllabus_note": "Geschreven voor de CE-syllabus bedrijfseconomie vwo 2025; gekoppeld aan de criteria van syllabus 2028 versie 2 (bedrijfsecon-041).",
+      "files": {
+        "b": "input/examens-bedrijfseconomie-vwo/2025 TV1/vw-0400-a-25-1-b.pdf",
+        "c": "input/examens-bedrijfseconomie-vwo/2025 TV1/vw-0400-a-25-1-c.pdf",
+        "o": "input/examens-bedrijfseconomie-vwo/2025 TV1/vw-0400-a-25-1-o.pdf"
+      },
+      "added_by_run": "20261027-1812-examen-bedrijfseconomie",
+      "added_at": "2026-10-27"
+    },
+    {
+      "exam_id": "vwo-2026-tv1",
+      "code": "VW-0400-a-26-1",
+      "year": 2026,
+      "tijdvak": 1,
+      "level": "vwo",
+      "n_questions": 29,
+      "max_score": 61,
+      "syllabus_note": "Geschreven voor de CE-syllabus bedrijfseconomie vwo 2026; gekoppeld aan de criteria van syllabus 2028 versie 2 (bedrijfsecon-041).",
+      "files": {
+        "b": "input/examens-bedrijfseconomie-vwo/2026 TV1/vw-0400-a-26-1-b.pdf",
+        "c": "input/examens-bedrijfseconomie-vwo/2026 TV1/vw-0400-a-26-1-c.pdf",
+        "o": "input/examens-bedrijfseconomie-vwo/2026 TV1/vw-0400-a-26-1-o.pdf"
+      },
+      "added_by_run": "20261027-1812-examen-bedrijfseconomie",
+      "added_at": "2026-10-27"
+    }
+  ]
+}

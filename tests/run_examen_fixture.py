@@ -72,6 +72,7 @@ def main():
     ok &= check("€ and é survive extraction; 'of' route goes to cv_notes",
                 "€ 4.000" in sps[0]["text"] and
                 any("prijselasticiteit" in n for x in u["units"] if x["kind"] == "question" for n in x["cv_notes"]))
+    ok &= check("Opmerking(en) never inside a scorepunt text", not any("Opmerking" in x["text"] for x in sps))
     ok &= check("informatiebron 1 found for opgave 1", u["units"][0]["sources"] == [1] and (r / f"text/{E}-bron1.txt").exists())
 
     ok &= run("exam_candidates", f"{s}/exam_candidates.py", str(r))
@@ -99,6 +100,11 @@ def main():
     m = by_sp(r)
     ok &= check("R keeps q2-s2 linked and replaces B → high", m["q2-s2"]["criterion_id"] == "X1.2-01-a" and m["q2-s2"]["confidence_judged"] == "high")
     ok &= check("R without criterion keeps q3-s1 unlinked", m["q3-s1"]["criterion_id"] is None)
+
+    ok &= run("exam_sample", f"{s}/exam_sample.py", str(r))
+    sample = (r / "output" / "steekproef.md").read_text(encoding="utf-8")
+    ok &= check("sample: all 5 linked scorepunten (4 high + 1 medium), with the scorepunt line",
+                sample.count("\n## ") == 5 and "2.000 x € 2 = € 4.000" in sample)
 
     ok &= run("bank_add", f"{s}/bank_add.py", str(r), "--bank", str(bank))
     ok &= run("bank_export", f"{s}/bank_export.py", "fixturevak", "--bank", str(bank))
