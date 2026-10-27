@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ExamUnits",
+  "description": "21_exam_units.json — exams split into opgave → question → scorepunt (specs/21 §3).",
+  "type": "object",
+  "required": ["run_id", "exams", "units", "parse_issues"],
+  "properties": {
+    "run_id": {"type": "string"},
+    "exams": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["exam_id", "code", "level", "year", "tijdvak", "subject", "n_questions", "max_score", "files", "text_extraction"],
+        "properties": {
+          "exam_id": {"type": "string", "pattern": "^(vwo|havo|vmbo)-\\d{4}-tv\\d(-[a-z0-9]+)?$"},
+          "code": {"type": "string"},
+          "level": {"enum": ["vwo", "havo", "vmbo"]},
+          "year": {"type": "integer"},
+          "tijdvak": {"type": "integer"},
+          "subject": {"type": "string"},
+          "n_questions": {"type": ["integer", "null"]},
+          "max_score": {"type": ["integer", "null"]},
+          "files": {"type": "object", "description": "part (o/c/b/u) → run-local path",
+                    "propertyNames": {"enum": ["o", "c", "b", "u"]}, "additionalProperties": {"type": "string"}},
+          "source_files": {"type": "object", "description": "part → original input path",
+                           "additionalProperties": {"type": "string"}},
+          "syllabus_note": {"type": ["string", "null"]},
+          "text_extraction": {"enum": ["text", "ocr", "mixed"]}
+        }
+      }
+    },
+    "units": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["unit_id", "kind", "exam_id"],
+        "properties": {
+          "unit_id": {"type": "string"},
+          "kind": {"enum": ["opgave", "question", "scorepunt"]},
+          "exam_id": {"type": "string"},
+          "number": {"type": "integer"},
+          "title": {"type": ["string", "null"]},
+          "sources": {"type": "array", "items": {"type": "integer"}},
+          "text_ref": {"type": ["string", "null"]},
+          "opgave_id": {"type": "string"},
+          "points": {"type": "integer", "minimum": 1},
+          "cv_max": {"type": ["integer", "null"]},
+          "cv_ref": {"type": ["string", "null"]},
+          "cv_notes": {"type": "array", "items": {"type": "string"}},
+          "formula_ref": {"type": ["string", "null"]},
+          "question_id": {"type": "string"},
+          "seq": {"type": "integer", "minimum": 1},
+          "scoring": {"enum": ["bullet", "per_item", "whole"]},
+          "text": {"type": "string"}
+        },
+        "allOf": [
+          {"if": {"properties": {"kind": {"const": "opgave"}}},
+           "then": {"required": ["number", "title", "sources", "text_ref"]}},
+          {"if": {"properties": {"kind": {"const": "question"}}},
+           "then": {"required": ["opgave_id", "number", "points", "text_ref", "sources", "cv_max", "cv_ref", "cv_notes", "formula_ref"]}},
+          {"if": {"properties": {"kind": {"const": "scorepunt"}}},
+           "then": {"required": ["question_id", "seq", "points", "scoring", "text"]}}
+        ]
+      }
+    },
+    "parse_issues": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["exam_id", "issue"],
+        "properties": {
+          "exam_id": {"type": "string"},
+          "unit_id": {"type": ["string", "null"]},
+          "issue": {"type": "string"}
+        }
+      }
+    }
+  }
+}

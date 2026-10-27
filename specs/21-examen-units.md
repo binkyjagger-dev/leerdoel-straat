@@ -12,8 +12,11 @@ Files follow the CvTE naming `<lvl>-<vak>-a-<yy>-<tv>-<part>.pdf`:
 | `-b` | bijlage / informatieboekje (formuleblad, informatiebronnen) | when the exam has one |
 | `-u` | uitwerkbijlage | optional (the correctievoorschrift shows the filled-in table) |
 
-PDFs are not committed. Text extraction: `pdftotext -enc UTF-8` (both `-layout` and
-raw); OCR (`ocr_pdf.py`) only when a page has no text layer.
+PDFs are not committed. Text extraction: PyMuPDF `page.get_text()` (already a
+dependency, `verb_table.py`). It keeps characters `pdftotext` loses (é, ë, €, and the
+scorepunt bullet `•`) and puts each layout element on its own line ("2p", "13",
+question text; table cells one per line). OCR (`ocr_pdf.py`) only when a page has no
+text layer (reported as a parse issue).
 
 ## 2. Exam id
 
@@ -35,7 +38,10 @@ exam       vwo-2025-tv1
 | `exam` | `exam_id`, `code` (`VW-0400-a-25-1`), `level`, `year`, `tijdvak`, `subject`, `n_questions`, `max_score` (both from the header), `files` (part → path), `syllabus_note` (intake), `text_extraction` (`text`/`ocr`) |
 | `opgave` | `unit_id`, `exam_id`, `number`, `title` (first heading or first line), `sources` (informatiebron numbers named in the block), `text_ref` (context text) |
 | `question` | `unit_id`, `opgave_id`, `number`, `points` (from `np` prefix), `text_ref` (question text incl. the context lines directly above it), `sources`, `formula` (formuleblad entry for this number, if any), `cv_ref` (the full correctievoorschrift entry), `cv_notes` (alternatives "of", *Opmerking(en)*) |
-| `scorepunt` | `unit_id`, `question_id`, `seq`, `points`, `kind`, `text` (the scorepunt line from the correctievoorschrift, verbatim), `model_ref` (the model answer for this route) |
+| `scorepunt` | `unit_id`, `question_id`, `seq`, `points`, `scoring` (§4), `text` (the scorepunt line(s) from the correctievoorschrift, verbatim) |
+
+Questions also carry `cv_max` (the `maximumscore` of the correctievoorschrift entry).
+The file is `{run_id, exams: [...], units: [...], parse_issues: [{exam_id, unit_id, issue}]}`.
 
 Text files live in `runs/<run_id>/text/` only (git-ignored):
 `<exam>-o<n>.txt` (context), `<exam>-q<n>.txt` (question), `<exam>-q<n>.cv.txt`
@@ -43,11 +49,13 @@ Text files live in `runs/<run_id>/text/` only (git-ignored):
 
 ## 4. Scorepunt kinds (from the correctievoorschrift, chapter *Beoordelingsmodel*)
 
-Each question entry starts `n maximumscore k`. Then exactly one of:
+Each question entry starts with a line `n` followed by `maximumscore k`. Page
+furniture is dropped first (exam code line, page number, `lees verder ►►►`, `einde`,
+the column heads `Vraag` / `Antwoord` / `Scores`). Then exactly one of:
 
-| `kind` | Recognised by | Scorepunten |
+| `scoring` | Recognised by | Scorepunten |
 |---|---|---|
-| `bullet` | lines starting with `•` (extracted as `U+FFFD`) ending in a point value | one per bullet, `points` = that value |
+| `bullet` | a line `•`, its text lines, and a line with the point value (`1`) | one per bullet, `points` = that value |
 | `per_item` | "per juist (toegelicht) antwoord / per juiste … `n`" | `k / n` scorepunten of `n` points each; `text` = the per-item line plus the example list |
 | `whole` | no bullets and no per-item line (incl. "per gemaakte fout 1 scorepunt in mindering", multiple-choice "Kies de juiste letter") | one scorepunt with `points` = `k` (decision 20 §5.11) |
 
@@ -58,10 +66,13 @@ consisting of `of` up to the next question or *Opmerking* goes to `cv_notes`
 ## 5. Ingest roles
 
 - `scripts/exam/exam_text.py <run_dir>`: extracts text per file, finds the header
-  ("bestaat uit N vragen", "maximaal M punten"), splits opgaven (`Opgave n`),
-  questions (`^\s*(\d+)p\s+(\d+)\s`), correctievoorschrift entries
-  (`^\s*(\d+)\s+maximumscore\s+(\d+)`), informatiebronnen and formuleblad; writes a
-  draft `21_exam_units.json` with a `parse_issues` list.
+  ("bestaat uit N vragen", "maximaal M punten"), splits opgaven (line `Opgave n`),
+  questions (line `Np`, then line `n`, then the question text up to the first blank
+  line; the lines between the previous question and this one are its context),
+  correctievoorschrift entries (line `n`, then `maximumscore k`), informatiebronnen
+  (`Informatiebron n`) and formuleblad (`Voor beantwoording van vraag n …`); copies the
+  PDFs to `runs/<run_id>/input/<exam_id>/`; writes a draft `21_exam_units.json` with
+  a `parse_issues` list.
 - Agent `exam-ingest`: resolves every `parse_issue` from the page text (questions
   missed by the regex, tables that fell apart, bullets split over lines, points
   printed in a separate column), fills `title`, `sources`, `formula`, writes
