@@ -107,3 +107,28 @@ Eén pauze (intake). Resultaat in `runs/<id>/output/`: `koppelingen_paragraaf.cs
 
 ## 4. Nakijken
 `steekproef.md`: 20 koppelingen (10 hoge, 10 lage zekerheid), vier J/N-vragen per koppeling. Patronen → methodeprofiel (terminologie), `subjects/<vak>/glossary.json` (synoniemen) of een beslissing; losse fouten → `status` in de CSV.
+
+---
+
+# Examen-straat (`/examen`) — centrale examens koppelen aan succescriteria
+
+Koppelt elk **scorepunt** uit het correctievoorschrift van een centraal examen aan één succescriterium uit een `/generate`-run (met Bloom-niveau en citaat) en bewaart dat in een examenbank per vak die je steeds aanvult. Plan: `docs/plan-examen-straat.md`; specs 20–25.
+
+## 1. Eenmalig
+- Test: `python tests/run_examen_fixture.py` → `ALL OK` (maakt zelf kleine examen-pdf's).
+
+## 2. Per examen
+- Download van examenblad.nl het opgavenboekje (`…-o.pdf`), het correctievoorschrift (`…-c.pdf`) en, als die er is, de bijlage (`…-b.pdf`). De uitwerkbijlage is niet nodig.
+- Eén map per examen: `input/examens-<vak>/<jaar> TV<n>/` (niet in git). Bestandsnamen zoals examenblad ze geeft (`vw-0400-a-25-1-o.pdf`); daaruit volgt het examen-id `vwo-2025-tv1`.
+
+## 3. Draaien
+```
+claude
+> /examen input/examens-bedrijfseconomie-vwo --subject bedrijfseconomie --from 20261021-1647-bedrijfseconomie-vwo-2028-run2
+```
+Later één examen erbij: `/examen "input/examens-bedrijfseconomie-vwo/2027 TV1" --subject bedrijfseconomie` (de bank weet al welke criteria horen). Eén pauze (intake) voor alle examens van de run. Nieuwe criteria (nieuwe `/generate`-run)? `--rebuild --from <nieuwe run>`: de oude bank blijft bewaard, alle examens worden opnieuw gekoppeld.
+
+## 4. Resultaat (in `subjects/<vak>/examenbank/output/`)
+- `opzoekindex.csv` — per succescriterium alle scorepunten die het toetsen: examen, opgave, vraag, punten, Bloom, citaat. Filter in Excel op `criterium_id` of `leerdoel_id`.
+- `punten_per_criterium.csv`, `punten_per_leerdoel.csv`, `punten_per_domein.csv` — punten en % van de maximumscore per examen; de rij *buiten huidige syllabus* zorgt dat elke kolom optelt tot de maximumscore.
+- `examenbank.xlsx` — dezelfde tabellen als tabbladen; `overzicht.md` per leerdoel; `bevindingen.md` (buiten syllabus, examen boven/onder het criterium, criteria die nooit getoetst worden).

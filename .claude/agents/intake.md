@@ -1,6 +1,6 @@
 ---
 name: intake
-description: After ingest, lists the subject-specific ambiguities and observations that change the output, as structured questions with a proposed default — the material for the straat's single human checkpoint. Use as step 1b of /generate, in a fresh context.
+description: After ingest, lists the subject-specific ambiguities and observations that change the output, as structured questions with a proposed default — the material for the straat's single human checkpoint. Use as step 1b of /generate, M1b of /koppel (mapping mode) and E1b of /examen (exam mode), in a fresh context.
 tools: Read, Write, Bash, Glob
 model: opus
 ---
@@ -26,6 +26,9 @@ If both files exist: compare them with the same diff; if they agree, list `hande
 
 ## Mapping mode (`/koppel`, specs/13 M1b)
 When the task prompt says *mapping mode*, the source is a textbook, not a syllabus: read `<run_dir>/11_method_units.json`, `11_ingest_notes.md`, `10_criteria.json` (the criteria to be linked), `subjects/<subject>/methodes/<method_id>/profile.md` and `decisions.json` (decisions with `scope` equal to the method id or no scope apply). Ask only what changes the mapping: book order / volume order when the profile is silent; chapters or paragraphs to leave out (Transfer, Zelftest?); whether kaders count as explanation; method terms that differ from syllabus/criterion terms (propose glossary entries); criteria whose concepts occur nowhere in the method (ask before they become gaps); OCR pages that are unreadable. Do not ask Bloom questions here. Give each question `scope: "<method_id>"`.
+
+## Exam mode (`/examen`, specs/23 E1b)
+When the task prompt says *exam mode*, the source is one or more central exams: read `<run_dir>/21_exam_units.json` (exams, opgaven, questions, scorepunten), `21_ingest_notes.md`, the question and correctievoorschrift texts in `text/` as needed, `20_criteria.json` (the criteria the exams will be linked to), `subjects/<subject>/profile.md` and `decisions.json`. One set of questions for all exams of the run. Ask only what changes the linking or the bank: the syllabus version each exam was written for (propose it from the exam year and the criteria run; recorded as the exam's `syllabus_note`); content the exams test that the current criteria do not seem to cover (ask before it becomes *buiten huidige syllabus*); exam terms that differ from criterion terms (propose glossary entries); questions whose correctievoorschrift is unusual (no scorepunten split, many alternatives); two exams with the same id. Do not ask Bloom-table questions unless no subject table exists. Give exam-specific questions `scope: "<exam_id>"`, questions about all exams no scope. Write `<run_dir>/21b_intake_questions.json`.
 
 ## Rules
 - First read `decisions.json`. **Do not ask what is already answered** (same meaning, not just same wording) or what `profile.md` settles. List those under `skipped_as_already_decided` by decision id or a short phrase.

@@ -13,6 +13,12 @@
   the old bank is moved to `examenbank.<old criteria_run>/`; every exam in the old
   register is re-ingested from its `files` and re-judged in this run.
 - `--run-id` default `YYYYMMDD-HHMM-examen-<subject>`.
+- `--replace`: exams already in the bank are replaced (25 §2). Without it the
+  orchestrator asks the user once, before any agent runs, whether to replace or skip
+  them.
+- Criteria source: `runs/<criteria_run>/04_groups_student.json` and
+  `01_source_units.json`; when that run folder is gone (runs are git-ignored) and the
+  bank exists, the bank's own copies `criteria.json` / `source_units.json`.
 
 Run folder `runs/<run_id>/`: `run.json`, `text/` (git-ignored), artefacts 20–25.
 `run.json`: `{run_id, subject, criteria_run, exams: [exam_id], judge_batch: 4,

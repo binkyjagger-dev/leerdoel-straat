@@ -20,15 +20,16 @@ report + doubt list.
 
 ## Layout
 ```
-specs/            00–06 leerdoel-straat (/generate) · 10–15 methode-straat (/koppel) · 20–25 examen-straat (/examen; scripts built, agents + command pending; plan: docs/plan-examen-straat.md)
+specs/            00–06 leerdoel-straat (/generate) · 10–15 methode-straat (/koppel) · 20–25 examen-straat (/examen; built 2026-10-27, first real run pending; plan: docs/plan-examen-straat.md)
 schemas/          JSON schemas per artefact
 data/             rule files (Bloom verbs, student-language rules)
 scripts/          validate.py bloom_check.py student_language_check.py coverage.py merge_groups.py apply_verdicts.py export.py decisions.py verb_table.py
 subjects/<vak>/   profile.md (human) + decisions.json (straat, via decisions.py) + bloom_verbs.json (optional, via verb_table.py) — see specs/06
 docs/             HANDLEIDING.md (one-page tutorial, Dutch)
 .claude/agents/   ingest intake planner generator student-language verifier
-.claude/commands/ generate (/generate orchestrator) · koppel (/koppel orchestrator)
+.claude/commands/ generate (/generate orchestrator) · koppel (/koppel orchestrator) · examen (/examen orchestrator)
 .claude/agents/   method-ingest mapping-judge mapping-verifier exercise-judge   (methode-straat; intake is shared, mapping mode)
+.claude/agents/   exam-ingest exam-judge   (examen-straat; intake exam mode, mapping-verifier exam mode)
 scripts/mapping/  ocr_pdf ocr_images docx_text validate_method candidates gradation check_mappings export_mappings compare_baseline · part B: ex_candidates ex_merge check_ex_mappings export_exercises
 scripts/exam/     exam_text validate_exam exam_candidates exam_merge check_exam_mappings bank_add bank_export (ecommon = shared helpers, reuses scripts/mapping)
 subjects/<vak>/examenbank/  (examen-straat) register.json + links/<exam>.json + output/ — bound to one criteria run; see specs/25

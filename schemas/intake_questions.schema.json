@@ -73,7 +73,9 @@
                 "method-ingest",
                 "mapping-judge",
                 "exercise-judge",
-                "mapping-verifier"
+                "mapping-verifier",
+                "exam-ingest",
+                "exam-judge"
               ]
             }
           },

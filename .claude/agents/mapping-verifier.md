@@ -1,6 +1,6 @@
 ---
 name: mapping-verifier
-description: Independent check of the paragraph↔criterion mappings — precision on a sample of links, recall per paragraph (which criteria are missing), and whether each criterion's "leert" paragraph is really the first explanation. Use as step M5 of /koppel, always in a fresh context.
+description: Independent check of the paragraph↔criterion mappings — precision on a sample of links, recall per paragraph (which criteria are missing), and whether each criterion's "leert" paragraph is really the first explanation. Use as step M5/M9 of /koppel and, in exam mode, E5 of /examen — always in a fresh context.
 tools: Read, Bash, Write
 model: opus
 ---
@@ -35,6 +35,14 @@ When the task says exercise mode, read `specs/14-mapping-verification.md §6` an
 3. **Bloom gaps.** For `bloom niet bereikt`: is a linked question rated too low? → dispute with `bloom_should_be`.
 Write `<run_dir>/19_ex_verification.json` with `"mode": "exercises"`; validate with `python3 scripts/mapping/check_ex_mappings.py <run_dir> --verification 19_ex_verification.json` (idempotent; it applies your verdicts into `18_ex_mappings.json`).
 
+## Exam mode (`/examen`, `mode: exam`)
+When the task says exam mode, read `specs/24-examen-verification.md §3`, `specs/22-examen-mapping-model.md` and `schemas/exam_verification.schema.json`. Inputs: `21_exam_units.json` (+ `text/`: question texts, correctievoorschrift entries `*.cv.txt`, informatiebronnen), `22_candidates.json`, `24_mappings.json` (one record per scorepunt, linked or `criterion_id: null`), `24_findings.json`, `20_criteria.json`, the effective verb table, decisions snapshot. The unit is the **scorepunt**.
+1. **Precision.** Every `low`/`medium` link plus a random 20 % of `high` (seed `random.Random(<run_id>)` over the high links in file order; record it in `sample`). Is this the criterion the scorepunt tests (read the scorepunt line in the `.cv.txt`, not only the question)? Is `bloom` right? Does the quote carry the ask? `pass` or `dispute` with `criterion_should_be` (another id or `"none"`) and/or `bloom_should_be`. `confidence_adjust` one step with a reason.
+2. **Recall.** Every scorepunt without criterion (*buiten huidige syllabus*): does a current criterion cover it after all? → `missing_links` (scorepunt_id, criterion_id, bloom, quote of the ask, reason). Per question: does a scorepunt test a criterion the judges missed (e.g. linked to a neighbour criterion)? → dispute with `criterion_should_be`.
+3. **Points sanity.** Per exam, the 10 criteria with most points: plausible for this exam? Report in `points_sanity` (no verdicts).
+4. `proposed_decisions` in intake-question shape for recurring issues (a performance the exams test that no criterion names, a systematic term mismatch). Do not repeat decisions already open in `subjects/<subject>/decisions.json`.
+Write `<run_dir>/25_verification.json` with `"mode": "exam"`; validate with `python3 scripts/exam/check_exam_mappings.py <run_dir> --verification 25_verification.json` (idempotent; it applies your verdicts into `24_mappings.json`).
+
 (`python3` may be spelled `python` on Windows; the orchestrator tells you which.)
 
-Final message: links checked, pass/dispute counts, missing-link proposals, gradation findings (exercise mode: bloom disputes instead).
+Final message: links checked, pass/dispute counts, missing-link proposals, gradation findings (exercise mode: bloom disputes instead; exam mode: bloom disputes and points-sanity remarks).
