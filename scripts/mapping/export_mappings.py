@@ -121,8 +121,13 @@ def main(argv: list[str]) -> None:
 
     # steekproef.md
     random.seed(run["run_id"])
-    high = [l for l in links if l["confidence"] == "high" and l["gradation"] != "noemt"]
-    low = [l for l in links if l["confidence"] != "high" or (l.get("verifier") or "").startswith("dispute")]
+    pool = links
+    if run.get("extend"):  # specs/13 §5 X7: only what this run judged
+        ext = run["extend"]
+        pool = [l for l in links if l["unit_id"] in ext.get("new_paragraphs", [])
+                or l["criterion_id"] in ext.get("delta", {}).get(l["unit_id"], [])]
+    high = [l for l in pool if l["confidence"] == "high" and l["gradation"] != "noemt"]
+    low = [l for l in pool if l["confidence"] != "high" or (l.get("verifier") or "").startswith("dispute")]
     pick = random.sample(high, min(sample_n // 2, len(high))) + random.sample(low, min(sample_n - sample_n // 2, len(low)))
     L = [f"# Steekproef koppelingen — {run['run_id']}", "", f"{len(pick)} koppelingen: {min(sample_n//2, len(high))} hoge zekerheid, {len(pick) - min(sample_n//2, len(high))} lage/omstreden. Vul per koppeling J/N in.", "",
          "| # | Vraag |", "|---|---|", "| 1 | **Terecht?** Bedient deze paragraaf dit criterium? |", "| 2 | **Gradatie juist?** leert / herhaalt / oefent / noemt |",

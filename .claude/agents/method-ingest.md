@@ -15,6 +15,9 @@ Read first: `specs/11-methode-units.md` (§2.1 PDF lesbrief, §2.2 page images +
 ## Transcribe-only mode
 When the orchestrator says *transcribe pages N–M*: do only the image transcription of step 1 for those pages (with `.done` markers), then stop and report the pages done and any `[?]`. Do not write units.
 
+## Extend mode (`/koppel --extend`, specs/13 §5)
+When the orchestrator says *extend mode*: the run already holds the previous run's units (`11_method_units.prev.json`) and text. Ingest **only the new chapters** from `<run_dir>/input/ext/` (images in `input/ext/book/`; OCR into `text/_pages_ext/` with `ocr_images.py <run_dir>/input/ext/book <run_dir>/text/_pages_ext --lang nld+eng`), and write `<run_dir>/11_method_units.new.json` (same schema, only the new units; `method` copied from the prev file with `files` = the new inputs). Unit ids must not collide with prev ids. Append your notes to `11_ingest_notes.md` under `## Uitbreiding <chapters>`. Do not write `11_method_units.json` and do not run `validate_method.py` — the orchestrator merges first (`koppel_extend.py merge-units`).
+
 ## Procedure
 1. **Text extraction.**
    - Book PDF: `python3 scripts/mapping/ocr_pdf.py <run_dir>/input/<book>.pdf <run_dir>/text/_pages_book --lang nld+eng`. If `pages.json` has `unresolved_pages` (no tesseract), read those pages yourself with the Read tool on page images (`pdftoppm -r 150 -f N -l N -png`) and transcribe the running text to `page-NNN.txt`.

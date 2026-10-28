@@ -26,6 +26,9 @@ Rules
 - Exercise text is not in the paragraph file by design; do not infer practising from exercise numbers.
 - Repair mode (`R`): you receive the two earlier judgements and the verifier's dispute; re-judge only the listed criteria from the text, say in `reason` what settled it.
 
+## Delta mode (`/koppel --extend`, specs/13 §5 X3)
+When the task gives a paragraph that was judged in an earlier run plus a list of criteria: judge **only those criteria** (same rules as A/B, you never see the earlier judgements) and write `<run_dir>/13_judgements.<letter>/<unit_id>.ext.json` — never overwrite `<unit_id>.json`.
+
 ## Output
 `{"judge": "<letter>", "unit_id": "<unit_id>", "judgements": [{"criterion_id", "treatment", "quote", "quote_page", "second_quote", "aspect", "reason"}]}` — one entry per candidate, including `none`. Validate: `python3 -c "import sys; sys.path.insert(0,'scripts'); from common import *; d=load_json('<out>'); print(validate_schema(d,'judgements.schema.json') or 'valid')"`.
 

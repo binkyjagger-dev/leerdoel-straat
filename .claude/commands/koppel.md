@@ -1,6 +1,6 @@
 ---
 description: Methode-straat — link the success criteria of a /generate run to the paragraphs of a textbook (part A) and, with --part AB, to its exercises (part B): ingest → intake (one pause) → candidates → two judges → gradation → verifier → export CSV + reports (+ baseline comparison).
-argument-hint: <book.pdf | image-folder> [--workbook <file.docx|pdf> ...] --subject <slug> --method <method_id> --from <generate-run-id> [--answers <pdf> ...] [--chapters 1,2] [--part A|AB|B] [--baseline <csv>] [--run-id <id>]
+argument-hint: <book.pdf | image-folder> [--workbook <file.docx|pdf> ...] --subject <slug> --method <method_id> --from <generate-run-id> [--answers <pdf> ...] [--chapters 1,2] [--part A|AB|B] [--baseline <csv>] [--run-id <id>] [--extend <finished-run-id>]
 allowed-tools: Bash, Read, Write, Glob, Agent, AskUserQuestion, TaskCreate, TaskUpdate
 ---
 
@@ -47,6 +47,19 @@ Set `part: "AB"` in `run.json`. Scope = every paragraph of the chapters in scope
 - **M9** Agent `mapping-verifier` (fresh) in **exercise mode** with R, S, M → `R/19_ex_verification.json`; then `check_ex_mappings.py R --verification 19_ex_verification.json`.
   Repair, once: collect disputed links and `missing_links`, grouped by paragraph; per paragraph one `exercise-judge` with letter `R`, the pairs, and pointers to the A/B files and the verdicts → `R/18_ex_judgements.R/<paragraph>.json`. Copy `18_ex_mappings.json` → `18_ex_mappings.round1.json`; rerun `ex_merge.py R` and `check_ex_mappings.py R --verification 19_ex_verification.json`. Verifier `proposed_decisions` → `decisions.py add S <file> --run <run_id>` (open, for the next intake).
 - **Export** `python3 scripts/mapping/export_exercises.py R`, then `python3 scripts/mapping/export_mappings.py R` again (gap report sees exercise links). Set `status: "done"`.
+
+## Extend mode (`--extend <P>`, specs/13 §5) — replaces 0 and M1–M9 when given
+Adds new chapters of the same method to a finished run `P` (`runs/<P>`, `status: done`). The new run `R` contains P + the new chapters; P is never written.
+- **X0** `python3 scripts/mapping/koppel_extend.py prepare R runs/<P>` (R = `runs/<run_id>`, default id `YYYYMMDD-HHMM-koppel-<method>-ext`). `--method`, `--subject`, `--from` must equal P's (else stop). Copy the new book (PDF, or images into `R/input/ext/book/`), new workbooks and answers into `R/input/ext/`. Tell the user in one line if the method profile does not mention the new chapters' place in the book order.
+- **X1** Image folder: `ocr_images.py R/input/ext/book R/text/_pages_ext --lang nld+eng`, transcribe-only agents per ≤ 15 pages (as M1), then `method-ingest` in **extend mode** → `R/11_method_units.new.json`. Then `koppel_extend.py merge-units R` and `validate_method.py R` (must pass).
+- **X1b** Intake in mapping mode with "extend: only the new chapters" → pause as M1b; scope answers are **added** to `scope_criteria` in `run.json` (keep the old list). Snapshot decisions into R.
+- **X2** `candidates.py R`, then `koppel_extend.py todo R` → `12_extend_todo.json`.
+- **X3** Per new paragraph `mapping-judge` A and B as M3. Per old paragraph in `delta`: `mapping-judge` A and B in **delta mode** with the listed criteria → `13_judgements.<J>/<unit>.ext.json`. Same batching as M3.
+- **X4** `gradation.py R`, `check_mappings.py R` (must pass).
+- **X5** `mapping-verifier` (fresh) in **extend mode** → `R/15_verification.ext.json`; `koppel_extend.py merge-verification R`; `check_mappings.py R --verification 15_verification.json`. Repair once as M5 for disputes/missing links of the ext file only; R judgements as `13_judgements.R/<unit>.ext.json`; copy `14_mappings.json` → `14_mappings.round1.json` first; rerun X4 and the verification check.
+- **X6** When P had part B (`18_ex_judgements.A` exists): new chapters' exercises (if a workbook was given) as M7–M9 for those paragraphs only (`.ext.json` names for judges of old paragraphs, if any). When `scope_criteria` grew: `mapping-verifier` exercise **recall-only** for the added criteria → `19_ex_verification.ext.json`, one repair round with `exercise-judge` R. Always: `koppel_extend.py merge-verification R --part B`, `ex_candidates.py R`, `ex_merge.py R`, `check_ex_mappings.py R --verification 19_ex_verification.json`.
+- **X7** Export as M6 (+ part B exports when P had part B). `steekproef.md` samples only this run's new links (automatic). `status: done`.
+- Report as §7, with "nieuw in deze run" (links on new paragraphs, delta pairs judged, *leert* moved or added) next to the totals.
 
 ## 7. Report (≤ 10 lines)
 Criteria in scope, paragraphs, links by gradation, confidence split, voided quotes, gaps, outside-syllabus, disputes left, baseline precision/recall if given, paths. Part B: exercise links, Bloom split, sub-questions outside the syllabus, criteria not practised, Bloom not reached, disputes left.

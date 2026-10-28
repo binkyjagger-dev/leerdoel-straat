@@ -105,6 +105,11 @@ Foto's + werkboek, met opgaven (deel B):
 ```
 Eén pauze (intake). Resultaat in `runs/<id>/output/`: `koppelingen_paragraaf.csv`, `methode_eenheden.csv`, `dekking_methode.md`, `gaten_methode.md`, `buiten_syllabus.md`, `steekproef.md`, `vergelijking_nulmeting.md`.
 
+Hoofdstukken toevoegen aan een afgeronde run (de oude run blijft staan, alleen het nieuwe wordt beoordeeld):
+```
+> /koppel "input/<map met foto's van de nieuwe hoofdstukken>" --subject <vak> --method <methode-id> --from <generate-run-id> --extend <vorige koppel-run>
+```
+
 ## 4. Nakijken
 `steekproef.md`: 20 koppelingen (10 hoge, 10 lage zekerheid), vier J/N-vragen per koppeling. Patronen → methodeprofiel (terminologie), `subjects/<vak>/glossary.json` (synoniemen) of een beslissing; losse fouten → `status` in de CSV.
 

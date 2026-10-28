@@ -30,7 +30,7 @@ docs/             HANDLEIDING.md (one-page tutorial, Dutch)
 .claude/commands/ generate (/generate orchestrator) · koppel (/koppel orchestrator) · examen (/examen orchestrator)
 .claude/agents/   method-ingest mapping-judge mapping-verifier exercise-judge   (methode-straat; intake is shared, mapping mode)
 .claude/agents/   exam-ingest exam-judge   (examen-straat; intake exam mode, mapping-verifier exam mode)
-scripts/mapping/  ocr_pdf ocr_images docx_text validate_method candidates gradation check_mappings export_mappings compare_baseline · part B: ex_candidates ex_merge check_ex_mappings export_exercises
+scripts/mapping/  ocr_pdf ocr_images docx_text validate_method candidates gradation check_mappings export_mappings compare_baseline · part B: ex_candidates ex_merge check_ex_mappings export_exercises · koppel_extend (/koppel --extend, specs/13 §5)
 scripts/exam/     exam_text validate_exam exam_candidates exam_merge check_exam_mappings bank_add bank_export exam_sample (ecommon = shared helpers, reuses scripts/mapping)
 subjects/<vak>/examenbank/  (examen-straat) register.json + links/<exam>.json + output/ — bound to one criteria run; see specs/25
 input/examens-<vak>/<jaar TVn>/  CvTE exam PDFs (-o opgaven, -c correctievoorschrift, -b bijlage); not committed

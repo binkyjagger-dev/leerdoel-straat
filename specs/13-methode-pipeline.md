@@ -2,7 +2,7 @@
 
 ## 1. Command
 
-`/koppel <method.pdf | image-folder> [--workbook <file.docx|pdf> ...] [--answers <answers.pdf> ...] --subject <slug> --method <method_id> --from <generate-run-id> [--chapters 1,2] [--run-id <id>] [--part A|AB|B]`
+`/koppel <method.pdf | image-folder> [--workbook <file.docx|pdf> ...] [--answers <answers.pdf> ...] --subject <slug> --method <method_id> --from <generate-run-id> [--chapters 1,2] [--run-id <id>] [--part A|AB|B] [--extend <finished-run-id>]` (extend: §5)
 
 - The book is a PDF or a folder of page images (11 §2.2). `--workbook` names a
   separate exercise file (.docx or PDF) whose exercises refer to paragraphs.
@@ -114,3 +114,31 @@ Judges: agent `exercise-judge`, letters A/B per paragraph, R for repair
 Files: `17_ex_candidates.json`, `18_ex_judgements.<J>/<paragraph>.json`,
 `18_ex_mappings.json`, `19_ex_verification.json`; `.round1` copies before
 the repair rerun.
+
+## 5. Extending a finished run (`--extend <run_id>`, decided 2026-10-28)
+
+Adds chapters of the same method to a finished run `P` without re-judging what
+`P` already judged. The result is a **new run** `R` that contains `P` plus the
+new chapters; `P` stays untouched.
+
+**Invariant.** Every candidate pair (paragraph × criterion) of `R` has a judgement
+of judge A and of judge B. Pairs judged in `P` keep `P`'s judgements (and repairs);
+only pairs without them are judged in `R`. Gradation, findings and export are
+recomputed over all paragraphs, so a criterion that was a gap in `P` gets its
+*leert* in a new chapter, and *leert* can move when a new chapter comes earlier in
+book order.
+
+Steps (`scripts/mapping/koppel_extend.py`):
+
+| # | What | Files |
+|---|---|---|
+| X0 | `koppel_extend.py prepare R P` — copy from `P`: `10_criteria.json`, `run.json` fields (`method_id`, `from_run`, `scope_criteria`, `ex_scope_*`, `part`), `text/` (incl. `_pages_*`), `input/`, `13_judgements.{A,B,R}/`, `18_ex_judgements.{A,B,R}/`; `11_method_units.json` → `11_method_units.prev.json`; `15_verification.json` → `15_verification.prev.json`, `19_ex_verification.json` → `19_ex_verification.prev.json`. New book files go to `R/input/ext/` (images in `R/input/ext/book/`). `run.json` gets `extend: {from_run_id: P}`. | |
+| X1 | `method-ingest` in **extend mode**: only the new chapters → `11_method_units.new.json` (same schema), text files in `text/` (OCR pages in `text/_pages_ext/`), notes appended to `11_ingest_notes.md`. | |
+| X1b | `koppel_extend.py merge-units R` — `prev` + `new` → `11_method_units.json`. Unit ids must not collide. Paragraph `order` is renumbered by book order: (chapter number, paragraph number) unless the method profile declares another order. `run.json`: `scope_paragraphs` = old ∪ new, `extend.new_paragraphs`. Then `validate_method.py`. | |
+| X1c | Intake (mapping mode) on the new units only; scope answers *add* to `scope_criteria`. | |
+| X2 | `candidates.py R` over all paragraphs; then `koppel_extend.py todo R` → `12_extend_todo.json`: `new_paragraphs` (full A/B judging) and `delta` (old paragraph → criteria in its candidate union without an A or B judgement). | |
+| X3 | `mapping-judge` A and B per new paragraph (as M3), and per old paragraph in `delta` with the listed criteria only, written to `13_judgements.<J>/<unit>.ext.json` (gradation reads every file of the judge folder). | |
+| X4 | `gradation.py R`, `check_mappings.py R`. | |
+| X5 | `mapping-verifier` with scope = new paragraphs + `delta` pairs → `15_verification.ext.json`; `koppel_extend.py merge-verification R` → `15_verification.json` (`prev` + `ext`); `check_mappings.py R --verification 15_verification.json`. Repair once as M5, R judgements as `13_judgements.R/<unit>.ext.json`. | |
+| X6 | Part B, when `P` had it: new chapters' exercises (if any) as M7–M9 for their paragraphs only; `ex_candidates.py` and `ex_merge.py` rerun over everything. When `scope_criteria` grew, the exercise verifier runs a **recall-only** pass for the added criteria over all sub-questions → `19_ex_verification.ext.json`, merged like X5; one repair round. Without new exercises and without scope growth, `P`'s part B is carried over and only recomputed. | |
+| X7 | Export as M6 (+ part B export). `steekproef.md` samples only links on new paragraphs and `delta` pairs (`run.json` `extend`). | |

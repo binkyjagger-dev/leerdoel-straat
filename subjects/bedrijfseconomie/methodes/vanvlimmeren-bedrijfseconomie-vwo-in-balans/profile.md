@@ -5,7 +5,7 @@ Door de docent geschreven. De straat leest dit in elke stap en schrijft er nooit
 
 ## Boekvolgorde
 
-* Hoofdstukken in boekvolgorde; in deze aanlevering H16, H17, H19 en H20 (domein D). H18 zit niet in de aanlevering.
+* Hoofdstukken in boekvolgorde; in deze aanlevering H16, H17, H19 en H20 (domein D). H18 zit niet in de aanlevering en H26, H27 en H28 volgen na H20; H21–H25 zijn (nog) niet aangeleverd
 * Druk / jaar: *(invullen)*
 * Eerdere delen of hoofdstukken die vóór H16 behandeld zijn (bepaalt wat "eerste uitleg" is): *(invullen — zolang leeg geldt alleen de volgorde binnen deze aanlevering)*
 
@@ -26,4 +26,5 @@ Door de docent geschreven. De straat leest dit in elke stap en schrijft er nooit
 ## Niet koppelen
 
 * H19 en H20 hebben geen opgaven in de bundel ("zie Classroom"): deel B dekt alleen H16 en H17.
+* H26–H28: geen opgaven aangeleverd, alleen paragrafen
 * *(paragrafen of kaders buiten scope hier noteren)*

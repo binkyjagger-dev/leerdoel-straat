@@ -39,6 +39,63 @@ def make_docx(path):
 def check(label, cond):
     print(f"   {'ok ' if cond else 'NOK'} {label}")
     return bool(cond)
+def extend_scenario(prev, s):
+    """--extend (specs/13 §5): the finished fixture run plus a new chapter H2 with one paragraph."""
+    ok = True
+    rj = json.loads((prev / "run.json").read_text(encoding="utf-8"))
+    rj["status"] = "done"; (prev / "run.json").write_text(json.dumps(rj), encoding="utf-8")
+    x = prev.parent / "ext-run"
+    ok &= run("extend: prepare", f"{s}/koppel_extend.py", "prepare", str(x), str(prev))
+    q = "Een uitkomst tussen 0 en -1 noemen we inelastisch; is de uitkomst kleiner dan -1, dan noemen we de vraag elastisch."
+    (x / "text" / "H2.1.txt").write_text("2.1 Elasticiteit interpreteren\n\nDe prijselasticiteit zegt hoe sterk de vraag reageert. " + q + "\n", encoding="utf-8")
+    meth = json.loads((x / "11_method_units.prev.json").read_text(encoding="utf-8"))["method"]
+    new = {"method": {**meth, "files": ["input/ext/book/"]},
+           "units": [{"unit_id": "H2", "parent_id": None, "kind": "hoofdstuk", "code": "2", "title": "Elasticiteit"},
+                     {"unit_id": "H2.1", "parent_id": "H2", "kind": "paragraaf", "code": "2.1", "title": "Elasticiteit interpreteren",
+                      "text_ref": "text/H2.1.txt", "concepts": ["prijselasticiteit", "inelastisch", "elastisch"]}]}
+    (x / "11_method_units.new.json").write_text(json.dumps(new, ensure_ascii=False), encoding="utf-8")
+    ok &= run("extend: merge-units", f"{s}/koppel_extend.py", "merge-units", str(x))
+    units = json.loads((x / "11_method_units.json").read_text(encoding="utf-8"))["units"]
+    ok &= check("new paragraph ordered after the old ones", next(u["order"] for u in units if u["unit_id"] == "H2.1") == 4)
+    ok &= run("extend: validate_method", f"{s}/validate_method.py", str(x))
+    ok &= run("extend: candidates", f"{s}/candidates.py", str(x))
+    ok &= run("extend: todo", f"{s}/koppel_extend.py", "todo", str(x))
+    todo = json.loads((x / "12_extend_todo.json").read_text(encoding="utf-8"))
+    ok &= check("todo: H2.1 is the only new paragraph", todo["new_paragraphs"] == ["H2.1"])
+    # judges: H2.1 explains D1.2-01-b, every other candidate none; delta pairs on old paragraphs none
+    cand = json.loads((x / "12_candidates.json").read_text(encoding="utf-8"))
+    union = {c["criterion_id"] for p in cand["per_paragraph"] if p["unit_id"] == "H2.1" for c in p["criteria"]}
+    union |= {pc["criterion_id"] for pc in cand["per_criterion"] for c in pc["candidates"] if c["unit_id"] == "H2.1"}
+    union.add("D1.2-01-b")
+    jd = lambda c, t, qq=None: {"criterion_id": c, "treatment": t, "quote": qq, "quote_page": None, "second_quote": None, "aspect": None, "reason": None}
+    for j in "AB":
+        (x / f"13_judgements.{j}" / "H2.1.json").write_text(json.dumps({"judge": j, "unit_id": "H2.1", "judgements":
+            [jd(c, "explains", q) if c == "D1.2-01-b" else jd(c, "none") for c in sorted(union)]}, ensure_ascii=False), encoding="utf-8")
+        for uid, crits in todo["delta"].items():
+            (x / f"13_judgements.{j}" / f"{uid}.ext.json").write_text(json.dumps({"judge": j, "unit_id": uid,
+                "judgements": [jd(c, "none") for c in crits]}), encoding="utf-8")
+    same = all((prev / f"13_judgements.{j}" / f.name).read_bytes() == f.read_bytes()
+               for j in "AB" for f in (x / f"13_judgements.{j}").glob("H1.?.json"))
+    ok &= check("judgements of the previous run reused unchanged", same)
+    ok &= run("extend: gradation", f"{s}/gradation.py", str(x))
+    ok &= run("extend: check_mappings", f"{s}/check_mappings.py", str(x))
+    links = json.loads((x / "14_mappings.json").read_text(encoding="utf-8"))["links"]
+    ok &= check("new link D1.2-01-b x H2.1 present", any(l["criterion_id"] == "D1.2-01-b" and l["unit_id"] == "H2.1" for l in links))
+    (x / "15_verification.ext.json").write_text(json.dumps({"links": [{"criterion_id": "D1.2-01-b", "unit_id": "H2.1", "verdict": "pass",
+        "treatment_should_be": None, "confidence_adjust": None, "reason": "fixture"}], "missing_links": [], "gradation_findings": []}), encoding="utf-8")
+    ok &= run("extend: merge-verification", f"{s}/koppel_extend.py", "merge-verification", str(x))
+    ok &= run("extend: check_mappings --verification", f"{s}/check_mappings.py", str(x), "--verification", "15_verification.json")
+    ok &= run("extend: merge-verification part B", f"{s}/koppel_extend.py", "merge-verification", str(x), "--part", "B")
+    ok &= run("extend: ex_candidates", f"{s}/ex_candidates.py", str(x))
+    ok &= run("extend: ex_merge", f"{s}/ex_merge.py", str(x))
+    ok &= run("extend: check_ex_mappings --verification", f"{s}/check_ex_mappings.py", str(x), "--verification", "19_ex_verification.json")
+    ok &= run("extend: export", f"{s}/export_mappings.py", str(x))
+    sample = (x / "output" / "steekproef.md").read_text(encoding="utf-8")
+    ok &= check("extend sample only from the new paragraph", "× 2.1 " in sample and "× 1." not in sample)
+    ok &= run("extend: prepare again (must fail)", f"{s}/koppel_extend.py", "prepare", str(x), str(prev), allow_fail=True)
+    return ok
+
+
 def main():
     r = Path(tempfile.mkdtemp()) / "run"; shutil.copytree(ROOT / "tests" / "fixtures" / "koppel", r)
     s = "scripts/mapping"; ok = True
@@ -60,6 +117,7 @@ def main():
     ok &= run("check_ex_mappings --verification (after repair)", f"{s}/check_ex_mappings.py", str(r), "--verification", "19_ex_verification.json")
     ok &= run("export_exercises", f"{s}/export_exercises.py", str(r))
     ok &= run("export (after part B)", f"{s}/export_mappings.py", str(r))
+    ok &= extend_scenario(r, s)
     # ingest adapters for page images + workbook (specs/11 §2.2)
     a = r.parent / "adapters"; (a / "book").mkdir(parents=True)
     for n in ("H1_1.1_10.png", "H1_1.1_2.png", "notes.txt"):
