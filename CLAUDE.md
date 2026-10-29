@@ -110,3 +110,10 @@ python3 tests/run_examen_fixture.py                  # exercise all /examen scri
 - Judges record the verb of a supporting step (`berekenen`) under an "Analyseer" question; MB2 warns correctly — `bloom_verb` is the question's own asking verb, the level of the step is in `bloom`.
 - Judges' prose miscounts points (reported 14 and 8 where the opgave had 9 and 6); scripts take points from the units only — keep it that way.
 - Two exams test 54 of 410 criteria; the per-criterion overview becomes meaningful only with more exams.
+
+## Lessons from koppel extend run 1 (In Balans H26–H28 on top of H16–H20, 2026-10-28/29)
+- `/koppel --extend` worked end to end (938 candidate pairs, 324 links before review; verifier 35/47 pass, 12 disputes + 4 missing links, one repair round). `prepare` forgot `11_ingest_notes.md` — fixed; it now also carries `16_teacher_review.json`.
+- The teacher's sample comments were often about a whole paragraph ("26.5 alleen F2.30.1"), not per row. Teacher review (specs/14 §5.1) records them deterministically — confirm/reject/correct, applied by `gradation.py`, never through an agent — and later extend samples skip reviewed links. Transcribe and read the list back to the teacher before writing it.
+- A re-export overwrote a filled-in sample; `export_*` now moves a filled sample to `steekproef.ingevuld.md` first (specs/15 §4). Run part B exports only after the teacher's sample is safe.
+- On Windows, an output CSV open in Excel blocks the export (PermissionError); ask the teacher to close it.
+- Kostensoorten spread over paragraphs count as *noemt* (bedrijfsecon-053): a decision can be applied as teacher-review `correct` entries with the decision id as source.

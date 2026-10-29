@@ -14,7 +14,7 @@ import sys
 from collections import Counter, defaultdict
 from pathlib import Path
 
-from mcommon import load_json, read_text
+from mcommon import keep_filled_sample, load_json, read_text
 
 CSV_KW = dict(delimiter=";", quoting=csv.QUOTE_ALL)
 
@@ -115,6 +115,9 @@ def main(argv: list[str]) -> None:
               f"A: {ja['bloom'] if ja else '—'} · B: {jb['bloom'] if jb else '—'} · verifier: {l.get('verifier') or '—'}", "",
               f"> {l['quote']}", "", f"Opmerking straat: {l.get('note') or '—'}", "",
               "| Terecht? | Bloom juist? | Citaat? |", "|---|---|---|", "|  |  |  |", "", "Opmerking: ", ""]
+    kept = keep_filled_sample(out / "steekproef_opgaven.md")
+    if kept:
+        print(f"[export_exercises] filled-in sample kept as {kept.name}")
     (out / "steekproef_opgaven.md").write_text("\n".join(L) + "\n", encoding="utf-8")
     print(f"[export_exercises] {len(links)} exercise links -> {out}; findings { {k: len(v) for k, v in by_kind.items()} }; steekproef {len(pick)}")
 

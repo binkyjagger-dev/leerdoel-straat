@@ -59,7 +59,10 @@ Part B also writes `steekproef_opgaven.md` (20 exercise links, 10 `high`,
   outside the syllabus; *oefent vóór uitleg*.
 - `gaten_methode.md` also lists the verifier's gradation findings and, when
   part B ran, moves gaps with exercise links to *alleen geoefend (opgaven)*.
-- `steekproef.md` — 14 §5.
+- `steekproef.md` — 14 §5. A sample the teacher has filled in (a `J` or `N`
+  in a table cell) is never overwritten: a re-export first moves it to
+  `steekproef.ingevuld.md` (then `.ingevuld-2.md`, …); same for
+  `steekproef_opgaven.md`.
 - `vergelijking_nulmeting.md` — 14 §4, when a baseline file is given.
 - `dekking_methode.md` — per paragraph: linked criteria by gradation; per
   criterion: leert / herhaalt / oefent counts; confidence distribution;

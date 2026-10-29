@@ -21,6 +21,11 @@
   resolved criterion ids as `scope_criteria`; `per_criterion` lists only
   those, so criteria outside it reach a judge only through a paragraph's own
   top list (`per_paragraph`).
+- `scope_exclude_groups` in `run.json` (optional, set by the orchestrator from an
+  intake decision, added 2026-10-28): group ids (`F2.31.1-02`) taken out of
+  `scope_criteria` although their unit is in it. Their criteria are not in
+  `scope_criteria` of `12_candidates.json`, so they are never a gap; links to them
+  are kept like links to any criterion outside the scope.
 - `--part A` (default) stops after M6; `AB` continues with exercises.
 
 Run folder: `runs/<run_id>/` with `run.json`, `text/` (git-ignored), numbered
@@ -132,7 +137,7 @@ Steps (`scripts/mapping/koppel_extend.py`):
 
 | # | What | Files |
 |---|---|---|
-| X0 | `koppel_extend.py prepare R P` — copy from `P`: `10_criteria.json`, `run.json` fields (`method_id`, `from_run`, `scope_criteria`, `ex_scope_*`, `part`), `text/` (incl. `_pages_*`), `input/`, `13_judgements.{A,B,R}/`, `18_ex_judgements.{A,B,R}/`; `11_method_units.json` → `11_method_units.prev.json`; `15_verification.json` → `15_verification.prev.json`, `19_ex_verification.json` → `19_ex_verification.prev.json`. New book files go to `R/input/ext/` (images in `R/input/ext/book/`). `run.json` gets `extend: {from_run_id: P}`. | |
+| X0 | `koppel_extend.py prepare R P` — copy from `P`: `10_criteria.json`, `run.json` fields (`method_id`, `from_run`, `scope_criteria`, `ex_scope_*`, `part`), `text/` (incl. `_pages_*`), `input/`, `13_judgements.{A,B,R}/`, `18_ex_judgements.{A,B,R}/`, `11_ingest_notes.md`, `16_teacher_review.json` (14 §5.1); `11_method_units.json` → `11_method_units.prev.json`; `15_verification.json` → `15_verification.prev.json`, `19_ex_verification.json` → `19_ex_verification.prev.json`. New book files go to `R/input/ext/` (images in `R/input/ext/book/`). `run.json` gets `extend: {from_run_id: P}`. | |
 | X1 | `method-ingest` in **extend mode**: only the new chapters → `11_method_units.new.json` (same schema), text files in `text/` (OCR pages in `text/_pages_ext/`), notes appended to `11_ingest_notes.md`. | |
 | X1b | `koppel_extend.py merge-units R` — `prev` + `new` → `11_method_units.json`. Unit ids must not collide. Paragraph `order` is renumbered by book order: (chapter number, paragraph number) unless the method profile declares another order. `run.json`: `scope_paragraphs` = old ∪ new, `extend.new_paragraphs`. Then `validate_method.py`. | |
 | X1c | Intake (mapping mode) on the new units only; scope answers *add* to `scope_criteria`. | |

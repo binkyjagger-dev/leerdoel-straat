@@ -16,7 +16,7 @@ One link = one criterion × one paragraph.
   "confidence": "high",                  // high | medium | low  (§4)
   "judges": {"A": "explains", "B": "explains"},
   "note": null,                          // e.g. "breidt uit"
-  "status": "proposed"                   // proposed | confirmed | rejected  (teacher, in Doelstellr later)
+  "status": "proposed"                   // proposed | confirmed (teacher review, 14 §5.1; rejected links leave `links`)
 }
 ```
 

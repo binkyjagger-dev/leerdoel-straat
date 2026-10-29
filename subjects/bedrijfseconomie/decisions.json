@@ -1519,6 +1519,218 @@
       "raised_by": "intake",
       "supersedes": null,
       "scope": null
+    },
+    {
+      "id": "bedrijfsecon-048",
+      "question": "Welke criteria-eenheden verwachten we daarnaast in H26–H28 (domein F), zodat die als 'gat' tellen als deze hoofdstukken ze niet uitleggen?",
+      "context": "De afbakening is nu alleen D2 (18 eenheden, bedrijfsecon-028); het antwoord komt daar bovenop en vervangt het niet. De nieuwe hoofdstukken behandelen kostensoorten en afschrijving (H26), verkoopprijs/btw, begroot en werkelijk resultaat voor belasting en verschillenanalyse (H27) en variabele/constante kosten en break-evenanalyse (H28). Inhoudelijk passen vier eenheden als geheel: F2.30.1 (kostensoorten, constant/variabel, toegerekende kosten/periodekosten; 3 groepen, 10 criteria), F2.30.3 (btw en winstopslag; 2 groepen, 7 criteria; §27.1), F2.30.4 (break-evenafzet/-omzet en grafiek; 2 groepen, 7 criteria; §28.2–28.3) en F2.31.1 (voor- en nacalculatie, verschillenanalyse; 2 groepen, 8 criteria; §27.2–27.4). Samen 9 groepen, 32 criteria. Andere eenheden worden maar voor een deel geraakt: F1.28.1-02-b (afschrijving berekenen en verwerken; §26.1–26.2 leggen dat volledig uit, maar de rest van F1.28.1 gaat over balansmutaties), F2.30.2 (tarief van een dienstverlener; §26.4 doet arbeidsuur- en factuurtarief, geen integrale/variabele kostprijs), F2.30.5-01-a (financieringsresultaat; §27.2), F2.30.6-02 (afschrijvingsperiode en waarderingsgrondslag) en F2.31.2-01 (maatregelen na verschillenanalyse; slot §27.4). Neem je die eenheden op, dan komen hun overige criteria als 'niet in deze methode' in het gatenrapport, terwijl H27 zelf zegt dat er nog 'volgende hoofdstukken van dit domein' komen. Binnen het voorstel zijn al gaten te verwachten: F2.30.1-03 (toegerekende kosten en periodekosten) en F2.31.1-02 (prijs-, efficiency- en bezettingsresultaat; zie de vraag over de verschillenanalyse). De beoordelaars blijven naar alle criteria kijken; de afbakening bepaalt alleen wat als gat telt en, in deel B, welke criteria een extra controle krijgen over de opgaven van H16/H17.",
+      "options": [
+        "D2 (18 eenheden) plus F2.30.1, F2.30.3, F2.30.4 en F2.31.1 (4 eenheden, 32 criteria); koppelingen naar F1.28.1, F2.30.2, F2.30.5, F2.30.6, F2.31.2 enz. blijven bewaard maar het ontbreken ervan telt niet als gat",
+        "Als optie 1, plus F2.30.2 en F2.31.2 (tarief dienstverlener en beheermaatregelen), met de gaten die dat oplevert",
+        "Heel domein F2 (F2.30.1 t/m F2.31.2; 10 eenheden, 69 criteria) erbij",
+        "Alleen D2 houden; H26–H28 worden wel gekoppeld, maar niets uit domein F telt als gat"
+      ],
+      "proposed": "Optie 1: dat zijn de eenheden die deze drie hoofdstukken als geheel behandelen. F2.30.2, F2.30.5, F2.30.6 en F2.31.2 zouden halve gaten geven voor stof die in latere (niet aangeleverde) hoofdstukken van domein F of in H16 hoort; de koppelingen die H26–H28 daar wel leggen (bijv. F1.28.1-02-b in §26.2) blijven zichtbaar.",
+      "impact": "high",
+      "applies_to": [
+        "mapping-judge",
+        "exercise-judge",
+        "mapping-verifier",
+        "exporter"
+      ],
+      "affects_units": [
+        "*"
+      ],
+      "status": "answered",
+      "answer": "Heel domein F2 (F2.30.1 t/m F2.31.2; 10 eenheden, 69 criteria) erbij — met uitzondering van groep F2.31.1-02 (zie bedrijfsecon-051; keuze docent bij de intake van 2026-10-28)",
+      "answered_by": "user",
+      "answered_at": "2026-10-28T14:55:48Z",
+      "source_run": "20261028-1524-koppel-vanvlimmeren-bedrijfseconomie-vwo-in-balans-ext",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "vanvlimmeren-bedrijfseconomie-vwo-in-balans"
+    },
+    {
+      "id": "bedrijfsecon-049",
+      "question": "Komen H26–H28 in de boekvolgorde na H16–H20 (zoals het hoofdstuknummer en het methodeprofiel zeggen) of ervóór, nu ze op pagina 78–114 van een ander deel staan?",
+      "context": "De volgorde bepaalt welke paragraaf 'leert' krijgt (eerste uitleg) en welke 'herhaalt', als een criterium in een oud én een nieuw hoofdstuk wordt uitgelegd. H16 begint op p. 251, H26 op p. 78: H26–H28 staan in een ander deel (kop 'Domein F Financieel beleid'). Het methodeprofiel zegt 'H26, H27 en H28 volgen na H20' en de straat nummert nu al zo (H26.1 = volgorde 22 … H28.3 = 34). Het boek verwijst vanuit H27 terug naar hoofdstuk 10 en domein B (btw), niet naar H16–H20. Raakvlakken die door de volgorde kunnen verschuiven: kosten van leverancierskrediet / gemiste korting (D2.21.10-01-b; §17.5 leert, §26.5 noemt het als interestkosten), afschrijving en boekwaarde (F1.28.1-02-b; §19.1 noemt, §26.2 legt uit), resultaat voor belasting en financieringsresultaat (F2.30.5-01; §16.5 en §27.2), interestkosten op de resultatenrekening (G.32.1-04-a). Naar verwachting gaat het om hooguit enkele criteria.",
+      "options": [
+        "Hoofdstuknummer: H16–H20 eerst, dan H26–H28 (huidige nummering, zoals het methodeprofiel)",
+        "Het deel met domein F (H26–H28) komt eerst, daarna H16–H20",
+        "Volgorde niet vastleggen: binnen elk deel de boekvolgorde, en waar een criterium in beide delen wordt uitgelegd beide 'leert' met een opmerking"
+      ],
+      "proposed": "Optie 1: volgt het hoofdstuknummer en wat het profiel al zegt; lagere paginanummers wijzen op een volgend deel dat opnieuw bij p. 1 begint, niet op een eerdere plaats in het boek. Graag in het methodeprofiel bij 'Boekvolgorde' de volgorde van de delen invullen, zodat die bij een volgende uitbreiding vastligt.",
+      "impact": "medium",
+      "applies_to": [
+        "mapping-judge",
+        "mapping-verifier",
+        "exporter"
+      ],
+      "affects_units": [
+        "H26.1",
+        "H26.2",
+        "H26.3",
+        "H26.4",
+        "H26.5",
+        "H26.6",
+        "H27.1",
+        "H27.2",
+        "H27.3",
+        "H27.4",
+        "H28.1",
+        "H28.2",
+        "H28.3"
+      ],
+      "status": "answered",
+      "answer": "Hoofdstuknummer: H16–H20 eerst, dan H26–H28 (huidige nummering, zoals het methodeprofiel)",
+      "answered_by": "user",
+      "answered_at": "2026-10-28T14:55:48Z",
+      "source_run": "20261028-1524-koppel-vanvlimmeren-bedrijfseconomie-vwo-in-balans-ext",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "vanvlimmeren-bedrijfseconomie-vwo-in-balans"
+    },
+    {
+      "id": "bedrijfsecon-050",
+      "question": "Tellen deze termen uit H26–H28 als hetzelfde begrip als de term in de criteria (aanvulling op bedrijfsecon-031), en welke juist niet?",
+      "context": "Zonder woordenlijstregel scoren paragrafen te laag als kandidaat voor criteria die ze wel uitleggen. Gelijk (voorstel): 'aanschafprijs' (§26.1–26.3) = 'aanschafwaarde' (F1.28.1-02-b, F2.30.6-02-a); 'economische levensduur' / 'gebruiksduur' = 'gebruiksduur' / 'afschrijvingsperiode'; 'vaste kosten' (§28.1) = 'constante kosten'; 'rechtevenredig' = 'proportioneel'; 'inkoopprijs verkopen' / 'inkoopwaarde van de verkochte goederen' = 'inkoopwaarde van de omzet'; 'omzetbelasting' = 'btw'; 'vooraftrek' (§27.1) = 'te vorderen btw'; 'te betalen (af te dragen) omzetbelasting' = 'af te dragen btw'; 'begroot / verwacht resultaat' = 'voorcalculatorisch resultaat' en 'werkelijk resultaat' = 'gerealiseerd / nacalculatorisch resultaat' (F2.31.1); 'dekkingsbijdrage als percentage van de omzet' (§28.2) = 'dekkingsbijdrage in perunage van de omzet' (F2.30.4-01-c); 'TO-lijn / TK-lijn' (§28.3) = 'lijn van de totale opbrengsten / totale kosten' (F2.30.4-02); 'winst / verlies' in de break-evenanalyse = 'positief / negatief resultaat (voor belasting)'; 'winstopslag als percentage van de verkoopprijs' (voorbeeld 27.2) = 'winstmarge' (F2.30.3-02-b). Niet gelijk (voorstel, beoordelaar beslist per geval): 'arbeidsuurtarief' en 'factuurtarief' (§26.4: personeelskosten per productief uur, resp. plus opslag overige kosten en winstopslag) tegenover het 'tarief' van F2.30.2 (verbijzonderde variabele kosten plus opslag constante kosten); 'inkoopprijs' tegenover 'kostprijs' bij de winstopslag (§27.1 rekent de opslag over de inkoopprijs, F2.30.3-02-a over de kostprijs). Raakt de kandidaten voor ongeveer 8 eenheden (F1.28.1, F2.30.1–F2.30.4, F2.30.6, F2.31.1) in alle 13 nieuwe paragrafen.",
+      "options": [
+        "Alle genoemde 'gelijk'-paren als woordenlijstregels vastleggen; de 'niet gelijk'-paren niet (de beoordelaar weegt die per geval)",
+        "Alleen de eenduidige paren vastleggen (aanschafprijs, vaste kosten, inkoopwaarde van de omzet, omzetbelasting/vooraftrek, voor-/nacalculatorisch, perunage, TO/TK-lijn); 'winstopslag als % van de verkoopprijs = winstmarge' niet",
+        "Geen regels; de beoordelaars herkennen synoniemen zelf"
+      ],
+      "proposed": "Optie 1: het zijn synoniemen voor hetzelfde begrip in deze hoofdstukken; 'winstopslag op de verkoopprijs' is in de syllabustaal de winstmarge, en zonder regel wordt voorbeeld 27.2 niet als kandidaat voor F2.30.3-02-b gezien. Het arbeidsuur-/factuurtarief en de opslag op de inkoopprijs blijven bewust buiten de lijst, zoals de liquidatiewaarde in bedrijfsecon-031.",
+      "impact": "medium",
+      "applies_to": [
+        "mapping-judge",
+        "exercise-judge",
+        "mapping-verifier"
+      ],
+      "affects_units": [
+        "H26.1",
+        "H26.2",
+        "H26.3",
+        "H26.4",
+        "H26.5",
+        "H26.6",
+        "H27.1",
+        "H27.2",
+        "H27.3",
+        "H27.4",
+        "H28.1",
+        "H28.2",
+        "H28.3"
+      ],
+      "status": "answered",
+      "answer": "Alle genoemde 'gelijk'-paren als woordenlijstregels vastleggen; de 'niet gelijk'-paren niet (de beoordelaar weegt die per geval)",
+      "answered_by": "user",
+      "answered_at": "2026-10-28T14:55:48Z",
+      "source_run": "20261028-1524-koppel-vanvlimmeren-bedrijfseconomie-vwo-in-balans-ext",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "vanvlimmeren-bedrijfseconomie-vwo-in-balans"
+    },
+    {
+      "id": "bedrijfsecon-051",
+      "question": "Telt de verschillenanalyse van §27.4 (verschil per kosten- en opbrengstpost van een handelsonderneming) als uitleg van de verschillenanalyse in F2.31.1-02 (verkoopresultaat en budgetresultaat met prijs-, efficiency- en bezettingsresultaat)?",
+      "context": "Zelfde woord, ander begrip. §27.4 verklaart het verschil tussen voor- en nacalculatie post voor post: minder afzet × verkoopprijs, lagere verkoopprijs × werkelijke afzet, goedkoper ingekocht, en per kostenpost meer of minder dan verwacht (voorbeeld 27.9), met een korte alinea over besluiten die de ondernemer kan nemen. Prijs-, efficiency- en bezettingsresultaat, budgetresultaat, normale bezetting en C/N komen in H26–H28 niet voor; H27 zegt dat het domein in 'volgende hoofdstukken' doorloopt. §27.2–27.3 rekenen het voor- en nacalculatorische resultaat uit met de winstopslagmethode (brutoresultaat min bedrijfskosten), niet met de splitsing in variabele en constante kosten die F2.31.1-01-a/b noemt; §28.1 (voorbeelden 28.3–28.4) doet dat wel. Raakt F2.31.1 (2 groepen, 8 criteria) en zijdelings F2.31.2-01 (beheermaatregelen).",
+      "options": [
+        "§27.4 legt F2.31.1-01-c/d uit (verschil berekenen en per post verklaren); F2.31.1-02 krijgt van §27.4 hooguit 'noemt' en wordt een gat met de opmerking 'verwacht in een later hoofdstuk van domein F (niet aangeleverd)'",
+        "§27.4 telt ook als uitleg van F2.31.1-02-c/d (verschillenanalyse opstellen en per deelresultaat verklaren), omdat de aanpak dezelfde is",
+        "F2.31.1-02 buiten de afbakening laten tot de latere hoofdstukken zijn aangeleverd"
+      ],
+      "proposed": "Optie 1: de prestatie van F2.31.1-02 (budgetresultaat splitsen in prijs-, efficiency- en bezettingsresultaat) staat niet in §27.4; 'leert' toekennen zou de indruk geven dat die stof gedekt is. Als gat met een duidelijke opmerking blijft zichtbaar dat het in een later hoofdstuk hoort.",
+      "impact": "medium",
+      "applies_to": [
+        "mapping-judge",
+        "mapping-verifier",
+        "exporter"
+      ],
+      "affects_units": [
+        "H27.2",
+        "H27.3",
+        "H27.4",
+        "H28.1"
+      ],
+      "status": "answered",
+      "answer": "F2.31.1-02 buiten de afbakening laten tot de latere hoofdstukken zijn aangeleverd",
+      "answered_by": "user",
+      "answered_at": "2026-10-28T14:55:48Z",
+      "source_run": "20261028-1524-koppel-vanvlimmeren-bedrijfseconomie-vwo-in-balans-ext",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "vanvlimmeren-bedrijfseconomie-vwo-in-balans"
+    },
+    {
+      "id": "bedrijfsecon-052",
+      "question": "Hoe melden we in deel B de criteria die alleen in H26–H28 worden uitgelegd, nu de opgaven 26.1–26.21, 27.1–27.11 en 28.1–28.20 niet zijn aangeleverd?",
+      "context": "Er is geen werkboek of antwoordenboek voor H26–H28, dus deze paragrafen hebben geen opgaven in de koppeling. Zonder aparte melding verschijnen alle criteria die alleen hier worden uitgelegd (bij het voorstel van de afbakeningsvraag vrijwel alle 32 criteria van F2.30.1, F2.30.3, F2.30.4 en F2.31.1) als 'niet geoefend', alsof het boek ze niet oefent. Voor H19/H20 is dat geregeld met een aparte melding (bedrijfsecon-036); deze vraag gaat alleen over H26–H28.",
+      "options": [
+        "Melden als 'niet geoefend (opgaven bij H26–H28 niet aangeleverd)', apart van de oefengaten in H16/H17, zoals bij H19/H20",
+        "H26–H28 uit de afbakening van deel B halen; deze criteria verschijnen dan niet in het oefenoverzicht",
+        "Gewoon als oefengat melden"
+      ],
+      "proposed": "Optie 1: zelfde behandeling als H19/H20 (bedrijfsecon-036); het rapport laat zien dat de oefening ontbreekt in de aanlevering, niet in het boek.",
+      "impact": "low",
+      "applies_to": [
+        "exercise-judge",
+        "mapping-verifier",
+        "exporter"
+      ],
+      "affects_units": [
+        "H26.1",
+        "H26.2",
+        "H26.3",
+        "H26.4",
+        "H26.5",
+        "H26.6",
+        "H27.1",
+        "H27.2",
+        "H27.3",
+        "H27.4",
+        "H28.1",
+        "H28.2",
+        "H28.3"
+      ],
+      "status": "answered",
+      "answer": "Melden als 'niet geoefend (opgaven bij H26–H28 niet aangeleverd)', apart van de oefengaten in H16/H17, zoals bij H19/H20",
+      "answered_by": "user",
+      "answered_at": "2026-10-28T14:55:48Z",
+      "source_run": "20261028-1524-koppel-vanvlimmeren-bedrijfseconomie-vwo-in-balans-ext",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "vanvlimmeren-bedrijfseconomie-vwo-in-balans"
+    },
+    {
+      "id": "bedrijfsecon-053",
+      "question": "Telt het per paragraaf behandelen van afzonderlijke kostensoorten in H26 (afschrijvingskosten §26.1-26.2, interest- en complementaire kosten §26.3, personeelskosten §26.4, interest, grond, diensten van derden, belastingen en overige kosten §26.5) als uitleg van F2.30.1-01-a ('noemt de categoriale kostensoorten'), terwijl het boek de indeling zelf in de aangeleverde hoofdstukken nergens als lijst geeft?",
+      "context": "De judges zetten F2.30.1-01-a overal op 'mentions' omdat 'de categoriale indeling niet wordt genoemd'; daardoor staat het als gat 'alleen genoemd'. De hoofdstuktitel 'Overige kostensoorten' doet vermoeden dat H25 (niet aangeleverd) de indeling introduceert. Het principe achter de indeling (F2.30.1-01-b, naar opgeofferde productiemiddelen) staat ook nergens.",
+      "options": [
+        "Wel uitleg: de eerste paragraaf die een kostensoort introduceert is 'leert' met aspect (de behandelde soorten); de verifier-voorstellen voor H26.4/H26.5 volgen",
+        "Geen uitleg: gat laten staan met de opmerking 'indeling waarschijnlijk in H25, niet aangeleverd' (lijn van bedrijfsecon-029/034)",
+        "Gat laten staan tot H25 is aangeleverd en dan opnieuw koppelen met /koppel --extend"
+      ],
+      "proposed": "Optie 1: het criterium is van onthouden-niveau en H26 legt de soorten een voor een uit; met het aspect ziet de docent dat de lijst niet compleet bij elkaar staat.",
+      "impact": "low",
+      "applies_to": [
+        "mapping-judge",
+        "mapping-verifier",
+        "exporter"
+      ],
+      "affects_units": [
+        "F2.30.1",
+        "H26.1",
+        "H26.4",
+        "H26.5"
+      ],
+      "status": "answered",
+      "answer": "Optie 2: geen uitleg. Het per paragraaf behandelen van afzonderlijke kostensoorten telt als 'noemt' (mentions) voor F2.30.1-01-a; het gat blijft staan met de opmerking 'indeling waarschijnlijk in H25, niet aangeleverd'.",
+      "answered_by": "user",
+      "answered_at": "2026-10-28T16:15:53Z",
+      "source_run": "20261028-1524-koppel-vanvlimmeren-bedrijfseconomie-vwo-in-balans-ext",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "vanvlimmeren-bedrijfseconomie-vwo-in-balans"
     }
   ]
 }

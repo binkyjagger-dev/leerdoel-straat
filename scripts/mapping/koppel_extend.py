@@ -47,6 +47,9 @@ def prepare(run_dir: Path, prev: Path, rep: Report) -> None:
         if (prev / d).exists():
             shutil.copytree(prev / d, run_dir / d, dirs_exist_ok=True)
     shutil.copy2(prev / "10_criteria.json", run_dir / "10_criteria.json")
+    for f in ("11_ingest_notes.md", "16_teacher_review.json"):  # ingest appends to the notes; review: specs/14 §5.1
+        if (prev / f).exists():
+            shutil.copy2(prev / f, run_dir / f)
     for src, dst in RENAME.items():
         if (prev / src).exists():
             shutil.copy2(prev / src, run_dir / dst)

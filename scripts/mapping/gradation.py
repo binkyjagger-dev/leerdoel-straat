@@ -5,6 +5,7 @@ Usage: gradation.py <run_dir> [--judges A,B] [--repair 13_judgements.R]
 
 Reads 11_method_units.json (+text/), 10_criteria.json, 13_judgements.<J>/<unit>.json per judge.
 A repair judgement file set (judge "R") decides the pairs it contains: it replaces the judge(s) that disagree with it.
+16_teacher_review.json, when present, is applied after the merge (specs/14 §5.1).
 Writes 13_judgements.json (merged), 14_mappings.json, 14_findings.json.
 """
 from __future__ import annotations
@@ -116,6 +117,28 @@ def main(argv: list[str]) -> None:
         })
     save_json(run_dir / "13_judgements.json", {"merged": merged, "voided": voided})
 
+    # teacher review (specs/14 §5.1): the teacher's word is final
+    teacher, teacher_rejected = {}, []
+    tp = run_dir / "16_teacher_review.json"
+    if tp.exists():
+        tr_data = load_json(tp)
+        for e in validate_schema(tr_data, "teacher_review.schema.json")[:5]:
+            rep.fail("TR1", f"16_teacher_review.json: {e}")
+        teacher = {(r["criterion_id"], r["unit_id"]): r for r in tr_data["reviews"]}
+        have = {(m["criterion_id"], m["unit_id"]) for m in merged}
+        for key in sorted(set(teacher) - have):
+            rep.warn("TR1", f"teacher review on {key[0]} x {key[1]}: no merged link (a new link needs a repair judge)")
+        kept = []
+        for m in merged:
+            r = teacher.get((m["criterion_id"], m["unit_id"]))
+            if r and r["verdict"] == "reject":
+                teacher_rejected.append({k: m[k] for k in ("criterion_id", "unit_id", "treatment", "quote")} | {"note": r.get("note"), "source": r["source"]})
+                continue
+            if r and r["verdict"] == "correct":
+                m["treatment"] = r["treatment"]
+            kept.append(m)
+        merged = kept
+
     # gradation per criterion in order (specs/12 §2)
     order = {u["unit_id"]: u.get("order") or 0 for u in method["units"]}
     by_crit = defaultdict(list)
@@ -147,8 +170,11 @@ def main(argv: list[str]) -> None:
                 grad = "noemt"
             if m.get("second_quote"):
                 note = (note + "; " if note else "") + f"tweede citaat: {m['second_quote']}"
+            r = teacher.get((cid, m["unit_id"]))
+            if r:
+                note = (note + "; " if note else "") + "docent: " + (r.get("note") or r["verdict"])
             links.append({k: m[k] for k in ("criterion_id", "group_id", "unit_id", "treatment", "quote", "quote_page", "confidence", "judges")}
-                         | {"gradation": grad, "verifier": None, "note": note, "status": "proposed"})
+                         | {"gradation": grad, "verifier": None, "note": note, "status": "confirmed" if r else "proposed"})
         if first_explain is None and cid in in_scope_set:
             findings.append({"criterion_id": cid, "unit_id": None, "finding": "alleen geoefend" if any(m["treatment"] == "practises" for m in ms) else "alleen genoemd"})
     # criteria in scope without any link
@@ -169,6 +195,8 @@ def main(argv: list[str]) -> None:
             findings.append({"criterion_id": None, "unit_id": None, "finding": f"zelfde citaat bij groepen {sorted(gs)}: '{q[:60]}…'"})
 
     out = {"links": links, "voided": voided, "findings": findings}
+    if teacher:
+        out["teacher_rejected"] = teacher_rejected
     errs = validate_schema(out, "mappings.schema.json")
     for e in errs:
         rep.fail("MS1", e)
@@ -176,6 +204,8 @@ def main(argv: list[str]) -> None:
     save_json(run_dir / "14_findings.json", {"findings": findings})
     from collections import Counter
     rep.info("M4", f"{len(links)} links: {dict(Counter(l['gradation'] for l in links))}; confidence {dict(Counter(l['confidence'] for l in links))}; voided {len(voided)}; findings {len(findings)}")
+    if teacher:
+        rep.info("TR1", f"teacher review: {sum(l['status'] == 'confirmed' for l in links)} confirmed, {len(teacher_rejected)} rejected")
     rep.print_and_exit()
 
 

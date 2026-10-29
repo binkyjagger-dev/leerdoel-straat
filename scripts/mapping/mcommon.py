@@ -18,6 +18,18 @@ ook naar door uit om over tot dan nog zo al maar hoe wat welke waarbij waarin ka
 we wij ze hun haar zijn mijn deze dus per dan meer minder dat""".split())
 
 
+def keep_filled_sample(path: Path) -> Path | None:
+    """specs/15 §4: a sample the teacher filled in (J/N in a cell) is moved aside, never overwritten."""
+    if not path.exists() or not re.search(r"(^|\|)\s*-*[JjNn]\s*(\||,)", path.read_text(encoding="utf-8"), re.M):
+        return None
+    n, dst = 1, path.with_name(f"{path.stem}.ingevuld{path.suffix}")
+    while dst.exists():
+        n += 1
+        dst = path.with_name(f"{path.stem}.ingevuld-{n}{path.suffix}")
+    path.rename(dst)
+    return dst
+
+
 def norm(s: str) -> str:
     """Lower-case, strip accents, collapse whitespace and punctuation to single spaces."""
     s = unicodedata.normalize("NFKD", s)

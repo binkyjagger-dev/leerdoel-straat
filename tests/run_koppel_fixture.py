@@ -92,6 +92,30 @@ def extend_scenario(prev, s):
     ok &= run("extend: export", f"{s}/export_mappings.py", str(x))
     sample = (x / "output" / "steekproef.md").read_text(encoding="utf-8")
     ok &= check("extend sample only from the new paragraph", "× 2.1 " in sample and "× 1." not in sample)
+    # teacher review (specs/14 §5.1): reject one old link, correct the new one to mentions, one entry on a non-link
+    links = json.loads((x / "14_mappings.json").read_text(encoding="utf-8"))["links"]
+    rej = next(l for l in links if l["unit_id"] != "H2.1")
+    rv = lambda c, u, v, **k: {"criterion_id": c, "unit_id": u, "verdict": v, "note": "fixture", "source": "steekproef", "by": "user", "at": "2026-10-28", **k}
+    (x / "16_teacher_review.json").write_text(json.dumps({"reviews": [rv(rej["criterion_id"], rej["unit_id"], "reject"),
+        rv("D1.2-01-b", "H2.1", "correct", treatment="mentions"), rv("D1.2-01-b", "H1.1", "confirm")]}), encoding="utf-8")
+    ok &= run("teacher review: gradation", f"{s}/gradation.py", str(x))
+    mp = json.loads((x / "14_mappings.json").read_text(encoding="utf-8"))
+    idx = {(l["criterion_id"], l["unit_id"]): l for l in mp["links"]}
+    ok &= check("rejected link removed and kept for audit", (rej["criterion_id"], rej["unit_id"]) not in idx
+                and any(t["criterion_id"] == rej["criterion_id"] for t in mp["teacher_rejected"]))
+    cor = idx.get(("D1.2-01-b", "H2.1"))
+    ok &= check("corrected link: mentions -> noemt, confirmed", cor and cor["gradation"] == "noemt" and cor["status"] == "confirmed")
+    ok &= run("teacher review: check_mappings --verification", f"{s}/check_mappings.py", str(x), "--verification", "15_verification.json")
+    sp = x / "output" / "steekproef.md"
+    sp.write_text(sp.read_text(encoding="utf-8").replace("|  |  |  |  |", "|J|N|J|J|", 1), encoding="utf-8")
+    ok &= run("teacher review: export", f"{s}/export_mappings.py", str(x))
+    ok &= check("filled-in sample kept, not overwritten", "|J|N|J|J|" in (x / "output" / "steekproef.ingevuld.md").read_text(encoding="utf-8"))
+    ok &= check("reviewed link not sampled again", "× 2.1 " not in (x / "output" / "steekproef.md").read_text(encoding="utf-8"))
+    rx = json.loads((x / "run.json").read_text(encoding="utf-8")); rx["scope_exclude_groups"] = ["D1.2-01"]
+    (x / "run.json").write_text(json.dumps(rx), encoding="utf-8")
+    ok &= run("candidates with scope_exclude_groups", f"{s}/candidates.py", str(x))
+    sc = json.loads((x / "12_candidates.json").read_text(encoding="utf-8"))["scope_criteria"]
+    ok &= check("excluded group D1.2-01 not in scope, D1.1 still is", not any(c.startswith("D1.2-01") for c in sc) and "D1.1-01-a" in sc)
     ok &= run("extend: prepare again (must fail)", f"{s}/koppel_extend.py", "prepare", str(x), str(prev), allow_fail=True)
     return ok
 

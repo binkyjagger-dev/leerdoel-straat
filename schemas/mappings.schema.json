@@ -21,6 +21,7 @@
         }}
     },
     "voided": {"type": "array"},
+    "teacher_rejected": {"type": "array"},
     "findings": {"type": "array"}
   }
 }

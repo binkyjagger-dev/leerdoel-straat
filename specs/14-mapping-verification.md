@@ -77,6 +77,34 @@ and `14_mappings.json`. Reports, on *leert* and *oefent* links:
 paragraph code/title/page, quote, gradation, confidence and the judges' and
 verifier's views. Four columns to tick, like the spot check.
 
+### 5.1 Teacher review (`16_teacher_review.json`, decided 2026-10-28)
+
+The teacher's verdicts on the sample (and on whole paragraphs, when the
+teacher says so) go back into the run; the teacher's word is final.
+
+- The orchestrator transcribes the filled `steekproef.md` and the teacher's
+  remarks into a list, shows it to the teacher (AskUserQuestion) and writes it
+  only after confirmation. It never adds a verdict of its own. Ambiguous
+  remarks (a whole paragraph, a typo in an id) are asked, not guessed.
+- One entry per criterion × paragraph: `verdict` `confirm` (J on *Terecht*
+  and *Gradatie*), `reject` (N on *Terecht*: the link goes) or `correct`
+  (the link stays with the teacher's `treatment`; gradation follows from
+  it), plus `note` (the teacher's remark), `source` (`steekproef #4`,
+  `opmerking`, a decision id) and `by`/`at`. A decision answer that changes
+  existing links (e.g. bedrijfsecon-053) is recorded the same way, `source`
+  = the decision id.
+- `gradation.py` applies the file after merging A/B/R and before assigning
+  gradations: `reject` removes the pair (listed under `teacher_rejected` in
+  `14_mappings.json` for audit); `correct` sets the treatment; `confirm` and
+  `correct` give the link `status: confirmed` and note `docent: …`.
+  Confidence stays the judges' agreement measure; verifier verdicts stay as
+  recorded. An entry on a pair without a merged link is a warning (TR1): a
+  teacher cannot add a link without a quote — that goes through a repair
+  judge.
+- The file belongs to the run and is carried over by `--extend`
+  (`koppel_extend.py prepare`); the extend run's sample excludes links the
+  teacher already reviewed.
+
 ## 6. Exercise mode (part B, `19_ex_verification.json`)
 
 Same agent, `mode: exercises`. Inputs: `17_ex_candidates.json`,

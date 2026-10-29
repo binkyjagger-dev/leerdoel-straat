@@ -12,7 +12,7 @@ import sys
 from collections import Counter, defaultdict
 from pathlib import Path
 
-from mcommon import load_json
+from mcommon import keep_filled_sample, load_json
 
 CSV_KW = dict(delimiter=";", quoting=csv.QUOTE_ALL)
 
@@ -122,10 +122,10 @@ def main(argv: list[str]) -> None:
     # steekproef.md
     random.seed(run["run_id"])
     pool = links
-    if run.get("extend"):  # specs/13 §5 X7: only what this run judged
+    if run.get("extend"):  # specs/13 §5 X7: only what this run judged, not what the teacher already reviewed
         ext = run["extend"]
-        pool = [l for l in links if l["unit_id"] in ext.get("new_paragraphs", [])
-                or l["criterion_id"] in ext.get("delta", {}).get(l["unit_id"], [])]
+        pool = [l for l in links if l["status"] != "confirmed" and (l["unit_id"] in ext.get("new_paragraphs", [])
+                or l["criterion_id"] in ext.get("delta", {}).get(l["unit_id"], []))]
     high = [l for l in pool if l["confidence"] == "high" and l["gradation"] != "noemt"]
     low = [l for l in pool if l["confidence"] != "high" or (l.get("verifier") or "").startswith("dispute")]
     pick = random.sample(high, min(sample_n // 2, len(high))) + random.sample(low, min(sample_n - sample_n // 2, len(low)))
@@ -137,6 +137,9 @@ def main(argv: list[str]) -> None:
         L += [f"## {i}. {l['criterion_id']} × {u['code']} {u.get('title') or ''} (p. {l.get('quote_page') or u.get('page_from') or '?'})", "",
               f"**Criterium:** {ctext(l['criterion_id'])}", "", f"**Gradatie:** {l['gradation']} · **zekerheid:** {l['confidence']} · A: {l['judges'].get('A',{}).get('treatment','')} · B: {l['judges'].get('B',{}).get('treatment','')} · verifier: {l.get('verifier') or '—'}", "",
               f"> {l['quote']}", "", "| Terecht? | Gradatie juist? | Citaat draagt bewijs? | Leerling geholpen? |", "|---|---|---|---|", "|  |  |  |  |", "", "Opmerking: ", ""]
+    kept = keep_filled_sample(out / "steekproef.md")
+    if kept:
+        print(f"[export] filled-in sample kept as {kept.name}")
     (out / "steekproef.md").write_text("\n".join(L) + "\n", encoding="utf-8")
 
     print(f"[export] {len(links)} links -> {out}; gaps {len(gaps)}, buiten syllabus {len(outside)}, steekproef {len(pick)}")

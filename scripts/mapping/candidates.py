@@ -92,7 +92,9 @@ def main(argv: list[str]) -> None:
         return round(s, 2), "; ".join(why)
 
     crit_units = set(run.get("scope_criteria") or [g["unit_id"] for g in crit_src["groups"]])
-    scope_crit = [c["criterion_id"] for g in crit_src["groups"] if g["unit_id"] in crit_units for c in g["criteria"]]
+    excluded = set(run.get("scope_exclude_groups") or [])  # specs/13 §1: groups out of scope within a unit in scope
+    scope_crit = [c["criterion_id"] for g in crit_src["groups"]
+                  if g["unit_id"] in crit_units and g["group_id"] not in excluded for c in g["criteria"]]
     in_scope = set(scope_crit)
     per_crit, per_para = [], defaultdict(list)
     for c in criteria:

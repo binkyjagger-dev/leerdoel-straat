@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Teacher review of paragraph links (specs/14 §5.1)",
+  "type": "object",
+  "required": ["reviews"],
+  "properties": {
+    "reviews": {
+      "type": "array",
+      "items": {"type": "object",
+        "required": ["criterion_id", "unit_id", "verdict", "source", "by", "at"],
+        "properties": {
+          "criterion_id": {"type": "string"}, "unit_id": {"type": "string"},
+          "verdict": {"enum": ["confirm", "reject", "correct"]},
+          "treatment": {"enum": ["explains", "practises", "mentions"]},
+          "note": {"type": ["string", "null"]},
+          "source": {"type": "string"}, "by": {"type": "string"}, "at": {"type": "string"}
+        },
+        "if": {"properties": {"verdict": {"const": "correct"}}},
+        "then": {"required": ["treatment"]},
+        "additionalProperties": false}
+    }
+  },
+  "additionalProperties": false
+}
