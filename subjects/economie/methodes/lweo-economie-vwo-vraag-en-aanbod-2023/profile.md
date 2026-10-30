@@ -20,5 +20,5 @@ Door de docent geschreven. De straat leest dit in elke stap en schrijft er nooit
 
 ## Niet koppelen
 
-* Scope van de nulmeting: hoofdstuk 1 en 2. Hoofdstuk 3 en 4 zitten niet in de aangeleverde pdf.
+* Scope van de nulmeting: hoofdstuk 1, 2, 3 en 4.
 

@@ -117,3 +117,11 @@ python3 tests/run_examen_fixture.py                  # exercise all /examen scri
 - A re-export overwrote a filled-in sample; `export_*` now moves a filled sample to `steekproef.ingevuld.md` first (specs/15 §4). Run part B exports only after the teacher's sample is safe.
 - On Windows, an output CSV open in Excel blocks the export (PermissionError); ask the teacher to close it.
 - Kostensoorten spread over paragraphs count as *noemt* (bedrijfsecon-053): a decision can be applied as teacher-review `correct` entries with the decision id as source.
+
+## Lessons from koppel extend run 2 (LWEO Vraag en aanbod H3–H4 on top of H1–H2, 2026-10-29/30)
+- Scanned PDF without a text layer and no `pdftoppm` on Windows: render pages with PyMuPDF (dpi 200) to PNG, then `ocr_images.py`. A chapter can start in the previous book file (H3 began on the last 4 pages of the H1–H2 PDF); ingest must stitch across files.
+- Delta mode is cheap and safe: 84 old-paragraph pairs judged, 6 links added, no *leert* moved. The added criteria were mostly already explained earlier (D1.19-01-c in H1.3).
+- Parallel judges sharing the scratchpad overwrote each other's helper files (`ids.json`); tell every judge to use unique scratch names.
+- Repair judges applied an open verifier proposal (economie-046, drawing lines with known values) before the teacher answered it. If the intake decides otherwise, those pairs must be re-judged — repair prompts should say "apply answered decisions only".
+- A decision that requires a note on the link (economie-043, 'vraagzijde') survives in judge notes but not in merged links; merge should carry decision-required notes.
+- Economie has no subject verb table, so "opstellen" stays creëren and MB2 warned 102 times on judged toepassen; open decision economie-047 resolves it.

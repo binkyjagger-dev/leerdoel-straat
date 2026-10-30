@@ -1172,6 +1172,343 @@
       "raised_by": "intake",
       "supersedes": null,
       "scope": "lweo-economie-vwo-vraag-en-aanbod-2023"
+    },
+    {
+      "id": "economie-040",
+      "question": "Welke criteria verwachten we in hoofdstuk 3 en 4, zodat ze aan de bestaande scope (D1.1–D1.15, D1.22–D1.24) worden toegevoegd en als 'gat' tellen als ze niet uitgelegd worden?",
+      "context": "Uit de paragraafteksten en de 'Kunnen'-lijsten: §3.1 De productiekosten legt TCK, TVK, TK en GTK uit (D1.16, D1.17); §3.2 legt TO, GO, TW, GW (winstmarge), break-evenafzet/-omzet en MK, MO, MW met 'maximale winst bij MO = MK' uit, met tabel, figuur en functies (D1.19, D1.20, D1.21). §4.1 en §4.2 leggen externe effecten, private/maatschappelijke kosten en baten en internaliseren via heffing en subsidie uit (F2.4-01, F2.4-02); §4.2 legt ook de nieuwe aanbodfunctie na heffing/subsidie uit (D1.13, al in scope). §4.3 De markt voor beleggingen zet aandelen tegenover obligaties en zegt 'hoe hoger het risico, des te hoger moet het potentiële rendement zijn' (G5.1, G5.2). Twijfel: (1) D1.18 (aanbodlijn = stijgend deel van de MK-lijn): §3.2 zegt dat de MK-functie 'in de lesbrief Marktgedrag' wordt uitgelegd en behandelt de aanbodlijn niet; alleen de stopregel 'prijs onder de GVK' staat er. (2) D2.2-01 (prijsnemer, P = MO = MK): §3.2 rekent met een vaste prijs (P = GO = MO), maar marktvormen staan in Marktgedrag. (3) D3.9 (heffing/subsidie en surplus): §4.2 legt afwenteling (afwentelingspercentage) en de opbrengst/kosten voor de overheid uit (delen van D3.9-01-a/c en D3.9-02-a/c), maar consumenten-, producenten- en verloren surplus komen nergens voor; die horen volgens de lesbrievenvolgorde bij 'Marktresultaat en overheidsinvloed'. (4) E1 (intertemporele ruil, rente) hoort bij Levensloop. Voorstel A voegt 9 groepen (31 criteria) toe. Koppelingen naar criteria buiten de scope blijven bewaard (economie-024); ze tellen alleen niet als gat. Let op: als de scope groeit, controleert de opgavencontrole (deel B) ook alle opgaven van H1–H2 opnieuw op de toegevoegde criteria.",
+      "options": [
+        "A: D1.16, D1.17, D1.19, D1.20, D1.21, F2.4, G5.1 en G5.2 toevoegen; D1.18, D2.2, D3.9 en E1 niet (koppelingen blijven bewaard)",
+        "B: als A, plus D3.9 (heffingen en subsidies; de surplusdelen komen dan als gat in het rapport)",
+        "C: als A, plus D1.18 en D2.2 (aanbodlijn en MK, prijsnemer)",
+        "D: alleen D1.16, D1.17, D1.19, D1.20, D1.21 en F2.4; §4.3 beleggen niet in scope"
+      ],
+      "proposed": "A: dit zijn de eindtermen die H3–H4 echt uitleggen. D1.18 en D2.2 stelt de lesbrief zelf uit naar Marktgedrag, en het surplusdeel van D3.9 hoort bij Marktresultaat en overheidsinvloed; toevoegen zou gaten laten zien die in een ander boekje horen. Afwentelingsopgaven worden wel aan D3.9-01-c/D3.9-02-c gekoppeld, ze tellen alleen niet als gat.",
+      "impact": "high",
+      "applies_to": [
+        "mapping-judge",
+        "exercise-judge",
+        "mapping-verifier",
+        "exporter"
+      ],
+      "affects_units": [
+        "D1.16",
+        "D1.17",
+        "D1.18",
+        "D1.19",
+        "D1.20",
+        "D1.21",
+        "D2.2",
+        "D3.9",
+        "F2.4",
+        "G5.1",
+        "G5.2"
+      ],
+      "status": "answered",
+      "answer": "A: D1.16, D1.17, D1.19, D1.20, D1.21, F2.4, G5.1 en G5.2 toevoegen; D1.18, D2.2, D3.9 en E1 niet (koppelingen blijven bewaard)",
+      "answered_by": "user",
+      "answered_at": "2026-10-29T15:57:52Z",
+      "source_run": "20261029-1610-koppel-lweo-economie-vwo-vraag-en-aanbod-2023-ext",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "lweo-economie-vwo-vraag-en-aanbod-2023"
+    },
+    {
+      "id": "economie-041",
+      "question": "Hoe koppelen we de kostenbegrippen uit §3.1–§3.2 die geen criterium hebben (GCK, GVK, proportioneel/progressief/degressief variabele kosten, schaalvoordelen, afschrijven, stoppen als de prijs onder de GVK ligt)?",
+      "context": "De syllabus noemt TK, TCK, TVK, GTK en MK, maar niet GCK of GVK (zie ook de open vraag economie-015). §3.1 besteedt een groot deel aan GCK = TCK/q, GVK = TVK/q, GTK = GCK + GVK, schaalvoordelen en de drie soorten variabele kosten; §3.2 legt uit dat een bedrijf met verlies op korte termijn doorproduceert zolang de prijs boven de GVK ligt. Minstens 11 deelvragen rekenen met GVK (o.a. 3.7a/c/f, 3.9a, 3.17a, 3.20d-e, 3.25a-d), plus de zelftest (figuur 3.13). Zonder afspraak koppelt de ene beoordelaar dit aan D1.17-01-b (gemiddelde en totale kosten uit elkaar berekenen) en de andere niets ('buiten syllabus').",
+      "options": [
+        "Aan D1.16/D1.17 alleen als het antwoord TK, TVK, TCK of GTK gebruikt of oplevert (bijv. GTK = GCK + GVK); alleen GCK/GVK of de soort variabele kosten = buiten syllabus; de stopregel (prijs < GVK) aan D1.18-01-c (buiten scope, koppeling blijft)",
+        "GCK en GVK altijd aan D1.17-01-b koppelen (gemiddelde kosten), met opmerking 'GCK/GVK niet in syllabus'",
+        "Alles buiten syllabus (verrijking), ook GTK = GCK + GVK"
+      ],
+      "proposed": "Optie 1: D1.17 gaat over TK, GTK en MK; een opgave die alleen de GVK berekent oefent dat niet, een opgave die via GCK + GVK de GTK bepaalt wel. De stopregel is precies het minimum van de GVK uit D1.18-01-c.",
+      "impact": "medium",
+      "applies_to": [
+        "mapping-judge",
+        "exercise-judge",
+        "mapping-verifier"
+      ],
+      "affects_units": [
+        "D1.16",
+        "D1.17",
+        "D1.18",
+        "H3.1",
+        "H3.2",
+        "H3.3",
+        "H3.4"
+      ],
+      "status": "answered",
+      "answer": "Aan D1.16/D1.17 alleen als het antwoord TK, TVK, TCK of GTK gebruikt of oplevert (bijv. GTK = GCK + GVK); alleen GCK/GVK of de soort variabele kosten = buiten syllabus; de stopregel (prijs < GVK) aan D1.18-01-c (buiten scope, koppeling blijft)",
+      "answered_by": "user",
+      "answered_at": "2026-10-29T15:57:52Z",
+      "source_run": "20261029-1610-koppel-lweo-economie-vwo-vraag-en-aanbod-2023-ext",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "lweo-economie-vwo-vraag-en-aanbod-2023"
+    },
+    {
+      "id": "economie-042",
+      "question": "Hoe behandelen we de onderwerpen uit H4 die geen (duidelijk) criterium hebben: mvo/people-planet-profit/circulaire economie, eindwaarde en contante waarde, en aandeel/dividend/beurskoers/obligatiekoers?",
+      "context": "§4.1.2–§4.1.3 (mvo, de drie p's, duurzaam produceren, lineaire tegenover circulaire economie) hebben geen eindterm; F2.4 gaat alleen over externe effecten. §4.3 rekent met eindwaarde (groeifactor) en contante waarde (4.11c, 4.28a–f: 7 deelvragen); E1.1-01-c vraagt het rendement van uitstel, niet het omrekenen van bedragen in de tijd, en E1 hoort bij Levensloop. Aandelen en obligaties: 4.13 (verwacht dividend → betalingsbereidheid voor het aandeel) en 4.16 (marktrente stijgt → vraag naar bestaande 3%-obligaties; beurskoers berekenen bij 4% rendement) liggen het dichtst bij G5.2-01-a/c en D1.4b/D1.24 (verschuiving van de vraaglijn en nieuw evenwicht op de aandelenmarkt). Raakt 3 paragrafen (H4.1, H4.3, H4.5) en ongeveer 20 deelvragen.",
+      "options": [
+        "Per onderwerp: mvo/circulair en eindwaarde/contante waarde buiten syllabus (verrijking, gemeld); rendement en koers van een obligatie of aandeel aan G5.2-01-c; verwachtingen die de vraag naar aandelen veranderen aan D1.4b-01-b/D1.24",
+        "Als optie 1, maar eindwaarde/contante waarde aan E1.1-01-c koppelen met opmerking 'omrekenen in de tijd'",
+        "Alles in §4.1.2–4.1.3 en §4.3 dat niet letterlijk in een criterium staat buiten syllabus"
+      ],
+      "proposed": "Optie 1: zo blijft het rapport eerlijk over wat de syllabus vraagt (mvo en contante waarde niet), terwijl de marktredeneringen over aandelen gewoon vraag-en-aanbodoefening zijn en de obligatieberekening precies G5.2-01-c is.",
+      "impact": "medium",
+      "applies_to": [
+        "mapping-judge",
+        "exercise-judge",
+        "mapping-verifier",
+        "exporter"
+      ],
+      "affects_units": [
+        "H4.1",
+        "H4.3",
+        "H4.5",
+        "E1.1",
+        "G5.2",
+        "D1.4b",
+        "D1.24"
+      ],
+      "status": "answered",
+      "answer": "Per onderwerp: mvo/circulair en eindwaarde/contante waarde buiten syllabus (verrijking, gemeld); rendement en koers van een obligatie of aandeel aan G5.2-01-c; verwachtingen die de vraag naar aandelen veranderen aan D1.4b-01-b/D1.24",
+      "answered_by": "user",
+      "answered_at": "2026-10-29T15:57:52Z",
+      "source_run": "20261029-1610-koppel-lweo-economie-vwo-vraag-en-aanbod-2023-ext",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "lweo-economie-vwo-vraag-en-aanbod-2023"
+    },
+    {
+      "id": "economie-043",
+      "question": "Tellen uitleg en opgaven over een heffing of subsidie bij de vragers (de vraaglijn verschuift) mee voor D1.13, dat alleen de verschuiving van de aanbodlijn noemt?",
+      "context": "§4.2 legt naast heffing en subsidie bij aanbieders ook uit dat een heffing bij vragers de betalingsbereidheid verlaagt en de vraaglijn omlaag verschuift. Opgave 4.10a-b (subsidie aan vragers: nieuwe vraaglijn tekenen, subsidie berekenen) en enkele transfer- en zelftestvragen (o.a. 4.19, 4.24/4.25, figuur 'Vraag met subsidie') gebruiken dit. D1.13 noemt alleen de collectieve aanbodlijn. Vergelijk de open vraag economie-035 (aanbodelasticiteit), waar analoog koppelen werd afgeraden.",
+      "options": [
+        "Verschuiving van de vraaglijn door heffing/subsidie = buiten syllabus (gemeld als verrijking); het nieuwe evenwicht en de afwenteling worden gewoon aan D1.24 resp. D3.9 gekoppeld",
+        "Aan D1.13 koppelen met opmerking 'vraagzijde'",
+        "Aan D1.4b koppelen (verschuiving van de vraaglijn)"
+      ],
+      "proposed": "Optie 1: geen eindterm vraagt de heffing bij vragers, en analoog koppelen zou de dekking van D1.13 te hoog laten lijken. De rest van de opgave (evenwicht berekenen) oefent wel syllabusstof en wordt zo gekoppeld.",
+      "impact": "medium",
+      "applies_to": [
+        "mapping-judge",
+        "exercise-judge",
+        "mapping-verifier"
+      ],
+      "affects_units": [
+        "D1.13",
+        "D1.4b",
+        "D1.24",
+        "D3.9",
+        "H4.2",
+        "H4.4",
+        "H4.5"
+      ],
+      "status": "answered",
+      "answer": "Aan D1.13 koppelen met opmerking 'vraagzijde'",
+      "answered_by": "user",
+      "answered_at": "2026-10-29T15:57:52Z",
+      "source_run": "20261029-1610-koppel-lweo-economie-vwo-vraag-en-aanbod-2023-ext",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "lweo-economie-vwo-vraag-en-aanbod-2023"
+    },
+    {
+      "id": "economie-044",
+      "question": "Mogen de volgende methodetermen uit H3–H4 bij het koppelen gelijkstaan aan de term in het criterium (aanvulling op de woordenlijst van economie-028)?",
+      "context": "Voorgestelde paren (methode → criterium): winstmarge / gemiddelde winst (GW) → winst per eenheid (GO − GTK, D1.19); kostprijs → GTK (§3.1: 'Dit wordt ook wel de kostprijs genoemd'); break-evenafzet → break-even-afzet; P (prijs) → p en productieomvang → afzet q (§3.2: productie en afzet zijn aan elkaar gelijk); constante kosten → vaste kosten (TCK); afwenteling / afwentelingspercentage → deel van de heffing dat de vragers dragen (D3.9-01-c) en het doorgeven van een subsidie (D3.9-02-c); vaste heffing per stuk → heffing per product (D1.13). Twijfelgeval: economie-028 liet 'kostprijs' gelden voor prijzen van productiefactoren en techniek (D1.12). In §4.2 staat bij de heffing 'dan worden ook deze kosten onderdeel van de kostprijs'; dat hoort bij D1.13/F2.4, niet bij D1.12. Raakt D1.12, D1.13, D1.16, D1.17, D1.19, D1.20, D3.9 (7 groepen).",
+      "options": [
+        "Alle paren overnemen; de regel kostprijs → D1.12 uit 028 alleen laten gelden als de kostprijs verandert door productiefactoren of techniek, niet bij een heffing of subsidie",
+        "Alle paren overnemen en 028 ongewijzigd laten gelden",
+        "Geen extra woordenlijst; beoordelaars beslissen per geval"
+      ],
+      "proposed": "Optie 1: de termen zijn inhoudelijk gelijk, en zonder de afbakening kan een heffing via 'kostprijs' onterecht als D1.12 worden gekoppeld.",
+      "impact": "medium",
+      "applies_to": [
+        "mapping-judge",
+        "exercise-judge",
+        "mapping-verifier"
+      ],
+      "affects_units": [
+        "D1.12",
+        "D1.13",
+        "D1.16",
+        "D1.17",
+        "D1.19",
+        "D1.20",
+        "D3.9"
+      ],
+      "status": "answered",
+      "answer": "Alle paren overnemen; de regel kostprijs → D1.12 uit 028 alleen laten gelden als de kostprijs verandert door productiefactoren of techniek, niet bij een heffing of subsidie",
+      "answered_by": "user",
+      "answered_at": "2026-10-29T15:57:52Z",
+      "source_run": "20261029-1610-koppel-lweo-economie-vwo-vraag-en-aanbod-2023-ext",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "lweo-economie-vwo-vraag-en-aanbod-2023"
+    },
+    {
+      "id": "economie-045",
+      "question": "Hoe behandelen we de opgaven en tabellen uit H3–H4 waarvan de tekst niet met het paginabeeld is gecontroleerd of deels onleesbaar is?",
+      "context": "Er zijn geen helemaal onleesbare pagina's. Wel: tabel 3.2 (T-shirts, §3.2) staat in de OCR deels door elkaar en mist waarden (bijv. de rijen bij q = 4 en q = 10); de deelvragen 3.17b-d en 3.19-3.20 verwijzen ernaar. Niet visueel bevestigd: 'K2' in 4.14c, de opties A en C van 4.23, de opties van 4.24/4.25, tabel 4.2 en 4.3. Antwoorden 3.19a-c en 3.20a-c zijn alleen 'Zie figuur'. Alle figuren 3.1–3.13 en 4.1–4.8 ontbreken; voor uitleg via figuren geldt economie-029. Raakt ongeveer 15 deelvragen.",
+      "options": [
+        "Gewoon koppelen op vraag en antwoord, met opmerking 'tekst niet op paginabeeld gecontroleerd'; de controleur neemt ze mee in de steekproef",
+        "Deze deelvragen pas koppelen nadat ik ze zelf heb nagekeken",
+        "Gewoon koppelen zonder opmerking"
+      ],
+      "proposed": "Optie 1: wat een opgave oefent blijkt meestal uit de vraagzin en het antwoord, niet uit de exacte getallen; met de opmerking zijn ze gericht na te kijken.",
+      "impact": "low",
+      "applies_to": [
+        "exercise-judge",
+        "mapping-verifier"
+      ],
+      "affects_units": [
+        "H3.2",
+        "H4.3",
+        "H4.5"
+      ],
+      "status": "answered",
+      "answer": "Gewoon koppelen op vraag en antwoord, met opmerking 'tekst niet op paginabeeld gecontroleerd'; de controleur neemt ze mee in de steekproef",
+      "answered_by": "user",
+      "answered_at": "2026-10-29T15:57:52Z",
+      "source_run": "20261029-1610-koppel-lweo-economie-vwo-vraag-en-aanbod-2023-ext",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "lweo-economie-vwo-vraag-en-aanbod-2023"
+    },
+    {
+      "id": "economie-046",
+      "question": "Opgaven laten kosten-, opbrengst- en marginale lijnen tekenen (TCK, TVK, TK, GVK, GCK, GTK, TO, MO, MK, P = GO = MO). Geen criterium vraagt zulke lijnen te tekenen. Wanneer koppelen we zo'n tekenopdracht aan het rekencriterium (D1.16-01-c, D1.17-01-b, D1.14-01-b)?",
+      "context": "De rechters verschillen hier steeds: A koppelt aan het rekencriterium, B zegt 'buiten syllabus' (3.1b, 3.3b, 3.4b, 3.7e, 3.34b). Al buiten syllabus: 3.7c/d, 3.16c, 3.19a/b, 3.20a. De verificateur hanteert nu optie 1.",
+      "options": [
+        "Koppelen aan het rekencriterium alleen als de leerling voor het tekenen waarden uit een functie of uit gegevens moet uitrekenen; een lijn uit al berekende tabelwaarden of een constante (TCK, P = GO = MO) = buiten syllabus",
+        "Altijd koppelen aan het rekencriterium van de grootheid (tekenen = de grootheid in een grafiek gebruiken)",
+        "Nooit koppelen: het tekenen van kostenlijnen is buiten syllabus (melden als verrijking)"
+      ],
+      "proposed": "Optie 1: alleen een tekenopdracht die een berekening vraagt, oefent de berekening. Uitzetten van bekende waarden oefent geen criterium.",
+      "impact": "medium",
+      "applies_to": [
+        "exercise-judge",
+        "mapping-verifier",
+        "exporter"
+      ],
+      "affects_units": [
+        "D1.14",
+        "D1.16",
+        "D1.17",
+        "D1.21",
+        "H3.1",
+        "H3.2",
+        "H3.4"
+      ],
+      "status": "open",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null,
+      "source_run": "20261029-1610-koppel-lweo-economie-vwo-vraag-en-aanbod-2023-ext",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "lweo-economie-vwo-vraag-en-aanbod-2023"
+    },
+    {
+      "id": "economie-047",
+      "question": "'Opstellen' en 'samenstellen' staan in de werkwoordtabel bij creëren. In H3–H4 betekent 'stel de TK-/TO-/TW-functie op' of 'stel de nieuwe aanbodfunctie op' steeds invullen volgens het geleerde model (TK = TVK + TCK, TO = p × q, Qa' = a(P − heffing) + b). Mag dat als toepassen tellen, zonder dat de zekerheid daalt?",
+      "context": "13 links in H3.1–H4.4 staan alleen door deze waarschuwing op 'medium', terwijl beide rechters het eens zijn (toepassen). Een tabelregel voor economie vraagt een beantwoorde beslissing en verb_table.py install; optie 1 vraagt een aanpassing van de straat.",
+      "options": [
+        "Bij het koppelen: 'opstellen/samenstellen van een functie volgens het geleerde model' = toepassen; de waarschuwing blijft, maar telt niet mee voor de zekerheid (straat-aanpassing)",
+        "In subjects/economie/bloom_verbs.json een regel 'opstellen (van een functie of vergelijking volgens een gegeven model)' = toepassen opnemen (geldt ook voor /generate)",
+        "Zo laten: de waarschuwing verlaagt de zekerheid naar medium en de docent controleert"
+      ],
+      "proposed": "Optie 1: het niveau is al juist (toepassen); alleen de zekerheid wordt onterecht verlaagd. Optie 2 verandert ook /generate en hoort bij een syllabusbesluit.",
+      "impact": "low",
+      "applies_to": [
+        "exercise-judge",
+        "mapping-verifier"
+      ],
+      "affects_units": [
+        "D1.13",
+        "D1.14",
+        "D1.16",
+        "D1.17",
+        "D1.19"
+      ],
+      "status": "open",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null,
+      "source_run": "20261029-1610-koppel-lweo-economie-vwo-vraag-en-aanbod-2023-ext",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "lweo-economie-vwo-vraag-en-aanbod-2023"
+    },
+    {
+      "id": "economie-048",
+      "question": "Bij een vaste prijs (P = GO = MO, prijsnemer) bepalen opgaven de maximale winst via MO = MK en TW = TO − TK. Koppelen we aan D1.21-01-b/D1.19-01-a (in scope), aan D2.2-01-b/c (buiten scope, p = MK bij volkomen concurrentie), of aan beide?",
+      "context": "De rechters verschillen: 3.25a heeft alleen D2.2-01-b, 3.23e/3.24 zijn gesplitst (A: D2.2, B: D1.21 + D1.19), 3.19f/3.20c zijn gesplitst. Hierdoor lijkt D1.21-01-b op een paar plekken minder geoefend. De verificateur hanteert nu optie 1 (missing links bij 3.25a).",
+      "options": [
+        "Altijd D1.21-01-b (afzet) en D1.19-01-a/-b (winst) koppelen; D2.2-01-b/c daarnaast als 'raakt ook' (buiten scope, bewaard)",
+        "Alleen D1.21/D1.19: H3 gaat niet over marktvormen",
+        "Alleen D2.2-01-b/c als de context expliciet een prijsnemer of volkomen concurrentie noemt, anders D1.21/D1.19"
+      ],
+      "proposed": "Optie 1: de leerling voert beide prestaties uit; D1.21-01-b is de in-scope prestatie, D2.2 blijft zichtbaar voor de lesbrief Marktvormen.",
+      "impact": "medium",
+      "applies_to": [
+        "exercise-judge",
+        "mapping-judge",
+        "mapping-verifier",
+        "exporter"
+      ],
+      "affects_units": [
+        "D1.19",
+        "D1.21",
+        "D2.2",
+        "H3.2",
+        "H3.3",
+        "H3.4"
+      ],
+      "status": "open",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null,
+      "source_run": "20261029-1610-koppel-lweo-economie-vwo-vraag-en-aanbod-2023-ext",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "lweo-economie-vwo-vraag-en-aanbod-2023"
+    },
+    {
+      "id": "economie-049",
+      "question": "economie-042 koppelt verwachtingen die de vraag naar aandelen veranderen aan D1.4b-01-b/D1.24. Opgaven vragen ook naar de leveringsbereidheid van de bezitters van aandelen of obligaties (de aanbodkant). Geen criterium noemt dat: D1.12-01-b kent alleen productiefactoren, techniek en het aantal aanbieders. Hoe koppelen we die?",
+      "context": "H4.3-opg4.13c staat als 'oefenstof buiten syllabus'; in 4.14b, 4.20d en 4.22.3 wordt alleen de vraagkant gekoppeld.",
+      "options": [
+        "Buiten syllabus laten (melden); alleen de vraagkant en het gevolg voor de koers koppelen",
+        "Aan D1.12-01-b koppelen met opmerking 'aanbod van bestaande effecten'",
+        "Alleen koppelen (D1.24-01-a/d) als ook het gevolg voor koers of hoeveelheid wordt gevraagd"
+      ],
+      "proposed": "Optie 3: het gevolg voor de koers is marktevenwicht (D1.24); de verschuiving van het aanbod zelf heeft geen eindterm, en koppelen aan D1.12 zou de dekking te hoog laten lijken.",
+      "impact": "low",
+      "applies_to": [
+        "exercise-judge",
+        "mapping-verifier",
+        "exporter"
+      ],
+      "affects_units": [
+        "D1.12",
+        "D1.24",
+        "H4.3",
+        "H4.4",
+        "H4.5"
+      ],
+      "status": "open",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null,
+      "source_run": "20261029-1610-koppel-lweo-economie-vwo-vraag-en-aanbod-2023-ext",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "lweo-economie-vwo-vraag-en-aanbod-2023"
     }
   ]
 }

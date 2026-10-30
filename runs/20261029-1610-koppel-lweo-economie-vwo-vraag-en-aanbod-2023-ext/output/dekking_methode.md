@@ -1,0 +1,91 @@
+# Dekking methode — 20261029-1610-koppel-lweo-economie-vwo-vraag-en-aanbod-2023-ext
+
+- Methode: Vraag en aanbod (`lweo-economie-vwo-vraag-en-aanbod-2023`)
+- Bron-run leerdoelen: 20261012-2220-economie-vwo-2026-run2
+- Criteria in scope: 98 · paragrafen in scope: 13
+- Koppelingen: 149 — leert 78, noemt 54, herhaalt 10, oefent 7
+- Zekerheid: high 122, medium 10, low 17
+
+## Toegepaste beslissingen
+
+- economie-001: Subdomein-aanhef bepaalt het plafond (toepassen), maar analyseren is toegestaan waar de specificatie zelf een verband of oorzaak-gevolg vraagt ('de invloed van … op …', 'het verband tussen …', 'de samenhang tussen …').
+- economie-002: Begrijpen: 'herkennen in een context' is het classificeren van een nieuw voorbeeld. Alleen het herkennen van een definitie of term zonder context blijft onthouden.
+- economie-003: Normaal goed = 0 < Ey < 1, als categorie naast inferieur (Ey < 0) en luxe (Ey > 1).
+- economie-004: Contrast: onvolledige informatie = beide partijen missen informatie; asymmetrische informatie = één partij weet meer dan de andere.
+- economie-005: Drukfout: criteria economisch correct formuleren ('hogere autonome consumptie'); de bronfout wordt in het dekkingsrapport genoteerd en source_quote blijft letterlijk.
+- economie-006: Gangbare lesstof invullen bij kopregel-specificaties; de docent controleert achteraf via de twijfellijst, waar deze eenheden gemarkeerd worden.
+- economie-007: Ondergrens toepassen, behalve bij zuiver feitelijke/institutionele eindtermen; die markeren in de twijfellijst. De aanhef 'in contexten … toepassen' vraagt om gebruik in een context, maar een toepassen-criterium forceren bij een feit levert kunstmatige criteria op.
+- economie-008: Eén eigenaar: de meest specifieke eindterm bezit de handeling; de andere eindterm heeft hooguit één opstapcriterium in andere woorden, en dekking van een bullet via een andere eindterm wordt in het dekkingsrapport vermeld. Dat sluit aan bij wat de controleur in run 1 adviseerde.
+- economie-009: Strikt: alleen criteria in de aangegeven vorm. De markering beperkt wat de leerling moet kunnen; een criterium daarbuiten zou meer vragen dan de syllabus.
+- economie-010: Illustraties: minstens één voorbeeld gebruiken, de rest mag; ontbreken telt niet als gat. 'Bijvoorbeeld' is in CvTE-taal niet limitatief, en volledige dekking zou criteria overladen.
+- economie-011: Breed: structureel = alle niet-conjuncturele werkloosheid, met frictie, mismatch en institutionele oorzaken als vormen. Dat volgt de letterlijke tekst van H5.2 en sluit aan op natuurlijke werkloosheid in I1.2.
+- economie-012: Ja, maar bij eerste gebruik in een groep voluit met afkorting tussen haakjes; notatie zoals de syllabus (p en q, GO, GTK, TO). Houdt de zinnen leesbaar zonder dat leerlingen de examennotatie missen.
+- economie-013: Syllabusterm overal, precies zoals gedrukt. Zo herkennen leerlingen de term in het examen en blijft het consistent over eindtermen.
+- economie-014: Ja, algemene regel: economisch correct formuleren, citaat letterlijk, melden in het dekkingsrapport. Geen van deze gevallen verandert de economische inhoud.
+- economie-015: Geen ondergrens; uitgaan van een overal stijgende MK-lijn en die aanname expliciet noemen
+- economie-016: Betekenisomschrijving: 'IS-curve (evenwichtscurve van de goederenmarkt)'. Die zegt een leerling meer dan de vertaling en sluit aan op de definitie in de syllabus.
+- economie-017: Vier gradaties (leert, herhaalt, oefent, noemt); leert = eerste paragraaf in boekvolgorde die het criterium uitlegt, precies één per criterium; bij uitleg in twee delen: eerste = leert, tweede = herhaalt met opmerking 'breidt uit'.
+- economie-018: Twee onafhankelijke beoordelaars (A en B) per koppeling; overeenstemming en citaatgeldigheid bepalen de zekerheid.
+- economie-019: Nulmeting door de docent op LWEO lesbrief Vraag en aanbod, hoofdstuk 1 en 2; de straat wordt parallel gebouwd en daartegen gemeten.
+- economie-020: Criterium-id's uit de leerdoel-straat (bijv. D1.16-01-c) als vaste sleutel; Doelstellr-id's in een vertaaltabel.
+- economie-021: Zelfde repo; één /koppel-command naast /generate; specs 10–15.
+- economie-022: Citaten maximaal 25 woorden; de methodetekst blijft in de run-map (git-ignored) en komt nooit in de uitvoer.
+- economie-023: In het methodeprofiel (subjects/<vak>/methodes/<methode>/profile.md), door de docent.
+- economie-024: Alleen D1.1–D1.15 en D1.22–D1.24 zijn in scope; koppelingen naar andere criteria (bijv. D2.1 vanuit §1.1) worden wel bewaard, maar het ontbreken ervan telt niet als gat ('niet in dit boekje')
+- economie-026: Gat in deze lesbrief: D1.13 blijft in scope en komt in het gatenrapport als 'alleen geoefend'
+- economie-027: Deel A alleen op uitlegtekst; Transfer en Zelftest gaan uit de scope van deel A (gemeld als 'alleen opgaven, zie deel B'); opgaven tellen pas in deel B
+- economie-028: Alle paren overnemen, ook kostprijs → prijzen van productiefactoren en technische ontwikkeling (D1.12 telt dan als uitgelegd)
+- economie-029: Ja: als de tekst beschrijft wat de figuur laat zien, telt het als uitleg, met de opmerking 'uitleg via figuur, niet gecontroleerd op het paginabeeld'
+- economie-030: Alle doorlopende zinnen gelden als lopende tekst; cartoon- en figuurresten (hoofdletterfragmenten, losse getallen) tellen nooit als bewijs, hoogstens als 'noemt'
+- economie-031: Ja, nummer 2 (ik vul het ook in het methodeprofiel in)
+- economie-032: Niet koppelen; wel gebruiken als controlelijst voor de controleur (een 'Kunnen'-punt zonder koppeling wordt gemeld)
+- economie-033: Wel uitleg, maar D1.8-01-a (indeling met grenswaarden) apart melden als 'methode wijkt af van definitie' in het gatenrapport
+- economie-034: Optie 1: het boek legt deze stof juist zo uit (begrip + voorbeeld), en een leerling leert het hier. Als 'gat' melden zou een leemte suggereren die er niet is. 'deels' houdt zichtbaar wat ontbreekt.
+- economie-035: Optie 1: geen eindterm vraagt Ea. Analoog koppelen zou de dekking van D1.5/D1.6 te hoog laten lijken.
+- economie-036: Optie 1: D1.6-01-b vraagt uitleg van 'relatief sterker/minder sterk'. Een antwoord dat alleen een oorzaak noemt, oefent dat niet.
+- economie-037: Optie 1: berekenen of aflezen van het drempelinkomen is geen indelen van een goed. Een vraag die wel indeelt (2.18b) is al gekoppeld.
+- economie-038: Optie 1: de syllabus kent geen apart criterium voor werken met een gegeven collectieve functie, en de leerling oefent dezelfde handeling.
+- economie-039: Optie 1: de handeling is aflezen of oplossen bij Qv = 0 / Qa = 0 in de lijn of functie. Het begrip omschrijven of het verloop uitleggen vraagt de opgave niet.
+- economie-040: A: D1.16, D1.17, D1.19, D1.20, D1.21, F2.4, G5.1 en G5.2 toevoegen; D1.18, D2.2, D3.9 en E1 niet (koppelingen blijven bewaard)
+- economie-041: Aan D1.16/D1.17 alleen als het antwoord TK, TVK, TCK of GTK gebruikt of oplevert (bijv. GTK = GCK + GVK); alleen GCK/GVK of de soort variabele kosten = buiten syllabus; de stopregel (prijs < GVK) aan D1.18-01-c (buiten scope, koppeling blijft)
+- economie-042: Per onderwerp: mvo/circulair en eindwaarde/contante waarde buiten syllabus (verrijking, gemeld); rendement en koers van een obligatie of aandeel aan G5.2-01-c; verwachtingen die de vraag naar aandelen veranderen aan D1.4b-01-b/D1.24
+- economie-043: Aan D1.13 koppelen met opmerking 'vraagzijde'
+- economie-044: Alle paren overnemen; de regel kostprijs → D1.12 uit 028 alleen laten gelden als de kostprijs verandert door productiefactoren of techniek, niet bij een heffing of subsidie
+- economie-045: Gewoon koppelen op vraag en antwoord, met opmerking 'tekst niet op paginabeeld gecontroleerd'; de controleur neemt ze mee in de steekproef
+
+## Per paragraaf
+
+| Paragraaf | leert | herhaalt | oefent | noemt |
+|---|---|---|---|---|
+| 1.1 Soorten markten | D2.2-01-a | — | — | 5 |
+| 1.2 De vraagkant van de markt | D1.1-01-a, D1.1-01-b, D1.2-01-b, D1.2-01-c, D1.3-01-a, D1.3-01-b, D1.3-01-c | — | — | 4 |
+| 1.3 De aanbodkant van de markt | D1.10-01-a, D1.10-01-b, D1.10-01-c, D1.11-01-a, D1.11-01-b, D1.19-01-a, D1.19-01-c | — | — | 6 |
+| 1.4 Marktevenwicht | D1.14-01-b, D1.22-01-a, D1.22-01-b, D1.22-01-c, D1.23-01-a, D1.23-01-b, D1.23-01-c, D1.4a-01-a | — | — | 6 |
+| 1.5 Verschuiving langs de lijn en verschuiving van de lijn | D1.12-01-a, D1.12-01-b, D1.12-01-c, D1.24-01-a, D1.24-01-b, D1.4b-01-a, D1.4b-01-b, D1.4b-01-c, D1.9-01-a, D1.9-01-b | D1.10-01-a, D1.19-01-c, D1.22-01-a | D1.22-01-b, D1.22-01-c | 3 |
+| 1.6 Transfer | — | — | — | 0 |
+| 1.7 Zelftest | — | — | — | 0 |
+| 2.1 De prijselasticiteit van de vraag | D1.14-01-d, D1.5-01-a, D1.5-01-b, D1.5-01-d, D1.6-01-a, D1.6-01-b, D1.6-01-c | — | — | 11 |
+| 2.2 De kruislingse prijselasticiteit van de vraag | D1.9-02-a, D1.9-02-b | D1.9-01-b | — | 3 |
+| 2.3 De inkomenselasticiteit van de vraag | D1.7-01-a, D1.7-01-d, D1.8-01-a, D1.8-01-b, D1.8-01-c | — | — | 4 |
+| 2.4 Transfer | — | — | — | 0 |
+| 2.5 Zelftest | — | — | — | 0 |
+| 3.1 De productiekosten | D1.16-01-a, D1.16-01-b, D1.16-01-c, D1.17-01-a, D1.17-01-b | — | — | 0 |
+| 3.2 Het bepalen van de gewenste productieomvang | D1.14-01-a, D1.18-01-c, D1.19-01-b, D1.19-01-d, D1.20-01-a, D1.20-01-c, D1.21-01-a, D1.21-01-b, D1.21-01-c, D2.2-01-b, D2.2-01-c | D1.14-01-b, D1.17-01-a, D1.17-01-b, D1.19-01-a | D1.16-01-b | 2 |
+| 3.3 Transfer | — | — | — | 0 |
+| 3.4 Zelftest | — | — | — | 0 |
+| 4.1 Duurzaam produceren | F2.4-01-a, F2.4-01-b | — | — | 1 |
+| 4.2 Externe effecten en overheidsingrijpen | D1.13-01-a, D1.13-01-c, D1.13-01-d, D3.9-01-c, F2.4-02-a, F2.4-02-b, F2.4-02-c | D1.24-01-a, F2.4-01-a | D1.22-01-b, D1.23-01-a, D1.23-01-c, D1.24-01-b | 7 |
+| 4.3 De markt voor beleggingen | G5.1-01-b, G5.1-01-c, G5.2-01-a, G5.2-01-b, G5.2-01-c, G5.2-01-d | — | — | 2 |
+| 4.4 Transfer | — | — | — | 0 |
+| 4.5 Zelftest | — | — | — | 0 |
+
+## Overige bevindingen
+
+-  : zelfde citaat bij groepen ['D1.1-01', 'D1.4a-01']: 'hierdoor neemt de betalingsbereidheid van de vragers af, waa…'
+-  : zelfde citaat bij groepen ['D1.10-01', 'D1.19-01']: 'omgekeerd zullen sommige kledingzaken door de lagere prijs g…'
+-  : zelfde citaat bij groepen ['D1.12-01', 'D1.17-01']: 'de kostprijs van een product bevat alle kosten die bij de pr…'
+-  : zelfde citaat bij groepen ['D1.14-01', 'D1.19-01', 'D2.2-01']: 'de totale winst wordt berekend als het verschil tussen de to…'
+-  : zelfde citaat bij groepen ['D1.15-01', 'D1.5-01']: 'met de prijselasticiteit van de vraag naar spijkerbroeken ku…'
+-  : zelfde citaat bij groepen ['D1.23-01', 'D1.24-01']: 'door dit aanbodoverschot daalt de prijs, net zolang totdat d…'
+-  : zelfde citaat bij groepen ['D1.23-01', 'D1.24-01']: 'in figuur 4.1 is te zien dat de evenwichtsprijs door de invo…'
+-  : zelfde citaat bij groepen ['D2.1-01', 'D2.2-01']: 'omdat er met zoveel aanbieders sprake is van enorme concurre…'
