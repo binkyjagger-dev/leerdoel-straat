@@ -1,26 +1,29 @@
 # Bevindingen examenbank bedrijfseconomie
 
-## buiten huidige syllabus
+## vaardigheid domein A
 
-- vwo-2025-tv1 vraag 2 scorepunt 1 (1 p): Resultaatmarge (EBIT/omzet) en 'graaiflatie': onderwerp niet in de CE-syllabus 2028 (bedrijfsecon-042, -045).; Resultaatmarge (EBIT/omzet) en graaiflatie: onderwerp niet in de CE-syllabus 2028 (bedrijfsecon-042; resultaatmarge is niet winstmarge, bedrijfsecon-045).
 - vwo-2025-tv1 vraag 10 scorepunt 1 (1 p): Personeelsbehoefte (aantal schoonmaakbeurten/uren) berekenen uit bezettingsgraad en verhuurperiode; geen criterium berekent de personeelsbehoefte zelf (C2.17.2-04-a gaat uit van een gegeven gewenste bezetting); rekenvaardigheid uit domein A.; Personeelsbehoefte in uren berekenen uit werklast (aantal schoonmaakbeurten uit bezetting en verhuurduur); geen criterium: C2.17.2-04-a gaat uit van een gegeven personeelsbehoefte, C2.17.8-02 van gegeven FTE/contracturen.
 - vwo-2025-tv1 vraag 10 scorepunt 2 (1 p): Benodigde arbeidsuren per week (personeelsbehoefte) berekenen; geen criterium vraagt dit (C2.17.2-04-a en C2.17.8-02-a rekenen met gegeven bezetting/contracturen); rekenvaardigheid uit domein A.; Personeelsbehoefte in uren berekenen uit werklast; C2.17.2-04-a (tekort/overschot uit gegeven planning) en C2.17.8-02-a (FTE uit contracturen) vragen een andere prestatie.
 - vwo-2025-tv1 vraag 13 scorepunt 1 (1 p): vaardigheid uit domein A (geen criteria), geen vervallen stof; vaardigheid uit domein A (geen criteria), geen vervallen stof
-- vwo-2025-tv1 vraag 14 scorepunt 1 (1 p): Off-balance-financiering (lease, factoring, consignatievoorraad) als vorm van balansverkorting: prestatie ontbreekt in de huidige criteria (bedrijfsecon-042).; Off-balance-financiering (lease, factoring, consignatievoorraad) om de balans te verkorten: onderwerp ontbreekt in de criteria van 2028 (bedrijfsecon-042), buiten huidige syllabus.
 - vwo-2025-tv1 vraag 21 scorepunt 1 (1 p): vaardigheid uit domein A (geen criteria), geen vervallen stof; scorepunt is kwartaalresultaat afleiden uit cumulatieve resultaten (aftrekken); Kwartaalresultaat uit cumulatieve resultaten aftrekken: vaardigheid uit domein A (geen criteria), geen vervallen stof
 - vwo-2025-tv1 vraag 21 scorepunt 2 (1 p): vaardigheid uit domein A (geen criteria), geen vervallen stof; scorepunt is het verschil van twee kwartaalresultaten; Toename resultaat als verschil van twee kwartaalresultaten: vaardigheid uit domein A (geen criteria), geen vervallen stof
+- vwo-2026-tv1 vraag 12 scorepunt 2 (1 p): vaardigheid uit domein A (geen criteria), geen vervallen stof; vaardigheid uit domein A (geen criteria), geen vervallen stof
+- vwo-2026-tv1 vraag 12 scorepunt 3 (1 p): vaardigheid uit domein A (geen criteria), geen vervallen stof; vaardigheid uit domein A (geen criteria), geen vervallen stof
+- vwo-2026-tv1 vraag 26 scorepunt 1 (2 p): vaardigheid uit domein A (geen criteria), geen vervallen stof; Afloscapaciteit volgens het Collin Credit Score-model uit de informatiebron (geen criterium noemt dit kengetal); vaardigheid uit domein A (geen criteria), geen vervallen stof (bedrijfsecon-043).
+- vwo-2026-tv1 vraag 27 scorepunt 1 (1 p): vaardigheid uit domein A (geen criteria), geen vervallen stof; CCS-punten optellen (Collin Credit Score uit informatiebron 5): vaardigheid uit domein A (geen criteria), geen vervallen stof (bedrijfsecon-043).
+- vwo-2026-tv1 vraag 27 scorepunt 2 (1 p): vaardigheid uit domein A (geen criteria), geen vervallen stof; Conclusie uit het Collin Credit Score-model (aflezen en concluderen): vaardigheid uit domein A (geen criteria), geen vervallen stof (bedrijfsecon-043).
+
+## buiten huidige syllabus
+
+- vwo-2025-tv1 vraag 2 scorepunt 1 (1 p): Resultaatmarge (EBIT/omzet) en 'graaiflatie': onderwerp niet in de CE-syllabus 2028 (bedrijfsecon-042, -045).; Resultaatmarge (EBIT/omzet) en graaiflatie: onderwerp niet in de CE-syllabus 2028 (bedrijfsecon-042; resultaatmarge is niet winstmarge, bedrijfsecon-045).
+- vwo-2025-tv1 vraag 14 scorepunt 1 (1 p): Off-balance-financiering (lease, factoring, consignatievoorraad) als vorm van balansverkorting: prestatie ontbreekt in de huidige criteria (bedrijfsecon-042).; Off-balance-financiering (lease, factoring, consignatievoorraad) om de balans te verkorten: onderwerp ontbreekt in de criteria van 2028 (bedrijfsecon-042), buiten huidige syllabus.
 - vwo-2026-tv1 vraag 1 scorepunt 1 (1 p): SWOT-analyse (indelen in sterkte/zwakte/kans/bedreiging) staat in geen huidig criterium; buiten huidige syllabus volgens bedrijfsecon-042.; Onderwerp SWOT-analyse: SWOT-analyse (indelen van items in sterkte/zwakte/kans/bedreiging, intern versus extern) staat in geen criterium van syllabus 2028; bedrijfsecon-042 noemt SWOT expliciet als buiten huidige syllabus.
 - vwo-2026-tv1 vraag 1 scorepunt 2 (1 p): SWOT-analyse (intern/extern, Weakness) staat in geen huidig criterium; buiten huidige syllabus volgens bedrijfsecon-042.; Onderwerp SWOT-analyse: SWOT-analyse (indelen van items in sterkte/zwakte/kans/bedreiging, intern versus extern) staat in geen criterium van syllabus 2028; bedrijfsecon-042 noemt SWOT expliciet als buiten huidige syllabus.
 - vwo-2026-tv1 vraag 5 scorepunt 1 (1 p): Macht van afnemers uit het vijfkrachtenmodel van Porter: onderwerp niet in de CE-syllabus 2028 (bedrijfsecon-042).; Porter (vijfkrachtenmodel, macht van afnemers): geen criterium in de syllabus 2028 vraagt deze analyse; buiten huidige syllabus (bedrijfsecon-042).
 - vwo-2026-tv1 vraag 5 scorepunt 2 (1 p): Macht van afnemers uit het vijfkrachtenmodel van Porter: onderwerp niet in de CE-syllabus 2028 (bedrijfsecon-042).; Porter (vijfkrachtenmodel): toelichting van afnemersmacht; geen criterium, buiten huidige syllabus (bedrijfsecon-042).
 - vwo-2026-tv1 vraag 6 scorepunt 1 (1 p): Risico's van een bedrijfsmodel (prijs-, voorraad-, omzet-, afzetrisico): onderwerp niet in de CE-syllabus 2028 (bedrijfsecon-042).; Bedrijfsmodel: risico's van oud versus nieuw bedrijfsmodel benoemen; geen criterium, buiten huidige syllabus (bedrijfsecon-042).
 - vwo-2026-tv1 vraag 6 scorepunt 2 (1 p): Risico's van een bedrijfsmodel (prijs-, voorraad-, omzet-, afzetrisico): onderwerp niet in de CE-syllabus 2028 (bedrijfsecon-042).; Bedrijfsmodel: toelichting risicovermindering; geen criterium, buiten huidige syllabus (bedrijfsecon-042).
-- vwo-2026-tv1 vraag 12 scorepunt 2 (1 p): vaardigheid uit domein A (geen criteria), geen vervallen stof; vaardigheid uit domein A (geen criteria), geen vervallen stof
-- vwo-2026-tv1 vraag 12 scorepunt 3 (1 p): vaardigheid uit domein A (geen criteria), geen vervallen stof; vaardigheid uit domein A (geen criteria), geen vervallen stof
 - vwo-2026-tv1 vraag 13 scorepunt 1 (1 p): Kosten van kredietrisico/wanbetaling bij kredietverlening (afboeking oninbare debiteuren, incassokosten): onderwerp niet in de criteria van de CE-syllabus 2028 (bedrijfsecon-042).; Kosten van kredietrisico / oninbare debiteuren bij kredietverlening (bankbedrijf): prestatie in geen criterium (decision 042).
-- vwo-2026-tv1 vraag 26 scorepunt 1 (2 p): vaardigheid uit domein A (geen criteria), geen vervallen stof; Afloscapaciteit volgens het Collin Credit Score-model uit de informatiebron (geen criterium noemt dit kengetal); vaardigheid uit domein A (geen criteria), geen vervallen stof (bedrijfsecon-043).
-- vwo-2026-tv1 vraag 27 scorepunt 1 (1 p): vaardigheid uit domein A (geen criteria), geen vervallen stof; CCS-punten optellen (Collin Credit Score uit informatiebron 5): vaardigheid uit domein A (geen criteria), geen vervallen stof (bedrijfsecon-043).
-- vwo-2026-tv1 vraag 27 scorepunt 2 (1 p): vaardigheid uit domein A (geen criteria), geen vervallen stof; Conclusie uit het Collin Credit Score-model (aflezen en concluderen): vaardigheid uit domein A (geen criteria), geen vervallen stof (bedrijfsecon-043).
 
 ## examen boven criterium
 
@@ -44,7 +47,39 @@
 - B3.13.1-04-c (begrijpen) — vwo-2026-tv1 vraag 19 scorepunt 2: onthouden
 - D2.21.7-01-a (begrijpen) — vwo-2026-tv1 vraag 20 scorepunt 1: onthouden
 
-## nooit getoetst (356 van 410 criteria)
+## alleen geraakt (29 criteria: wel in een scorepunt, 0 punten)
+
+- B1.11.2-04-d (analyseren) Ik kan in een gegeven persoonlijke situatie de financiële gevolgen van sparen of beleggen analyseren door rendement, risico en beschikbaarheid te relateren aan doel en termijn. — vwo-2026-tv1 vraag 16
+- B1.11.4-01-b (onthouden) Ik kan noemen wat bij beperkte gemeenschap van goederen gemeenschappelijk vermogen wordt (opgebouwd tijdens huwelijk of partnerschap) en wat privévermogen blijft (van voor het huwelijk, erfenissen en schenkingen). — vwo-2026-tv1 vraag 28
+- B2.12.2-03-b (begrijpen) Ik kan uitleggen hoe de begrotingen samenhangen: de investeringsbegroting bepaalt de vermogensbehoefte, de interest komt als kosten in de exploitatiebegroting, en aflossingen komen als uitgaven in de liquiditeitsbegroting en niet in de exploitatiebegroting. — vwo-2025-tv1 vraag 9
+- B3.13.1-01-c (onthouden) Ik kan per rechtsvorm de kenmerken noemen voor financiering en belastingen, waaronder of de winst onder de inkomstenbelasting of de vennootschapsbelasting valt. — vwo-2025-tv1 vraag 5
+- B3.13.1-02-c (analyseren) Ik kan met de kenmerken van een beschreven organisatie (zoals aantal eigenaren, risico, vermogensbehoefte en winstdoel) bepalen welke rechtsvorm uit eenmanszaak, vof, bv, nv, stichting en vereniging geschikt is. — vwo-2025-tv1 vraag 5
+- B4.14.2-01-b (begrijpen) Ik kan beschrijven wat een organisatie naast haar product of dienst aan de samenleving bijdraagt: werkgelegenheid, inkomen, belastingopbrengsten en innovatie en/of verbetering. — vwo-2025-tv1 vraag 1; vwo-2025-tv1 vraag 25
+- C2.17.4-01-b (begrijpen) Ik kan uitleggen wie bij beide overeenkomsten het risico draagt bij ziekte en bij te weinig werk, en wat dat betekent voor de loondoorbetaling door de organisatie. — vwo-2025-tv1 vraag 11
+- C2.17.4-01-c (begrijpen) Ik kan uitleggen hoe beide overeenkomsten verschillen in opzegging en beëindiging en in de werkgeverslasten die de organisatie moet betalen. — vwo-2025-tv1 vraag 11
+- D2.20.1-01-c (begrijpen) Ik kan uitleggen hoe crowdfunding werkt: de ondernemer haalt via een (online) platform bij een groot aantal kleine verschaffers vermogen op, als lening of in ruil voor een tegenprestatie. — vwo-2026-tv1 vraag 20
+- D2.20.1-01-d (begrijpen) Ik kan uitleggen dat een startende ondernemer buiten de bank om kan lenen met een onderhandse lening of een lening van overige vermogensverschaffers (zoals familie, vrienden of een microkredietverstrekker), en waarom dat een uitweg is als een lening via banken niet of niet volledig lukt. — vwo-2026-tv1 vraag 20
+- D2.20.2.1-01-d (begrijpen) Ik kan uitleggen dat converteerbare obligaties vreemd vermogen zijn dat de obligatiehouder onder vooraf vastgestelde voorwaarden kan omzetten in aandelen, waardoor het vreemd vermogen bij conversie eigen vermogen wordt. — vwo-2025-tv1 vraag 23; vwo-2025-tv1 vraag 25
+- D2.21.2-01-c (toepassen) Ik kan bij gegeven aantallen aandelen het totale bedrag berekenen tegen nominale waarde, emissiekoers en beurskoers, en omgekeerd de nominale waarde, emissiekoers of beurskoers per aandeel uit gegeven totaalbedragen. — vwo-2026-tv1 vraag 15
+- D2.21.8-01-a (begrijpen) Ik kan uitleggen wat het verschil is tussen nominale waarde, emissiekoers en beurskoers van een obligatie, en welke waarde de basis is voor interest en aflossing. — vwo-2025-tv1 vraag 24
+- D2.22.2-01-b (begrijpen) Ik kan uitleggen wat een onderpand is en waarom een verschaffer van vreemd vermogen een onderpand eist, zoals een hypotheek op een bedrijfspand. — vwo-2025-tv1 vraag 20; vwo-2026-tv1 vraag 21
+- E2.25.3-01-d (begrijpen) Ik kan bij een gegeven product toelichten welke keuzes de organisatie in haar productbeleid heeft gemaakt. — vwo-2025-tv1 vraag 30
+- F1.28.3-01-c (toepassen) Ik kan uit gegeven informatie over de start van een onderneming (inbreng, opgenomen leningen, aanschaffen) een beginbalans opstellen met gelijke totalen van activa en passiva. — vwo-2026-tv1 vraag 22
+- F1.28.3-02-b (toepassen) Ik kan per periode de ontvangsten en uitgaven bepalen uit gegeven verkopen, inkopen en andere financiële feiten, met contante betaling, betaling op rekening en betalingstermijnen. — vwo-2025-tv1 vraag 16; vwo-2026-tv1 vraag 18
+- F2.30.2-02-b (toepassen) Ik kan het resultaat over de periode berekenen als de omzet min de variabele kosten van de verleende diensten min de totale constante kosten van de periode. — vwo-2026-tv1 vraag 12
+- F2.30.3-01-b (toepassen) Ik kan de verkoopprijs exclusief btw berekenen uit de verkoopprijs inclusief btw door te delen door (100% + btw-tarief). — vwo-2026-tv1 vraag 22; vwo-2026-tv1 vraag 25
+- F2.31.1-01-a (toepassen) Ik kan de voorcalculatorische resultatenrekening opstellen uit de begrote afzet, de begrote verkoopprijs, de begrote variabele kosten en de begrote constante kosten. — vwo-2025-tv1 vraag 27
+- F2.31.1-01-b (toepassen) Ik kan de nacalculatorische resultatenrekening opstellen uit de werkelijke afzet, de werkelijke verkoopprijs en de werkelijke variabele en constante kosten. — vwo-2026-tv1 vraag 12
+- G.32.1-01-c (begrijpen) Ik kan toelichten wat de materiële vaste activa inhouden (zoals gebouwen, machines en inventaris) en hoe ze verschillen van de immateriële vaste activa. — vwo-2026-tv1 vraag 2
+- G.32.1-01-d (begrijpen) Ik kan uitleggen wat de financiële vaste activa inhouden: deelnemingen in andere organisaties en lang lopende leningen die de organisatie aan anderen heeft verstrekt. — vwo-2026-tv1 vraag 2
+- G.32.1-04-c (begrijpen) Ik kan toelichten wat herwaardering en afwaardering naar de actuele waarde inhouden en welk effect ze hebben: herwaardering verhoogt de herwaarderingsreserve, afwaardering verlaagt de boekwaarde en het resultaat. — vwo-2026-tv1 vraag 4
+- G.32.2-01-c (toepassen) Ik kan uit een gegeven balans de quick ratio berekenen als vlottende activa min voorraad, gedeeld door kort vreemd vermogen. — vwo-2026-tv1 vraag 3; vwo-2026-tv1 vraag 4
+- G.32.2-02-a (toepassen) Ik kan uit een gegeven balans het vreemd vermogen (VV) berekenen als som van het lang en het kort vreemd vermogen, en het totaal vermogen (TV) als som van het eigen vermogen (EV) en het vreemd vermogen. — vwo-2026-tv1 vraag 23
+- G.32.2-04-d (toepassen) Ik kan het beleggersrendement berekenen als opbrengst en koersresultaat van de belegging in een jaar, gedeeld door het gemiddeld belegd vermogen in dat jaar × 100%. — vwo-2025-tv1 vraag 4
+- G.32.3-01-c (begrijpen) Ik kan met een gegeven voorbeeld toelichten hoe een transactie vlak voor de balansdatum (zoals een aflossing) of een andere waardering een kengetal gunstiger of ongunstiger laat uitvallen. — vwo-2026-tv1 vraag 4
+- G.32.4-01-b (analyseren) Ik kan de verandering van de current ratio, de quick ratio en de solvabiliteitsratio EV/TV tussen beide balansen analyseren door die te herleiden tot veranderingen in afzonderlijke balansposten, zoals voorraad, liquide middelen, rekening-courantkrediet en eigen vermogen. — vwo-2025-tv1 vraag 22
+
+## nooit getoetst (327 van 410 criteria)
 
 - B1.11.1-01-a (onthouden) Ik kan de kosten van een opleiding (collegegeld, studiemateriaal en gederfd inkomen) en de verwachte opbrengst (hoger inkomen later) noemen.
 - B1.11.1-01-b (begrijpen) Ik kan uitleggen waarom een opleiding een investeringsvraagstuk is: nu uitgaven doen en inkomen derven tegenover een hoger inkomen later.
@@ -61,7 +96,6 @@
 - B1.11.2-03-a (toepassen) Ik kan bij een vorm van consumptief krediet de periodieke interestbedragen, de periodieke aflossingsbedragen en de schuldrest berekenen.
 - B1.11.2-03-b (begrijpen) Ik kan uitleggen wat het verschil is tussen enkelvoudige en samengestelde interest bij sparen en bij lenen: bij samengestelde interest telt interest over eerder bijgeschreven interest mee.
 - B1.11.2-04-b (onthouden) Ik kan de vermogenstitels noemen waarin je kunt beleggen (aandelen, obligaties en beleggingsfondsen) en de effectenbeurs als markt waarop ze worden verhandeld.
-- B1.11.2-04-d (analyseren) Ik kan in een gegeven persoonlijke situatie de financiële gevolgen van sparen of beleggen analyseren door rendement, risico en beschikbaarheid te relateren aan doel en termijn.
 - B1.11.3-01-a (onthouden) Ik kan de verplichtingen van de huurder noemen: op tijd huur en servicekosten betalen, klein onderhoud uitvoeren en de woning als een goed huurder gebruiken.
 - B1.11.3-01-b (begrijpen) Ik kan uitleggen welke financiële gevolgen deze verplichtingen voor de huurder hebben: vaste maandlasten die door huurverhoging stijgen, kosten van klein onderhoud en geen vermogensopbouw in de woning.
 - B1.11.3-02-a (onthouden) Ik kan de rol noemen van de hypotheekgever (de lener die de woning als onderpand geeft) en van de hypotheeknemer (de geldverstrekker die het onderpand ontvangt).
@@ -72,7 +106,6 @@
 - B1.11.3-04-b (analyseren) Ik kan in een gegeven situatie de financiële gevolgen van huren en kopen vergelijken: periodieke lasten, vermogensopbouw, risico van waardeverandering, onderhoudskosten en fiscale gevolgen.
 - B1.11.3-04-c (evalueren) Ik kan voor een gegeven huishouden financieel onderbouwd afwegen of huren of kopen past, en bij kopen welke hypotheekvorm, met berekende lasten en geanalyseerde voor- en nadelen als argumenten.
 - B1.11.4-01-a (onthouden) Ik kan de registratievormen voor samenwonen noemen: samenwonen zonder samenlevingscontract, samenwonen met samenlevingscontract, trouwen en geregistreerd partnerschap.
-- B1.11.4-01-b (onthouden) Ik kan noemen wat bij beperkte gemeenschap van goederen gemeenschappelijk vermogen wordt (opgebouwd tijdens huwelijk of partnerschap) en wat privévermogen blijft (van voor het huwelijk, erfenissen en schenkingen).
 - B1.11.4-01-c (onthouden) Ik kan de verschillen noemen tussen trouwen op huwelijkse voorwaarden/partnerschapsvoorwaarden (eigen afspraken over gemeenschappelijk en privé) en trouwen in beperkte gemeenschap van goederen (wettelijke regeling zonder eigen afspraken).
 - B1.11.4-02-b (onthouden) Ik kan de gevolgen van scheiden voor de partnerpensioenrechten noemen, zoals de verdeling van het tijdens het huwelijk opgebouwde pensioen tussen de ex-partners.
 - B1.11.4-02-c (onthouden) Ik kan het verschil noemen tussen kinderalimentatie en partneralimentatie na scheiden: wie ze ontvangt en waarvoor ze bedoeld zijn.
@@ -90,15 +123,12 @@
 - B2.12.2-02-b (begrijpen) Ik kan met gegeven marktinformatie de doelgroepen en de concurrentie van een startende eenmanszaak beschrijven.
 - B2.12.2-02-c (toepassen) Ik kan voor een beschreven of eigen startende eenmanszaak een marketingplan opstellen met marketingdoelstellingen, gekozen doelgroepen, concurrentie en een marketingmix die daarbij aansluit.
 - B2.12.2-03-a (onthouden) Ik kan de begrotingen van een financieel plan benoemen: investeringsbegroting, financieringsbegroting, exploitatiebegroting en liquiditeitsbegroting.
-- B2.12.2-03-b (begrijpen) Ik kan uitleggen hoe de begrotingen samenhangen: de investeringsbegroting bepaalt de vermogensbehoefte, de interest komt als kosten in de exploitatiebegroting, en aflossingen komen als uitgaven in de liquiditeitsbegroting en niet in de exploitatiebegroting.
 - B2.12.3-01-a (onthouden) Ik kan de wettelijke oprichtingsverplichtingen van een startende ondernemer met een eenmanszaak noemen: inschrijving bij Kamer van Koophandel, btw-aangifte en -afdracht, administratie- en bewaarplicht en vergunningen waar nodig.
 - B2.12.3-01-b (begrijpen) Ik kan met een voorbeeld toelichten dat de verplichte vergunningen afhangen van de activiteit en de vestigingsplaats, terwijl inschrijving bij Kamer van Koophandel altijd verplicht is.
 - B3.13.1-01-b (onthouden) Ik kan per rechtsvorm de kenmerken noemen voor continuïteit en juridische aansprakelijkheid van de eigenaren of bestuurders.
-- B3.13.1-01-c (onthouden) Ik kan per rechtsvorm de kenmerken noemen voor financiering en belastingen, waaronder of de winst onder de inkomstenbelasting of de vennootschapsbelasting valt.
 - B3.13.1-01-d (onthouden) Ik kan per rechtsvorm de kenmerken noemen voor leiding, besluitvorming en zeggenschap.
 - B3.13.1-02-a (begrijpen) Ik kan uitleggen welke kenmerken (continuïteit, financiering, juridische aansprakelijkheid, belastingen en zeggenschap) de ondernemer of bestuurder afweegt bij het bepalen van de geschikte rechtsvorm voor de eigen organisatie.
 - B3.13.1-02-b (analyseren) Ik kan voor een beschreven organisatie twee of meer rechtsvormen op deze kenmerken vergelijken, ook het verschil in aansprakelijkheid tussen ondernemen als natuurlijk persoon en via een rechtspersoon.
-- B3.13.1-02-c (analyseren) Ik kan met de kenmerken van een beschreven organisatie (zoals aantal eigenaren, risico, vermogensbehoefte en winstdoel) bepalen welke rechtsvorm uit eenmanszaak, vof, bv, nv, stichting en vereniging geschikt is.
 - B3.13.1-02-d (analyseren) Ik kan voor een beschreven organisatie afleiden welke consequenties de gekozen rechtsvorm of een overgang naar een andere rechtsvorm heeft voor aansprakelijkheid, belastingen, financiering en zeggenschap.
 - B3.13.1-03-a (onthouden) Ik kan noemen welke organen bij de rechtsvorm horen: raad van bestuur, raad van commissarissen en algemene vergadering van aandeelhouders bij bv en nv; bestuur en raad van toezicht bij de stichting; bestuur en algemene ledenvergadering bij de vereniging.
 - B3.13.1-03-b (begrijpen) Ik kan uitleggen welke rol het bestuur of de raad van bestuur heeft (leiding en besluitvorming) en welke rol de raad van commissarissen en de raad van toezicht hebben (toezicht op en advies aan het bestuur).
@@ -113,7 +143,6 @@
 - B4.14.1-02-b (begrijpen) Ik kan uitleggen dat een niet-commerciële organisatie streeft naar een maatschappelijke behoefte, niet naar winst voor eigenaren, en haar kosten dekt uit bijvoorbeeld subsidies, donaties, contributies, belastinggeld of verkoop.
 - B4.14.1-02-c (begrijpen) Ik kan een beschreven organisatie classificeren als commercieel of niet-commercieel en het kenmerk noemen waarop die indeling berust.
 - B4.14.2-01-a (begrijpen) Ik kan uitleggen dat een organisatie bestaansrecht heeft zolang zij met haar product of dienst voorziet in maatschappelijke behoeften waarvoor afnemers of financiers willen betalen.
-- B4.14.2-01-b (begrijpen) Ik kan beschrijven wat een organisatie naast haar product of dienst aan de samenleving bijdraagt: werkgelegenheid, inkomen, belastingopbrengsten en innovatie en/of verbetering.
 - B4.14.2-02-a (onthouden) Ik kan maatschappelijk verantwoord ondernemen (MVO) omschrijven als ondernemen waarbij een organisatie naast profit ook rekening houdt met people en planet (people, planet, profit).
 - B4.14.2-02-b (begrijpen) Ik kan uitleggen wat circulariteit inhoudt en hoe een organisatie daarmee bijdraagt aan duurzaamheid.
 - B4.14.2-02-c (begrijpen) Ik kan voorbeelden geven van sociale vraagstukken waarmee een organisatie bij MVO rekening houdt, zoals arbeidsomstandigheden in de keten en inclusie op de arbeidsmarkt.
@@ -138,8 +167,6 @@
 - C2.17.3-01-a (onthouden) Ik kan de vormen van een arbeidsrelatie noemen die een organisatie kan aangaan: werknemers in dienst met een individuele arbeidsovereenkomst, flexibele inzet zoals oproepkrachten en uitzendkrachten, en zzp'ers met een overeenkomst van opdracht.
 - C2.17.3-01-c (begrijpen) Ik kan voor een gegeven organisatie uitleggen waarom zij voor een bepaalde vorm van arbeidsrelatie kiest, gegeven haar doelstelling en de aard van het werk.
 - C2.17.4-01-a (begrijpen) Ik kan uitleggen dat bij een individuele arbeidsovereenkomst een gezagsverhouding bestaat en dat een zzp'er met een overeenkomst van opdracht zelf bepaalt hoe hij het werk uitvoert.
-- C2.17.4-01-b (begrijpen) Ik kan uitleggen wie bij beide overeenkomsten het risico draagt bij ziekte en bij te weinig werk, en wat dat betekent voor de loondoorbetaling door de organisatie.
-- C2.17.4-01-c (begrijpen) Ik kan uitleggen hoe beide overeenkomsten verschillen in opzegging en beëindiging en in de werkgeverslasten die de organisatie moet betalen.
 - C2.17.5-01-a (onthouden) Ik kan de vormen van een individuele arbeidsovereenkomst noemen: voor onbepaalde tijd, voor bepaalde tijd en het oproepcontract (nul-uren, minmax, voorovereenkomst).
 - C2.17.5-01-b (begrijpen) Ik kan uitleggen hoe een arbeidsovereenkomst voor bepaalde tijd en een voor onbepaalde tijd verschillen in de manier waarop ze eindigen en in de zekerheid voor werkgever en werknemer.
 - C2.17.5-01-c (begrijpen) Ik kan uitleggen hoe een nul-urencontract, een minmaxcontract en een voorovereenkomst verschillen in de verplichting om op te komen en de verplichting om loon te betalen.
@@ -172,11 +199,8 @@
 - C2.17.10-02-c (toepassen) Ik kan met gegeven wettelijke regels de loonkosten berekenen die de organisatie draagt bij loondoorbetaling aan een zieke werknemer.
 - D2.20.1-01-a (onthouden) Ik kan de financieringsmogelijkheden voor een startende eenmanszaak of vof noemen: eigen middelen van de eigenaar of de vennoten, een lening via banken, crowdfunding, een onderhandse lening en een lening van overige vermogensverschaffers.
 - D2.20.1-01-b (begrijpen) Ik kan uitleggen dat eigen middelen vermogen zijn zonder interest- en aflossingsverplichting, terwijl de ondernemer bij een lening via banken interest betaalt en het geleende bedrag moet aflossen.
-- D2.20.1-01-c (begrijpen) Ik kan uitleggen hoe crowdfunding werkt: de ondernemer haalt via een (online) platform bij een groot aantal kleine verschaffers vermogen op, als lening of in ruil voor een tegenprestatie.
-- D2.20.1-01-d (begrijpen) Ik kan uitleggen dat een startende ondernemer buiten de bank om kan lenen met een onderhandse lening of een lening van overige vermogensverschaffers (zoals familie, vrienden of een microkredietverstrekker), en waarom dat een uitweg is als een lening via banken niet of niet volledig lukt.
 - D2.20.2.1-01-a (onthouden) Ik kan de financieringsmogelijkheden van een bv en nv noemen naast eigen middelen en een lening via banken: het uitgeven van aandelen (aandelenkapitaal), een obligatielening en converteerbare obligaties.
 - D2.20.2.1-01-c (begrijpen) Ik kan uitleggen dat een bv of nv met een obligatielening vreemd vermogen in vele gelijke delen bij een groot aantal verschaffers aantrekt, waarbij de obligatiehouder schuldeiser is met recht op interest en aflossing.
-- D2.20.2.1-01-d (begrijpen) Ik kan uitleggen dat converteerbare obligaties vreemd vermogen zijn dat de obligatiehouder onder vooraf vastgestelde voorwaarden kan omzetten in aandelen, waardoor het vreemd vermogen bij conversie eigen vermogen wordt.
 - D2.20.2.2-01-a (onthouden) Ik kan de vermogensmarkt omschrijven als de markt waarop vraag naar en aanbod van vermogen samenkomen, met de geldmarkt voor kortlopend en de kapitaalmarkt voor langlopend vermogen.
 - D2.20.2.2-01-b (begrijpen) Ik kan het verschil uitleggen tussen openbaar vermogen, dat via de beurs of een openbare emissie bij een onbepaald aantal beleggers wordt aangetrokken, en onderhands vermogen, dat rechtstreeks met één of een beperkt aantal vermogensverschaffers zoals een bank wordt overeengekomen.
 - D2.20.2.2-01-c (begrijpen) Ik kan uitleggen waarom de vermogensmarkt voor een onderneming belangrijk is: zij kan er vermogen aantrekken voor investeringen dat zij zelf niet heeft, en beleggers verschaffen sneller vermogen doordat zij aandelen en obligaties op de beurs kunnen doorverkopen.
@@ -200,7 +224,6 @@
 - D2.21.1-01-c (toepassen) Ik kan het geplaatst aandelenkapitaal berekenen na een voorgenomen emissie van een gegeven aantal aandelen en daarmee bepalen of de emissie binnen het maatschappelijk aandelenkapitaal past.
 - D2.21.2-01-a (begrijpen) Ik kan het verschil uitleggen tussen de nominale waarde (het bedrag waarmee een aandeel in het geplaatst aandelenkapitaal staat), de emissiekoers (de prijs waarvoor de onderneming een nieuw aandeel uitgeeft) en de beurskoers (de prijs waartegen een bestaand aandeel op de beurs wordt verhandeld).
 - D2.21.2-01-b (begrijpen) Ik kan uitleggen waarom de beurskoers en de emissiekoers van een aandeel kunnen afwijken van de nominale waarde, en dat een aandeel niet onder de nominale waarde mag worden uitgegeven.
-- D2.21.2-01-c (toepassen) Ik kan bij gegeven aantallen aandelen het totale bedrag berekenen tegen nominale waarde, emissiekoers en beurskoers, en omgekeerd de nominale waarde, emissiekoers of beurskoers per aandeel uit gegeven totaalbedragen.
 - D2.21.2-02-a (onthouden) Ik kan de intrinsieke waarde van een aandeel omschrijven als het eigen vermogen volgens de balans gedeeld door het aantal geplaatste aandelen.
 - D2.21.2-02-b (toepassen) Ik kan de intrinsieke waarde per aandeel berekenen uit een gegeven balans (geplaatst aandelenkapitaal, agio en overige reserves) en het aantal geplaatste aandelen.
 - D2.21.2-02-c (begrijpen) Ik kan uitleggen waarom de intrinsieke waarde hoger is dan de nominale waarde zodra de onderneming naast het geplaatst aandelenkapitaal ook agio of reserves heeft.
@@ -218,7 +241,6 @@
 - D2.21.6-01-d (analyseren) Ik kan in een gegeven situatie de voor- en nadelen van een converteerbare obligatielening vergelijken met die van een gewone obligatielening voor de onderneming en de belegger, en aangeven welke verschillen bij de gegeven beurskoers van het aandeel en de marktrente zwaar wegen.
 - D2.21.7-01-b (begrijpen) Ik kan uitleggen waarom een organisatie de looptijd van de financieringsmogelijkheid afstemt op de duur van de vermogensbehoefte, zoals lang vreemd vermogen of eigen vermogen voor vaste activa en kort vreemd vermogen voor een tijdelijke behoefte.
 - D2.21.7-01-c (analyseren) Ik kan voor een onderneming met aandeelhouders, beursgenoteerd of niet, met gegevens over de vermogensbehoefte, de vermogensverhoudingen, de beurskoers en de marktrente analyseren welke financieringsmogelijkheid past, en de keuze onderbouwen met de voor- en nadelen.
-- D2.21.8-01-a (begrijpen) Ik kan uitleggen wat het verschil is tussen nominale waarde, emissiekoers en beurskoers van een obligatie, en welke waarde de basis is voor interest en aflossing.
 - D2.21.8-01-b (begrijpen) Ik kan uitleggen waarom de beurskoers na de emissie kan afwijken van emissiekoers en nominale waarde terwijl interest en aflossing op de nominale waarde gebaseerd blijven: de vaste couponrente wordt vergeleken met de marktrente.
 - D2.21.8-01-c (toepassen) Ik kan uit de nominale waarde en een koers in procenten de emissieopbrengst of beurswaarde van een obligatie of obligatielening berekenen, en het verschil met de nominale waarde.
 - D2.21.9-01-a (begrijpen) Ik kan uitleggen dat agio op obligaties ontstaat wanneer de emissiekoers van een obligatie boven de nominale waarde ligt, en waarom beleggers daartoe bereid zijn als het interestpercentage van de obligatie hoger is dan de marktrente.
@@ -233,7 +255,6 @@
 - D2.22.1-02-b (begrijpen) Ik kan uitleggen waarom het faillissementsrisico toeneemt naarmate het aandeel vreemd vermogen groter is, door de vaste interest- en aflossingsverplichtingen en de kleinere buffer van eigen vermogen.
 - D2.22.1-02-c (begrijpen) Ik kan uitleggen waarom bij een hogere verhouding vreemd vermogen/eigen vermogen de rentabiliteit van het eigen vermogen sterker schommelt en de verschaffers van eigen vermogen daardoor een hoger geëist rendement hebben.
 - D2.22.1-02-d (analyseren) Ik kan met gegevens over een organisatie analyseren welke gevolgen een verandering van de verhouding eigen vermogen/vreemd vermogen heeft voor het interestpercentage op vreemd vermogen, het faillissementsrisico en het geëist rendement van eigen en vreemd vermogen, en hoe deze gevolgen samenhangen.
-- D2.22.2-01-b (begrijpen) Ik kan uitleggen wat een onderpand is en waarom een verschaffer van vreemd vermogen een onderpand eist, zoals een hypotheek op een bedrijfspand.
 - D2.22.2-01-c (begrijpen) Ik kan uitleggen wat een solvabiliteitseis, een liquiditeitseis en een rendementseis inhouden en welk risico de vermogensverschaffer met elk van deze eisen beperkt.
 - D2.22.2-01-d (begrijpen) Ik kan uitleggen welke duurzaamheidseisen op het gebied van milieu en maatschappij vermogensverschaffers kunnen stellen en waarom zij dat doen.
 - E2.25.1-01-a (onthouden) Ik kan als marketingdoelstellingen noemen: het verbeteren van de marktpositie, het creëren van een nieuwe markt (markt creëren) en klantbehoud.
@@ -249,7 +270,6 @@
 - E2.25.2-01-d (evalueren) Ik kan een alternatief voor een gemaakte marketingkeuze op hoofdpunten afwegen tegen die keuze, op de bijdrage aan de beoogde marketingdoelstelling.
 - E2.25.3-01-b (begrijpen) Ik kan het verschil uitleggen tussen een materieel en een immaterieel product en tussen een breed en een diep assortiment.
 - E2.25.3-01-c (begrijpen) Ik kan uitleggen hoe keuzes in kwaliteit van de producten, merken, verpakking en service en garantie een product onderscheiden van dat van concurrenten.
-- E2.25.3-01-d (begrijpen) Ik kan bij een gegeven product toelichten welke keuzes de organisatie in haar productbeleid heeft gemaakt.
 - E2.25.3-02-a (begrijpen) Ik kan het verschil uitleggen tussen afroompolitiek en penetratiepolitiek en in welke marktsituatie elk van beide past.
 - E2.25.3-02-b (begrijpen) Ik kan uitleggen waarom een organisatie in haar prijsbeleid psychologische prijzen hanteert.
 - E2.25.3-02-c (begrijpen) Ik kan de keuzes in het plaatsbeleid beschrijven, waaronder verkoop via fysieke winkels en/of online, en uitleggen welke gevolgen die keuze heeft voor het bereik van de afnemers.
@@ -281,9 +301,7 @@
 - F1.28.2-02-d (toepassen) Ik kan het resultaat van een periode berekenen als verschil tussen de berekende opbrengsten en kosten volgens het periodetoerekeningstelsel.
 - F1.28.3-01-a (analyseren) Ik kan gegeven bezittingen, schulden en inbreng van de eigenaar(s) indelen naar activa en passiva, en daarbinnen naar vaste activa, vlottende activa, eigen vermogen en vreemd vermogen (lang en kort).
 - F1.28.3-01-b (toepassen) Ik kan het eigen vermogen op de beginbalans berekenen als verschil tussen het totaal van de activa en het vreemd vermogen.
-- F1.28.3-01-c (toepassen) Ik kan uit gegeven informatie over de start van een onderneming (inbreng, opgenomen leningen, aanschaffen) een beginbalans opstellen met gelijke totalen van activa en passiva.
 - F1.28.3-02-a (begrijpen) Ik kan uitleggen waarom een liquiditeitsbegroting ontvangsten en uitgaven bevat, zodat afschrijving niet en aflossing en de aanschaf van vaste activa wel in het overzicht staan.
-- F1.28.3-02-b (toepassen) Ik kan per periode de ontvangsten en uitgaven bepalen uit gegeven verkopen, inkopen en andere financiële feiten, met contante betaling, betaling op rekening en betalingstermijnen.
 - F1.28.3-02-c (toepassen) Ik kan een liquiditeitsoverzicht opstellen met per periode het beginsaldo liquide middelen, de ontvangsten, de uitgaven en het eindsaldo.
 - F1.28.3-02-d (toepassen) Ik kan uit het opgestelde liquiditeitsoverzicht bepalen in welke periode het saldo liquide middelen negatief wordt en hoe groot het tekort dan is.
 - F1.28.3-03-a (begrijpen) Ik kan uitleggen waarom een exploitatiebegroting opbrengsten en kosten bevat en geen ontvangsten en uitgaven.
@@ -317,10 +335,8 @@
 - F2.30.2-01-b (toepassen) Ik kan de opslag voor constante kosten per activiteit berekenen door de begrote constante kosten te delen door de begrote omvang van die activiteit, bijvoorbeeld het aantal uren.
 - F2.30.2-01-c (toepassen) Ik kan het tarief per activiteit berekenen als de kosten per geleverde dienst: de verbijzonderde variabele kosten van die dienst plus de opslag voor constante kosten.
 - F2.30.2-02-a (toepassen) Ik kan de variabele kosten van de in de periode verleende diensten berekenen als het aantal verleende diensten maal de variabele kosten per dienst.
-- F2.30.2-02-b (toepassen) Ik kan het resultaat over de periode berekenen als de omzet min de variabele kosten van de verleende diensten min de totale constante kosten van de periode.
 - F2.30.2-03-b (toepassen) Ik kan het verschil tussen de integrale kostprijs en de variabele kostprijs van een dienst berekenen als het deel van de constante kosten per dienst.
 - F2.30.2-03-c (begrijpen) Ik kan uitleggen waarom de integrale kostprijs voor het deel constante kosten uitgaat van de normale bezetting en niet van de werkelijke bezetting, zodat de kostprijs per dienst niet verandert als de bezetting schommelt.
-- F2.30.3-01-b (toepassen) Ik kan de verkoopprijs exclusief btw berekenen uit de verkoopprijs inclusief btw door te delen door (100% + btw-tarief).
 - F2.30.3-01-c (toepassen) Ik kan de af te dragen btw over een periode berekenen als de te betalen btw min de te vorderen btw.
 - F2.30.3-01-d (begrijpen) Ik kan uitleggen waarom de btw voor de ondernemer geen kosten en geen opbrengst is.
 - F2.30.3-02-a (toepassen) Ik kan de verkoopprijs exclusief btw berekenen als de kostprijs plus een winstopslag in procenten van de kostprijs.
@@ -345,8 +361,6 @@
 - F2.30.6-02-b (onthouden) Ik kan als waarderingsgrondslagen van activa de historische uitgaafprijs, de actuele waarde en de liquidatiewaarde noemen.
 - F2.30.6-02-c (begrijpen) Ik kan uitleggen dat bij een gestegen prijs waardering tegen actuele waarde (herwaardering zonder inhaalafschrijving) hogere afschrijvingskosten en dus een lager resultaat geeft dan waardering tegen historische uitgaafprijs.
 - F2.30.6-02-d (begrijpen) Ik kan uitleggen waarom waardering tegen liquidatiewaarde, die past als de continuïteit van de onderneming niet meer wordt verondersteld, door afwaardering van de activa het resultaat verlaagt.
-- F2.31.1-01-a (toepassen) Ik kan de voorcalculatorische resultatenrekening opstellen uit de begrote afzet, de begrote verkoopprijs, de begrote variabele kosten en de begrote constante kosten.
-- F2.31.1-01-b (toepassen) Ik kan de nacalculatorische resultatenrekening opstellen uit de werkelijke afzet, de werkelijke verkoopprijs en de werkelijke variabele en constante kosten.
 - F2.31.1-01-c (toepassen) Ik kan het verschil tussen het voorcalculatorische en het gerealiseerde resultaat berekenen als voordelig of nadelig verschil.
 - F2.31.1-01-d (begrijpen) Ik kan uitleggen welke posten van beide resultatenrekeningen (afzet, verkoopprijs, variabele kosten, constante kosten) bijdragen aan het verschil tussen het voorcalculatorische en het gerealiseerde resultaat.
 - F2.31.1-02-d (begrijpen) Ik kan per deelresultaat uitleggen welke afwijking het zichtbaar maakt (inkoopprijzen, verbruik, bezetting of constante kosten) en waarom die voordelig of nadelig is.
@@ -357,8 +371,6 @@
 - F2.31.2-02-b (begrijpen) Ik kan uitleggen waarom niet-financiële informatie een risico vaak eerder zichtbaar maakt dan de financiële resultaten en daardoor een belangrijk onderdeel is van risicomanagement.
 - F2.31.2-02-c (begrijpen) Ik kan met een voorbeeld uitleggen hoe een ontwikkeling in niet-financiële informatie via de omzet of de kosten de ondernemingsresultaten beïnvloedt.
 - G.32.1-01-a (begrijpen) Ik kan uitleggen wat vaste activa onderscheidt van vlottende activa: ze blijven langer dan een jaar in de organisatie en worden gebruikt of aangehouden in plaats van omgezet in geld.
-- G.32.1-01-c (begrijpen) Ik kan toelichten wat de materiële vaste activa inhouden (zoals gebouwen, machines en inventaris) en hoe ze verschillen van de immateriële vaste activa.
-- G.32.1-01-d (begrijpen) Ik kan uitleggen wat de financiële vaste activa inhouden: deelnemingen in andere organisaties en lang lopende leningen die de organisatie aan anderen heeft verstrekt.
 - G.32.1-02-a (begrijpen) Ik kan uitleggen wat de vlottende activa voorraad, debiteuren, effecten en liquide middelen inhouden en waarom ze binnen een jaar in geld worden omgezet of al als geld beschikbaar zijn.
 - G.32.1-02-b (begrijpen) Ik kan uitleggen wat crediteuren en rekening-courantkrediet inhouden en waarom ze als schulden met een looptijd tot een jaar tot het kort vreemd vermogen behoren.
 - G.32.1-02-c (begrijpen) Ik kan toelichten waarom te vorderen btw een bezitting is en te betalen btw een schuld, uitgaande van het verschil tussen de btw op inkopen en de btw op verkopen.
@@ -369,24 +381,18 @@
 - G.32.1-03-d (begrijpen) Ik kan toelichten dat het lang vreemd vermogen bestaat uit schulden met een looptijd langer dan een jaar en hoe het daarin verschilt van het kort vreemd vermogen.
 - G.32.1-04-a (begrijpen) Ik kan uitleggen hoe het resultaat op de resultatenrekening ontstaat als omzet min kosten en welke kostensoorten daarop staan, zoals inkoopwaarde van de omzet, personeelskosten, afschrijvingskosten en interestkosten.
 - G.32.1-04-b (begrijpen) Ik kan uitleggen hoe waardering en afschrijving van vaste activa samenhangen: afschrijving verlaagt de boekwaarde op de balans en staat als kosten op de resultatenrekening.
-- G.32.1-04-c (begrijpen) Ik kan toelichten wat herwaardering en afwaardering naar de actuele waarde inhouden en welk effect ze hebben: herwaardering verhoogt de herwaarderingsreserve, afwaardering verlaagt de boekwaarde en het resultaat.
 - G.32.1-04-d (begrijpen) Ik kan uitleggen waarom de toevoeging aan een onderhoudsvoorziening, garantievoorziening of pensioenvoorziening als kosten op de resultatenrekening staat, terwijl de uitgave pas later plaatsvindt.
 - G.32.2-01-a (begrijpen) Ik kan uitleggen dat een liquiditeitsratio als financieel kengetal meet in hoeverre een organisatie haar kort vreemd vermogen uit de vlottende activa kan voldoen.
 - G.32.2-01-b (toepassen) Ik kan uit een gegeven balans de current ratio berekenen als vlottende activa gedeeld door kort vreemd vermogen.
-- G.32.2-01-c (toepassen) Ik kan uit een gegeven balans de quick ratio berekenen als vlottende activa min voorraad, gedeeld door kort vreemd vermogen.
 - G.32.2-01-d (begrijpen) Ik kan uitleggen waarom de voorraad bij de quick ratio niet wordt meegeteld.
-- G.32.2-02-a (toepassen) Ik kan uit een gegeven balans het vreemd vermogen (VV) berekenen als som van het lang en het kort vreemd vermogen, en het totaal vermogen (TV) als som van het eigen vermogen (EV) en het vreemd vermogen.
 - G.32.2-02-c (toepassen) Ik kan bij een gegeven solvabiliteitsratio (EV/TV, VV/TV of EV/VV) en een gegeven balanstotaal of vermogensbedrag het ontbrekende eigen of vreemd vermogen berekenen.
 - G.32.2-03-a (toepassen) Ik kan uit een gegeven resultatenrekening de EBIT (resultaat voor interest en belastingen) en de EBITDA (resultaat voor interest, belastingen, afschrijving en amortisatie) berekenen.
 - G.32.2-03-b (toepassen) Ik kan de rentabiliteit van het totaal vermogen (RTV) berekenen als EBIT gedeeld door het gemiddeld totaal vermogen (gemiddelde van begin- en eindbalans) × 100%.
 - G.32.2-03-c (toepassen) Ik kan de rentabiliteit van het eigen vermogen (REV), voor en na belastingen, berekenen als resultaat gedeeld door het gemiddeld eigen vermogen × 100%, en de gemiddelde interestvoet van het vreemd vermogen (IVV) als interestkosten gedeeld door het gemiddeld vreemd vermogen × 100%.
 - G.32.2-03-d (begrijpen) Ik kan uitleggen waarom bij de rentabiliteitsratio RTV het resultaat vóór interest (EBIT) wordt gebruikt en bij de REV het resultaat na aftrek van interest.
 - G.32.2-04-b (toepassen) Ik kan de cash flow per aandeel berekenen als resultaat na belastingen plus afschrijvingen, gedeeld door het aantal geplaatste aandelen.
-- G.32.2-04-d (toepassen) Ik kan het beleggersrendement berekenen als opbrengst en koersresultaat van de belegging in een jaar, gedeeld door het gemiddeld belegd vermogen in dat jaar × 100%.
 - G.32.3-01-a (begrijpen) Ik kan uitleggen welke voordelen het hanteren van financiële kengetallen heeft: ze vatten de jaarrekening samen in verhoudingsgetallen die door de tijd en met andere organisaties of de branche te vergelijken zijn.
 - G.32.3-01-b (begrijpen) Ik kan uitleggen welke nadelen aan financiële kengetallen verbonden zijn: ze zijn gebaseerd op historische gegevens en een momentopname op de balansdatum, hangen af van waardering en definitiekeuze, en tonen geen oorzaken of niet-financiële informatie.
-- G.32.3-01-c (begrijpen) Ik kan met een gegeven voorbeeld toelichten hoe een transactie vlak voor de balansdatum (zoals een aflossing) of een andere waardering een kengetal gunstiger of ongunstiger laat uitvallen.
-- G.32.4-01-b (analyseren) Ik kan de verandering van de current ratio, de quick ratio en de solvabiliteitsratio EV/TV tussen beide balansen analyseren door die te herleiden tot veranderingen in afzonderlijke balansposten, zoals voorraad, liquide middelen, rekening-courantkrediet en eigen vermogen.
 - G.32.4-02-a (toepassen) Ik kan voor twee opeenvolgende jaren de rentabiliteit van het totaal vermogen (RTV), de gemiddelde interestvoet van het vreemd vermogen (IVV), de rentabiliteit van het eigen vermogen (REV) vóór belastingen en de cashflow (resultaat na belastingen plus afschrijvingen) berekenen.
 - G.32.4-02-b (analyseren) Ik kan met de hefboomformule REV = RTV + (RTV − IVV) × VV/EV (vóór belastingen) analyseren hoe veranderingen in de interestmarge (RTV − IVV) en in de verhouding VV/EV de verandering van de REV tussen beide jaren verklaren.
 - G.32.4-02-c (analyseren) Ik kan uit het teken van de interestmarge afleiden of extra financiering met vreemd vermogen de REV verhoogt of verlaagt (positieve of negatieve hefboomwerking).

@@ -44,10 +44,10 @@ Punten: vwo-2025-tv1: 6 p · vwo-2026-tv1: 3 p
 
 Punten: vwo-2025-tv1: 1 p · vwo-2026-tv1: 2 p
 
-- **B1.11.2-04-a** (begrijpen) Ik kan de voor- en nadelen van vrij opneembare en niet-vrij opneembare spaarvormen uitleggen, en uitleggen hoe het depositogarantiestelsel spaartegoeden beschermt. — vwo-2026-tv1 vraag 16 (1 p)
+- **B1.11.2-04-a** (begrijpen) Ik kan de voor- en nadelen van vrij opneembare en niet-vrij opneembare spaarvormen uitleggen, en uitleggen hoe het depositogarantiestelsel spaartegoeden beschermt. — vwo-2025-tv1 vraag 18 (raakt ook); vwo-2026-tv1 vraag 16 (1 p)
 - **B1.11.2-04-b** (onthouden) Ik kan de vermogenstitels noemen waarin je kunt beleggen (aandelen, obligaties en beleggingsfondsen) en de effectenbeurs als markt waarop ze worden verhandeld. — niet getoetst
-- **B1.11.2-04-c** (begrijpen) Ik kan de verschillen in risico en rendement tussen aandelen, obligaties en beleggingsfondsen uitleggen. — vwo-2025-tv1 vraag 18 (1 p); vwo-2026-tv1 vraag 16 (1 p)
-- **B1.11.2-04-d** (analyseren) Ik kan in een gegeven persoonlijke situatie de financiële gevolgen van sparen of beleggen analyseren door rendement, risico en beschikbaarheid te relateren aan doel en termijn. — niet getoetst
+- **B1.11.2-04-c** (begrijpen) Ik kan de verschillen in risico en rendement tussen aandelen, obligaties en beleggingsfondsen uitleggen. — vwo-2025-tv1 vraag 18 (1 p); vwo-2025-tv1 vraag 26 (raakt ook); vwo-2026-tv1 vraag 16 (1 p); vwo-2026-tv1 vraag 16 (raakt ook)
+- **B1.11.2-04-d** (analyseren) Ik kan in een gegeven persoonlijke situatie de financiële gevolgen van sparen of beleggen analyseren door rendement, risico en beschikbaarheid te relateren aan doel en termijn. — vwo-2026-tv1 vraag 16 (raakt ook); vwo-2026-tv1 vraag 16 (raakt ook)
 ### B1.11.3-01 — Ik kan de verplichtingen van de huurder van een woonhuis noemen en de financiële gevolgen ervan voor de huurder uitleggen.
 
 Punten: vwo-2025-tv1: 0 p · vwo-2026-tv1: 0 p
@@ -67,7 +67,7 @@ Punten: vwo-2025-tv1: 1 p · vwo-2026-tv1: 3 p
 
 - **B1.11.3-03-a** (begrijpen) Ik kan het verschil uitleggen tussen een lineaire lening (gelijke aflossing, dalende interest) en een annuïteitenlening (gelijke periodieke bedragen, stijgende aflossing, dalende interest). — niet getoetst
 - **B1.11.3-03-b** (toepassen) Ik kan bij een lineaire lening per periode de interest, het aflossingsbedrag en de schuldrest berekenen. — vwo-2025-tv1 vraag 12 (1 p); vwo-2026-tv1 vraag 25 (1 p)
-- **B1.11.3-03-c** (toepassen) Ik kan bij een annuïteitenlening per periode berekenen hoe het periodieke bedrag verdeeld wordt over interest en aflossingsbedrag, en de schuldrest. — vwo-2026-tv1 vraag 24 (1 p); vwo-2026-tv1 vraag 24 (1 p)
+- **B1.11.3-03-c** (toepassen) Ik kan bij een annuïteitenlening per periode berekenen hoe het periodieke bedrag verdeeld wordt over interest en aflossingsbedrag, en de schuldrest. — vwo-2026-tv1 vraag 24 (1 p); vwo-2026-tv1 vraag 24 (1 p); vwo-2026-tv1 vraag 28 (raakt ook)
 - **B1.11.3-03-d** (toepassen) Ik kan de bruto uitgaven (interest plus aflossing) en de netto uitgaven na fiscale aftrek van de interest berekenen, met gegeven belastingtarieven en aftrekregels. — niet getoetst
 ### B1.11.3-04 — Ik kan de financiële gevolgen van huren of kopen van een woonhuis analyseren en de keuze daartussen financieel onderbouwd afwegen.
 
@@ -81,7 +81,7 @@ Punten: vwo-2025-tv1: 0 p · vwo-2026-tv1: 0 p
 Punten: vwo-2025-tv1: 0 p · vwo-2026-tv1: 0 p
 
 - **B1.11.4-01-a** (onthouden) Ik kan de registratievormen voor samenwonen noemen: samenwonen zonder samenlevingscontract, samenwonen met samenlevingscontract, trouwen en geregistreerd partnerschap. — niet getoetst
-- **B1.11.4-01-b** (onthouden) Ik kan noemen wat bij beperkte gemeenschap van goederen gemeenschappelijk vermogen wordt (opgebouwd tijdens huwelijk of partnerschap) en wat privévermogen blijft (van voor het huwelijk, erfenissen en schenkingen). — niet getoetst
+- **B1.11.4-01-b** (onthouden) Ik kan noemen wat bij beperkte gemeenschap van goederen gemeenschappelijk vermogen wordt (opgebouwd tijdens huwelijk of partnerschap) en wat privévermogen blijft (van voor het huwelijk, erfenissen en schenkingen). — vwo-2026-tv1 vraag 28 (raakt ook)
 - **B1.11.4-01-c** (onthouden) Ik kan de verschillen noemen tussen trouwen op huwelijkse voorwaarden/partnerschapsvoorwaarden (eigen afspraken over gemeenschappelijk en privé) en trouwen in beperkte gemeenschap van goederen (wettelijke regeling zonder eigen afspraken). — niet getoetst
 ### B1.11.4-02 — Ik kan de financiële consequenties van scheiden noemen voor de scheidingsprocedure, partnerpensioenrechten en alimentatie, gegeven de inhoud van de wet.
 
@@ -131,7 +131,7 @@ Punten: vwo-2025-tv1: 1 p · vwo-2026-tv1: 0 p
 Punten: vwo-2025-tv1: 2 p · vwo-2026-tv1: 0 p
 
 - **B2.12.2-03-a** (onthouden) Ik kan de begrotingen van een financieel plan benoemen: investeringsbegroting, financieringsbegroting, exploitatiebegroting en liquiditeitsbegroting. — niet getoetst
-- **B2.12.2-03-b** (begrijpen) Ik kan uitleggen hoe de begrotingen samenhangen: de investeringsbegroting bepaalt de vermogensbehoefte, de interest komt als kosten in de exploitatiebegroting, en aflossingen komen als uitgaven in de liquiditeitsbegroting en niet in de exploitatiebegroting. — niet getoetst
+- **B2.12.2-03-b** (begrijpen) Ik kan uitleggen hoe de begrotingen samenhangen: de investeringsbegroting bepaalt de vermogensbehoefte, de interest komt als kosten in de exploitatiebegroting, en aflossingen komen als uitgaven in de liquiditeitsbegroting en niet in de exploitatiebegroting. — vwo-2025-tv1 vraag 9 (raakt ook)
 - **B2.12.2-03-c** (toepassen) Ik kan met gegeven gegevens voor een startende eenmanszaak een financieel plan opstellen met een investerings-, financierings-, exploitatie- en liquiditeitsbegroting. — vwo-2025-tv1 vraag 9 (2 p)
 ### B2.12.3-01 — Ik kan de wettelijke verplichtingen bij de oprichting van een eenmanszaak noemen.
 
@@ -145,7 +145,7 @@ Punten: vwo-2025-tv1: 1 p · vwo-2026-tv1: 0 p
 
 - **B3.13.1-01-a** (begrijpen) Ik kan uitleggen wat het verschil is tussen een natuurlijk persoon en een rechtspersoon, en aangeven dat bv, nv, stichting en vereniging rechtspersonen zijn en eenmanszaak en vof niet. — vwo-2025-tv1 vraag 5 (1 p)
 - **B3.13.1-01-b** (onthouden) Ik kan per rechtsvorm de kenmerken noemen voor continuïteit en juridische aansprakelijkheid van de eigenaren of bestuurders. — niet getoetst
-- **B3.13.1-01-c** (onthouden) Ik kan per rechtsvorm de kenmerken noemen voor financiering en belastingen, waaronder of de winst onder de inkomstenbelasting of de vennootschapsbelasting valt. — niet getoetst
+- **B3.13.1-01-c** (onthouden) Ik kan per rechtsvorm de kenmerken noemen voor financiering en belastingen, waaronder of de winst onder de inkomstenbelasting of de vennootschapsbelasting valt. — vwo-2025-tv1 vraag 5 (raakt ook)
 - **B3.13.1-01-d** (onthouden) Ik kan per rechtsvorm de kenmerken noemen voor leiding, besluitvorming en zeggenschap. — niet getoetst
 ### B3.13.1-02 — Ik kan met de kenmerken van de rechtsvormen bepalen welke rechtsvorm geschikt is voor een gegeven organisatie en welke consequenties die keuze heeft.
 
@@ -153,7 +153,7 @@ Punten: vwo-2025-tv1: 0 p · vwo-2026-tv1: 0 p
 
 - **B3.13.1-02-a** (begrijpen) Ik kan uitleggen welke kenmerken (continuïteit, financiering, juridische aansprakelijkheid, belastingen en zeggenschap) de ondernemer of bestuurder afweegt bij het bepalen van de geschikte rechtsvorm voor de eigen organisatie. — niet getoetst
 - **B3.13.1-02-b** (analyseren) Ik kan voor een beschreven organisatie twee of meer rechtsvormen op deze kenmerken vergelijken, ook het verschil in aansprakelijkheid tussen ondernemen als natuurlijk persoon en via een rechtspersoon. — niet getoetst
-- **B3.13.1-02-c** (analyseren) Ik kan met de kenmerken van een beschreven organisatie (zoals aantal eigenaren, risico, vermogensbehoefte en winstdoel) bepalen welke rechtsvorm uit eenmanszaak, vof, bv, nv, stichting en vereniging geschikt is. — niet getoetst
+- **B3.13.1-02-c** (analyseren) Ik kan met de kenmerken van een beschreven organisatie (zoals aantal eigenaren, risico, vermogensbehoefte en winstdoel) bepalen welke rechtsvorm uit eenmanszaak, vof, bv, nv, stichting en vereniging geschikt is. — vwo-2025-tv1 vraag 5 (raakt ook)
 - **B3.13.1-02-d** (analyseren) Ik kan voor een beschreven organisatie afleiden welke consequenties de gekozen rechtsvorm of een overgang naar een andere rechtsvorm heeft voor aansprakelijkheid, belastingen, financiering en zeggenschap. — niet getoetst
 ### B3.13.1-03 — Ik kan de rol van de organen binnen een organisatie uitleggen.
 
@@ -175,7 +175,7 @@ Punten: vwo-2025-tv1: 0 p · vwo-2026-tv1: 2 p
 Punten: vwo-2025-tv1: 4 p · vwo-2026-tv1: 0 p
 
 - **B4.14.1-01-a** (begrijpen) Ik kan uitleggen dat omvang een indelingscriterium is: absolute omvang meet je in een maatstaf van de organisatie zelf, relatieve omvang in verhouding tot de bedrijfstak. — niet getoetst
-- **B4.14.1-01-b** (toepassen) Ik kan uit gegeven bedrijfsgegevens de absolute omvang van een organisatie berekenen in een gevraagde maatstaf, zoals omzet uit afzet en verkoopprijs. — vwo-2025-tv1 vraag 6 (1 p); vwo-2025-tv1 vraag 6 (1 p); vwo-2025-tv1 vraag 6 (1 p); vwo-2025-tv1 vraag 6 (1 p)
+- **B4.14.1-01-b** (toepassen) Ik kan uit gegeven bedrijfsgegevens de absolute omvang van een organisatie berekenen in een gevraagde maatstaf, zoals omzet uit afzet en verkoopprijs. — vwo-2025-tv1 vraag 6 (1 p); vwo-2025-tv1 vraag 6 (1 p); vwo-2025-tv1 vraag 6 (1 p); vwo-2025-tv1 vraag 6 (1 p); vwo-2025-tv1 vraag 13 (raakt ook)
 - **B4.14.1-01-c** (toepassen) Ik kan de relatieve omvang van een organisatie berekenen als marktaandeel in procenten, uit de omzet of afzet van de organisatie en van de hele bedrijfstak. — niet getoetst
 - **B4.14.1-01-d** (begrijpen) Ik kan met berekende uitkomsten uitleggen waarom een organisatie met een kleine absolute omvang toch een grote relatieve omvang kan hebben. — niet getoetst
 ### B4.14.1-02 — Ik kan het onderscheid uitleggen tussen een organisatie met een commerciële en een organisatie met een niet-commerciële doelstelling.
@@ -190,7 +190,7 @@ Punten: vwo-2025-tv1: 0 p · vwo-2026-tv1: 0 p
 Punten: vwo-2025-tv1: 2 p · vwo-2026-tv1: 0 p
 
 - **B4.14.2-01-a** (begrijpen) Ik kan uitleggen dat een organisatie bestaansrecht heeft zolang zij met haar product of dienst voorziet in maatschappelijke behoeften waarvoor afnemers of financiers willen betalen. — niet getoetst
-- **B4.14.2-01-b** (begrijpen) Ik kan beschrijven wat een organisatie naast haar product of dienst aan de samenleving bijdraagt: werkgelegenheid, inkomen, belastingopbrengsten en innovatie en/of verbetering. — niet getoetst
+- **B4.14.2-01-b** (begrijpen) Ik kan beschrijven wat een organisatie naast haar product of dienst aan de samenleving bijdraagt: werkgelegenheid, inkomen, belastingopbrengsten en innovatie en/of verbetering. — vwo-2025-tv1 vraag 1 (raakt ook); vwo-2025-tv1 vraag 1 (raakt ook); vwo-2025-tv1 vraag 25 (raakt ook)
 - **B4.14.2-01-c** (begrijpen) Ik kan voor een beschreven organisatie uitleggen in welke maatschappelijke behoeften zij voorziet en hoe haar bestaansrecht in gevaar komt als die behoefte verdwijnt of door innovatie en/of verbetering bij anderen beter wordt vervuld. — vwo-2025-tv1 vraag 1 (1 p); vwo-2025-tv1 vraag 1 (1 p)
 ### B4.14.2-02 — Ik kan uitleggen wat maatschappelijk verantwoord ondernemen (MVO) voor een organisatie betekent.
 
@@ -256,8 +256,8 @@ Punten: vwo-2025-tv1: 2 p · vwo-2026-tv1: 0 p
 Punten: vwo-2025-tv1: 0 p · vwo-2026-tv1: 0 p
 
 - **C2.17.4-01-a** (begrijpen) Ik kan uitleggen dat bij een individuele arbeidsovereenkomst een gezagsverhouding bestaat en dat een zzp'er met een overeenkomst van opdracht zelf bepaalt hoe hij het werk uitvoert. — niet getoetst
-- **C2.17.4-01-b** (begrijpen) Ik kan uitleggen wie bij beide overeenkomsten het risico draagt bij ziekte en bij te weinig werk, en wat dat betekent voor de loondoorbetaling door de organisatie. — niet getoetst
-- **C2.17.4-01-c** (begrijpen) Ik kan uitleggen hoe beide overeenkomsten verschillen in opzegging en beëindiging en in de werkgeverslasten die de organisatie moet betalen. — niet getoetst
+- **C2.17.4-01-b** (begrijpen) Ik kan uitleggen wie bij beide overeenkomsten het risico draagt bij ziekte en bij te weinig werk, en wat dat betekent voor de loondoorbetaling door de organisatie. — vwo-2025-tv1 vraag 11 (raakt ook); vwo-2025-tv1 vraag 11 (raakt ook)
+- **C2.17.4-01-c** (begrijpen) Ik kan uitleggen hoe beide overeenkomsten verschillen in opzegging en beëindiging en in de werkgeverslasten die de organisatie moet betalen. — vwo-2025-tv1 vraag 11 (raakt ook); vwo-2025-tv1 vraag 11 (raakt ook)
 ### C2.17.5-01 — Ik kan de vormen van een individuele arbeidsovereenkomst uitleggen.
 
 Punten: vwo-2025-tv1: 0 p · vwo-2026-tv1: 0 p
@@ -338,8 +338,8 @@ Punten: vwo-2025-tv1: 0 p · vwo-2026-tv1: 0 p
 
 - **D2.20.1-01-a** (onthouden) Ik kan de financieringsmogelijkheden voor een startende eenmanszaak of vof noemen: eigen middelen van de eigenaar of de vennoten, een lening via banken, crowdfunding, een onderhandse lening en een lening van overige vermogensverschaffers. — niet getoetst
 - **D2.20.1-01-b** (begrijpen) Ik kan uitleggen dat eigen middelen vermogen zijn zonder interest- en aflossingsverplichting, terwijl de ondernemer bij een lening via banken interest betaalt en het geleende bedrag moet aflossen. — niet getoetst
-- **D2.20.1-01-c** (begrijpen) Ik kan uitleggen hoe crowdfunding werkt: de ondernemer haalt via een (online) platform bij een groot aantal kleine verschaffers vermogen op, als lening of in ruil voor een tegenprestatie. — niet getoetst
-- **D2.20.1-01-d** (begrijpen) Ik kan uitleggen dat een startende ondernemer buiten de bank om kan lenen met een onderhandse lening of een lening van overige vermogensverschaffers (zoals familie, vrienden of een microkredietverstrekker), en waarom dat een uitweg is als een lening via banken niet of niet volledig lukt. — niet getoetst
+- **D2.20.1-01-c** (begrijpen) Ik kan uitleggen hoe crowdfunding werkt: de ondernemer haalt via een (online) platform bij een groot aantal kleine verschaffers vermogen op, als lening of in ruil voor een tegenprestatie. — vwo-2026-tv1 vraag 20 (raakt ook)
+- **D2.20.1-01-d** (begrijpen) Ik kan uitleggen dat een startende ondernemer buiten de bank om kan lenen met een onderhandse lening of een lening van overige vermogensverschaffers (zoals familie, vrienden of een microkredietverstrekker), en waarom dat een uitweg is als een lening via banken niet of niet volledig lukt. — vwo-2026-tv1 vraag 20 (raakt ook)
 ### D2.20.2.1-01 — Ik kan de verschillende financieringsmogelijkheden van een bv en nv uitleggen.
 
 Punten: vwo-2025-tv1: 1 p · vwo-2026-tv1: 0 p
@@ -347,7 +347,7 @@ Punten: vwo-2025-tv1: 1 p · vwo-2026-tv1: 0 p
 - **D2.20.2.1-01-a** (onthouden) Ik kan de financieringsmogelijkheden van een bv en nv noemen naast eigen middelen en een lening via banken: het uitgeven van aandelen (aandelenkapitaal), een obligatielening en converteerbare obligaties. — niet getoetst
 - **D2.20.2.1-01-b** (begrijpen) Ik kan uitleggen dat een bv of nv met aandelenkapitaal eigen vermogen aantrekt, waarbij de aandeelhouder mede-eigenaar wordt met recht op dividend en zeggenschap maar zonder recht op aflossing, en dat aandelen van een nv via de beurs verhandelbaar kunnen zijn en die van een bv niet. — vwo-2025-tv1 vraag 25 (1 p)
 - **D2.20.2.1-01-c** (begrijpen) Ik kan uitleggen dat een bv of nv met een obligatielening vreemd vermogen in vele gelijke delen bij een groot aantal verschaffers aantrekt, waarbij de obligatiehouder schuldeiser is met recht op interest en aflossing. — niet getoetst
-- **D2.20.2.1-01-d** (begrijpen) Ik kan uitleggen dat converteerbare obligaties vreemd vermogen zijn dat de obligatiehouder onder vooraf vastgestelde voorwaarden kan omzetten in aandelen, waardoor het vreemd vermogen bij conversie eigen vermogen wordt. — niet getoetst
+- **D2.20.2.1-01-d** (begrijpen) Ik kan uitleggen dat converteerbare obligaties vreemd vermogen zijn dat de obligatiehouder onder vooraf vastgestelde voorwaarden kan omzetten in aandelen, waardoor het vreemd vermogen bij conversie eigen vermogen wordt. — vwo-2025-tv1 vraag 23 (raakt ook); vwo-2025-tv1 vraag 23 (raakt ook); vwo-2025-tv1 vraag 25 (raakt ook)
 ### D2.20.2.2-01 — Ik kan het belang van de vermogensmarkt voor een onderneming uitleggen.
 
 Punten: vwo-2025-tv1: 0 p · vwo-2026-tv1: 0 p
@@ -400,7 +400,7 @@ Punten: vwo-2025-tv1: 0 p · vwo-2026-tv1: 0 p
 
 - **D2.21.2-01-a** (begrijpen) Ik kan het verschil uitleggen tussen de nominale waarde (het bedrag waarmee een aandeel in het geplaatst aandelenkapitaal staat), de emissiekoers (de prijs waarvoor de onderneming een nieuw aandeel uitgeeft) en de beurskoers (de prijs waartegen een bestaand aandeel op de beurs wordt verhandeld). — niet getoetst
 - **D2.21.2-01-b** (begrijpen) Ik kan uitleggen waarom de beurskoers en de emissiekoers van een aandeel kunnen afwijken van de nominale waarde, en dat een aandeel niet onder de nominale waarde mag worden uitgegeven. — niet getoetst
-- **D2.21.2-01-c** (toepassen) Ik kan bij gegeven aantallen aandelen het totale bedrag berekenen tegen nominale waarde, emissiekoers en beurskoers, en omgekeerd de nominale waarde, emissiekoers of beurskoers per aandeel uit gegeven totaalbedragen. — niet getoetst
+- **D2.21.2-01-c** (toepassen) Ik kan bij gegeven aantallen aandelen het totale bedrag berekenen tegen nominale waarde, emissiekoers en beurskoers, en omgekeerd de nominale waarde, emissiekoers of beurskoers per aandeel uit gegeven totaalbedragen. — vwo-2026-tv1 vraag 15 (raakt ook)
 ### D2.21.2-02 — Ik kan de intrinsieke waarde van een aandeel berekenen en het verschil met de nominale waarde en de beurskoers uitleggen.
 
 Punten: vwo-2025-tv1: 0 p · vwo-2026-tv1: 0 p
@@ -429,14 +429,14 @@ Punten: vwo-2025-tv1: 0 p · vwo-2026-tv1: 0 p
 Punten: vwo-2025-tv1: 0 p · vwo-2026-tv1: 1 p
 
 - **D2.21.5-01-a** (onthouden) Ik kan noemen dat lang vreemd vermogen vreemd vermogen is met een looptijd van meer dan een jaar, en de vormen noemen: hypothecaire lening, gewone obligatielening, converteerbare obligatielening en onderhandse lening. — niet getoetst
-- **D2.21.5-01-b** (onthouden) Ik kan als kenmerk van een hypothecaire lening noemen dat onroerend goed als zekerheid (hypotheek) dient, en van een onderhandse lening dat die rechtstreeks met één of een paar vermogensverschaffers wordt afgesloten, zonder tussenkomst van de beurs. — vwo-2026-tv1 vraag 21 (1 p)
+- **D2.21.5-01-b** (onthouden) Ik kan als kenmerk van een hypothecaire lening noemen dat onroerend goed als zekerheid (hypotheek) dient, en van een onderhandse lening dat die rechtstreeks met één of een paar vermogensverschaffers wordt afgesloten, zonder tussenkomst van de beurs. — vwo-2025-tv1 vraag 8 (raakt ook); vwo-2025-tv1 vraag 8 (raakt ook); vwo-2026-tv1 vraag 21 (1 p)
 - **D2.21.5-01-c** (onthouden) Ik kan als kenmerk van een gewone obligatielening noemen dat het geleende bedrag in vele gelijke, verhandelbare delen (obligaties) bij een groot aantal beleggers wordt opgehaald, en van een converteerbare obligatielening dat de obligaties onder vooraf vastgestelde voorwaarden in aandelen kunnen worden omgezet. — niet getoetst
 ### D2.21.6-01 — Ik kan de voor- en nadelen van een converteerbare obligatielening vergelijken met die van een gewone obligatielening, voor de onderneming en voor de belegger.
 
 Punten: vwo-2025-tv1: 2 p · vwo-2026-tv1: 0 p
 
 - **D2.21.6-01-a** (begrijpen) Ik kan het verschil beschrijven tussen een converteerbare obligatielening en een gewone obligatielening: de houder van een converteerbare obligatie mag die onder vooraf vastgestelde voorwaarden omzetten in aandelen. — niet getoetst
-- **D2.21.6-01-b** (begrijpen) Ik kan de voor- en nadelen van een converteerbare obligatielening voor de onderneming uitleggen, zoals een lagere interest en het vervallen van de aflossing bij conversie tegenover verwatering van zeggenschap en resultaat per aandeel. — vwo-2025-tv1 vraag 25 (1 p)
+- **D2.21.6-01-b** (begrijpen) Ik kan de voor- en nadelen van een converteerbare obligatielening voor de onderneming uitleggen, zoals een lagere interest en het vervallen van de aflossing bij conversie tegenover verwatering van zeggenschap en resultaat per aandeel. — vwo-2025-tv1 vraag 25 (1 p); vwo-2025-tv1 vraag 25 (raakt ook)
 - **D2.21.6-01-c** (begrijpen) Ik kan de voor- en nadelen van een converteerbare obligatie voor de belegger uitleggen, zoals de kans op koersstijging van het aandeel tegenover een lagere interest dan bij een gewone obligatie. — vwo-2025-tv1 vraag 26 (1 p)
 - **D2.21.6-01-d** (analyseren) Ik kan in een gegeven situatie de voor- en nadelen van een converteerbare obligatielening vergelijken met die van een gewone obligatielening voor de onderneming en de belegger, en aangeven welke verschillen bij de gegeven beurskoers van het aandeel en de marktrente zwaar wegen. — niet getoetst
 ### D2.21.7-01 — Ik kan de voor- en nadelen van de verschillende financieringsmogelijkheden uitleggen voor een organisatie die vermogen wil aantrekken, en de keuze voor een financieringsmogelijkheid analyseren.
@@ -450,7 +450,7 @@ Punten: vwo-2025-tv1: 0 p · vwo-2026-tv1: 1 p
 
 Punten: vwo-2025-tv1: 0 p · vwo-2026-tv1: 0 p
 
-- **D2.21.8-01-a** (begrijpen) Ik kan uitleggen wat het verschil is tussen nominale waarde, emissiekoers en beurskoers van een obligatie, en welke waarde de basis is voor interest en aflossing. — niet getoetst
+- **D2.21.8-01-a** (begrijpen) Ik kan uitleggen wat het verschil is tussen nominale waarde, emissiekoers en beurskoers van een obligatie, en welke waarde de basis is voor interest en aflossing. — vwo-2025-tv1 vraag 24 (raakt ook)
 - **D2.21.8-01-b** (begrijpen) Ik kan uitleggen waarom de beurskoers na de emissie kan afwijken van emissiekoers en nominale waarde terwijl interest en aflossing op de nominale waarde gebaseerd blijven: de vaste couponrente wordt vergeleken met de marktrente. — niet getoetst
 - **D2.21.8-01-c** (toepassen) Ik kan uit de nominale waarde en een koers in procenten de emissieopbrengst of beurswaarde van een obligatie of obligatielening berekenen, en het verschil met de nominale waarde. — niet getoetst
 ### D2.21.9-01 — Ik kan het agio op obligaties uitleggen en berekenen.
@@ -487,7 +487,7 @@ Punten: vwo-2025-tv1: 0 p · vwo-2026-tv1: 0 p
 Punten: vwo-2025-tv1: 1 p · vwo-2026-tv1: 0 p
 
 - **D2.22.2-01-a** (begrijpen) Ik kan uitleggen waarom vermogensverschaffers voorwaarden stellen: zij beperken daarmee het risico dat interest, aflossing of het ingebrachte vermogen niet wordt terugbetaald. — vwo-2025-tv1 vraag 20 (1 p)
-- **D2.22.2-01-b** (begrijpen) Ik kan uitleggen wat een onderpand is en waarom een verschaffer van vreemd vermogen een onderpand eist, zoals een hypotheek op een bedrijfspand. — niet getoetst
+- **D2.22.2-01-b** (begrijpen) Ik kan uitleggen wat een onderpand is en waarom een verschaffer van vreemd vermogen een onderpand eist, zoals een hypotheek op een bedrijfspand. — vwo-2025-tv1 vraag 20 (raakt ook); vwo-2026-tv1 vraag 21 (raakt ook)
 - **D2.22.2-01-c** (begrijpen) Ik kan uitleggen wat een solvabiliteitseis, een liquiditeitseis en een rendementseis inhouden en welk risico de vermogensverschaffer met elk van deze eisen beperkt. — niet getoetst
 - **D2.22.2-01-d** (begrijpen) Ik kan uitleggen welke duurzaamheidseisen op het gebied van milieu en maatschappij vermogensverschaffers kunnen stellen en waarom zij dat doen. — niet getoetst
 ## E Marketing
@@ -519,10 +519,10 @@ Punten: vwo-2025-tv1: 0 p · vwo-2026-tv1: 0 p
 
 Punten: vwo-2025-tv1: 1 p · vwo-2026-tv1: 0 p
 
-- **E2.25.3-01-a** (onthouden) Ik kan de vier instrumenten van de marketingmix 4P noemen (productbeleid, prijsbeleid, plaatsbeleid, promotiebeleid) en de keuzes binnen het productbeleid: soort en type product, kwaliteit van de producten, assortimentsgrootte, merken, verpakking, service en garantie. — vwo-2025-tv1 vraag 30 (1 p)
+- **E2.25.3-01-a** (onthouden) Ik kan de vier instrumenten van de marketingmix 4P noemen (productbeleid, prijsbeleid, plaatsbeleid, promotiebeleid) en de keuzes binnen het productbeleid: soort en type product, kwaliteit van de producten, assortimentsgrootte, merken, verpakking, service en garantie. — vwo-2025-tv1 vraag 30 (1 p); vwo-2026-tv1 vraag 14 (raakt ook); vwo-2026-tv1 vraag 14 (raakt ook)
 - **E2.25.3-01-b** (begrijpen) Ik kan het verschil uitleggen tussen een materieel en een immaterieel product en tussen een breed en een diep assortiment. — niet getoetst
 - **E2.25.3-01-c** (begrijpen) Ik kan uitleggen hoe keuzes in kwaliteit van de producten, merken, verpakking en service en garantie een product onderscheiden van dat van concurrenten. — niet getoetst
-- **E2.25.3-01-d** (begrijpen) Ik kan bij een gegeven product toelichten welke keuzes de organisatie in haar productbeleid heeft gemaakt. — niet getoetst
+- **E2.25.3-01-d** (begrijpen) Ik kan bij een gegeven product toelichten welke keuzes de organisatie in haar productbeleid heeft gemaakt. — vwo-2025-tv1 vraag 30 (raakt ook)
 ### E2.25.3-02 — Ik kan het prijsbeleid, het plaatsbeleid en het promotiebeleid uitleggen als instrumenten van de aanbodgerichte 4P-marketingmix.
 
 Punten: vwo-2025-tv1: 3 p · vwo-2026-tv1: 0 p
@@ -530,7 +530,7 @@ Punten: vwo-2025-tv1: 3 p · vwo-2026-tv1: 0 p
 - **E2.25.3-02-a** (begrijpen) Ik kan het verschil uitleggen tussen afroompolitiek en penetratiepolitiek en in welke marktsituatie elk van beide past. — niet getoetst
 - **E2.25.3-02-b** (begrijpen) Ik kan uitleggen waarom een organisatie in haar prijsbeleid psychologische prijzen hanteert. — niet getoetst
 - **E2.25.3-02-c** (begrijpen) Ik kan de keuzes in het plaatsbeleid beschrijven, waaronder verkoop via fysieke winkels en/of online, en uitleggen welke gevolgen die keuze heeft voor het bereik van de afnemers. — niet getoetst
-- **E2.25.3-02-d** (begrijpen) Ik kan uitleggen welke rol reclame en social media spelen in het promotiebeleid van een organisatie. — vwo-2025-tv1 vraag 28 (1 p); vwo-2025-tv1 vraag 28 (1 p); vwo-2025-tv1 vraag 30 (1 p)
+- **E2.25.3-02-d** (begrijpen) Ik kan uitleggen welke rol reclame en social media spelen in het promotiebeleid van een organisatie. — vwo-2025-tv1 vraag 28 (1 p); vwo-2025-tv1 vraag 28 (1 p); vwo-2025-tv1 vraag 30 (raakt ook); vwo-2025-tv1 vraag 30 (1 p)
 ### E2.25.4-01 — Ik kan customer solution en customer cost to satisfy uitleggen als onderdelen van de vraaggerichte 4C-marketingmix.
 
 Punten: vwo-2025-tv1: 0 p · vwo-2026-tv1: 0 p
@@ -568,8 +568,8 @@ Punten: vwo-2025-tv1: 0 p · vwo-2026-tv1: 2 p
 
 Punten: vwo-2025-tv1: 4 p · vwo-2026-tv1: 0 p
 
-- **F1.28.1-01-a** (toepassen) Ik kan bij inkoop en gelijktijdige ontvangst van goederen en diensten, contant en op rekening, de balansmutaties bepalen: welke balansposten (voorraad, kas of bank, crediteuren, te vorderen btw) met welk bedrag toe- of afnemen. — vwo-2025-tv1 vraag 15 (2 p)
-- **F1.28.1-01-b** (toepassen) Ik kan bij verkoop en gelijktijdige aflevering van goederen en diensten, contant en op rekening, de balansmutaties (kas of bank, debiteuren, voorraad, te betalen btw) en de resultatenrekeningmutaties (omzet en inkoopwaarde van de omzet) bepalen. — vwo-2025-tv1 vraag 16 (2 p)
+- **F1.28.1-01-a** (toepassen) Ik kan bij inkoop en gelijktijdige ontvangst van goederen en diensten, contant en op rekening, de balansmutaties bepalen: welke balansposten (voorraad, kas of bank, crediteuren, te vorderen btw) met welk bedrag toe- of afnemen. — vwo-2025-tv1 vraag 15 (2 p); vwo-2026-tv1 vraag 22 (raakt ook)
+- **F1.28.1-01-b** (toepassen) Ik kan bij verkoop en gelijktijdige aflevering van goederen en diensten, contant en op rekening, de balansmutaties (kas of bank, debiteuren, voorraad, te betalen btw) en de resultatenrekeningmutaties (omzet en inkoopwaarde van de omzet) bepalen. — vwo-2025-tv1 vraag 15 (raakt ook); vwo-2025-tv1 vraag 16 (2 p)
 - **F1.28.1-01-c** (toepassen) Ik kan de balansmutaties bepalen bij de btw-verrekening (afdracht of teruggave van het saldo van te betalen en te vorderen btw) en bij privéontvangsten en -uitgaven, waarbij de privémutaties via het eigen vermogen lopen en niet via de resultatenrekening. — niet getoetst
 - **F1.28.1-01-d** (analyseren) Ik kan een reeks gegeven financiële feiten indelen in feiten die alleen de samenstelling van de balans veranderen en feiten die via de resultatenrekening ook het resultaat veranderen, en die indeling per feit onderbouwen met de balansmutaties en resultatenrekeningmutaties. — niet getoetst
 ### F1.28.1-02 — Ik kan analyseren wat financiële feiten rond schulden, afschrijving en overige ontvangsten en uitgaven per kas en bank doen met de balans en de resultatenrekening, zonder journaalposten op te stellen.
@@ -602,13 +602,13 @@ Punten: vwo-2025-tv1: 0 p · vwo-2026-tv1: 0 p
 
 - **F1.28.3-01-a** (analyseren) Ik kan gegeven bezittingen, schulden en inbreng van de eigenaar(s) indelen naar activa en passiva, en daarbinnen naar vaste activa, vlottende activa, eigen vermogen en vreemd vermogen (lang en kort). — niet getoetst
 - **F1.28.3-01-b** (toepassen) Ik kan het eigen vermogen op de beginbalans berekenen als verschil tussen het totaal van de activa en het vreemd vermogen. — niet getoetst
-- **F1.28.3-01-c** (toepassen) Ik kan uit gegeven informatie over de start van een onderneming (inbreng, opgenomen leningen, aanschaffen) een beginbalans opstellen met gelijke totalen van activa en passiva. — niet getoetst
+- **F1.28.3-01-c** (toepassen) Ik kan uit gegeven informatie over de start van een onderneming (inbreng, opgenomen leningen, aanschaffen) een beginbalans opstellen met gelijke totalen van activa en passiva. — vwo-2026-tv1 vraag 22 (raakt ook)
 ### F1.28.3-02 — Ik kan een liquiditeitsoverzicht (liquiditeitsbegroting) opstellen.
 
 Punten: vwo-2025-tv1: 0 p · vwo-2026-tv1: 0 p
 
 - **F1.28.3-02-a** (begrijpen) Ik kan uitleggen waarom een liquiditeitsbegroting ontvangsten en uitgaven bevat, zodat afschrijving niet en aflossing en de aanschaf van vaste activa wel in het overzicht staan. — niet getoetst
-- **F1.28.3-02-b** (toepassen) Ik kan per periode de ontvangsten en uitgaven bepalen uit gegeven verkopen, inkopen en andere financiële feiten, met contante betaling, betaling op rekening en betalingstermijnen. — niet getoetst
+- **F1.28.3-02-b** (toepassen) Ik kan per periode de ontvangsten en uitgaven bepalen uit gegeven verkopen, inkopen en andere financiële feiten, met contante betaling, betaling op rekening en betalingstermijnen. — vwo-2025-tv1 vraag 16 (raakt ook); vwo-2026-tv1 vraag 18 (raakt ook)
 - **F1.28.3-02-c** (toepassen) Ik kan een liquiditeitsoverzicht opstellen met per periode het beginsaldo liquide middelen, de ontvangsten, de uitgaven en het eindsaldo. — niet getoetst
 - **F1.28.3-02-d** (toepassen) Ik kan uit het opgestelde liquiditeitsoverzicht bepalen in welke periode het saldo liquide middelen negatief wordt en hoe groot het tekort dan is. — niet getoetst
 ### F1.28.3-03 — Ik kan een exploitatiebegroting (begrote resultatenrekening) opstellen.
@@ -616,7 +616,7 @@ Punten: vwo-2025-tv1: 0 p · vwo-2026-tv1: 0 p
 Punten: vwo-2025-tv1: 4 p · vwo-2026-tv1: 1 p
 
 - **F1.28.3-03-a** (begrijpen) Ik kan uitleggen waarom een exploitatiebegroting opbrengsten en kosten bevat en geen ontvangsten en uitgaven. — niet getoetst
-- **F1.28.3-03-b** (toepassen) Ik kan uit gegeven gegevens de begrote opbrengsten en de begrote kosten van een periode berekenen, waaronder inkoopwaarde van de omzet, afschrijving en interest. — vwo-2025-tv1 vraag 12 (1 p); vwo-2025-tv1 vraag 13 (1 p); vwo-2025-tv1 vraag 13 (1 p)
+- **F1.28.3-03-b** (toepassen) Ik kan uit gegeven gegevens de begrote opbrengsten en de begrote kosten van een periode berekenen, waaronder inkoopwaarde van de omzet, afschrijving en interest. — vwo-2025-tv1 vraag 12 (raakt ook); vwo-2025-tv1 vraag 12 (raakt ook); vwo-2025-tv1 vraag 12 (raakt ook); vwo-2025-tv1 vraag 12 (1 p); vwo-2025-tv1 vraag 13 (1 p); vwo-2025-tv1 vraag 13 (1 p); vwo-2025-tv1 vraag 13 (raakt ook); vwo-2026-tv1 vraag 25 (raakt ook); vwo-2026-tv1 vraag 25 (raakt ook); vwo-2026-tv1 vraag 25 (raakt ook)
 - **F1.28.3-03-c** (toepassen) Ik kan een exploitatiebegroting opstellen als resultatenrekening met de begrote opbrengsten, de begrote kosten en het begrote resultaat. — vwo-2025-tv1 vraag 13 (1 p); vwo-2026-tv1 vraag 25 (1 p)
 ### F1.28.3-04 — Ik kan een geprognosticeerde eindbalans opstellen en de verbanden tussen beginbalans, liquiditeitsoverzicht, exploitatiebegroting en eindbalans analyseren.
 
@@ -689,13 +689,13 @@ Punten: vwo-2025-tv1: 0 p · vwo-2026-tv1: 1 p
 Punten: vwo-2025-tv1: 1 p · vwo-2026-tv1: 0 p
 
 - **F2.30.2-02-a** (toepassen) Ik kan de variabele kosten van de in de periode verleende diensten berekenen als het aantal verleende diensten maal de variabele kosten per dienst. — niet getoetst
-- **F2.30.2-02-b** (toepassen) Ik kan het resultaat over de periode berekenen als de omzet min de variabele kosten van de verleende diensten min de totale constante kosten van de periode. — niet getoetst
+- **F2.30.2-02-b** (toepassen) Ik kan het resultaat over de periode berekenen als de omzet min de variabele kosten van de verleende diensten min de totale constante kosten van de periode. — vwo-2026-tv1 vraag 12 (raakt ook)
 - **F2.30.2-02-c** (begrijpen) Ik kan uitleggen dat bij de variabele kostencalculatiemethode het resultaat per extra verleende dienst stijgt met het verschil tussen de opbrengst en de variabele kosten van die dienst, omdat de constante kosten van de periode gelijk blijven. — vwo-2025-tv1 vraag 29 (1 p)
 ### F2.30.2-03 — Ik kan de verschillen tussen de integrale kostprijs en de variabele kostprijs van een dienst uitleggen en berekenen.
 
 Punten: vwo-2025-tv1: 0 p · vwo-2026-tv1: 2 p
 
-- **F2.30.2-03-a** (toepassen) Ik kan de integrale kostprijs van een dienst berekenen als de variabele kosten per dienst plus de constante kosten gedeeld door de normale bezetting (C/N). — vwo-2026-tv1 vraag 8 (2 p)
+- **F2.30.2-03-a** (toepassen) Ik kan de integrale kostprijs van een dienst berekenen als de variabele kosten per dienst plus de constante kosten gedeeld door de normale bezetting (C/N). — vwo-2025-tv1 vraag 27 (raakt ook); vwo-2026-tv1 vraag 7 (raakt ook); vwo-2026-tv1 vraag 8 (2 p)
 - **F2.30.2-03-b** (toepassen) Ik kan het verschil tussen de integrale kostprijs en de variabele kostprijs van een dienst berekenen als het deel van de constante kosten per dienst. — niet getoetst
 - **F2.30.2-03-c** (begrijpen) Ik kan uitleggen waarom de integrale kostprijs voor het deel constante kosten uitgaat van de normale bezetting en niet van de werkelijke bezetting, zodat de kostprijs per dienst niet verandert als de bezetting schommelt. — niet getoetst
 ### F2.30.3-01 — Ik kan de verkoopprijs inclusief btw berekenen als de verkoopprijs exclusief btw bekend is, en omgekeerd.
@@ -703,7 +703,7 @@ Punten: vwo-2025-tv1: 0 p · vwo-2026-tv1: 2 p
 Punten: vwo-2025-tv1: 0 p · vwo-2026-tv1: 2 p
 
 - **F2.30.3-01-a** (toepassen) Ik kan de verkoopprijs inclusief btw berekenen uit de verkoopprijs exclusief btw bij een gegeven btw-tarief. — vwo-2026-tv1 vraag 18 (2 p)
-- **F2.30.3-01-b** (toepassen) Ik kan de verkoopprijs exclusief btw berekenen uit de verkoopprijs inclusief btw door te delen door (100% + btw-tarief). — niet getoetst
+- **F2.30.3-01-b** (toepassen) Ik kan de verkoopprijs exclusief btw berekenen uit de verkoopprijs inclusief btw door te delen door (100% + btw-tarief). — vwo-2026-tv1 vraag 22 (raakt ook); vwo-2026-tv1 vraag 25 (raakt ook)
 - **F2.30.3-01-c** (toepassen) Ik kan de af te dragen btw over een periode berekenen als de te betalen btw min de te vorderen btw. — niet getoetst
 - **F2.30.3-01-d** (begrijpen) Ik kan uitleggen waarom de btw voor de ondernemer geen kosten en geen opbrengst is. — niet getoetst
 ### F2.30.3-02 — Ik kan met de kostprijs en een winstopslag de verkoopprijs berekenen.
@@ -717,7 +717,7 @@ Punten: vwo-2025-tv1: 0 p · vwo-2026-tv1: 0 p
 
 Punten: vwo-2025-tv1: 1 p · vwo-2026-tv1: 0 p
 
-- **F2.30.4-01-a** (toepassen) Ik kan de dekkingsbijdrage per product of dienst berekenen als de verkoopprijs exclusief btw min de variabele kosten per eenheid. — vwo-2025-tv1 vraag 29 (1 p)
+- **F2.30.4-01-a** (toepassen) Ik kan de dekkingsbijdrage per product of dienst berekenen als de verkoopprijs exclusief btw min de variabele kosten per eenheid. — vwo-2025-tv1 vraag 29 (1 p); vwo-2025-tv1 vraag 29 (raakt ook)
 - **F2.30.4-01-b** (toepassen) Ik kan de break-evenafzet berekenen als de totale constante kosten gedeeld door de dekkingsbijdrage per product. — niet getoetst
 - **F2.30.4-01-c** (toepassen) Ik kan de break-evenomzet berekenen als de totale constante kosten gedeeld door de dekkingsbijdrage in perunage van de omzet. — niet getoetst
 ### F2.30.4-02 — Ik kan de totale opbrengsten, de totale kosten en het totale resultaat in een grafiek opstellen en de break-evenafzet en break-evenomzet in de grafiek toepassen en uitleggen.
@@ -763,17 +763,17 @@ Punten: vwo-2025-tv1: 0 p · vwo-2026-tv1: 0 p
 
 Punten: vwo-2025-tv1: 0 p · vwo-2026-tv1: 0 p
 
-- **F2.31.1-01-a** (toepassen) Ik kan de voorcalculatorische resultatenrekening opstellen uit de begrote afzet, de begrote verkoopprijs, de begrote variabele kosten en de begrote constante kosten. — niet getoetst
-- **F2.31.1-01-b** (toepassen) Ik kan de nacalculatorische resultatenrekening opstellen uit de werkelijke afzet, de werkelijke verkoopprijs en de werkelijke variabele en constante kosten. — niet getoetst
+- **F2.31.1-01-a** (toepassen) Ik kan de voorcalculatorische resultatenrekening opstellen uit de begrote afzet, de begrote verkoopprijs, de begrote variabele kosten en de begrote constante kosten. — vwo-2025-tv1 vraag 27 (raakt ook)
+- **F2.31.1-01-b** (toepassen) Ik kan de nacalculatorische resultatenrekening opstellen uit de werkelijke afzet, de werkelijke verkoopprijs en de werkelijke variabele en constante kosten. — vwo-2026-tv1 vraag 12 (raakt ook)
 - **F2.31.1-01-c** (toepassen) Ik kan het verschil tussen het voorcalculatorische en het gerealiseerde resultaat berekenen als voordelig of nadelig verschil. — niet getoetst
 - **F2.31.1-01-d** (begrijpen) Ik kan uitleggen welke posten van beide resultatenrekeningen (afzet, verkoopprijs, variabele kosten, constante kosten) bijdragen aan het verschil tussen het voorcalculatorische en het gerealiseerde resultaat. — niet getoetst
 ### F2.31.1-02 — Ik kan de verschillenanalyse opstellen met verkoopresultaat en budgetresultaat (prijs-, efficiency- en bezettingsresultaat) en de deelresultaten uitleggen.
 
 Punten: vwo-2025-tv1: 3 p · vwo-2026-tv1: 6 p
 
-- **F2.31.1-02-a** (toepassen) Ik kan voor de variabele kosten het prijsresultaat (sp − wp) × wh en het efficiencyresultaat (sh − wh) × sp berekenen. — vwo-2026-tv1 vraag 11 (1 p)
+- **F2.31.1-02-a** (toepassen) Ik kan voor de variabele kosten het prijsresultaat (sp − wp) × wh en het efficiencyresultaat (sh − wh) × sp berekenen. — vwo-2026-tv1 vraag 11 (1 p); vwo-2026-tv1 vraag 11 (raakt ook)
 - **F2.31.1-02-b** (toepassen) Ik kan voor de constante kosten het prijsresultaat Cb − Cw, het begroot bezettingsresultaat (B − N) × C/N en het gerealiseerd bezettingsresultaat (W − N) × C/N berekenen. — vwo-2025-tv1 vraag 27 (1 p); vwo-2026-tv1 vraag 11 (1 p); vwo-2026-tv1 vraag 11 (1 p)
-- **F2.31.1-02-c** (toepassen) Ik kan de verschillenanalyse opstellen met het verkoopresultaat, afzet × (verkoopprijs − kostprijs), en het budgetresultaat, gerealiseerde afzet × kostprijs − werkelijke kosten, als som van prijs-, efficiency- en bezettingsresultaten. — vwo-2025-tv1 vraag 27 (2 p); vwo-2026-tv1 vraag 8 (1 p); vwo-2026-tv1 vraag 11 (1 p); vwo-2026-tv1 vraag 12 (1 p)
+- **F2.31.1-02-c** (toepassen) Ik kan de verschillenanalyse opstellen met het verkoopresultaat, afzet × (verkoopprijs − kostprijs), en het budgetresultaat, gerealiseerde afzet × kostprijs − werkelijke kosten, als som van prijs-, efficiency- en bezettingsresultaten. — vwo-2025-tv1 vraag 27 (2 p); vwo-2025-tv1 vraag 27 (raakt ook); vwo-2026-tv1 vraag 8 (raakt ook); vwo-2026-tv1 vraag 8 (1 p); vwo-2026-tv1 vraag 11 (raakt ook); vwo-2026-tv1 vraag 11 (1 p); vwo-2026-tv1 vraag 12 (1 p)
 - **F2.31.1-02-d** (begrijpen) Ik kan per deelresultaat uitleggen welke afwijking het zichtbaar maakt (inkoopprijzen, verbruik, bezetting of constante kosten) en waarom die voordelig of nadelig is. — niet getoetst
 ### F2.31.2-01 — Ik kan uit de behaalde resultaten per financiële en niet-financiële informatiecategorie passende beheermaatregelen voor het management afleiden.
 
@@ -797,8 +797,8 @@ Punten: vwo-2025-tv1: 0 p · vwo-2026-tv1: 2 p
 
 - **G.32.1-01-a** (begrijpen) Ik kan uitleggen wat vaste activa onderscheidt van vlottende activa: ze blijven langer dan een jaar in de organisatie en worden gebruikt of aangehouden in plaats van omgezet in geld. — niet getoetst
 - **G.32.1-01-b** (begrijpen) Ik kan beschrijven wat de immateriële vaste activa inhouden (geactiveerde kosten van onderzoek en ontwikkeling, vergunningen/concessies, octrooien/patenten en goodwill) en waarom het om rechten of waarden zonder fysieke vorm gaat. — vwo-2026-tv1 vraag 2 (2 p)
-- **G.32.1-01-c** (begrijpen) Ik kan toelichten wat de materiële vaste activa inhouden (zoals gebouwen, machines en inventaris) en hoe ze verschillen van de immateriële vaste activa. — niet getoetst
-- **G.32.1-01-d** (begrijpen) Ik kan uitleggen wat de financiële vaste activa inhouden: deelnemingen in andere organisaties en lang lopende leningen die de organisatie aan anderen heeft verstrekt. — niet getoetst
+- **G.32.1-01-c** (begrijpen) Ik kan toelichten wat de materiële vaste activa inhouden (zoals gebouwen, machines en inventaris) en hoe ze verschillen van de immateriële vaste activa. — vwo-2026-tv1 vraag 2 (raakt ook)
+- **G.32.1-01-d** (begrijpen) Ik kan uitleggen wat de financiële vaste activa inhouden: deelnemingen in andere organisaties en lang lopende leningen die de organisatie aan anderen heeft verstrekt. — vwo-2026-tv1 vraag 2 (raakt ook)
 ### G.32.1-02 — Ik kan uitleggen wat de posten van de vlottende activa en van het kort vreemd vermogen op de balans van de jaarrekening inhouden.
 
 Punten: vwo-2025-tv1: 0 p · vwo-2026-tv1: 0 p
@@ -821,7 +821,7 @@ Punten: vwo-2025-tv1: 0 p · vwo-2026-tv1: 0 p
 
 - **G.32.1-04-a** (begrijpen) Ik kan uitleggen hoe het resultaat op de resultatenrekening ontstaat als omzet min kosten en welke kostensoorten daarop staan, zoals inkoopwaarde van de omzet, personeelskosten, afschrijvingskosten en interestkosten. — niet getoetst
 - **G.32.1-04-b** (begrijpen) Ik kan uitleggen hoe waardering en afschrijving van vaste activa samenhangen: afschrijving verlaagt de boekwaarde op de balans en staat als kosten op de resultatenrekening. — niet getoetst
-- **G.32.1-04-c** (begrijpen) Ik kan toelichten wat herwaardering en afwaardering naar de actuele waarde inhouden en welk effect ze hebben: herwaardering verhoogt de herwaarderingsreserve, afwaardering verlaagt de boekwaarde en het resultaat. — niet getoetst
+- **G.32.1-04-c** (begrijpen) Ik kan toelichten wat herwaardering en afwaardering naar de actuele waarde inhouden en welk effect ze hebben: herwaardering verhoogt de herwaarderingsreserve, afwaardering verlaagt de boekwaarde en het resultaat. — vwo-2026-tv1 vraag 4 (raakt ook)
 - **G.32.1-04-d** (begrijpen) Ik kan uitleggen waarom de toevoeging aan een onderhoudsvoorziening, garantievoorziening of pensioenvoorziening als kosten op de resultatenrekening staat, terwijl de uitgave pas later plaatsvindt. — niet getoetst
 ### G.32.2-01 — Ik kan de liquiditeitsratio's current ratio en quick ratio berekenen uit een balans.
 
@@ -829,13 +829,13 @@ Punten: vwo-2025-tv1: 0 p · vwo-2026-tv1: 0 p
 
 - **G.32.2-01-a** (begrijpen) Ik kan uitleggen dat een liquiditeitsratio als financieel kengetal meet in hoeverre een organisatie haar kort vreemd vermogen uit de vlottende activa kan voldoen. — niet getoetst
 - **G.32.2-01-b** (toepassen) Ik kan uit een gegeven balans de current ratio berekenen als vlottende activa gedeeld door kort vreemd vermogen. — niet getoetst
-- **G.32.2-01-c** (toepassen) Ik kan uit een gegeven balans de quick ratio berekenen als vlottende activa min voorraad, gedeeld door kort vreemd vermogen. — niet getoetst
+- **G.32.2-01-c** (toepassen) Ik kan uit een gegeven balans de quick ratio berekenen als vlottende activa min voorraad, gedeeld door kort vreemd vermogen. — vwo-2026-tv1 vraag 3 (raakt ook); vwo-2026-tv1 vraag 4 (raakt ook)
 - **G.32.2-01-d** (begrijpen) Ik kan uitleggen waarom de voorraad bij de quick ratio niet wordt meegeteld. — niet getoetst
 ### G.32.2-02 — Ik kan de solvabiliteitsratio's EV/TV, VV/TV en EV/VV berekenen uit een balans.
 
 Punten: vwo-2025-tv1: 2 p · vwo-2026-tv1: 1 p
 
-- **G.32.2-02-a** (toepassen) Ik kan uit een gegeven balans het vreemd vermogen (VV) berekenen als som van het lang en het kort vreemd vermogen, en het totaal vermogen (TV) als som van het eigen vermogen (EV) en het vreemd vermogen. — niet getoetst
+- **G.32.2-02-a** (toepassen) Ik kan uit een gegeven balans het vreemd vermogen (VV) berekenen als som van het lang en het kort vreemd vermogen, en het totaal vermogen (TV) als som van het eigen vermogen (EV) en het vreemd vermogen. — vwo-2026-tv1 vraag 23 (raakt ook)
 - **G.32.2-02-b** (toepassen) Ik kan uit een gegeven balans de solvabiliteitsratio's EV/TV, VV/TV en EV/VV berekenen. — vwo-2025-tv1 vraag 22 (1 p); vwo-2026-tv1 vraag 23 (1 p)
 - **G.32.2-02-c** (toepassen) Ik kan bij een gegeven solvabiliteitsratio (EV/TV, VV/TV of EV/VV) en een gegeven balanstotaal of vermogensbedrag het ontbrekende eigen of vreemd vermogen berekenen. — niet getoetst
 - **G.32.2-02-d** (begrijpen) Ik kan uitleggen wat elk van de solvabiliteitsratio's EV/TV, VV/TV en EV/VV uitdrukt en of een hogere waarde op een betere of een slechtere solvabiliteit wijst. — vwo-2025-tv1 vraag 22 (1 p)
@@ -851,23 +851,23 @@ Punten: vwo-2025-tv1: 0 p · vwo-2026-tv1: 0 p
 
 Punten: vwo-2025-tv1: 2 p · vwo-2026-tv1: 1 p
 
-- **G.32.2-04-a** (toepassen) Ik kan het resultaat per aandeel van een bv of nv berekenen als resultaat na belastingen gedeeld door het aantal geplaatste aandelen. — vwo-2025-tv1 vraag 3 (1 p); vwo-2025-tv1 vraag 3 (1 p)
+- **G.32.2-04-a** (toepassen) Ik kan het resultaat per aandeel van een bv of nv berekenen als resultaat na belastingen gedeeld door het aantal geplaatste aandelen. — vwo-2025-tv1 vraag 3 (1 p); vwo-2025-tv1 vraag 3 (1 p); vwo-2026-tv1 vraag 15 (raakt ook)
 - **G.32.2-04-b** (toepassen) Ik kan de cash flow per aandeel berekenen als resultaat na belastingen plus afschrijvingen, gedeeld door het aantal geplaatste aandelen. — niet getoetst
 - **G.32.2-04-c** (toepassen) Ik kan het dividendrendement berekenen als dividend per aandeel gedeeld door de gemiddelde beurskoers × 100%. — vwo-2026-tv1 vraag 15 (1 p)
-- **G.32.2-04-d** (toepassen) Ik kan het beleggersrendement berekenen als opbrengst en koersresultaat van de belegging in een jaar, gedeeld door het gemiddeld belegd vermogen in dat jaar × 100%. — niet getoetst
+- **G.32.2-04-d** (toepassen) Ik kan het beleggersrendement berekenen als opbrengst en koersresultaat van de belegging in een jaar, gedeeld door het gemiddeld belegd vermogen in dat jaar × 100%. — vwo-2025-tv1 vraag 4 (raakt ook); vwo-2025-tv1 vraag 4 (raakt ook)
 ### G.32.3-01 — Ik kan uitleggen welke voor- en nadelen verbonden zijn aan het hanteren van financiële kengetallen.
 
 Punten: vwo-2025-tv1: 0 p · vwo-2026-tv1: 0 p
 
 - **G.32.3-01-a** (begrijpen) Ik kan uitleggen welke voordelen het hanteren van financiële kengetallen heeft: ze vatten de jaarrekening samen in verhoudingsgetallen die door de tijd en met andere organisaties of de branche te vergelijken zijn. — niet getoetst
 - **G.32.3-01-b** (begrijpen) Ik kan uitleggen welke nadelen aan financiële kengetallen verbonden zijn: ze zijn gebaseerd op historische gegevens en een momentopname op de balansdatum, hangen af van waardering en definitiekeuze, en tonen geen oorzaken of niet-financiële informatie. — niet getoetst
-- **G.32.3-01-c** (begrijpen) Ik kan met een gegeven voorbeeld toelichten hoe een transactie vlak voor de balansdatum (zoals een aflossing) of een andere waardering een kengetal gunstiger of ongunstiger laat uitvallen. — niet getoetst
+- **G.32.3-01-c** (begrijpen) Ik kan met een gegeven voorbeeld toelichten hoe een transactie vlak voor de balansdatum (zoals een aflossing) of een andere waardering een kengetal gunstiger of ongunstiger laat uitvallen. — vwo-2026-tv1 vraag 4 (raakt ook)
 ### G.32.4-01 — Ik kan met kengetallen van twee opeenvolgende balansen de ontwikkeling van de liquiditeit en de solvabiliteit van een organisatie analyseren.
 
 Punten: vwo-2025-tv1: 2 p · vwo-2026-tv1: 4 p
 
-- **G.32.4-01-a** (toepassen) Ik kan voor twee opeenvolgende balansen de current ratio, de quick ratio en de solvabiliteitsratio EV/TV berekenen en de uitkomsten per jaar naast elkaar zetten. — vwo-2026-tv1 vraag 3 (2 p)
-- **G.32.4-01-b** (analyseren) Ik kan de verandering van de current ratio, de quick ratio en de solvabiliteitsratio EV/TV tussen beide balansen analyseren door die te herleiden tot veranderingen in afzonderlijke balansposten, zoals voorraad, liquide middelen, rekening-courantkrediet en eigen vermogen. — niet getoetst
+- **G.32.4-01-a** (toepassen) Ik kan voor twee opeenvolgende balansen de current ratio, de quick ratio en de solvabiliteitsratio EV/TV berekenen en de uitkomsten per jaar naast elkaar zetten. — vwo-2025-tv1 vraag 22 (raakt ook); vwo-2026-tv1 vraag 3 (2 p)
+- **G.32.4-01-b** (analyseren) Ik kan de verandering van de current ratio, de quick ratio en de solvabiliteitsratio EV/TV tussen beide balansen analyseren door die te herleiden tot veranderingen in afzonderlijke balansposten, zoals voorraad, liquide middelen, rekening-courantkrediet en eigen vermogen. — vwo-2025-tv1 vraag 22 (raakt ook)
 - **G.32.4-01-c** (analyseren) Ik kan afleiden welk effect het aantrekken of aflossen van een hypothecaire lening, onderhandse lening of obligatielening heeft op de current ratio, de quick ratio en de solvabiliteitsratio EV/TV, en welk effect de conversie van converteerbare obligaties in aandelen heeft op de solvabiliteitsratio EV/TV. — vwo-2025-tv1 vraag 23 (1 p); vwo-2025-tv1 vraag 23 (1 p); vwo-2026-tv1 vraag 4 (1 p); vwo-2026-tv1 vraag 4 (1 p)
 ### G.32.4-02 — Ik kan met kengetallen van twee opeenvolgende balansen en resultatenrekeningen de ontwikkeling van de rentabiliteit en de cashflow van een organisatie analyseren.
 

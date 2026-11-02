@@ -18,6 +18,8 @@ from pathlib import Path
 from ecommon import ROOT, Report, bloom_rank, load_json
 
 OUTSIDE = "buiten huidige syllabus"
+SKILL = "vaardigheid domein A"
+SKILL_NOTE = "vaardigheid uit domein a"   # note text of bedrijfsecon-043 (specs/25 §3)
 
 
 def pct(p: float, mx: int) -> str:
@@ -78,12 +80,22 @@ def main(argv: list[str]) -> None:
             crit[c["criterion_id"]] = {"group": g, "c": c, "sub": sub, "dom": dom}
             order.append(c["criterion_id"])
 
+    def is_skill(r: dict) -> bool:
+        return not r["criterion_id"] and SKILL_NOTE in (r.get("note") or "").lower()
+
     pts = defaultdict(lambda: defaultdict(int))      # criterion -> exam -> points
+    touched = defaultdict(lambda: defaultdict(int))  # criterion -> exam -> scorepunten that also touch it
     outside = defaultdict(int)                       # exam -> unlinked points
+    skill = defaultdict(int)                         # exam -> domein-A skill points
     for eid in eids:
         for r in recs[eid]:
             if r["criterion_id"] and r["criterion_id"] in crit:
                 pts[r["criterion_id"]][eid] += r["points"]
+                for t in r["also_touches"]:
+                    if t in crit:
+                        touched[t][eid] += 1
+            elif is_skill(r):
+                skill[eid] += r["points"]
             else:
                 if r["criterion_id"]:
                     rep.warn("EX1", f"{r['scorepunt_id']}: criterion {r['criterion_id']} not in the bank's criteria")
@@ -98,9 +110,11 @@ def main(argv: list[str]) -> None:
 
     # per criterion
     rows_c = [[cid, crit[cid]["group"]["group_id"], crit[cid]["c"].get("text_student", ""), crit[cid]["c"]["bloom"],
-               *cols(lambda e, cid=cid: pts[cid][e])] for cid in order]
-    rows_c.append([OUTSIDE, "", "", "", *cols(lambda e: outside[e])])
-    head_c = ["criterium_id", "leerdoel_id", "criterium_leerling", "criterium_bloom", *exam_head]
+               *cols(lambda e, cid=cid: pts[cid][e]), *[touched[cid][e] for e in eids]] for cid in order]
+    rows_c.append([SKILL, "", "", "", *cols(lambda e: skill[e]), *["" for _ in eids]])
+    rows_c.append([OUTSIDE, "", "", "", *cols(lambda e: outside[e]), *["" for _ in eids]])
+    head_c = ["criterium_id", "leerdoel_id", "criterium_leerling", "criterium_bloom", *exam_head,
+              *[f"{eid}_raakt_ook" for eid in eids]]
     write_csv(out / "punten_per_criterium.csv", head_c, rows_c)
 
     # per learning goal group
@@ -110,6 +124,7 @@ def main(argv: list[str]) -> None:
         sub = ancestor(g["unit_id"], "subdomein")
         rows_g.append([g["group_id"], g["goal"].get("text_student", ""), sub["code"] if sub else "",
                        *cols(lambda e, ids=ids: sum(pts[c][e] for c in ids))])
+    rows_g.append([SKILL, "", "", *cols(lambda e: skill[e])])
     rows_g.append([OUTSIDE, "", "", *cols(lambda e: outside[e])])
     head_g = ["leerdoel_id", "leerdoel_leerling", "subdomein", *exam_head]
     write_csv(out / "punten_per_leerdoel.csv", head_g, rows_g)
@@ -126,6 +141,7 @@ def main(argv: list[str]) -> None:
             ids = [cid for cid in order if (crit[cid][key] or {}).get("unit_id") == uid]
             rows_d.append([kind, src[uid]["code"], src[uid].get("title") or "",
                            *cols(lambda e, ids=ids: sum(pts[c][e] for c in ids))])
+    rows_d.append(["", SKILL, "", *cols(lambda e: skill[e])])
     rows_d.append(["", OUTSIDE, "", *cols(lambda e: outside[e])])
     head_d = ["niveau", "code", "titel", *exam_head]
     write_csv(out / "punten_per_domein.csv", head_d, rows_d)
@@ -133,7 +149,7 @@ def main(argv: list[str]) -> None:
     # checks: every exam column sums to max_score (domein level and criterion level)
     for i, eid in enumerate(eids):
         col = 4 + 2 * i
-        s_crit = sum(r[col] for r in rows_c)
+        s_crit = sum(r[col] for r in rows_c)  # raakt_ook columns come after the exam columns
         s_dom = sum(r[3 + 2 * i] for r in rows_d if r[0] in ("domein", ""))
         if s_crit != mx[eid] or s_dom != mx[eid]:
             rep.fail("EX2", f"{eid}: criterion column sums to {s_crit}, domein column to {s_dom}, max_score {mx[eid]}")
@@ -147,15 +163,17 @@ def main(argv: list[str]) -> None:
             cid = r["criterion_id"]
             if not cid or cid not in crit:
                 continue
-            idx_rows.append((rank[cid], eids.index(eid), r["question_number"], r["scorepunt_seq"],
-                             [cid, crit[cid]["group"]["group_id"], crit[cid]["c"].get("text_student", ""), eid,
-                              exm[eid]["year"], exm[eid]["tijdvak"], r["opgave_number"], r["opgave_title"] or "",
-                              r["question_number"], r["scorepunt_seq"], r["points"], r["bloom"],
-                              crit[cid]["c"]["bloom"], r["quote"], ", ".join(r["also_touches"]),
-                              r["confidence"] or ""]))
+            # the linked criterion carries the points; each also_touches criterion gets a 0-point row (bedrijfsecon-046)
+            for c, points, other, role in [(cid, r["points"], ", ".join(r["also_touches"]), "gekoppeld")] + \
+                    [(t, 0, cid, "raakt ook") for t in r["also_touches"] if t in crit]:
+                idx_rows.append((rank[c], eids.index(eid), r["question_number"], r["scorepunt_seq"],
+                                 [c, crit[c]["group"]["group_id"], crit[c]["c"].get("text_student", ""), eid,
+                                  exm[eid]["year"], exm[eid]["tijdvak"], r["opgave_number"], r["opgave_title"] or "",
+                                  r["question_number"], r["scorepunt_seq"], points, r["bloom"],
+                                  crit[c]["c"]["bloom"], r["quote"], other, r["confidence"] or "", role]))
     idx_rows.sort(key=lambda x: x[:4])
     head_i = ["criterium_id", "leerdoel_id", "criterium_leerling", "examen", "jaar", "tijdvak", "opgave", "opgave_titel",
-              "vraag", "scorepunt", "punten", "bloom_examen", "bloom_criterium", "citaat", "raakt_ook", "zekerheid"]
+              "vraag", "scorepunt", "punten", "bloom_examen", "bloom_criterium", "citaat", "raakt_ook", "zekerheid", "rol"]
     write_csv(out / "opzoekindex.csv", head_i, [x[4] for x in idx_rows])
 
     xlsx = write_xlsx(out / "examenbank.xlsx", [("per criterium", head_c, rows_c), ("per leerdoel", head_g, rows_g),
@@ -181,18 +199,21 @@ def main(argv: list[str]) -> None:
             gp = " · ".join(f"{e}: {sum(pts[c['criterion_id']][e] for c in g['criteria'])} p" for e in eids)
             md += [f"### {g['group_id']} — {g['goal'].get('text_student', '')}", "", f"Punten: {gp}", ""]
         hits = by_crit.get(cid, [])
-        where = "; ".join(f"{h[3]} vraag {h[8]} ({h[10]} p)" for h in hits) or "niet getoetst"
+        where = "; ".join(f"{h[3]} vraag {h[8]} ({h[10]} p)" if h[16] == "gekoppeld" else f"{h[3]} vraag {h[8]} (raakt ook)"
+                          for h in hits) or "niet getoetst"
         md.append(f"- **{cid}** ({info['c']['bloom']}) {info['c'].get('text_student', '')} — {where}")
     md.append("")
     (out / "overzicht.md").write_text("\n".join(md), encoding="utf-8")
 
     # bevindingen.md
-    bv = [f"# Bevindingen examenbank {subject}", "", f"## {OUTSIDE}", ""]
-    for eid in eids:
-        for r in recs[eid]:
-            if not r["criterion_id"]:
-                bv.append(f"- {eid} vraag {r['question_number']} scorepunt {r['scorepunt_seq']} ({r['points']} p)"
-                          + (f": {r['note']}" if r.get("note") else ""))
+    bv = [f"# Bevindingen examenbank {subject}"]
+    for label, pick in ((SKILL, is_skill), (OUTSIDE, lambda r: not r["criterion_id"] and not is_skill(r))):
+        bv += ["", f"## {label}", ""]
+        for eid in eids:
+            for r in recs[eid]:
+                if pick(r):
+                    bv.append(f"- {eid} vraag {r['question_number']} scorepunt {r['scorepunt_seq']} ({r['points']} p)"
+                              + (f": {r['note']}" if r.get("note") else ""))
     for label, sign in (("examen boven criterium", 1), ("examen onder criterium", -1)):
         bv += ["", f"## {label}", ""]
         for eid in eids:
@@ -203,15 +224,20 @@ def main(argv: list[str]) -> None:
                     if d * sign > 0:
                         bv.append(f"- {cid} ({crit[cid]['c']['bloom']}) — {eid} vraag {r['question_number']} "
                                   f"scorepunt {r['scorepunt_seq']}: {r['bloom']}")
-    never = [cid for cid in order if not any(pts[cid].values())]
+    only_touched = [cid for cid in order if not any(pts[cid].values()) and any(touched[cid].values())]
+    bv += ["", f"## alleen geraakt ({len(only_touched)} criteria: wel in een scorepunt, 0 punten)", ""]
+    bv += [f"- {cid} ({crit[cid]['c']['bloom']}) {crit[cid]['c'].get('text_student', '')} — "
+           + "; ".join(dict.fromkeys(f"{h[3]} vraag {h[8]}" for h in by_crit.get(cid, []))) for cid in only_touched]
+    never = [cid for cid in order if not any(pts[cid].values()) and not any(touched[cid].values())]
     bv += ["", f"## nooit getoetst ({len(never)} van {len(order)} criteria)", ""]
     bv += [f"- {cid} ({crit[cid]['c']['bloom']}) {crit[cid]['c'].get('text_student', '')}" for cid in never]
     bv.append("")
     (out / "bevindingen.md").write_text("\n".join(bv), encoding="utf-8")
 
     linked = sum(sum(v.values()) for v in pts.values())
-    rep.info("EX1", f"{len(eids)} exams, {len(idx_rows)} linked scorepunten, {linked} points linked, "
-                    f"{sum(outside.values())} outside; {len(never)} criteria never tested; xlsx={'yes' if xlsx else 'no'}")
+    n_linked = sum(x[4][16] == "gekoppeld" for x in idx_rows)
+    rep.info("EX1", f"{len(eids)} exams, {n_linked} linked scorepunten, {linked} points linked, "
+                    f"{sum(skill.values())} domein-A skill, {sum(outside.values())} outside; {len(only_touched)} only touched, {len(never)} criteria never tested; xlsx={'yes' if xlsx else 'no'}")
     rep.print_and_exit()
 
 

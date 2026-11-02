@@ -44,14 +44,26 @@ question text beyond the quote.
 
 | File | Rows | Columns |
 |---|---|---|
-| `punten_per_criterium.csv` | one per criterion of the criteria run (+ row *buiten huidige syllabus*) | criterium_id, leerdoel_id, criterium_leerling, criterium_bloom, then per exam: `<exam>_punten`, `<exam>_pct` |
-| `punten_per_leerdoel.csv` | one per group | leerdoel_id, leerdoel_leerling, subdomein, then per exam punten / pct |
-| `punten_per_domein.csv` | one per subdomein and per domein (column `niveau`) | niveau, code, titel, then per exam punten / pct |
-| `opzoekindex.csv` | one per link (scorepunt), sorted by criterion, exam, question | criterium_id, leerdoel_id, criterium_leerling, examen, jaar, tijdvak, opgave, opgave_titel, vraag, scorepunt, punten, bloom_examen, bloom_criterium, citaat, raakt_ook, zekerheid |
+| `punten_per_criterium.csv` | one per criterion of the criteria run (+ rows *vaardigheid domein A* and *buiten huidige syllabus*) | criterium_id, leerdoel_id, criterium_leerling, criterium_bloom, then per exam: `<exam>_punten`, `<exam>_pct`, then per exam `<exam>_raakt_ook` (number of scorepunten with this criterion in `also_touches`; 0 points, not in the sums) |
+| `punten_per_leerdoel.csv` | one per group (+ rows *vaardigheid domein A* and *buiten huidige syllabus*) | leerdoel_id, leerdoel_leerling, subdomein, then per exam punten / pct |
+| `punten_per_domein.csv` | one per subdomein and per domein (column `niveau`) (+ rows *vaardigheid domein A* and *buiten huidige syllabus*) | niveau, code, titel, then per exam punten / pct |
+| `opzoekindex.csv` | one per link (scorepunt), plus one per `also_touches` id of a link (`rol` *raakt ook*, `punten` 0, `raakt_ook` = the linked criterion), sorted by criterion, exam, question | criterium_id, leerdoel_id, criterium_leerling, examen, jaar, tijdvak, opgave, opgave_titel, vraag, scorepunt, punten, bloom_examen, bloom_criterium, citaat, raakt_ook, zekerheid, rol (*gekoppeld* / *raakt ook*) |
 | `examenbank.xlsx` | the four tables above as sheets, header frozen, autofilter | only when `openpyxl` is installed |
-| `overzicht.md` | per domein → leerdoel → criterium: points per exam and the questions (exam · vraag n · p) | |
-| `bevindingen.md` | *buiten huidige syllabus* (per exam: question, scorepunt, points, note), *examen boven/onder criterium*, *nooit getoetst* (criteria without any link in the bank) | |
+| `overzicht.md` | per domein → leerdoel → criterium: points per exam and the questions (exam · vraag n · p; touched-only questions as *raakt ook*) | |
+| `bevindingen.md` | *vaardigheid domein A* and *buiten huidige syllabus* (per exam: question, scorepunt, points, note), *examen boven/onder criterium*, *nooit getoetst* (criteria without any link in the bank) | |
 
 Every exam column in the three point tables sums to the exam's `max_score` (the
-*buiten huidige syllabus* row included); `bank_export.py` checks this and fails
-otherwise.
+*vaardigheid domein A* and *buiten huidige syllabus* rows included); `bank_export.py`
+checks this and fails otherwise.
+
+**Vaardigheid domein A** (bedrijfsecon-047, added 2026-11-02): a scorepunt without
+criterion whose `note` contains *vaardigheid uit domein A* (the note text of
+bedrijfsecon-043; case-insensitive, so *rekenvaardigheid uit domein A* counts) is
+skill work from the syllabus's domein A, which has no criteria. Its points go to the
+row *vaardigheid domein A*, not to *buiten huidige syllabus*.
+
+**Raakt ook** (bedrijfsecon-046, added 2026-11-02): a scorepunt keeps one criterion
+with all its points; the criteria in `also_touches` are shown with 0 points — the
+`<exam>_raakt_ook` count per criterion, a *raakt ook* row in the lookup index and in
+`overzicht.md`. A criterion that is only touched is not *nooit getoetst* but listed
+under *alleen geraakt* in `bevindingen.md`.

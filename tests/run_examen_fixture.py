@@ -114,13 +114,31 @@ def main():
     ok &= check("criterion column sums to 6, 1 point outside the syllabus",
                 sum(int(x[col]) for x in rows[1:]) == 6 and rows[-1][0] == "buiten huidige syllabus" and rows[-1][col] == "1")
     idx = list(csv.reader((out / "opzoekindex.csv").open(encoding="utf-8-sig"), delimiter=";"))
-    ok &= check("lookup index: 5 linked scorepunten, sorted by criterion", len(idx) == 6 and
-                [x[0] for x in idx[1:]] == ["X1.1-01-a", "X1.1-01-b", "X1.1-01-b", "X1.2-01-a", "X1.2-01-a"])
+    ok &= check("lookup index: 5 linked scorepunten + 1 'raakt ook' row, sorted by criterion", len(idx) == 7 and
+                [x[0] for x in idx[1:]] == ["X1.1-01-a", "X1.1-01-b", "X1.1-01-b", "X1.1-01-b", "X1.2-01-a", "X1.2-01-a"])
+    touch = [x for x in idx[1:] if x[16] == "raakt ook"]
+    ok &= check("raakt ook: X1.1-01-b via q1-s1, 0 points, linked criterion named",
+                len(touch) == 1 and touch[0][0] == "X1.1-01-b" and touch[0][10] == "0" and touch[0][14] == "X1.1-01-a")
+    ok &= check("per criterion: raakt_ook column counts X1.1-01-b once",
+                next(x for x in rows if x[0] == "X1.1-01-b")[rows[0].index(f"{E}_raakt_ook")] == "1")
     dom = list(csv.reader((out / "punten_per_domein.csv").open(encoding="utf-8-sig"), delimiter=";"))
     ok &= check("domein X has 5 points", any(x[0] == "domein" and x[1] == "X" and x[3] == "5" for x in dom))
     ok &= check("bevindingen: X1.2-01-b never tested", "X1.2-01-b" in (out / "bevindingen.md").read_text(encoding="utf-8")
                 .split("## nooit getoetst")[1])
     ok &= check("bank keeps its own criteria copy", (bank / "criteria.json").exists() and (bank / "source_units.json").exists())
+
+    # domein-A skill points get their own row (bedrijfsecon-047, specs/25 §3)
+    bank_a = tmp / "bank_skill"; shutil.copytree(bank, bank_a)
+    lf = bank_a / "links" / f"{E}.json"; lj = load(lf)
+    for sp in lj["scorepunten"]:
+        if sp["criterion_id"] is None:
+            sp["note"] = "Rekenvaardigheid uit domein A (geen criteria), geen vervallen stof"
+    lf.write_text(json.dumps(lj, ensure_ascii=False), encoding="utf-8")
+    ok &= run("bank_export (domein-A skill note)", f"{s}/bank_export.py", "fixturevak", "--bank", str(bank_a))
+    rows_a = list(csv.reader((bank_a / "output" / "punten_per_criterium.csv").open(encoding="utf-8-sig"), delimiter=";"))
+    ok &= check("skill point in 'vaardigheid domein A', 0 outside, column still sums to 6",
+                rows_a[-2][0] == "vaardigheid domein A" and rows_a[-2][col] == "1" and rows_a[-1][col] == "0"
+                and sum(int(x[col]) for x in rows_a[1:]) == 6)
 
     before = (bank / "links" / f"{E}.json").read_bytes()
     ok &= run("bank_add again without --replace (must fail)", f"{s}/bank_add.py", str(r), "--bank", str(bank), expect_fail=True)
