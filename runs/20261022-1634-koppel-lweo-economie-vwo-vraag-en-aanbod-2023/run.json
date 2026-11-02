@@ -1,0 +1,70 @@
+{
+  "run_id": "20261022-1634-koppel-lweo-economie-vwo-vraag-en-aanbod-2023",
+  "subject": "economie",
+  "method_id": "lweo-economie-vwo-vraag-en-aanbod-2023",
+  "from_run": "20261012-2220-economie-vwo-2026-run2",
+  "criteria_source": "runs/20261012-2220-economie-vwo-2026-run2/output/leerdoelgroepen_eco_v2.csv (04_groups_student.json not on disk; rebuilt by 10_criteria_from_csv.py, no concepts)",
+  "book": "input/lesbrief-H1-H2.pdf",
+  "answers": [
+    "input/antwoorden-opgaven.pdf",
+    "input/antwoorden-zelftest.pdf"
+  ],
+  "chapters": [
+    1,
+    2
+  ],
+  "part": "AB",
+  "max_repair_rounds": 1,
+  "judge_batch": 4,
+  "python": "python",
+  "status": "done",
+  "started_at": "2026-10-22T16:34:00+02:00",
+  "scope_paragraphs": [
+    "H1.1",
+    "H1.2",
+    "H1.3",
+    "H1.4",
+    "H1.5",
+    "H2.1",
+    "H2.2",
+    "H2.3"
+  ],
+  "scope_paragraphs_excluded": {
+    "H1.6": "economie-027",
+    "H1.7": "economie-027",
+    "H2.4": "economie-027",
+    "H2.5": "economie-027"
+  },
+  "scope_criteria": [
+    "D1.1",
+    "D1.2",
+    "D1.3",
+    "D1.4a",
+    "D1.4b",
+    "D1.5",
+    "D1.6",
+    "D1.7",
+    "D1.8",
+    "D1.9",
+    "D1.10",
+    "D1.11",
+    "D1.12",
+    "D1.13",
+    "D1.14",
+    "D1.15",
+    "D1.22",
+    "D1.23",
+    "D1.24"
+  ],
+  "scope_criteria_decision": "economie-024",
+  "candidates_args": "--reverse-top 15",
+  "repair_rounds_completed": 1,
+  "open_items": [
+    "economie-034 (definitie+gevolg als uitleg) and 5 part-B proposals open for next intake",
+    "1 exercise link still disputed (1.4b x D1.1-01-a): repair kept it against the verifier",
+    "answer key opgave 1.26 wrong (C should be D) - reported in bloom_gaten.md",
+    "part A judges ran before the repair-decides fix; 14_mappings.before-repairfix.json kept"
+  ],
+  "finished_at": "2026-10-23T10:00:00+02:00",
+  "ex_repair_rounds_completed": 1
+}
