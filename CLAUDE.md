@@ -125,3 +125,15 @@ python3 tests/run_examen_fixture.py                  # exercise all /examen scri
 - Repair judges applied an open verifier proposal (economie-046, drawing lines with known values) before the teacher answered it. If the intake decides otherwise, those pairs must be re-judged — repair prompts should say "apply answered decisions only".
 - A decision that requires a note on the link (economie-043, 'vraagzijde') survives in judge notes but not in merged links; merge should carry decision-required notes.
 - Economie has no subject verb table, so "opstellen" stays creëren and MB2 warned 102 times on judged toepassen; open decision economie-047 resolves it.
+
+## Lessons from koppel run Levensloop (LWEO lesbrief 1, H1–H3, 2026-11-02)
+- One run per lesbrief, not `--extend`: lesbrieven of one series each start at H1.1 (unit ids collide), cover different domains, and need their own `scope_criteria`, decisions and glossary scope. Cross-lesbrief *leert/herhaalt* needs a merge step over runs in series order (method profile); not built yet.
+- The source /generate run again had no `04_groups_student.json`; `10_criteria.json` was copied from the previous koppel run of the same series, which keeps criterion ids identical for a later merge.
+- Scanned PDF with pages that are only a 95×95 broken-image placeholder (pp. 40, 52, 53 and 60–89): re-rendering cannot recover them. Check `page.get_images()` sizes before OCR and ask the teacher early; the teacher chose to continue, ingest listed the gaps under "Ontbreekt in bron" and created no units for invisible questions.
+- `decisions_snapshot.json` did not carry `scope`, so judges saw the other lesbrief's decisions as binding; fixed (`scope` per decision, specs/06 §4). One judge also misread the snapshot as "unanswered" — tell judges the answer is in `effective_answer`.
+- The Windows console shows € as U+FFFD; the files are fine. Tell agents so they do not drop € from quotes.
+- Part A verifier 35/42 pass, part B 89/118 (sampled high links 36/36); all disputes resolved in one repair round. Recurring part-B disputes: picking a term in a fill-in counts as practising, and "leg uit" questions answered by a procedure on data (Bloom; open decision economie-063).
+- `ex_merge` takes the union of A and B, so a sub-question can end with 3–4 links when the judges chose different second criteria (3 cases); an extra R round capped them at 2. Consider a merge warning for > 2 links.
+- Layered repair works: extra R files with a suffix (`H3.2.r046.json`, `H1.4.r2.json`) are read after `<paragraph>.json` and override per pair, so earlier repairs stay auditable.
+- A judge found an error in the answer key (1.22e "6 > 3" should be "6 > 5"); report such findings to the teacher.
+- Cost: 80 agent calls (5 transcribe, 1 ingest, 1 intake, 20 paragraph judges, 1+7 verify/repair, 32 exercise judges, 1+12 verify/repair).

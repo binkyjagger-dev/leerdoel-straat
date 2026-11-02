@@ -168,7 +168,7 @@ def cmd_snapshot(subject: str, run_dir: str) -> None:
             "decisions": [{"id": d["id"], "status": d["status"], "question": d["question"],
                            "effective_answer": d["answer"] if d["status"] == "answered" else d["proposed"],
                            "provisional": d["status"] != "answered", "applies_to": d["applies_to"],
-                           "affects_units": d.get("affects_units")}
+                           "affects_units": d.get("affects_units"), "scope": d.get("scope")}
                           for d in data["decisions"] if d["status"] != "superseded"]}
     save_json(Path(run_dir) / "decisions_snapshot.json", snap)
     n_open = sum(1 for d in snap["decisions"] if d["provisional"])

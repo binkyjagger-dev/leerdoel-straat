@@ -110,6 +110,9 @@ decisions path. Rules:
 - Decisions with `status: answered` are **binding** for the roles in `applies_to`.
   A generator that deviates must say so in `generator_notes`; the verifier
   treats a deviation from an answered decision as a J1 failure.
+- A decision with a `scope` (a method id or exam id) binds only runs of that method or exam;
+  no scope = the whole subject. `decisions_snapshot.json` carries `scope` per decision
+  (added 2026-11-02), so a role can tell which decisions apply to its run.
 - `profile.md` is context, read in full; where it conflicts with a decision,
   the decision wins (it is more specific and dated).
 - The verifier may **raise** new decisions: in `05_verification.roundN.json`

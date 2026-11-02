@@ -1,0 +1,225 @@
+{
+  "subject": "economie",
+  "entries": [
+    {
+      "term": "intertemporele ruil",
+      "synonyms": [
+        "ruilen over de tijd"
+      ],
+      "scope": "lweo-economie-vwo-levensloop-2025",
+      "decision": "economie-059",
+      "added_at": "2026-11-02"
+    },
+    {
+      "term": "bestedingen verschuiven",
+      "synonyms": [
+        "consumptie naar nu verschuiven",
+        "consumptie naar later verschuiven"
+      ],
+      "scope": "lweo-economie-vwo-levensloop-2025",
+      "decision": "economie-059",
+      "added_at": "2026-11-02"
+    },
+    {
+      "term": "schadekans",
+      "synonyms": [
+        "kans op schade"
+      ],
+      "scope": "lweo-economie-vwo-levensloop-2025",
+      "decision": "economie-059",
+      "added_at": "2026-11-02"
+    },
+    {
+      "term": "schadebedrag",
+      "synonyms": [
+        "gemiddeld schadebedrag",
+        "gemiddelde schadebedrag",
+        "te verwachten schadebedrag"
+      ],
+      "scope": "lweo-economie-vwo-levensloop-2025",
+      "decision": "economie-059",
+      "added_at": "2026-11-02"
+    },
+    {
+      "term": "lage risico",
+      "synonyms": [
+        "goede risico"
+      ],
+      "scope": "lweo-economie-vwo-levensloop-2025",
+      "decision": "economie-059",
+      "added_at": "2026-11-02"
+    },
+    {
+      "term": "hoge risico",
+      "synonyms": [
+        "slechte risico"
+      ],
+      "scope": "lweo-economie-vwo-levensloop-2025",
+      "decision": "economie-059",
+      "added_at": "2026-11-02"
+    },
+    {
+      "term": "risicoavers",
+      "synonyms": [
+        "risicomijdend"
+      ],
+      "scope": "lweo-economie-vwo-levensloop-2025",
+      "decision": "economie-059",
+      "added_at": "2026-11-02"
+    },
+    {
+      "term": "moral hazard",
+      "synonyms": [
+        "moreel wangedrag"
+      ],
+      "scope": "lweo-economie-vwo-levensloop-2025",
+      "decision": "economie-059",
+      "added_at": "2026-11-02"
+    },
+    {
+      "term": "bonus-malussysteem",
+      "synonyms": [
+        "bonus-malusregeling"
+      ],
+      "scope": "lweo-economie-vwo-levensloop-2025",
+      "decision": "economie-059",
+      "added_at": "2026-11-02"
+    },
+    {
+      "term": "verplicht voorschrijven",
+      "synonyms": [
+        "collectieve dwang",
+        "verplicht stellen"
+      ],
+      "scope": "lweo-economie-vwo-levensloop-2025",
+      "decision": "economie-059",
+      "added_at": "2026-11-02"
+    },
+    {
+      "term": "averechtse selectie",
+      "synonyms": [
+        "adverse selection"
+      ],
+      "scope": "lweo-economie-vwo-levensloop-2025",
+      "decision": "economie-059",
+      "added_at": "2026-11-02"
+    },
+    {
+      "term": "informatieasymmetrie",
+      "synonyms": [
+        "asymmetrische informatie"
+      ],
+      "scope": "lweo-economie-vwo-levensloop-2025",
+      "decision": "economie-059",
+      "added_at": "2026-11-02"
+    },
+    {
+      "term": "samenwerken",
+      "synonyms": [
+        "coöperatief spelen"
+      ],
+      "scope": "lweo-economie-vwo-levensloop-2025",
+      "decision": "economie-059",
+      "added_at": "2026-11-02"
+    },
+    {
+      "term": "gemiddeld tarief",
+      "synonyms": [
+        "gemiddelde belastingtarief",
+        "gemiddeld belastingtarief",
+        "gemiddelde belastingdruk",
+        "heffingstarief"
+      ],
+      "scope": "lweo-economie-vwo-levensloop-2025",
+      "decision": "economie-059",
+      "added_at": "2026-11-02"
+    },
+    {
+      "term": "marginaal tarief",
+      "synonyms": [
+        "marginale belastingtarief",
+        "marginaal belastingtarief",
+        "marginale belastingdruk"
+      ],
+      "scope": "lweo-economie-vwo-levensloop-2025",
+      "decision": "economie-059",
+      "added_at": "2026-11-02"
+    },
+    {
+      "term": "tarieftabel",
+      "synonyms": [
+        "schijventarief"
+      ],
+      "scope": "lweo-economie-vwo-levensloop-2025",
+      "decision": "economie-059",
+      "added_at": "2026-11-02"
+    },
+    {
+      "term": "aftrekpost",
+      "synonyms": [
+        "aftrekbare kosten"
+      ],
+      "scope": "lweo-economie-vwo-levensloop-2025",
+      "decision": "economie-059",
+      "added_at": "2026-11-02"
+    },
+    {
+      "term": "bijtelling",
+      "synonyms": [
+        "fiscale bijtelling",
+        "eigenwoningforfait"
+      ],
+      "scope": "lweo-economie-vwo-levensloop-2025",
+      "decision": "economie-059",
+      "added_at": "2026-11-02"
+    },
+    {
+      "term": "belastbaar inkomen",
+      "synonyms": [
+        "te belasten inkomen"
+      ],
+      "scope": "lweo-economie-vwo-levensloop-2025",
+      "decision": "economie-059",
+      "added_at": "2026-11-02"
+    },
+    {
+      "term": "secundair inkomen",
+      "synonyms": [
+        "netto-inkomen",
+        "besteedbaar inkomen"
+      ],
+      "scope": "lweo-economie-vwo-levensloop-2025",
+      "decision": "economie-059",
+      "added_at": "2026-11-02"
+    },
+    {
+      "term": "uitkeringen",
+      "synonyms": [
+        "overdrachtsinkomens",
+        "sociale uitkeringen"
+      ],
+      "scope": "lweo-economie-vwo-levensloop-2025",
+      "decision": "economie-059",
+      "added_at": "2026-11-02"
+    },
+    {
+      "term": "totaal inkomen",
+      "synonyms": [
+        "bruto-inkomen",
+        "totale bruto-inkomen"
+      ],
+      "scope": "lweo-economie-vwo-levensloop-2025",
+      "decision": "economie-059",
+      "added_at": "2026-11-02"
+    },
+    {
+      "term": "percentielenratio",
+      "synonyms": [
+        "80/20-ratio"
+      ],
+      "scope": "lweo-economie-vwo-levensloop-2025",
+      "decision": "economie-053",
+      "added_at": "2026-11-02"
+    }
+  ]
+}

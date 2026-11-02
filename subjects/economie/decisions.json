@@ -1509,6 +1509,422 @@
       "raised_by": "intake",
       "supersedes": null,
       "scope": "lweo-economie-vwo-vraag-en-aanbod-2023"
+    },
+    {
+      "id": "economie-050",
+      "question": "Welke criteria verwachten we in deze lesbrief (Levensloop, H1–H3), zodat alleen die als 'gat' tellen als ze niet uitgelegd worden?",
+      "context": "De criteriaset bevat alle 162 leerdoelgroepen (551 criteria) van het examenprogramma; deze lesbrief behandelt alleen ruilen over de tijd, speltheorie, inkomen en belasting, herverdeling en verzekeren. Voor Vraag en aanbod is dit vastgelegd in economie-024/040; die gelden niet voor deze lesbrief. Uit de paragraafteksten en de Kunnen-lijsten: §1.2 stroom- en voorraadgrootheden, intertemporele ruil, tijdsvoorkeur, menselijk kapitaal (E1.8, E1.2, E1.3, E1.7); §1.3 marktprijs en individuele prijs van tijd (E1.1); §1.4 pay-off matrix, dominante strategie, Nash-evenwicht, gevangenendilemma, simultaan en herhaald simultaan spel, sociale normen en reputatie, meeliftersgedrag (F1.2–F1.5, F1.8–F1.10, F2.3); Zelftest 1.22 oefent een spel zonder dominante strategie (F1.6); §2.1 box 1, gemiddeld en marginaal tarief, progressief/degressief/proportioneel, vlaktaks, directe en indirecte belasting (H4.6, H4.4); §2.2 primair/bruto/secundair inkomen, lorenzcurve, Gini, 80/20-ratio, uitkeringen en toeslagen (H4.1, H4.2, H4.7); §2.3 afruil doelmatigheid–rechtvaardigheid, belastingwig (H4.5, H4.6-02); §3.1 asymmetrische informatie, transactiekosten, risicoavers (G2.1, G2.2, G1.2); §3.2 premie = kans op schade × schadebedrag, eigen risico, averechtse selectie, premiedifferentiatie, bonus-malus, collectieve dwang, moral hazard, verplichte solidariteit (G1.1, G4.1–G4.5); §3.3 volks- en werknemersverzekeringen, sociale voorzieningen (H4.7). Voorstel A = 29 eenheden, 32 groepen, 112 criteria. Twijfel: E2.1 (§1.2 figuur 1.1 toont sparen tijdens het werk en ontsparen na pensioen, AOW in §3.3, maar omslag-/kapitaaldekkingsstelsel en waarde-/welvaartsvast komen nergens voor), F1.7 (hangt af van de vraag over de 'bindende afspraak'), F2.2 (de kerstversiering in §1.4 is een collectief goed, maar het woord en de kenmerken komen niet voor), F1.1, E1.4–E1.6 en H4.3 (alleen terloops of alleen in een opgave, bv. 2.24 koopkracht). Sequentiële spellen en de spelboom (F1.2-02, F1.11, F2.1) komen nergens voor. Koppelingen naar criteria buiten de scope blijven bewaard; ze tellen alleen niet als gat. Deel B (opgaven) gebruikt dezelfde scope.",
+      "options": [
+        "A: E1.1, E1.2, E1.3, E1.7, E1.8, F1.2 (zonder de spelboomgroep F1.2-02), F1.3, F1.4, F1.5, F1.6, F1.8, F1.9, F1.10, F2.3, G1.1, G1.2, G2.1, G2.2, G4.1–G4.5, H4.1, H4.2, H4.4, H4.5, H4.6 en H4.7 in scope; groep F1.2-02 uitgesloten; koppelingen naar andere criteria blijven bewaard",
+        "B: als A, plus E2.1, F1.7 en F2.2 (de niet-behandelde delen komen dan als gat in het rapport)",
+        "C: alleen de eenheden die een Kunnen-punt van de lesbrief letterlijk noemt (A zonder G1.1, F1.6 en H4.2)",
+        "D: alle criteria van de domeinen E, F, G en H4 in scope; het gatenrapport toont alles wat de lesbrief daarvan niet uitlegt"
+      ],
+      "proposed": "A: dit zijn de eindtermen die de lesbrief echt uitlegt of in de Zelftest oefent. E2.1, F2.2 en F1.7 worden hooguit aangestipt; als gat zouden ze een leemte suggereren die bij een andere lesbrief hoort. Kandidaten en beoordelaars blijven naar alle criteria kijken, dus een koppeling naar bv. E2.1 of F2.2 gaat niet verloren. Als u bij 'bindende-afspraak-zelfbinding' optie 1 kiest, komt F1.7 erbij.",
+      "impact": "high",
+      "applies_to": [
+        "mapping-judge",
+        "exercise-judge",
+        "mapping-verifier",
+        "exporter"
+      ],
+      "affects_units": [
+        "*"
+      ],
+      "status": "answered",
+      "answer": "Optie 1: A: E1.1, E1.2, E1.3, E1.7, E1.8, F1.2 (zonder de spelboomgroep F1.2-02), F1.3, F1.4, F1.5, F1.6, F1.8, F1.9, F1.10, F2.3, G1.1, G1.2, G2.1, G2.2, G4.1–G4.5, H4.1, H4.2, H4.4, H4.5, H4.6 en H4.7 in scope; groep F1.2-02 uitgesloten; koppelingen naar andere criteria blijven bewaard",
+      "answered_by": "user",
+      "answered_at": "2026-11-02T14:01:27Z",
+      "source_run": "20261102-1330-koppel-lweo-economie-vwo-levensloop-2025",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "lweo-economie-vwo-levensloop-2025"
+    },
+    {
+      "id": "economie-051",
+      "question": "Hoe koppelen we stof uit de lesbrief waarvoor geen criterium in de CE-syllabus bestaat?",
+      "context": "Het vakprofiel zet domein A (vaardigheden) en de schoolexamendomeinen buiten scope; de criteriaset noemt nergens schaarste, opofferingskosten, functies van geld of budgetlijn. Het gaat om: §1.1 vrije/schaarse goederen en opofferingskosten (7 deelvragen, plus opgaven in Transfer en Zelftest; 11 opgaveteksten noemen 'opofferingskosten'); §1.2 de drie functies van geld; §1.3 budgetvergelijking en budgetlijn (15 deelvragen, plus Zelftest 1.20–1.21); §3.2 positieve en negatieve verbanden (vaardigheid); §3.3 volks- en werknemersverzekeringen en sociale voorzieningen; opgave 2.26 vennootschapsbelasting en het gemiddeld tarief daarvan. Twijfelgevallen met een mogelijk criterium: de intertemporele budgetlijn (§1.3, Zelftest 1.20: rente als marktprijs van tijd, consumptie nu tegenover later) past bij E1.1/E1.2; sociale verzekeringen tegenover voorzieningen raakt H4.7 (herverdeling of verzekering); vennootschapsbelasting staat als soort belasting in H4.6-03-a.",
+      "options": [
+        "Per onderwerp: schaarste, opofferingskosten, functies van geld, gewone budgetlijn en verbanden buiten syllabus (gemeld als 'geen eindterm'); intertemporele budgetlijn aan E1.1/E1.2 als rente of consumptie nu/later een rol speelt; sociale verzekering/voorziening aan H4.7-01-b/c alleen als de vraag herverdeling of verzekering bepaalt; vennootschapsbelasting aan H4.6-03-a (soort belasting) en H4.6-01-a (gemiddeld tarief berekenen)",
+        "Alles in deze lijst buiten syllabus; ook de intertemporele budgetlijn, de sociale zekerheid en de vennootschapsbelasting",
+        "Geen vaste regel; beoordelaars beslissen per geval"
+      ],
+      "proposed": "Optie 1: wat echt geen eindterm heeft blijft zichtbaar zonder de dekking op te blazen, terwijl de drie twijfelgevallen dezelfde handeling vragen als het criterium (vergelijkbaar met economie-041/042 bij Vraag en aanbod).",
+      "impact": "medium",
+      "applies_to": [
+        "mapping-judge",
+        "exercise-judge",
+        "mapping-verifier"
+      ],
+      "affects_units": [
+        "E1.1",
+        "E1.2",
+        "H4.6",
+        "H4.7"
+      ],
+      "status": "answered",
+      "answer": "Optie 1: Per onderwerp: schaarste, opofferingskosten, functies van geld, gewone budgetlijn en verbanden buiten syllabus (gemeld als 'geen eindterm'); intertemporele budgetlijn aan E1.1/E1.2 als rente of consumptie nu/later een rol speelt; sociale verzekering/voorziening aan H4.7-01-b/c alleen als de vraag herverdeling of verzekering bepaalt; vennootschapsbelasting aan H4.6-03-a (soort belasting) en H4.6-01-a (gemiddeld tarief berekenen)",
+      "answered_by": "user",
+      "answered_at": "2026-11-02T14:01:27Z",
+      "source_run": "20261102-1330-koppel-lweo-economie-vwo-levensloop-2025",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "lweo-economie-vwo-levensloop-2025"
+    },
+    {
+      "id": "economie-052",
+      "question": "Telt de 'bindende afspraak' uit §1.4 (maffiaregel, contract met boeteclausule tussen beide spelers) als zelfbinding (F1.7)?",
+      "context": "§1.4.2 noemt drie redenen om af te wijken van de dominante strategie: een bindende afspraak, sociale normen/reputatie en een herhaald simultaan spel; de Kunnen-lijst zegt 'uitleggen dat een bindende afspraak van invloed kan zijn op het gedrag in een gevangenendilemma'. F1.7 gaat over zelfbinding: één speler legt zich vooraf vast en accepteert een lagere pay-off; F1.7-01-b noemt als voorbeeld juist 'een contract met een boete bij afwijken'. De lesbrief beschrijft een afspraak tussen beide spelers waarbij de straf de pay-offs verandert. Raakt F1.7 (4 criteria), mogelijk F1.8, en de opgaven 1.15–1.16 en Zelftest 1.22–1.23.",
+      "options": [
+        "Aan F1.7-01-b/c koppelen (pay-offs aanpassen na een afspraak met straf en de nieuwe uitkomst afleiden) met opmerking 'tweezijdige afspraak'; F1.7-01-a/d niet; F1.7 dan in scope",
+        "Niet aan F1.7: een afspraak tussen beide spelers is geen zelfbinding; alleen 'noemt' bij F1.5; F1.7 buiten scope",
+        "Aan F1.8-01-b/c koppelen: de straf werkt als een extra kost die de pay-offs verandert, net als een sociale norm"
+      ],
+      "proposed": "Optie 1: de handeling (een straf of boete in de matrix verwerken en de nieuwe uitkomst bepalen) is precies F1.7-01-b/c, en het criterium noemt het contract met boete zelf. Het eenzijdige vastleggen (a, d) leert de lesbrief niet; dat blijft een gat.",
+      "impact": "medium",
+      "applies_to": [
+        "mapping-judge",
+        "exercise-judge",
+        "mapping-verifier"
+      ],
+      "affects_units": [
+        "F1.7",
+        "F1.8"
+      ],
+      "status": "answered",
+      "answer": "Optie 1: Aan F1.7-01-b/c koppelen (pay-offs aanpassen na een afspraak met straf en de nieuwe uitkomst afleiden) met opmerking 'tweezijdige afspraak'; F1.7-01-a/d niet; F1.7 dan in scope",
+      "answered_by": "user",
+      "answered_at": "2026-11-02T14:01:27Z",
+      "source_run": "20261102-1330-koppel-lweo-economie-vwo-levensloop-2025",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "lweo-economie-vwo-levensloop-2025"
+    },
+    {
+      "id": "economie-053",
+      "question": "Telt de 80/20-ratio uit §2.2 als 'percentielenratio' (H4.1-02)?",
+      "context": "De lesbrief definieert de 80/20-ratio als het inkomensaandeel van de 20% hoogste inkomens gedeeld door het inkomensaandeel van de 20% laagste inkomens (kwintielaandelen), en noemt percentielen, decielen en kwartielen als andere indelingen. H4.1-02 omschrijft een percentielenratio als het inkomen op een hoog percentiel gedeeld door het inkomen op een laag percentiel (bv. P90/P10), en H4.1-02-d legt uit dat zo'n ratio niet verandert door verschuivingen aan de uiteinden; voor een aandelenratio geldt dat juist niet. Raakt H4.1-02 (4 criteria), §2.2, opgave 2.9 en drie opgaveteksten met '80/20'. Ter informatie: §2.2 zegt dat leerlingen de Gini-berekening niet zelf hoeven te maken; H4.1-01-b wordt dan vermoedelijk 'niet uitgelegd'.",
+      "options": [
+        "Aan H4.1-02-b/c koppelen (een ratio berekenen en een verandering interpreteren) met opmerking 'aandelenratio, geen percentielgrenzen'; H4.1-02-a en -d als 'methode wijkt af van definitie' in het gatenrapport",
+        "Als gelijk behandelen: 80/20-ratio = percentielenratio (woordenlijstregel); alle vier criteria kunnen gekoppeld worden",
+        "Niet koppelen: andere maatstaf; H4.1-02 blijft een gat in deze lesbrief"
+      ],
+      "proposed": "Optie 1: rekenen en interpreteren met een ratio oefent de leerling wel, maar de definitie en de eigenschap van -d kloppen niet voor een aandelenratio. Zo blijft zichtbaar wat de docent moet aanvullen (vergelijkbaar met economie-033).",
+      "impact": "medium",
+      "applies_to": [
+        "mapping-judge",
+        "exercise-judge",
+        "mapping-verifier"
+      ],
+      "affects_units": [
+        "H4.1"
+      ],
+      "status": "answered",
+      "answer": "Optie 2: Als gelijk behandelen: 80/20-ratio = percentielenratio (woordenlijstregel); alle vier criteria kunnen gekoppeld worden",
+      "answered_by": "user",
+      "answered_at": "2026-11-02T14:01:27Z",
+      "source_run": "20261102-1330-koppel-lweo-economie-vwo-levensloop-2025",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "lweo-economie-vwo-levensloop-2025"
+    },
+    {
+      "id": "economie-054",
+      "question": "Telt de uitleg in §3.1 over transactiekosten door asymmetrische informatie als uitleg van G2.1 (transactiekosten door onvolledige informatie)?",
+      "context": "Volgens economie-004 (geldt voor het hele vak) is onvolledige informatie 'beide partijen missen informatie' en asymmetrische informatie 'één partij weet meer'. De lesbrief gebruikt 'onvolledige informatie' nergens; §3.1 legt uit dat informatie verzamelen, contracten en reputatie de transactiekosten bepalen, maar koppelt dat aan asymmetrische informatie (de ene partij weet meer). G2.1-01-b/c vragen het mechanisme (zoek-, onderhandelings- en controlekosten) bij onvolledige informatie; G2.1-01-a de definitie. Raakt G2.1 (3 criteria), G2.2, §3.1 en 6 opgaven met 'transactiekosten'.",
+      "options": [
+        "G2.1-01-b/c koppelen waar de lesbrief het ontstaan van transactiekosten uitlegt, met opmerking 'methode koppelt aan asymmetrische informatie'; G2.1-01-a als 'methode wijkt af van definitie' in het gatenrapport",
+        "Strikt volgens economie-004: §3.1 alleen aan G2.2; G2.1 is een gat in deze lesbrief",
+        "Gelijk behandelen: asymmetrische en onvolledige informatie tellen allebei voor G2.1"
+      ],
+      "proposed": "Optie 1: het mechanisme van transactiekosten is hetzelfde en wordt hier echt uitgelegd; alleen het begrip onvolledige informatie ontbreekt, en dat blijft zo zichtbaar.",
+      "impact": "medium",
+      "applies_to": [
+        "mapping-judge",
+        "exercise-judge",
+        "mapping-verifier"
+      ],
+      "affects_units": [
+        "G2.1",
+        "G2.2"
+      ],
+      "status": "answered",
+      "answer": "Optie 3: Gelijk behandelen: asymmetrische en onvolledige informatie tellen allebei voor G2.1",
+      "answered_by": "user",
+      "answered_at": "2026-11-02T14:01:27Z",
+      "source_run": "20261102-1330-koppel-lweo-economie-vwo-levensloop-2025",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "lweo-economie-vwo-levensloop-2025"
+    },
+    {
+      "id": "economie-055",
+      "question": "Telt het berekenen van de premie als 'kans op schade × gemiddeld schadebedrag' (§3.2, opgave 3.6) als berekenen van de verwachte schade (G1.1-01-b) en van het resultaat van de verzekeraar (G4.2-01-b)?",
+      "context": "§3.2 schrijft 'premie = kans op schade × het verwachte schadebedrag' als de premie waarmee de verzekeraar quitte speelt, en gebruikt 'verwachte schade' of 'verwachtingswaarde' niet als begrip. G1.1-01-b berekent de omvang van een risico als verwachte schade (kans × schade); G4.2-01-a het verschil tussen premie en verwachte schade; G4.2-01-b het resultaat van de verzekeraar op een groep polissen (opgave 3.6b: inkomsten en uitgaven). G1.1-01-c (meer dan twee uitkomsten) en G1.2-01-a (risiconeutraal, risicozoekend) komen nergens voor. Raakt G1.1, G4.1, G4.2 (11 criteria) en ongeveer 4 opgaven met 'schadekans'.",
+      "options": [
+        "Ja: de premieformule telt voor G1.1-01-b en, waar het resultaat van de verzekeraar wordt berekend, voor G4.2-01-b; G4.2-01-a alleen als premie en verwachte schade echt vergeleken worden",
+        "Alleen aan de G4-criteria koppelen; G1.1 (risico in het algemeen) niet uit een premieberekening afleiden (G1.1 dan buiten scope)",
+        "Beoordelaars beslissen per opgave"
+      ],
+      "proposed": "Optie 1: de berekening is dezelfde (kans × schadebedrag) en de lesbrief leert hem hier; met de beperking op G4.2-01-a wordt een premieberekening niet ook als vergelijking geteld.",
+      "impact": "medium",
+      "applies_to": [
+        "mapping-judge",
+        "exercise-judge",
+        "mapping-verifier"
+      ],
+      "affects_units": [
+        "G1.1",
+        "G4.1",
+        "G4.2"
+      ],
+      "status": "answered",
+      "answer": "Optie 1: Ja: de premieformule telt voor G1.1-01-b en, waar het resultaat van de verzekeraar wordt berekend, voor G4.2-01-b; G4.2-01-a alleen als premie en verwachte schade echt vergeleken worden",
+      "answered_by": "user",
+      "answered_at": "2026-11-02T14:01:27Z",
+      "source_run": "20261102-1330-koppel-lweo-economie-vwo-levensloop-2025",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "lweo-economie-vwo-levensloop-2025"
+    },
+    {
+      "id": "economie-056",
+      "question": "Telt een paragraaf die een begrip in één of twee zinnen invoert en het gevolg in een voorbeeld laat zien als uitleg ('leert') voor het bijbehorende criterium?",
+      "context": "Bij Vraag en aanbod besloot u ja, met de opmerking 'deels' (economie-034); dat besluit geldt niet automatisch voor deze lesbrief. Voorbeelden hier: 'Mensen kiezen graag voor zekerheid en zijn risicomijdend oftewel risicoavers' (§3.1) tegenover G1.2-01-a (risicoavers, risiconeutraal, risicozoekend via zekere tegenover onzekere uitkomst); menselijk kapitaal → verdiencapaciteit in één alinea (E1.7-01-d); 'hoe hoger de tijdsvoorkeur, des te hoger de rente die men wil betalen' (E1.3-01-b); herhaald simultaan spel zonder vergeldingsstrategie (F1.10-01-a); de belastingwig als definitie bij figuur 2.6 (H4.6-02-c). Raakt naar schatting 10–15 criteria in E1, F1, G1 en H4.",
+      "options": [
+        "Ja: begrip + gevolg in de lopende tekst telt als 'leert', met opmerking 'deels' als een deel van het criterium ontbreekt",
+        "Nee: alleen een uitgewerkte uitleg telt; anders 'noemt', en het criterium komt als gat in het rapport",
+        "Ja, maar alleen als een opgave in dezelfde paragraaf het daarna oefent"
+      ],
+      "proposed": "Optie 1: zo legt deze lesbrief de stof uit, en een leerling leert het hier; 'deels' houdt zichtbaar wat ontbreekt (zelfde lijn als economie-034).",
+      "impact": "medium",
+      "applies_to": [
+        "mapping-judge",
+        "exercise-judge",
+        "mapping-verifier"
+      ],
+      "affects_units": [
+        "E1.3",
+        "E1.7",
+        "F1.10",
+        "G1.2",
+        "H4.6"
+      ],
+      "status": "answered",
+      "answer": "Optie 1: Ja: begrip + gevolg in de lopende tekst telt als 'leert', met opmerking 'deels' als een deel van het criterium ontbreekt",
+      "answered_by": "user",
+      "answered_at": "2026-11-02T14:01:27Z",
+      "source_run": "20261102-1330-koppel-lweo-economie-vwo-levensloop-2025",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "lweo-economie-vwo-levensloop-2025"
+    },
+    {
+      "id": "economie-057",
+      "question": "Hoe behandelen we de paragrafen Transfer (1.5, 2.4, 3.4) en Zelftest (1.6, 2.5, 3.5), die vrijwel geen lopende tekst hebben?",
+      "context": "Zes van de 16 paragrafen bestaan alleen uit opdrachten (samen 101 van de 272 deelvragen: 1.5: 7, 1.6: 36, 2.4: 7, 2.5: 34, 3.4: 2, 3.5: 15); hun paragraaftekst is een kopregel. Bij Vraag en aanbod gingen ze uit deel A (economie-027); dat besluit geldt hier niet automatisch. Deze run doet deel A en deel B.",
+      "options": [
+        "Deel A alleen op uitlegtekst; Transfer en Zelftest gaan uit de scope van deel A (gemeld als 'alleen opgaven, zie deel B'); hun opgaven tellen in deel B",
+        "Transfer en Zelftest ook in deel A meenemen (een opgavestam die iets uitlegt kan dan 'leert' zijn)",
+        "Transfer en Zelftest helemaal overslaan, ook in deel B"
+      ],
+      "proposed": "Optie 1: zelfde lijn als economie-027; een opgave legt niets uit, en zo komt de Zelftest wel in het opgavenoverzicht.",
+      "impact": "medium",
+      "applies_to": [
+        "mapping-judge",
+        "exercise-judge",
+        "mapping-verifier"
+      ],
+      "affects_units": [
+        "*"
+      ],
+      "status": "answered",
+      "answer": "Optie 1: Deel A alleen op uitlegtekst; Transfer en Zelftest gaan uit de scope van deel A (gemeld als 'alleen opgaven, zie deel B'); hun opgaven tellen in deel B",
+      "answered_by": "user",
+      "answered_at": "2026-11-02T14:01:27Z",
+      "source_run": "20261102-1330-koppel-lweo-economie-vwo-levensloop-2025",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "lweo-economie-vwo-levensloop-2025"
+    },
+    {
+      "id": "economie-058",
+      "question": "Wat telt als uitleg naast de lopende tekst: beschreven figuren, cartoons, het inleidende kader 'Lemons problem' (§3.1) en de Leerdoelen-lijsten aan het eind van elk hoofdstuk?",
+      "context": "Het methodeprofiel laat de kaders open. De lesbrief is gescand; figuren staan als beschrijving tussen haken in de tekst (bv. figuur 1.1 financiële levensloop, figuur 2.4 Gini, figuur 2.6 belastingwig, figuur 3.2 verbanden, figuur 3.3 geldstromen zorgverzekering), cartoons als '[Cartoon] ...'. §3.1 opent met een kader over Akerlofs lemons problem (asymmetrische informatie, 'adverse selection'). Elk hoofdstuk eindigt met Leerdoelen Kennen/Kunnen. Bij Vraag en aanbod golden economie-029 (figuur telt als de tekst beschrijft wat ze laat zien), 030 (doorlopende zinnen tellen, cartoonresten nooit als bewijs) en 032 (Leerdoelen niet koppelen, wel controlelijst); die gelden hier niet automatisch.",
+      "options": [
+        "Zoals bij Vraag en aanbod: een figuur telt als de lopende tekst beschrijft wat ze laat zien (opmerking 'uitleg via figuur'); kaders zoals 'Lemons problem' tellen als lopende tekst; cartoons hoogstens als 'noemt'; Leerdoelen-lijsten niet koppelen, wel als controlelijst voor de controleur",
+        "Alleen lopende tekst buiten kaders telt; kaders, figuren en cartoons hoogstens 'noemt'",
+        "Als optie 1, maar ook de Leerdoelen-lijsten koppelen als 'noemt'"
+      ],
+      "proposed": "Optie 1: dezelfde regels als bij de andere lesbrief houden de twee koppelingen vergelijkbaar; het lemons-kader is volwaardige uitleg in doorlopende zinnen.",
+      "impact": "low",
+      "applies_to": [
+        "mapping-judge",
+        "exercise-judge",
+        "mapping-verifier"
+      ],
+      "affects_units": [
+        "*"
+      ],
+      "status": "answered",
+      "answer": "Optie 1: Zoals bij Vraag en aanbod: een figuur telt als de lopende tekst beschrijft wat ze laat zien (opmerking 'uitleg via figuur'); kaders zoals 'Lemons problem' tellen als lopende tekst; cartoons hoogstens als 'noemt'; Leerdoelen-lijsten niet koppelen, wel als controlelijst voor de controleur",
+      "answered_by": "user",
+      "answered_at": "2026-11-02T14:01:27Z",
+      "source_run": "20261102-1330-koppel-lweo-economie-vwo-levensloop-2025",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "lweo-economie-vwo-levensloop-2025"
+    },
+    {
+      "id": "economie-059",
+      "question": "Mogen de volgende methodetermen bij het koppelen gelijkstaan aan de term in het criterium (woordenlijst voor deze lesbrief)?",
+      "context": "Waar de lesbrief een ander woord gebruikt dan het criterium, mist de kandidatenselectie de koppeling. De woordenlijst van economie-028/044 hoort bij Vraag en aanbod (en de Terminologie in het methodeprofiel is daarvan gekopieerd). Voorgestelde paren (methode → criterium): ruilen over de tijd → intertemporele ruil; consumptie naar nu/later verschuiven → bestedingen (koopkracht) verschuiven; kans op schade → schadekans; gemiddeld / te verwachten schadebedrag → schadebedrag; goede risico's / slechte risico's → lage risico's / hoge risico's; risicomijdend → risicoavers; moreel wangedrag → moral hazard; bonus-malusregeling → bonus-malussysteem; collectieve dwang / verplicht stellen → verplicht voorschrijven; adverse selection → averechtse selectie; asymmetrische informatie → informatieasymmetrie; coöperatief spelen → samenwerken; gemiddelde belastingtarief / gemiddelde belastingdruk / heffingstarief → gemiddeld tarief; marginale belastingtarief / marginale belastingdruk → marginaal tarief; schijventarief → tarieftabel; aftrekbare kosten → aftrekpost; fiscale bijtelling / eigenwoningforfait → bijtelling; te belasten inkomen → belastbaar inkomen; netto-inkomen / besteedbaar inkomen → secundair inkomen; overdrachtsinkomens / sociale uitkeringen → uitkeringen; bruto-inkomen → totaal inkomen (§2.2: 'totale bruto-inkomen'). Twee Kennen-termen staan niet in de lopende tekst: 'te belasten inkomen' (alleen opgave 2.16 en p. 36) en 'belastingvoordeel' (alleen opgaven 2.13 en 2.17). Raakt E1.1–E1.3, G1.2, G2.2, G4.1–G4.5, H4.2, H4.6 en H4.7 (ongeveer 15 groepen).",
+      "options": [
+        "Alle paren overnemen; 'te belasten inkomen' als synoniem bij §2.1 (belastbaar inkomen); 'belastingvoordeel' blijft zonder paragraaf en telt alleen via de opgaven (H4.6-02-d)",
+        "Alle paren overnemen behalve netto-/besteedbaar inkomen → secundair inkomen",
+        "Geen woordenlijst; beoordelaars beslissen per geval"
+      ],
+      "proposed": "Optie 1: §2.2 zegt zelf dat het secundair inkomen 'meestal netto-inkomen of besteedbaar inkomen' heet, en de andere paren zijn letterlijke synoniemen of de lesbrief geeft ze met 'oftewel'/'ook wel'. 'Belastingvoordeel' wordt nergens uitgelegd; het aan een paragraaf hangen zou uitleg suggereren die er niet is.",
+      "impact": "medium",
+      "applies_to": [
+        "mapping-judge",
+        "exercise-judge",
+        "mapping-verifier",
+        "method-ingest"
+      ],
+      "affects_units": [
+        "E1.1",
+        "E1.2",
+        "E1.3",
+        "G1.2",
+        "G2.2",
+        "G4.1",
+        "G4.2",
+        "G4.3",
+        "G4.4",
+        "G4.5",
+        "H4.2",
+        "H4.6",
+        "H4.7"
+      ],
+      "status": "answered",
+      "answer": "Optie 1: Alle paren overnemen; 'te belasten inkomen' als synoniem bij §2.1 (belastbaar inkomen); 'belastingvoordeel' blijft zonder paragraaf en telt alleen via de opgaven (H4.6-02-d)",
+      "answered_by": "user",
+      "answered_at": "2026-11-02T14:01:27Z",
+      "source_run": "20261102-1330-koppel-lweo-economie-vwo-levensloop-2025",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "lweo-economie-vwo-levensloop-2025"
+    },
+    {
+      "id": "economie-060",
+      "question": "Telt 'collectieve dwang' / 'collectieve verzekering' uit §3.2 en §3.3 (in deze lesbrief: wettelijk verplicht verzekerd) ook voor G4.4-01-d (collectieve verzekering, bijv. via de werkgever), of alleen voor G4.4-01-c (verplicht voorschrijven)?",
+      "context": "De lesbrief gebruikt 'collectief' als 'via de wet verplicht': §3.2 'Door deze zogenaamde collectieve dwang kunnen de goede risico's hun verzekering niet opzeggen en kan de gemiddelde premie laag blijven' (voorbeelden: basiszorgverzekering, pensioenverzekering, WA); §3.3 'Bij een collectieve verzekering ben je automatisch via de wet verzekerd.' G4.4-01-c (verplicht) is leert in H3.2; G4.4-01-d (collectieve verzekering via de werkgever, groep niet door eigen risico-inschatting samengesteld) heeft alleen 'noemt' (H3.3) en staat als 'alleen genoemd' in het gatenrapport. De pensioenverzekering is in de praktijk een werkgeverscontract. Systematisch termverschil; raakt G4.4-01-c/d en opgaven over collectieve verzekeringen in deel B.",
+      "options": [
+        "Alleen G4.4-01-c: 'collectieve dwang' is verplichting; G4.4-01-d blijft 'alleen genoemd' (de werkgeversvariant staat niet in de lesbrief)",
+        "Ook G4.4-01-d (uitleg, opmerking 'deels: collectief = wettelijk'): het mechanisme (goede risico's kunnen niet weg, premie blijft laag) is hetzelfde; woordenlijstregel 'collectieve verzekering' ~ 'collectieve dwang' voor deze lesbrief",
+        "Alleen in deel B: opgaven met een werkgeverscollectief aan G4.4-01-d, de lopende tekst niet"
+      ],
+      "proposed": "Optie 1: G4.4-01-d vraagt juist het verschil tussen een collectief contract en wettelijke dwang; de lesbrief behandelt alleen de dwang. Het gat is echt; opgaven kunnen het in deel B alsnog dekken.",
+      "impact": "low",
+      "applies_to": [
+        "mapping-judge",
+        "exercise-judge",
+        "mapping-verifier"
+      ],
+      "affects_units": [
+        "G4.4"
+      ],
+      "status": "open",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null,
+      "source_run": "20261102-1330-koppel-lweo-economie-vwo-levensloop-2025",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "lweo-economie-vwo-levensloop-2025"
+    },
+    {
+      "id": "economie-061",
+      "question": "Hoe melden we criteria die de Leerdoelen-lijst (Kunnen) van de lesbrief wel noemt, maar die de lopende tekst niet uitlegt?",
+      "context": "Controle tegen de Kunnen-lijsten (economie-058): H2 noemt 'meer prikkels om te emigreren of belasting te ontwijken' (H4.5-01-b) en 'onderwijs, kinderopvang en sociale zekerheid ... afruil niet hoeft plaats te vinden' (H4.5-01-c); H3 noemt 'aantonen of iemand risicoavers gedrag vertoont en uitleggen wat dat voor zijn keuze betekent bij het afsluiten van een verzekering' (G4.1-01-a). §2.3 en §3.2 leggen dit niet uit: H4.5-01-b/c staan als 'niet in deze methode', G4.1-01-a als 'alleen genoemd'. Mogelijk zit het in Transfer/Zelftest (deel B) of in de Bijlage Hints (p. 86-88, buiten scope).",
+      "options": [
+        "Gat laten staan, met opmerking 'wel in Leerdoelen van de lesbrief' in het gatenrapport (geen koppeling)",
+        "Gat laten staan zonder opmerking (Leerdoelen tellen niet, economie-058)",
+        "Gat markeren als 'onzeker' tot de docent heeft nagegaan waar de uitleg staat"
+      ],
+      "proposed": "Optie 1: de koppeling blijft streng (geen uitleg in de tekst = geen leert), maar de docent ziet dat de methode de prestatie wel als doel heeft en die dus vermoedelijk via opgaven of klassikaal behandelt.",
+      "impact": "low",
+      "applies_to": [
+        "mapping-verifier",
+        "exporter"
+      ],
+      "affects_units": [
+        "H4.5",
+        "G4.1"
+      ],
+      "status": "open",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null,
+      "source_run": "20261102-1330-koppel-lweo-economie-vwo-levensloop-2025",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "lweo-economie-vwo-levensloop-2025"
+    },
+    {
+      "id": "economie-062",
+      "question": "Telt de kwartielverhouding uit opgave 2.25 (inkomensaandeel 1e kwartiel ten opzichte van 4e kwartiel, tabel 2.13) ook als percentielenratio (H4.1-02), net als de 80/20-ratio volgens economie-053?",
+      "context": "economie-053 stelt alleen de 80/20-ratio gelijk aan de percentielenratio. In 2.25d en 2.25e koppelden beide judges de kwartielverhouding (1 : 9,1 enz.) \"naar analogie van economie-053\" aan H4.1-02-c en H4.1-02-b (high). Het is dezelfde soort maat (verhouding van inkomensaandelen, hier per 25%), maar valt niet onder de letter van het besluit. De verificateur liet de links staan met confidence een stap omlaag.",
+      "options": [
+        "Ja: elke verhouding van inkomensaandelen van een hoge en een lage groep (80/20, kwartielen, decielen) telt als percentielenratio; woordenlijstregel uitbreiden",
+        "Nee: alleen de 80/20-ratio; 2.25d/e worden ontkoppeld (oefenstof buiten syllabus)",
+        "Ja, maar met opmerking \"deels: aandelenratio, geen percentielgrenzen\" op de link"
+      ],
+      "proposed": "Optie 1: de lesbrief gebruikt de kwartielverhouding op dezelfde manier als de 80/20-ratio; het verschil met percentielgrenzen is al door economie-053 geaccepteerd.",
+      "impact": "low",
+      "applies_to": [
+        "exercise-judge",
+        "mapping-verifier"
+      ],
+      "affects_units": [
+        "H4.1"
+      ],
+      "status": "open",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null,
+      "source_run": "20261102-1330-koppel-lweo-economie-vwo-levensloop-2025",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "lweo-economie-vwo-levensloop-2025"
+    },
+    {
+      "id": "economie-063",
+      "question": "Welk Bloom-niveau krijgt een deelvraag met \"leg uit\", \"licht toe\" of \"verklaar\" waarvan het antwoord een geleerde procedure op gegevens uitvoert (beste-antwoordmethode in een matrix, soort stelsel uit gemiddelde tarieven, wel of niet claimen met een bonus-malustabel)?",
+      "context": "Judges gaven zulke vragen meestal begrijpen (het werkwoord), soms toepassen of analyseren (het antwoord). Gevolg: 12 bevindingen \"bloom niet bereikt\" en ongelijke beoordeling van gelijke vragen: 1.13c (Nash-evenwicht nagaan met 1.200 -> 600) begrijpen, 1.22f (zelf de dominante strategie van Samuel vinden en het beste antwoord kiezen) begrijpen, 2.6d (stelsel typeren uit berekende gemiddelde tarieven) begrijpen, 3.25d analyseren. De verificateur hanteerde: begrijpen als de conclusie in de vraag staat en de leerling alleen onderbouwt; toepassen als de leerling de conclusie zelf met de gegevens moet bepalen.",
+      "options": [
+        "Begrijpen als de conclusie in de vraag gegeven is (\"leg uit dat ...\"); toepassen als de leerling de uitkomst zelf met gegevens bepaalt (regel van de verificateur)",
+        "Altijd het niveau van het vraagwerkwoord (uitleggen = begrijpen)",
+        "Altijd het niveau van wat het antwoord doet (procedure met gegevens = toepassen)"
+      ],
+      "proposed": "Optie 1: volgt het onderscheid begrijpen/toepassen in de criteria (uitleggen tegenover bepalen in een context) en houdt de werkwoordtabel intact.",
+      "impact": "medium",
+      "applies_to": [
+        "exercise-judge",
+        "mapping-verifier"
+      ],
+      "affects_units": [
+        "*"
+      ],
+      "status": "open",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null,
+      "source_run": "20261102-1330-koppel-lweo-economie-vwo-levensloop-2025",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "lweo-economie-vwo-levensloop-2025"
     }
   ]
 }
