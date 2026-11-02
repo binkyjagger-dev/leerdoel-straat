@@ -1,0 +1,128 @@
+{
+  "subject": "bedrijfseconomie",
+  "entries": [
+    {
+      "term": "aandelenkapitaal",
+      "synonyms": [
+        "aandelenvermogen"
+      ],
+      "scope": "vanvlimmeren-bedrijfseconomie-vwo-in-balans",
+      "decision": "bedrijfsecon-031",
+      "added_at": "2026-11-02"
+    },
+    {
+      "term": "niet geplaatst aandelenkapitaal",
+      "synonyms": [
+        "aandelen in portefeuille",
+        "ongeplaatst aandelenkapitaal",
+        "nog niet geplaatst aandelenkapitaal"
+      ],
+      "scope": "vanvlimmeren-bedrijfseconomie-vwo-in-balans",
+      "decision": "bedrijfsecon-031",
+      "added_at": "2026-11-02"
+    },
+    {
+      "term": "algemene reserve",
+      "synonyms": [
+        "winstreserve"
+      ],
+      "scope": "vanvlimmeren-bedrijfseconomie-vwo-in-balans",
+      "decision": "bedrijfsecon-031",
+      "added_at": "2026-11-02"
+    },
+    {
+      "term": "lineaire lening",
+      "synonyms": [
+        "lineaire hypotheek"
+      ],
+      "scope": "vanvlimmeren-bedrijfseconomie-vwo-in-balans",
+      "decision": "bedrijfsecon-031",
+      "added_at": "2026-11-02"
+    },
+    {
+      "term": "annuïteitenlening",
+      "synonyms": [
+        "annuïteitenhypotheek"
+      ],
+      "scope": "vanvlimmeren-bedrijfseconomie-vwo-in-balans",
+      "decision": "bedrijfsecon-031",
+      "added_at": "2026-11-02"
+    },
+    {
+      "term": "gemiste korting",
+      "synonyms": [
+        "korting contant"
+      ],
+      "scope": "vanvlimmeren-bedrijfseconomie-vwo-in-balans",
+      "decision": "bedrijfsecon-031",
+      "added_at": "2026-11-02"
+    },
+    {
+      "term": "rekening-courantkrediet",
+      "synonyms": [
+        "rekening-courant"
+      ],
+      "scope": "vanvlimmeren-bedrijfseconomie-vwo-in-balans",
+      "decision": "bedrijfsecon-031",
+      "added_at": "2026-11-02"
+    },
+    {
+      "term": "resultatenrekening",
+      "synonyms": [
+        "winst-en-verliesrekening"
+      ],
+      "scope": "vanvlimmeren-bedrijfseconomie-vwo-in-balans",
+      "decision": "bedrijfsecon-031",
+      "added_at": "2026-11-02"
+    },
+    {
+      "term": "couponrente",
+      "synonyms": [
+        "interestvoet",
+        "interestpercentage",
+        "rente op de obligatie"
+      ],
+      "scope": "vanvlimmeren-bedrijfseconomie-vwo-in-balans",
+      "decision": "bedrijfsecon-039",
+      "added_at": "2026-11-02"
+    },
+    {
+      "term": "marktrente",
+      "synonyms": [
+        "rentestand",
+        "marktrentestand",
+        "rentepercentage op de kapitaalmarkt"
+      ],
+      "scope": "vanvlimmeren-bedrijfseconomie-vwo-in-balans",
+      "decision": "bedrijfsecon-039",
+      "added_at": "2026-11-02"
+    },
+    {
+      "term": "openbaar vermogen",
+      "synonyms": [
+        "openbare kapitaalmarkt"
+      ],
+      "scope": "vanvlimmeren-bedrijfseconomie-vwo-in-balans",
+      "decision": "bedrijfsecon-039",
+      "added_at": "2026-11-02"
+    },
+    {
+      "term": "onderhands vermogen",
+      "synonyms": [
+        "onderhandse kapitaalmarkt"
+      ],
+      "scope": "vanvlimmeren-bedrijfseconomie-vwo-in-balans",
+      "decision": "bedrijfsecon-039",
+      "added_at": "2026-11-02"
+    },
+    {
+      "term": "rekening-courantkrediet",
+      "synonyms": [
+        "bankkrediet"
+      ],
+      "scope": "vanvlimmeren-bedrijfseconomie-vwo-in-balans",
+      "decision": "bedrijfsecon-039",
+      "added_at": "2026-11-02"
+    }
+  ]
+}

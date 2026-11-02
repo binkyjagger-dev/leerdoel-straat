@@ -4,7 +4,7 @@
 Usage: candidates.py <run_dir> [--top 6] [--min 3] [--reverse-top 10]
 
 Reads 10_criteria.json (groups from /generate), 11_method_units.json (+ text/), optional
-subjects/<subject>/glossary.json. Scores = concept overlap (weighted) + TF-IDF cosine on text.
+subjects/<subject>/glossary.json (specs/06 §8). Scores = concept overlap (weighted) + TF-IDF cosine on text.
 Writes 12_candidates.json. No LLM call.
 """
 from __future__ import annotations
@@ -14,7 +14,7 @@ import sys
 from collections import Counter, defaultdict
 from pathlib import Path
 
-from mcommon import ROOT, load_json, read_text, save_json, stems, validate_schema
+from mcommon import glossary_stems, load_json, read_text, save_json, validate_schema
 
 
 def main(argv: list[str]) -> None:
@@ -29,19 +29,7 @@ def main(argv: list[str]) -> None:
     crit_src = load_json(run_dir / "10_criteria.json")
     method = load_json(run_dir / "11_method_units.json")
     scope = set(run.get("scope_paragraphs") or [u["unit_id"] for u in method["units"] if u["kind"] == "paragraaf"])
-    glossary = {}
-    gp = ROOT / "subjects" / run["subject"] / "glossary.json"
-    if gp.exists():
-        g = load_json(gp)
-        for term, syns in (g.get("synonyms") or {}).items():
-            for s in syns:
-                glossary[s.lower()] = term.lower()
-
-    def canon(text: str) -> set[str]:
-        out = set()
-        for t in stems(text):
-            out.add(glossary.get(t, t))
-        return out
+    canon = glossary_stems(run["subject"], {run.get("method_id")})  # specs/06 §8
 
     # criteria
     criteria = []
@@ -66,7 +54,7 @@ def main(argv: list[str]) -> None:
         for c in u.get("concepts") or []:
             pconcepts |= canon(c)
         paras.append({"unit_id": u["unit_id"], "concepts": pconcepts, "terms": canon(text),
-                      "tf": Counter(glossary.get(t, t) for t in stems(text)) , "title": canon(u.get("title") or "")})
+                      "tf": Counter(canon(text)), "title": canon(u.get("title") or "")})
 
     # idf over paragraphs
     df = Counter()
@@ -115,7 +103,8 @@ def main(argv: list[str]) -> None:
         sys.exit("invalid candidates: " + "; ".join(errs))
     save_json(run_dir / "12_candidates.json", out)
     n_links = sum(len(c["candidates"]) for c in per_crit)
-    print(f"[candidates] {len(criteria)} criteria x {len(paras)} paragraphs -> {n_links} candidate pairs (top {top}, min {mn})")
+    print(f"[candidates] {len(criteria)} criteria x {len(paras)} paragraphs -> {n_links} candidate pairs (top {top}, min {mn}); "
+          f"glossary synonyms {canon.entries}")
 
 
 if __name__ == "__main__":

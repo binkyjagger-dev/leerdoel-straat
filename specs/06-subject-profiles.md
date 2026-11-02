@@ -22,7 +22,8 @@ subjects/<subject>/
   decisions.json    straat-written record of intake questions and answers
   bloom_verbs.json  optional, straat-written (verb_table.py install): the subject's
                     verb → Bloom table adopted from the source, overrides the generic table (§7)
-  glossary.json     optional: preferred terms and forbidden synonyms
+  glossary.json     optional, straat-written (glossary.py add, against an answered decision):
+                    criterion term ← source synonyms, used by candidate retrieval (§8)
 ```
 
 `<subject>` is a slug (`economie`, `bedrijfseconomie`, `wiskunde-a`). A run is
@@ -196,3 +197,40 @@ decision, old one superseded).
 transcribed to the run's `01_verb_table.json` and installed against
 bedrijfsecon-002 (answered 2026-10-21). The bedrijfseconomie run of 2026-10-13
 predates this and must be regenerated to honour it.
+
+## 8. Subject glossary (decided 2026-11-02)
+
+**Why.** The method and exam straten find candidates by term overlap. A book
+that writes *interestvoet* where the criteria say *couponrente* loses the pair
+before any judge sees it (bedrijfsecon-031, -039: §17.7 and §20.3 of *In Balans*
+were recovered only through the verifier's missing links). Decisions that name
+synonyms were read by judges, but never reached candidate retrieval.
+
+**File** `subjects/<subject>/glossary.json` (schema `schemas/glossary.schema.json`),
+straat-written by `scripts/glossary.py` only:
+
+```json
+{"subject": "bedrijfseconomie",
+ "entries": [{"term": "couponrente",
+              "synonyms": ["interestvoet", "interestpercentage", "rente op de obligatie"],
+              "scope": "vanvlimmeren-bedrijfseconomie-vwo-in-balans",
+              "decision": "bedrijfsecon-039", "added_at": "2026-11-02"}]}
+```
+
+- `term` = the criterion's word; `synonyms` = the source's words (single words or
+  phrases). `scope` = a method id or exam id, or null for the whole subject —
+  by default the scope of the decision.
+- **Install.** `glossary.py add <subject> <decision_id> <entries.json>` refuses
+  unless the decision is `answered`; re-adding the same decision replaces its
+  entries (idempotent). `glossary.py list|validate <subject>`.
+- **Use.** `mcommon.glossary_stems(subject, scopes)` gives the stemmer the
+  candidate scripts use (`candidates.py`, `ex_candidates.py`,
+  `exam_candidates.py`): before stemming, every synonym in the normalised text
+  (accents and punctuation stripped, lower-case; an optional plural `-en`/`-s`)
+  is replaced by its term, longest phrase first. Applied to criterion and source
+  text alike, so the direction of an entry does not matter for matching. Entries
+  apply when their scope is null or one of the run's scopes (method id; exam ids).
+- **Who proposes.** Intake (mapping and exam mode) and the mapping verifier
+  propose glossary entries as decisions; after the answer the orchestrator
+  installs them. Judges keep reading the decisions; the glossary only feeds
+  retrieval.

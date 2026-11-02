@@ -65,7 +65,8 @@ Answers go to `subjects/<subject>/decisions.json` with `scope: method_id`.
 ### M2 candidates (`scripts/mapping/candidates.py`)
 Per criterion, score every paragraph in scope:
 - concept overlap: criterion `concepts` and goal/criterion text terms vs
-  paragraph `concepts` and text (stemmed, lower-case; subject glossary applied);
+  paragraph `concepts` and text (stemmed, lower-case; subject glossary applied
+  before stemming, entries with scope null or the method id — 06 §8);
 - lexical similarity (TF-IDF cosine on paragraph text vs criterion expert text);
 - optional structural prior: syllabus domain ↔ chapter mapping from the
   method profile when given.

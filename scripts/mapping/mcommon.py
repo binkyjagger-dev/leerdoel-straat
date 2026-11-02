@@ -54,6 +54,29 @@ def stems(s: str) -> set[str]:
     return {stem(t) for t in tokens(s)}
 
 
+def glossary_stems(subject: str, scopes=(), path: Path | None = None):
+    """specs/06 §8: stems() with the subject glossary applied first — every synonym (word or phrase, optional
+    plural -en/-s) is replaced by its criterion term, longest first. Entries apply when their scope is null or in
+    `scopes`. Without a glossary this is plain stems(). The function carries `.entries` (number applied)."""
+    p = path or ROOT / "subjects" / subject / "glossary.json"
+    mapping = {}
+    if p.exists():
+        for e in load_json(p)["entries"]:
+            if e["scope"] is None or e["scope"] in scopes:
+                for s in e["synonyms"]:
+                    mapping[norm(s)] = norm(e["term"])
+    if not mapping:
+        f = lambda s: stems(s)  # noqa: E731
+        f.entries = 0
+        return f
+    rx = re.compile(r"(?<!\w)(" + "|".join(re.escape(k) for k in sorted(mapping, key=len, reverse=True)) + r")(?:en|s)?(?!\w)")
+
+    def gstems(s: str) -> set[str]:
+        return stems(rx.sub(lambda m: mapping[m.group(1)], norm(s)))
+    gstems.entries = len(mapping)
+    return gstems
+
+
 def read_text(run_dir: Path, ref: str | None) -> str:
     if not ref:
         return ""

@@ -15,7 +15,7 @@ import sys
 from collections import Counter
 from pathlib import Path
 
-from mcommon import load_json, read_text, save_json, stems, validate_schema
+from mcommon import glossary_stems, load_json, read_text, save_json, validate_schema
 
 TAUGHT = ("leert", "herhaalt", "oefent")
 ASK = re.compile(r"^\s*(?:[a-z]|\d+)[.)]\s", re.M)
@@ -36,6 +36,7 @@ def main(argv: list[str]) -> None:
     top, mn = opt("--top", 8), opt("--min", 3)
 
     run = load_json(run_dir / "run.json")
+    stems = glossary_stems(run["subject"], {run.get("method_id")})  # specs/06 §8
     method = load_json(run_dir / "11_method_units.json")
     units = {u["unit_id"]: u for u in method["units"]}
     order = {u["unit_id"]: u.get("order") or 0 for u in method["units"]}

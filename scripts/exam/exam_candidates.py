@@ -15,7 +15,8 @@ import sys
 from collections import Counter
 from pathlib import Path
 
-from ecommon import Units, ask_of, criteria_index, load_json, read_text, save_json, stems, validate_schema
+from ecommon import Units, ask_of, criteria_index, load_json, read_text, save_json, validate_schema
+from mcommon import glossary_stems
 
 
 def main(argv: list[str]) -> None:
@@ -27,6 +28,7 @@ def main(argv: list[str]) -> None:
     top, mn = opt("--top", 8), opt("--min", 3)
 
     units = Units(run_dir)
+    stems = glossary_stems(load_json(run_dir / "run.json")["subject"], set(units.exams))  # specs/06 §8
     crit = criteria_index(load_json(run_dir / "20_criteria.json"))
     terms = {cid: stems(c["text_expert"]) | stems(c["goal_expert"]) | stems(" ".join(c["concepts"]))
              for cid, c in crit.items()}

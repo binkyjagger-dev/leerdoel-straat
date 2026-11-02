@@ -143,6 +143,37 @@ def verb_exception_scenario(r, s):
     return ok
 
 
+def glossary_scenario(tmp):
+    """specs/06 §8: glossary.py writes only against an answered decision; glossary_stems maps phrases to the term."""
+    subj = tmp / "subjects"; (subj / "vak").mkdir(parents=True)
+    dec = lambda i, st, sc: {"id": i, "question": "q", "context": "", "options": [], "proposed": "", "impact": "low",
+                             "applies_to": [], "affects_units": [], "status": st, "answer": "a" if st == "answered" else None,
+                             "answered_by": None, "answered_at": None, "source_run": None, "raised_by": "intake",
+                             "supersedes": None, "scope": sc}
+    (subj / "vak" / "decisions.json").write_text(json.dumps({"subject": "vak", "decisions": [
+        dec("vak-001", "answered", "methode-x"), dec("vak-002", "open", None)]}), encoding="utf-8")
+    ent = tmp / "entries.json"
+    ent.write_text(json.dumps([{"term": "couponrente", "synonyms": ["interestvoet", "rente op de obligatie"]},
+                               {"term": "rekening-courantkrediet", "synonyms": ["bankkrediet"]}]), encoding="utf-8")
+    g = "scripts/glossary.py"
+    ok = run("glossary add (open decision, must fail)", g, "add", "vak", "vak-002", str(ent), "--subjects", str(subj), allow_fail=True)
+    ok &= check("open decision wrote nothing", not (subj / "vak" / "glossary.json").exists())
+    ok &= run("glossary add", g, "add", "vak", "vak-001", str(ent), "--subjects", str(subj))
+    ok &= run("glossary add again (idempotent)", g, "add", "vak", "vak-001", str(ent), "--subjects", str(subj))
+    gl = json.loads((subj / "vak" / "glossary.json").read_text(encoding="utf-8"))
+    ok &= check("two entries, scope from the decision", len(gl["entries"]) == 2 and gl["entries"][0]["scope"] == "methode-x")
+    ok &= run("glossary validate", g, "validate", "vak", "--subjects", str(subj))
+    sys.path.insert(0, str(ROOT / "scripts" / "mapping")); from mcommon import glossary_stems, stems
+    gs = glossary_stems("vak", {"methode-x"}, path=subj / "vak" / "glossary.json")
+    ok &= check("phrase and plural mapped to the term; criterion side unchanged",
+                gs("De rente op de obligatie en interestvoeten") >= stems("couponrente") and gs("couponrente") == stems("couponrente")
+                and "obligatie" not in gs("rente op de obligatie"))
+    ok &= check("word inside a longer word is not replaced", gs("bankkredietkosten") == stems("bankkredietkosten"))
+    ok &= check("entries of another scope do not apply",
+                glossary_stems("vak", {"methode-y"}, path=subj / "vak" / "glossary.json")("interestvoet") == stems("interestvoet"))
+    return ok
+
+
 def main():
     r = Path(tempfile.mkdtemp()) / "run"; shutil.copytree(ROOT / "tests" / "fixtures" / "koppel", r)
     s = "scripts/mapping"; ok = True
@@ -166,6 +197,7 @@ def main():
     ok &= run("export (after part B)", f"{s}/export_mappings.py", str(r))
     ok &= verb_exception_scenario(r, s)
     ok &= extend_scenario(r, s)
+    ok &= glossary_scenario(r.parent)
     # ingest adapters for page images + workbook (specs/11 §2.2)
     a = r.parent / "adapters"; (a / "book").mkdir(parents=True)
     for n in ("H1_1.1_10.png", "H1_1.1_2.png", "notes.txt"):

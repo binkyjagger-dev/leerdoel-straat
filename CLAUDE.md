@@ -14,7 +14,7 @@ report + doubt list.
   `data/student_language_rules.json`. Agents and validators read the same files.
 - **Deterministic where possible.** Scripts in `scripts/` validate; agents never skip them.
 - **Verifier is independent.** Always a fresh Agent call; it critiques, never rewrites.
-- **One human checkpoint.** The intake step (1b) asks subject-specific questions and records answers in `subjects/<vak>/decisions.json` via `scripts/decisions.py`; `scripts/verb_table.py install` writes `subjects/<vak>/bloom_verbs.json` only against an answered decision; nothing else writes there, and nothing writes `profile.md`.
+- **One human checkpoint.** The intake step (1b) asks subject-specific questions and records answers in `subjects/<vak>/decisions.json` via `scripts/decisions.py`; `scripts/verb_table.py install` writes `subjects/<vak>/bloom_verbs.json` and `scripts/glossary.py add` writes `subjects/<vak>/glossary.json` (synonyms for candidate retrieval, specs/06 §8), each only against an answered decision; nothing else writes there, and nothing writes `profile.md`.
 - **Bounded loops.** Max 2 repair rounds; leftovers go to the doubt list, nothing is dropped.
 - Domain language in code, specs and prompts: English. Output artefacts (goals, criteria, reports): Dutch.
 
@@ -23,8 +23,8 @@ report + doubt list.
 specs/            00–06 leerdoel-straat (/generate) · 10–15 methode-straat (/koppel) · 20–25 examen-straat (/examen; built and first run 2026-10-27; plan: docs/plan-examen-straat.md)
 schemas/          JSON schemas per artefact
 data/             rule files (Bloom verbs, student-language rules)
-scripts/          validate.py bloom_check.py student_language_check.py coverage.py merge_groups.py apply_verdicts.py export.py decisions.py verb_table.py
-subjects/<vak>/   profile.md (human) + decisions.json (straat, via decisions.py) + bloom_verbs.json (optional, via verb_table.py) — see specs/06
+scripts/          validate.py bloom_check.py student_language_check.py coverage.py merge_groups.py apply_verdicts.py export.py decisions.py verb_table.py glossary.py
+subjects/<vak>/   profile.md (human) + decisions.json (straat, via decisions.py) + bloom_verbs.json (optional, via verb_table.py) + glossary.json (optional, via glossary.py) — see specs/06
 docs/             HANDLEIDING.md (one-page tutorial, Dutch)
 .claude/agents/   ingest intake planner generator student-language verifier
 .claude/commands/ generate (/generate orchestrator) · koppel (/koppel orchestrator) · examen (/examen orchestrator)
