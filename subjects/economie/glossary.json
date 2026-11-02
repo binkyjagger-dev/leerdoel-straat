@@ -220,6 +220,18 @@
       "scope": "lweo-economie-vwo-levensloop-2025",
       "decision": "economie-053",
       "added_at": "2026-11-02"
+    },
+    {
+      "term": "percentielenratio",
+      "synonyms": [
+        "kwartielverhouding",
+        "kwartielratio",
+        "decielverhouding",
+        "decielratio"
+      ],
+      "scope": "lweo-economie-vwo-levensloop-2025",
+      "decision": "economie-062",
+      "added_at": "2026-11-02"
     }
   ]
 }
