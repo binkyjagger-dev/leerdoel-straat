@@ -60,6 +60,17 @@ def verb_levels(rules: dict, verb: str | None) -> list[str]:
     return lv
 
 
+def verb_exception(run: dict, verb: str | None, bloom: str) -> str | None:
+    """Decision id when run.json verb_level_exceptions accepts this verb at this level (specs/13 §1)."""
+    if not verb:
+        return None
+    v = stem_verb(verb.lower())
+    for e in run.get("verb_level_exceptions") or []:
+        if e["bloom"] == bloom and any(stem_verb(x.lower()) == v for x in e["verbs"]):
+            return e["decision"]
+    return None
+
+
 def main(argv: list[str]) -> None:
     if len(argv) < 2:
         print(__doc__)
@@ -145,8 +156,12 @@ def main(argv: list[str]) -> None:
             notes.append(f"antwoord is een berekening: {bloom} → toepassen")
             bloom = "toepassen"
         if lv and bloom not in lv:
-            notes.append(f"werkwoord '{verb}' = {'/'.join(lv)} volgens tabel")
-            conf = min(conf, "medium", key=CONF.index)
+            exc = verb_exception(run, verb, bloom)
+            if exc:
+                notes.append(f"werkwoord '{verb}' = {'/'.join(lv)} volgens tabel; {bloom} volgens {exc}")
+            else:
+                notes.append(f"werkwoord '{verb}' = {'/'.join(lv)} volgens tabel")
+                conf = min(conf, "medium", key=CONF.index)
         links.append({
             "criterion_id": cid, "group_id": crit[cid]["group_id"], "unit_id": uid, "paragraph_id": para_of[uid],
             "bloom": bloom, "bloom_verb": verb, "quote": jd["quote"], "answer_checked": bool(jd.get("answer_checked")),

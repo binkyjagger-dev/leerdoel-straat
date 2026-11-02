@@ -52,6 +52,10 @@
 - economie-043: Aan D1.13 koppelen met opmerking 'vraagzijde'
 - economie-044: Alle paren overnemen; de regel kostprijs → D1.12 uit 028 alleen laten gelden als de kostprijs verandert door productiefactoren of techniek, niet bij een heffing of subsidie
 - economie-045: Gewoon koppelen op vraag en antwoord, met opmerking 'tekst niet op paginabeeld gecontroleerd'; de controleur neemt ze mee in de steekproef
+- economie-046: Optie 2: een tekenopdracht voor een kosten-, opbrengst- of marginale lijn altijd koppelen aan het rekencriterium van de grootheid (D1.14-01-b, D1.16-01-c, D1.17-01-b), ook als de waarden al bekend zijn (tabelwaarden, constante TCK, P = GO = MO). Rekenkundig en grafisch werken met de grootheid zijn allebei van toepassing; tekenen is niet buiten syllabus.
+- economie-047: Optie 1: bij het koppelen telt 'opstellen/samenstellen van een functie volgens het geleerde model' (TK = TVK + TCK, TO = p × q, Qa' = a(P − heffing) + b) als toepassen. De MB2-waarschuwing blijft zichtbaar, maar verlaagt de zekerheid niet. Geen regel in subjects/economie/bloom_verbs.json; /generate verandert niet.
+- economie-048: Optie 1: de leerling voert beide prestaties uit; D1.21-01-b is de in-scope prestatie, D2.2 blijft zichtbaar voor de lesbrief Marktvormen.
+- economie-049: Optie 3: het gevolg voor de koers is marktevenwicht (D1.24); de verschuiving van het aanbod zelf heeft geen eindterm, en koppelen aan D1.12 zou de dekking te hoog laten lijken.
 
 ## Per paragraaf
 

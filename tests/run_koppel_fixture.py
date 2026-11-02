@@ -120,6 +120,29 @@ def extend_scenario(prev, s):
     return ok
 
 
+def verb_exception_scenario(r, s):
+    """'opstellen' is creëren in the verb table; verb_level_exceptions in run.json keeps toepassen at high (12 §6.2)."""
+    v = r.parent / "verbexc"; shutil.copytree(r, v); shutil.rmtree(v / "18_ex_judgements.R")
+    for j in ("A", "B"):
+        f = v / f"18_ex_judgements.{j}" / "H1.1.json"
+        f.write_text(f.read_text(encoding="utf-8").replace('"bloom_verb": "berekenen"', '"bloom_verb": "opstellen"'), encoding="utf-8")
+    key = ("D1.1-02-a", "H1.1-opg1.1a")
+    def link():
+        return next(l for l in json.loads((v / "18_ex_mappings.json").read_text(encoding="utf-8"))["links"]
+                    if (l["criterion_id"], l["unit_id"]) == key)
+    ok = run("verb exception: ex_merge without exception", f"{s}/ex_merge.py", str(v))
+    ok &= check("opstellen at toepassen without exception -> medium", link()["confidence_judged"] == "medium")
+    rj = json.loads((v / "run.json").read_text(encoding="utf-8"))
+    rj["verb_level_exceptions"] = [{"verbs": ["opstellen", "samenstellen"], "bloom": "toepassen", "decision": "economie-047"}]
+    (v / "run.json").write_text(json.dumps(rj), encoding="utf-8")
+    ok &= run("verb exception: ex_merge with exception", f"{s}/ex_merge.py", str(v))
+    l = link()
+    ok &= check("opstellen at toepassen with exception -> high, note names the decision",
+                l["confidence_judged"] == "high" and "volgens economie-047" in (l["note"] or ""))
+    ok &= run("verb exception: check_ex_mappings", f"{s}/check_ex_mappings.py", str(v))
+    return ok
+
+
 def main():
     r = Path(tempfile.mkdtemp()) / "run"; shutil.copytree(ROOT / "tests" / "fixtures" / "koppel", r)
     s = "scripts/mapping"; ok = True
@@ -141,6 +164,7 @@ def main():
     ok &= run("check_ex_mappings --verification (after repair)", f"{s}/check_ex_mappings.py", str(r), "--verification", "19_ex_verification.json")
     ok &= run("export_exercises", f"{s}/export_exercises.py", str(r))
     ok &= run("export (after part B)", f"{s}/export_mappings.py", str(r))
+    ok &= verb_exception_scenario(r, s)
     ok &= extend_scenario(r, s)
     # ingest adapters for page images + workbook (specs/11 §2.2)
     a = r.parent / "adapters"; (a / "book").mkdir(parents=True)

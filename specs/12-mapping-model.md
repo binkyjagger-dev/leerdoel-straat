@@ -125,7 +125,9 @@ removes the link; a link replaces the judge that lacked it (else B).
 Bloom: equal ⇒ kept; differing ⇒ the level its `bloom_verb` has in the
 effective verb table, else the lower one (note "bloom A/B"). Then MB1: a
 verb whose table level differs from `bloom` ⇒ note and confidence at most
-medium. The answer form corrects the level only where the verb gives none
+medium — unless `run.json` `verb_level_exceptions` (13 §1) names that verb
+with that `bloom`: then the note also names the decision ("… volgens tabel;
+toepassen volgens economie-047") and the confidence is not lowered. The answer form corrects the level only where the verb gives none
 (no asking verb, or a verb not in the table) and the link was not set by R:
 an answer that is a calculation result (number with `=`, `€` or `%` that
 does not already occur in the question — a given number read back is not a

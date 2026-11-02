@@ -191,5 +191,15 @@
     "H1.7": "economie-027",
     "H2.4": "economie-027",
     "H2.5": "economie-027"
-  }
+  },
+  "verb_level_exceptions": [
+    {
+      "verbs": [
+        "opstellen",
+        "samenstellen"
+      ],
+      "bloom": "toepassen",
+      "decision": "economie-047"
+    }
+  ]
 }

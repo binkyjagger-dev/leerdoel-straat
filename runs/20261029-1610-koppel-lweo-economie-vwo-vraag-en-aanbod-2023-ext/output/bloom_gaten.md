@@ -1,7 +1,7 @@
 # Bloom-gaten en oefenstof — 20261029-1610-koppel-lweo-economie-vwo-vraag-en-aanbod-2023-ext
 
-- Opgavekoppelingen: 469 op 395 deelvragen · zekerheid: high 357, medium 68, low 44
-- Bloom van de opgaven: begrijpen 157, toepassen 283, onthouden 15, analyseren 14
+- Opgavekoppelingen: 473 op 399 deelvragen · zekerheid: high 375, medium 55, low 43
+- Bloom van de opgaven: begrijpen 157, toepassen 287, onthouden 15, analyseren 14
 
 ## Bloomniveau niet bereikt in de opgaven (3)
 
@@ -65,7 +65,7 @@
 - **D3.9-01-c** (analyseren) — 1.22g (p. 20) — (leert in H4.2) — Ik kan uit vraaglijn en aanbodlijn afleiden welk deel van de heffing vragers en welk deel aanbieders dragen.
 - **D3.9-01-c** (analyseren) — 3.26f (p. 56) — (leert in H4.2) — Ik kan uit vraaglijn en aanbodlijn afleiden welk deel van de heffing vragers en welk deel aanbieders dragen.
 
-## Oefenstof buiten de syllabus (66)
+## Oefenstof buiten de syllabus (62)
 
 - 1.1a (p. 6) — goed bij elkaar komen.
 - 1.1b (p. 6) — dienst bij elkaar komen.
@@ -90,17 +90,13 @@
 - 2.30a (p. 36) — zakelijke reizigers.
 - 2.31a (p. 37) — bijvoorbeeld niet met de wijnomzet van november?
 - 2.33c (p. 38) — zuurstofmaskers op de Amerikaanse en de Europese markt.
-- 3.1b (p. 40) — b. Teken de TCK-lijn in figuur 3.1.
 - 3.7c (p. 42) — c. Teken met behulp van tabel 3.1 de GVK-lijn in figuur 3.2.
 - 3.7d (p. 43) — d. Teken met behulp van tabel 3.1 de GCK-lijn in figuur 3.2.
-- 3.7e (p. 43) — e. Teken met behulp van tabel 3.1 de GTK-lijn in figuur 3.2.
 - 3.7f (p. 43) — f. Leg uit hoe je uit het verloop van de GVK in figuur 3.2 kunt afleiden dat TVK proportioneel variabel is.
 - 3.8a (p. 44) — a. Hoe kan uit de TK-functie worden afgeleid dat er sprake is van proportioneel variabele kosten?
 - 3.9a (p. 44) — a. Bepaal van beide kostenfuncties de vergelijking van de gemiddelde variabele kosten (GVK1 en GVK2).
 - 3.9b (p. 44) — b. Welke TK-functie hoort bij progressief variabele kosten en welke bij hoort bij degressief variabele kosten? Licht het
 - 3.9c (p. 44) — c. Noteer in figuur 3.4 op de juiste plek de woorden progressief en degressief.
-- 3.16c (p. 49) — c. Teken in figuur 3.7 de MO-lijn en de MK-lijn.
-- 3.19a (p. 53) — a. Teken met behulp van tabel 3.2 de MK-lijn in figuur 3.9.
 - 3.19b (p. 53) — b. Teken de P = GO = MO-lijn in figuur 3.9.
 - 3.20a (p. 53) — a. Teken in figuur 3.10 de lijn P = GO = MO.
 - 3.20e (p. 53) — e. Leg uit dat GVK een degressief verloop heeft als MK < GVK en een progressief verloop heeft als MK > GVK.

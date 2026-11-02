@@ -16,7 +16,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from common import BLOOM_ORDER, load_bloom_rules  # noqa: E402
-from ex_merge import verb_levels  # noqa: E402
+from ex_merge import verb_exception, verb_levels  # noqa: E402
 from mcommon import MAX_QUOTE_WORDS, Report, load_json, norm, quote_in_text, read_text, save_json, validate_schema, words  # noqa: E402
 
 CONF = ["low", "medium", "high"]
@@ -81,7 +81,7 @@ def main(argv: list[str]) -> None:
             exp = "high" if js[0]["bloom"] == js[1]["bloom"] and all(v["quote_valid"] for v in js) else "medium"
         else:
             exp = "low"
-        if lv and l["bloom"] not in lv:
+        if lv and l["bloom"] not in lv and not verb_exception(run, l.get("bloom_verb"), l["bloom"]):
             exp = min(exp, "medium", key=CONF.index)
         if l["confidence_judged"] != exp:
             rep.fail("MC1", f"{tag}: confidence_judged {l['confidence_judged']} != computed {exp}")

@@ -25,7 +25,7 @@ from pathlib import Path
 from mcommon import Report, load_json, save_json, validate_schema
 
 RUN_FIELDS = ("subject", "method_id", "from_run", "chapters", "part", "max_repair_rounds", "judge_batch",
-              "scope_criteria", "ex_scope_paragraphs", "ex_scope_note")
+              "scope_criteria", "ex_scope_paragraphs", "ex_scope_note", "verb_level_exceptions")
 COPY_DIRS = ("text", "input", "13_judgements.A", "13_judgements.B", "13_judgements.R",
              "18_ex_judgements.A", "18_ex_judgements.B", "18_ex_judgements.R")
 RENAME = {"11_method_units.json": "11_method_units.prev.json",
