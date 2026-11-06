@@ -137,3 +137,17 @@ python3 tests/run_examen_fixture.py                  # exercise all /examen scri
 - Layered repair works: extra R files with a suffix (`H3.2.r046.json`, `H1.4.r2.json`) are read after `<paragraph>.json` and override per pair, so earlier repairs stay auditable.
 - A judge found an error in the answer key (1.22e "6 > 3" should be "6 > 5"); report such findings to the teacher.
 - Cost: 80 agent calls (5 transcribe, 1 ingest, 1 intake, 20 paragraph judges, 1+7 verify/repair, 32 exercise judges, 1+12 verify/repair).
+
+## Lessons from koppel extend run 3 (Levensloop H4 + missing H2/H3 exercises, 2026-11-06)
+- "Add to the last run" means the last run of the *same method*: `--extend` cannot cross lesbrieven. A new PDF can repair an earlier gap: the full scan restored pp. 40, 52, 53 and 60–72. Check `page.get_images()` sizes before assuming a source is still broken, and look for a newer file in the teacher's OneDrive.
+- New sub-questions in old paragraphs fit `--extend` without new code: ids under existing parents, A/B as `<paragraph>.ext.json`. Sub-questions that need *re*-judging do not: `.ext.json` sorts before `.json`, so the old judgement wins on the same pair. Use a layered R file (`H2.5.r3.json`), which decides per pair.
+- `merge-units` puts every new paragraph in `scope_paragraphs`, also Transfer and Zelftest, against economie-057. Removed by hand from `scope_paragraphs` and `extend.new_paragraphs`; a decision that limits paragraph kinds should be read by the script.
+- Fixed in this run: `prepare` dropped `scope_exclude_groups`; a `todo` rerun overwrote `delta` (now cumulative, with `open` as the check before X4); `decisions.py add` silently skipped a generic question with the same text as an older one (now compares text, context and scope, and reports skips).
+- The orchestrator forgot one delta paragraph (H1.4); the `todo` rerun exposed it. Always rerun `todo` before gradation.
+- An answer like "zoals in de context voorgesteld" does not reach judges: `decisions_snapshot.json` has no `context`, so judges went to `decisions.json`. Add `context` to the snapshot, or record the full answer.
+- An answer that names groups where the question named criteria (economie-074) leaves judges to interpret it: they all flagged it and reasoned their way to the same reading. Record the literal ids and state which roles it binds.
+- Decision-required remarks still do not survive merge (economie-078 'deels' on 9 links, economie-074 on 5 gaps; same as economie-043); teacher review cannot carry them for exercises or gaps. Written by hand to `output/opmerkingen_besluiten.md`; merge and the gap report need a note channel.
+- Criteria outside `scope_criteria` have no `per_criterion` list, so they reach judges only through a paragraph's top 10; the verifier found H1.1-02-a and E1.4-01-a that way. Consider candidates for criteria an answered decision names.
+- `verb_level_exceptions` must be set from every answered level decision before `ex_merge` (economie-063 moved 10 links from medium to high). It was missing because the decision came after the previous run.
+- H4 had many answer-key errors (4.4a, 4.15a/b, 4.20d, 4.28d, 4.29d); asking exercise judges to report them works, and they recompute. Collect them for the teacher.
+- Cost: 63 agent calls (2 transcribe, 1 ingest, 1 intake, 30 paragraph judges, 1+3 verify/repair, 21 exercise judges, 1+3 verify/repair).

@@ -1925,6 +1925,584 @@
       "raised_by": "intake",
       "supersedes": null,
       "scope": "lweo-economie-vwo-levensloop-2025"
+    },
+    {
+      "id": "economie-064",
+      "question": "Welke criteria verwachten we in deze lesbrief (Marktgedrag, H1–H4), zodat alleen die als 'gat' tellen als ze niet uitgelegd worden?",
+      "context": "De criteriaset bevat alle 162 leerdoelgroepen (551 criteria); de scope van Vraag en aanbod (economie-024/040) en Levensloop (economie-050) geldt niet voor deze lesbrief. De Inleiding (p. 5) zegt dat Marktgedrag voortbouwt op Vraag en aanbod en dat het marktresultaat (surplus, overheidsinvloed) in lesbrief 4 komt. Uit de paragraafteksten en de Kunnen-lijsten: §1.1/2.1/3.1/4.1 kenmerken van de vier marktvormen, homogeen/heterogeen, toetredingsbarrières (D2.1); §1.2 hoeveelheidsaanpasser, MO = P, individuele aanbodfunctie uit MK, stoppen onder GVK (D1.18, D2.2-01); §1.2/1.2.1 maximale winst bij MO = MK (D1.21, D2.2-01); §2.2/4.2 prijsafzetfunctie, MO onder de prijs, prijszetter (D2.2-02, D2.1-01-c/d); §3.3 pay-off matrix, spelboom, simultaan/sequentieel spel, best response, Nash-evenwicht, gevangenendilemma, zelfbinding, tit-for-tat (F1.2 inclusief de spelboomgroep F1.2-02, F1.3–F1.7, F1.10); §3.4 kartel: binding tegenover flexibiliteit, ACM (F1.12, G3.4); §4.3 mededingingsautoriteiten (G3.4); §4.4 geloofwaardige dreiging bij toetreding, verzonken kosten (F1.11). Voorstel A = 14 eenheden, 16 groepen, 54 criteria. Let op: G3.4-01-b (toezicht op financiële markten) komt hier niet voor en verschijnt dan als gat 'niet in deze methode'. Twijfel (B): D3.11 octrooien (§4.1 legt alleenrecht en de prikkel tot investeren uit, maar prijs/afzet/surplus in een grafiek hoort bij Marktresultaat), F1.8 sociale normen en F1.9 reputatie (elk één zin in §3.3). Herhaling uit Vraag en aanbod (C): §1.3 legt de prijselasticiteit opnieuw uit, §2.2 omzet en elasticiteit, §1.4 kostenstijging in de aanbodfunctie, en de opgaven gebruiken TK/GTK/MK, winst, break-even en marktevenwicht (D1.5, D1.6, D1.12, D1.15, D1.17, D1.19, D1.20, D1.23, D1.24; 9 groepen, 30 criteria). Niet in deze lesbrief: prijsdiscriminatie (D2.3), surplus en dead weight loss (D3.1–D3.10), berovingsprobleem (F2.1). Koppelingen naar criteria buiten de scope blijven bewaard; ze tellen alleen niet als gat. Deel B (opgaven) gebruikt dezelfde scope. Omdat dit een eigen run is, krijgen speltheoriecriteria die al in Levensloop werden uitgelegd hier opnieuw 'leert' in §3.3; de volgorde over lesbrieven heen komt pas met een latere samenvoegstap.",
+      "options": [
+        "A: D1.18, D1.21, D2.1, D2.2, F1.2 (inclusief spelboomgroep F1.2-02), F1.3, F1.4, F1.5, F1.6, F1.7, F1.10, F1.11, F1.12 en G3.4 in scope; koppelingen naar andere criteria blijven bewaard",
+        "B: A plus de twijfelgevallen D3.11, F1.8 en F1.9",
+        "C: A plus de herhaling uit Vraag en aanbod (D1.5, D1.6, D1.12, D1.15, D1.17, D1.19, D1.20, D1.23, D1.24)",
+        "D: A, B en C samen"
+      ],
+      "proposed": "A: dit is wat Marktgedrag nieuw moet leren (marktvormen, winstmaximalisatie per marktvorm, speltheorie bij oligopolie, kartel en toezicht). Herhaling uit Vraag en aanbod wordt wel gekoppeld maar hoort daar als gat; octrooien als marktresultaat en sociale normen/reputatie worden hier alleen terloops behandeld.",
+      "impact": "high",
+      "applies_to": [
+        "mapping-judge",
+        "exercise-judge",
+        "mapping-verifier"
+      ],
+      "affects_units": [
+        "*"
+      ],
+      "status": "answered",
+      "answer": "A: D1.18, D1.21, D2.1, D2.2, F1.2 (inclusief spelboomgroep F1.2-02), F1.3, F1.4, F1.5, F1.6, F1.7, F1.10, F1.11, F1.12 en G3.4 in scope; koppelingen naar andere criteria blijven bewaard",
+      "answered_by": "user",
+      "answered_at": "2026-11-02T21:59:06Z",
+      "source_run": "20261102-2200-koppel-lweo-economie-vwo-marktgedrag-2023",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "lweo-economie-vwo-marktgedrag-2023"
+    },
+    {
+      "id": "economie-065",
+      "question": "Nemen we de algemene koppelregels die voor Levensloop en Vraag en aanbod zijn beantwoord ongewijzigd over voor Marktgedrag?",
+      "context": "Besluiten met de scope van een andere lesbrief gelden hier niet automatisch. Deze besluiten zijn algemeen van aard en de lesbrief heeft dezelfde opbouw (lopende tekst, opdrachten in de paragraaf, Transfer 1.5/2.3/3.5/4.5 en Zelftest 1.6/2.4/3.6/4.6 met (bijna) lege tekst, Leerdoelen-lijst Kennen/Kunnen per hoofdstuk). Uit Levensloop: economie-051 (stof zonder criterium: buiten syllabus melden als 'geen eindterm', alleen koppelen waar een criterium de handeling echt vraagt; de onderwerpen van Marktgedrag staan in een aparte vraag), 052 (een bindende afspraak met straf tussen twee spelers → F1.7-01-b/c met opmerking 'tweezijdige afspraak'), 056 (begrip + gevolg in de lopende tekst telt als 'leert', 'deels' als een deel ontbreekt), 057 (Transfer en Zelftest alleen in deel B), 058 (figuur telt als de tekst beschrijft wat ze laat zien; kaders zoals 'Prijzenoorlog supermarkten' (§3.2) en 'Monopolie belemmert wereldwijde vaccinatie' (§4.1) tellen als lopende tekst; cartoons hoogstens 'noemt'; Leerdoelen-lijsten niet koppelen, wel controlelijst; dit beantwoordt ook de open kadervraag in het methodeprofiel), 061 (Kunnen-punt zonder uitleg: gat met opmerking 'wel in Leerdoelen'), 063 ('leg uit' bij een procedure: begrijpen als de conclusie gegeven is, toepassen als de leerling de uitkomst zelf bepaalt; raakt de best-response-opgaven in §3.3/3.6). Uit Vraag en aanbod: 038 (collectieve functie telt voor de criteria van de individuele lijn), 041 (GCK/GVK alleen = buiten syllabus; de stopregel prijs < GVK aan D1.18-01-c; hier uitgelegd in §1.2), 043 (heffing bij de vragers aan D1.13 met opmerking 'vraagzijde'), 044 (kostprijs → D1.12 alleen bij productiefactoren of techniek; §1.4 cao-lonen), 046 (tekenopdracht voor een kosten-, opbrengst- of marginale lijn aan het rekencriterium van de grootheid), 047 ('opstellen' van een functie volgens het geleerde model telt bij het koppelen als toepassen; 13 deelvragen zoals 'stel de marginale kostenfunctie op'; wordt bij overname een werkwoorduitzondering voor deze run). Niet in deze lijst: 048 (winstmaximalisatie bij een vaste prijs), omdat D2.2 hier wel in scope komt; daarover gaat een aparte vraag. Overige Vraag en aanbod-besluiten (035–037, 039, 042, 045, 049) gaan over stof die hier niet voorkomt.",
+      "options": [
+        "Alle genoemde besluiten (047, 051, 052, 056, 057, 058, 061, 063, 038, 041, 043, 044, 046) met hun antwoord overnemen voor Marktgedrag",
+        "Overnemen behalve de besluiten die ik noem (vrije tekst)",
+        "Niet overnemen; elke vraag opnieuw stellen"
+      ],
+      "proposed": "Alle overnemen: de lesbrief heeft dezelfde opbouw en de regels zijn niet lesbriefgebonden; zo blijven de koppelingen over de lesbrieven heen vergelijkbaar.",
+      "impact": "high",
+      "applies_to": [
+        "mapping-judge",
+        "exercise-judge",
+        "mapping-verifier"
+      ],
+      "affects_units": [
+        "*"
+      ],
+      "status": "answered",
+      "answer": "Alle genoemde besluiten (047, 051, 052, 056, 057, 058, 061, 063, 038, 041, 043, 044, 046) met hun antwoord overnemen voor Marktgedrag",
+      "answered_by": "user",
+      "answered_at": "2026-11-02T21:59:06Z",
+      "source_run": "20261102-2200-koppel-lweo-economie-vwo-marktgedrag-2023",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "lweo-economie-vwo-marktgedrag-2023"
+    },
+    {
+      "id": "economie-066",
+      "question": "Aan welk criterium koppelen we uitleg en opgaven die de winstmaximaliserende afzet binnen een marktvorm bepalen met MO = MK: aan D2.2 (winstmaximalisatie per marktvorm), aan D1.21 (MO en MK algemeen) of aan beide?",
+      "context": "In Vraag en aanbod koppelde economie-048 dit aan D1.21-01-b omdat D2.2 daar buiten scope lag; in Marktgedrag zijn beide in scope en is winstmaximalisatie per marktvorm de kern. Het patroon komt in bijna elke paragraaf voor: §1.2 (Black, MO = P, maximale winst bij 30 T-shirts), §1.2.1 (TO = 21q, MO = MK, q = 9, TW = 21), §2.2 en §4.2 (prijsafzetfunctie, MO, MO = MK, prijs aflezen), §3.4 en §4.3 (kartel en duopolie) en Transfer/Zelftest; minstens 27 deelvragen in 13 paragrafen noemen MO = MK letterlijk. D2.2-01-b/c (prijsnemer: p = MK, winst als (p − GTK) × q) en D2.2-02-a/b (prijszetter: MO uit de prijsafzetfunctie, MO = MK, prijs uit de prijsafzetfunctie) beschrijven precies deze prestaties; D1.21-01-b ('bepaalt de winstmaximaliserende afzet uit MO en MK') is de algemene regel. economie-008 (één eigenaar, de meest specifieke eindterm) wijst naar D2.2. In deel B krijgt een deelvraag hoogstens twee koppelingen.",
+      "options": [
+        "D2.2 is eigenaar zodra de marktvorm de prijs of de prijsafzetfunctie bepaalt; D1.21 alleen bij vragen over de regel zelf (uitleggen waarom MO = MK, meer of minder produceren bij gegeven MO en MK, effect van een kostenverandering: D1.21-01-a/c/d)",
+        "Altijd beide koppelen: D2.2 én D1.21-01-b",
+        "Zoals in Vraag en aanbod (economie-048): D1.21-01-b als eigenaar, D2.2 alleen als tweede koppeling"
+      ],
+      "proposed": "Optie 1: D2.2 is de meest specifieke eindterm (economie-008) en precies wat deze lesbrief leert; D1.21-01-b steeds dubbel koppelen zou de dekking van D1.21 opblazen, terwijl D1.21-01-a/c/d de vragen over de regel zelf blijven dekken.",
+      "impact": "high",
+      "applies_to": [
+        "mapping-judge",
+        "exercise-judge",
+        "mapping-verifier"
+      ],
+      "affects_units": [
+        "H1.2",
+        "H1.2.1",
+        "H1.3",
+        "H1.4",
+        "H1.5",
+        "H1.6",
+        "H2.2",
+        "H2.3",
+        "H2.4",
+        "H3.2",
+        "H3.4",
+        "H3.5",
+        "H3.6",
+        "H4.2",
+        "H4.3",
+        "H4.5",
+        "H4.6"
+      ],
+      "status": "answered",
+      "answer": "D2.2 is eigenaar zodra de marktvorm de prijs of de prijsafzetfunctie bepaalt; D1.21 alleen bij vragen over de regel zelf (uitleggen waarom MO = MK, meer of minder produceren bij gegeven MO en MK, effect van een kostenverandering: D1.21-01-a/c/d)",
+      "answered_by": "user",
+      "answered_at": "2026-11-02T21:59:06Z",
+      "source_run": "20261102-2200-koppel-lweo-economie-vwo-marktgedrag-2023",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "lweo-economie-vwo-marktgedrag-2023"
+    },
+    {
+      "id": "economie-067",
+      "question": "Hoe koppelen we de rekenregels en begrippen uit Marktgedrag die geen eigen criterium hebben (afgeleide/differentieerregel, maximale omzet, kostendekking, marktaandeel, restvraag, langetermijnevenwicht na toetreding)?",
+      "context": "Geen criterium noemt deze stof letterlijk; zonder afspraak koppelen beoordelaars ze verschillend of melden ze als buiten syllabus. Per onderwerp, met voorstel: (1) Differentieerregel, §1.2.1 (MK = TK', MO = TO', TW' = MW = 0), 15 deelvragen in §1.2.1, 1.6, 2.1–2.4, 3.4, 4.2, 4.3: MK uit TK afleiden → D1.17-01-b (MK uit TK, hier via de afgeleide); MO uit TO of de prijsafzetfunctie → D2.2-02-a; TW' = 0 als route naar maximale winst → hetzelfde criterium als MO = MK (zie de vraag over winstmaximalisatie); het differentiëren zelf heeft geen eindterm. (2) Maximale omzet bij MO = 0 (§2.2; 8 deelvragen in 2.2, 2.4, 4.6): de omzet berekenen → D1.14-01-b; verband met de elasticiteit (omzet maximaal waar de vraag van elastisch naar inelastisch gaat) → D1.15-01-a; de regel MO = 0 als doelstelling: buiten syllabus ('geen eindterm'). (3) Kostendekking / break-even als doelstelling (§1.2, §4.2; 8 deelvragen): P = GTK of TO = TK → D1.20-01-b; minimaal verlies → zoals maximale winst. (4) Marktaandeel berekenen (§3.1; 15 deelvragen in 3.1, 3.4–3.6, 4.6): buiten syllabus; alleen als het marktaandeel dient om de marktvorm te bepalen (vier grootste ≥ 70% = oligopolie) → D2.1-01-b. Transparantie als kenmerk (§1.1, §2.1) → D2.1-01-a, omdat het boek het laat volgen uit aantal aanbieders en heterogeniteit. (5) Restvraag van een duopolist (§4.3, opgave 4.8b–g, 6 deelvragen) en de gezamenlijke prijsafzetfunctie van een kartel (3.13c) → D2.2-02-a (de restvraag is de prijsafzetfunctie van die aanbieder). (6) Langetermijnevenwicht bij volkomen concurrentie (§1.3: toetreding tot de winst nul is, p = GTK) en blijvende winst bij monopolistische concurrentie (§2.2) → D2.1-01-d (toetredingsmogelijkheden bepalen marktmacht) en, waar de aanbodlijn verschuift en een nieuw evenwicht ontstaat, D1.12-01-b en D1.24.",
+      "options": [
+        "Per onderwerp zoals in de context voorgesteld (1–6)",
+        "Zoals voorgesteld, maar de differentieerregel (1) en maximale omzet (2) helemaal buiten syllabus (geen koppeling)",
+        "Alles zonder letterlijk criterium buiten syllabus; alleen koppelen waar het criterium de handeling noemt",
+        "Anders, per onderwerp (vrije tekst)"
+      ],
+      "proposed": "Optie 1: elke voorgestelde koppeling gaat over een handeling die het criterium vraagt (MK uit TK, MO uit de prijsafzetfunctie, TO berekenen, TO = TK oplossen); wat alleen een rekentechniek of een extra doelstelling is, wordt gemeld als 'geen eindterm' en verhoogt de dekking niet.",
+      "impact": "high",
+      "applies_to": [
+        "mapping-judge",
+        "exercise-judge",
+        "mapping-verifier"
+      ],
+      "affects_units": [
+        "H1.1",
+        "H1.2",
+        "H1.2.1",
+        "H1.3",
+        "H1.6",
+        "H2.1",
+        "H2.2",
+        "H2.3",
+        "H2.4",
+        "H3.1",
+        "H3.4",
+        "H3.5",
+        "H3.6",
+        "H4.2",
+        "H4.3",
+        "H4.6"
+      ],
+      "status": "answered",
+      "answer": "Per onderwerp zoals in de context voorgesteld (1–6)",
+      "answered_by": "user",
+      "answered_at": "2026-11-02T21:59:06Z",
+      "source_run": "20261102-2200-koppel-lweo-economie-vwo-marktgedrag-2023",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "lweo-economie-vwo-marktgedrag-2023"
+    },
+    {
+      "id": "economie-068",
+      "question": "Hoe koppelen we kartelvorming, boetes van de toezichthouder en het tegenhouden van toetreders (§3.3–3.6, §4.3–4.6) aan de speltheorie- en toezichtcriteria?",
+      "context": "Het boek behandelt kartels, toezicht en toetreding met speltheorie; de criteria verdelen dit over F1.5–F1.7, F1.10–F1.12 en G3.4. Voorstel per onderwerp: (1) Kartel als gevangenendilemma (wel/niet aan de afspraak houden; 3.13f–h, 3.19, 3.24e) → F1.5-01-b/d. (2) Boete van de ACM die de pay-off van de kartelpartners verandert (3.13i, 3.14c–d; boeteregel-kader in 3.14) → F1.5-01-b of F1.6 (evenwicht in de aangepaste matrix) plus G3.4-01-c (toezichthouder beschermt tegen marktmacht); niet F1.7, want een boete van buitenaf is geen zelfbinding. (3) Een bindend contract tussen kartelleden (§3.4) → F1.7-01-b/c met opmerking 'tweezijdige afspraak' (zoals economie-052). (4) 'Binding levert op lange termijn meer op dan flexibiliteit' (§3.3, §3.4; 10 deelvragen) → F1.12-01-a/b. (5) Zelfbinding als 'openlijk uitspreken dat je de dominante strategie niet volgt' (§3.3): telt voor F1.7-01-a alleen als tekst of antwoord de negatieve consequentie noemt die haar geloofwaardig maakt; anders 'noemt'. (6) Tit-for-tat (§3.3; 5 deelvragen) → F1.10-01-a; een berekening over meerdere perioden → F1.10-01-b. (7) Dreigen met prijsverlaging bij toetreding, geloofwaardig door verzonken kosten (§4.4, opgave 4.9 e.v.; 11 deelvragen over geloofwaardigheid) → F1.11 (spelboom: b; verzonken kosten als zelfbinding: c/d); niet F2.1 (berovingsprobleem), dat over een andere situatie gaat. (8) Mededingingsautoriteiten en het splitsen van een monopolist (§4.3) → G3.4-01-a/c.",
+      "options": [
+        "Per onderwerp zoals in de context voorgesteld (1–8)",
+        "Zoals voorgesteld, maar de ACM-boete (2) ook aan F1.7 koppelen (straf verandert de pay-offs zoals bij zelfbinding)",
+        "Zoals voorgesteld, maar verzonken kosten bij toetreding (7) ook aan F2.1 koppelen",
+        "Anders, per onderwerp (vrije tekst)"
+      ],
+      "proposed": "Optie 1: elk onderwerp gaat naar het criterium waarvan de prestatie de opgave echt vraagt; een boete van buitenaf is geen zelfbinding (F1.7), en het berovingsprobleem (F2.1) gaat over afhankelijkheid na een specifieke investering, niet over het afschrikken van toetreders.",
+      "impact": "high",
+      "applies_to": [
+        "mapping-judge",
+        "exercise-judge",
+        "mapping-verifier"
+      ],
+      "affects_units": [
+        "H3.2",
+        "H3.3",
+        "H3.4",
+        "H3.5",
+        "H3.6",
+        "H4.3",
+        "H4.4",
+        "H4.5",
+        "H4.6"
+      ],
+      "status": "answered",
+      "answer": "Per onderwerp zoals in de context voorgesteld (1–8)",
+      "answered_by": "user",
+      "answered_at": "2026-11-02T21:59:06Z",
+      "source_run": "20261102-2200-koppel-lweo-economie-vwo-marktgedrag-2023",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "lweo-economie-vwo-marktgedrag-2023"
+    },
+    {
+      "id": "economie-069",
+      "question": "Telt de 'productdifferentiatie' van een monopolist in §4.2 (eerst hardcover, daarna paperback en e-book voor klanten met een lagere betalingsbereidheid) als uitleg van prijsdiscriminatie (D2.3)?",
+      "context": "§4.2 noemt dit productdifferentiatie en legt uit dat de monopolist zo inspeelt op verschillen in betalingsbereidheid en meer winst maakt; economisch is dit een vorm van prijsdiscriminatie, maar de voorwaarden van D2.3-01-a (deelmarkten, verschil in prijselasticiteit, geen doorverkoop) en de berekening van D2.3-02 komen niet voor. Het H4-Kunnen-punt luidt 'beschrijven hoe een monopolist door productdifferentiatie zijn resultaat kan verbeteren'. Raakt §4.2 (tekst en twee deelvragen over betalingsbereidheid) en mogelijk Transfer/Zelftest van H4. D2.3 ligt in het voorstel buiten de scope; het gaat dus alleen om de vraag of er een koppeling komt en met welke gradatie.",
+      "options": [
+        "Niet aan D2.3 koppelen; productdifferentiatie gaat naar D2.1 (heterogeniteit, marktmacht)",
+        "Aan D2.3-01-c koppelen als 'noemt' (prijsverschil naar betalingsbereidheid, zonder de voorwaarden)",
+        "Aan D2.3-01 koppelen als uitleg"
+      ],
+      "proposed": "Optie 2: zo blijft zichtbaar dat de lesbrief het verschijnsel al aanstipt, zonder te suggereren dat prijsdiscriminatie hier geleerd wordt; de uitleg komt naar verwachting in Marktresultaat.",
+      "impact": "medium",
+      "applies_to": [
+        "mapping-judge",
+        "exercise-judge",
+        "mapping-verifier"
+      ],
+      "affects_units": [
+        "H4.2",
+        "H4.5",
+        "H4.6"
+      ],
+      "status": "answered",
+      "answer": "Aan D2.3-01-c koppelen als 'noemt' (prijsverschil naar betalingsbereidheid, zonder de voorwaarden)",
+      "answered_by": "user",
+      "answered_at": "2026-11-02T21:59:06Z",
+      "source_run": "20261102-2200-koppel-lweo-economie-vwo-marktgedrag-2023",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "lweo-economie-vwo-marktgedrag-2023"
+    },
+    {
+      "id": "economie-070",
+      "question": "Mogen de volgende methodetermen bij het koppelen gelijkstaan aan de term in het criterium (woordenlijst voor de lesbrief Marktgedrag)?",
+      "context": "De kandidaatselectie zoekt op criteriumtermen; zonder deze paren mist ze paragrafen die het begrip onder een andere naam uitleggen. Paren (criteriumterm → term in het boek): volkomen concurrentie → volledige mededinging; prijsnemer → hoeveelheidsaanpasser; beste-antwoordmethode → best response methode, best response; pay-off matrix → opbrengstenmatrix; spelboom → beslisboom, beslissingsboom; vergeldingsstrategie → tit-for-tat-strategie, tit-for-tat; toetredingsmogelijkheden → toetredingsbarrières, vrije toe- en uittreding; heterogeniteit van de goederen → heterogeen product, productdifferentiatie; winst per eenheid → winstmarge, GW; toezichthouder → mededingingsautoriteit, kartelwaakhond; octrooi → alleenrecht, patent; dreiging van een prijzenoorlog → dreigen met prijsverlagingen; suboptimale Nash-evenwicht → suboptimaal resultaat, suboptimaal evenwicht. Gelijk in boek en criterium (geen regel nodig): zelfbinding, prijszetter, prijsafzetfunctie, Nash-evenwicht, gevangenendilemma, sequentieel/simultaan spel, kartel. De Levensloop-woordenlijst (economie-059, o.a. samenwerken → coöperatief spelen) heeft een eigen scope en geldt hier niet.",
+      "options": [
+        "Alle paren overnemen",
+        "Alle paren behalve 'winst per eenheid → winstmarge, GW' (het boek gebruikt winstmarge ook als P − GVK, opgave 4.8)",
+        "Alleen de paren die ik noem (vrije tekst)"
+      ],
+      "proposed": "Optie 2: alle andere paren zijn in boek en criterium hetzelfde begrip; 'winstmarge' gebruikt het boek ook als P − GVK, wat kandidaten voor D1.19 zou opleveren die over iets anders gaan.",
+      "impact": "medium",
+      "applies_to": [
+        "mapping-judge",
+        "exercise-judge",
+        "mapping-verifier"
+      ],
+      "affects_units": [
+        "*"
+      ],
+      "status": "answered",
+      "answer": "Alle paren overnemen",
+      "answered_by": "user",
+      "answered_at": "2026-11-02T21:59:06Z",
+      "source_run": "20261102-2200-koppel-lweo-economie-vwo-marktgedrag-2023",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "lweo-economie-vwo-marktgedrag-2023"
+    },
+    {
+      "id": "economie-071",
+      "question": "economie-068 noemt bij (1) 'kartel als gevangenendilemma' de opgaven 3.13f-h, 3.19 en 3.24e, en bij (2) 3.14c-d voor G3.4-01-c. Een deel van die deelvragen gaat niet over wel/niet aan de afspraak houden of over de rol van de toezichthouder: 3.13f (pay-offs berekenen), 3.19 (definitie kartel), 3.24e (argument 'kartelvorming kan ontstaan'), 3.14c (verwachte boete). Geldt de opgavenlijst in het besluit per deelvraag, of alleen het onderwerp?",
+      "context": "De controleur heeft F1.5-01-d op 3.19 en 3.24e en F1.5-01-b op 3.13f betwist (de deelvraag vraagt geen dominante strategieen of suboptimaal evenwicht); G3.4-01-c op 3.14c is conform het besluit blijven staan. Dezelfde vraag speelt bij economie-068 (7) voor 4.9f-g (verzonken kosten -> F1.11-01-d, ook betwist).",
+      "options": [
+        "Het onderwerp telt, niet de lijst: alleen deelvragen koppelen die de handeling van het criterium vragen (dominante strategieen/suboptimaal evenwicht voor F1.5; beschermende rol van de toezichthouder voor G3.4-01-c; aangepaste spelboom voor F1.11-01-d)",
+        "De opgavenlijst in economie-068 is bindend: alle genoemde deelvragen koppelen",
+        "Anders (vrije tekst)"
+      ],
+      "proposed": "Optie 1: anders telt een definitievraag of een losse kansberekening als oefening van een begrijpen/analyseren-criterium, en lijken F1.5, F1.11 en G3.4 vaker geoefend dan ze zijn.",
+      "impact": "low",
+      "applies_to": [
+        "exercise-judge",
+        "mapping-verifier"
+      ],
+      "affects_units": [
+        "F1.5",
+        "F1.11",
+        "G3.4"
+      ],
+      "status": "open",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null,
+      "source_run": "20261102-2200-koppel-lweo-economie-vwo-marktgedrag-2023",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "lweo-economie-vwo-marktgedrag-2023"
+    },
+    {
+      "id": "economie-072",
+      "question": "Welk Bloom-niveau krijgt een juist/onjuist-bewering over een regel of begrip (bijv. 'maximale winst bij MO = MK' in 1.21.6, 2.12.4 en 4.11.3), waarbij het antwoordmodel een korte toelichting geeft?",
+      "context": "De beoordelaars gaven dezelfde soort bewering de ene keer onthouden, de andere keer begrijpen. De controleur heeft 2.12.4 en 4.11.3 naar onthouden gezet, gelijk aan 1.21.6.",
+      "options": [
+        "Onthouden (herkennen van een juiste uitspraak), ook als het antwoordmodel een toelichting geeft",
+        "Begrijpen als de leerling een onjuiste bewering moet verbeteren of toelichten",
+        "Anders (vrije tekst)"
+      ],
+      "proposed": "Optie 1: de deelvraag vraagt alleen juist of onjuist; de toelichting staat in het antwoordmodel, niet in de vraag.",
+      "impact": "low",
+      "applies_to": [
+        "exercise-judge",
+        "mapping-verifier"
+      ],
+      "affects_units": [
+        "D1.21",
+        "D2.1",
+        "F1.3",
+        "F1.4",
+        "F1.5"
+      ],
+      "status": "answered",
+      "answer": "Optie 1: Onthouden (herkennen van een juiste uitspraak), ook als het antwoordmodel een toelichting geeft",
+      "answered_by": "user",
+      "answered_at": "2026-11-06T09:53:45Z",
+      "source_run": "20261106-1009-koppel-lweo-economie-vwo-levensloop-2025-ext",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": null
+    },
+    {
+      "id": "economie-073",
+      "question": "Welke criteria verwachten we daarnaast in hoofdstuk 4 (Vermogen), zodat ze als 'gat' tellen als ze niet uitgelegd worden?",
+      "context": "Dit komt bovenop de bestaande lijst van economie-050/052 (30 eenheden, zonder groep F1.2-02); die lijst blijft staan. Uit de paragrafen en de Kunnen-lijst van p. 72: §4.3 nominale en reële waarde, RIC = NIC / PIC x 100 (E1.6); §4.2 'hoe hoger het risico, hoe hoger het potentiële rendement' (G5.1); §4.2 aandelen tegenover obligaties, rendement berekenen (4.4, 4.5, 4.7: G5.2); §4.1 en §4.5 vermogen als bezittingen min schulden, vermogensverdeling, vergelijking met inkomen (4.17a, 4.21c: H4.3); §4.3 inflatie als stijging van het prijspeil en de CPI (I1.1-02); §4.3 koopkracht bij inflatie (I1.4-01). Voorstel A = 6 eenheden, 6 groepen, 22 criteria. Van I1.1 en I1.4 alleen de groepen hierboven: I1.1-01 (bbp, output gap) staat niet in de lesbrief en de formule van de reële rente (I1.4-02) komt nergens voor. Twijfel: E1.4 (de functies van rente: §4.3 noemt alleen in één zin compensatie voor prijsstijgingen, verder alleen opgaven 4.8 en 4.28), E1.5-02-c (alleen 4.8c), H1.1-02-a (kapitaalinkomen, §4.2 en 4.4a; de rest van H1.1 staat er niet in), E2.1-02-a (levensloop van het vermogen in §4.5 en 4.27; omslag- en kapitaaldekkingsstelsel ontbreken, net als bij economie-050). Hoofdstuk 4 raakt ook eenheden die al in de lijst staan (E1.2, E1.3, E1.8, G1.2, H4.1, H4.4, H4.6); die veranderen niet. Reële waarde, inflatie en rendement komen in de paragrafen en opgaven van H1–H3 niet voor, dus de uitbreiding raakt vrijwel alleen H4. Koppelingen naar criteria buiten de lijst blijven bewaard; ze tellen alleen niet als gat. Deel B gebruikt dezelfde lijst.",
+      "options": [
+        "A: E1.6, G5.1, G5.2, H4.3, I1.1 (zonder groep I1.1-01) en I1.4 (zonder groep I1.4-02) toevoegen; E1.4, E1.5, E2.1 en H1.1 niet (koppelingen blijven bewaard)",
+        "B: als A, plus E1.4 (beide groepen)",
+        "C: alleen E1.6, G5.1, G5.2 en H4.3 toevoegen; domein I niet (dat hoort bij de lesbrieven Monetaire Zaken en Economisch beleid; koppelingen blijven bewaard)"
+      ],
+      "proposed": "Optie A: de Kunnen-lijst noemt precies deze onderwerpen ('CPI uitrekenen en interpreteren', 'invloed van inflatie op de reële waarde') en §4.3 legt ze echt uit. E1.4 blijft erbuiten omdat de lopende tekst maar één van de drie functies van rente in één zin noemt.",
+      "impact": "high",
+      "applies_to": [
+        "mapping-judge",
+        "exercise-judge",
+        "mapping-verifier",
+        "exporter"
+      ],
+      "affects_units": [
+        "E1.4",
+        "E1.6",
+        "G5.1",
+        "G5.2",
+        "H4.3",
+        "I1.1",
+        "I1.4"
+      ],
+      "status": "answered",
+      "answer": "Optie A: E1.6, G5.1, G5.2, H4.3, I1.1 (zonder groep I1.1-01) en I1.4 (zonder groep I1.4-02) toevoegen; E1.4, E1.5, E2.1 en H1.1 niet (koppelingen blijven bewaard)",
+      "answered_by": "user",
+      "answered_at": "2026-11-06T09:53:45Z",
+      "source_run": "20261106-1009-koppel-lweo-economie-vwo-levensloop-2025-ext",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "lweo-economie-vwo-levensloop-2025"
+    },
+    {
+      "id": "economie-074",
+      "question": "Hoe melden we criteria uit de nieuwe eenheden waarvan de inhoud nergens in de lesbrief staat?",
+      "context": "Bij voorstel A komen 22 criteria in de lijst; van 5 ontbreekt de kern in de paragrafen en de opgaven: G5.1-01-a (verwacht rendement uit kansen; §4.2 rekent nergens met kansen), G5.1-01-d (risicopremie uit rendementscijfers; §4.2 noemt alleen 5% voor aandelen en 2% voor obligaties als historisch gemiddelde), I1.1-02-c (nominale tegenover reële rente; de term 'reële rente' komt niet voor), I1.4-01-c (geldillusie), E1.6-01-d (nominale verandering ontleden in een prijsdeel en een reëel deel). Twee andere ontbreken deels: G5.2-01-a (rangorde bij faillissement ontbreekt), H4.3-01-b (erfenissen alleen in het antwoord op 4.27d); die vallen onder economie-056 ('deels'). G5.1 en G5.2 staan ook in de lijst van Vraag en aanbod (economie-040), en de reële rente hoort vermoedelijk bij Monetaire Zaken; een overzicht over de lesbrieven heen bestaat nog niet. Vervalt deels als u bij de vorige vraag optie C kiest.",
+      "options": [
+        "Gat laten staan, met opmerking 'wordt in een andere lesbrief verwacht' bij G5.1, I1.1-02, I1.4-01 en E1.6-01-d (geen koppeling)",
+        "Gat laten staan zonder opmerking",
+        "Deze losse criteria niet als gat tellen (vraagt eerst een aanpassing van de straat: nu kan alleen een hele groep uit de lijst)"
+      ],
+      "proposed": "Optie 1: de koppeling blijft streng, en de docent ziet in het gatenrapport meteen dat het geen tekort van de serie hoeft te zijn. Analoog koppelen zou de dekking te hoog laten lijken.",
+      "impact": "medium",
+      "applies_to": [
+        "mapping-verifier",
+        "exporter"
+      ],
+      "affects_units": [
+        "G5.1",
+        "G5.2",
+        "I1.1",
+        "I1.4",
+        "E1.6",
+        "H4.3"
+      ],
+      "status": "answered",
+      "answer": "Optie 1: Gat laten staan, met opmerking 'wordt in een andere lesbrief verwacht' bij G5.1, I1.1-02, I1.4-01 en E1.6-01-d (geen koppeling)",
+      "answered_by": "user",
+      "answered_at": "2026-11-06T09:53:45Z",
+      "source_run": "20261106-1009-koppel-lweo-economie-vwo-levensloop-2025-ext",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "lweo-economie-vwo-levensloop-2025"
+    },
+    {
+      "id": "economie-075",
+      "question": "Aan welk criterium koppelen we rekenen en uitleggen met de reële waarde, nu de lesbrief reële waarde en koopkracht gelijkstelt?",
+      "context": "§4.3: 'De reële waarde wordt ook wel koopkracht genoemd.' Daardoor passen E1.6-01-c (reële waarde en reëel indexcijfer berekenen) en I1.4-01-b (koopkracht van een geldbedrag berekenen met een prijsindexcijfer) vaak allebei. Het gaat om 7 rekenvragen (4.10b, 4.10c, 4.12d, 4.20c, 4.20e, 4.25.II, 4.28e) en 4 uitlegvragen (4.8a, 4.10e, 4.12c, 4.22.8). 4.20c gaat over het nationaal inkomen, de rest over spaargeld, vermogen of inkomen van een gezin. Zonder regel verschillen de beoordelaars en telt het ene criterium als geoefend en het andere niet. Vervalt als I1.4 niet in de lijst komt.",
+      "options": [
+        "E1.6-01-c is de eigenaar van elke berekening met nominaal en prijsindexcijfer; I1.4-01-b komt er als tweede koppeling bij als het om de waarde van een geldbedrag bij inflatie gaat (spaargeld, vermogen), niet bij lonen of nationaal inkomen; uitleggen waarom de waarde daalt aan I1.4-01-a",
+        "Alleen E1.6-01-c bij elke berekening; I1.4-01 alleen als de vraag het woord koopkracht gebruikt",
+        "Altijd beide koppelen"
+      ],
+      "proposed": "Optie 1: de leerling voert beide prestaties uit waar het om een geldbedrag gaat, en E1.6 blijft eigenaar van de algemene rekenregel (lijn van economie-008).",
+      "impact": "medium",
+      "applies_to": [
+        "mapping-judge",
+        "exercise-judge",
+        "mapping-verifier"
+      ],
+      "affects_units": [
+        "E1.6",
+        "I1.4"
+      ],
+      "status": "answered",
+      "answer": "Optie 1: E1.6-01-c is de eigenaar van elke berekening met nominaal en prijsindexcijfer; I1.4-01-b komt er als tweede koppeling bij als het om de waarde van een geldbedrag bij inflatie gaat (spaargeld, vermogen), niet bij lonen of nationaal inkomen; uitleggen waarom de waarde daalt aan I1.4-01-a",
+      "answered_by": "user",
+      "answered_at": "2026-11-06T09:53:45Z",
+      "source_run": "20261106-1009-koppel-lweo-economie-vwo-levensloop-2025-ext",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "lweo-economie-vwo-levensloop-2025"
+    },
+    {
+      "id": "economie-076",
+      "question": "Telt het vergelijken van een rentepercentage met de inflatie als oefening van het criterium over de reële rente, ook al gebruikt de lesbrief die term niet?",
+      "context": "I1.1-02-d vraagt of de reële rente positief of negatief is bij gegeven nominale rente en inflatie. De lesbrief zegt 'reële rente' nergens, maar 4.8b (rente die de koopkracht gelijk houdt), 4.10d (2,2% rente tegenover 2,4% inflatie) en 4.25.I (3,75% tegenover 2,8%) vragen wel die vergelijking. De hogere rente door onzekere inflatie in 4.8c hoort bij E1.5-02-c (buiten de lijst, koppeling blijft bewaard). Vervalt als I1.1 niet in de lijst komt.",
+      "options": [
+        "Ja: aan I1.1-02-d met opmerking 'zonder de term reële rente'; I1.1-02-c blijft een gat",
+        "Nee: alleen aan I1.4-01-a of E1.6; I1.1-02-c en -d blijven allebei een gat"
+      ],
+      "proposed": "Optie 1: de leerling doet wat het criterium vraagt, alleen de naam ontbreekt; de opmerking voorkomt dat het lijkt alsof de term geleerd is.",
+      "impact": "low",
+      "applies_to": [
+        "mapping-judge",
+        "exercise-judge",
+        "mapping-verifier"
+      ],
+      "affects_units": [
+        "I1.1"
+      ],
+      "status": "answered",
+      "answer": "Optie 2: Nee: alleen aan I1.4-01-a of E1.6; I1.1-02-c en -d blijven allebei een gat",
+      "answered_by": "user",
+      "answered_at": "2026-11-06T09:53:45Z",
+      "source_run": "20261106-1009-koppel-lweo-economie-vwo-levensloop-2025-ext",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "lweo-economie-vwo-levensloop-2025"
+    },
+    {
+      "id": "economie-077",
+      "question": "Hoe koppelen we de stof uit hoofdstuk 4 waarvoor geen of geen duidelijk criterium bestaat?",
+      "context": "Economie-051 regelt dit alleen voor de genoemde onderwerpen uit H1–H3, en economie-042 hoort bij Vraag en aanbod. Geen criterium noemt wegingsfactoren, budgetonderzoek of een gewogen indexcijfer. Per onderwerp, met voorstel: (1) gewogen CPI, wegingsfactoren en budgetonderzoek (§4.3; 4.11a–c, 4.12a–b, 4.13a–b, 4.22.9, 4.29a–c: 11 deelvragen): buiten syllabus, gemeld als 'geen eindterm'; alleen inflatie of CPI bepalen uit CPI-waarden (4.13d, 4.13e, 4.24, 4.29d) aan I1.1-02-b. (2) rekenen met indexcijfers op zich (4.9a–c, 4.10a, 4.13c, 4.20a–b: 7 deelvragen): vaardigheid uit domein A, dus 'geen eindterm'. (3) rendement en koers van aandelen en obligaties (4.4b, 4.5b–c, 4.6a–b): aan G5.2-01-c, zoals economie-042; dividend tegenover rente (4.22.7) aan G5.2-01-a; wat beleggen is en verhandelbaarheid (4.3, 4.22.5, 4.22.6): 'geen eindterm'. (4) rente bijschrijven, ook over meerdere jaren (4.20d, 4.28d): aan E1.2-01-c, dat samengestelde interest letterlijk noemt; anders dan eindwaarde in economie-042, want dat besluit geldt hier niet. (5) kapitaalinkomen benoemen en berekenen (4.4a, 4.22.3, 4.27c): aan H1.1-02-a; telt niet als gat want H1.1 staat niet in de lijst. (6) vermogen uitrekenen als bezittingen min schulden: aan H4.3-01-a. (7) schuldhulp en negatief inkomen (4.1, 4.2a): 'geen eindterm'. Samen ongeveer 38 van de 97 deelvragen.",
+      "options": [
+        "Per onderwerp zoals in de context voorgesteld (1–7)",
+        "Als 1–7, maar de gewogen CPI (1) ook aan I1.1-02-a koppelen (de CPI als maat voor het prijspeil)",
+        "Geen vaste regel; beoordelaars beslissen per geval"
+      ],
+      "proposed": "Optie 1: wat echt geen eindterm heeft blijft zichtbaar zonder de dekking op te blazen, en de koppelingen volgen het criterium dat dezelfde handeling vraagt (lijn van economie-051). I1.1-02-a vraagt alleen dat de CPI het prijspeil meet, niet hoe die is opgebouwd.",
+      "impact": "high",
+      "applies_to": [
+        "mapping-judge",
+        "exercise-judge",
+        "mapping-verifier"
+      ],
+      "affects_units": [
+        "E1.2",
+        "G5.2",
+        "H1.1",
+        "H4.3",
+        "I1.1"
+      ],
+      "status": "answered",
+      "answer": "Optie 1: Per onderwerp zoals in de context voorgesteld (1-7)",
+      "answered_by": "user",
+      "answered_at": "2026-11-06T09:53:45Z",
+      "source_run": "20261106-1009-koppel-lweo-economie-vwo-levensloop-2025-ext",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "lweo-economie-vwo-levensloop-2025"
+    },
+    {
+      "id": "economie-078",
+      "question": "Koppelen we belastingberekeningen in box 2 en box 3 aan de criteria over de inkomstenbelasting?",
+      "context": "H4.6-02-b vraagt de te betalen inkomstenbelasting berekenen uit bruto-inkomen, aftrekposten, bijtellingen, een tarieftabel en heffingskortingen; §4.4 berekent box 3 in drie stappen (rendement, min heffingsvrij inkomen, maal tarief) en zegt dat er geen schijven en heffingskortingen zijn. Box 2 (4.14a) heeft wel twee schijven. H4.6-03-a vraagt belastingen indelen, met 'belasting op vermogen' als soort. Raakt §4.4 en 10 deelvragen: 4.14a–b, 4.15a–c, 4.30a–c, 4.31a–b. Bij vennootschapsbelasting koos u voor koppelen aan H4.6-03-a en H4.6-01-a (economie-051). 4.15c gaat over het secundair inkomen en valt gewoon onder H4.4-01.",
+      "options": [
+        "Berekeningen aan H4.6-02-b met opmerking 'deels: box 2/3, zonder aftrekposten en heffingskortingen'; indelen in boxen en soorten belasting aan H4.6-03-a; vergelijken van tarieven (4.14b) en het marginale tarief (4.31) aan H4.6-01-a",
+        "Berekeningen 'geen eindterm' (H4.6-02 gaat over box 1); alleen indelen aan H4.6-03-a",
+        "Alleen de opgaven koppelen; §4.4 telt niet als uitleg van H4.6-02-b"
+      ],
+      "proposed": "Optie 1: de leerling voert dezelfde handeling uit als in box 1 (belastbaar inkomen bepalen, tarief toepassen), en 'deels' laat zien dat aftrekposten en heffingskortingen hier niet geoefend worden. Dit past bij economie-051.",
+      "impact": "medium",
+      "applies_to": [
+        "mapping-judge",
+        "exercise-judge",
+        "mapping-verifier"
+      ],
+      "affects_units": [
+        "H4.6"
+      ],
+      "status": "answered",
+      "answer": "Optie 1: Berekeningen aan H4.6-02-b met opmerking 'deels: box 2/3, zonder aftrekposten en heffingskortingen'; indelen in boxen en soorten belasting aan H4.6-03-a; vergelijken van tarieven (4.14b) en het marginale tarief (4.31) aan H4.6-01-a",
+      "answered_by": "user",
+      "answered_at": "2026-11-06T09:53:45Z",
+      "source_run": "20261106-1009-koppel-lweo-economie-vwo-levensloop-2025-ext",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "lweo-economie-vwo-levensloop-2025"
+    },
+    {
+      "id": "economie-079",
+      "question": "Tellen vragen over de verdeling van vermogen ook als oefening van de criteria die over inkomensongelijkheid gaan?",
+      "context": "H4.1-01 (Lorenzcurve, Gini), H4.1-02 (percentielenratio) en H4.4-01 (nivelleren) noemen alleen inkomen; H4.3-01-c gebruikt een maatstaf om vermogensongelijkheid met inkomensongelijkheid te vergelijken. §4.5 en de Kunnen-lijst ('met behulp van een ratio, lorenzcurve en een Gini-coëfficiënt de vermogensongelijkheid beschrijven') doen hetzelfde voor vermogen. Het gaat om 4.16a, 4.16c, 4.17a, 4.21c, 4.21d, 4.26 en, voor nivelleren, 4.17b (7 deelvragen). Economie-062 gaat alleen over inkomensaandelen. §4.5 zelf noemt de Gini-coëfficiënt niet; die komt alleen in opgaven voor.",
+      "options": [
+        "Alleen aan H4.3-01-c (of -b bij een verklaring); H4.1 en H4.4 blijven voor inkomen; 4.17b (nivellerend op de vermogensverdeling) krijgt 'geen eindterm'",
+        "Aan H4.3-01 en daarnaast aan het inkomenscriterium met opmerking 'vermogen' (H4.1-01-c, H4.1-02, H4.4-01-d)",
+        "Alleen aan het inkomenscriterium met opmerking 'vermogen'"
+      ],
+      "proposed": "Optie 1: H4.3 is de meest specifieke eindterm voor vermogen, en anders lijkt H4.1 vaker geoefend dan het is (zelfde redenering als economie-035).",
+      "impact": "medium",
+      "applies_to": [
+        "mapping-judge",
+        "exercise-judge",
+        "mapping-verifier"
+      ],
+      "affects_units": [
+        "H4.1",
+        "H4.3",
+        "H4.4"
+      ],
+      "status": "answered",
+      "answer": "Optie 1: Alleen aan H4.3-01-c (of -b bij een verklaring); H4.1 en H4.4 blijven voor inkomen; 4.17b (nivellerend op de vermogensverdeling) krijgt 'geen eindterm'",
+      "answered_by": "user",
+      "answered_at": "2026-11-06T09:53:45Z",
+      "source_run": "20261106-1009-koppel-lweo-economie-vwo-levensloop-2025-ext",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "lweo-economie-vwo-levensloop-2025"
+    },
+    {
+      "id": "economie-080",
+      "question": "Mogen de volgende methodetermen bij het koppelen gelijkstaan aan de term in het criterium (woordenlijst voor hoofdstuk 4 van deze lesbrief)?",
+      "context": "Zonder deze paren mist de kandidatenselectie paragrafen die het begrip onder een andere naam uitleggen. Paren (criteriumterm → term in het boek): reële grootheid → reële waarde; nominale grootheid → nominale waarde; reëel indexcijfer → indexcijfer reële waarde, RIC; nominaal indexcijfer → indexcijfer nominale waarde, NIC; prijsindexcijfer → PIC; consumentenprijsindex → CPI, consumentenprijsindexcijfer; prijspeil → algemeen prijspeil, algemeen prijsniveau; koersverandering → koersresultaat, koerswinst, koersverlies; verwacht rendement → te verwachten rendement, potentiële rendement; risicoaversie → risico-aversie; Gini-coëfficiënt → Ginicoëfficiënt; kapitaalinkomen → inkomen uit vermogen; ongelijkheid van vermogen → vermogensongelijkheid, vermogensverdeling, vermogensverschillen; vastgoed → onroerend goed; belasting op vermogen → vermogensrendementsheffing, box 3. 'Koopkracht' blijft een eigen term: een boekterm kan maar bij één criteriumterm staan, en de koppeling wordt geregeld in de vraag over reële waarde en koopkracht. Het laatste paar is de enige twijfel: box 3 belast formeel het inkomen uit vermogen, niet het vermogen zelf. Raakt E1.6, G5.1, G5.2, H4.1, H4.3, H4.6, I1.1 en I1.4 (ongeveer 10 groepen).",
+      "options": [
+        "Alle paren overnemen",
+        "Alle paren overnemen behalve vermogensrendementsheffing/box 3 → belasting op vermogen",
+        "Geen woordenlijst; beoordelaars beslissen per geval"
+      ],
+      "proposed": "Optie 1: de lesbrief gebruikt deze termen als synoniem of spelvariant, en H4.6-03-a deelt belastingen in op wat belast wordt, waar box 3 de vermogensbelasting van de lesbrief is.",
+      "impact": "medium",
+      "applies_to": [
+        "mapping-judge",
+        "exercise-judge",
+        "mapping-verifier",
+        "method-ingest"
+      ],
+      "affects_units": [
+        "E1.6",
+        "G5.1",
+        "G5.2",
+        "H4.1",
+        "H4.3",
+        "H4.6",
+        "I1.1",
+        "I1.4"
+      ],
+      "status": "answered",
+      "answer": "Optie 1: Alle paren overnemen",
+      "answered_by": "user",
+      "answered_at": "2026-11-06T09:53:45Z",
+      "source_run": "20261106-1009-koppel-lweo-economie-vwo-levensloop-2025-ext",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "lweo-economie-vwo-levensloop-2025"
+    },
+    {
+      "id": "economie-081",
+      "question": "Deelvraag 4.25.II: koppelen we die aan de berekening in het antwoordmodel of aan de reële waarde in een foute optie?",
+      "context": "De context van economie-075 noemt 4.25.II als rekenvraag met reële waarde, dus staat de vraag nu op E1.6-01-c en I1.4-01-b. Het juiste antwoord is B, de rente (€ 780 x 0,0375 = € 29,25); de reële waarde staat alleen in foute optie C. Die berekening past bij E1.2-01-c, net als 4.20d (economie-077 punt 4), maar met maximaal twee criteria past die er niet bij. Beide judges meldden dit; de verificateur liet de koppelingen staan met zekerheid een stap omlaag.",
+      "options": [
+        "Koppelingen laten staan (E1.6-01-c en I1.4-01-b): de leerling moet optie C uitsluiten",
+        "E1.6-01-c en E1.2-01-c: de eigenaar van de reële waarde plus de berekening uit het antwoordmodel; I1.4-01-b vervalt",
+        "Alleen E1.2-01-c: een foute optie telt niet als oefening"
+      ],
+      "proposed": "Optie 2: het antwoordmodel laat zien wat de vraag oefent, en de reële waarde blijft zichtbaar via de eigenaar.",
+      "impact": "low",
+      "applies_to": [
+        "exercise-judge",
+        "mapping-verifier"
+      ],
+      "affects_units": [
+        "E1.2",
+        "E1.6",
+        "I1.4"
+      ],
+      "status": "open",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null,
+      "source_run": "20261106-1009-koppel-lweo-economie-vwo-levensloop-2025-ext",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "lweo-economie-vwo-levensloop-2025"
     }
   ]
 }

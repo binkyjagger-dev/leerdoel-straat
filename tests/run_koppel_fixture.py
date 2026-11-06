@@ -43,9 +43,12 @@ def extend_scenario(prev, s):
     """--extend (specs/13 §5): the finished fixture run plus a new chapter H2 with one paragraph."""
     ok = True
     rj = json.loads((prev / "run.json").read_text(encoding="utf-8"))
-    rj["status"] = "done"; (prev / "run.json").write_text(json.dumps(rj), encoding="utf-8")
+    rj["status"] = "done"; rj["scope_exclude_groups"] = ["X9.9-01"]
+    (prev / "run.json").write_text(json.dumps(rj), encoding="utf-8")
     x = prev.parent / "ext-run"
     ok &= run("extend: prepare", f"{s}/koppel_extend.py", "prepare", str(x), str(prev))
+    xj = json.loads((x / "run.json").read_text(encoding="utf-8"))
+    ok &= check("prepare carries scope_exclude_groups", xj.get("scope_exclude_groups") == ["X9.9-01"])
     q = "Een uitkomst tussen 0 en -1 noemen we inelastisch; is de uitkomst kleiner dan -1, dan noemen we de vraag elastisch."
     (x / "text" / "H2.1.txt").write_text("2.1 Elasticiteit interpreteren\n\nDe prijselasticiteit zegt hoe sterk de vraag reageert. " + q + "\n", encoding="utf-8")
     meth = json.loads((x / "11_method_units.prev.json").read_text(encoding="utf-8"))["method"]
@@ -74,6 +77,9 @@ def extend_scenario(prev, s):
         for uid, crits in todo["delta"].items():
             (x / f"13_judgements.{j}" / f"{uid}.ext.json").write_text(json.dumps({"judge": j, "unit_id": uid,
                 "judgements": [jd(c, "none") for c in crits]}), encoding="utf-8")
+    ok &= run("extend: todo again", f"{s}/koppel_extend.py", "todo", str(x))
+    todo2 = json.loads((x / "12_extend_todo.json").read_text(encoding="utf-8"))
+    ok &= check("todo rerun keeps delta, nothing open", todo2["delta"] == todo["delta"] and not todo2["open"])
     same = all((prev / f"13_judgements.{j}" / f.name).read_bytes() == f.read_bytes()
                for j in "AB" for f in (x / f"13_judgements.{j}").glob("H1.?.json"))
     ok &= check("judgements of the previous run reused unchanged", same)

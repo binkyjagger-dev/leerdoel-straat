@@ -232,6 +232,277 @@
       "scope": "lweo-economie-vwo-levensloop-2025",
       "decision": "economie-062",
       "added_at": "2026-11-02"
+    },
+    {
+      "term": "volkomen concurrentie",
+      "synonyms": [
+        "volledige mededinging"
+      ],
+      "scope": "lweo-economie-vwo-marktgedrag-2023",
+      "decision": "economie-070",
+      "added_at": "2026-11-02"
+    },
+    {
+      "term": "prijsnemer",
+      "synonyms": [
+        "hoeveelheidsaanpasser"
+      ],
+      "scope": "lweo-economie-vwo-marktgedrag-2023",
+      "decision": "economie-070",
+      "added_at": "2026-11-02"
+    },
+    {
+      "term": "beste-antwoordmethode",
+      "synonyms": [
+        "best response methode",
+        "best response"
+      ],
+      "scope": "lweo-economie-vwo-marktgedrag-2023",
+      "decision": "economie-070",
+      "added_at": "2026-11-02"
+    },
+    {
+      "term": "pay-off matrix",
+      "synonyms": [
+        "opbrengstenmatrix"
+      ],
+      "scope": "lweo-economie-vwo-marktgedrag-2023",
+      "decision": "economie-070",
+      "added_at": "2026-11-02"
+    },
+    {
+      "term": "spelboom",
+      "synonyms": [
+        "beslisboom",
+        "beslissingsboom"
+      ],
+      "scope": "lweo-economie-vwo-marktgedrag-2023",
+      "decision": "economie-070",
+      "added_at": "2026-11-02"
+    },
+    {
+      "term": "vergeldingsstrategie",
+      "synonyms": [
+        "tit-for-tat-strategie",
+        "tit-for-tat"
+      ],
+      "scope": "lweo-economie-vwo-marktgedrag-2023",
+      "decision": "economie-070",
+      "added_at": "2026-11-02"
+    },
+    {
+      "term": "toetredingsmogelijkheden",
+      "synonyms": [
+        "toetredingsbarrières",
+        "vrije toe- en uittreding"
+      ],
+      "scope": "lweo-economie-vwo-marktgedrag-2023",
+      "decision": "economie-070",
+      "added_at": "2026-11-02"
+    },
+    {
+      "term": "heterogeniteit van de goederen",
+      "synonyms": [
+        "heterogeen product",
+        "productdifferentiatie"
+      ],
+      "scope": "lweo-economie-vwo-marktgedrag-2023",
+      "decision": "economie-070",
+      "added_at": "2026-11-02"
+    },
+    {
+      "term": "winst per eenheid",
+      "synonyms": [
+        "winstmarge",
+        "GW"
+      ],
+      "scope": "lweo-economie-vwo-marktgedrag-2023",
+      "decision": "economie-070",
+      "added_at": "2026-11-02"
+    },
+    {
+      "term": "toezichthouder",
+      "synonyms": [
+        "mededingingsautoriteit",
+        "kartelwaakhond"
+      ],
+      "scope": "lweo-economie-vwo-marktgedrag-2023",
+      "decision": "economie-070",
+      "added_at": "2026-11-02"
+    },
+    {
+      "term": "octrooi",
+      "synonyms": [
+        "alleenrecht",
+        "patent"
+      ],
+      "scope": "lweo-economie-vwo-marktgedrag-2023",
+      "decision": "economie-070",
+      "added_at": "2026-11-02"
+    },
+    {
+      "term": "dreiging van een prijzenoorlog",
+      "synonyms": [
+        "dreigen met prijsverlagingen"
+      ],
+      "scope": "lweo-economie-vwo-marktgedrag-2023",
+      "decision": "economie-070",
+      "added_at": "2026-11-02"
+    },
+    {
+      "term": "suboptimale Nash-evenwicht",
+      "synonyms": [
+        "suboptimaal resultaat",
+        "suboptimaal evenwicht"
+      ],
+      "scope": "lweo-economie-vwo-marktgedrag-2023",
+      "decision": "economie-070",
+      "added_at": "2026-11-02"
+    },
+    {
+      "term": "reële grootheid",
+      "synonyms": [
+        "reële waarde"
+      ],
+      "scope": "lweo-economie-vwo-levensloop-2025",
+      "decision": "economie-080",
+      "added_at": "2026-11-06"
+    },
+    {
+      "term": "nominale grootheid",
+      "synonyms": [
+        "nominale waarde"
+      ],
+      "scope": "lweo-economie-vwo-levensloop-2025",
+      "decision": "economie-080",
+      "added_at": "2026-11-06"
+    },
+    {
+      "term": "reëel indexcijfer",
+      "synonyms": [
+        "indexcijfer reële waarde",
+        "RIC"
+      ],
+      "scope": "lweo-economie-vwo-levensloop-2025",
+      "decision": "economie-080",
+      "added_at": "2026-11-06"
+    },
+    {
+      "term": "nominaal indexcijfer",
+      "synonyms": [
+        "indexcijfer nominale waarde",
+        "NIC"
+      ],
+      "scope": "lweo-economie-vwo-levensloop-2025",
+      "decision": "economie-080",
+      "added_at": "2026-11-06"
+    },
+    {
+      "term": "prijsindexcijfer",
+      "synonyms": [
+        "PIC"
+      ],
+      "scope": "lweo-economie-vwo-levensloop-2025",
+      "decision": "economie-080",
+      "added_at": "2026-11-06"
+    },
+    {
+      "term": "consumentenprijsindex",
+      "synonyms": [
+        "CPI",
+        "consumentenprijsindexcijfer"
+      ],
+      "scope": "lweo-economie-vwo-levensloop-2025",
+      "decision": "economie-080",
+      "added_at": "2026-11-06"
+    },
+    {
+      "term": "prijspeil",
+      "synonyms": [
+        "algemeen prijspeil",
+        "algemeen prijsniveau"
+      ],
+      "scope": "lweo-economie-vwo-levensloop-2025",
+      "decision": "economie-080",
+      "added_at": "2026-11-06"
+    },
+    {
+      "term": "koersverandering",
+      "synonyms": [
+        "koersresultaat",
+        "koerswinst",
+        "koersverlies"
+      ],
+      "scope": "lweo-economie-vwo-levensloop-2025",
+      "decision": "economie-080",
+      "added_at": "2026-11-06"
+    },
+    {
+      "term": "verwacht rendement",
+      "synonyms": [
+        "te verwachten rendement",
+        "potentiële rendement"
+      ],
+      "scope": "lweo-economie-vwo-levensloop-2025",
+      "decision": "economie-080",
+      "added_at": "2026-11-06"
+    },
+    {
+      "term": "risicoaversie",
+      "synonyms": [
+        "risico-aversie"
+      ],
+      "scope": "lweo-economie-vwo-levensloop-2025",
+      "decision": "economie-080",
+      "added_at": "2026-11-06"
+    },
+    {
+      "term": "Gini-coëfficiënt",
+      "synonyms": [
+        "Ginicoëfficiënt"
+      ],
+      "scope": "lweo-economie-vwo-levensloop-2025",
+      "decision": "economie-080",
+      "added_at": "2026-11-06"
+    },
+    {
+      "term": "kapitaalinkomen",
+      "synonyms": [
+        "inkomen uit vermogen"
+      ],
+      "scope": "lweo-economie-vwo-levensloop-2025",
+      "decision": "economie-080",
+      "added_at": "2026-11-06"
+    },
+    {
+      "term": "ongelijkheid van vermogen",
+      "synonyms": [
+        "vermogensongelijkheid",
+        "vermogensverdeling",
+        "vermogensverschillen"
+      ],
+      "scope": "lweo-economie-vwo-levensloop-2025",
+      "decision": "economie-080",
+      "added_at": "2026-11-06"
+    },
+    {
+      "term": "vastgoed",
+      "synonyms": [
+        "onroerend goed"
+      ],
+      "scope": "lweo-economie-vwo-levensloop-2025",
+      "decision": "economie-080",
+      "added_at": "2026-11-06"
+    },
+    {
+      "term": "belasting op vermogen",
+      "synonyms": [
+        "vermogensrendementsheffing",
+        "box 3"
+      ],
+      "scope": "lweo-economie-vwo-levensloop-2025",
+      "decision": "economie-080",
+      "added_at": "2026-11-06"
     }
   ]
 }

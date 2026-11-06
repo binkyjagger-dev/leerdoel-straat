@@ -6,7 +6,7 @@ Usage:
   decisions.py validate <subject>
   decisions.py list     <subject> [--open]              print decisions (open only with --open)
   decisions.py add      <subject> <intake_questions.json> --run <run_id>
-                                                         append questions as open decisions (skips duplicate keys/questions)
+                                                         append questions as open decisions (skips a question with the same text, context and scope, and says so)
   decisions.py answer   <subject> <id> "<answer>" [--by <name>] [--run <run_id>]
   decisions.py answer-file <subject> <answers.json> [--by <name>] [--run <run_id>]
                                                          answers.json = {"<id>": "<answer>", ...}
@@ -112,10 +112,14 @@ def cmd_list(subject: str, open_only: bool) -> None:
 def cmd_add(subject: str, questions_path: str, run_id: str | None) -> None:
     data = _load(subject)
     iq = load_json(questions_path)
-    existing = {_norm(d["question"]) for d in data["decisions"] if d["status"] != "superseded"}
+    def same(d: dict) -> tuple:
+        return _norm(d["question"]), _norm(d.get("context") or ""), d.get("scope")
+
+    existing = {same(d): d["id"] for d in data["decisions"] if d["status"] != "superseded"}
     added = 0
     for q in iq["questions"]:
-        if _norm(q["question"]) in existing:
+        if same(q) in existing:
+            print(f"[decisions] skipped, same as {existing[same(q)]}: {q['question'][:70]}")
             continue
         data["decisions"].append({
             "id": _next_id(subject, data), "question": q["question"], "context": q.get("context"),
@@ -124,7 +128,7 @@ def cmd_add(subject: str, questions_path: str, run_id: str | None) -> None:
             "status": "open", "answer": None, "answered_by": None, "answered_at": None,
             "source_run": run_id, "raised_by": iq.get("raised_by", "intake"), "supersedes": None, "scope": q.get("scope"),
         })
-        existing.add(_norm(q["question"]))
+        existing[same(q)] = data["decisions"][-1]["id"]
         added += 1
     _save(subject, data)
     print(f"[decisions] added {added} open decision(s) to {subject}")

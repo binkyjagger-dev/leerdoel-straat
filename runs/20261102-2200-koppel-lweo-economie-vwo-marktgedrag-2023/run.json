@@ -1,0 +1,64 @@
+{
+  "run_id": "20261102-2200-koppel-lweo-economie-vwo-marktgedrag-2023",
+  "subject": "economie",
+  "method_id": "lweo-economie-vwo-marktgedrag-2023",
+  "from_run": "20261012-2220-economie-vwo-2026-run2",
+  "chapters": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "part": "AB",
+  "max_repair_rounds": 1,
+  "judge_batch": 4,
+  "status": "done",
+  "started_at": "2026-11-02T21:45:37+01:00",
+  "criteria_source": "10_criteria.json copied from runs/20261102-1330-koppel-lweo-economie-vwo-levensloop-2025 (source run has no 04_groups_student.json)",
+  "book_note": "book = two scanned PDFs (H1-H2, H3-H4) rendered with PyMuPDF at 200 dpi to input/book/p001-p062.png (p001-031 = H1-H2 pdf, p032-062 = H3-H4 pdf)",
+  "scope_paragraphs": [
+    "H1.1",
+    "H1.2",
+    "H1.2.1",
+    "H1.3",
+    "H1.4",
+    "H2.1",
+    "H2.2",
+    "H3.1",
+    "H3.2",
+    "H3.3",
+    "H3.4",
+    "H4.1",
+    "H4.2",
+    "H4.3",
+    "H4.4"
+  ],
+  "scope_criteria": [
+    "D1.18",
+    "D1.21",
+    "D2.1",
+    "D2.2",
+    "F1.2",
+    "F1.3",
+    "F1.4",
+    "F1.5",
+    "F1.6",
+    "F1.7",
+    "F1.10",
+    "F1.11",
+    "F1.12",
+    "G3.4"
+  ],
+  "scope_note": "economie-064 (scope A, F1.2-02 included); economie-065 takes over 047/051/052/056/057/058/061/063/038/041/043/044/046; 057: Transfer/Zelftest only part B",
+  "verb_level_exceptions": [
+    {
+      "verbs": [
+        "opstellen",
+        "samenstellen"
+      ],
+      "bloom": "toepassen",
+      "decision": "economie-047"
+    }
+  ],
+  "finished_at": "2026-11-02T23:49:22+01:00"
+}

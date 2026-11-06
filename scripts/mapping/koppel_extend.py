@@ -4,7 +4,7 @@
 Usage:
   koppel_extend.py prepare <run_dir> <prev_run_dir>   X0: new run R from finished run P (P untouched)
   koppel_extend.py merge-units <run_dir>              X1b: 11_method_units.prev + .new -> 11_method_units.json
-  koppel_extend.py todo <run_dir>                     X2: 12_extend_todo.json (new paragraphs + delta pairs)
+  koppel_extend.py todo <run_dir>                     X2: 12_extend_todo.json (new paragraphs, delta pairs, open pairs)
   koppel_extend.py merge-verification <run_dir> [--part A|B]
                                                       X5/X6: <prev> + <ext> -> 15_verification.json (A)
                                                       or 19_ex_verification.json (B)
@@ -25,7 +25,8 @@ from pathlib import Path
 from mcommon import Report, load_json, save_json, validate_schema
 
 RUN_FIELDS = ("subject", "method_id", "from_run", "chapters", "part", "max_repair_rounds", "judge_batch",
-              "scope_criteria", "ex_scope_paragraphs", "ex_scope_note", "verb_level_exceptions")
+              "scope_criteria", "scope_exclude_groups", "scope_note", "ex_scope_paragraphs", "ex_scope_note",
+              "verb_level_exceptions")
 COPY_DIRS = ("text", "input", "13_judgements.A", "13_judgements.B", "13_judgements.R",
              "18_ex_judgements.A", "18_ex_judgements.B", "18_ex_judgements.R")
 RENAME = {"11_method_units.json": "11_method_units.prev.json",
@@ -130,19 +131,23 @@ def todo(run_dir: Path, rep: Report) -> None:
             union[c["unit_id"]].add(pc["criterion_id"])
     a, b = judged(run_dir, "A"), judged(run_dir, "B")
     new_paras = run["extend"].get("new_paragraphs", [])
-    delta = {}
+    # delta is cumulative: X5 and X7 read it, so a rerun after X3 must keep the pairs judged since; open = still to judge
+    delta = {uid: set(crits) for uid, crits in run["extend"].get("delta", {}).items()}
+    open_pairs = {}
     for uid, crits in sorted(union.items()):
         if uid in new_paras:
             continue
         missing = sorted(c for c in crits if (c, uid) not in a or (c, uid) not in b)
         if missing:
-            delta[uid] = missing
-    out = {"new_paragraphs": new_paras, "delta": delta}
+            open_pairs[uid] = missing
+            delta.setdefault(uid, set()).update(missing)
+    delta = {uid: sorted(delta[uid]) for uid in sorted(delta)}
+    out = {"new_paragraphs": new_paras, "delta": delta, "open": open_pairs}
     save_json(run_dir / "12_extend_todo.json", out)
     run["extend"]["delta"] = delta
     save_json(run_dir / "run.json", run)
     rep.info("X2", f"{len(new_paras)} new paragraphs to judge fully; {sum(len(v) for v in delta.values())} delta pairs "
-                   f"on {len(delta)} old paragraphs")
+                   f"on {len(delta)} old paragraphs; {sum(len(v) for v in open_pairs.values())} still open")
 
 
 def merge_verification(run_dir: Path, part: str, rep: Report) -> None:

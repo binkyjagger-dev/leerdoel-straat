@@ -70,6 +70,9 @@ Fields: `status` ∈ `open | answered | superseded`; `impact` ∈ `high | medium
 unit ids or `["*"]`; `raised_by` ∈ `intake | verifier | ingest | human`.
 Schema: `schemas/decisions.schema.json`. Decisions are append-only; a changed
 answer supersedes the old decision (new id, old `status: superseded`).
+`decisions.py add` skips a question only when question text, context and scope
+all equal a live decision (a generic question such as the glossary one recurs
+with other pairs), and names the existing id for every question it skips.
 
 ## 3. The intake step (1b)
 
