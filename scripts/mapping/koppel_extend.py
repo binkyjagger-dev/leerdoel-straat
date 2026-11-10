@@ -105,6 +105,7 @@ def merge_units(run_dir: Path, rep: Report) -> None:
     if "ex_scope_paragraphs" in run:
         run["ex_scope_paragraphs"] = list(dict.fromkeys(run["ex_scope_paragraphs"] + new_paras))
     run["extend"]["new_paragraphs"] = new_paras
+    run["extend"]["new_subquestions"] = [u["unit_id"] for u in new["units"] if u["kind"] == "deelvraag"]
     save_json(run_dir / "run.json", run)
     moved = [u["unit_id"] for u in paras if u["unit_id"] in old_ids and u["order"] !=
              next(x.get("order") for x in prev["units"] if x["unit_id"] == u["unit_id"])]

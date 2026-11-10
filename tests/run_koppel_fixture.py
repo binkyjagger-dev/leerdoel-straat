@@ -60,6 +60,7 @@ def extend_scenario(prev, s):
     ok &= run("extend: merge-units", f"{s}/koppel_extend.py", "merge-units", str(x))
     units = json.loads((x / "11_method_units.json").read_text(encoding="utf-8"))["units"]
     ok &= check("new paragraph ordered after the old ones", next(u["order"] for u in units if u["unit_id"] == "H2.1") == 4)
+    ok &= check("merge-units records new sub-questions (none here)", json.loads((x / "run.json").read_text(encoding="utf-8"))["extend"].get("new_subquestions") == [])
     ok &= run("extend: validate_method", f"{s}/validate_method.py", str(x))
     ok &= run("extend: candidates", f"{s}/candidates.py", str(x))
     ok &= run("extend: todo", f"{s}/koppel_extend.py", "todo", str(x))
@@ -98,6 +99,9 @@ def extend_scenario(prev, s):
     ok &= run("extend: export", f"{s}/export_mappings.py", str(x))
     sample = (x / "output" / "steekproef.md").read_text(encoding="utf-8")
     ok &= check("extend sample only from the new paragraph", "× 2.1 " in sample and "× 1." not in sample)
+    ok &= run("extend: export_exercises", f"{s}/export_exercises.py", str(x))
+    exs = (x / "output" / "steekproef_opgaven.md").read_text(encoding="utf-8")
+    ok &= check("extend exercise sample skips old exercises", "0 koppelingen" in exs)
     # teacher review (specs/14 §5.1): reject one old link, correct the new one to mentions, one entry on a non-link
     links = json.loads((x / "14_mappings.json").read_text(encoding="utf-8"))["links"]
     rej = next(l for l in links if l["unit_id"] != "H2.1")

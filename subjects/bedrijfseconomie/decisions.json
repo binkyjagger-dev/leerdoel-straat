@@ -1731,6 +1731,241 @@
       "raised_by": "intake",
       "supersedes": null,
       "scope": "vanvlimmeren-bedrijfseconomie-vwo-in-balans"
+    },
+    {
+      "id": "bedrijfsecon-054",
+      "question": "Welk Bloom-niveau krijgen de opgaven met 'motiveer', 'bereken of het verstandig is', 'geef een analyse door het berekenen van', 'teken' en 'bepaal/controleer aan de hand van de grafiek'?",
+      "context": "De werkwoordentabel van de syllabus (bijlage 3) regelt 'berekenen' en 'opstellen' (toepassen), 'verklaren' en 'onderbouwen' (begrijpen), 'analyseren' (analyseren) en 'beoordelen'/'afwegen' (evalueren). De opgaven gebruiken ook werkwoorden die de tabel niet regelt of die met de gevraagde prestatie botsen; 11 deelvragen: (1) beslissing met een berekening: 26-14e ('Motiveer aan de hand van een berekening of Uitvaart op dit aanbod zal ingaan': € 27.000 eigen bezit tegen € 29.000 lease), 28-5e ('Bereken of het financieel verstandig is': extra dekkingsbijdrage € 102.000 min € 40.000 extra constante kosten), 28-9f ('Was het verstandig ... Motiveer met een berekening': prijs € 0,45 onder variabele kosten € 0,50); (2) motiveren zonder berekening: 26-14a (juist/onjuist, motiveer), 27-13e (directie of administrateur heeft gelijk); (3) 27-12d 'Geef een analyse van dit verschil door het berekenen van' het verschil in brutowinst, bedrijfskosten en interestopbrengst (het antwoord is een rekenoverzicht); (4) grafiek: 28-9b 'Bepaal aan de hand van de grafiek' (snijpunt TK-lijn met de verticale as aflezen), 28-10a/e 'Teken' (TK- en TO-lijn), 28-10d 'Controleer aan de hand van de grafiek', 28-10f 'Wat kun je zeggen van het snijpunt'. Zonder afspraak geven de beoordelaars verschillende niveaus (evalueren bij 'verstandig', analyseren bij 27-12d, creëren bij 'tekenen' volgens de algemene lijst) en zakt de zekerheid van die koppelingen naar 'medium'.",
+      "options": [
+        "Naar de prestatie: motiveren = begrijpen (zoals 'onderbouwen' in bijlage 3); met een berekening (26-14e, 28-5e, 28-9f) toepassen; 27-12d toepassen met als werkwoord 'berekenen'; tekenen, aflezen ('bepalen') en controleren in de grafiek toepassen; 28-10f begrijpen. 'tekenen' en 'bepalen' op toepassen worden als uitzondering voor deze koppelrun vastgelegd",
+        "Als optie 1, maar de beslisvragen 26-14e, 28-5e en 28-9f evalueren (beoordelen/afwegen) en 27-12d analyseren (het werkwoord van de vraag)",
+        "Strikt het werkwoord van de vraag: 27-12d analyseren, motiveren begrijpen (ook met berekening), tekenen en bepalen volgens de algemene lijst"
+      ],
+      "proposed": "Optie 1: elke beslissing volgt hier uit één vergelijking (kosten tegen leaseprijs, dekkingsbijdrage tegen extra constante kosten, prijs tegen variabele kosten); er worden geen criteria tegen elkaar afgewogen. 27-12d zegt zelf dat de analyse uit berekeningen bestaat, en tekenen/aflezen van TO- en TK-lijnen is in F2.30.4-02-a/b zelf toepassen.",
+      "impact": "medium",
+      "applies_to": [
+        "mapping-judge",
+        "exercise-judge",
+        "mapping-verifier"
+      ],
+      "affects_units": [
+        "H26.5-opg26-14a",
+        "H26.5-opg26-14e",
+        "H27.3-opg27-12d",
+        "H27.4-opg27-13e",
+        "H28.2-opg28-5e",
+        "H28.3-opg28-9b",
+        "H28.3-opg28-9f",
+        "H28.3-opg28-10a",
+        "H28.3-opg28-10d",
+        "H28.3-opg28-10e",
+        "H28.3-opg28-10f"
+      ],
+      "status": "answered",
+      "answer": "Naar de prestatie: motiveren = begrijpen (zoals 'onderbouwen' in bijlage 3); met een berekening (26-14e, 28-5e, 28-9f) toepassen; 27-12d toepassen met als werkwoord 'berekenen'; tekenen, aflezen ('bepalen') en controleren in de grafiek toepassen; 28-10f begrijpen. 'tekenen' en 'bepalen' op toepassen worden als uitzondering voor deze koppelrun vastgelegd",
+      "answered_by": "user",
+      "answered_at": "2026-11-10T11:59:10Z",
+      "source_run": "20261110-1242-koppel-vanvlimmeren-bedrijfseconomie-vwo-in-balans-ext",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "vanvlimmeren-bedrijfseconomie-vwo-in-balans"
+    },
+    {
+      "id": "bedrijfsecon-055",
+      "question": "Welk criterium oefenen de opgaven die de variabele kosten per product, de constante kosten of de verkoopprijs afleiden uit twee kostenniveaus of uit een grafiek (28-1, 28-9a-c, 28-10b-d)?",
+      "context": "Geen criterium vraagt letterlijk 'bereken de variabele en constante kosten uit de totale kosten bij twee afzetniveaus' of 'lees prijs, constante en variabele kosten af uit de TO- en TK-lijn'. Het gaat om 8 deelvragen: 28-1a/b (TK € 300.000 bij 15.000 en € 270.000 bij 12.000 → v = € 10, dan C), 28-10b/c (zelfde bij 5.000 en 10.000 producten), 28-10d (C controleren in de grafiek), 28-9a/b/c (prijs per kilo uit de TO-lijn, C als snijpunt van de TK-lijn met de verticale as, v uit de TK-lijn). Het dichtst in de buurt: F2.30.1-02-b (begrijpen: bij proportioneel variabele kosten verandert het totaal in dezelfde verhouding als de afzet en blijven de variabele kosten per eenheid gelijk; daarop rust de rekensom) en F2.30.4-02-a (toepassen: TO-, TK- en resultaatlijn tekenen uit p, C en v; de opgaven doen het omgekeerde). F2.30.4-02-b gaat alleen over het aflezen van het break-evenpunt. De lijn van bedrijfsecon-038/-040 ('oefenstof buiten syllabus (berekening)') is gekozen voor berekeningen waar geen criterium in de buurt komt; hier ligt wel een criterium dichtbij.",
+      "options": [
+        "Koppelen: 28-1a/b en 28-10b/c aan F2.30.1-02-b (oefent, niveau toepassen); 28-9a-c en 28-10d aan F2.30.4-02-a (TO- en TK-lijn, omgekeerd gelezen)",
+        "Alle 8 als 'oefenstof buiten syllabus (berekening)' melden, zoals bedrijfsecon-038/-040",
+        "Alleen de grafiekvragen (28-9a-c, 28-10d) aan F2.30.4-02-a koppelen; 28-1a/b en 28-10b/c als oefenstof buiten syllabus"
+      ],
+      "proposed": "Optie 1: de prestatie (v en C uit de totale kosten halen, of p, C en v uit de lijnen) is precies het inzicht van F2.30.1-02-b en de omkering van F2.30.4-02-a; een melding 'buiten syllabus' zou suggereren dat het CE dit niet vraagt, terwijl break-evenopgaven vaak zo beginnen. Elke koppeling krijgt de notitie 'v en C uit twee punten/grafiek'.",
+      "impact": "medium",
+      "applies_to": [
+        "mapping-judge",
+        "exercise-judge",
+        "mapping-verifier"
+      ],
+      "affects_units": [
+        "H28.1-opg28-1a",
+        "H28.1-opg28-1b",
+        "H28.3-opg28-9a",
+        "H28.3-opg28-9b",
+        "H28.3-opg28-9c",
+        "H28.3-opg28-10b",
+        "H28.3-opg28-10c",
+        "H28.3-opg28-10d"
+      ],
+      "status": "answered",
+      "answer": "Koppelen: 28-1a/b en 28-10b/c aan F2.30.1-02-b (oefent, niveau toepassen); 28-9a-c en 28-10d aan F2.30.4-02-a (TO- en TK-lijn, omgekeerd gelezen)",
+      "answered_by": "user",
+      "answered_at": "2026-11-10T11:59:10Z",
+      "source_run": "20261110-1242-koppel-vanvlimmeren-bedrijfseconomie-vwo-in-balans-ext",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "vanvlimmeren-bedrijfseconomie-vwo-in-balans"
+    },
+    {
+      "id": "bedrijfsecon-056",
+      "question": "Koppelen we de opgaven die het verschil tussen begroot en werkelijk resultaat per post uitrekenen en verklaren (27-12c-e, 27-13d-e) aan F2.31.1-01-c/d, en niet aan de verschillenanalyse van F2.31.1-02?",
+      "context": "5 deelvragen. 27-13d heet 'Stel de verschillenanalyse op' (schema Begroot / Werkelijk / Voor- of nadeel per post: omzet, operationele kosten, verkoopkosten, brutomarge, overige kosten, interest); 27-12d splitst het verschil in brutowinst (afzet, verkoopprijs, inkoopprijs), bedrijfskosten en interestopbrengst; 27-12e en 27-13e vragen de oorzaken. Dat is het verschil tussen voor- en nacalculatorisch resultaat per post (F2.31.1-01-c berekent het verschil als voor- of nadelig, -d legt uit welke posten bijdragen), niet de verschillenanalyse met verkoopresultaat en prijs-, efficiency- en bezettingsresultaat van F2.31.1-02 (bij bedrijfsecon-051 buiten de afbakening gelaten). Het woord 'verschillenanalyse' trekt de beoordelaars wel naar F2.31.1-02-c. F2.31.2-01-b (welk deelresultaat is de belangrijkste oorzaak en welke maatregel past) vraagt een beheermaatregel; geen van deze deelvragen vraagt dat.",
+      "options": [
+        "27-12c en 27-13d → F2.31.1-01-c; 27-12d/e en 27-13e → F2.31.1-01-d (27-12d ook -c); F2.31.1-02 en F2.31.2-01 niet koppelen",
+        "Als optie 1, plus 27-12d en 27-13d als tweede koppeling aan F2.31.1-02-c (buiten de afbakening, telt niet als gat), omdat boek en opgave het een verschillenanalyse noemen",
+        "Alles aan F2.31.1-01-c; de verklaringen (27-12e, 27-13e) ook aan F2.31.2-01-b"
+      ],
+      "proposed": "Optie 1: de prestatie is per post vergelijken, niet de splitsing in prijs-, efficiency- en bezettingsresultaat; een koppeling aan F2.31.1-02 zou in het oefenoverzicht laten zien dat die (bij 051 bewust uitgestelde) analyse geoefend wordt.",
+      "impact": "medium",
+      "applies_to": [
+        "mapping-judge",
+        "exercise-judge",
+        "mapping-verifier"
+      ],
+      "affects_units": [
+        "H27.3-opg27-12c",
+        "H27.3-opg27-12d",
+        "H27.3-opg27-12e",
+        "H27.4-opg27-13d",
+        "H27.4-opg27-13e"
+      ],
+      "status": "answered",
+      "answer": "27-12c en 27-13d → F2.31.1-01-c; 27-12d/e en 27-13e → F2.31.1-01-d (27-12d ook -c); F2.31.1-02 en F2.31.2-01 niet koppelen",
+      "answered_by": "user",
+      "answered_at": "2026-11-10T11:59:10Z",
+      "source_run": "20261110-1242-koppel-vanvlimmeren-bedrijfseconomie-vwo-in-balans-ext",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "vanvlimmeren-bedrijfseconomie-vwo-in-balans"
+    },
+    {
+      "id": "bedrijfsecon-057",
+      "question": "Telt een opgave in een productiebedrijf als oefening van een criterium dat over een handels- of dienstverlenende organisatie gaat?",
+      "context": "De F2-criteria zijn bij bedrijfsecon-008 afgebakend tot handel en dienstverlening (F2.30.1-01-c en -02-d 'van een handels- of dienstverlenende organisatie', F2.30.2 'van een dienstverlenende organisatie', F2.30.4-01 'voor een handels- of dienstverlenende organisatie'). 11 deelvragen spelen in een productiebedrijf: 26-9 (Okea brengt met machine SR 02 het product Sven voort; machinekosten per product = constante kosten / normale productie 30.000, de vorm C/N van F2.30.2-03-a), 26-11a/b (houtbewerkingsbedrijf, arbeidsuurtarief en personeelskosten in een offerte voor 600 kastjes; voor het arbeidsuurtarief geldt verder bedrijfsecon-050), 28-1a/b (onderneming Blok, 'producten'), 28-10a-f (Van Ass, 'productie en afzet', break-evengrafiek). Bij de paragrafen hebben de beoordelaars de F2.30.2-criteria in handelscontexten (H28) wel gekoppeld; voor de examens geldt 'de prestatie telt, ook in een andere context' (bedrijfsecon-042). Zonder afspraak kan de ene beoordelaar 28-10 koppelen en de andere niet (lage zekerheid).",
+      "options": [
+        "Ja, de prestatie telt: koppelen zoals bij een handels- of dienstverlenende organisatie, met de notitie 'context: productie'",
+        "Alleen waar het criterium 'handels- of dienstverlenende' noemt (F2.30.1, F2.30.4); bij 'dienstverlenende organisatie' (F2.30.2, o.a. 26-9) niet koppelen maar 'oefenstof buiten syllabus' melden",
+        "Nee: opgaven in een productiecontext niet aan deze criteria koppelen, melden als 'oefenstof buiten syllabus (context)'"
+      ],
+      "proposed": "Optie 1: zelfde lijn als bedrijfsecon-042 en als de paragraafkoppelingen; de berekening (break-even, C/N, kosten per uur) is in een productiebedrijf dezelfde, en de notitie laat de docent zien dat de context buiten de CE-afbakening valt.",
+      "impact": "medium",
+      "applies_to": [
+        "mapping-judge",
+        "exercise-judge",
+        "mapping-verifier"
+      ],
+      "affects_units": [
+        "H26.3-opg26-9-dv",
+        "H26.4-opg26-11a",
+        "H26.4-opg26-11b",
+        "H28.1-opg28-1a",
+        "H28.1-opg28-1b",
+        "H28.3-opg28-10a",
+        "H28.3-opg28-10b",
+        "H28.3-opg28-10c",
+        "H28.3-opg28-10d",
+        "H28.3-opg28-10e",
+        "H28.3-opg28-10f"
+      ],
+      "status": "answered",
+      "answer": "Ja, de prestatie telt: koppelen zoals bij een handels- of dienstverlenende organisatie, met de notitie 'context: productie'",
+      "answered_by": "user",
+      "answered_at": "2026-11-10T11:59:10Z",
+      "source_run": "20261110-1242-koppel-vanvlimmeren-bedrijfseconomie-vwo-in-balans-ext",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "vanvlimmeren-bedrijfseconomie-vwo-in-balans"
+    },
+    {
+      "id": "bedrijfsecon-058",
+      "question": "Aan welke criteria koppelen we de opgaven die vragen of iets wel of geen kosten zijn voor de onderneming (26-14a, 27-7a/b)?",
+      "context": "3 deelvragen. 26-14a: drie uitspraken, juist/onjuist met motivering: (1) op grond onder een bedrijfsgebouw wordt niet afgeschreven, (2) het factuurbedrag inclusief btw van een schoonmaakbedrijf is kosten voor een kapper (onjuist: btw terug te vorderen), (3) onroerendezaakbelasting en inkomstenbelasting zijn beide kosten van een eenmanszaak (onjuist: inkomstenbelasting betaalt de eigenaar privé). 27-7a: noem een belasting die wel en een die geen kostenpost is (antwoord: OZB of motorrijtuigenbelasting wel; btw of vennootschapsbelasting niet). 27-7b: noem een kostenpost van grond anders dan belasting (interest over het geïnvesteerde vermogen). Passende criteria: F2.30.3-01-d (btw is voor de ondernemer geen kosten) en F2.30.5-01-c (geen vennootschapsbelasting bij eenmanszaak/vof; de eigenaren betalen inkomstenbelasting). Geen criterium gaat over afschrijven op grond of over de kosten van grond. F2.30.1-01-c (kostenposten indelen naar categoriale kostensoort) ligt ernaast, maar volgens bedrijfsecon-053 is de categoriale indeling in H26 niet uitgelegd. Per deelvraag houden we het bij hoogstens twee koppelingen.",
+      "options": [
+        "26-14a → F2.30.3-01-d en F2.30.5-01-c; 27-7a → F2.30.3-01-d (en F2.30.5-01-c als het antwoord de winstbelasting noemt); uitspraak 1 en 27-7b zonder koppeling ('oefenstof buiten syllabus')",
+        "Als optie 1, plus F2.30.1-01-c bij 26-14a en 27-7a/b (kostensoort 'belastingen' en 'kosten van grond')",
+        "Alle drie als 'oefenstof buiten syllabus' melden: geen criterium vraagt 'kosten of geen kosten'"
+      ],
+      "proposed": "Optie 1: de motivering bij uitspraak 2 en 3 is precies wat F2.30.3-01-d en F2.30.5-01-c vragen; F2.30.1-01-c niet, in lijn met bedrijfsecon-053 (afzonderlijke kostensoorten zijn geen uitleg van de categoriale indeling).",
+      "impact": "low",
+      "applies_to": [
+        "mapping-judge",
+        "exercise-judge",
+        "mapping-verifier"
+      ],
+      "affects_units": [
+        "H26.5-opg26-14a",
+        "H27.1-opg27-7a",
+        "H27.1-opg27-7b"
+      ],
+      "status": "answered",
+      "answer": "26-14a → F2.30.3-01-d en F2.30.5-01-c; 27-7a → F2.30.3-01-d (en F2.30.5-01-c als het antwoord de winstbelasting noemt); uitspraak 1 en 27-7b zonder koppeling ('oefenstof buiten syllabus')",
+      "answered_by": "user",
+      "answered_at": "2026-11-10T11:59:10Z",
+      "source_run": "20261110-1242-koppel-vanvlimmeren-bedrijfseconomie-vwo-in-balans-ext",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "vanvlimmeren-bedrijfseconomie-vwo-in-balans"
+    },
+    {
+      "id": "bedrijfsecon-059",
+      "question": "Tellen 'vreemd vermogen op lange/korte termijn', 'lang/kort vermogen' en 'lange/korte kredieten' in In Balans als hetzelfde begrip als 'lang/kort vreemd vermogen' in de criteria (woordenlijst voor kandidaatselectie)?",
+      "context": "H17.1 legt in de openingsalinea lang en kort vreemd vermogen uit ('Vreemd vermogen op lange termijn is vermogen dat meer dan een jaar beschikbaar is'), H20.3 spreekt van 'lange kredieten' en 'lang vermogen'. Kandidaatselectie zette G.32.1-03-d daardoor niet in de top 10 van H17.1 en H20.3, wel in die van H16.5 (waar het niet behandeld wordt). De verificatie vond de uitleg alleen door de tekst te lezen.",
+      "options": [
+        "Woordenlijstregels voor deze methode: lang vreemd vermogen = vreemd vermogen op lange termijn = lang vermogen (vreemd) = lange kredieten; kort vreemd vermogen = vreemd vermogen op korte termijn = kort vermogen = korte kredieten",
+        "Geen woordenlijstregel; de verifier blijft dit per paragraaf opsporen"
+      ],
+      "proposed": "Optie 1: de omschrijvingen zijn in het boek vast taalgebruik (H17.1, H17.3, H17.5, H19.1, H20.3) en dekken hetzelfde begrip; zonder regel blijven de uitleg-paragrafen buiten de kandidaten.",
+      "impact": "low",
+      "applies_to": [
+        "mapping-judge",
+        "exercise-judge",
+        "mapping-verifier"
+      ],
+      "affects_units": [
+        "G.32.1",
+        "H17.1",
+        "H20.3"
+      ],
+      "status": "open",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null,
+      "source_run": "20261110-1242-koppel-vanvlimmeren-bedrijfseconomie-vwo-in-balans-ext",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "vanvlimmeren-bedrijfseconomie-vwo-in-balans"
+    },
+    {
+      "id": "bedrijfsecon-060",
+      "question": "Opgaven 26-7b, 26-8b en de rekenstappen in 26-9 en 26-14e laten de interestkosten over het gemiddeld geïnvesteerd vermogen ((aanschafwaarde + restwaarde)/2 × interestpercentage) berekenen; geen criterium vraagt die berekening. Hoe melden we dit?",
+      "context": "D2.22.1-01-a gaat over de rentabiliteit van het totaal vermogen en het gemiddelde interestpercentage op vreemd vermogen, niet over interestkosten van een vast actief. B1.11.2-03-c (enkelvoudige interest over een bedrag en looptijd) is wel gekoppeld aan de bouwrente in 26-13a, maar daar is de interestberekening over termijnen de kern; bij 26-7b/8b is de kern het gemiddeld geïnvesteerd vermogen. Nu staan 26-7b en 26-8b als 'oefenstof buiten syllabus' en is in 26-9 en 26-14e alleen de afschrijvingsstap gekoppeld.",
+      "options": [
+        "Als 'oefenstof buiten syllabus (berekening interestkosten vast actief)' melden, zoals nu",
+        "In de volgende /generate-run een criterium toevoegen onder F2.30.1 of F2.30.2 ('berekent de interestkosten over het gemiddeld geïnvesteerd vermogen van een vast actief') als de docent dat bij de kostprijsberekening vindt horen",
+        "De berekening als oefening van B1.11.2-03-c tellen (enkelvoudige interest), zoals 26-13a"
+      ],
+      "proposed": "Optie 1 voor deze run (zelfde lijn als bedrijfsecon-038 en -040); de docent beoordeelt of optie 2 nodig is.",
+      "impact": "low",
+      "applies_to": [
+        "exercise-judge",
+        "mapping-verifier",
+        "exporter"
+      ],
+      "affects_units": [
+        "F2.30.1",
+        "F2.30.2",
+        "H26.3-opg26-7b",
+        "H26.3-opg26-8b",
+        "H26.3-opg26-9-dv",
+        "H26.5-opg26-14e"
+      ],
+      "status": "open",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null,
+      "source_run": "20261110-1242-koppel-vanvlimmeren-bedrijfseconomie-vwo-in-balans-ext",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "vanvlimmeren-bedrijfseconomie-vwo-in-balans"
     }
   ]
 }

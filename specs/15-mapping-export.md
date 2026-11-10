@@ -45,7 +45,9 @@ plus run_id, methode_id, criterium_leerling, criterium_bloom,
 beoordelaar_a, beoordelaar_b, verifier.
 
 Part B also writes `steekproef_opgaven.md` (20 exercise links, 10 `high`,
-10 `low`/`medium`/disputed; columns: terecht?, bloom juist?, citaat?).
+10 `low`/`medium`/disputed; columns: terecht?, bloom juist?, citaat?). In an
+extend run it samples only exercise links on sub-questions new in that run
+(specs/13 §5 X7); the earlier ones were sampled before.
 
 ## 4. Reports
 

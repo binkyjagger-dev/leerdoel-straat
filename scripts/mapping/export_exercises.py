@@ -99,8 +99,13 @@ def main(argv: list[str]) -> None:
 
     # steekproef_opgaven.md
     random.seed(run["run_id"] + "-ex")
-    high = [l for l in links if l["confidence"] == "high"]
-    low = [l for l in links if l["confidence"] != "high" or (l.get("verifier") or "").startswith("dispute")]
+    pool = links
+    if run.get("extend"):  # specs/13 §5 X7: only exercises new in this run, the rest was sampled before
+        ext = run["extend"]
+        new_sq, new_par = set(ext.get("new_subquestions", [])), set(ext.get("new_paragraphs", []))
+        pool = [l for l in links if l["unit_id"] in new_sq or l.get("paragraph_id") in new_par]
+    high = [l for l in pool if l["confidence"] == "high"]
+    low = [l for l in pool if l["confidence"] != "high" or (l.get("verifier") or "").startswith("dispute")]
     pick = random.sample(high, min(sample_n // 2, len(high)))
     pick += random.sample([l for l in low if l not in pick], min(sample_n - len(pick), len([l for l in low if l not in pick])))
     L = [f"# Steekproef opgavekoppelingen — {run['run_id']}", "", f"{len(pick)} koppelingen. Vul per koppeling J/N in.", "",
