@@ -14,7 +14,7 @@ Read first: `specs/33-toets-pipeline.md` §3 T2a, `specs/31-toets-catalogue-knob
 - `31_order.json` — matrix (exact points per group), `criteria_include/exclude`, `bloom_mix` (by points; `null` = you choose), `knobs` (share maps by points, or `"vrij"`), `n_opgaven`, `n_vragen`, `level`, `contexts`, `avoid_contexts`, `reuse`.
 - `30_criteria.json` (criteria per group with their Bloom), `30_patterns.json` (`kind`, `bloom`, `points`, `knobs_fixed`, `needs_figure`, `in_central_exam`), `30_knobs.json` (values and definitions), `30_reference_profile.json` (central-exam shares; context for your choices, not a target), `30_context_history.json`, `decisions_snapshot.json` (answers in `effective_answer`).
 - `subjects/<subject>/toets/contexten.md` (preferred settings, contexts to avoid) when it exists; `subjects/<subject>/examenbank/profiel/patronen_stats.json` for `example_refs`.
-- For reused opgaven (`reuse`): `subjects/<subject>/toetsbank/toetsen/<toets_id>.json` — copy them verbatim into the blueprint with `reused_from`; plan only the remainder.
+- For reused opgaven (`reuse`): `subjects/<subject>/toetsbank/toetsen/<toets_id>.json` — copy each into the blueprint with `reused_from: {toets_id, opgave_id}`, its `title`, `context`, `context_tags`, and per vraag (in the same order) `points`, `pattern`, `knobs`, `scorepunten` (seq, points, criterion_id, bloom) and `builds_on_vragen`; only the ids and numbers follow this toets (`O<k>`, `O<k>-V<n>`). `blueprint_check.py` (BP4) compares points and criteria with the toetsbank. Plan only the remainder; the reused points count in the matrix and the shares.
 
 ## Plan
 1. **Matrix exactly**: the scorepunt points of each group's criteria sum to the matrix points; no other groups. Vraag points = sum of its scorepunten.

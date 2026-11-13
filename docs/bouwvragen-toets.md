@@ -239,3 +239,42 @@ uitlegvraag die voortbouwt ("verklaar de uitkomst van vraag 2") heeft geen `calc
 | 15 | **a** — 0 en aslimieten zonder naam | zoals gebouwd |
 | 16 | **b** — alleen eindgetal + `calc`'s met scorepunt | `solver_compare.py`; specs/34 §4 |
 | 17 | **b** — uitlegvraag bouwt voort via "vraag n" in de stam + doorrekenzin | `items_check.py`; specs/34 IT5 |
+
+---
+
+# Fase 3: bouwstap 6 (export, toetsbank, hergebruik)
+
+**Status:** open · **Gesteld door:** de bouwer, 2026-11-14 · **Beslist door:** Martijn
+
+### 18. Hergebruikte opgave: "vraag n" in de stam klopt niet meer
+
+**Context.** Een hergebruikte opgave wordt letterlijk overgenomen (besluit A1), maar krijgt de vraagnummers van de
+nieuwe toets. Een stam die naar "vraag 3" verwijst, verwijst dan naar het oude nummer. Gebouwd is: `reuse_copy.py`
+past `builds_on_vragen` aan, laat de stam letterlijk staan en geeft een waarschuwing die de orchestrator aan jou
+voorlegt.
+
+**Opties.** a. zo laten (waarschuwing, jij past aan) · b. het nummer in de stam automatisch aanpassen (dan is de opgave
+niet meer helemaal letterlijk) · c. een opgave met zo'n verwijzing alleen hergebruiken op dezelfde vraagnummers.
+
+**Aanbeveling: b.** Het gaat alleen om het nummer, niet om de inhoud. Een verkeerde verwijzing in een toets is erger
+dan een kleine afwijking van "letterlijk".
+
+### 19. Nummering van informatiebronnen in de leerlingversie
+
+**Context.** De schrijver nummert de bronnen per opgave (1, 2, …). In het centraal examen lopen de bronnen door over
+het hele examen. Gebouwd is: per opgave genummerd, onder de kop van de opgave ("Opgave 2 Bakkerij Kruim" →
+"Informatiebron 1"). Zo blijven de verwijzingen in de stam kloppen.
+
+**Opties.** a. per opgave (nu) · b. doorlopend over de toets. Dan moet de export de verwijzingen in stam en cv
+hernummeren.
+
+**Aanbeveling: a**, tenzij leerlingen het examenformat met doorlopende nummers moeten oefenen. Dan b.
+
+### 20. toets_id in de toetsbank
+
+**Context.** specs/35 §4 legt de vorm van `toets_id` niet vast. Gebouwd is: `toets_id` = de run-id
+(`20301001-1200-toets-bedrijfseconomie`). Die is uniek en verwijst terug naar de run.
+
+**Opties.** a. run-id (nu) · b. een korte code die je zelf kiest (bijv. `5V-P2-F2`) en die in de opdracht staat.
+
+**Aanbeveling: a**, met de titel ernaast in het register (zo staat het er al).

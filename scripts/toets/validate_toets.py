@@ -277,7 +277,7 @@ def check_verification(argv: list[str]) -> None:
         rep.print_and_exit()
     bp = load_json(R / "32_blueprint.json")
     vids = [v["vraag_id"] for o in bp["opgaven"] for v in o["vragen"]
-            if not ver.get("only") or o["opgave_id"] in ver["only"]]
+            if (not ver.get("only") or o["opgave_id"] in ver["only"]) and not o.get("reused_from")]  # reused: not re-verified
     seen = {}
     for v in ver["vragen"]:
         if v["vraag_id"] in seen:

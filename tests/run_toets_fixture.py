@@ -13,6 +13,9 @@ Step 5: nlnum (Dutch numbers, rounding, safe evaluator), exam_examples.py, items
         overlap_check.py on an opgave with a calc error, an untraceable number, a copied exam sentence and a figure
         coordinate outside the data (all caught) and on a clean opgave (all pass, figures rendered), student_build.py,
         solver_compare.py (one mismatch), label_merge.py --toets, realized.py, validate_toets.py items|verification.
+Step 6: export_toets.py (docx re-read with python-docx, PDF via LibreOffice when present, verantwoording numbers
+        equal to 34_realized.json and the order), toetsbank_add.py (append, duplicate refused, --replace, contexts,
+        overzicht, --history), reuse_copy.py + blueprint_check BP4 for a reused opgave.
 Everything runs in a temp dir; the repo's subjects/ are only read.
 """
 from __future__ import annotations
@@ -270,6 +273,7 @@ def main():
 
     ok &= step4(tmp, subj, bank, S)
     ok &= step5(tmp, subj, bank, S)
+    ok &= step6(tmp, subj, bank, S)
     print("\nALL OK" if ok else "\nSOME CHECKS FAILED")
     sys.exit(0 if ok else 1)
 
@@ -431,6 +435,107 @@ def step5(tmp: Path, subj: Path, bank: Path, S: list[str]) -> bool:
                 all(m["ok"] for m in rz["matrix"]) and any(d["what"] == "solo" for d in rz["outside_tolerance"])
                 and any(x["vraag_id"] == "O1-V1" and "solo" in x["differences"] for x in rz["label_vs_plan"])
                 and next(v for v in rz["per_vraag"] if v["vraag_id"] == "O1-V2")["bloom_changed_by_verifier"] == [2])
+    return ok
+
+
+def step6(tmp: Path, subj: Path, bank: Path, S: list[str]) -> bool:
+    t, ok = "scripts/toets", True
+    R = pipeline_run(tmp, subj, bank, S, "toets_t6")
+    for o in ("O1", "O2"):
+        for s in ("items_check", "calc_check", "figures", "overlap_check"):
+            subprocess.run([PY, "-X", "utf8", f"{t}/{s}.py", str(R), "--opgave", o, *S], cwd=ROOT, capture_output=True)
+    for args in ([f"{t}/student_build.py", str(R)], [f"{t}/solver_compare.py", str(R)],
+                 ["scripts/exam/label_merge.py", str(R), "--toets", *S], [f"{t}/realized.py", str(R)]):
+        subprocess.run([PY, "-X", "utf8", *args], cwd=ROOT, capture_output=True)
+    (R / "32_blueprint_review.json").write_text(json.dumps({"approved": True, "reviewed_at": "2030-10-02", "entries": []}), encoding="utf-8")
+    ok &= run("export_toets --pdf", f"{t}/export_toets.py", str(R), *S, "--pdf")
+    pdf_line = run.last
+    out, slug = R / "output", "fixture-toets-kosten-en-winst"
+    names = [f"{slug}-{k}.{x}" for k in ("leerling", "correctievoorschrift", "verantwoording") for x in ("md", "docx")]
+    ok &= check("outputs: leerling, correctievoorschrift, verantwoording (md + docx), bouwplan, twijfellijst, figuren, toets.json",
+                all((out / n).exists() for n in names) and (out / "bouwplan.md").exists() and (out / "twijfellijst.md").exists()
+                and (out / "figuren/f2.png").exists() and (out / "toets.json").exists())
+    try:
+        import docx
+        txt = {k: "\n".join(p.text for p in docx.Document(str(out / f"{slug}-{k}.docx")).paragraphs)
+               for k in ("leerling", "correctievoorschrift", "verantwoording")}
+        tables = len(docx.Document(str(out / f"{slug}-verantwoording.docx")).tables)
+        ok &= check("docx files re-open with python-docx and hold the content (vraag 4, maximumscore 3, 7 sections, tables)",
+                    "3p 4 De eigenaar gaat alleen door" in txt["leerling"] and "Informatiebronnen" in txt["leerling"]
+                    and "maximumscore 3" in txt["correctievoorschrift"] and "Een doorrekenfout uit vraag 3" in txt["correctievoorschrift"]
+                    and all(f"{i}. " in txt["verantwoording"] for i in range(1, 8)) and tables >= 10)
+    except ImportError:
+        ok &= check("python-docx installed", False)
+    if shutil.which("soffice") or shutil.which("libreoffice"):
+        ok &= check("LibreOffice converts all three docx to PDF with pages", pdf_line.count("PDF with") == 3 and "PDF with 0" not in pdf_line)
+    else:
+        print("   --  LibreOffice not found: PDF check skipped")
+    md = (out / f"{slug}-verantwoording.md").read_text(encoding="utf-8")
+    rz, order = load(R / "34_realized.json"), load(R / "31_order.json")
+    P = lambda x: f"{x * 100:.0f} %"  # noqa: E731
+    N = lambda x: (f"{x:.1f}".rstrip("0").rstrip(".") if x != int(x) else str(int(x))).replace(".", ",")  # noqa: E731
+    rows_ok = all(f"| {lv} | {P(order['bloom_mix'][lv])} | {N(d['planned_points'])} p · {P(d['planned'])} | "
+                  f"{N(d['realised_points'])} p · {P(d['realised'])}" in md for lv, d in rz["bloom"].items())
+    knob_ok = all(f" | {P(order['knobs'][k][v])} | {N(d['planned_points'])} p · {P(d['planned'])} | {N(d['realised_points'])} p · "
+                  f"{P(d['realised'])}" in md for k in ("solo", "route", "steps", "sources", "builds_on")
+                  for v, d in rz["knobs"][k]["values"].items())
+    mat_ok = all(f"| {m['group_id']} | {m['points']} | {m['points']} | gelijk |" in md for m in order["matrix"])
+    ok &= check("verantwoording: Bloom mix and knobs = order · bouwplan · gerealiseerd from 34_realized.json; matrix exact",
+                rows_ok and knob_ok and mat_ok)
+    ok &= check("verantwoording marks solo outside tolerance and shows the central exam with the spread over exams",
+                "**buiten tolerantie**" in md and "(2030-I " in md and "| gerealiseerd (gelabeld) | centraal examen |" in md)
+    tw = (out / "twijfellijst.md").read_text(encoding="utf-8")
+    ok &= check("twijfellijst: the open must findings (O1-V1, O2-V4) and the IT7 warning", "| O1-V1 | V2 (must)" in tw
+                and "| O2-V4 | V2 (must)" in tw and "IT7" in tw)
+    from common import validate_schema as vs  # noqa: E402
+    sys.path.insert(0, str(ROOT / "scripts" / "toets"))
+    from tcommon import validate_def  # noqa: E402
+    rec = load(out / "toets.json")
+    ok &= check("toets.json is a valid toetsbank record (items, labels, realised, findings left)",
+                not validate_def(rec, "toetsbank.schema.json", "toets_file") and rec["opgaven"][1]["vragen"][0]["label"]["pattern"] == "P07"
+                and len(rec["findings_left"]) == 2)
+    # toetsbank
+    tb = tmp / "toetsbank_new"
+    ok &= run("toetsbank_add (new toetsbank)", f"{t}/toetsbank_add.py", str(R), "--toetsbank", str(tb))
+    reg, ctx = load(tb / "register.json"), load(tb / "contexts.json")
+    ok &= check("register with 1 toets, contexts.json with both opgaven, overzicht.md per criterion",
+                len(reg["toetsen"]) == 1 and reg["toetsen"][0]["max_score"] == 9 and len(ctx["contexts"]) == 2
+                and "X1.1-01-a" in (tb / "output/overzicht.md").read_text(encoding="utf-8") and not vs(reg, "toetsbank.schema.json"))
+    before = (tb / "toetsen/fixture-pipeline.json").read_bytes()
+    ok &= run("toetsbank_add again without --replace (must fail)", f"{t}/toetsbank_add.py", str(R), "--toetsbank", str(tb), expect_fail=True)
+    ok &= check("refused add left the toetsbank untouched", (tb / "toetsen/fixture-pipeline.json").read_bytes() == before)
+    ok &= run("toetsbank_add --replace", f"{t}/toetsbank_add.py", str(R), "--toetsbank", str(tb), "--replace")
+    ok &= check("replace kept a dated copy; still 1 toets and 2 contexts", len(list((tb / "toetsen").glob("fixture-pipeline.*.json"))) == 1
+                and len(load(tb / "register.json")["toetsen"]) == 1 and len(load(tb / "contexts.json")["contexts"]) == 2)
+    R2 = tmp / "toets_t6_second"; shutil.copytree(R, R2)
+    rj = load(R2 / "run.json"); rj["run_id"] = "fixture-pipeline-2"; (R2 / "run.json").write_text(json.dumps(rj), encoding="utf-8")
+    ok &= run("export a second toets", f"{t}/export_toets.py", str(R2), *S)
+    ok &= run("toetsbank_add appends the second toets", f"{t}/toetsbank_add.py", str(R2), "--toetsbank", str(tb))
+    ok &= check("register 2 toetsen, contexts 4", len(load(tb / "register.json")["toetsen"]) == 2 and len(load(tb / "contexts.json")["contexts"]) == 4)
+    ok &= run("toetsbank_add --history (T0 context history, 24 months)", f"{t}/toetsbank_add.py", "--history", str(R2), "--toetsbank", str(tb))
+    ok &= check("30_context_history.json holds the 4 recent contexts", len(load(R2 / "30_context_history.json")["contexts"]) == 4)
+    # reuse of O2 from the toetsbank
+    R3 = pipeline_run(tmp, subj, bank, S, "toets_reuse")
+    bp = load(R3 / "32_blueprint.json")
+    bp["opgaven"][1]["reused_from"] = {"toets_id": "fixture-pipeline", "opgave_id": "O2"}
+    (R3 / "32_blueprint.json").write_text(json.dumps(bp, ensure_ascii=False), encoding="utf-8")
+    od = load(R3 / "31_order.json"); od["reuse"] = [{"toets_id": "fixture-pipeline", "opgave_id": "O2"}]
+    (R3 / "31_order.json").write_text(json.dumps(od, ensure_ascii=False), encoding="utf-8")
+    (R3 / "33_items/O2.json").unlink()
+    for L in "AB":
+        (R3 / f"34_labels.{L}/O2.json").unlink()
+    ok &= run("reuse_copy", f"{t}/reuse_copy.py", str(R3), "--toetsbank", str(tb), *S)
+    o2 = load(R3 / "33_items/O2.json")
+    orig = load(FX / "pipeline/33_items/O2.json")
+    ok &= check("reused opgave copied verbatim (stems, cv) with its labels for A and B",
+                [v["stem"] for v in o2["vragen"]] == [v["stem"] for v in orig["vragen"]]
+                and o2["vragen"][1]["cv"] == orig["vragen"][1]["cv"] and load(R3 / "34_labels.A/O2.json")["items"][1]["pattern"] == "P15")
+    ok &= run("blueprint_check with a reused opgave (BP4 passes)", f"{t}/blueprint_check.py", str(R3), *S, "--toetsbank", str(tb))
+    bp["opgaven"][1]["vragen"][0]["scorepunten"][0]["criterion_id"] = "X1.1-01-b"
+    (R3 / "32_blueprint.json").write_text(json.dumps(bp, ensure_ascii=False), encoding="utf-8")
+    ok &= run("blueprint_check with a changed reused opgave (must fail BP4)", f"{t}/blueprint_check.py", str(R3), *S,
+              "--toetsbank", str(tb), expect_fail=True)
+    ok &= check("BP4 names the reused opgave", "reused opgave differs from the toetsbank" in run.last)
     return ok
 
 

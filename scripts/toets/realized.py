@@ -79,7 +79,10 @@ def main(argv: list[str]) -> None:
             rep.fail("RZ", f"matrix {m['group_id']}: realised {gp.get(m['group_id'], 0)}, ordered {m['points']}")
     devs = tolerance_report(order, sh_r)
     bm = order.get("bloom_mix") or {}
-    bloom = {lv: {"ordered": bm.get(lv), "planned": as_shares(sh_p["bloom"]).get(lv, 0.0), "realised": as_shares(sh_r["bloom"]).get(lv, 0.0)}
+    out_keys = {(d["what"], d["value"]) for d in devs if not d["slack"]}
+    bloom = {lv: {"ordered": bm.get(lv), "planned": as_shares(sh_p["bloom"]).get(lv, 0.0), "realised": as_shares(sh_r["bloom"]).get(lv, 0.0),
+                  "planned_points": round(sh_p["bloom"].get(lv, 0.0), 3), "realised_points": round(sh_r["bloom"].get(lv, 0.0), 3),
+                  "outside": ("bloom", lv) in out_keys}
              for lv in ordered_levels({**{k: 0 for k in bm}, **sh_p["bloom"], **sh_r["bloom"]})}
     knobs = {}
     for k in ["pattern"] + LABEL_KNOBS:
@@ -88,7 +91,10 @@ def main(argv: list[str]) -> None:
         vals = list(dict.fromkeys([*(tgt.keys() if isinstance(tgt, dict) else []), *pp, *rr]))
         knobs[k] = {"ordered": tgt if tgt == "vrij" else None,
                     "values": {v: {"ordered": tgt.get(v, 0.0) if isinstance(tgt, dict) else None,
-                                   "planned": pp.get(v, 0.0), "realised": rr.get(v, 0.0)} for v in vals}}
+                                   "planned": pp.get(v, 0.0), "realised": rr.get(v, 0.0),
+                                   "planned_points": round(sh_p["knobs"].get(k, {}).get(v, 0.0), 3),
+                                   "realised_points": round(sh_r["knobs"].get(k, {}).get(v, 0.0), 3),
+                                   "outside": (k, v) in out_keys} for v in vals}}
     out = {"matrix": matrix, "bloom": bloom, "knobs": knobs,
            "outside_tolerance": [d for d in devs if not d["slack"]], "within_slack": [d for d in devs if d["slack"]],
            "label_vs_plan": label_vs_plan, "per_vraag": per_vraag,
