@@ -20,7 +20,7 @@ report + doubt list.
 
 ## Layout
 ```
-specs/            00–06 leerdoel-straat (/generate) · 10–15 methode-straat (/koppel) · 20–25 examen-straat (/examen; built and first run 2026-10-27; plan: docs/plan-examen-straat.md) · 26 examen labels (E7) · 30–35 toets-straat (/toets; specified 2026-11-13, not built; plan: docs/plan-toets-straat.md)
+specs/            00–06 leerdoel-straat (/generate) · 10–15 methode-straat (/koppel) · 20–25 examen-straat (/examen; built and first run 2026-10-27; plan: docs/plan-examen-straat.md) · 26 examen labels (E7) · 30–35 toets-straat (/toets; specified 2026-11-13; build steps 1–3 done 2026-11-13: schemas, catalogue, E7 labels + profile, order form + T0–T1; open build questions: docs/bouwvragen-toets.md; plan: docs/plan-toets-straat.md)
 data/toets/       knobs.json patterns_base.json (toets-straat rule files; seed 2026-11)
 subjects/<vak>/toets/  patterns.json (subject layer) conventions.md contexten.md (human) seed_profile.json sjablonen/ — see specs/31
 subjects/<vak>/examenbank/labels/ + profiel/  (E7) pattern/knob labels per exam question + reference profile — specs/26
@@ -31,11 +31,12 @@ scripts/          validate.py bloom_check.py student_language_check.py coverage.
 subjects/<vak>/   profile.md (human) + decisions.json (straat, via decisions.py) + bloom_verbs.json (optional, via verb_table.py) + glossary.json (optional, via glossary.py) — see specs/06
 docs/             HANDLEIDING.md (one-page tutorial, Dutch)
 .claude/agents/   ingest intake planner generator student-language verifier
-.claude/commands/ generate (/generate orchestrator) · koppel (/koppel orchestrator) · examen (/examen orchestrator)
+.claude/commands/ generate (/generate orchestrator) · koppel (/koppel orchestrator) · examen (/examen orchestrator, incl. E7 and --label) · toets (/toets; T0–T1 only)
 .claude/agents/   method-ingest mapping-judge mapping-verifier exercise-judge   (methode-straat; intake is shared, mapping mode)
-.claude/agents/   exam-ingest exam-judge   (examen-straat; intake exam mode, mapping-verifier exam mode)
+.claude/agents/   exam-ingest exam-judge   (examen-straat; intake exam mode, mapping-verifier exam mode) · item-labeller (E7 exam mode, /toets T4 toets mode)
 scripts/mapping/  ocr_pdf ocr_images docx_text validate_method candidates gradation check_mappings export_mappings compare_baseline · part B: ex_candidates ex_merge check_ex_mappings export_exercises · koppel_extend (/koppel --extend, specs/13 §5)
-scripts/exam/     exam_text validate_exam exam_candidates exam_merge check_exam_mappings bank_add bank_export exam_sample (ecommon = shared helpers, reuses scripts/mapping)
+scripts/exam/     exam_text validate_exam exam_candidates exam_merge check_exam_mappings bank_add bank_export exam_sample (ecommon = shared helpers, reuses scripts/mapping) · E7: label_merge check_labels bank_labels_add profile_build (lcommon)
+scripts/toets/    patterns (catalogue: validate/merged/add/retire) form_build validate_toets (order; other subcommands not built) (tcommon = shared helpers)
 subjects/<vak>/examenbank/  (examen-straat) register.json + links/<exam>.json + output/ — bound to one criteria run; see specs/25
 input/examens-<vak>/<jaar TVn>/  CvTE exam PDFs (-o opgaven, -c correctievoorschrift, -b bijlage); not committed
 subjects/<vak>/methodes/<methode-id>/profile.md   (human) — book order, structure, terms
@@ -51,6 +52,7 @@ python3 scripts/export.py runs/<run_id>          # re-export only
 python3 tests/run_fixture.py                         # exercise all /generate scripts on the fixture
 python3 tests/run_koppel_fixture.py                  # exercise all /koppel scripts on the koppel fixture
 python3 tests/run_examen_fixture.py                  # exercise all /examen scripts (builds small exam PDFs itself)
+python3 tests/run_toets_fixture.py                   # exercise toets-straat phase 1 (catalogue, E7 labels/profile, order, form)
 /koppel input/<m>/boek.pdf --subject economie --method <id> --from <generate-run> --chapters 1,2 --baseline nulmeting.csv
 ```
 
