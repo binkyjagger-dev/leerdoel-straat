@@ -1,6 +1,6 @@
 # Bouwvragen toets-straat (fase 1: bouwstappen 1–3)
 
-**Status:** open · **Gesteld door:** de bouwer, 2026-11-13 · **Beslist door:** Martijn
+**Status:** beslist 2026-11-13 (zie §Besluiten) · **Gesteld door:** de bouwer, 2026-11-13 · **Beslist door:** Martijn
 
 Bij het bouwen van stap 1–3 (`docs/plan-toets-straat.md` §4) bleek de spec op een paar punten niet eenduidig.
 Overal is de kleinste technische keuze gemaakt die de beslissing openhoudt. Per vraag staan de context, de opties en
@@ -123,3 +123,20 @@ niet. Het schema laat het nu optioneel. De agent `item-labeller` noemt per knop 
 regelbestand).
 
 **Aanbeveling: b**, na de eerste E7-run op bedrijfseconomie, met wat de labellers in de praktijk citeerden.
+
+---
+
+## Besluiten (Martijn, 2026-11-13)
+
+| Vraag | Besluit | Gevolg |
+|---|---|---|
+| 1 | **b** — bij ja/nee-knoppen is elk verschil een geschil; R beslist | `MIN_VALUES_FOR_MEDIUM = 3`; specs/26 §3.2 aangepast |
+| 2 | **a** — punten van een gecombineerd patroon gelijk verdelen | zoals gebouwd; specs/26 §4 aangevuld |
+| 3 | **a** — ontbrekend = vragen, `null` = bewust geen mix | zoals gebouwd |
+| 4 | **a** — economie eerst door `/examen` | zoals gebouwd |
+| 5 | **a** — bedrijfseconomie eerst E7, geen seed | volgende run |
+| 6 | **b** — `route`/`schema` van een vraag met `NIEUW` weglaten tot het patroon beslist is | `profile_build.py` aanpassen; specs/26 §4 aangevuld |
+| 7 | **a** — ongeldig citaat: check faalt, labeller opnieuw; geen zekerheidsverlaging | zoals gebouwd |
+| 8 | **a** — rekentoets herkennen aan de patroonaandelen | zoals gebouwd |
+| 9 | **a** nu (20–30 pp), **b** (vaste stap per knop in `knobs.json`) na de eerste toetsen | later besluit |
+| 10 | **b** — `label_evidence` per knop invullen na de eerste E7-run op bedrijfseconomie, via een besluit | later besluit |

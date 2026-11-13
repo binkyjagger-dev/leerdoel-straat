@@ -51,8 +51,10 @@ After E6 (bank and export), for the exams of the run:
    `data/toets/patterns_base.json`, `subjects/<s>/toets/patterns.json`, the opgave's text in `R/text/`.
    Output `R/26_labels.{A,B}/<opgave_id>.json`.
 2. `python3 scripts/exam/label_merge.py R` → `R/26_labels.json`, `R/26_label_findings.json`.
-   - Agreement per field: equal → `high`; ordinal fields one step apart → `medium` and the lower
-     value; otherwise `disputed`.
+   - Agreement per field: equal → `high`; ordinal fields with **three or more values** one step apart →
+     `medium` and the lower value; otherwise `disputed`. Two-valued knobs (`claim`, `new_concept`,
+     `builds_on`, `route`, `schema`) never get `medium`: any difference is `disputed` and goes to R
+     (decided 2026-11-13, bouwvraag 1).
    - `pattern` must agree exactly for `high`; otherwise `disputed`.
 3. One repair round: per opgave with disputed fields, `item-labeller` letter R decides those fields
    (both values and their evidence given) → `R/26_labels.R/<opgave_id>.json`; rerun `label_merge.py`.
@@ -87,6 +89,12 @@ Rules:
 - Shares are **by points**, conditional on applicability: `route` over calculation patterns only,
   `schema` over schema patterns only, `builds_on` over questions that are not the first of an opgave.
 - `disputed` fields are left out of their knob's totals; the md shows how many points were left out.
+- A combined pattern (`P08+B02`) splits the question's points **evenly** over its patterns, so the
+  pattern column still sums to the exam's points; in `patronen_stats.json` the question counts once per
+  pattern with its full points for min/max (decided 2026-11-13, bouwvraag 2).
+- A question with `pattern: NIEUW` is left out of the pattern column **and** out of `route` and
+  `schema` (their applicability depends on the pattern's kind) until the pattern is decided; its other
+  knobs count (decided 2026-11-13, bouwvraag 6).
 - Pooled = sum over all labelled exams of the bank, every exam weighted by its points.
   Per-exam columns are kept so the teacher sees the spread between exams.
 - A seed profile (§6) is used only while the bank has no labels for that subject; the form and the
