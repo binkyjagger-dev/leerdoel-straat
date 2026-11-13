@@ -1,0 +1,24 @@
+{
+ "entries": [
+  {
+   "target": "O1-V2",
+   "field": "scorepunten",
+   "value": [
+    {
+     "seq": 1,
+     "points": 1,
+     "criterion_id": "X1.1-01-b",
+     "bloom": "analyseren"
+    },
+    {
+     "seq": 2,
+     "points": 1,
+     "criterion_id": "X1.1-01-b",
+     "bloom": "begrijpen"
+    }
+   ],
+   "note": "eerste punt zwaarder",
+   "accept_deviation": true
+  }
+ ]
+}

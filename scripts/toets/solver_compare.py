@@ -4,7 +4,8 @@
 Usage: solver_compare.py <run_dir> [--opgave <id>]
 
 Per calculation vraag (a vraag with calcs): the final calc (the calc_ref of its last scorepunt that has one, else its
-last calc) and the intermediate calcs are matched against the solver's named numbers. A number matches when it
+last calc) and the calcs a scorepunt points to (calc_ref) are matched against the solver's named numbers; helper
+calcs without a scorepunt are not required (specs/34 §4, bouwvraag 16). A number matches when it
 equals the calc value after the cv's rounding (half a unit of the last shown digit; € amounts to the cent).
 Status: `match` (final and all intermediates found), `partial` (final found, an intermediate not), `mismatch`
 (final not found), `missing` (no solver answer). Explanation vragen list the solver's answer next to the model answer
@@ -68,7 +69,8 @@ def main(argv: list[str]) -> None:
             final = refs[-1] if refs else calcs[-1]["name"]
             nums = [n["value"] for n in a["numbers"]]
             found = {}
-            for c in calcs:
+            counted = set(refs) | {final}  # bouwvraag 16: final number + calcs that carry a scorepunt
+            for c in [c for c in calcs if c["name"] in counted]:
                 val, tol = vals[c["name"]]["value"], tolerance(c)
                 hit = next((n for n in nums if abs(n - val) <= tol + 1e-9), None)
                 found[c["name"]] = {"cv": val, "shown": c["shown"], "solver": hit, "match": hit is not None}

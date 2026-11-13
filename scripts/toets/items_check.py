@@ -7,11 +7,12 @@ IT1 schema toets_items; vraag ids, numbers and points = blueprint; scorepunten (
 IT2 cv: maximumscore = points; scorepunt points sum to it; every scorepunt has text
 IT3 every number in intro, stems, sources, tables and the uitwerkbijlage is a `data` value; every number in a model
     answer is a `data` value or a calc `shown` value (Dutch notation; "21%" matches 0.21 or 21; reference numbers
-    such as "informatiebron 2" and "vraag 3" are skipped; the numbers in EXEMPT are always allowed)
+    such as "informatiebron 2" and "vraag 3" are skipped; 0, 1, 100 and years 1900–2100 written as a plain
+    four-digit number are always allowed — bouwvraag 11)
 IT4 noise_data only when a vraag of the opgave has sources = "meerdere bronnen met ruis", and then not empty;
     uses_data / noise_data keys exist in data; every uses_data key is used by a calc or named in a model answer
-IT5 builds_on_vragen = blueprint; with builds_on = ja a calc uses a calc name of an earlier vraag and the cv has a
-    follow_through sentence
+IT5 builds_on_vragen = blueprint; with builds_on = ja the cv has a follow_through sentence and a calc uses a calc
+    name of an earlier vraag — or, for a vraag without calc, the stem names "vraag n" for an n in builds_on_vragen
 IT6 conventions: "€ " with a space; btw value = the order's / conventions.md default (warning: a context may need
     another rate); a stem names "informatiebron n" for every source whose data its calcs use; a schema vraag
     mentions the uitwerkbijlage
@@ -28,7 +29,12 @@ from nlnum import REF_RE, close, names_in, scan_numbers, shown_value
 from tcommon import Report, kinds_of, load_json, pattern_codes, validate_schema
 from toetsrun import ToetsRun, opt, subjects_opt
 
-EXEMPT = {0.0, 1.0, 100.0}  # see docs/bouwvragen-toets.md, Fase 2
+EXEMPT = {0.0, 1.0, 100.0}  # bouwvraag 11 (decided 2026-11-14): plus years 1900–2100, see is_year
+YEAR_RE = re.compile(r"^(19\d\d|20\d\d|2100)$")
+
+
+def is_year(lit: str, pct: bool) -> bool:
+    return not pct and bool(YEAR_RE.match(lit))
 
 
 def texts_of(obj) -> list[str]:
@@ -43,8 +49,8 @@ def texts_of(obj) -> list[str]:
     return []
 
 
-def matches(lit_val: float, pct: bool, pool: list[float]) -> bool:
-    if lit_val in EXEMPT:
+def matches(lit_val: float, pct: bool, pool: list[float], lit: str = "") -> bool:
+    if lit_val in EXEMPT or is_year(lit, pct):
         return True
     return any(close(lit_val, d) or (pct and close(lit_val / 100, d)) for d in pool)
 
@@ -118,11 +124,11 @@ def main(argv: list[str]) -> None:
             student_parts += [(f"{v['vraag_id']} uitwerkbijlage", t) for t in texts_of(v["uitwerkbijlage"])]
     for where, text in student_parts:
         for lit, val, pct in scan_numbers(text):
-            if not matches(val, pct, pool):
+            if not matches(val, pct, pool, lit):
                 rep.fail("IT3", f"{where}: number '{lit}' is not in data (name every given number in data)")
     for v in it["vragen"]:
         for lit, val, pct in scan_numbers(v["cv"]["model_answer"]):
-            if not matches(val, pct, pool + shown):
+            if not matches(val, pct, pool + shown, lit):
                 rep.fail("IT3", f"{v['vraag_id']} model answer: number '{lit}' is neither data nor a calc's shown value")
     # IT4
     calc_names = set()
@@ -158,9 +164,16 @@ def main(argv: list[str]) -> None:
         if sorted(v["builds_on_vragen"]) != sorted(b["builds_on_vragen"]):
             rep.fail("IT5", f"{vid}: builds_on_vragen {v['builds_on_vragen']} != blueprint {b['builds_on_vragen']}")
         if b["knobs"].get("builds_on") == "ja":
-            used = set().union(*(names_in(c["expr"]) for c in v["cv"]["calc"])) if v["cv"]["calc"] else set()
-            if not any(defined_in.get(n, v["number"]) < v["number"] for n in used):
-                rep.fail("IT5", f"{vid}: builds_on = ja but no calc uses a result of an earlier vraag")
+            if v["cv"]["calc"]:
+                used = set().union(*(names_in(c["expr"]) for c in v["cv"]["calc"]))
+                if not any(defined_in.get(n, v["number"]) < v["number"] for n in used):
+                    rep.fail("IT5", f"{vid}: builds_on = ja but no calc uses a result of an earlier vraag")
+            else:  # a vraag without calc builds on via "vraag n" in the stem (bouwvraag 17)
+                named = {int(n) for m in re.finditer(r"\bvra(?:a|ge)g(?:en)?\s+\d+(?:\s*(?:,|en)\s*\d+)*", v["stem"], re.I)
+                         for n in re.findall(r"\d+", m.group(0))}
+                if not named & set(b["builds_on_vragen"]):
+                    rep.fail("IT5", f"{vid}: builds_on = ja, no calc, and the stem names none of vraag "
+                                    f"{', '.join(map(str, b['builds_on_vragen']))}")
             if not (v["cv"].get("follow_through") or "").strip():
                 rep.fail("IT5", f"{vid}: builds_on = ja but the cv has no follow_through sentence")
     # IT6

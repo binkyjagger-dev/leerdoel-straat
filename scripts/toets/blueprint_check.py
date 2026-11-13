@@ -21,8 +21,8 @@ BP8  no context_tags pair from the history, no avoid_contexts term, no two opgav
 BP9  needs_figure patterns have a planned figure; P15 is the last vraag of its opgave
 BP10 coverage per group: tested and untested criteria (information)
 A teacher change accepted at pause 2 (`accept_deviation` in 32_blueprint_review.json, recorded by
-blueprint_apply.py in `accepted_deviations`) turns the BP5–BP9 failure it causes into a warning; BP1–BP4 are never
-accepted.
+blueprint_apply.py in `accepted_deviations`) turns the BP5–BP9 failure it causes into a warning; BP1–BP4 and a
+scorepunt Bloom above criterion + 1 are never accepted (specs/33 T2b, bouwvraag 13).
 """
 from __future__ import annotations
 
@@ -40,8 +40,8 @@ class Checker:
     def __init__(self, rep: Report, accepted: list[dict]):
         self.rep, self.accepted = rep, accepted
 
-    def fail(self, code: str, msg: str, target: str | None = None, field: str | None = None) -> None:
-        if code in ("BP5", "BP6", "BP7", "BP8", "BP9"):
+    def fail(self, code: str, msg: str, target: str | None = None, field: str | None = None, acceptable: bool = True) -> None:
+        if acceptable and code in ("BP5", "BP6", "BP7", "BP8", "BP9"):
             for a in self.accepted:
                 t_ok = target is None or a["target"] == target or target.startswith(a["target"] + "-")
                 f_ok = field is None or a["field"] == field or a["field"].endswith("." + field)
@@ -157,8 +157,8 @@ def main(argv: list[str]) -> None:
                        r["vraag_id"], "scorepunten")
             c = run.crit.get(s["criterion_id"])
             if c and bloom_rank(s["bloom"]) > bloom_rank(c["bloom"]) + 1:
-                C.fail("BP5", f"{tag}: Bloom {s['bloom']} > criterion {s['criterion_id']} ({c['bloom']}) + 1",
-                       r["vraag_id"], "scorepunten")
+                C.fail("BP5", f"{tag}: Bloom {s['bloom']} > criterion {s['criterion_id']} ({c['bloom']}) + 1 (never accepted)",
+                       r["vraag_id"], "scorepunten", acceptable=False)
 
     # BP6 knobs
     by_opgave = defaultdict(list)

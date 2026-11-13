@@ -324,6 +324,14 @@ def step4(tmp: Path, subj: Path, bank: Path, S: list[str]) -> bool:
     ok &= run("blueprint_report marks the accepted deviation", f"{t}/blueprint_report.py", str(R), *S)
     ok &= check("bouwplan.md lists the accepted deviation",
                 "buiten tolerantie (geaccepteerd)" in (R / "output/bouwplan.md").read_text(encoding="utf-8"))
+    R3 = pipeline_run(tmp, subj, bank, S, "toets_t2_bloom")
+    shutil.copy(R3 / "32_blueprint_review_bloom.json", R3 / "32_blueprint_review.json")
+    ok &= run("blueprint_apply (accepted change with Bloom above criterion + 1)", f"{t}/blueprint_apply.py", str(R3))
+    ok &= run("blueprint_check: Bloom > criterion + 1 is never accepted (must fail; bouwvraag 13)", f"{t}/blueprint_check.py",
+              str(R3), *S, expect_fail=True)
+    ok &= check("BP5 'not in pattern' and BP7 accepted as warnings, BP5 '> criterion + 1' still fails",
+                "WARN  BP5  O1-V2-s1: Bloom analyseren not in pattern" in run.last
+                and "FAIL  BP5  O1-V2-s1: Bloom analyseren > criterion" in run.last and "FAIL  BP7" not in run.last)
     shutil.copy(R / "32_blueprint_review_replan.json", R / "32_blueprint_review.json")
     before = (R / "32_blueprint.json").read_bytes()
     ok &= run("blueprint_apply replan (exit 3, nothing applied)", f"{t}/blueprint_apply.py", str(R), expect_code=3)
@@ -377,9 +385,25 @@ def step5(tmp: Path, subj: Path, bank: Path, S: list[str]) -> bool:
     run("overlap_check O1 without the allowlist", f"{t}/overlap_check.py", str(R), *O, expect_fail=True)
     ok &= check("without the allowlist the same phrase is a hit", "O1-V1 stem: shares 'bereken hiervoor eerst" in run.last)
     conv.write_text(keep, encoding="utf-8")
+    # IT5 for a vraag without calc (bouwvraag 17): O1-V2 builds on vraag 1
+    R5 = pipeline_run(tmp, subj, bank, S, "toets_it5")
+    bpj, itj = load(R5 / "32_blueprint.json"), load(R5 / "33_items/O1.json")
+    bv = bpj["opgaven"][0]["vragen"][1]; bv["knobs"]["builds_on"] = "ja"; bv["builds_on_vragen"] = [1]
+    iv = itj["vragen"][1]; iv["builds_on_vragen"] = [1]; iv["cv"]["follow_through"] = "Een doorrekenfout uit vraag 1 niet opnieuw aanrekenen."
+    iv["stem"] = "Gebruik je antwoord op vraag 1. " + iv["stem"]
+    (R5 / "32_blueprint.json").write_text(json.dumps(bpj, ensure_ascii=False), encoding="utf-8")
+    (R5 / "33_items/O1.json").write_text(json.dumps(itj, ensure_ascii=False), encoding="utf-8")
+    run("items_check: explanation vraag naming 'vraag 1'", f"{t}/items_check.py", str(R5), *O, expect_fail=True)
+    ok &= check("IT5 passes for a vraag without calc that names 'vraag 1' (only IT3 '15' fails)", "IT5" not in run.last)
+    iv["stem"] = iv["stem"].replace("Gebruik je antwoord op vraag 1. ", "")
+    (R5 / "33_items/O1.json").write_text(json.dumps(itj, ensure_ascii=False), encoding="utf-8")
+    run("items_check: explanation vraag without 'vraag n'", f"{t}/items_check.py", str(R5), *O, expect_fail=True)
+    ok &= check("IT5 fails when the stem names no earlier vraag", "FAIL  IT5  O1-V2: builds_on = ja, no calc" in run.last)
     O2 = ["--opgave", "O2", *S]
     for s in ("items_check", "calc_check", "figures", "overlap_check"):
         ok &= run(f"{s} O2 (clean opgave)", f"{t}/{s}.py", str(R), *O2)
+        if s == "items_check":
+            ok &= check("the year 1998 in the intro needs no data name (bouwvraag 11)", "1998" not in run.last)
     ok &= check("figures rendered: f2.png and f2-cv.png", (R / "figures/f2.png").stat().st_size > 1000
                 and (R / "figures/f2-cv.png").stat().st_size > 1000)
     ok &= check("check reports in 33_checks/", (R / "33_checks/O2.json").exists() and (R / "33_checks/O2.calc.json").exists())
@@ -390,8 +414,10 @@ def step5(tmp: Path, subj: Path, bank: Path, S: list[str]) -> bool:
                 and "vk_tot" not in st and "fixture met bewuste fouten" not in (R / "34_student/O1.md").read_text(encoding="utf-8"))
     ok &= run("solver_compare", f"{t}/solver_compare.py", str(R))
     sc = {v["vraag_id"]: v for o in load(R / "34_solver_compare.json")["opgaven"] for v in o["vragen"]}
-    ok &= check("solver: O2-V4 mismatch (winst 900 vs 800), O2-V3 match, O1-V2 explanation with the ambiguity note",
-                sc["O2-V4"]["status"] == "mismatch" and sc["O2-V3"]["status"] == "match"
+    ok &= check("solver: O2-V4 mismatch (winst 900 vs 800), O2-V3 match, O1-V1 match without the helper 1,21 (bouwvraag 16), "
+                "O1-V2 explanation with the ambiguity note",
+                sc["O2-V4"]["status"] == "mismatch" and sc["O2-V3"]["status"] == "match" and sc["O1-V1"]["status"] == "match"
+                and "factor" not in sc["O1-V1"]["calcs"]
                 and sc["O1-V2"]["status"] == "explanation" and sc["O1-V2"]["ambiguity_notes"])
     ok &= run("label_merge --toets (pipeline)", "scripts/exam/label_merge.py", str(R), "--toets", *S)
     ok &= run("validate_toets verification (valid)", f"{t}/validate_toets.py", "verification", str(R))

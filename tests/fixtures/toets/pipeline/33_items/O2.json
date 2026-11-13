@@ -1,7 +1,7 @@
 {
  "opgave_id": "O2",
  "title": "Bakkerij Kruim",
- "intro": "Bakkerij Kruim bakt brood en levert ook aan kantines van bedrijven. Na een moeilijk jaar denkt de eigenaar na over de toekomst.",
+ "intro": "Bakkerij Kruim bestaat sinds 1998, bakt brood en levert ook aan kantines van bedrijven. Na een moeilijk jaar denkt de eigenaar na over de toekomst.",
  "data": {
   "broden": 2000,
   "prijs": 2.5,
