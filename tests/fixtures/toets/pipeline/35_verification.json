@@ -1,0 +1,72 @@
+{
+ "round": 1,
+ "only": null,
+ "vragen": [
+  {
+   "vraag_id": "O1-V1",
+   "verdict": "repair",
+   "findings": [
+    {
+     "id": "V2",
+     "vraag_id": "O1-V1",
+     "severity": "must",
+     "evidence": "1.200 × € 23,60 = € 28.230",
+     "fix_hint": "Rekenfout: 1.200 × 23,60 = 28.320."
+    }
+   ],
+   "bloom_realised": [
+    {
+     "seq": 1,
+     "bloom": "toepassen"
+    },
+    {
+     "seq": 2,
+     "bloom": "toepassen"
+    },
+    {
+     "seq": 3,
+     "bloom": "toepassen"
+    }
+   ],
+   "pattern_realised": "P07"
+  },
+  {
+   "vraag_id": "O1-V2",
+   "verdict": "pass",
+   "findings": [],
+   "bloom_realised": [
+    {
+     "seq": 1,
+     "bloom": "begrijpen"
+    },
+    {
+     "seq": 2,
+     "bloom": "toepassen"
+    }
+   ],
+   "pattern_realised": "P01"
+  },
+  {
+   "vraag_id": "O2-V3",
+   "verdict": "pass",
+   "findings": [],
+   "pattern_realised": "P07"
+  },
+  {
+   "vraag_id": "O2-V4",
+   "verdict": "repair",
+   "findings": [
+    {
+     "id": "V2",
+     "vraag_id": "O2-V4",
+     "severity": "must",
+     "evidence": "€ 5.000 − 2.000 × € 0,90 − € 2.400 = € 800",
+     "fix_hint": "Laat de oplosser-afwijking nakijken; de winst in de cv klopt, controleer de stam op dubbelzinnigheid."
+    }
+   ],
+   "pattern_realised": "P15"
+  }
+ ],
+ "toets_findings": [],
+ "proposed_decisions": []
+}

@@ -1,0 +1,173 @@
+{
+ "opgave_id": "O2",
+ "title": "Bakkerij Kruim",
+ "intro": "Bakkerij Kruim bakt brood en levert ook aan kantines van bedrijven. Na een moeilijk jaar denkt de eigenaar na over de toekomst.",
+ "data": {
+  "broden": 2000,
+  "prijs": 2.5,
+  "vk_brood": 0.9,
+  "vaste_kosten": 2400,
+  "oppervlakte": 120,
+  "drempel": 1000
+ },
+ "sources": [
+  {
+   "n": 1,
+   "title": "Verkoop per week",
+   "kind": "table",
+   "text": null,
+   "table": [
+    [
+     "post",
+     "per week"
+    ],
+    [
+     "afzet",
+     "2.000 broden"
+    ],
+    [
+     "verkoopprijs",
+     "€ 2,50"
+    ]
+   ],
+   "figure_id": null,
+   "uses_data": [
+    "broden",
+    "prijs"
+   ],
+   "noise_data": []
+  },
+  {
+   "n": 2,
+   "title": "Kosten",
+   "kind": "text",
+   "text": "De variabele kosten zijn € 0,90 per brood. De vaste kosten zijn € 2.400 per week. De winkel is 120 m² groot.",
+   "table": null,
+   "figure_id": "f2",
+   "uses_data": [
+    "vk_brood",
+    "vaste_kosten"
+   ],
+   "noise_data": [
+    "oppervlakte"
+   ]
+  }
+ ],
+ "figures": [
+  {
+   "figure_id": "f2",
+   "spec": {
+    "type": "bar_chart",
+    "title": "Kosten per week",
+    "y": {
+     "label": "euro",
+     "min": 0,
+     "max": 3000
+    },
+    "bars": [
+     {
+      "label": "vaste kosten",
+      "value": 2400
+     }
+    ]
+   },
+   "answer_spec": {
+    "bars": [
+     {
+      "label": "variabele kosten",
+      "value": 1800
+     }
+    ]
+   }
+  }
+ ],
+ "vragen": [
+  {
+   "vraag_id": "O2-V3",
+   "number": 3,
+   "points": 1,
+   "stem": "Bereken de omzet per week. Gebruik informatiebron 1.",
+   "uitwerkbijlage": null,
+   "cv": {
+    "maximumscore": 1,
+    "model_answer": "2.000 × € 2,50 = € 5.000",
+    "calc": [
+     {
+      "name": "omzet",
+      "expr": "broden * prijs",
+      "round": 0,
+      "rounding": null,
+      "shown": "€ 5.000"
+     }
+    ],
+    "scorepunten": [
+     {
+      "seq": 1,
+      "points": 1,
+      "text": "omzet",
+      "criterion_id": "X1.1-01-a",
+      "calc_ref": "omzet"
+     }
+    ],
+    "rules": [],
+    "alternatives": [],
+    "follow_through": null
+   },
+   "new_concepts": [],
+   "builds_on_vragen": []
+  },
+  {
+   "vraag_id": "O2-V4",
+   "number": 4,
+   "points": 3,
+   "stem": "De eigenaar gaat alleen door als de winst per week hoger is dan € 1.000. Bereken met je antwoord op vraag 3 of Kruim doorgaat. Gebruik informatiebron 1 en 2.",
+   "uitwerkbijlage": null,
+   "cv": {
+    "maximumscore": 3,
+    "model_answer": "€ 5.000 − 2.000 × € 0,90 − € 2.400 = € 800. Dat is minder dan € 1.000, dus Kruim gaat niet door.",
+    "calc": [
+     {
+      "name": "vk_tot",
+      "expr": "broden * vk_brood",
+      "round": 0,
+      "rounding": null,
+      "shown": "€ 1.800"
+     },
+     {
+      "name": "winst",
+      "expr": "omzet - vk_tot - vaste_kosten",
+      "round": 0,
+      "rounding": null,
+      "shown": "€ 800"
+     }
+    ],
+    "scorepunten": [
+     {
+      "seq": 1,
+      "points": 1,
+      "text": "variabele kosten per week",
+      "criterion_id": "X1.1-01-a",
+      "calc_ref": "vk_tot"
+     },
+     {
+      "seq": 2,
+      "points": 2,
+      "text": "winst en juiste conclusie",
+      "criterion_id": "X1.2-01-b",
+      "calc_ref": "winst"
+     }
+    ],
+    "rules": [
+     "Voor elke fout 1 scorepunt in mindering brengen."
+    ],
+    "alternatives": [],
+    "follow_through": "Een doorrekenfout uit vraag 3 niet opnieuw aanrekenen."
+   },
+   "new_concepts": [],
+   "builds_on_vragen": [
+    3
+   ]
+  }
+ ],
+ "writer_notes": null
+}

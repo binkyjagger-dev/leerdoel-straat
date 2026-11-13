@@ -140,3 +140,90 @@ regelbestand).
 | 8 | **a** — rekentoets herkennen aan de patroonaandelen | zoals gebouwd |
 | 9 | **a** nu (20–30 pp), **b** (vaste stap per knop in `knobs.json`) na de eerste toetsen | later besluit |
 | 10 | **b** — `label_evidence` per knop invullen na de eerste E7-run op bedrijfseconomie, via een besluit | later besluit |
+
+---
+
+# Fase 2: bouwstappen 4–5 (bouwplan, schrijven en controleren)
+
+**Status:** open · **Gesteld door:** de bouwer, 2026-11-14 · **Beslist door:** Martijn
+
+Ook hier is steeds de kleinste technische keuze gebouwd. Elke keuze staat in één constante of een paar regels.
+
+### 11. Welke getallen hoeven niet in `data` (IT3)?
+
+**Context.** specs/34 IT3 zegt: elk getal in stam, bronnen, tabellen en uitwerkbijlage staat in `data`. Strikt gelezen
+geldt dat ook voor "1 + btw", jaartallen ("in 2027") en "100 %". Gebouwd is: verwijsnummers ("informatiebron 2",
+"vraag 3 en 4", "figuur 1") tellen niet mee. Ook **0, 1 en 100** zijn altijd toegestaan (`EXEMPT` in
+`items_check.py`). Jaartallen moeten nu wel in `data` staan (bijv. `"jaar": 2027`).
+
+**Opties.** a. zo laten · b. ook jaartallen (1900–2100) vrijstellen · c. niets vrijstellen behalve verwijsnummers.
+
+**Aanbeveling: b.** Een jaartal is context, geen rekengegeven. Als je een jaartal moet benoemen, levert dat alleen
+ruis op in `data`.
+
+### 12. Rekent een volgende stap met de afgeronde tussenuitkomst?
+
+**Context.** `calc_check.py` rondt elke `calc` af zoals het correctievoorschrift hem toont (`round`). Volgende
+berekeningen rekenen verder met die **afgeronde** waarde, zoals de modeluitwerking dat doet. De schrijver en de
+controle gebruiken hetzelfde getal.
+
+**Opties.** a. verder met de afgeronde waarde (nu) · b. verder met de onafgeronde waarde (dan kan de modeluitwerking
+één cent afwijken van wat er staat).
+
+**Aanbeveling: a.** Een leerling die de modeluitwerking volgt, komt precies op het getal in het cv uit. Een
+alternatief antwoord met onafgeronde tussenwaarden hoort in `alternatives`.
+
+### 13. Welke bouwplanfouten mag je bij pauze 2 accepteren?
+
+**Context.** specs/33 T2b: de docent kan een afwijking accepteren (`accept_deviation`). Gebouwd is: BP5–BP9 (Bloom
+binnen patroon of criterium, knoppen, tolerantie, context, figuur/P15) worden dan een waarschuwing. **BP1–BP4**
+(structuur, aantallen, matrijs, criteria) kun je nooit accepteren. specs/31 §5 noemt Bloom hoger dan criterium + 1
+echter "a blueprint error".
+
+**Opties.** a. zo laten (ook Bloom > criterium + 1 accepteren) · b. dat ene deel van BP5 nooit accepteren; de rest
+van BP5–BP9 wel.
+
+**Aanbeveling: b.** Een scorepunt boven criterium + 1 toetst iets wat de leerlingen niet hebben geleerd. Dat kan de
+verantwoording niet goedmaken.
+
+### 14. Wanneer herhaalt een context een eerdere toets (BP8)?
+
+**Context.** specs/34 BP8 zegt: "no context with a `context_tags` pair from the history". Gebouwd is: **elke** twee
+tags die een opgave deelt met een opgave uit de historie (de laatste 24 maanden) tellen als herhaling. Ook geldt: geen
+twee opgaven met dezelfde eerste tag (branche) in één toets.
+
+**Opties.** a. elk gedeeld paar (nu) · b. alleen de eerste twee tags (branche + setting).
+
+**Aanbeveling: a.** Dat is strenger, en een herhaalde context was juist het probleem (vier keer e-bike).
+
+### 15. Coördinaten in een figuur: 0 en de aslimieten zonder naam?
+
+**Context.** specs/35 §3 zegt: elke coördinaat is een `data`-waarde of een `calc`-uitkomst. Een vraaglijn begint vaak
+bij 0 of loopt tot de rand van de as. Gebouwd is: **0 en de min/max van de assen** zijn altijd toegestaan. Alle andere
+coördinaten moeten benoemd zijn (FG).
+
+**Opties.** a. zo laten · b. ook 0 en aslimieten laten benoemen.
+
+**Aanbeveling: a.**
+
+### 16. Oplosser: welke tussenuitkomsten tellen mee?
+
+**Context.** `solver_compare.py` kijkt of de oplosser het eindgetal en **alle** tussenberekeningen van het cv noemt.
+In de fixture noemt de oplosser de factor 1,21 niet. De vraag krijgt dan `partial`, terwijl het antwoord goed is.
+
+**Opties.** a. alle `calc`'s (nu) · b. alleen de `calc`'s waarop een scorepunt staat (`calc_ref`), plus het eindgetal.
+
+**Aanbeveling: b.** Een scorepunt is wat de leerling moet laten zien. Hulpgetallen zonder scorepunt zeggen niets over
+de juistheid van de vraag.
+
+### 17. Voortbouwen bij een uitlegvraag (IT5)
+
+**Context.** specs/34 IT5 zegt: bij `builds_on = ja` gebruikt minstens één `calc` een naam uit een eerdere vraag. Een
+uitlegvraag die voortbouwt ("verklaar de uitkomst van vraag 2") heeft geen `calc` en faalt dan altijd.
+
+**Opties.**
+- a. zo laten: voortbouwen alleen bij rekenvragen.
+- b. Bij een vraag zonder `calc` geldt het als voortbouwen als de stam "vraag n" noemt (n uit `builds_on_vragen`) en
+  het cv een `follow_through`-zin heeft.
+
+**Aanbeveling: b.** Ook in het centraal examen bouwen uitlegvragen voort op een eerdere uitkomst.

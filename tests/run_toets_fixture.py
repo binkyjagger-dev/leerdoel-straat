@@ -9,6 +9,10 @@ Step 3: validate_toets.py order (valid, invalid, draft with ASK lines), form_bui
         loads, JS syntax via node when present, a headless-browser self-test when Chrome/Chromium is present).
 Step 4: blueprint_check.py (a passing blueprint with --write; one that breaks BP3, BP5, BP7 and BP8),
         blueprint_apply.py (context change, accepted deviation, deviation not accepted, replan), blueprint_report.py.
+Step 5: nlnum (Dutch numbers, rounding, safe evaluator), exam_examples.py, items_check.py / calc_check.py / figures.py /
+        overlap_check.py on an opgave with a calc error, an untraceable number, a copied exam sentence and a figure
+        coordinate outside the data (all caught) and on a clean opgave (all pass, figures rendered), student_build.py,
+        solver_compare.py (one mismatch), label_merge.py --toets, realized.py, validate_toets.py items|verification.
 Everything runs in a temp dir; the repo's subjects/ are only read.
 """
 from __future__ import annotations
@@ -265,6 +269,7 @@ def main():
         print("   --  no Chrome/Chromium found: headless form self-test skipped")
 
     ok &= step4(tmp, subj, bank, S)
+    ok &= step5(tmp, subj, bank, S)
     print("\nALL OK" if ok else "\nSOME CHECKS FAILED")
     sys.exit(0 if ok else 1)
 
@@ -323,6 +328,83 @@ def step4(tmp: Path, subj: Path, bank: Path, S: list[str]) -> bool:
     before = (R / "32_blueprint.json").read_bytes()
     ok &= run("blueprint_apply replan (exit 3, nothing applied)", f"{t}/blueprint_apply.py", str(R), expect_code=3)
     ok &= check("replan left the blueprint untouched", (R / "32_blueprint.json").read_bytes() == before)
+    return ok
+
+
+def step5(tmp: Path, subj: Path, bank: Path, S: list[str]) -> bool:
+    t, ok = "scripts/toets", True
+    sys.path.insert(0, str(ROOT / "scripts" / "toets"))
+    import nlnum  # noqa: E402
+    ok &= check("nlnum: '1.250,50' → 1250.5; 28320 → '28.320'; 2,675 half-up → 2,68; up/down",
+                nlnum.parse_nl("1.250,50") == 1250.5 and nlnum.format_nl(28320, 0) == "28.320"
+                and nlnum.round_mode(2.675, 2, None) == 2.68 and nlnum.round_mode(468.2, 0, "up") == 469
+                and nlnum.round_mode(468.9, 0, "down") == 468)
+    bad_exprs = 0
+    for e in ("__import__('os').system('x')", "a.b", "x[0]", "open('f')", "(lambda: 1)()"):
+        try:
+            nlnum.safe_eval(e, {"a": 1, "x": 2})
+        except nlnum.EvalError:
+            bad_exprs += 1
+    ok &= check("safe evaluator refuses calls, attributes, subscripts and lambdas", bad_exprs == 5
+                and nlnum.safe_eval("max(a, x) * 2 ** 2 - round(1.25, 1)", {"a": 1, "x": 2}) == 6.7)
+    ok &= check("number scanner skips references ('informatiebron 1 en 2', 'vraag 3') and reads '21%' and '€ 2.400'",
+                [(l, v, p) for l, v, p in nlnum.scan_numbers("Gebruik informatiebron 1 en 2 en vraag 3: 21% van € 2.400")]
+                == [("21%", 21.0, True), ("2.400", 2400.0, False)])
+
+    R = pipeline_run(tmp, subj, bank, S, "toets_t3")
+    ok &= run("exam_examples", f"{t}/exam_examples.py", str(R), "--bank", str(bank), *S)
+    p01 = (R / "33_examples/P01.md").read_text(encoding="utf-8")
+    ok &= check("examples: P01 holds exam question 2 with its cv; the missing exam is listed in run.json",
+                "Leg uit hoe een lagere prijs" in p01 and "maximumscore 2" in p01 and "Alleen voor de vorm" in p01
+                and load(R / "run.json")["examples_missing"] == ["vwo-2099-tv1 v1"])
+    ok &= run("validate_toets items", f"{t}/validate_toets.py", "items", str(R))
+    O = ["--opgave", "O1", *S]
+    ok &= run("items_check O1 (untraceable number; must fail)", f"{t}/items_check.py", str(R), *O, expect_fail=True)
+    ok &= check("IT3 finds '15' in informatiebron 1 and nothing else", "number '15' is not in data" in run.last
+                and run.last.count("FAIL") == 1)
+    ok &= run("calc_check O1 (calc error; must fail)", f"{t}/calc_check.py", str(R), *O, expect_fail=True)
+    ok &= check("CC: 23,60 × 1.200 = 28.320, cv shows 28.230", "→ '€ 28.320', but the cv shows '€ 28.230'" in run.last)
+    ok &= run("figures O1 (coordinate not in data; must fail)", f"{t}/figures.py", str(R), *O, expect_fail=True)
+    ok &= check("FG: bar 'februari' 1250 is not a data value or calc result", "coordinate 1250 is not a data value" in run.last)
+    (R / "text" / "zz-allow.txt").write_text("Bereken hiervoor eerst de prijs exclusief btw en de winst.\n", encoding="utf-8")
+    ok &= run("overlap_check O1 (copied exam sentence; must fail)", f"{t}/overlap_check.py", str(R), *O, expect_fail=True)
+    ok &= check("OV: O1-V2 shares 8 words with the exam text and the P01 example; the allowlisted phrase in O1-V1 does not count",
+                "O1-V2 stem: shares 'leg uit hoe een lagere prijs tot een'" in run.last and "33_examples/P01.md" in run.last
+                and "O1-V1" not in run.last)
+    conv = subj / "fixturevak/toets/conventions.md"
+    keep = conv.read_text(encoding="utf-8")
+    conv.write_text("# Conventies\n", encoding="utf-8")
+    run("overlap_check O1 without the allowlist", f"{t}/overlap_check.py", str(R), *O, expect_fail=True)
+    ok &= check("without the allowlist the same phrase is a hit", "O1-V1 stem: shares 'bereken hiervoor eerst" in run.last)
+    conv.write_text(keep, encoding="utf-8")
+    O2 = ["--opgave", "O2", *S]
+    for s in ("items_check", "calc_check", "figures", "overlap_check"):
+        ok &= run(f"{s} O2 (clean opgave)", f"{t}/{s}.py", str(R), *O2)
+    ok &= check("figures rendered: f2.png and f2-cv.png", (R / "figures/f2.png").stat().st_size > 1000
+                and (R / "figures/f2-cv.png").stat().st_size > 1000)
+    ok &= check("check reports in 33_checks/", (R / "33_checks/O2.json").exists() and (R / "33_checks/O2.calc.json").exists())
+    ok &= run("student_build", f"{t}/student_build.py", str(R))
+    st = (R / "34_student/O2.md").read_text(encoding="utf-8")
+    ok &= check("student version: vragen and sources, no cv, no data names, no notes",
+                "**3p 4**" in st and "Informatiebron 2 Kosten" in st and "€ 800" not in st and "doorrekenfout" not in st
+                and "vk_tot" not in st and "fixture met bewuste fouten" not in (R / "34_student/O1.md").read_text(encoding="utf-8"))
+    ok &= run("solver_compare", f"{t}/solver_compare.py", str(R))
+    sc = {v["vraag_id"]: v for o in load(R / "34_solver_compare.json")["opgaven"] for v in o["vragen"]}
+    ok &= check("solver: O2-V4 mismatch (winst 900 vs 800), O2-V3 match, O1-V2 explanation with the ambiguity note",
+                sc["O2-V4"]["status"] == "mismatch" and sc["O2-V3"]["status"] == "match"
+                and sc["O1-V2"]["status"] == "explanation" and sc["O1-V2"]["ambiguity_notes"])
+    ok &= run("label_merge --toets (pipeline)", "scripts/exam/label_merge.py", str(R), "--toets", *S)
+    ok &= run("validate_toets verification (valid)", f"{t}/validate_toets.py", "verification", str(R))
+    ok &= run("validate_toets verification (invalid; must fail)", f"{t}/validate_toets.py", "verification", str(R),
+              "--file", str(R / "35_verification_bad.json"), expect_fail=True)
+    ok &= check("verification: pass with a must finding, a missing verdict and an incomplete proposed decision are caught",
+                all(s in run.last for s in ("pass with a 'must' finding", "O2-V4: no verdict", "proposed_decisions[0]")))
+    ok &= run("realized", f"{t}/realized.py", str(R))
+    rz = load(R / "34_realized.json")
+    ok &= check("realised: matrix exact; solo outside tolerance from the labels; label ≠ plan for O1-V1; V3 Bloom correction used",
+                all(m["ok"] for m in rz["matrix"]) and any(d["what"] == "solo" for d in rz["outside_tolerance"])
+                and any(x["vraag_id"] == "O1-V1" and "solo" in x["differences"] for x in rz["label_vs_plan"])
+                and next(v for v in rz["per_vraag"] if v["vraag_id"] == "O1-V2")["bloom_changed_by_verifier"] == [2])
     return ok
 
 
