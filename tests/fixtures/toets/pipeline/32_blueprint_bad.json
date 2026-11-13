@@ -1,0 +1,177 @@
+{
+ "opgaven": [
+  {
+   "opgave_id": "O1",
+   "title": "Schoenmaker Zool",
+   "context": "schoenmakerij met reparaties en verkoop van schoenen",
+   "context_tags": [
+    "ambacht",
+    "schoenmaker"
+   ],
+   "sources_planned": 2,
+   "reused_from": null,
+   "figures_planned": [],
+   "vragen": [
+    {
+     "vraag_id": "O1-V1",
+     "number": 1,
+     "points": 3,
+     "pattern": "P07",
+     "knobs": {
+      "solo": "relationeel",
+      "route": "gegeven",
+      "steps": "2",
+      "sources": "één bron zonder ruis",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": null
+     },
+     "builds_on_vragen": [],
+     "scorepunten": [
+      {
+       "seq": 1,
+       "points": 1,
+       "criterion_id": "X1.1-01-a",
+       "bloom": "toepassen"
+      },
+      {
+       "seq": 2,
+       "points": 1,
+       "criterion_id": "X1.1-01-a",
+       "bloom": "toepassen"
+      },
+      {
+       "seq": 3,
+       "points": 1,
+       "criterion_id": "X1.1-01-a",
+       "bloom": "toepassen"
+      }
+     ],
+     "intent": "Dekkingsbijdrage per reparatie en in totaal berekenen.",
+     "example_refs": [
+      "vwo-2099-tv1 v1"
+     ]
+    },
+    {
+     "vraag_id": "O1-V2",
+     "number": 2,
+     "points": 2,
+     "pattern": "P01",
+     "knobs": {
+      "solo": "multistructureel",
+      "route": null,
+      "steps": "2",
+      "sources": "in vraagtekst",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": "nee"
+     },
+     "builds_on_vragen": [],
+     "scorepunten": [
+      {
+       "seq": 1,
+       "points": 1,
+       "criterion_id": "X1.1-01-b",
+       "bloom": "analyseren"
+      },
+      {
+       "seq": 2,
+       "points": 1,
+       "criterion_id": "X1.2-01-b",
+       "bloom": "begrijpen"
+      }
+     ],
+     "intent": "Uitleggen hoe een prijsverlaging de omzet kan verhogen.",
+     "example_refs": [
+      "vwo-2030-tv1 v2"
+     ]
+    }
+   ]
+  },
+  {
+   "opgave_id": "O2",
+   "title": "Camping Kruim",
+   "context": "bakkerij die overweegt door te gaan na een moeilijk jaar",
+   "context_tags": [
+    "recreatie",
+    "camping"
+   ],
+   "sources_planned": 2,
+   "reused_from": null,
+   "figures_planned": [],
+   "vragen": [
+    {
+     "vraag_id": "O2-V3",
+     "number": 3,
+     "points": 1,
+     "pattern": "P07",
+     "knobs": {
+      "solo": "unistructureel",
+      "route": "gegeven",
+      "steps": "1",
+      "sources": "in vraagtekst",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": null
+     },
+     "builds_on_vragen": [],
+     "scorepunten": [
+      {
+       "seq": 1,
+       "points": 1,
+       "criterion_id": "X1.1-01-a",
+       "bloom": "toepassen"
+      }
+     ],
+     "intent": "Omzet per week berekenen.",
+     "example_refs": []
+    },
+    {
+     "vraag_id": "O2-V4",
+     "number": 4,
+     "points": 3,
+     "pattern": "P15",
+     "knobs": {
+      "solo": "relationeel",
+      "route": "zelf vinden",
+      "steps": "3",
+      "sources": "meerdere bronnen met ruis",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": "ja"
+     },
+     "builds_on_vragen": [
+      3
+     ],
+     "scorepunten": [
+      {
+       "seq": 1,
+       "points": 1,
+       "criterion_id": "X1.1-01-a",
+       "bloom": "toepassen"
+      },
+      {
+       "seq": 2,
+       "points": 2,
+       "criterion_id": "X1.2-01-b",
+       "bloom": "evalueren"
+      }
+     ],
+     "intent": "Met de omzet uit vraag 3 de winst berekenen en beslissen of Kruim doorgaat.",
+     "example_refs": [
+      "vwo-2030-tv1 v3"
+     ]
+    }
+   ]
+  }
+ ],
+ "coverage": {
+  "per_group": []
+ },
+ "planned_shares": null,
+ "planner_notes": "Fixture-bouwplan."
+}

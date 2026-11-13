@@ -1,10 +1,15 @@
 #!/usr/bin/env python3
-"""Toets-straat validators (specs/34). Only `order` is built (build step 3); the others follow in steps 4–5.
+"""Toets-straat validators (specs/34).
 
 Usage:
   validate_toets.py order <order.json> [--draft] [--run <R>] [--bank <dir>] [--toetsbank <dir>] [--subjects <dir>]
                           [--ask-out <file>] [--json-out <file>]
-  validate_toets.py blueprint|items|verification …     not built yet (exit 2)
+  validate_toets.py blueprint <R>        schema of 32_blueprint.json (+ 32_blueprint_review.json); content: blueprint_check.py
+  validate_toets.py items <R> [--opgave <id>]   schema of 33_items/<opgave>.json, one file per blueprint opgave; content: items_check.py
+  validate_toets.py verification <R> [--file <35_verification….json>]
+                                         schema; one verdict per vraag of the blueprint (or of `only`); a repair verdict
+                                         has a finding; a pass verdict has no `must` finding; finding vraag ids belong to
+                                         the vraag; proposed decisions have question/proposed/impact/applies_to
 
 order — checks O1–O6 of specs/34 §1 on the teacher's toetsopdracht.json (--draft) or the confirmed R/31_order.json.
   O1 schema toets_order; without --draft also complete: title, level, n_opgaven, n_vragen, the bloom_mix key and
@@ -227,6 +232,81 @@ def check_order(argv: list[str]) -> None:
     rep.print_and_exit(opt(argv, "--json-out"))
 
 
+def check_blueprint(argv: list[str]) -> None:
+    rep = Report("validate_toets blueprint")
+    R = Path(argv[2])
+    for e in validate_schema(load_json(R / "32_blueprint.json"), "blueprint.schema.json"):
+        rep.fail("BP1", f"32_blueprint.json: {e}")
+    if (R / "32_blueprint_review.json").exists():
+        for e in validate_schema(load_json(R / "32_blueprint_review.json"), "blueprint_review.schema.json"):
+            rep.fail("BP1", f"32_blueprint_review.json: {e}")
+    rep.info("BP1", "schema only; run blueprint_check.py for BP1–BP10")
+    rep.print_and_exit()
+
+
+def check_items(argv: list[str]) -> None:
+    rep = Report("validate_toets items")
+    R = Path(argv[2])
+    bp = load_json(R / "32_blueprint.json")
+    only = opt(argv, "--opgave")
+    for o in bp["opgaven"]:
+        if only and o["opgave_id"] != only:
+            continue
+        p = R / "33_items" / f"{o['opgave_id']}.json"
+        if not p.exists():
+            rep.fail("IT1", f"{o['opgave_id']}: no 33_items/{p.name}")
+            continue
+        d = load_json(p)
+        for e in validate_schema(d, "toets_items.schema.json")[:5]:
+            rep.fail("IT1", f"{p.name}: {e}")
+        if d.get("opgave_id") != o["opgave_id"]:
+            rep.fail("IT1", f"{p.name}: opgave_id {d.get('opgave_id')}")
+    rep.info("IT1", "schema only; run items_check.py, calc_check.py, figures.py and overlap_check.py per opgave")
+    rep.print_and_exit()
+
+
+def check_verification(argv: list[str]) -> None:
+    rep = Report("validate_toets verification")
+    R = Path(argv[2])
+    path = Path(opt(argv, "--file")) if opt(argv, "--file") else R / "35_verification.json"
+    ver = load_json(path)
+    errs = validate_schema(ver, "toets_verification.schema.json")
+    for e in errs[:10]:
+        rep.fail("VF", f"{path.name}: {e}")
+    if errs:
+        rep.print_and_exit()
+    bp = load_json(R / "32_blueprint.json")
+    vids = [v["vraag_id"] for o in bp["opgaven"] for v in o["vragen"]
+            if not ver.get("only") or o["opgave_id"] in ver["only"]]
+    seen = {}
+    for v in ver["vragen"]:
+        if v["vraag_id"] in seen:
+            rep.fail("VF", f"{v['vraag_id']}: two verdicts")
+        seen[v["vraag_id"]] = v
+        if v["vraag_id"] not in vids:
+            rep.fail("VF", f"{v['vraag_id']}: not a vraag of the blueprint (or outside `only`)")
+        if v["verdict"] == "repair" and not v["findings"]:
+            rep.fail("VF", f"{v['vraag_id']}: repair without findings")
+        if v["verdict"] == "pass" and any(f["severity"] == "must" for f in v["findings"]):
+            rep.fail("VF", f"{v['vraag_id']}: pass with a 'must' finding")
+        for f in v["findings"]:
+            if f.get("vraag_id") not in (None, v["vraag_id"]):
+                rep.fail("VF", f"{v['vraag_id']}: finding {f['id']} names vraag {f['vraag_id']}")
+            if len(f["evidence"].split()) > 25:
+                rep.warn("VF", f"{v['vraag_id']}: finding {f['id']} evidence longer than 25 words")
+    for vid in vids:
+        if vid not in seen:
+            rep.fail("VF", f"{vid}: no verdict")
+    for i, d in enumerate(ver["proposed_decisions"]):
+        miss = [k for k in ("question", "proposed", "impact", "applies_to") if k not in d]
+        if miss:
+            rep.fail("VF", f"proposed_decisions[{i}]: missing {', '.join(miss)}")
+    n_rep = sum(1 for v in ver["vragen"] if v["verdict"] == "repair")
+    rep.info("VF", f"{len(ver['vragen'])} verdicts, {n_rep} repair, {len(ver['toets_findings'])} toets-level findings, "
+                   f"{len(ver['proposed_decisions'])} proposed decisions")
+    rep.print_and_exit()
+
+
 def main(argv: list[str]) -> None:
     if len(argv) < 2:
         print(__doc__)
@@ -234,9 +314,8 @@ def main(argv: list[str]) -> None:
     cmd = argv[1]
     if cmd == "order" and len(argv) >= 3:
         check_order(argv)
-    elif cmd in ("blueprint", "items", "verification"):
-        print(f"[validate_toets] '{cmd}' is not built yet (toets-straat build steps 4–5, docs/plan-toets-straat.md §4)")
-        sys.exit(2)
+    elif cmd in ("blueprint", "items", "verification") and len(argv) >= 3:
+        {"blueprint": check_blueprint, "items": check_items, "verification": check_verification}[cmd](argv)
     else:
         print(__doc__)
         sys.exit(2)

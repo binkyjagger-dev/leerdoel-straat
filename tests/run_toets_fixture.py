@@ -7,6 +7,8 @@ Step 2: /examen E7 — label_merge.py (exam mode: a disagreement, an invalid quo
         conservation); label_merge.py --toets and check_labels.py --toets on a toets run layout.
 Step 3: validate_toets.py order (valid, invalid, draft with ASK lines), form_build.py (HTML parses, embedded JSON
         loads, JS syntax via node when present, a headless-browser self-test when Chrome/Chromium is present).
+Step 4: blueprint_check.py (a passing blueprint with --write; one that breaks BP3, BP5, BP7 and BP8),
+        blueprint_apply.py (context change, accepted deviation, deviation not accepted, replan), blueprint_report.py.
 Everything runs in a temp dir; the repo's subjects/ are only read.
 """
 from __future__ import annotations
@@ -222,7 +224,7 @@ def main():
                 run.last.count("WARN  O6") == 2)
     ok &= run("validate_toets order on the draft without --draft (incomplete; must fail)", f"{t}/validate_toets.py", "order",
               str(FX / "orders/order_draft.json"), *O, expect_fail=True)
-    ok &= run("validate_toets blueprint is a stub (exit 2)", f"{t}/validate_toets.py", "blueprint", "x", expect_code=2)
+    ok &= run("validate_toets without a subcommand prints usage (exit 2)", f"{t}/validate_toets.py", "nothing", expect_code=2)
 
     # ---------------- step 3: form ----------------
     form = tmp / "form.html"
@@ -262,8 +264,66 @@ def main():
     else:
         print("   --  no Chrome/Chromium found: headless form self-test skipped")
 
+    ok &= step4(tmp, subj, bank, S)
     print("\nALL OK" if ok else "\nSOME CHECKS FAILED")
     sys.exit(0 if ok else 1)
+
+
+def pipeline_run(tmp: Path, subj: Path, bank: Path, S: list[str], name: str) -> Path:
+    """A /toets run folder from tests/fixtures/toets/pipeline, with the T0 copies."""
+    R = tmp / name
+    shutil.copytree(FX / "pipeline", R)
+    shutil.copy(FX / "criteria.json", R / "30_criteria.json")
+    shutil.copy(ROOT / "data/toets/knobs.json", R / "30_knobs.json")
+    shutil.copy(bank / "profiel/referentieprofiel.json", R / "30_reference_profile.json")
+    subprocess.run([PY, "-X", "utf8", "scripts/toets/patterns.py", "merged", "fixturevak", *S, "--out", str(R / "30_patterns.json")],
+                   cwd=ROOT, capture_output=True)
+    return R
+
+
+def step4(tmp: Path, subj: Path, bank: Path, S: list[str]) -> bool:
+    t, ok = "scripts/toets", True
+    R = pipeline_run(tmp, subj, bank, S, "toets_t2")
+    ok &= run("validate_toets blueprint (schema)", f"{t}/validate_toets.py", "blueprint", str(R))
+    ok &= run("blueprint_check (valid) --write", f"{t}/blueprint_check.py", str(R), *S, "--write")
+    bp = load(R / "32_blueprint.json")
+    ok &= check("planned_shares and coverage written by the script (Bloom toepassen 0.556; X1.2-01-a untested)",
+                bp["planned_shares"]["bloom"]["toepassen"] == 0.556
+                and next(c for c in bp["coverage"]["per_group"] if c["group_id"] == "X1.2-01")["criteria_not_tested"] == ["X1.2-01-a"])
+    ok &= check("check report written", (R / "32_blueprint.check.json").exists())
+    ok &= run("blueprint_check (broken blueprint; must fail)", f"{t}/blueprint_check.py", str(R), *S,
+              "--file", str(R / "32_blueprint_bad.json"), expect_fail=True)
+    out = run.last
+    ok &= check("BP3 group points, BP5 Bloom outside pattern and > criterion + 1, BP7 solo and Bloom outside tolerance, BP8 history",
+                all(s in out for s in ("FAIL  BP3  group X1.1-01: 6 points", "not in pattern P01", "> criterion X1.1-01-b",
+                                       "FAIL  BP7  solo 'relationeel'", "FAIL  BP7  Bloom-mix", "FAIL  BP8  O2: context tags")))
+    ok &= run("blueprint_report", f"{t}/blueprint_report.py", str(R), *S)
+    md = (R / "output/bouwplan.md").read_text(encoding="utf-8")
+    ok &= check("bouwplan.md: opgaven, matrix, Bloom and knobs opdracht vs bouwplan vs centraal examen, coverage",
+                "## O1 Schoenmaker Zool" in md and "| leerdoel | opdracht | bouwplan |" in md
+                and "| niveau | opdracht | bouwplan | centraal examen |" in md and "X1.2-01-a (onthouden): uitgesloten" in md)
+    # teacher review: change not accepted → check fails; accepted → warning; replan → exit 3
+    R2 = pipeline_run(tmp, subj, bank, S, "toets_t2_noaccept")
+    shutil.copy(R2 / "32_blueprint_review_noaccept.json", R2 / "32_blueprint_review.json")
+    ok &= run("blueprint_apply (teacher change without accept)", f"{t}/blueprint_apply.py", str(R2))
+    ok &= run("blueprint_check after an unaccepted change (must fail BP7)", f"{t}/blueprint_check.py", str(R2), *S, expect_fail=True)
+    ok &= check("BP7 failure names the teacher's change", "FAIL  BP7  solo 'relationeel'" in run.last)
+    ok &= run("blueprint_apply (context change + accepted deviation)", f"{t}/blueprint_apply.py", str(R))
+    bp = load(R / "32_blueprint.json")
+    o2 = next(o for o in bp["opgaven"] if o["opgave_id"] == "O2")
+    ok &= check("context replaced and its tags cleared; accepted deviation recorded; previous blueprint kept",
+                o2["context"].startswith("bakkerij met een bezorgdienst") and o2["context_tags"] == []
+                and bp["accepted_deviations"][0]["field"] == "knobs.solo" and (R / "32_blueprint.round1.json").exists())
+    ok &= run("blueprint_check after the accepted deviation (passes, BP7 as warning)", f"{t}/blueprint_check.py", str(R), *S)
+    ok &= check("BP7 reported as accepted deviation", "WARN  BP7  solo 'relationeel'" in run.last and "geaccepteerd" in run.last)
+    ok &= run("blueprint_report marks the accepted deviation", f"{t}/blueprint_report.py", str(R), *S)
+    ok &= check("bouwplan.md lists the accepted deviation",
+                "buiten tolerantie (geaccepteerd)" in (R / "output/bouwplan.md").read_text(encoding="utf-8"))
+    shutil.copy(R / "32_blueprint_review_replan.json", R / "32_blueprint_review.json")
+    before = (R / "32_blueprint.json").read_bytes()
+    ok &= run("blueprint_apply replan (exit 3, nothing applied)", f"{t}/blueprint_apply.py", str(R), expect_code=3)
+    ok &= check("replan left the blueprint untouched", (R / "32_blueprint.json").read_bytes() == before)
+    return ok
 
 
 if __name__ == "__main__":

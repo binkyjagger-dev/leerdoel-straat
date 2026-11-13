@@ -1,0 +1,74 @@
+{
+ "subject": "fixturevak",
+ "level": "5vwo",
+ "title": "Fixture toets kosten en winst",
+ "criteria_run": "fixture-generate",
+ "n_opgaven": 2,
+ "n_vragen": 4,
+ "duration_minutes": 50,
+ "matrix": [
+  {
+   "group_id": "X1.1-01",
+   "points": 7
+  },
+  {
+   "group_id": "X1.2-01",
+   "points": 2
+  }
+ ],
+ "criteria_include": null,
+ "criteria_exclude": [
+  "X1.2-01-a"
+ ],
+ "bloom_mix": {
+  "begrijpen": 0.2,
+  "toepassen": 0.55,
+  "evalueren": 0.25
+ },
+ "knobs": {
+  "pattern": {
+   "P07": 0.45,
+   "P01": 0.2,
+   "P15": 0.35
+  },
+  "solo": {
+   "unistructureel": 0.1,
+   "multistructureel": 0.6,
+   "relationeel": 0.3
+  },
+  "route": {
+   "gegeven": 0.6,
+   "zelf vinden": 0.4
+  },
+  "steps": {
+   "1": 0.1,
+   "2": 0.5,
+   "3": 0.4
+  },
+  "sources": {
+   "in vraagtekst": 0.3,
+   "één bron zonder ruis": 0.4,
+   "meerdere bronnen met ruis": 0.3
+  },
+  "claim": {
+   "nee": 1.0
+  },
+  "new_concept": {
+   "nee": 1.0
+  },
+  "schema": "vrij",
+  "builds_on": {
+   "nee": 0.5,
+   "ja": 0.5
+  }
+ },
+ "contexts": null,
+ "avoid_contexts": [
+  "fietsen"
+ ],
+ "reuse": [],
+ "reference": "bank-2-examens",
+ "conventions": {
+  "btw": 0.21
+ }
+}
