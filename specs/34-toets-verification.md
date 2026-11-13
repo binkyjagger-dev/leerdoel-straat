@@ -38,9 +38,9 @@ only, never rewrites).
 |---|---|
 | IT1 | schema `toets_items`; vraag ids, numbers and points = blueprint; scorepunten (seq, points, criterion) = blueprint |
 | IT2 | cv: `maximumscore` = points; scorepunt points sum to it; every scorepunt has text |
-| IT3 | every number in stem, sources, tables and the uitwerkbijlage is in `data` (number scanner on the Dutch notation `1.250,50`, `9%`, `€ 3,42`); every number in the cv's `model_answer` is in `data` or a `calc.shown` |
+| IT3 | every number in stem, sources, tables and the uitwerkbijlage is in `data` (exempt: reference numbers, 0, 1, 100 and years 1900–2100; decided 2026-11-14, bouwvraag 11) (number scanner on the Dutch notation `1.250,50`, `9%`, `€ 3,42`); every number in the cv's `model_answer` is in `data` or a `calc.shown` |
 | IT4 | `noise_data` exists only when the vraag's `sources` is *meerdere bronnen met ruis* and then is not empty; every `uses_data` key is used by some `calc` or named in the model answer |
-| IT5 | `builds_on_vragen` = blueprint; when `builds_on = ja`, at least one `calc` uses a name from an earlier vraag and the cv has a `follow_through` sentence |
+| IT5 | `builds_on_vragen` = blueprint; when `builds_on = ja`, the cv has a `follow_through` sentence and either at least one `calc` uses a name from an earlier vraag or, for a vraag without `calc`, the stem names "vraag n" for an n in `builds_on_vragen` (decided 2026-11-14, bouwvraag 17) |
 | IT6 | conventions: € notation, btw default from `conventions` / `conventions.md`, a reference "zie informatiebron n" for each source the vraag uses, the uitwerkbijlage sentence for schema vragen |
 | IT7 | the stem's asking verb fits the pattern's `stem_forms` (advisory, like MB2) |
 
@@ -65,7 +65,9 @@ scorepunt in mindering brengen") is on an allowlist in `conventions.md`.
 formula sheet when the subject has one, `subjects/<s>/toets/formuleblad.md`). It answers every vraag
 as a strong student would, names every number, and reports ambiguity: a vraag that allows two
 reasonable readings, missing data, a source that contradicts the stem. `solver_compare.py`
-(SC) produces per calculation vraag `match | mismatch | partial` and passes the ambiguity notes on.
+(SC) produces per calculation vraag `match | mismatch | partial` and passes the ambiguity notes on. Only the
+final number and the `calc`s that a scorepunt points to (`calc_ref`) count; helper numbers without a scorepunt are
+not required (decided 2026-11-14, bouwvraag 16).
 
 **Labellers.** `item-labeller` A and B in toets mode label every vraag exactly as exam questions are
 labelled (specs/26 §2): pattern, solo, route, steps, sources, claim, new_concept, schema, builds_on,
