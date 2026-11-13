@@ -10,7 +10,7 @@ Reads the bank (register.json, labels/<exam_id>.json, links/<exam_id>.json) and 
 Shares are by points and conditional on applicability: route over calculation/schema patterns, schema over schema
 patterns, builds_on over questions that are not the first of their opgave. Disputed fields, not-applicable knobs,
 unlinked scorepunten (bloom, combination) and NIEUW patterns are left out of their knob's totals and reported as
-`excluded`. A '+'-combination of two patterns splits the question's points evenly over both codes.
+`excluded`; a NIEUW question is also left out of route and schema until its pattern is decided. A '+'-combination of two patterns splits the question's points evenly over both codes.
 `combination` and `bloom` are recomputed from the links (labels survive a bank --rebuild).
 Without labels for the subject, subjects/<s>/toets/seed_profile.json is used (source "seed-…"); without a seed the
 profile says that no reference exists (source "none"). Conservation: per exam and knob the counted plus excluded
@@ -68,7 +68,9 @@ def question_values(l: dict, knobs: dict, pidx: dict) -> dict[str, list[tuple[st
         out["pattern"] = [(c, P / len(codes)) for c in codes]
     for k in LABEL_KNOBS:
         v = l.get(k)
-        if k == "builds_on" and l.get("first_of_opgave"):
+        if k in ("route", "schema") and pat == "NIEUW":
+            out[k] = [("!nieuw", P)]  # applicability depends on the undecided pattern (specs/26 §4, bouwvraag 6)
+        elif k == "builds_on" and l.get("first_of_opgave"):
             out[k] = [("!not_applicable", P)]
         elif v is not None:
             out[k] = [(v, P)]

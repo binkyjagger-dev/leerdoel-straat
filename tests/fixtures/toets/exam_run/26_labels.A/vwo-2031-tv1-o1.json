@@ -6,7 +6,7 @@
   {
    "question_id": "vwo-2031-tv1-q1",
    "question_number": 1,
-   "pattern": "X01",
+   "pattern": "P08+X01",
    "proposed_pattern": null,
    "solo": "multistructureel",
    "route": "gegeven",

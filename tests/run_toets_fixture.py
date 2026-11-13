@@ -118,6 +118,10 @@ def main():
     ok &= run("label_merge (A/B, one disagreement)", f"{e}/label_merge.py", str(r), *B)
     lab = {l["question_id"]: l for l in load(r / "26_labels.json")["labels"]}
     ok &= check("q1 pattern P08 vs P07 → disputed, value null", lab[f"{E1}-q1"]["pattern"] is None and lab[f"{E1}-q1"]["confidence"]["pattern"] == "disputed")
+    ok &= check("two-valued knob (q1 route gegeven vs zelf vinden) → disputed, not medium (bouwvraag 1)",
+                lab[f"{E1}-q1"]["route"] is None and lab[f"{E1}-q1"]["confidence"]["route"] == "disputed")
+    ok &= check("combined pattern in a different order agrees (P08+X01 = X01+P08) → high",
+                lab[f"{E2}-q1"]["pattern"] == "P08+X01" and lab[f"{E2}-q1"]["confidence"]["pattern"] == "high")
     ok &= check("q2 solo one step apart → medium, lower value", lab[f"{E1}-q2"]["solo"] == "multistructureel" and lab[f"{E1}-q2"]["confidence"]["solo"] == "medium")
     ok &= check("q3 builds_on ja on question 1; q1 builds_on null (first of opgave)",
                 lab[f"{E1}-q3"]["builds_on_questions"] == [1] and lab[f"{E1}-q1"]["builds_on"] is None)
@@ -156,20 +160,27 @@ def main():
     pool = prof["pooled"]
     ok &= check("label 'referentie: 2 examens (2030-I, 2031-I)', 14 points, dated copy ignored",
                 prof["label"] == "referentie: 2 examens (2030-I, 2031-I)" and prof["points"] == 14 and prof["n_questions"] == 6)
-    ok &= check("pattern shares by points; NIEUW (3 p) left out", pool["pattern"]["P08"]["points"] == 3
-                and prof["excluded"]["pattern"] == {"nieuw": 3.0} and abs(sum(v["share"] for v in pool["pattern"].values()) - 1) < 0.01)
-    ok &= check("route only over calculation/schema questions (4 p not applicable)",
-                pool["route"]["zelf vinden"]["points"] == 5 and prof["excluded"]["route"] == {"not_applicable": 4.0})
+    ok &= check("pattern shares by points; NIEUW (3 p) left out", abs(sum(v["share"] for v in pool["pattern"].values()) - 1) < 0.01
+                and prof["excluded"]["pattern"] == {"nieuw": 3.0})
+    ok &= check("combined pattern P08+X01 (2 p) split evenly: P08 3 + 1 = 4, X01 1 (bouwvraag 2)",
+                pool["pattern"]["P08"]["points"] == 4 and pool["pattern"]["X01"]["points"] == 1
+                and sum(prof["exams"][1]["knobs"]["pattern"].values()) + 3 == 5)
+    ok &= check("route only over calculation/schema questions; NIEUW left out of route and schema (bouwvraag 6)",
+                pool["route"] == {"gegeven": {"points": 2.0, "share": 0.286}, "zelf vinden": {"points": 5.0, "share": 0.714}}
+                and prof["excluded"]["route"] == {"nieuw": 3.0, "not_applicable": 4.0}
+                and prof["excluded"]["schema"] == {"nieuw": 3.0, "not_applicable": 9.0})
     ok &= check("builds_on over non-first questions only (7 p first of opgave)", prof["excluded"]["builds_on"] == {"not_applicable": 7.0})
     ok &= check("bloom per scorepunt from links; unlinked point excluded",
                 pool["bloom"]["toepassen"]["points"] == 8 and prof["excluded"]["bloom"] == {"unlinked": 1.0})
     ok &= check("per-exam columns kept", [x["exam_id"] for x in prof["exams"]] == [E1, E2] and prof["exams"][0]["knobs"]["combination"] == {"1": 7, "2": 2})
     stats = load(bank / "profiel/patronen_stats.json")["patterns"]
-    ok &= check("pattern stats with example candidates (P08: 2030 v1 goed)",
-                stats["P08"]["examples"][0]["question_number"] == 1 and stats["P08"]["examples"][0]["example_quality"] == "goed")
+    ok &= check("pattern stats with example candidates (P08: 2030 v1 goed); combined question once per pattern, full points for min/max",
+                stats["P08"]["examples"][0]["question_number"] == 1 and stats["P08"]["examples"][0]["example_quality"] == "goed"
+                and stats["P08"]["n_questions"] == 2 and stats["P08"]["points"] == {"sum": 4.0, "min": 2, "max": 3})
     md = (bank / "profiel/referentieprofiel.md").read_text(encoding="utf-8")
     ok &= check("referentieprofiel.md in Dutch with exam columns and left-out points",
-                "| waarde | eindexamen (alle) | 2030-I | 2031-I |" in md and "Weggelaten: 3 p nieuw patroon." in md)
+                "| waarde | eindexamen (alle) | 2030-I | 2031-I |" in md and "Weggelaten: 3 p nieuw patroon." in md
+                and "Weggelaten: 3 p nieuw patroon, 4 p niet van toepassing." in md)
     bad = tmp / "bank_bad"; shutil.copytree(bank, bad)
     lf = bad / f"labels/{E1}.json"; lj = load(lf); lj["questions"][0]["points"] = 4
     lf.write_text(json.dumps(lj, ensure_ascii=False), encoding="utf-8")

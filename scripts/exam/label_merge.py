@@ -10,7 +10,8 @@ Toets mode (--toets, a /toets run, specs/33 §4): reads 34_labels.<A|B|R>/<opgav
 30_criteria.json, 30_patterns.json, 30_knobs.json. Writes 34_labels.json, 34_label_findings.json and
 34_proposed_patterns.json.
 
-Agreement per field: equal → high; ordinal fields one step apart → medium and the lower value; otherwise disputed
+Agreement per field: equal → high; ordinal fields with ≥ 3 values one step apart → medium and the lower value;
+otherwise disputed (two-valued knobs never medium)
 (value null). `pattern` must agree exactly (a '+'-combination in any order). R decides the fields it gives; its
 decision is final (confidence high, listed in repaired_fields). Points come from the units/items (LB6), never from a
 labeller; `combination` and `bloom` are computed from the links. A knob that does not apply to the merged pattern's
@@ -26,9 +27,9 @@ from lcommon import PREFIX, Run, bank_dir, subjects_dir, computed_fields, load_l
 from ecommon import Report, load_json, save_json, validate_def
 from tcommon import EXAMPLE_QUALITY, LABEL_FIELDS, LABEL_KNOBS, kinds_of, knob_applies, same_pattern
 
-# Ordinal agreement rule of specs/26 §3.2, applied to every ordinal knob as written (see docs/bouwvragen-toets.md,
-# question on two-valued knobs). Set to 3 to let two-valued knobs (nee/ja) go to disputed instead of medium.
-MIN_VALUES_FOR_MEDIUM = 2
+# specs/26 §3.2 (bouwvraag 1, decided 2026-11-13): only ordinal fields with three or more values get `medium` for
+# one step apart; on a two-valued knob (claim, new_concept, builds_on, route, schema) any difference is disputed.
+MIN_VALUES_FOR_MEDIUM = 3
 
 
 def merge_field(field: str, a, b, order: list[str] | None) -> tuple[object, str]:
