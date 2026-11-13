@@ -1,0 +1,57 @@
+{
+ "labeller": "A",
+ "mode": "toets",
+ "opgave_id": "O1",
+ "items": [
+  {
+   "question_id": "O1-V1",
+   "question_number": 1,
+   "pattern": "P07",
+   "proposed_pattern": null,
+   "solo": "multistructureel",
+   "route": "gegeven",
+   "steps": "2",
+   "sources": "één bron zonder ruis",
+   "claim": "nee",
+   "new_concept": "nee",
+   "schema": null,
+   "builds_on": null,
+   "builds_on_questions": [],
+   "example_quality": null,
+   "example_quality_reason": null,
+   "evidence": {
+    "pattern": "Bereken de omzet per dag in juli.",
+    "route": "Bereken hiervoor eerst de afzet per dag.",
+    "solo": "500 × € 1,50 = € 750",
+    "steps": "afzet 500",
+    "sources": "In juli verkoopt Hoorn 500 bolletjes per dag voor € 1,50."
+   },
+   "note": null
+  },
+  {
+   "question_id": "O1-V2",
+   "question_number": 2,
+   "pattern": "P01",
+   "proposed_pattern": null,
+   "solo": "multistructureel",
+   "route": null,
+   "steps": "2",
+   "sources": "in vraagtekst",
+   "claim": "nee",
+   "new_concept": "nee",
+   "schema": null,
+   "builds_on": "nee",
+   "builds_on_questions": [],
+   "example_quality": null,
+   "example_quality_reason": null,
+   "evidence": {
+    "pattern": "Leg uit hoe de omzet verandert als Hoorn de prijs verhoogt.",
+    "solo": "de afzet daalt",
+    "steps": "conclusie over de omzet",
+    "sources": "Leg uit hoe de omzet verandert als Hoorn de prijs verhoogt.",
+    "builds_on": "Leg uit hoe de omzet verandert"
+   },
+   "note": null
+  }
+ ]
+}

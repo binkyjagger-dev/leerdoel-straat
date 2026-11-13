@@ -1,0 +1,102 @@
+{
+ "opgave_id": "O1",
+ "title": "IJssalon Hoorn",
+ "intro": "IJssalon Hoorn verkoopt bolletjes ijs aan het strand.",
+ "data": {
+  "afzet": 500,
+  "prijs": 1.5
+ },
+ "sources": [
+  {
+   "n": 1,
+   "title": "Verkoop",
+   "kind": "text",
+   "text": "In juli verkoopt Hoorn 500 bolletjes per dag voor € 1,50.",
+   "table": null,
+   "figure_id": null,
+   "uses_data": [
+    "afzet",
+    "prijs"
+   ],
+   "noise_data": []
+  }
+ ],
+ "figures": [],
+ "vragen": [
+  {
+   "vraag_id": "O1-V1",
+   "number": 1,
+   "points": 2,
+   "stem": "Bereken de omzet per dag in juli. Bereken hiervoor eerst de afzet per dag.",
+   "uitwerkbijlage": null,
+   "cv": {
+    "maximumscore": 2,
+    "model_answer": "500 × € 1,50 = € 750",
+    "calc": [
+     {
+      "name": "omzet",
+      "expr": "afzet * prijs",
+      "round": 2,
+      "rounding": null,
+      "shown": "€ 750,00"
+     }
+    ],
+    "scorepunten": [
+     {
+      "seq": 1,
+      "points": 1,
+      "text": "afzet 500",
+      "criterion_id": "X1.1-01-a",
+      "calc_ref": null
+     },
+     {
+      "seq": 2,
+      "points": 1,
+      "text": "omzet € 750",
+      "criterion_id": "X1.1-01-a",
+      "calc_ref": "omzet"
+     }
+    ],
+    "rules": [],
+    "alternatives": [],
+    "follow_through": null
+   },
+   "new_concepts": [],
+   "builds_on_vragen": []
+  },
+  {
+   "vraag_id": "O1-V2",
+   "number": 2,
+   "points": 2,
+   "stem": "Leg uit hoe de omzet verandert als Hoorn de prijs verhoogt.",
+   "uitwerkbijlage": null,
+   "cv": {
+    "maximumscore": 2,
+    "model_answer": "De afzet daalt; de omzet daalt als de afzet sterker daalt dan de prijs stijgt.",
+    "calc": [],
+    "scorepunten": [
+     {
+      "seq": 1,
+      "points": 1,
+      "text": "de afzet daalt",
+      "criterion_id": "X1.1-01-b",
+      "calc_ref": null
+     },
+     {
+      "seq": 2,
+      "points": 1,
+      "text": "conclusie over de omzet",
+      "criterion_id": "X1.2-01-b",
+      "calc_ref": null
+     }
+    ],
+    "rules": [],
+    "alternatives": [],
+    "follow_through": null
+   },
+   "new_concepts": [],
+   "builds_on_vragen": []
+  }
+ ],
+ "writer_notes": null
+}

@@ -1,0 +1,85 @@
+{
+ "labeller": "A",
+ "mode": "exam",
+ "opgave_id": "vwo-2030-tv1-o1",
+ "items": [
+  {
+   "question_id": "vwo-2030-tv1-q1",
+   "question_number": 1,
+   "pattern": "P08",
+   "proposed_pattern": null,
+   "solo": "relationeel",
+   "route": "zelf vinden",
+   "steps": "3",
+   "sources": "één bron zonder ruis",
+   "claim": "nee",
+   "new_concept": "nee",
+   "schema": null,
+   "builds_on": null,
+   "builds_on_questions": [],
+   "example_quality": "goed",
+   "example_quality_reason": "duidelijke stam",
+   "evidence": {
+    "pattern": "Bereken de winst per week.",
+    "solo": "Gebruik informatiebron 1.",
+    "steps": "winst € 4.000 - € 1.600 - € 1.500 = € 900",
+    "sources": "Gebruik informatiebron 1.",
+    "route": "Bereken de winst per week."
+   },
+   "note": null
+  },
+  {
+   "question_id": "vwo-2030-tv1-q2",
+   "question_number": 2,
+   "pattern": "P01",
+   "proposed_pattern": null,
+   "solo": "multistructureel",
+   "route": null,
+   "steps": "2",
+   "sources": "in vraagtekst",
+   "claim": "nee",
+   "new_concept": "nee",
+   "schema": null,
+   "builds_on": "nee",
+   "builds_on_questions": [],
+   "example_quality": "bruikbaar",
+   "example_quality_reason": "duidelijke stam",
+   "evidence": {
+    "pattern": "Leg uit hoe een lagere prijs tot een hogere omzet kan leiden.",
+    "solo": "de afzet stijgt procentueel sterker dan de prijs daalt",
+    "steps": "bij een lagere prijs stijgt de afzet",
+    "sources": "Kruim verlaagt de prijs.",
+    "builds_on": "Leg uit hoe een lagere prijs tot een hogere omzet kan leiden."
+   },
+   "note": null
+  },
+  {
+   "question_id": "vwo-2030-tv1-q3",
+   "question_number": 3,
+   "pattern": "P15",
+   "proposed_pattern": null,
+   "solo": "relationeel",
+   "route": "zelf vinden",
+   "steps": "2",
+   "sources": "in vraagtekst",
+   "claim": "nee",
+   "new_concept": "nee",
+   "schema": null,
+   "builds_on": "ja",
+   "builds_on_questions": [
+    1
+   ],
+   "example_quality": "goed",
+   "example_quality_reason": "duidelijke stam",
+   "evidence": {
+    "pattern": "Beoordeel met je antwoord op vraag 1 of het tweede filiaal verstandig is.",
+    "solo": "gebruik van de winst uit vraag 1",
+    "steps": "juiste conclusie",
+    "sources": "Kruim overweegt een tweede filiaal.",
+    "builds_on": "met je antwoord op vraag 1",
+    "route": "Beoordeel met je antwoord op vraag 1"
+   },
+   "note": null
+  }
+ ]
+}

@@ -1,0 +1,86 @@
+{
+ "subject": "fixturevak",
+ "level": "5vwo",
+ "title": "Fixture toets omzet",
+ "criteria_run": "fixture-generate",
+ "n_opgaven": 5,
+ "n_vragen": 13,
+ "duration_minutes": 50,
+ "matrix": [
+  {
+   "group_id": "X1.1-01",
+   "points": 6
+  },
+  {
+   "group_id": "X1.2-01",
+   "points": 4
+  },
+  {
+   "group_id": "X9.9-01",
+   "points": 2
+  }
+ ],
+ "criteria_include": null,
+ "criteria_exclude": [
+  "X1.2-01-z"
+ ],
+ "bloom_mix": {
+  "toepassen": 0.5,
+  "creëren": 0.5
+ },
+ "knobs": {
+  "pattern": {
+   "P07": 0.4,
+   "P01": 0.3,
+   "X01": 0.3
+  },
+  "solo": {
+   "multistructureel": 0.5,
+   "relationeel": 0.4
+  },
+  "route": {
+   "gegeven": 0.6,
+   "zelf vinden": 0.4
+  },
+  "steps": {
+   "1": 0.5,
+   "5": 0.5
+  },
+  "sources": {
+   "in vraagtekst": 0.5,
+   "één bron zonder ruis": 0.5
+  },
+  "claim": {
+   "nee": 1.0
+  },
+  "new_concept": {
+   "nee": 1.0
+  },
+  "schema": {
+   "voorgestructureerd": 1.0
+  },
+  "builds_on": "vrij",
+  "combination": {
+   "1": 1.0
+  }
+ },
+ "contexts": [
+  {
+   "opgave": 1,
+   "context": null
+  }
+ ],
+ "avoid_contexts": [
+  "fietsen"
+ ],
+ "reuse": [
+  {
+   "toets_id": "T2030-99",
+   "opgave_id": "O1"
+  }
+ ],
+ "reference": null,
+ "conventions": {
+  "btw": 0.21
+ }
+}

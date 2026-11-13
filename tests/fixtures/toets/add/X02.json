@@ -1,0 +1,27 @@
+{
+ "code": "X02",
+ "layer": "fixturevak",
+ "name": "Begroting vergelijken",
+ "kind": "explanation",
+ "description": "Fixturepatroon Begroting vergelijken.",
+ "stem_forms": [
+  "Vul … in"
+ ],
+ "scoring": "1 punt per regel",
+ "points": [
+  2,
+  2
+ ],
+ "bloom": [
+  "analyseren"
+ ],
+ "solo": [
+  "multistructureel"
+ ],
+ "knobs_fixed": {},
+ "needs_figure": false,
+ "in_central_exam": true,
+ "examples_seed": [],
+ "status": "active",
+ "source": "seed-analysis-2026-11"
+}

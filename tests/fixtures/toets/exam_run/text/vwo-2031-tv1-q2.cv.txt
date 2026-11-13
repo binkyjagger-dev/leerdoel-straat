@@ -1,0 +1,4 @@
+maximumscore 3
+• kostprijs
+• marge
+• verkoopprijs

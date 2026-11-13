@@ -1,0 +1,50 @@
+{
+ "toets_id": "T2030-01",
+ "criteria_run": "fixture-generate",
+ "title": "Toets omzet",
+ "opgaven": [
+  {
+   "opgave_id": "O1",
+   "title": "Camping Duin",
+   "context_tags": [
+    "recreatie",
+    "camping"
+   ],
+   "reused_from": null,
+   "vragen": [
+    {
+     "vraag_id": "O1-V1",
+     "points": 2,
+     "pattern": "P07",
+     "scorepunten": [
+      {
+       "points": 1,
+       "criterion_id": "X1.1-01-a",
+       "group_id": "X1.1-01",
+       "bloom": "toepassen"
+      },
+      {
+       "points": 1,
+       "criterion_id": "X1.1-01-a",
+       "group_id": "X1.1-01",
+       "bloom": "toepassen"
+      }
+     ]
+    },
+    {
+     "vraag_id": "O1-V2",
+     "points": 2,
+     "pattern": "P01",
+     "scorepunten": [
+      {
+       "points": 2,
+       "criterion_id": "X1.2-01-b",
+       "group_id": "X1.2-01",
+       "bloom": "evalueren"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,3 @@
+Bakkerij Kruim verkoopt 2.000 broden per week voor € 2 per brood.
+[vraag]
+Bereken de winst per week. Gebruik informatiebron 1.

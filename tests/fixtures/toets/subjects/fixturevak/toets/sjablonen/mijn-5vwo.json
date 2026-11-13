@@ -1,0 +1,19 @@
+{
+ "subject": "fixturevak",
+ "name": "mijn-5vwo",
+ "level": "5vwo",
+ "criteria_run": "fixture-generate",
+ "n_opgaven": 2,
+ "n_vragen": 4,
+ "matrix": [
+  {
+   "group_id": "X1.1-01",
+   "points": 6
+  }
+ ],
+ "knobs": {
+  "claim": {
+   "nee": 1.0
+  }
+ }
+}

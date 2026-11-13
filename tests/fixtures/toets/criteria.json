@@ -1,0 +1,58 @@
+{
+ "groups": [
+  {
+   "group_id": "X1.1-01",
+   "unit_id": "X1.1",
+   "goal": {
+    "text_expert": "De leerling kan de omzet berekenen en verklaren hoe die verandert.",
+    "text_student": "Ik kan de omzet berekenen en uitleggen hoe die verandert.",
+    "bloom": "begrijpen"
+   },
+   "criteria": [
+    {
+     "criterion_id": "X1.1-01-a",
+     "text_expert": "Berekent de omzet als afzet maal prijs.",
+     "text_student": "Ik kan de omzet berekenen als afzet maal prijs.",
+     "bloom": "toepassen"
+    },
+    {
+     "criterion_id": "X1.1-01-b",
+     "text_expert": "Legt uit hoe een prijsverlaging de afzet en de omzet beïnvloedt.",
+     "text_student": "Ik kan uitleggen hoe een lagere prijs de afzet en de omzet verandert.",
+     "bloom": "begrijpen"
+    }
+   ],
+   "concepts": [
+    "omzet",
+    "afzet",
+    "prijs"
+   ]
+  },
+  {
+   "group_id": "X1.2-01",
+   "unit_id": "X1.2",
+   "goal": {
+    "text_expert": "De leerling kan uitbreiding met een filiaal beoordelen.",
+    "text_student": "Ik kan beoordelen of een extra filiaal verstandig is.",
+    "bloom": "evalueren"
+   },
+   "criteria": [
+    {
+     "criterion_id": "X1.2-01-a",
+     "text_expert": "Noemt voordelen van uitbreiding met een tweede filiaal.",
+     "text_student": "Ik kan voordelen van een tweede filiaal noemen.",
+     "bloom": "onthouden"
+    },
+    {
+     "criterion_id": "X1.2-01-b",
+     "text_expert": "Beoordeelt of een tweede filiaal rendabel is.",
+     "text_student": "Ik kan beoordelen of een tweede filiaal rendabel is.",
+     "bloom": "evalueren"
+    }
+   ],
+   "concepts": [
+    "filiaal"
+   ]
+  }
+ ]
+}

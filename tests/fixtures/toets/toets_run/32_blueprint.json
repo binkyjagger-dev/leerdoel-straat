@@ -1,0 +1,88 @@
+{
+ "opgaven": [
+  {
+   "opgave_id": "O1",
+   "title": "IJssalon Hoorn",
+   "context": "ijssalon aan zee",
+   "context_tags": [
+    "horeca",
+    "ijssalon"
+   ],
+   "sources_planned": 1,
+   "reused_from": null,
+   "vragen": [
+    {
+     "vraag_id": "O1-V1",
+     "number": 1,
+     "points": 2,
+     "pattern": "P07",
+     "knobs": {
+      "solo": "multistructureel",
+      "route": "gegeven",
+      "steps": "2",
+      "sources": "één bron zonder ruis",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": null
+     },
+     "builds_on_vragen": [],
+     "scorepunten": [
+      {
+       "seq": 1,
+       "points": 1,
+       "criterion_id": "X1.1-01-a",
+       "bloom": "toepassen"
+      },
+      {
+       "seq": 2,
+       "points": 1,
+       "criterion_id": "X1.1-01-a",
+       "bloom": "toepassen"
+      }
+     ],
+     "intent": "Omzet berekenen.",
+     "example_refs": []
+    },
+    {
+     "vraag_id": "O1-V2",
+     "number": 2,
+     "points": 2,
+     "pattern": "P01",
+     "knobs": {
+      "solo": "multistructureel",
+      "route": null,
+      "steps": "2",
+      "sources": "in vraagtekst",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": "nee"
+     },
+     "builds_on_vragen": [],
+     "scorepunten": [
+      {
+       "seq": 1,
+       "points": 1,
+       "criterion_id": "X1.1-01-b",
+       "bloom": "begrijpen"
+      },
+      {
+       "seq": 2,
+       "points": 1,
+       "criterion_id": "X1.2-01-b",
+       "bloom": "evalueren"
+      }
+     ],
+     "intent": "Omzetverandering uitleggen.",
+     "example_refs": []
+    }
+   ]
+  }
+ ],
+ "coverage": {
+  "per_group": []
+ },
+ "planned_shares": null,
+ "planner_notes": null
+}

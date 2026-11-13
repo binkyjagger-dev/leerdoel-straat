@@ -1,0 +1,35 @@
+{
+ "source": {
+  "title": "fixture"
+ },
+ "units": [
+  {
+   "unit_id": "X",
+   "parent_id": null,
+   "kind": "domein",
+   "code": "X",
+   "title": "Ondernemen"
+  },
+  {
+   "unit_id": "X1",
+   "parent_id": "X",
+   "kind": "subdomein",
+   "code": "X1",
+   "title": "Omzet en groei"
+  },
+  {
+   "unit_id": "X1.1",
+   "parent_id": "X1",
+   "kind": "eindterm",
+   "code": "1.1",
+   "title": null
+  },
+  {
+   "unit_id": "X1.2",
+   "parent_id": "X1",
+   "kind": "eindterm",
+   "code": "1.2",
+   "title": null
+  }
+ ]
+}
