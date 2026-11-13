@@ -145,7 +145,7 @@ regelbestand).
 
 # Fase 2: bouwstappen 4–5 (bouwplan, schrijven en controleren)
 
-**Status:** open · **Gesteld door:** de bouwer, 2026-11-14 · **Beslist door:** Martijn
+**Status:** beslist 2026-11-14 · **Gesteld door:** de bouwer, 2026-11-14 · **Beslist door:** Martijn
 
 Ook hier is steeds de kleinste technische keuze gebouwd. Elke keuze staat in één constante of een paar regels.
 
@@ -227,3 +227,15 @@ uitlegvraag die voortbouwt ("verklaar de uitkomst van vraag 2") heeft geen `calc
   het cv een `follow_through`-zin heeft.
 
 **Aanbeveling: b.** Ook in het centraal examen bouwen uitlegvragen voort op een eerdere uitkomst.
+
+### Besluiten fase 2 (Martijn, 2026-11-14)
+
+| Vraag | Besluit | Gevolg |
+|---|---|---|
+| 11 | **b** — jaartallen 1900–2100 vrijgesteld | `EXEMPT` uitbreiden; specs/34 IT3 |
+| 12 | **a** — verder met de afgeronde tussenuitkomst | zoals gebouwd |
+| 13 | **b** — Bloom boven criterium + 1 nooit accepteren; rest van BP5–BP9 wel | `blueprint_apply.py`/`blueprint_check.py`; specs/33 T2b |
+| 14 | **a** — elk gedeeld tag-paar telt als herhaling | zoals gebouwd |
+| 15 | **a** — 0 en aslimieten zonder naam | zoals gebouwd |
+| 16 | **b** — alleen eindgetal + `calc`'s met scorepunt | `solver_compare.py`; specs/34 §4 |
+| 17 | **b** — uitlegvraag bouwt voort via "vraag n" in de stam + doorrekenzin | `items_check.py`; specs/34 IT5 |

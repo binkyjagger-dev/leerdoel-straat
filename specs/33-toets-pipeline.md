@@ -93,7 +93,8 @@ Changes are transcribed into `R/32_blueprint_review.json` (schema `blueprint_rev
 `blueprint_apply.py R` applies field changes deterministically (no agent); a context change
 clears the opgave's `context_tags` and the planner fills only the tags. Then `blueprint_check.py R`.
 If the check fails because of a teacher change, report it and ask again; the teacher can accept the
-deviation (`accept_deviation: true` on the entry). The deviation then goes to the verantwoording.
+deviation (`accept_deviation: true` on the entry). The deviation then goes to the verantwoording. BP1–BP4 and a
+scorepunt Bloom above criterion + 1 (BP5) can never be accepted (decided 2026-11-14, bouwvraag 13).
 `replan` relaunches the planner with the review notes. Pause 2 ends with **Akkoord**.
 
 ### T3 Write
