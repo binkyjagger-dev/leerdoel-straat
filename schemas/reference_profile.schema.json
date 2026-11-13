@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ReferenceProfile",
+  "description": "subjects/<vak>/examenbank/profiel/referentieprofiel.json (profile_build.py, specs/26 §4), its run copy R/30_reference_profile.json, and the seed subjects/<vak>/toets/seed_profile.json (specs/26 §6). Shares are by points, conditional on applicability. #/$defs/pattern_stats = profiel/patronen_stats.json.",
+  "type": "object",
+  "required": ["subject", "source", "n_exams", "points", "by", "pooled", "unknown_knobs", "exams"],
+  "properties": {
+    "subject": {"type": "string"},
+    "source": {"type": "string", "description": "'bank-labels', 'seed-analysis-…' or 'none'"},
+    "label": {"type": ["string", "null"], "description": "Dutch: 'referentie: 2 examens (2025-I, 2026-I)' or 'referentie: voorlopig, analyse nov 2026'"},
+    "note": {"type": ["string", "null"]},
+    "n_exams": {"type": "integer", "minimum": 0},
+    "n_questions": {"type": ["integer", "null"], "minimum": 0},
+    "points": {"type": "number", "minimum": 0},
+    "by": {"const": "points"},
+    "pooled": {"type": "object", "additionalProperties": {"$ref": "#/$defs/knob_shares"}},
+    "excluded": {"type": "object", "additionalProperties": {"type": "object", "additionalProperties": {"type": "number"}},
+                 "description": "knob → reason (disputed, not_applicable, unlinked, nieuw) → points left out, pooled"},
+    "unknown_knobs": {"type": "array", "items": {"type": "string"}},
+    "exams": {"type": "array", "items": {
+      "type": "object", "required": ["exam_id", "points", "knobs"],
+      "properties": {
+        "exam_id": {"type": "string"},
+        "points": {"type": "number"},
+        "n_questions": {"type": "integer"},
+        "knobs": {"type": "object", "additionalProperties": {"type": "object", "additionalProperties": {"type": "number"}}},
+        "excluded": {"type": "object", "additionalProperties": {"type": "object", "additionalProperties": {"type": "number"}}},
+        "questions": {"type": "array"}
+      }}}
+  },
+  "$defs": {
+    "knob_shares": {"type": "object", "additionalProperties": {
+      "type": "object", "required": ["points", "share"],
+      "properties": {"points": {"type": "number", "minimum": 0}, "share": {"type": "number", "minimum": 0, "maximum": 1}}}},
+    "pattern_stats": {
+      "type": "object", "required": ["subject", "source", "patterns"],
+      "properties": {
+        "subject": {"type": "string"},
+        "source": {"type": "string"},
+        "patterns": {"type": "object", "additionalProperties": {
+          "type": "object", "required": ["n_questions", "points", "bloom", "solo", "examples"],
+          "properties": {
+            "n_questions": {"type": "integer"},
+            "points": {"type": "object", "required": ["sum", "min", "max"],
+                       "properties": {"sum": {"type": "number"}, "min": {"type": "number"}, "max": {"type": "number"}}},
+            "bloom": {"type": "object", "additionalProperties": {"type": "number"}},
+            "solo": {"type": "object", "additionalProperties": {"type": "number"}},
+            "examples": {"type": "array", "items": {
+              "type": "object", "required": ["exam_id", "question_number", "example_quality"],
+              "properties": {"exam_id": {"type": "string"}, "question_number": {"type": "integer"},
+                             "example_quality": {"type": ["string", "null"]}, "reason": {"type": ["string", "null"]},
+                             "points": {"type": "number"}}}}
+          }}}
+      }
+    }
+  }
+}

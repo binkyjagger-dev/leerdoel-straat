@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "BlueprintReview",
+  "description": "R/32_blueprint_review.json — the teacher's changes at pause 2, transcribed by the orchestrator, applied by blueprint_apply.py (specs/33 §3 T2b).",
+  "type": "object",
+  "required": ["entries"],
+  "properties": {
+    "approved": {"type": "boolean"},
+    "reviewed_at": {"type": ["string", "null"]},
+    "entries": {"type": "array", "items": {"oneOf": [
+      {"type": "object", "required": ["target", "field", "value"],
+       "properties": {"target": {"type": "string", "pattern": "^O[0-9]+(-V[0-9]+)?$"},
+                      "field": {"type": "string", "pattern": "^(context|title|pattern|points|intent|knobs\\.[a-z_]+|scorepunten|builds_on_vragen)$"},
+                      "value": {},
+                      "note": {"type": ["string", "null"]},
+                      "accept_deviation": {"type": "boolean"}},
+       "additionalProperties": false},
+      {"type": "object", "required": ["action"],
+       "properties": {"action": {"const": "replan"}, "note": {"type": ["string", "null"]}},
+       "additionalProperties": false}]}}
+  }
+}

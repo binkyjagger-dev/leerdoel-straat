@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PatternCatalogue",
+  "description": "data/toets/patterns_base.json and subjects/<vak>/toets/patterns.json — one layer of the pattern catalogue (specs/31 §1–§2). Written only by scripts/toets/patterns.py. A single record validates against #/$defs/pattern, a labeller's proposal against #/$defs/proposed_pattern, the merged catalogue (patterns.py merged, R/30_patterns.json) against #/$defs/merged.",
+  "type": "object",
+  "required": ["layer", "version", "patterns"],
+  "properties": {
+    "layer": {"type": "string", "pattern": "^[a-z0-9-]+$", "description": "'base' or the subject slug"},
+    "version": {"type": "string"},
+    "patterns": {"type": "array", "items": {"$ref": "#/$defs/pattern"}}
+  },
+  "$defs": {
+    "level": {"enum": ["onthouden", "begrijpen", "toepassen", "analyseren", "evalueren"]},
+    "solo": {"enum": ["unistructureel", "multistructureel", "relationeel", "uitgebreid abstract"]},
+    "kind": {"enum": ["explanation", "calculation", "schema", "drawing", "choice"]},
+    "pattern": {
+      "type": "object",
+      "required": ["code", "layer", "name", "kind", "description", "stem_forms", "scoring", "points", "bloom", "solo",
+                   "knobs_fixed", "needs_figure", "in_central_exam", "examples_seed", "status", "source"],
+      "properties": {
+        "code": {"type": "string", "pattern": "^[A-Z][0-9]{2}$"},
+        "layer": {"type": "string", "pattern": "^[a-z0-9-]+$"},
+        "name": {"type": "string", "minLength": 3},
+        "kind": {"$ref": "#/$defs/kind"},
+        "description": {"type": "string", "minLength": 5},
+        "stem_forms": {"type": "array", "items": {"type": "string"}},
+        "scoring": {"type": "string"},
+        "points": {"type": "array", "minItems": 2, "maxItems": 2, "items": {"type": "integer", "minimum": 1},
+                   "description": "[min, max] typical range in the central exam"},
+        "bloom": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/level"}, "uniqueItems": true,
+                  "description": "scorepunt levels this pattern can carry; creëren has no pattern (specs/31 §3)"},
+        "solo": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/solo"}, "uniqueItems": true},
+        "knobs_fixed": {"type": "object", "additionalProperties": {"type": "string"}},
+        "needs_figure": {"type": "boolean"},
+        "in_central_exam": {"type": "boolean"},
+        "examples_seed": {"type": "array", "items": {"type": "string"}},
+        "status": {"enum": ["active", "retired"]},
+        "source": {"type": "string", "description": "'seed-analysis-2026-11' or 'decision'"},
+        "decision": {"type": ["string", "null"], "description": "answered decision that added or changed the record"},
+        "added_at": {"type": ["string", "null"]},
+        "retired_by": {"type": ["string", "null"]},
+        "retired_at": {"type": ["string", "null"]},
+        "notes": {"type": ["string", "null"]}
+      },
+      "additionalProperties": false
+    },
+    "proposed_pattern": {
+      "type": "object",
+      "required": ["name", "description", "scoring", "layer"],
+      "properties": {
+        "name": {"type": "string", "minLength": 3},
+        "description": {"type": "string", "minLength": 5},
+        "scoring": {"type": "string"},
+        "layer": {"type": "string", "pattern": "^[a-z0-9-]+$", "description": "'base' or the subject slug"},
+        "kind": {"$ref": "#/$defs/kind"}
+      }
+    },
+    "merged": {
+      "type": "object",
+      "required": ["subject", "layers", "patterns"],
+      "properties": {
+        "subject": {"type": "string"},
+        "layers": {"type": "object", "additionalProperties": {"type": "string"}, "description": "layer → version"},
+        "patterns": {"type": "array", "items": {"$ref": "#/$defs/pattern"}}
+      }
+    }
+  }
+}

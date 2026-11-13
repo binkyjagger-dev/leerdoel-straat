@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ToetsOrder",
+  "description": "toetsopdracht.json (teacher's file, from the form) and R/31_order.json (confirmed order) — specs/32 §1. In the teacher's file a knob may be missing or null (asked in the dialogue, T1); validate_toets.py order checks the confirmed order is complete. A template (subjects/<vak>/toets/sjablonen/<name>.json) validates against #/$defs/template.",
+  "type": "object",
+  "required": ["subject", "level", "criteria_run", "n_opgaven", "n_vragen", "matrix"],
+  "properties": {
+    "subject": {"type": "string", "pattern": "^[a-z0-9-]+$"},
+    "level": {"enum": ["4vwo", "5vwo", "6vwo", null]},
+    "title": {"type": ["string", "null"]},
+    "criteria_run": {"type": "string"},
+    "n_opgaven": {"type": ["integer", "null"], "minimum": 1},
+    "n_vragen": {"type": ["integer", "null"], "minimum": 1},
+    "duration_minutes": {"type": ["integer", "null"], "minimum": 1},
+    "matrix": {"type": "array", "items": {"$ref": "#/$defs/matrix_row"}},
+    "criteria_include": {"type": ["array", "null"], "items": {"type": "string"}},
+    "criteria_exclude": {"type": ["array", "null"], "items": {"type": "string"}},
+    "bloom_mix": {"oneOf": [{"type": "null"}, {"$ref": "#/$defs/bloom_mix"}],
+                  "description": "by points; null = no mix (the planner chooses); absent in the teacher's file = asked in T1"},
+    "knobs": {"type": "object", "additionalProperties": {"$ref": "#/$defs/knob_setting"}},
+    "contexts": {"type": ["array", "null"], "items": {
+      "type": "object", "required": ["opgave", "context"],
+      "properties": {"opgave": {"type": "integer", "minimum": 1}, "context": {"type": ["string", "null"]}},
+      "additionalProperties": false}},
+    "avoid_contexts": {"type": ["array", "null"], "items": {"type": "string"}},
+    "reuse": {"type": ["array", "null"], "items": {
+      "type": "object", "required": ["toets_id", "opgave_id"],
+      "properties": {"toets_id": {"type": "string"}, "opgave_id": {"type": "string"}},
+      "additionalProperties": false}},
+    "reference": {"type": ["string", "null"], "description": "filled by the straat: which reference profile was shown"},
+    "conventions": {"type": ["object", "null"], "description": "subject-convention overrides, e.g. {\"btw\": 0.21}"},
+    "template": {"type": ["string", "null"], "description": "name of the template the form loaded, if any"}
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "matrix_row": {
+      "type": "object", "required": ["group_id", "points"],
+      "properties": {"group_id": {"type": "string"}, "points": {"type": "integer", "minimum": 1}},
+      "additionalProperties": false
+    },
+    "share_map": {"type": "object", "minProperties": 1, "additionalProperties": {"type": "number", "minimum": 0, "maximum": 1}},
+    "knob_setting": {"oneOf": [{"const": "vrij"}, {"type": "null"}, {"$ref": "#/$defs/share_map"}]},
+    "bloom_mix": {
+      "type": "object", "minProperties": 1,
+      "propertyNames": {"enum": ["onthouden", "begrijpen", "toepassen", "analyseren", "evalueren", "creëren"]},
+      "additionalProperties": {"type": "number", "minimum": 0, "maximum": 1}
+    },
+    "template": {
+      "type": "object",
+      "required": ["subject"],
+      "properties": {
+        "subject": {"type": "string"}, "name": {"type": "string"}, "level": {"enum": ["4vwo", "5vwo", "6vwo", null]},
+        "criteria_run": {"type": "string"}, "n_opgaven": {"type": ["integer", "null"]}, "n_vragen": {"type": ["integer", "null"]},
+        "duration_minutes": {"type": ["integer", "null"]},
+        "matrix": {"type": "array", "items": {"$ref": "#/$defs/matrix_row"}},
+        "criteria_include": {"type": ["array", "null"]}, "criteria_exclude": {"type": ["array", "null"]},
+        "bloom_mix": {"oneOf": [{"type": "null"}, {"$ref": "#/$defs/bloom_mix"}]},
+        "knobs": {"type": "object", "additionalProperties": {"$ref": "#/$defs/knob_setting"}},
+        "avoid_contexts": {"type": ["array", "null"]}, "conventions": {"type": ["object", "null"]}
+      },
+      "not": {"anyOf": [{"required": ["title"]}, {"required": ["contexts"]}, {"required": ["reuse"]}]}
+    }
+  }
+}
