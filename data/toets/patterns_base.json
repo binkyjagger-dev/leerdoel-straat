@@ -1,0 +1,410 @@
+{
+ "layer": "base",
+ "version": "seed-2026-11",
+ "patterns": [
+  {
+   "code": "P01",
+   "layer": "base",
+   "name": "Mechanismeketen uitleggen",
+   "kind": "explanation",
+   "description": "De vraag geeft het effect ('leg uit dat'); de leerling legt een standaardketen van twee schakels.",
+   "stem_forms": [
+    "Leg uit dat …",
+    "Leg uit hoe …"
+   ],
+   "scoring": "1 punt per schakel",
+   "points": [
+    2,
+    2
+   ],
+   "bloom": [
+    "begrijpen",
+    "toepassen"
+   ],
+   "solo": [
+    "unistructureel",
+    "multistructureel",
+    "relationeel"
+   ],
+   "knobs_fixed": {},
+   "needs_figure": false,
+   "in_central_exam": true,
+   "examples_seed": [],
+   "status": "active",
+   "source": "seed-analysis-2026-11"
+  },
+  {
+   "code": "P02",
+   "layer": "base",
+   "name": "Keten met verplichte contextconditie",
+   "kind": "explanation",
+   "description": "De stam geeft een conditie of nieuw begrip dat in de redenering moet; zonder dat gegeven is het antwoord fout (test: haal de conditie weg).",
+   "stem_forms": [
+    "Leg uit … Betrek … in je antwoord."
+   ],
+   "scoring": "2 punten, één schakel is het verwerken van de conditie",
+   "points": [
+    2,
+    3
+   ],
+   "bloom": [
+    "toepassen",
+    "analyseren"
+   ],
+   "solo": [
+    "relationeel"
+   ],
+   "knobs_fixed": {
+    "claim": "nee"
+   },
+   "needs_figure": false,
+   "in_central_exam": true,
+   "examples_seed": [],
+   "status": "active",
+   "source": "seed-analysis-2026-11"
+  },
+  {
+   "code": "P03",
+   "layer": "base",
+   "name": "Stelling of conclusie onderbouwen",
+   "kind": "explanation",
+   "description": "Iemand beweert iets; de leerling legt de route naar dat eindpunt.",
+   "stem_forms": [
+    "… stelt dat … Leg uit hoe … tot deze conclusie komt."
+   ],
+   "scoring": "2 punten",
+   "points": [
+    2,
+    2
+   ],
+   "bloom": [
+    "begrijpen",
+    "toepassen",
+    "analyseren"
+   ],
+   "solo": [
+    "multistructureel",
+    "relationeel"
+   ],
+   "knobs_fixed": {
+    "claim": "ja"
+   },
+   "needs_figure": false,
+   "in_central_exam": true,
+   "examples_seed": [],
+   "status": "active",
+   "source": "seed-analysis-2026-11"
+  },
+  {
+   "code": "P04",
+   "layer": "base",
+   "name": "Begrip toetsen aan een casus (leg uit of)",
+   "kind": "explanation",
+   "description": "Is een begrip of regel hier van toepassing?",
+   "stem_forms": [
+    "Leg uit of …"
+   ],
+   "scoring": "1 punt kenmerk in de context, 1 punt conclusie",
+   "points": [
+    2,
+    2
+   ],
+   "bloom": [
+    "toepassen"
+   ],
+   "solo": [
+    "multistructureel",
+    "relationeel"
+   ],
+   "knobs_fixed": {},
+   "needs_figure": false,
+   "in_central_exam": true,
+   "examples_seed": [],
+   "status": "active",
+   "source": "seed-analysis-2026-11"
+  },
+  {
+   "code": "P05",
+   "layer": "base",
+   "name": "Classificeren met onderbouwing",
+   "kind": "choice",
+   "description": "Een gesloten keuze uit categorieën met een argument.",
+   "stem_forms": [
+    "Kies … en motiveer je keuze.",
+    "Noem de … Licht je antwoord toe."
+   ],
+   "scoring": "1 punt keuze met argument; bij 2 punten argument apart",
+   "points": [
+    1,
+    2
+   ],
+   "bloom": [
+    "begrijpen",
+    "toepassen"
+   ],
+   "solo": [
+    "unistructureel",
+    "multistructureel"
+   ],
+   "knobs_fixed": {},
+   "needs_figure": false,
+   "in_central_exam": true,
+   "examples_seed": [],
+   "status": "active",
+   "source": "seed-analysis-2026-11"
+  },
+  {
+   "code": "P06",
+   "layer": "base",
+   "name": "Voorbeeld plus mechanisme",
+   "kind": "explanation",
+   "description": "Eén voorbeeld en één mechanisme.",
+   "stem_forms": [
+    "Geef een voorbeeld van … en leg uit …"
+   ],
+   "scoring": "1 + 1 punt",
+   "points": [
+    2,
+    2
+   ],
+   "bloom": [
+    "begrijpen"
+   ],
+   "solo": [
+    "multistructureel"
+   ],
+   "knobs_fixed": {},
+   "needs_figure": false,
+   "in_central_exam": true,
+   "examples_seed": [],
+   "status": "active",
+   "source": "seed-analysis-2026-11"
+  },
+  {
+   "code": "P07",
+   "layer": "base",
+   "name": "Standaardberekening",
+   "kind": "calculation",
+   "description": "Een bekende procedure in een nieuwe context, vaak met 'bereken hiervoor eerst …'.",
+   "stem_forms": [
+    "Bereken … Bereken hiervoor eerst …"
+   ],
+   "scoring": "1 punt per stap of 'voor elke fout 1 scorepunt in mindering'",
+   "points": [
+    1,
+    3
+   ],
+   "bloom": [
+    "toepassen"
+   ],
+   "solo": [
+    "unistructureel",
+    "multistructureel"
+   ],
+   "knobs_fixed": {
+    "route": "gegeven"
+   },
+   "needs_figure": false,
+   "in_central_exam": true,
+   "examples_seed": [
+    "bedrijfseconomie vwo-2025-tv1 v17",
+    "bedrijfseconomie vwo-2025-tv1 v27"
+   ],
+   "status": "active",
+   "source": "seed-analysis-2026-11"
+  },
+  {
+   "code": "P08",
+   "layer": "base",
+   "name": "Berekening met zelf te vinden route",
+   "kind": "calculation",
+   "description": "De tussenstappen staan niet in de vraag; de leerling combineert gegevens uit tekst en bronnen.",
+   "stem_forms": [
+    "Bereken …"
+   ],
+   "scoring": "1 punt per tussenstap of 'voor elke fout 1 scorepunt in mindering'",
+   "points": [
+    2,
+    4
+   ],
+   "bloom": [
+    "toepassen",
+    "analyseren"
+   ],
+   "solo": [
+    "multistructureel",
+    "relationeel"
+   ],
+   "knobs_fixed": {
+    "route": "zelf vinden"
+   },
+   "needs_figure": false,
+   "in_central_exam": true,
+   "examples_seed": [
+    "bedrijfseconomie vwo-2026-tv1 v15",
+    "bedrijfseconomie vwo-2025-tv1 v9"
+   ],
+   "status": "active",
+   "source": "seed-analysis-2026-11"
+  },
+  {
+   "code": "P09",
+   "layer": "base",
+   "name": "Berekenen en concluderen (bereken of / toon aan of)",
+   "kind": "calculation",
+   "description": "De berekening dient een oordeel; de conclusie is nodig voor het laatste punt.",
+   "stem_forms": [
+    "Toon met een berekening aan of …",
+    "Bereken of …"
+   ],
+   "scoring": "berekening + 1 punt conclusie",
+   "points": [
+    2,
+    3
+   ],
+   "bloom": [
+    "toepassen",
+    "analyseren"
+   ],
+   "solo": [
+    "unistructureel",
+    "multistructureel",
+    "relationeel"
+   ],
+   "knobs_fixed": {},
+   "needs_figure": false,
+   "in_central_exam": true,
+   "examples_seed": [
+    "bedrijfseconomie vwo-2026-tv1 v3",
+    "bedrijfseconomie vwo-2025-tv1 v29"
+   ],
+   "status": "active",
+   "source": "seed-analysis-2026-11"
+  },
+  {
+   "code": "P12",
+   "layer": "base",
+   "name": "Afwegen en standpunt kiezen",
+   "kind": "explanation",
+   "description": "'Vind jij …'; een eenzijdig argument volstaat.",
+   "stem_forms": [
+    "Vind jij … Licht je antwoord toe."
+   ],
+   "scoring": "1 punt standpunt met argument uit de context, 1 punt mechanisme",
+   "points": [
+    2,
+    2
+   ],
+   "bloom": [
+    "analyseren",
+    "evalueren"
+   ],
+   "solo": [
+    "multistructureel",
+    "relationeel"
+   ],
+   "knobs_fixed": {},
+   "needs_figure": false,
+   "in_central_exam": true,
+   "examples_seed": [],
+   "status": "active",
+   "source": "seed-analysis-2026-11"
+  },
+  {
+   "code": "P14",
+   "layer": "base",
+   "name": "Noemen met toelichting in de context",
+   "kind": "explanation",
+   "description": "Eén begrip gekoppeld aan één gegeven uit de context.",
+   "stem_forms": [
+    "Noem … Licht toe.",
+    "Noem … Motiveer met een verwijzing naar de bron."
+   ],
+   "scoring": "per juist toegelicht antwoord 1",
+   "points": [
+    1,
+    2
+   ],
+   "bloom": [
+    "begrijpen",
+    "toepassen"
+   ],
+   "solo": [
+    "unistructureel",
+    "multistructureel"
+   ],
+   "knobs_fixed": {},
+   "needs_figure": false,
+   "in_central_exam": true,
+   "examples_seed": [
+    "bedrijfseconomie vwo-2026-tv1 v5",
+    "bedrijfseconomie vwo-2025-tv1 v11"
+   ],
+   "status": "active",
+   "source": "seed-analysis-2026-11"
+  },
+  {
+   "code": "P15",
+   "layer": "base",
+   "name": "Besluit aan de hand van meerdere voorwaarden",
+   "kind": "calculation",
+   "description": "De afsluitende vraag van een opgave: toets een besluit aan twee of meer voorwaarden of een scoremodel, met uitkomsten van eerdere vragen.",
+   "stem_forms": [
+    "Beoordeel of … aan de voorwaarden voldoet."
+   ],
+   "scoring": "per voorwaarde een punt, plus conclusie",
+   "points": [
+    3,
+    5
+   ],
+   "bloom": [
+    "toepassen",
+    "analyseren",
+    "evalueren"
+   ],
+   "solo": [
+    "relationeel"
+   ],
+   "knobs_fixed": {
+    "builds_on": "ja"
+   },
+   "needs_figure": false,
+   "in_central_exam": true,
+   "examples_seed": [
+    "bedrijfseconomie vwo-2025-tv1 v13",
+    "bedrijfseconomie vwo-2026-tv1 v27"
+   ],
+   "status": "active",
+   "source": "seed-analysis-2026-11"
+  },
+  {
+   "code": "P16",
+   "layer": "base",
+   "name": "Kennisvraag: noem of omschrijf",
+   "kind": "explanation",
+   "description": "De leerling noemt of omschrijft een begrip, kenmerk of regel zonder toepassing op een nieuwe situatie. Niet in het centraal examen; voor schooltoetsen.",
+   "stem_forms": [
+    "Noem …",
+    "Omschrijf wat … is."
+   ],
+   "scoring": "per juist element 1",
+   "points": [
+    1,
+    2
+   ],
+   "bloom": [
+    "onthouden"
+   ],
+   "solo": [
+    "unistructureel",
+    "multistructureel"
+   ],
+   "knobs_fixed": {},
+   "needs_figure": false,
+   "in_central_exam": false,
+   "examples_seed": [],
+   "status": "active",
+   "source": "seed-analysis-2026-11"
+  }
+ ]
+}

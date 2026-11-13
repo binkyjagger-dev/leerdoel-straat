@@ -20,7 +20,11 @@ report + doubt list.
 
 ## Layout
 ```
-specs/            00–06 leerdoel-straat (/generate) · 10–15 methode-straat (/koppel) · 20–25 examen-straat (/examen; built and first run 2026-10-27; plan: docs/plan-examen-straat.md)
+specs/            00–06 leerdoel-straat (/generate) · 10–15 methode-straat (/koppel) · 20–25 examen-straat (/examen; built and first run 2026-10-27; plan: docs/plan-examen-straat.md) · 26 examen labels (E7) · 30–35 toets-straat (/toets; specified 2026-11-13, not built; plan: docs/plan-toets-straat.md)
+data/toets/       knobs.json patterns_base.json (toets-straat rule files; seed 2026-11)
+subjects/<vak>/toets/  patterns.json (subject layer) conventions.md contexten.md (human) seed_profile.json sjablonen/ — see specs/31
+subjects/<vak>/examenbank/labels/ + profiel/  (E7) pattern/knob labels per exam question + reference profile — specs/26
+subjects/<vak>/toetsbank/  (toets-straat) register.json toetsen/ contexts.json output/ — specs/35
 schemas/          JSON schemas per artefact
 data/             rule files (Bloom verbs, student-language rules)
 scripts/          validate.py bloom_check.py student_language_check.py coverage.py merge_groups.py apply_verdicts.py export.py decisions.py verb_table.py glossary.py
@@ -91,6 +95,14 @@ python3 tests/run_examen_fixture.py                  # exercise all /examen scri
 - Two judges (A, B) per paragraph in separate Agent calls; confidence from agreement + quote validity; verifier in fresh context does precision (sample), recall (per paragraph) and gradation checks; one repair round (judge R).
 - Method text lives only in `runs/<id>/text/` (git-ignored); PDFs under `input/` are not committed.
 - Criterion ids from /generate are the key everywhere; `10_criteria.json` is a copy of the source run's `04_groups_student.json`.
+
+## Toets-straat ground rules (specs/26, 30–35, decided 2026-11-13)
+- Two pauses: the order (31_order.json) and the blueprint (32_blueprint_review.json via blueprint_apply.py). Nothing is written before the teacher approves the blueprint.
+- Knob shares and the Bloom mix are by points; the reference profile is rebuilt from `examenbank/labels/` by `profile_build.py`, never edited by hand.
+- Realised knobs are measured by the same `item-labeller` that labels exam questions (two labellers + R), blind to the blueprint.
+- Every given number is named in `data`, every computed number in `calc`; `calc_check.py` recomputes, the blind solver re-solves. Figures are rendered from specs, never drawn by an agent.
+- Style examples are form only; `overlap_check.py` fails on any shared 8-word shingle with exam text.
+- Patterns are added only by `scripts/toets/patterns.py add` against an answered decision.
 
 ## Lessons from koppel run 1 (LWEO Vraag en aanbod H1–H2, 2026-10-22/23)
 - The source run's `04_groups_student.json` was gone (only `output/*.csv` is kept); `10_criteria.json` was rebuilt from the export CSV (script in the run folder). Keep the generate run's JSON, or make the CSV rebuild a straat script.

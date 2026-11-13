@@ -1,0 +1,1273 @@
+{
+ "subject": "economie",
+ "source": "seed-analysis-2026-11",
+ "note": "Voorlopig: patroon, SOLO en Bloom per vraag uit de analyse van november 2026 (één beoordelaar). Overige knoppen onbekend. Wordt genegeerd zodra examenbank/labels/ bestaat.",
+ "n_exams": 5,
+ "points": 295,
+ "by": "points",
+ "pooled": {
+  "pattern": {
+   "P01": {
+    "points": 43.0,
+    "share": 0.146
+   },
+   "P02": {
+    "points": 46.0,
+    "share": 0.156
+   },
+   "P03": {
+    "points": 26.0,
+    "share": 0.088
+   },
+   "P04": {
+    "points": 35.0,
+    "share": 0.119
+   },
+   "P05": {
+    "points": 13.0,
+    "share": 0.044
+   },
+   "P06": {
+    "points": 6.0,
+    "share": 0.02
+   },
+   "P07": {
+    "points": 29.0,
+    "share": 0.098
+   },
+   "P08": {
+    "points": 34.0,
+    "share": 0.115
+   },
+   "P09": {
+    "points": 17.0,
+    "share": 0.058
+   },
+   "P10": {
+    "points": 14.0,
+    "share": 0.047
+   },
+   "P11": {
+    "points": 17.0,
+    "share": 0.058
+   },
+   "P12": {
+    "points": 4.0,
+    "share": 0.014
+   },
+   "P13": {
+    "points": 11.0,
+    "share": 0.037
+   }
+  },
+  "solo": {
+   "multistructureel": {
+    "points": 137,
+    "share": 0.464
+   },
+   "relationeel": {
+    "points": 142,
+    "share": 0.481
+   },
+   "unistructureel": {
+    "points": 16,
+    "share": 0.054
+   }
+  },
+  "bloom": {
+   "analyseren": {
+    "points": 92,
+    "share": 0.312
+   },
+   "begrijpen": {
+    "points": 44,
+    "share": 0.149
+   },
+   "toepassen": {
+    "points": 159,
+    "share": 0.539
+   }
+  }
+ },
+ "unknown_knobs": [
+  "route",
+  "steps",
+  "sources",
+  "claim",
+  "new_concept",
+  "schema",
+  "builds_on"
+ ],
+ "exams": [
+  {
+   "exam_id": "vwo-2024-tv1",
+   "points": 59,
+   "knobs": {
+    "pattern": {
+     "P06": 2.0,
+     "P07": 2.0,
+     "P08": 7.0,
+     "P10": 2.0,
+     "P09": 6.0,
+     "P02": 6.0,
+     "P01": 11.0,
+     "P03": 8.0,
+     "P04": 6.0,
+     "P13": 3.0,
+     "P11": 4.0,
+     "P05": 2.0
+    },
+    "solo": {
+     "multistructureel": 24,
+     "relationeel": 32,
+     "unistructureel": 3
+    },
+    "bloom": {
+     "begrijpen": 10,
+     "toepassen": 31,
+     "analyseren": 18
+    }
+   },
+   "questions": [
+    {
+     "question_number": 1,
+     "points": 2,
+     "pattern": "P06",
+     "solo": "multistructureel",
+     "bloom": "begrijpen"
+    },
+    {
+     "question_number": 2,
+     "points": 2,
+     "pattern": "P07",
+     "solo": "multistructureel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 3,
+     "points": 4,
+     "pattern": "P08",
+     "solo": "relationeel",
+     "bloom": "analyseren"
+    },
+    {
+     "question_number": 4,
+     "points": 2,
+     "pattern": "P10",
+     "solo": "multistructureel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 5,
+     "points": 2,
+     "pattern": "P09",
+     "solo": "relationeel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 6,
+     "points": 2,
+     "pattern": "P02",
+     "solo": "relationeel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 7,
+     "points": 1,
+     "pattern": "P01",
+     "solo": "unistructureel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 8,
+     "points": 2,
+     "pattern": "P09",
+     "solo": "multistructureel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 9,
+     "points": 2,
+     "pattern": "P01",
+     "solo": "multistructureel",
+     "bloom": "begrijpen"
+    },
+    {
+     "question_number": 10,
+     "points": 2,
+     "pattern": "P01",
+     "solo": "multistructureel",
+     "bloom": "begrijpen"
+    },
+    {
+     "question_number": 11,
+     "points": 2,
+     "pattern": "P03",
+     "solo": "relationeel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 12,
+     "points": 2,
+     "pattern": "P01",
+     "solo": "multistructureel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 13,
+     "points": 2,
+     "pattern": "P01",
+     "solo": "multistructureel",
+     "bloom": "begrijpen"
+    },
+    {
+     "question_number": 14,
+     "points": 2,
+     "pattern": "P04",
+     "solo": "relationeel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 15,
+     "points": 1,
+     "pattern": "P04",
+     "solo": "unistructureel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 16,
+     "points": 1,
+     "pattern": "P04",
+     "solo": "unistructureel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 17,
+     "points": 2,
+     "pattern": "P09",
+     "solo": "relationeel",
+     "bloom": "analyseren"
+    },
+    {
+     "question_number": 18,
+     "points": 2,
+     "pattern": "P01",
+     "solo": "relationeel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 19,
+     "points": 2,
+     "pattern": "P04",
+     "solo": "relationeel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 20,
+     "points": 2,
+     "pattern": "P03",
+     "solo": "relationeel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 21,
+     "points": 3,
+     "pattern": "P13",
+     "solo": "relationeel",
+     "bloom": "analyseren"
+    },
+    {
+     "question_number": 22,
+     "points": 3,
+     "pattern": "P08",
+     "solo": "relationeel",
+     "bloom": "analyseren"
+    },
+    {
+     "question_number": 23,
+     "points": 2,
+     "pattern": "P03",
+     "solo": "multistructureel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 24,
+     "points": 2,
+     "pattern": "P11",
+     "solo": "multistructureel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 25,
+     "points": 2,
+     "pattern": "P11",
+     "solo": "relationeel",
+     "bloom": "analyseren"
+    },
+    {
+     "question_number": 26,
+     "points": 2,
+     "pattern": "P05",
+     "solo": "multistructureel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 27,
+     "points": 2,
+     "pattern": "P02",
+     "solo": "relationeel",
+     "bloom": "analyseren"
+    },
+    {
+     "question_number": 28,
+     "points": 2,
+     "pattern": "P02",
+     "solo": "relationeel",
+     "bloom": "analyseren"
+    },
+    {
+     "question_number": 29,
+     "points": 2,
+     "pattern": "P03",
+     "solo": "multistructureel",
+     "bloom": "begrijpen"
+    }
+   ]
+  },
+  {
+   "exam_id": "vwo-2024-tv2",
+   "points": 59,
+   "knobs": {
+    "pattern": {
+     "P07": 5.0,
+     "P11": 5.0,
+     "P04": 5.0,
+     "P09": 3.0,
+     "P02": 12.0,
+     "P03": 8.0,
+     "P08": 7.0,
+     "P01": 6.0,
+     "P05": 2.0,
+     "P13": 3.0,
+     "P10": 3.0
+    },
+    "solo": {
+     "unistructureel": 4,
+     "multistructureel": 23,
+     "relationeel": 32
+    },
+    "bloom": {
+     "toepassen": 30,
+     "analyseren": 21,
+     "begrijpen": 8
+    }
+   },
+   "questions": [
+    {
+     "question_number": 1,
+     "points": 1,
+     "pattern": "P07",
+     "solo": "unistructureel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 2,
+     "points": 2,
+     "pattern": "P07",
+     "solo": "multistructureel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 3,
+     "points": 3,
+     "pattern": "P11",
+     "solo": "relationeel",
+     "bloom": "analyseren"
+    },
+    {
+     "question_number": 4,
+     "points": 2,
+     "pattern": "P04",
+     "solo": "multistructureel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 5,
+     "points": 2,
+     "pattern": "P11",
+     "solo": "multistructureel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 6,
+     "points": 2,
+     "pattern": "P09",
+     "solo": "multistructureel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 7,
+     "points": 2,
+     "pattern": "P02",
+     "solo": "relationeel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 8,
+     "points": 2,
+     "pattern": "P03",
+     "solo": "relationeel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 9,
+     "points": 2,
+     "pattern": "P08",
+     "solo": "relationeel",
+     "bloom": "analyseren"
+    },
+    {
+     "question_number": 10,
+     "points": 2,
+     "pattern": "P03",
+     "solo": "multistructureel",
+     "bloom": "begrijpen"
+    },
+    {
+     "question_number": 11,
+     "points": 1,
+     "pattern": "P01",
+     "solo": "unistructureel",
+     "bloom": "begrijpen"
+    },
+    {
+     "question_number": 12,
+     "points": 2,
+     "pattern": "P01",
+     "solo": "multistructureel",
+     "bloom": "begrijpen"
+    },
+    {
+     "question_number": 13,
+     "points": 2,
+     "pattern": "P05",
+     "solo": "multistructureel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 14,
+     "points": 2,
+     "pattern": "P03",
+     "solo": "relationeel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 15,
+     "points": 3,
+     "pattern": "P13",
+     "solo": "relationeel",
+     "bloom": "analyseren"
+    },
+    {
+     "question_number": 16,
+     "points": 1,
+     "pattern": "P01",
+     "solo": "unistructureel",
+     "bloom": "begrijpen"
+    },
+    {
+     "question_number": 17,
+     "points": 2,
+     "pattern": "P02",
+     "solo": "relationeel",
+     "bloom": "analyseren"
+    },
+    {
+     "question_number": 18,
+     "points": 2,
+     "pattern": "P07",
+     "solo": "multistructureel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 19,
+     "points": 2,
+     "pattern": "P08",
+     "solo": "relationeel",
+     "bloom": "analyseren"
+    },
+    {
+     "question_number": 20,
+     "points": 3,
+     "pattern": "P10",
+     "solo": "relationeel",
+     "bloom": "analyseren"
+    },
+    {
+     "question_number": 21,
+     "points": 2,
+     "pattern": "P02",
+     "solo": "relationeel",
+     "bloom": "analyseren"
+    },
+    {
+     "question_number": 22,
+     "points": 1,
+     "pattern": "P09",
+     "solo": "unistructureel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 23,
+     "points": 3,
+     "pattern": "P04",
+     "solo": "relationeel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 24,
+     "points": 2,
+     "pattern": "P02",
+     "solo": "relationeel",
+     "bloom": "analyseren"
+    },
+    {
+     "question_number": 25,
+     "points": 2,
+     "pattern": "P02",
+     "solo": "relationeel",
+     "bloom": "analyseren"
+    },
+    {
+     "question_number": 26,
+     "points": 3,
+     "pattern": "P08",
+     "solo": "multistructureel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 27,
+     "points": 2,
+     "pattern": "P01",
+     "solo": "multistructureel",
+     "bloom": "begrijpen"
+    },
+    {
+     "question_number": 28,
+     "points": 2,
+     "pattern": "P02",
+     "solo": "relationeel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 29,
+     "points": 2,
+     "pattern": "P03",
+     "solo": "multistructureel",
+     "bloom": "toepassen"
+    }
+   ]
+  },
+  {
+   "exam_id": "vwo-2025-tv1",
+   "points": 59,
+   "knobs": {
+    "pattern": {
+     "P05": 3.0,
+     "P04": 8.0,
+     "P09": 5.0,
+     "P02": 12.0,
+     "P01": 6.0,
+     "P07": 4.0,
+     "P10": 3.0,
+     "P08": 8.0,
+     "P03": 4.0,
+     "P13": 2.0,
+     "P11": 4.0
+    },
+    "solo": {
+     "unistructureel": 4,
+     "multistructureel": 22,
+     "relationeel": 33
+    },
+    "bloom": {
+     "toepassen": 30,
+     "analyseren": 29
+    }
+   },
+   "questions": [
+    {
+     "question_number": 1,
+     "points": 1,
+     "pattern": "P05",
+     "solo": "unistructureel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 2,
+     "points": 2,
+     "pattern": "P04",
+     "solo": "multistructureel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 3,
+     "points": 2,
+     "pattern": "P09",
+     "solo": "multistructureel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 4,
+     "points": 2,
+     "pattern": "P02",
+     "solo": "relationeel",
+     "bloom": "analyseren"
+    },
+    {
+     "question_number": 5,
+     "points": 2,
+     "pattern": "P01",
+     "solo": "relationeel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 6,
+     "points": 2,
+     "pattern": "P04",
+     "solo": "multistructureel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 7,
+     "points": 2,
+     "pattern": "P05",
+     "solo": "multistructureel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 8,
+     "points": 2,
+     "pattern": "P02",
+     "solo": "relationeel",
+     "bloom": "analyseren"
+    },
+    {
+     "question_number": 9,
+     "points": 2,
+     "pattern": "P02",
+     "solo": "relationeel",
+     "bloom": "analyseren"
+    },
+    {
+     "question_number": 10,
+     "points": 2,
+     "pattern": "P01",
+     "solo": "multistructureel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 11,
+     "points": 3,
+     "pattern": "P09",
+     "solo": "relationeel",
+     "bloom": "analyseren"
+    },
+    {
+     "question_number": 12,
+     "points": 2,
+     "pattern": "P07",
+     "solo": "multistructureel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 13,
+     "points": 1,
+     "pattern": "P10",
+     "solo": "unistructureel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 14,
+     "points": 4,
+     "pattern": "P08",
+     "solo": "relationeel",
+     "bloom": "analyseren"
+    },
+    {
+     "question_number": 15,
+     "points": 2,
+     "pattern": "P02",
+     "solo": "relationeel",
+     "bloom": "analyseren"
+    },
+    {
+     "question_number": 16,
+     "points": 2,
+     "pattern": "P02",
+     "solo": "relationeel",
+     "bloom": "analyseren"
+    },
+    {
+     "question_number": 17,
+     "points": 2,
+     "pattern": "P08",
+     "solo": "multistructureel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 18,
+     "points": 2,
+     "pattern": "P07",
+     "solo": "multistructureel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 19,
+     "points": 2,
+     "pattern": "P10",
+     "solo": "relationeel",
+     "bloom": "analyseren"
+    },
+    {
+     "question_number": 20,
+     "points": 2,
+     "pattern": "P01",
+     "solo": "relationeel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 21,
+     "points": 2,
+     "pattern": "P03",
+     "solo": "multistructureel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 22,
+     "points": 2,
+     "pattern": "P02",
+     "solo": "relationeel",
+     "bloom": "analyseren"
+    },
+    {
+     "question_number": 23,
+     "points": 2,
+     "pattern": "P04",
+     "solo": "relationeel",
+     "bloom": "analyseren"
+    },
+    {
+     "question_number": 24,
+     "points": 2,
+     "pattern": "P13",
+     "solo": "multistructureel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 25,
+     "points": 2,
+     "pattern": "P03",
+     "solo": "relationeel",
+     "bloom": "analyseren"
+    },
+    {
+     "question_number": 26,
+     "points": 2,
+     "pattern": "P04",
+     "solo": "unistructureel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 27,
+     "points": 2,
+     "pattern": "P08",
+     "solo": "relationeel",
+     "bloom": "analyseren"
+    },
+    {
+     "question_number": 28,
+     "points": 2,
+     "pattern": "P11",
+     "solo": "multistructureel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 29,
+     "points": 2,
+     "pattern": "P11",
+     "solo": "relationeel",
+     "bloom": "analyseren"
+    }
+   ]
+  },
+  {
+   "exam_id": "vwo-2025-tv2",
+   "points": 59,
+   "knobs": {
+    "pattern": {
+     "P05": 3.0,
+     "P07": 8.0,
+     "P04": 10.0,
+     "P10": 4.0,
+     "P01": 12.0,
+     "P02": 10.0,
+     "P08": 5.0,
+     "P09": 3.0,
+     "P11": 2.0,
+     "P12": 2.0
+    },
+    "solo": {
+     "multistructureel": 32,
+     "relationeel": 25,
+     "unistructureel": 2
+    },
+    "bloom": {
+     "begrijpen": 7,
+     "toepassen": 37,
+     "analyseren": 15
+    }
+   },
+   "questions": [
+    {
+     "question_number": 1,
+     "points": 2,
+     "pattern": "P05",
+     "solo": "multistructureel",
+     "bloom": "begrijpen"
+    },
+    {
+     "question_number": 2,
+     "points": 3,
+     "pattern": "P07",
+     "solo": "multistructureel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 3,
+     "points": 2,
+     "pattern": "P04",
+     "solo": "relationeel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 4,
+     "points": 2,
+     "pattern": "P10",
+     "solo": "multistructureel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 5,
+     "points": 2,
+     "pattern": "P10",
+     "solo": "relationeel",
+     "bloom": "analyseren"
+    },
+    {
+     "question_number": 6,
+     "points": 2,
+     "pattern": "P01",
+     "solo": "multistructureel",
+     "bloom": "begrijpen"
+    },
+    {
+     "question_number": 7,
+     "points": 2,
+     "pattern": "P01",
+     "solo": "multistructureel",
+     "bloom": "begrijpen"
+    },
+    {
+     "question_number": 8,
+     "points": 2,
+     "pattern": "P02",
+     "solo": "relationeel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 9,
+     "points": 1,
+     "pattern": "P05",
+     "solo": "unistructureel",
+     "bloom": "begrijpen"
+    },
+    {
+     "question_number": 10,
+     "points": 2,
+     "pattern": "P02",
+     "solo": "relationeel",
+     "bloom": "analyseren"
+    },
+    {
+     "question_number": 11,
+     "points": 2,
+     "pattern": "P01",
+     "solo": "multistructureel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 12,
+     "points": 2,
+     "pattern": "P02",
+     "solo": "relationeel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 13,
+     "points": 2,
+     "pattern": "P08",
+     "solo": "multistructureel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 14,
+     "points": 2,
+     "pattern": "P01",
+     "solo": "multistructureel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 15,
+     "points": 1,
+     "pattern": "P09",
+     "solo": "unistructureel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 16,
+     "points": 2,
+     "pattern": "P04",
+     "solo": "relationeel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 17,
+     "points": 2,
+     "pattern": "P01",
+     "solo": "multistructureel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 18,
+     "points": 2,
+     "pattern": "P04",
+     "solo": "multistructureel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 19,
+     "points": 3,
+     "pattern": "P08",
+     "solo": "relationeel",
+     "bloom": "analyseren"
+    },
+    {
+     "question_number": 20,
+     "points": 2,
+     "pattern": "P11",
+     "solo": "multistructureel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 21,
+     "points": 2,
+     "pattern": "P07",
+     "solo": "multistructureel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 22,
+     "points": 2,
+     "pattern": "P01",
+     "solo": "multistructureel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 23,
+     "points": 2,
+     "pattern": "P02",
+     "solo": "relationeel",
+     "bloom": "analyseren"
+    },
+    {
+     "question_number": 24,
+     "points": 2,
+     "pattern": "P02",
+     "solo": "relationeel",
+     "bloom": "analyseren"
+    },
+    {
+     "question_number": 25,
+     "points": 2,
+     "pattern": "P04",
+     "solo": "relationeel",
+     "bloom": "analyseren"
+    },
+    {
+     "question_number": 26,
+     "points": 2,
+     "pattern": "P12",
+     "solo": "relationeel",
+     "bloom": "analyseren"
+    },
+    {
+     "question_number": 27,
+     "points": 2,
+     "pattern": "P04",
+     "solo": "multistructureel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 28,
+     "points": 3,
+     "pattern": "P07",
+     "solo": "multistructureel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 29,
+     "points": 2,
+     "pattern": "P09",
+     "solo": "relationeel",
+     "bloom": "toepassen"
+    }
+   ]
+  },
+  {
+   "exam_id": "vwo-2026-tv1",
+   "points": 59,
+   "knobs": {
+    "pattern": {
+     "P06": 4.0,
+     "P07": 10.0,
+     "P10": 2.0,
+     "P11": 2.0,
+     "P01": 8.0,
+     "P05": 3.0,
+     "P02": 6.0,
+     "P13": 3.0,
+     "P04": 6.0,
+     "P12": 2.0,
+     "P03": 6.0,
+     "P08": 7.0
+    },
+    "solo": {
+     "multistructureel": 36,
+     "relationeel": 20,
+     "unistructureel": 3
+    },
+    "bloom": {
+     "begrijpen": 19,
+     "toepassen": 31,
+     "analyseren": 9
+    }
+   },
+   "questions": [
+    {
+     "question_number": 1,
+     "points": 2,
+     "pattern": "P06",
+     "solo": "multistructureel",
+     "bloom": "begrijpen"
+    },
+    {
+     "question_number": 2,
+     "points": 2,
+     "pattern": "P07",
+     "solo": "multistructureel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 3,
+     "points": 3,
+     "pattern": "P07",
+     "solo": "multistructureel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 4,
+     "points": 2,
+     "pattern": "P10",
+     "solo": "relationeel",
+     "bloom": "analyseren"
+    },
+    {
+     "question_number": 5,
+     "points": 2,
+     "pattern": "P11",
+     "solo": "multistructureel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 6,
+     "points": 2,
+     "pattern": "P01",
+     "solo": "multistructureel",
+     "bloom": "begrijpen"
+    },
+    {
+     "question_number": 7,
+     "points": 2,
+     "pattern": "P06",
+     "solo": "multistructureel",
+     "bloom": "begrijpen"
+    },
+    {
+     "question_number": 8,
+     "points": 1,
+     "pattern": "P05",
+     "solo": "unistructureel",
+     "bloom": "begrijpen"
+    },
+    {
+     "question_number": 9,
+     "points": 2,
+     "pattern": "P07",
+     "solo": "multistructureel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 10,
+     "points": 1,
+     "pattern": "P01",
+     "solo": "unistructureel",
+     "bloom": "begrijpen"
+    },
+    {
+     "question_number": 11,
+     "points": 2,
+     "pattern": "P02",
+     "solo": "relationeel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 12,
+     "points": 2,
+     "pattern": "P01",
+     "solo": "multistructureel",
+     "bloom": "begrijpen"
+    },
+    {
+     "question_number": 13,
+     "points": 3,
+     "pattern": "P13",
+     "solo": "relationeel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 14,
+     "points": 2,
+     "pattern": "P04",
+     "solo": "multistructureel",
+     "bloom": "begrijpen"
+    },
+    {
+     "question_number": 15,
+     "points": 2,
+     "pattern": "P12",
+     "solo": "multistructureel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 16,
+     "points": 2,
+     "pattern": "P05",
+     "solo": "multistructureel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 17,
+     "points": 2,
+     "pattern": "P03",
+     "solo": "relationeel",
+     "bloom": "analyseren"
+    },
+    {
+     "question_number": 18,
+     "points": 1,
+     "pattern": "P01",
+     "solo": "unistructureel",
+     "bloom": "begrijpen"
+    },
+    {
+     "question_number": 19,
+     "points": 2,
+     "pattern": "P08",
+     "solo": "multistructureel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 20,
+     "points": 2,
+     "pattern": "P08",
+     "solo": "multistructureel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 21,
+     "points": 2,
+     "pattern": "P03",
+     "solo": "relationeel",
+     "bloom": "begrijpen"
+    },
+    {
+     "question_number": 22,
+     "points": 2,
+     "pattern": "P02",
+     "solo": "relationeel",
+     "bloom": "analyseren"
+    },
+    {
+     "question_number": 23,
+     "points": 3,
+     "pattern": "P07",
+     "solo": "multistructureel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 24,
+     "points": 2,
+     "pattern": "P01",
+     "solo": "multistructureel",
+     "bloom": "begrijpen"
+    },
+    {
+     "question_number": 25,
+     "points": 2,
+     "pattern": "P02",
+     "solo": "relationeel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 26,
+     "points": 2,
+     "pattern": "P03",
+     "solo": "multistructureel",
+     "bloom": "begrijpen"
+    },
+    {
+     "question_number": 27,
+     "points": 3,
+     "pattern": "P08",
+     "solo": "relationeel",
+     "bloom": "analyseren"
+    },
+    {
+     "question_number": 28,
+     "points": 2,
+     "pattern": "P04",
+     "solo": "relationeel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 29,
+     "points": 2,
+     "pattern": "P04",
+     "solo": "multistructureel",
+     "bloom": "toepassen"
+    }
+   ]
+  }
+ ]
+}

@@ -15,3 +15,6 @@ __pycache__/
 .DS_Store
 input/*/
 !input/.gitkeep
+
+# toets-straat: generated form (rebuilt on demand)
+subjects/*/toets/toetsformulier-*.html
