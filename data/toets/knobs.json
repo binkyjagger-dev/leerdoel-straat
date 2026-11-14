@@ -59,7 +59,7 @@
    ],
    "applies_to_kinds": "all",
    "settable": true,
-   "definition": "het aantal reken- of redeneerstappen dat een volledig antwoord nodig heeft"
+   "definition": "het aantal reken- of redeneerstappen dat een volledig antwoord nodig heeft; alleen schakels die op elkaar voortbouwen tellen, parallelle onderdelen (noem twee voordelen, per groep een voorbeeld) samen tellen als 1 stap (bedrijfsecon-066)"
   },
   {
    "id": "sources",
@@ -90,8 +90,8 @@
    "applies_to_kinds": "all",
    "settable": true,
    "definition": {
-    "nee": "elk gegeven getal in de tekst, tabellen, grafieken of bronnen die de leerling moet gebruiken, wordt gebruikt",
-    "ja": "die tekst, tabellen, grafieken of bronnen bevatten ook gegevens die de vraag niet nodig heeft (andere kolommen, perioden, producten, een tweede schijf)"
+    "nee": "de vraag heeft geen gegevens uit tekst, tabellen, grafieken of bronnen nodig, of elk gegeven getal in wat de leerling moet gebruiken wordt gebruikt (bedrijfsecon-067)",
+    "ja": "de vraag gebruikt gegevens uit tekst, tabellen, grafieken of bronnen en die bevatten ook gegevens die de vraag niet nodig heeft (andere kolommen, perioden, producten, een tweede schijf): de leerling moet selecteren"
    },
    "label_evidence": "a number or row in the used text/table/bron that the answer does not need (or, for nee, the line that shows all data are used)"
   },

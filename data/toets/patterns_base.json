@@ -315,7 +315,7 @@
       "layer": "base",
       "name": "Noemen met toelichting in de context",
       "kind": "explanation",
-      "description": "Eén begrip gekoppeld aan één gegeven uit de context.",
+      "description": "Eén begrip gekoppeld aan één gegeven uit de context, met een toelichting die gevraagd én gescoord wordt ('licht toe', 'motiveer'). Zonder gevraagde en gescoorde toelichting is een noem-vraag P16 (bedrijfsecon-065).",
       "stem_forms": [
         "Noem … Licht toe.",
         "Noem … Motiveer met een verwijzing naar de bron."
@@ -341,7 +341,9 @@
         "bedrijfseconomie vwo-2025-tv1 v11"
       ],
       "status": "active",
-      "source": "seed-analysis-2026-11"
+      "source": "decision",
+      "decision": "bedrijfsecon-065",
+      "added_at": "2026-11-14"
     },
     {
       "code": "P15",
@@ -382,7 +384,7 @@
       "layer": "base",
       "name": "Kennisvraag: noem of omschrijf",
       "kind": "explanation",
-      "description": "De leerling noemt of omschrijft een begrip, kenmerk of regel zonder toepassing op een nieuwe situatie.",
+      "description": "De leerling noemt of omschrijft een begrip, kenmerk, voorbeeld of gevolg zonder dat een toelichting gevraagd en gescoord wordt, ook als het antwoord bij de casus moet passen ('Noem voor <bedrijf> …'). Met gevraagde en gescoorde toelichting: P14 (bedrijfsecon-065).",
       "stem_forms": [
         "Noem …",
         "Omschrijf wat … is."
@@ -408,7 +410,7 @@
       ],
       "status": "active",
       "source": "decision",
-      "decision": "bedrijfsecon-063",
+      "decision": "bedrijfsecon-065",
       "added_at": "2026-11-14"
     },
     {

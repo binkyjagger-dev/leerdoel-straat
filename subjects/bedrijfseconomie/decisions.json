@@ -2067,6 +2067,84 @@
       "raised_by": "human",
       "supersedes": null,
       "scope": null
+    },
+    {
+      "id": "bedrijfsecon-065",
+      "question": "Grens P14/P16: wanneer is een noem-vraag P14 en wanneer P16?",
+      "context": "E7-run 2: vier geschillen P14/P16 bij 'Noem voor <bedrijf> …' zonder gevraagde of gescoorde toelichting; R koos telkens P16.",
+      "options": [
+        "Geen toelichting gevraagd én gescoord = P16; P14 alleen bij 'licht toe'/'motiveer' die ook gescoord wordt",
+        "Antwoord moet bij de casus passen = P14"
+      ],
+      "proposed": "Geen toelichting gevraagd én gescoord = P16; P14 alleen bij 'licht toe'/'motiveer' die ook gescoord wordt",
+      "impact": "medium",
+      "applies_to": [
+        "catalogue",
+        "item-labeller"
+      ],
+      "affects_units": [
+        "*"
+      ],
+      "status": "answered",
+      "answer": "Geen toelichting gevraagd én gescoord = P16; P14 alleen bij 'licht toe'/'motiveer' die ook gescoord wordt",
+      "answered_by": "user",
+      "answered_at": "2026-11-14T06:31:03Z",
+      "source_run": "20261114-0100-examen-bedrijfseconomie-label2",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": null
+    },
+    {
+      "id": "bedrijfsecon-066",
+      "question": "Hoe tellen parallelle onderdelen (noem twee voordelen; per groep een voorbeeld) bij de knop stappen?",
+      "context": "E7-run 2: labellers telden parallelle onderdelen wisselend als 1, 2 of 3 stappen.",
+      "options": [
+        "Parallelle onderdelen samen = 1 stap; alleen op elkaar voortbouwende schakels tellen",
+        "Elk onderdeel telt als stap"
+      ],
+      "proposed": "Parallelle onderdelen samen = 1 stap; alleen op elkaar voortbouwende schakels tellen",
+      "impact": "medium",
+      "applies_to": [
+        "item-labeller",
+        "planner"
+      ],
+      "affects_units": [
+        "*"
+      ],
+      "status": "answered",
+      "answer": "Parallelle onderdelen samen = 1 stap; alleen op elkaar voortbouwende schakels tellen",
+      "answered_by": "user",
+      "answered_at": "2026-11-14T06:31:03Z",
+      "source_run": "20261114-0100-examen-bedrijfseconomie-label2",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": null
+    },
+    {
+      "id": "bedrijfsecon-067",
+      "question": "Krijgt een vraag die geen gegevens uit tekst of bronnen gebruikt ruis = ja als de context ongebruikte gegevens bevat?",
+      "context": "E7-run 2: ruis 69 % van de punten, mede doordat kennisvragen onder een context met getallen ruis = ja kregen.",
+      "options": [
+        "Nee: ruis = nee als de vraag geen gegevens uit tekst/tabellen/bronnen nodig heeft; ruis meet alleen of de leerling moet selecteren",
+        "Ja: elk ongebruikt gegeven telt"
+      ],
+      "proposed": "Nee: ruis = nee als de vraag geen gegevens uit tekst/tabellen/bronnen nodig heeft; ruis meet alleen of de leerling moet selecteren",
+      "impact": "medium",
+      "applies_to": [
+        "item-labeller",
+        "planner"
+      ],
+      "affects_units": [
+        "*"
+      ],
+      "status": "answered",
+      "answer": "Nee: ruis = nee als de vraag geen gegevens uit tekst/tabellen/bronnen nodig heeft; ruis meet alleen of de leerling moet selecteren",
+      "answered_by": "user",
+      "answered_at": "2026-11-14T06:31:03Z",
+      "source_run": "20261114-0100-examen-bedrijfseconomie-label2",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": null
     }
   ]
 }
