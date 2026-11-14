@@ -1984,10 +1984,10 @@
       "affects_units": [
         "vwo-2025-tv1-q18"
       ],
-      "status": "open",
-      "answer": null,
-      "answered_by": null,
-      "answered_at": null,
+      "status": "answered",
+      "answer": "Toevoegen als P17 'Rangschikken naar een kenmerk' in de basislaag (soort keuze, 1–2 punten, Bloom begrijpen/toepassen).",
+      "answered_by": "user",
+      "answered_at": "2026-11-14T06:13:32Z",
       "source_run": "20261113-2335-examen-bedrijfseconomie-label",
       "raised_by": "intake",
       "supersedes": null,
@@ -2010,10 +2010,35 @@
       "affects_units": [
         "vwo-2025-tv1-q18"
       ],
-      "status": "open",
-      "answer": null,
-      "answered_by": null,
-      "answered_at": null,
+      "status": "answered",
+      "answer": "Zelfde patroon als bedrijfsecon-061: opgenomen als P17.",
+      "answered_by": "user",
+      "answered_at": "2026-11-14T06:13:32Z",
+      "source_run": "20261113-2335-examen-bedrijfseconomie-label",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": null
+    },
+    {
+      "id": "bedrijfsecon-063",
+      "question": "Is P16 (Kennisvraag: noem of omschrijf) een patroon van het centraal examen?",
+      "context": "De seed-catalogus zette P16 op in_central_exam=false. E7-run 1 vond P16 in beide examens (2025-I en 2026-I): 7 vragen, 11 punten (9 %).",
+      "options": [
+        "Ja, wel examenpatroon (in_central_exam=true)",
+        "Nee, label laten staan"
+      ],
+      "proposed": "Ja, wel examenpatroon (in_central_exam=true)",
+      "impact": "low",
+      "applies_to": [
+        "catalogue"
+      ],
+      "affects_units": [
+        "*"
+      ],
+      "status": "answered",
+      "answer": "Ja, wel examenpatroon (in_central_exam=true).",
+      "answered_by": "user",
+      "answered_at": "2026-11-14T06:13:32Z",
       "source_run": "20261113-2335-examen-bedrijfseconomie-label",
       "raised_by": "intake",
       "supersedes": null,

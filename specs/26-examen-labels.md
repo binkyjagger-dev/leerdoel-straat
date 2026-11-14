@@ -27,6 +27,7 @@ Per **question** (not per scorepunt):
 | `route` (only calculation patterns, else `null`) | labeller |
 | `steps` | labeller (1, 2, 3, 4+) |
 | `sources` | labeller |
+| `noise` | labeller (nee/ja) (decided 2026-11-14 after E7 run 1) |
 | `claim`, `new_concept` | labeller (boolean) |
 | `schema` (only schema patterns, else `null`) | labeller |
 | `builds_on` | labeller; plus the referenced question numbers |
@@ -111,7 +112,7 @@ The profile is **never edited by hand**. It changes only when labels change.
   specs/34 §4).
 - `schemas/reference_profile.schema.json`.
 - `B/labels/<exam_id>.json`: per question `{question_id, question_number, opgave_id, points, pattern,
-  solo, route, steps, sources, claim, new_concept, schema, builds_on, builds_on_questions,
+  solo, route, steps, sources, noise, claim, new_concept, schema, builds_on, builds_on_questions,
   combination, bloom, example_quality, confidence: {field: high|medium|disputed}, evidence}`.
 
 ## 6. Seed and start-up order

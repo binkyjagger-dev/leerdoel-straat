@@ -39,7 +39,7 @@ only, never rewrites).
 | IT1 | schema `toets_items`; vraag ids, numbers and points = blueprint; scorepunten (seq, points, criterion) = blueprint |
 | IT2 | cv: `maximumscore` = points; scorepunt points sum to it; every scorepunt has text |
 | IT3 | every number in stem, sources, tables and the uitwerkbijlage is in `data` (exempt: reference numbers, 0, 1, 100 and years 1900–2100; decided 2026-11-14, bouwvraag 11) (number scanner on the Dutch notation `1.250,50`, `9%`, `€ 3,42`); every number in the cv's `model_answer` is in `data` or a `calc.shown` |
-| IT4 | `noise_data` exists only when the vraag's `sources` is *meerdere bronnen met ruis* and then is not empty; every `uses_data` key is used by some `calc` or named in the model answer |
+| IT4 | `noise_data` exists only when the vraag's `noise` is *ja* and then is not empty (changed 2026-11-14); every `uses_data` key is used by some `calc` or named in the model answer |
 | IT5 | `builds_on_vragen` = blueprint; when `builds_on = ja`, the cv has a `follow_through` sentence and either at least one `calc` uses a name from an earlier vraag or, for a vraag without `calc`, the stem names "vraag n" for an n in `builds_on_vragen` (decided 2026-11-14, bouwvraag 17) |
 | IT6 | conventions: € notation, btw default from `conventions` / `conventions.md`, a reference "zie informatiebron n" for each source the vraag uses, the uitwerkbijlage sentence for schema vragen |
 | IT7 | the stem's asking verb fits the pattern's `stem_forms` (advisory, like MB2) |
@@ -70,7 +70,7 @@ final number and the `calc`s that a scorepunt points to (`calc_ref`) count; help
 not required (decided 2026-11-14, bouwvraag 16).
 
 **Labellers.** `item-labeller` A and B in toets mode label every vraag exactly as exam questions are
-labelled (specs/26 §2): pattern, solo, route, steps, sources, claim, new_concept, schema, builds_on,
+labelled (specs/26 §2): pattern, solo, route, steps, sources, noise, claim, new_concept, schema, builds_on,
 with evidence. Merge and R round as in specs/26 §3. The merged labels are the **realised** knob
 values. `realized.py` computes the realised shares; differences from the blueprint per vraag go to the
 verifier as `label_vs_plan` items.

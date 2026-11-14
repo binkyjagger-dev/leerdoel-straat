@@ -57,7 +57,7 @@ Blueprint (schema `blueprint`):
    "context_tags": ["dienstverlening", "kapsalon"], "sources_planned": 2, "reused_from": null,
    "vragen": [
      {"vraag_id": "O1-V1", "number": 1, "points": 2, "pattern": "P14",
-      "knobs": {"solo": "multistructureel", "route": null, "steps": "2", "sources": "in vraagtekst",
+      "knobs": {"solo": "multistructureel", "route": null, "steps": "2", "sources": "in vraagtekst", "noise": "nee",
                 "claim": "nee", "new_concept": "nee", "schema": null, "builds_on": "nee"},
       "builds_on_vragen": [],
       "scorepunten": [{"seq": 1, "points": 1, "criterion_id": "F2.30.3-01-c", "bloom": "begrijpen"},
@@ -130,7 +130,7 @@ Items (schema `toets_items`), per opgave:
 
 Writer responsibilities: write the stem, sources and cv in the subject's exam conventions; name every
 given number in `data` and every computed number in `calc` (the cv's printed numbers are the `shown`
-values); put noise data only where `sources = meerdere bronnen met ruis` and list them in
+values); put noise data only where `noise = ja` and list them in
 `noise_data`; make the vraag realise every planned knob and the scorepunten realise the criterion at
 the planned Bloom level; use the style examples for **form only**, never their context, numbers or
 sentences; use the glossary terms; `level` decides the reading level of stem and context.

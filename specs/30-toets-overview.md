@@ -44,7 +44,8 @@ export and the toetsbank (specs/35).
 | `solo` | unistructureel < multistructureel < relationeel < uitgebreid abstract | every vraag |
 | `route` | gegeven < zelf vinden | calculation patterns |
 | `steps` | 1, 2, 3, 4+ | every vraag |
-| `sources` | in vraagtekst < één bron zonder ruis < meerdere bronnen met ruis | every vraag |
+| `sources` | in vraagtekst < één bron < meerdere bronnen (only numbered informatiebronnen count) | every vraag |
+| `noise` | nee < ja (the data the student must pick from also hold data the vraag does not need) | every vraag |
 | `claim` | nee < ja (the stem holds a claim/stelling to judge) | every vraag |
 | `new_concept` | nee < ja (a concept outside the criteria is introduced in the stem) | every vraag |
 | `schema` | geen, voorgestructureerd < deels ingevuld | schema patterns (B02, tables in P10) |
@@ -116,11 +117,16 @@ subjects/<s>/toets/       (patterns.json, contexten.md, sjablonen/)      data/to
 15. Scope v1: **bedrijfseconomie and economie, VWO 4–6**; reference = VWO central exam. HAVO later.
 
 16. Knob shares and the Bloom mix are **by points**.
-17. A new base pattern **P16 Kennisvraag (noem of omschrijf)** covers *onthouden*; it is marked
+17. A new base pattern **P16 Kennisvraag (noem of omschrijf)** covers *onthouden*. (Changed 2026-11-14 after E7 run 1,
+    bedrijfsecon-063: P16 occurs in both bedrijfseconomie exams, so it **is** a central-exam pattern; the text below is superseded.) It was marked
     "niet in centraal examen" (reference 0 %).
 18. Tolerances: Bloom mix ±5 percentage points per level, knob shares ±10 pp, always at least one
     vraag of slack (specs/32 §4). Points per leerdoel are exact.
 19. `builds_on` only inside one opgave.
+
+20. After E7 run 1 (decided 2026-11-14 after E7 run 1): `sources` counts only numbered informatiebronnen (a table or graph in
+    the opgave text belongs to the vraagtekst); a new knob **`noise`** (nee/ja) records data the vraag does not need;
+    new base pattern **P17 Rangschikken naar een kenmerk** (bedrijfsecon-061); both BE exams are re-labelled.
 
 Architect defaults (listed in the plan §3, confirm or change): reused opgaven are verbatim and count
 in the matrix; python-docx for Word; the order's `level` sets no knob values (it goes to the writer

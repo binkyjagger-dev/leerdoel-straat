@@ -278,3 +278,19 @@ hernummeren.
 **Opties.** a. run-id (nu) · b. een korte code die je zelf kiest (bijv. `5V-P2-F2`) en die in de opdracht staat.
 
 **Aanbeveling: a**, met de titel ernaast in het register (zo staat het er al).
+
+### Besluiten fase 3 (Martijn, 2026-11-14)
+
+| Vraag | Besluit |
+|---|---|
+| 18 | ja — `reuse_copy` past "vraag n" in een hergebruikte opgave automatisch aan het nieuwe nummer aan |
+| 19 | ja — informatiebronnen per opgave nummeren |
+| 20 | ja — `toets_id` = run-id |
+
+### Besluiten na E7-run 1 (Martijn, 2026-11-14)
+
+| Onderwerp | Besluit | Gevolg |
+|---|---|---|
+| Nieuw patroon (2025-I v18) | P17 *Rangschikken naar een kenmerk* in de basislaag (bedrijfsecon-061/062) | via `patterns.py add` |
+| P16 | wel een examenpatroon (bedrijfsecon-063) | `in_central_exam = true` |
+| Bronnen en ruis | `sources` = vraagtekst / één bron / meerdere bronnen (alleen genummerde informatiebronnen; een tabel of grafiek in de opgavetekst hoort bij de vraagtekst); nieuwe knop `noise` (nee/ja) | knobs.json, schema's, labeller, profiel, formulier, planner, writer, IT4; daarna beide BE-examens opnieuw labelen |

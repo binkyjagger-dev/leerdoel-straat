@@ -4,7 +4,7 @@
 
 ```
 data/toets/knobs.json              knob definitions (generic, all subjects)
-data/toets/patterns_base.json      base layer: P01–P09, P12, P14, P15, P16
+data/toets/patterns_base.json      base layer: P01–P09, P12, P14, P15, P16, P17
 subjects/<s>/toets/patterns.json   subject layer (economie: P10, P11, P13; bedrijfseconomie: B01–B03)
 subjects/<s>/toets/conventions.md  human: exam conventions of the subject (sources, uitwerkbijlage, cv phrases, € notation, btw)
 subjects/<s>/toets/contexten.md    human, optional: preferred branches/settings, contexts to avoid
@@ -58,7 +58,8 @@ therefore satisfies the `route` share partly by the choice between P07 and P08 (
 | P12 | base | Afwegen en standpunt kiezen | explanation | analyseren, evalueren | 2 | |
 | P14 | base | Noemen met toelichting in de context | explanation | begrijpen, toepassen | 1–2 | |
 | P15 | base | Besluit aan de hand van meerdere voorwaarden | calculation | toepassen, analyseren, evalueren | 3–5 | builds_on=ja |
-| P16 | base | Kennisvraag: noem of omschrijf | explanation | onthouden | 1–2 | in_central_exam=false |
+| P16 | base | Kennisvraag: noem of omschrijf | explanation | onthouden | 1–2 | (in_central_exam=true since bedrijfsecon-063) |
+| P17 | base | Rangschikken naar een kenmerk | choice | begrijpen, toepassen | 1–2 | added by bedrijfsecon-061 (2025-I v18) |
 | P10 | economie | Tekenen of arceren in een marktmodel | drawing | toepassen, analyseren | 1–3 | needs_figure |
 | P11 | economie | Speltheorie: matrix of spelboom analyseren | choice | toepassen, analyseren | 2–3 | needs_figure (matrix as table) |
 | P13 | economie | Dynamiek in het IS-MB-GA-model | explanation | toepassen, analyseren | 2–3 | |
@@ -82,14 +83,18 @@ not offer it in the Bloom mix.
  "settable": true}
 ```
 
-Knobs: `pattern` (categorical, values = catalogue codes), `solo`, `route`, `steps`, `sources`,
+Knobs: `pattern` (categorical, values = catalogue codes), `solo`, `route`, `steps`, `sources`, `noise`,
 `claim`, `new_concept`, `schema`, `builds_on` (settable), and `combination` (computed, shown in the
 form and the verantwoording, not settable). The definitions are the ones used in the November 2026
 tests (instructie_beco_5vwo §Niveauprofiel), merged for both subjects:
 
-- `sources` replaces the economie test's "context" knob: *in vraagtekst* = all data in the stem;
-  *één bron zonder ruis* = one numbered source whose data are all used; *meerdere bronnen met ruis* =
-  two or more sources, also holding data the vraag does not need.
+- `sources` (changed 2026-11-14 after E7 run 1): *in vraagtekst* = all data are in the stem or the opgave text,
+  **including tables and graphs printed in it without an informatiebron number**; *één bron* = the data come from one
+  numbered informatiebron (plus possibly the stem); *meerdere bronnen* = from two or more numbered informatiebronnen.
+  Only numbered informatiebronnen count as a bron.
+- `noise` (new, 2026-11-14): *ja* = the text, tables, graphs or bronnen the student must use also hold data the vraag
+  does not need (other columns, other periods, other products, a second tax bracket); *nee* = every given number in
+  them is used. Independent of `sources`: a table in the stem can carry noise, and so can a single bron.
 - `claim` replaces the "met bewering" half of the economie test's context knob.
 - `steps`: values `1`, `2`, `3`, `4+`; counted as the reasoning or calculation steps of a complete
   answer (one scorepunt is not necessarily one step).
@@ -105,7 +110,7 @@ tests (instructie_beco_5vwo §Niveauprofiel), merged for both subjects:
 - `new_concept = ja` requires the concept to be defined in the stem or a source (the writer states it
   in `new_concepts[]`; the verifier checks it is outside the criteria and explained, V7).
 - `needs_figure` patterns require a figure spec in the items (specs/35 §3).
-- P16 counts as `in_central_exam = false`: its points appear in the verantwoording as
+- (Superseded by bedrijfsecon-063: P16 is a central-exam pattern.) A pattern with `in_central_exam = false` has its points in the verantwoording as
   "niet-examenpatroon".
 
 ## 6. Adding or changing a pattern
