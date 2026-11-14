@@ -329,6 +329,8 @@ def uitwerkbijlage(tmp: Path) -> bool:
     lr = Run(r, "exam")
     ok &= check("labels: the uitwerkbijlage counts as evidence text for every question of the exam",
                 lr.evidence_ok("vwo-2030-tv1-q1", "Omzetschema Bakkerij Kruim"))
+    ok &= check("labels (LB4): a bron from the opgave fallback (sources_from opgave) is allowed evidence",
+                lr.evidence_ok("vwo-2030-tv1-q2", "croissant € 1,20"))
     return ok
 
 
