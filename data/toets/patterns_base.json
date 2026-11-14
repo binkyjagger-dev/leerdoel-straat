@@ -207,11 +207,12 @@
       "needs_figure": false,
       "in_central_exam": true,
       "examples_seed": [
-        "bedrijfseconomie vwo-2025-tv1 v17",
         "bedrijfseconomie vwo-2025-tv1 v27"
       ],
       "status": "active",
-      "source": "seed-analysis-2026-11"
+      "source": "decision",
+      "decision": "bedrijfsecon-068",
+      "added_at": "2026-11-14"
     },
     {
       "code": "P08",
@@ -242,10 +243,13 @@
       "in_central_exam": true,
       "examples_seed": [
         "bedrijfseconomie vwo-2026-tv1 v15",
-        "bedrijfseconomie vwo-2025-tv1 v9"
+        "bedrijfseconomie vwo-2025-tv1 v9",
+        "bedrijfseconomie vwo-2025-tv1 v17"
       ],
       "status": "active",
-      "source": "seed-analysis-2026-11"
+      "source": "decision",
+      "decision": "bedrijfsecon-068",
+      "added_at": "2026-11-14"
     },
     {
       "code": "P09",

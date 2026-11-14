@@ -2145,6 +2145,31 @@
       "raised_by": "intake",
       "supersedes": null,
       "scope": null
+    },
+    {
+      "id": "bedrijfsecon-068",
+      "question": "Examenvraag 2025-I v17 (erfbelasting) staat als seed-voorbeeld bij P07, maar is in E7-run 3 gelabeld als P08 (de stam noemt geen tussenstappen). Voorbeeld verplaatsen?",
+      "context": "R-labeller E7-run 3: P07 fixeert route=gegeven; v17 noemt alleen het eindpunt.",
+      "options": [
+        "v17 weg bij P07 en als voorbeeld bij P08",
+        "Zo laten"
+      ],
+      "proposed": "v17 weg bij P07 en als voorbeeld bij P08",
+      "impact": "low",
+      "applies_to": [
+        "catalogue"
+      ],
+      "affects_units": [
+        "vwo-2025-tv1-q17"
+      ],
+      "status": "answered",
+      "answer": "v17 weg bij P07 en als voorbeeld bij P08.",
+      "answered_by": "user",
+      "answered_at": "2026-11-14T10:26:41Z",
+      "source_run": "20261114-0200-examen-bedrijfseconomie-label3",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": null
     }
   ]
 }
