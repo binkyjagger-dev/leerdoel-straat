@@ -1,0 +1,387 @@
+{
+  "subject": "bedrijfseconomie",
+  "source": "bank-labels",
+  "label": "referentie: 2 examens (2025-I, 2026-I)",
+  "note": null,
+  "n_exams": 2,
+  "n_questions": 59,
+  "points": 124,
+  "by": "points",
+  "pooled": {
+    "pattern": {
+      "P01": {
+        "points": 7.0,
+        "share": 0.057
+      },
+      "P03": {
+        "points": 2.0,
+        "share": 0.016
+      },
+      "P04": {
+        "points": 2.0,
+        "share": 0.016
+      },
+      "P05": {
+        "points": 7.0,
+        "share": 0.057
+      },
+      "P07": {
+        "points": 8.0,
+        "share": 0.065
+      },
+      "P08": {
+        "points": 24.0,
+        "share": 0.195
+      },
+      "P09": {
+        "points": 17.0,
+        "share": 0.138
+      },
+      "P14": {
+        "points": 13.0,
+        "share": 0.106
+      },
+      "P15": {
+        "points": 7.0,
+        "share": 0.057
+      },
+      "P16": {
+        "points": 11.0,
+        "share": 0.089
+      },
+      "B01": {
+        "points": 2.0,
+        "share": 0.016
+      },
+      "B02": {
+        "points": 18.0,
+        "share": 0.146
+      },
+      "B03": {
+        "points": 5.0,
+        "share": 0.041
+      }
+    },
+    "bloom": {
+      "onthouden": {
+        "points": 12.0,
+        "share": 0.115
+      },
+      "begrijpen": {
+        "points": 25.0,
+        "share": 0.24
+      },
+      "toepassen": {
+        "points": 64.0,
+        "share": 0.615
+      },
+      "analyseren": {
+        "points": 3.0,
+        "share": 0.029
+      }
+    },
+    "solo": {
+      "unistructureel": {
+        "points": 9.0,
+        "share": 0.073
+      },
+      "multistructureel": {
+        "points": 57.0,
+        "share": 0.46
+      },
+      "relationeel": {
+        "points": 58.0,
+        "share": 0.468
+      }
+    },
+    "route": {
+      "gegeven": {
+        "points": 37.0,
+        "share": 0.468
+      },
+      "zelf vinden": {
+        "points": 42.0,
+        "share": 0.532
+      }
+    },
+    "steps": {
+      "1": {
+        "points": 16.0,
+        "share": 0.129
+      },
+      "2": {
+        "points": 26.0,
+        "share": 0.21
+      },
+      "3": {
+        "points": 31.0,
+        "share": 0.25
+      },
+      "4+": {
+        "points": 51.0,
+        "share": 0.411
+      }
+    },
+    "sources": {
+      "in vraagtekst": {
+        "points": 66.0,
+        "share": 0.532
+      },
+      "één bron zonder ruis": {
+        "points": 21.0,
+        "share": 0.169
+      },
+      "meerdere bronnen met ruis": {
+        "points": 37.0,
+        "share": 0.298
+      }
+    },
+    "claim": {
+      "nee": {
+        "points": 117.0,
+        "share": 0.944
+      },
+      "ja": {
+        "points": 7.0,
+        "share": 0.056
+      }
+    },
+    "new_concept": {
+      "nee": {
+        "points": 108.0,
+        "share": 0.871
+      },
+      "ja": {
+        "points": 16.0,
+        "share": 0.129
+      }
+    },
+    "schema": {
+      "voorgestructureerd": {
+        "points": 20.0,
+        "share": 1.0
+      }
+    },
+    "builds_on": {
+      "nee": {
+        "points": 73.0,
+        "share": 0.709
+      },
+      "ja": {
+        "points": 30.0,
+        "share": 0.291
+      }
+    },
+    "combination": {
+      "1": {
+        "points": 76.0,
+        "share": 0.71
+      },
+      "2": {
+        "points": 20.0,
+        "share": 0.187
+      },
+      "3": {
+        "points": 11.0,
+        "share": 0.103
+      }
+    }
+  },
+  "excluded": {
+    "pattern": {
+      "nieuw": 1.0
+    },
+    "bloom": {
+      "unlinked": 20.0
+    },
+    "route": {
+      "nieuw": 1.0,
+      "not_applicable": 44.0
+    },
+    "schema": {
+      "nieuw": 1.0,
+      "not_applicable": 103.0
+    },
+    "builds_on": {
+      "not_applicable": 21.0
+    },
+    "combination": {
+      "unlinked": 17.0
+    }
+  },
+  "unknown_knobs": [],
+  "exams": [
+    {
+      "exam_id": "vwo-2025-tv1",
+      "points": 63,
+      "n_questions": 30,
+      "knobs": {
+        "pattern": {
+          "P01": 4.0,
+          "P03": 2.0,
+          "P05": 3.0,
+          "P07": 5.0,
+          "P08": 12.0,
+          "P09": 9.0,
+          "P14": 4.0,
+          "P15": 5.0,
+          "P16": 8.0,
+          "B02": 8.0,
+          "B03": 2.0
+        },
+        "bloom": {
+          "onthouden": 9.0,
+          "begrijpen": 14.0,
+          "toepassen": 32.0,
+          "analyseren": 1.0
+        },
+        "solo": {
+          "unistructureel": 5.0,
+          "multistructureel": 31.0,
+          "relationeel": 27.0
+        },
+        "route": {
+          "gegeven": 21.0,
+          "zelf vinden": 20.0
+        },
+        "steps": {
+          "1": 12.0,
+          "2": 11.0,
+          "3": 16.0,
+          "4+": 24.0
+        },
+        "sources": {
+          "in vraagtekst": 38.0,
+          "één bron zonder ruis": 10.0,
+          "meerdere bronnen met ruis": 15.0
+        },
+        "claim": {
+          "nee": 58.0,
+          "ja": 5.0
+        },
+        "new_concept": {
+          "nee": 58.0,
+          "ja": 5.0
+        },
+        "schema": {
+          "voorgestructureerd": 8.0
+        },
+        "builds_on": {
+          "nee": 42.0,
+          "ja": 11.0
+        },
+        "combination": {
+          "1": 42.0,
+          "2": 11.0,
+          "3": 4.0
+        }
+      },
+      "excluded": {
+        "pattern": {
+          "nieuw": 1.0
+        },
+        "bloom": {
+          "unlinked": 7.0
+        },
+        "route": {
+          "nieuw": 1.0,
+          "not_applicable": 21.0
+        },
+        "schema": {
+          "nieuw": 1.0,
+          "not_applicable": 54.0
+        },
+        "builds_on": {
+          "not_applicable": 10.0
+        },
+        "combination": {
+          "unlinked": 6.0
+        }
+      }
+    },
+    {
+      "exam_id": "vwo-2026-tv1",
+      "points": 61,
+      "n_questions": 29,
+      "knobs": {
+        "pattern": {
+          "P01": 3.0,
+          "P04": 2.0,
+          "P05": 4.0,
+          "P07": 3.0,
+          "P08": 12.0,
+          "P09": 8.0,
+          "P14": 9.0,
+          "P15": 2.0,
+          "P16": 3.0,
+          "B01": 2.0,
+          "B02": 10.0,
+          "B03": 3.0
+        },
+        "bloom": {
+          "onthouden": 3.0,
+          "begrijpen": 11.0,
+          "toepassen": 32.0,
+          "analyseren": 2.0
+        },
+        "solo": {
+          "unistructureel": 4.0,
+          "multistructureel": 26.0,
+          "relationeel": 31.0
+        },
+        "route": {
+          "gegeven": 16.0,
+          "zelf vinden": 22.0
+        },
+        "steps": {
+          "1": 4.0,
+          "2": 15.0,
+          "3": 15.0,
+          "4+": 27.0
+        },
+        "sources": {
+          "in vraagtekst": 28.0,
+          "één bron zonder ruis": 11.0,
+          "meerdere bronnen met ruis": 22.0
+        },
+        "claim": {
+          "nee": 59.0,
+          "ja": 2.0
+        },
+        "new_concept": {
+          "nee": 50.0,
+          "ja": 11.0
+        },
+        "schema": {
+          "voorgestructureerd": 12.0
+        },
+        "builds_on": {
+          "nee": 31.0,
+          "ja": 19.0
+        },
+        "combination": {
+          "1": 34.0,
+          "2": 9.0,
+          "3": 7.0
+        }
+      },
+      "excluded": {
+        "bloom": {
+          "unlinked": 13.0
+        },
+        "route": {
+          "not_applicable": 23.0
+        },
+        "schema": {
+          "not_applicable": 49.0
+        },
+        "builds_on": {
+          "not_applicable": 11.0
+        },
+        "combination": {
+          "unlinked": 11.0
+        }
+      }
+    }
+  ]
+}
