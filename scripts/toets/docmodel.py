@@ -110,8 +110,40 @@ def to_docx(blocks: list[tuple], path: Path) -> None:
     doc.save(str(path))
 
 
+SEP_ROW = re.compile(r"^\|?\s*:?-{3,}:?\s*(\|\s*:?-{3,}:?\s*)*\|?\s*$")
+
+
+def _cells(line: str) -> list[str]:
+    s = line.strip()
+    if s.startswith("|"):
+        s = s[1:]
+    if s.endswith("|"):
+        s = s[:-1]
+    return [c.strip() for c in s.split("|")]
+
+
+def expand(blocks: list[tuple]) -> list[tuple]:
+    """Split ("p", text) blocks at blank lines and turn Markdown pipe tables inside them into ("table", rows, header).
+    Writers may put a small table in an intro or stem; without this it reaches Word as raw '| … |' lines."""
+    out: list[tuple] = []
+    for b in blocks:
+        if b[0] != "p" or "|" not in b[1]:
+            out.append(b)
+            continue
+        for chunk in re.split(r"\n\s*\n", b[1]):
+            lines = [ln for ln in chunk.split("\n") if ln.strip()]
+            if len(lines) >= 2 and all(ln.strip().startswith("|") for ln in lines):
+                header = len(lines) > 1 and bool(SEP_ROW.match(lines[1].strip()))
+                rows = [_cells(ln) for ln in lines if not SEP_ROW.match(ln.strip())]
+                out.append(("table", rows, header))
+            elif chunk.strip():
+                out.append(("p", chunk.strip("\n")))
+    return out
+
+
 def write(blocks: list[tuple], md_path: Path) -> tuple[Path, Path]:
     """Write <name>.md and <name>.docx side by side. On Windows an open file blocks the write: say so in Dutch."""
+    blocks = expand(blocks)
     md_path.parent.mkdir(parents=True, exist_ok=True)
     docx_path = md_path.with_suffix(".docx")
     try:

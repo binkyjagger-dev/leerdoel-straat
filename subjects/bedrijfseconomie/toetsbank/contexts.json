@@ -1,0 +1,64 @@
+{
+  "contexts": [
+    {
+      "toets_id": "20261114-1140-toets-bedrijfseconomie",
+      "opgave_id": "O1",
+      "title": "Dierenkliniek De Hoefslag",
+      "context_tags": [
+        "dierenzorg",
+        "dierenkliniek",
+        "tarief per behandeluur"
+      ],
+      "level": "5vwo",
+      "date": "2026-11-14"
+    },
+    {
+      "toets_id": "20261114-1140-toets-bedrijfseconomie",
+      "opgave_id": "O2",
+      "title": "Webwinkel Loopwerk",
+      "context_tags": [
+        "detailhandel",
+        "webwinkel",
+        "hardloopschoenen"
+      ],
+      "level": "5vwo",
+      "date": "2026-11-14"
+    },
+    {
+      "toets_id": "20261114-1140-toets-bedrijfseconomie",
+      "opgave_id": "O3",
+      "title": "Koffiebranderij Donker bv",
+      "context_tags": [
+        "voedingsmiddelenindustrie",
+        "koffiebranderij",
+        "bv"
+      ],
+      "level": "5vwo",
+      "date": "2026-11-14"
+    },
+    {
+      "toets_id": "20261114-1140-toets-bedrijfseconomie",
+      "opgave_id": "O4",
+      "title": "Filmtheater Het Lumière",
+      "context_tags": [
+        "recreatie",
+        "filmtheater",
+        "begroting"
+      ],
+      "level": "5vwo",
+      "date": "2026-11-14"
+    },
+    {
+      "toets_id": "20261114-1140-toets-bedrijfseconomie",
+      "opgave_id": "O5",
+      "title": "Hoveniersbedrijf Groenrijk",
+      "context_tags": [
+        "groenvoorziening",
+        "hoveniersbedrijf",
+        "bestelbus"
+      ],
+      "level": "5vwo",
+      "date": "2026-11-14"
+    }
+  ]
+}

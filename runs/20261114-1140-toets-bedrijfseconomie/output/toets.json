@@ -1,0 +1,3494 @@
+{
+  "toets_id": "20261114-1140-toets-bedrijfseconomie",
+  "subject": "bedrijfseconomie",
+  "criteria_run": "20261021-1647-bedrijfseconomie-vwo-2028-run2",
+  "title": "Proeftoets bedrijfseconomie periode 2",
+  "level": "5vwo",
+  "run_id": "20261114-1140-toets-bedrijfseconomie",
+  "created_at": "2026-11-14",
+  "max_score": 44,
+  "reference": null,
+  "opgaven": [
+    {
+      "opgave_id": "O1",
+      "title": "Dierenkliniek De Hoefslag",
+      "context": "Een dierenkliniek met drie dierenartsen en twee assistenten behandelt huisdieren en paarden. De kliniek rekent een tarief per behandeluur en wil weten of haar tarieven de kosten dekken; gegevens over begrote kosten, behandeluren en de normale bezetting staan in de opgavetekst en in informatiebron 1.",
+      "context_tags": [
+        "dierenzorg",
+        "dierenkliniek",
+        "tarief per behandeluur"
+      ],
+      "reused_from": null,
+      "intro": "Dierenkliniek De Hoefslag is een praktijk in een dorp op het platteland. Bij de kliniek werken drie dierenartsen en twee assistenten. De kliniek heeft twee afdelingen: de afdeling gezelschapsdieren, voor onder andere honden, katten en konijnen, en de paardenafdeling met een eigen behandelstal. Voor elke afdeling stelt de kliniek tarieven vast die zijn gebaseerd op de kosten. De eigenaren willen weten of die tarieven alle kosten van de kliniek dekken. Alle bedragen in deze opgave zijn exclusief btw.\n\nBij deze opgave hoort informatiebron 1.",
+      "data": {
+        "c_begroot_gez": 408000,
+        "uren_begroot_gez": 4800,
+        "normale_bezetting_gez": 5000,
+        "uren_consult": 0.25,
+        "uren_gebit": 1.5,
+        "v_consult": 3.8,
+        "v_gebit": 38.4,
+        "v_operatie": 22.75,
+        "n_consult": 8400,
+        "n_gebit": 640,
+        "n_operatie": 1680,
+        "omzet_gez": 497616,
+        "salaris_artsen": 198000,
+        "salaris_assistenten": 64800,
+        "sociale_lasten": 52560,
+        "huur_praktijk": 42000,
+        "energie_water": 13450,
+        "afschr_rontgen": 17200,
+        "afschr_tafels": 9800,
+        "verzekeringen": 6300,
+        "administratie": 9900,
+        "c_paard": 187200,
+        "n_paard": 2600,
+        "v_paard": 41.5,
+        "tarief_paard": 110
+      },
+      "sources": [
+        {
+          "n": 1,
+          "title": "Gegevens van de afdeling gezelschapsdieren",
+          "kind": "table",
+          "text": "Begroting 2027 (opgesteld in november 2026)\n- begrote constante kosten: € 408.000\n- begroot aantal behandeluren: 4.800\n- normale bezetting: 5.000 behandeluren per jaar\n\nDe tarieven voor 2027 berekent De Hoefslag met de begrote constante kosten en het begrote aantal behandeluren.\n\nWerkelijke gegevens over 2027 (bekend na afloop van het jaar)\n- omzet: € 497.616\n- constante kosten:\n  - salarissen dierenartsen: € 198.000\n  - salarissen assistenten: € 64.800\n  - sociale lasten werkgever: € 52.560\n  - huur praktijkruimte: € 42.000\n  - energie en water praktijkruimte: € 13.450\n  - afschrijving röntgenapparaat: € 17.200\n  - afschrijving behandeltafels en instrumenten: € 9.800\n  - verzekeringen: € 6.300\n  - administratiekantoor: € 9.900\n\nBehandelingen van de afdeling gezelschapsdieren",
+          "table": [
+            [
+              "behandeling",
+              "behandeluren per behandeling",
+              "variabele kosten per behandeling (medicijnen en materiaal)",
+              "werkelijk aantal behandelingen in 2027"
+            ],
+            [
+              "consult",
+              "0,25",
+              "€ 3,80",
+              "8.400"
+            ],
+            [
+              "gebitsbehandeling hond",
+              "1,5",
+              "€ 38,40",
+              "640"
+            ],
+            [
+              "kleine operatie",
+              "1",
+              "€ 22,75",
+              "1.680"
+            ]
+          ],
+          "figure_id": null,
+          "uses_data": [
+            "c_begroot_gez",
+            "uren_begroot_gez",
+            "uren_gebit",
+            "v_consult",
+            "v_gebit",
+            "v_operatie",
+            "n_consult",
+            "n_gebit",
+            "n_operatie",
+            "omzet_gez",
+            "salaris_artsen",
+            "salaris_assistenten",
+            "sociale_lasten",
+            "huur_praktijk",
+            "energie_water",
+            "afschr_rontgen",
+            "afschr_tafels",
+            "verzekeringen",
+            "administratie"
+          ],
+          "noise_data": [
+            "normale_bezetting_gez",
+            "uren_consult"
+          ]
+        }
+      ],
+      "figures": [],
+      "vragen": [
+        {
+          "vraag_id": "O1-V1",
+          "number": 1,
+          "points": 2,
+          "stem": "De Hoefslag maakt in haar kostenberekening onderscheid tussen constante en variabele kosten. In de resultatenrekening behandelt zij de constante kosten als periodekosten.\nOmschrijf wat constante kosten zijn en omschrijf wat periodekosten zijn.",
+          "uitwerkbijlage": null,
+          "cv": {
+            "maximumscore": 2,
+            "model_answer": "Constante kosten zijn kosten waarvan het totaal binnen een periode gelijk blijft als het aantal behandelingen verandert.\nPeriodekosten zijn kosten die niet aan de afzonderlijke behandelingen worden toegerekend, maar die in hun geheel ten laste komen van het resultaat van de periode waarin ze zijn gemaakt.",
+            "calc": [],
+            "scorepunten": [
+              {
+                "seq": 1,
+                "points": 1,
+                "text": "constante kosten: het totaal verandert binnen een periode niet als het aantal behandelingen (de afzet) verandert",
+                "criterion_id": "F2.30.1-02-a",
+                "calc_ref": null
+              },
+              {
+                "seq": 2,
+                "points": 1,
+                "text": "periodekosten: niet aan behandelingen toegerekend, maar in hun geheel ten laste van het resultaat van de periode",
+                "criterion_id": "F2.30.1-03-a",
+                "calc_ref": null
+              }
+            ],
+            "rules": [
+              "Per juiste omschrijving 1 scorepunt."
+            ],
+            "alternatives": [
+              "Constante kosten: kosten die niet afhankelijk zijn van het aantal geleverde diensten / van de productieomvang (binnen een periode).",
+              "Periodekosten: kosten die aan een periode en niet aan een product of dienst worden toegerekend."
+            ],
+            "follow_through": null
+          },
+          "new_concepts": [],
+          "builds_on_vragen": [],
+          "pattern": "P16",
+          "knobs": {
+            "solo": "multistructureel",
+            "route": null,
+            "steps": "1",
+            "sources": "in vraagtekst",
+            "noise": "nee",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": null
+          },
+          "label": {
+            "exam_id": null,
+            "question_id": "O1-V1",
+            "question_number": 1,
+            "opgave_id": "O1",
+            "first_of_opgave": true,
+            "points": 2,
+            "pattern": "P16",
+            "solo": "multistructureel",
+            "route": null,
+            "steps": "1",
+            "sources": "in vraagtekst",
+            "noise": "nee",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": null,
+            "example_quality": null,
+            "builds_on_questions": [],
+            "proposed_pattern": null,
+            "example_quality_reason": null,
+            "combination": 2,
+            "bloom": "onthouden",
+            "scorepunt_bloom": [
+              {
+                "points": 1,
+                "bloom": "onthouden",
+                "group_id": "F2.30.1-02"
+              },
+              {
+                "points": 1,
+                "bloom": "onthouden",
+                "group_id": "F2.30.1-03"
+              }
+            ],
+            "confidence": {
+              "pattern": "high",
+              "solo": "high",
+              "route": "high",
+              "steps": "high",
+              "sources": "high",
+              "noise": "high",
+              "claim": "high",
+              "new_concept": "high",
+              "schema": "high",
+              "builds_on": "high"
+            },
+            "evidence": {
+              "pattern": "Omschrijf wat constante kosten zijn en omschrijf wat periodekosten zijn.",
+              "solo": "Per juiste omschrijving 1 scorepunt.",
+              "steps": "Omschrijf wat constante kosten zijn en omschrijf wat periodekosten zijn.",
+              "sources": "In de resultatenrekening behandelt zij de constante kosten als periodekosten.",
+              "noise": "Omschrijf wat constante kosten zijn en omschrijf wat periodekosten zijn.",
+              "claim": "De Hoefslag maakt in haar kostenberekening onderscheid tussen constante en variabele kosten.",
+              "new_concept": "Omschrijf wat constante kosten zijn en omschrijf wat periodekosten zijn."
+            },
+            "repaired_fields": [],
+            "disagreements": {}
+          },
+          "scorepunten": [
+            {
+              "seq": 1,
+              "points": 1,
+              "criterion_id": "F2.30.1-02-a",
+              "group_id": "F2.30.1-02",
+              "bloom": "onthouden"
+            },
+            {
+              "seq": 2,
+              "points": 1,
+              "criterion_id": "F2.30.1-03-a",
+              "group_id": "F2.30.1-03",
+              "bloom": "onthouden"
+            }
+          ],
+          "open_findings": []
+        },
+        {
+          "vraag_id": "O1-V2",
+          "number": 2,
+          "points": 3,
+          "stem": "Een klant komt met haar hond voor een gebitsbehandeling bij De Hoefslag.\nBereken het tarief dat De Hoefslag in 2027 voor een gebitsbehandeling bij een hond in rekening brengt (zie informatiebron 1).",
+          "uitwerkbijlage": null,
+          "cv": {
+            "maximumscore": 3,
+            "model_answer": "De opslag voor constante kosten is 408.000 gedeeld door 4.800 behandeluren = € 85,00 per behandeluur.\nEen gebitsbehandeling duurt 1,5 behandeluur, dus de constante kosten van die behandeling zijn 1,5 maal 85,00 = € 127,50.\nHet tarief van de gebitsbehandeling is 38,40 variabele kosten plus 127,50 constante kosten = € 165,90.",
+            "calc": [
+              {
+                "name": "opslag_gez",
+                "expr": "c_begroot_gez / uren_begroot_gez",
+                "round": 2,
+                "rounding": "half_up",
+                "shown": "€ 85,00"
+              },
+              {
+                "name": "c_gebit",
+                "expr": "uren_gebit * opslag_gez",
+                "round": 2,
+                "rounding": "half_up",
+                "shown": "€ 127,50"
+              },
+              {
+                "name": "tarief_gebit",
+                "expr": "v_gebit + c_gebit",
+                "round": 2,
+                "rounding": "half_up",
+                "shown": "€ 165,90"
+              }
+            ],
+            "scorepunten": [
+              {
+                "seq": 1,
+                "points": 1,
+                "text": "opslag voor constante kosten per behandeluur € 85,00 (begrote constante kosten / begroot aantal behandeluren)",
+                "criterion_id": "F2.30.2-01-b",
+                "calc_ref": "opslag_gez"
+              },
+              {
+                "seq": 2,
+                "points": 1,
+                "text": "constante kosten van een gebitsbehandeling (1,5 behandeluur) € 127,50",
+                "criterion_id": "F2.30.2-01-c",
+                "calc_ref": "c_gebit"
+              },
+              {
+                "seq": 3,
+                "points": 1,
+                "text": "tarief: variabele kosten van de behandeling plus constante kosten = € 165,90",
+                "criterion_id": "F2.30.2-01-c",
+                "calc_ref": "tarief_gebit"
+              }
+            ],
+            "rules": [
+              "Voor elke fout 1 scorepunt in mindering brengen.",
+              "Wie de opslag berekent met de normale bezetting in plaats van het begrote aantal behandeluren, krijgt voor het eerste scorepunt geen punt; de volgende stappen met die opslag goed rekenen."
+            ],
+            "alternatives": [],
+            "follow_through": null
+          },
+          "new_concepts": [],
+          "builds_on_vragen": [],
+          "pattern": "P08",
+          "knobs": {
+            "solo": "relationeel",
+            "route": "zelf vinden",
+            "steps": "3",
+            "sources": "één bron",
+            "noise": "ja",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": "nee"
+          },
+          "label": {
+            "exam_id": null,
+            "question_id": "O1-V2",
+            "question_number": 2,
+            "opgave_id": "O1",
+            "first_of_opgave": false,
+            "points": 3,
+            "pattern": "P08",
+            "solo": "multistructureel",
+            "route": "zelf vinden",
+            "steps": "3",
+            "sources": "één bron",
+            "noise": "ja",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": "nee",
+            "example_quality": null,
+            "builds_on_questions": [],
+            "proposed_pattern": null,
+            "example_quality_reason": null,
+            "combination": 1,
+            "bloom": "toepassen",
+            "scorepunt_bloom": [
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "F2.30.2-01"
+              },
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "F2.30.2-01"
+              },
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "F2.30.2-01"
+              }
+            ],
+            "confidence": {
+              "pattern": "high",
+              "solo": "high",
+              "route": "high",
+              "steps": "high",
+              "sources": "high",
+              "noise": "high",
+              "claim": "high",
+              "new_concept": "high",
+              "schema": "high",
+              "builds_on": "high"
+            },
+            "evidence": {
+              "pattern": "Bereken het tarief dat De Hoefslag in 2027 voor een gebitsbehandeling bij een hond in rekening brengt (zie informatiebron 1).",
+              "solo": "De tarieven voor 2027 berekent De Hoefslag met de begrote constante kosten en het begrote aantal behandeluren.",
+              "route": "Bereken het tarief dat De Hoefslag in 2027 voor een gebitsbehandeling bij een hond in rekening brengt (zie informatiebron 1).",
+              "steps": "Het tarief van de gebitsbehandeling is 38,40 variabele kosten plus 127,50 constante kosten = € 165,90.",
+              "sources": "Bereken het tarief dat De Hoefslag in 2027 voor een gebitsbehandeling bij een hond in rekening brengt (zie informatiebron 1).",
+              "noise": "normale bezetting: 5.000 behandeluren per jaar",
+              "claim": "Een klant komt met haar hond voor een gebitsbehandeling bij De Hoefslag.",
+              "new_concept": "De tarieven voor 2027 berekent De Hoefslag met de begrote constante kosten en het begrote aantal behandeluren.",
+              "builds_on": "Bereken het tarief dat De Hoefslag in 2027 voor een gebitsbehandeling bij een hond in rekening brengt (zie informatiebron 1)."
+            },
+            "repaired_fields": [],
+            "disagreements": {}
+          },
+          "scorepunten": [
+            {
+              "seq": 1,
+              "points": 1,
+              "criterion_id": "F2.30.2-01-b",
+              "group_id": "F2.30.2-01",
+              "bloom": "toepassen"
+            },
+            {
+              "seq": 2,
+              "points": 1,
+              "criterion_id": "F2.30.2-01-c",
+              "group_id": "F2.30.2-01",
+              "bloom": "toepassen"
+            },
+            {
+              "seq": 3,
+              "points": 1,
+              "criterion_id": "F2.30.2-01-c",
+              "group_id": "F2.30.2-01",
+              "bloom": "toepassen"
+            }
+          ],
+          "open_findings": []
+        },
+        {
+          "vraag_id": "O1-V3",
+          "number": 3,
+          "points": 3,
+          "stem": "De paardenafdeling heeft een eigen kostenberekening. Voor 2027 zijn de constante kosten van de paardenafdeling begroot op € 187.200. De normale bezetting van de paardenafdeling is 2.600 behandeluren per jaar. De variabele kosten zijn € 41,50 per behandeluur. De Hoefslag wil voor de paardenafdeling in 2027 een tarief van € 110 per behandeluur rekenen.\nBereken eerst de integrale kostprijs van een behandeluur bij normale bezetting en daarna het bedrag aan constante kosten in deze integrale kostprijs. Toon daarna met een berekening aan of het tarief van € 110 per behandeluur naast de variabele kosten ook de constante kosten per behandeluur volledig dekt.",
+          "uitwerkbijlage": null,
+          "cv": {
+            "maximumscore": 3,
+            "model_answer": "De integrale kostprijs per behandeluur is 41,50 variabele kosten plus 187.200 gedeeld door 2.600 uur aan constante kosten = € 113,50.\nDe constante kosten in die kostprijs zijn 113,50 min 41,50 variabele kosten = € 72,00 per behandeluur.\nNa aftrek van de variabele kosten blijft van het tarief 110 min 41,50 = € 68,50 over voor de constante kosten per behandeluur. Dat is minder dan € 72,00, dus het tarief dekt de constante kosten per behandeluur niet volledig; het tarief ligt € 3,50 onder de integrale kostprijs.",
+            "calc": [
+              {
+                "name": "ikp_paard",
+                "expr": "v_paard + c_paard / n_paard",
+                "round": 2,
+                "rounding": "half_up",
+                "shown": "€ 113,50"
+              },
+              {
+                "name": "c_deel_paard",
+                "expr": "ikp_paard - v_paard",
+                "round": 2,
+                "rounding": "half_up",
+                "shown": "€ 72,00"
+              },
+              {
+                "name": "dekking_c_paard",
+                "expr": "tarief_paard - v_paard",
+                "round": 2,
+                "rounding": "half_up",
+                "shown": "€ 68,50"
+              },
+              {
+                "name": "tekort_paard",
+                "expr": "ikp_paard - tarief_paard",
+                "round": 2,
+                "rounding": "half_up",
+                "shown": "€ 3,50"
+              }
+            ],
+            "scorepunten": [
+              {
+                "seq": 1,
+                "points": 1,
+                "text": "integrale kostprijs per behandeluur: variabele kosten + C/N = € 113,50",
+                "criterion_id": "F2.30.2-03-a",
+                "calc_ref": "ikp_paard"
+              },
+              {
+                "seq": 2,
+                "points": 1,
+                "text": "constante kosten in de integrale kostprijs: integrale kostprijs – variabele kosten = € 72,00",
+                "criterion_id": "F2.30.2-03-b",
+                "calc_ref": "c_deel_paard"
+              },
+              {
+                "seq": 3,
+                "points": 1,
+                "text": "het tarief dekt na de variabele kosten € 68,50 van de € 72,00 constante kosten per behandeluur, dus de integrale kostprijs wordt niet gedekt (conclusie met berekening)",
+                "criterion_id": "F2.30.2-03-a",
+                "calc_ref": "dekking_c_paard"
+              }
+            ],
+            "rules": [
+              "Voor elke fout 1 scorepunt in mindering brengen.",
+              "Het derde scorepunt alleen toekennen als de conclusie volgt uit een berekening."
+            ],
+            "alternatives": [
+              "De conclusie mag ook blijken uit de vergelijking van het tarief met de integrale kostprijs: 110 < 113,50, het tarief ligt € 3,50 onder de integrale kostprijs, dus van de € 72,00 constante kosten per behandeluur wordt € 3,50 niet gedekt."
+            ],
+            "follow_through": null
+          },
+          "new_concepts": [],
+          "builds_on_vragen": [],
+          "pattern": "P09",
+          "knobs": {
+            "solo": "multistructureel",
+            "route": "gegeven",
+            "steps": "3",
+            "sources": "in vraagtekst",
+            "noise": "nee",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": "nee"
+          },
+          "label": {
+            "exam_id": null,
+            "question_id": "O1-V3",
+            "question_number": 3,
+            "opgave_id": "O1",
+            "first_of_opgave": false,
+            "points": 3,
+            "pattern": "P09",
+            "solo": "multistructureel",
+            "route": "gegeven",
+            "steps": "3",
+            "sources": "in vraagtekst",
+            "noise": "nee",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": "nee",
+            "example_quality": null,
+            "builds_on_questions": [],
+            "proposed_pattern": null,
+            "example_quality_reason": null,
+            "combination": 1,
+            "bloom": "analyseren",
+            "scorepunt_bloom": [
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "F2.30.2-03"
+              },
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "F2.30.2-03"
+              },
+              {
+                "points": 1,
+                "bloom": "analyseren",
+                "group_id": "F2.30.2-03"
+              }
+            ],
+            "confidence": {
+              "pattern": "high",
+              "solo": "high",
+              "route": "high",
+              "steps": "high",
+              "sources": "high",
+              "noise": "high",
+              "claim": "high",
+              "new_concept": "high",
+              "schema": "high",
+              "builds_on": "high"
+            },
+            "evidence": {
+              "pattern": "Toon daarna met een berekening aan of het tarief van € 110 per behandeluur naast de variabele kosten ook de constante kosten",
+              "solo": "integrale kostprijs per behandeluur: variabele kosten + C/N = € 113,50",
+              "route": "Bereken eerst de integrale kostprijs van een behandeluur bij normale bezetting en daarna het bedrag aan constante kosten in deze integrale kostprijs.",
+              "steps": "Het derde scorepunt alleen toekennen als de conclusie volgt uit een berekening.",
+              "sources": "Voor 2027 zijn de constante kosten van de paardenafdeling begroot op € 187.200.",
+              "noise": "De variabele kosten zijn € 41,50 per behandeluur.",
+              "claim": "De Hoefslag wil voor de paardenafdeling in 2027 een tarief van € 110 per behandeluur rekenen.",
+              "new_concept": "Bereken eerst de integrale kostprijs van een behandeluur bij normale bezetting",
+              "builds_on": "De paardenafdeling heeft een eigen kostenberekening."
+            },
+            "repaired_fields": [],
+            "disagreements": {}
+          },
+          "scorepunten": [
+            {
+              "seq": 1,
+              "points": 1,
+              "criterion_id": "F2.30.2-03-a",
+              "group_id": "F2.30.2-03",
+              "bloom": "toepassen"
+            },
+            {
+              "seq": 2,
+              "points": 1,
+              "criterion_id": "F2.30.2-03-b",
+              "group_id": "F2.30.2-03",
+              "bloom": "toepassen"
+            },
+            {
+              "seq": 3,
+              "points": 1,
+              "criterion_id": "F2.30.2-03-a",
+              "group_id": "F2.30.2-03",
+              "bloom": "analyseren"
+            }
+          ],
+          "open_findings": []
+        },
+        {
+          "vraag_id": "O1-V4",
+          "number": 4,
+          "points": 4,
+          "stem": "Na afloop van 2027 stelt De Hoefslag de resultatenrekening van de afdeling gezelschapsdieren op volgens de variabele kostencalculatie. De constante kosten worden daarin ingedeeld naar categoriale kostensoort.\nStel de resultatenrekening over 2027 van de afdeling gezelschapsdieren op (zie informatiebron 1). Vul hiervoor de uitwerkbijlage bij deze vraag in.",
+          "uitwerkbijlage": {
+            "kind": "table",
+            "rows": [
+              [
+                "resultatenrekening afdeling gezelschapsdieren over 2027",
+                "bedrag"
+              ],
+              [
+                "omzet",
+                "€ ..."
+              ],
+              [
+                "variabele kosten van de behandelingen",
+                "€ ..."
+              ],
+              [
+                "dekkingsbijdrage",
+                "€ ..."
+              ],
+              [
+                "personeelskosten",
+                "€ ..."
+              ],
+              [
+                "huisvestingskosten",
+                "€ ..."
+              ],
+              [
+                "afschrijvingskosten",
+                "€ ..."
+              ],
+              [
+                "overige constante kosten",
+                "€ ..."
+              ],
+              [
+                "totale constante kosten",
+                "€ ..."
+              ],
+              [
+                "resultaat (voordelig / nadelig)",
+                "€ ..."
+              ]
+            ]
+          },
+          "cv": {
+            "maximumscore": 4,
+            "model_answer": "omzet volgens informatiebron 1: € 497.616\nvariabele kosten: 8.400 consulten maal 3,80 plus 640 gebitsbehandelingen maal 38,40 plus 1.680 operaties maal 22,75 geeft € 94.716\ndekkingsbijdrage: omzet 497.616 min variabele kosten 94.716 geeft € 402.900\npersoneelskosten: salarissen 198.000 plus 64.800 plus sociale lasten 52.560 geeft € 315.360\nhuisvestingskosten: huur 42.000 plus energie en water 13.450 geeft € 55.450\nafschrijvingskosten: röntgenapparaat 17.200 plus behandeltafels en instrumenten 9.800 geeft € 27.000\noverige constante kosten: verzekeringen 6.300 plus administratiekantoor 9.900 geeft € 16.200\ntotale constante kosten: de vier kostensoorten samen geven € 414.010\nresultaat: dekkingsbijdrage 402.900 min totale constante kosten 414.010 geeft € -11.110, een nadelig resultaat",
+            "calc": [
+              {
+                "name": "vk_gez",
+                "expr": "n_consult * v_consult + n_gebit * v_gebit + n_operatie * v_operatie",
+                "round": 0,
+                "rounding": "half_up",
+                "shown": "€ 94.716"
+              },
+              {
+                "name": "db_gez",
+                "expr": "omzet_gez - vk_gez",
+                "round": 0,
+                "rounding": "half_up",
+                "shown": "€ 402.900"
+              },
+              {
+                "name": "personeelskosten",
+                "expr": "salaris_artsen + salaris_assistenten + sociale_lasten",
+                "round": 0,
+                "rounding": "half_up",
+                "shown": "€ 315.360"
+              },
+              {
+                "name": "huisvestingskosten",
+                "expr": "huur_praktijk + energie_water",
+                "round": 0,
+                "rounding": "half_up",
+                "shown": "€ 55.450"
+              },
+              {
+                "name": "afschrijvingskosten",
+                "expr": "afschr_rontgen + afschr_tafels",
+                "round": 0,
+                "rounding": "half_up",
+                "shown": "€ 27.000"
+              },
+              {
+                "name": "overige_ck",
+                "expr": "verzekeringen + administratie",
+                "round": 0,
+                "rounding": "half_up",
+                "shown": "€ 16.200"
+              },
+              {
+                "name": "ck_totaal",
+                "expr": "personeelskosten + huisvestingskosten + afschrijvingskosten + overige_ck",
+                "round": 0,
+                "rounding": "half_up",
+                "shown": "€ 414.010"
+              },
+              {
+                "name": "resultaat_gez",
+                "expr": "db_gez - ck_totaal",
+                "round": 0,
+                "rounding": "half_up",
+                "shown": "€ -11.110"
+              }
+            ],
+            "scorepunten": [
+              {
+                "seq": 1,
+                "points": 1,
+                "text": "variabele kosten van de behandelingen: aantal × variabele kosten per behandeling, opgeteld = € 94.716",
+                "criterion_id": "F2.30.2-02-a",
+                "calc_ref": "vk_gez"
+              },
+              {
+                "seq": 2,
+                "points": 1,
+                "text": "omzet € 497.616 en dekkingsbijdrage € 402.900",
+                "criterion_id": "F2.30.2-02-b",
+                "calc_ref": "db_gez"
+              },
+              {
+                "seq": 3,
+                "points": 1,
+                "text": "constante kosten juist ingedeeld: personeelskosten € 315.360, huisvestingskosten € 55.450, afschrijvingskosten € 27.000 en overige constante kosten € 16.200",
+                "criterion_id": "F2.30.1-01-c",
+                "calc_ref": "personeelskosten"
+              },
+              {
+                "seq": 4,
+                "points": 1,
+                "text": "totale constante kosten € 414.010 en resultaat € 11.110 nadelig",
+                "criterion_id": "F2.30.2-02-b",
+                "calc_ref": "resultaat_gez"
+              }
+            ],
+            "rules": [
+              "Per groep juiste bedragen 1 scorepunt.",
+              "Een fout die doorwerkt in een volgende regel van de resultatenrekening niet opnieuw aanrekenen."
+            ],
+            "alternatives": [
+              "Het resultaat mag ook genoteerd worden als negatief resultaat / verlies van € 11.110."
+            ],
+            "follow_through": null
+          },
+          "new_concepts": [],
+          "builds_on_vragen": [],
+          "pattern": "B02",
+          "knobs": {
+            "solo": "multistructureel",
+            "route": "gegeven",
+            "steps": "4+",
+            "sources": "één bron",
+            "noise": "ja",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": "voorgestructureerd",
+            "builds_on": "nee"
+          },
+          "label": {
+            "exam_id": null,
+            "question_id": "O1-V4",
+            "question_number": 4,
+            "opgave_id": "O1",
+            "first_of_opgave": false,
+            "points": 4,
+            "pattern": "B02",
+            "solo": "relationeel",
+            "route": "gegeven",
+            "steps": "4+",
+            "sources": "één bron",
+            "noise": "ja",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": "voorgestructureerd",
+            "builds_on": "nee",
+            "example_quality": null,
+            "builds_on_questions": [],
+            "proposed_pattern": null,
+            "example_quality_reason": null,
+            "combination": 2,
+            "bloom": "toepassen",
+            "scorepunt_bloom": [
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "F2.30.2-02"
+              },
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "F2.30.2-02"
+              },
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "F2.30.1-01"
+              },
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "F2.30.2-02"
+              }
+            ],
+            "confidence": {
+              "pattern": "high",
+              "solo": "high",
+              "route": "high",
+              "steps": "high",
+              "sources": "high",
+              "noise": "high",
+              "claim": "high",
+              "new_concept": "high",
+              "schema": "high",
+              "builds_on": "high"
+            },
+            "evidence": {
+              "pattern": "Stel de resultatenrekening over 2027 van de afdeling gezelschapsdieren op (zie informatiebron 1). Vul hiervoor de uitwerkbijlage bij deze vraag in.",
+              "solo": "De constante kosten worden daarin ingedeeld naar categoriale kostensoort.",
+              "route": "resultatenrekening afdeling gezelschapsdieren over 2027",
+              "steps": "totale constante kosten € 414.010 en resultaat € 11.110 nadelig",
+              "sources": "Stel de resultatenrekening over 2027 van de afdeling gezelschapsdieren op (zie informatiebron 1).",
+              "noise": "begrote constante kosten: € 408.000",
+              "claim": "Na afloop van 2027 stelt De Hoefslag de resultatenrekening van de afdeling gezelschapsdieren op volgens de variabele kostencalculatie.",
+              "new_concept": "De constante kosten worden daarin ingedeeld naar categoriale kostensoort.",
+              "schema": "resultatenrekening afdeling gezelschapsdieren over 2027",
+              "builds_on": "Stel de resultatenrekening over 2027 van de afdeling gezelschapsdieren op (zie informatiebron 1)."
+            },
+            "repaired_fields": [],
+            "disagreements": {}
+          },
+          "scorepunten": [
+            {
+              "seq": 1,
+              "points": 1,
+              "criterion_id": "F2.30.2-02-a",
+              "group_id": "F2.30.2-02",
+              "bloom": "toepassen"
+            },
+            {
+              "seq": 2,
+              "points": 1,
+              "criterion_id": "F2.30.2-02-b",
+              "group_id": "F2.30.2-02",
+              "bloom": "toepassen"
+            },
+            {
+              "seq": 3,
+              "points": 1,
+              "criterion_id": "F2.30.1-01-c",
+              "group_id": "F2.30.1-01",
+              "bloom": "toepassen"
+            },
+            {
+              "seq": 4,
+              "points": 1,
+              "criterion_id": "F2.30.2-02-b",
+              "group_id": "F2.30.2-02",
+              "bloom": "toepassen"
+            }
+          ],
+          "open_findings": []
+        }
+      ]
+    },
+    {
+      "opgave_id": "O2",
+      "title": "Webwinkel Loopwerk",
+      "context": "Een kleine webwinkel verkoopt hardloopschoenen aan consumenten. De eigenaar berekent zijn verkoopprijzen met een winstopslag op de inkoopprijs en wil weten hoeveel paren hij per jaar moet verkopen om quitte te spelen; informatiebron 1 geeft prijzen en inkoop, informatiebron 2 de jaarkosten, en een figuur toont de break-evengrafiek.",
+      "context_tags": [
+        "detailhandel",
+        "webwinkel",
+        "hardloopschoenen"
+      ],
+      "reused_from": null,
+      "intro": "Daan Verbeek heeft sinds 2021 de webwinkel Loopwerk. Hij verkoopt hardloopschoenen aan consumenten in heel Nederland en bewaart zijn voorraad in een gehuurde opslagruimte. De prijzen op de website zijn consumentenprijzen inclusief 21% btw. Daan berekent zijn verkoopprijzen met een winstopslag op de inkoopprijs en wil weten hoeveel paren hij per jaar moet verkopen om quitte te spelen.",
+      "data": {
+        "btw": 0.21,
+        "inkoop_trail": 64.0,
+        "opslag": 0.45,
+        "prijs_incl_gem": 133.1,
+        "inkoop_gem": 60.5,
+        "verzend_paar": 5.5,
+        "afzet_2026": 2150,
+        "aantal_modellen": 38,
+        "huur_opslag": 18000,
+        "website": 7200,
+        "marketing": 22400,
+        "afschrijving": 3000,
+        "loon_medewerker": 37400,
+        "fig_afzet_max": 4000,
+        "fig_to_max": 440,
+        "fig_ck": 132,
+        "fig_tk_max": 396
+      },
+      "sources": [
+        {
+          "n": 1,
+          "title": "Verkoopgegevens van Loopwerk",
+          "kind": "table",
+          "text": "Daan verwacht voor 2027 de volgende gemiddelde bedragen per paar. Ter vergelijking staan ook enkele cijfers over 2026 in de tabel.",
+          "table": [
+            [
+              "gegeven",
+              "bedrag of aantal"
+            ],
+            [
+              "gemiddelde consumentenprijs per paar in 2027 (inclusief 21% btw)",
+              "€ 133,10"
+            ],
+            [
+              "gemiddelde inkoopprijs per paar in 2027",
+              "€ 60,50"
+            ],
+            [
+              "verpakkings- en verzendkosten per verkocht paar in 2027",
+              "€ 5,50"
+            ],
+            [
+              "aantal verkochte paren in 2026",
+              "2.150"
+            ],
+            [
+              "aantal schoenmodellen in het assortiment eind 2026",
+              "38"
+            ]
+          ],
+          "figure_id": null,
+          "uses_data": [
+            "prijs_incl_gem",
+            "inkoop_gem",
+            "verzend_paar"
+          ],
+          "noise_data": [
+            "afzet_2026",
+            "aantal_modellen"
+          ]
+        },
+        {
+          "n": 2,
+          "title": "Verwachte constante kosten van Loopwerk in 2027",
+          "kind": "table",
+          "text": "De constante kosten zijn onafhankelijk van het aantal verkochte paren.",
+          "table": [
+            [
+              "kostenpost",
+              "bedrag per jaar"
+            ],
+            [
+              "huur opslagruimte",
+              "€ 18.000"
+            ],
+            [
+              "website en betaalsysteem",
+              "€ 7.200"
+            ],
+            [
+              "online marketing",
+              "€ 22.400"
+            ],
+            [
+              "afschrijving inventaris",
+              "€ 3.000"
+            ],
+            [
+              "loonkosten parttime medewerker",
+              "€ 37.400"
+            ]
+          ],
+          "figure_id": null,
+          "uses_data": [
+            "huur_opslag",
+            "website",
+            "marketing",
+            "afschrijving",
+            "loon_medewerker"
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "figure_id": "f1",
+          "spec": {
+            "type": "line_chart",
+            "title": "Break-evengrafiek Loopwerk 2028",
+            "x": {
+              "label": "afzet (aantal paren)",
+              "min": 0,
+              "max": 4000
+            },
+            "y": {
+              "label": "bedrag (× € 1.000)",
+              "min": 0,
+              "max": 450
+            },
+            "lines": [
+              {
+                "label": "TO",
+                "points": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    4000,
+                    440
+                  ]
+                ]
+              },
+              {
+                "label": "TK",
+                "points": [
+                  [
+                    0,
+                    132
+                  ],
+                  [
+                    4000,
+                    396
+                  ]
+                ]
+              }
+            ],
+            "points": [],
+            "areas": [],
+            "grid": true
+          },
+          "answer_spec": {
+            "points": [
+              {
+                "label": "break-evenpunt",
+                "xy": [
+                  3000,
+                  330
+                ],
+                "calc_x": "bea_fig",
+                "calc_y": "beo_fig"
+              }
+            ]
+          }
+        }
+      ],
+      "vragen": [
+        {
+          "vraag_id": "O2-V5",
+          "number": 5,
+          "points": 3,
+          "stem": "In 2027 neemt Daan het model Trail X op in zijn assortiment. Hij koopt een paar Trail X in voor € 64,00 exclusief btw. Deze inkoopprijs is de kostprijs van een paar. Daan rekent een winstopslag van 45% op de kostprijs. Bereken van een paar Trail X de verkoopprijs exclusief btw, de winstmarge in procenten van deze verkoopprijs (rond af op één decimaal) en de consumentenprijs inclusief btw.",
+          "uitwerkbijlage": null,
+          "cv": {
+            "maximumscore": 3,
+            "model_answer": "De verkoopprijs exclusief btw is de kostprijs van € 64,00 plus een opslag van 45% daarover, dat is € 92,80 per paar.\nDe winst per paar is € 92,80 min € 64,00, dat is € 28,80; als percentage van de verkoopprijs exclusief btw is de winstmarge € 28,80 gedeeld door € 92,80 keer 100%, dat is 31,0%.\nDe consumentenprijs is de verkoopprijs exclusief btw plus 21% btw daarover, dat is € 112,29.",
+            "calc": [
+              {
+                "name": "vp_excl_trail",
+                "expr": "inkoop_trail * (1 + opslag)",
+                "round": 2,
+                "rounding": "half_up",
+                "shown": "€ 92,80"
+              },
+              {
+                "name": "winst_trail",
+                "expr": "vp_excl_trail - inkoop_trail",
+                "round": 2,
+                "rounding": "half_up",
+                "shown": "€ 28,80"
+              },
+              {
+                "name": "marge_pct",
+                "expr": "winst_trail / vp_excl_trail * 100",
+                "round": 1,
+                "rounding": "half_up",
+                "shown": "31,0%"
+              },
+              {
+                "name": "consumentenprijs_trail",
+                "expr": "vp_excl_trail * (1 + btw)",
+                "round": 2,
+                "rounding": "half_up",
+                "shown": "€ 112,29"
+              }
+            ],
+            "scorepunten": [
+              {
+                "seq": 1,
+                "points": 1,
+                "text": "berekening verkoopprijs exclusief btw (kostprijs plus winstopslag)",
+                "criterion_id": "F2.30.3-02-a",
+                "calc_ref": "vp_excl_trail"
+              },
+              {
+                "seq": 2,
+                "points": 1,
+                "text": "berekening winstmarge in procenten van de verkoopprijs exclusief btw",
+                "criterion_id": "F2.30.3-02-b",
+                "calc_ref": "marge_pct"
+              },
+              {
+                "seq": 3,
+                "points": 1,
+                "text": "berekening consumentenprijs inclusief btw",
+                "criterion_id": "F2.30.3-01-a",
+                "calc_ref": "consumentenprijs_trail"
+              }
+            ],
+            "rules": [
+              "Voor elke fout 1 scorepunt in mindering brengen.",
+              "Een doorrekenfout in de verkoopprijs exclusief btw bij de winstmarge en de consumentenprijs niet opnieuw aanrekenen."
+            ],
+            "alternatives": [
+              "Als de winstmarge is berekend als 45 / 145 × 100% = 31,0%, dit goed rekenen."
+            ],
+            "follow_through": null
+          },
+          "new_concepts": [],
+          "builds_on_vragen": [],
+          "pattern": "P07",
+          "knobs": {
+            "solo": "multistructureel",
+            "route": "gegeven",
+            "steps": "3",
+            "sources": "in vraagtekst",
+            "noise": "nee",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": null
+          },
+          "label": {
+            "exam_id": null,
+            "question_id": "O2-V5",
+            "question_number": 5,
+            "opgave_id": "O2",
+            "first_of_opgave": true,
+            "points": 3,
+            "pattern": "P07",
+            "solo": "multistructureel",
+            "route": "gegeven",
+            "steps": "3",
+            "sources": "in vraagtekst",
+            "noise": "nee",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": null,
+            "example_quality": null,
+            "builds_on_questions": [],
+            "proposed_pattern": null,
+            "example_quality_reason": null,
+            "combination": 2,
+            "bloom": "toepassen",
+            "scorepunt_bloom": [
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "F2.30.3-02"
+              },
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "F2.30.3-02"
+              },
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "F2.30.3-01"
+              }
+            ],
+            "confidence": {
+              "pattern": "high",
+              "solo": "high",
+              "route": "high",
+              "steps": "high",
+              "sources": "high",
+              "noise": "high",
+              "claim": "high",
+              "new_concept": "high",
+              "schema": "high",
+              "builds_on": "high"
+            },
+            "evidence": {
+              "pattern": "Bereken van een paar Trail X de verkoopprijs exclusief btw, de winstmarge in procenten van deze verkoopprijs",
+              "solo": "De winst per paar is € 92,80 min € 64,00, dat is € 28,80",
+              "route": "de winstmarge in procenten van deze verkoopprijs (rond af op één decimaal) en de consumentenprijs inclusief btw.",
+              "steps": "als percentage van de verkoopprijs exclusief btw is de winstmarge € 28,80 gedeeld door € 92,80 keer 100%, dat is 31,0%.",
+              "sources": "Hij koopt een paar Trail X in voor € 64,00 exclusief btw.",
+              "noise": "Daan rekent een winstopslag van 45% op de kostprijs.",
+              "claim": "In 2027 neemt Daan het model Trail X op in zijn assortiment.",
+              "new_concept": "Deze inkoopprijs is de kostprijs van een paar."
+            },
+            "repaired_fields": [],
+            "disagreements": {}
+          },
+          "scorepunten": [
+            {
+              "seq": 1,
+              "points": 1,
+              "criterion_id": "F2.30.3-02-a",
+              "group_id": "F2.30.3-02",
+              "bloom": "toepassen"
+            },
+            {
+              "seq": 2,
+              "points": 1,
+              "criterion_id": "F2.30.3-02-b",
+              "group_id": "F2.30.3-02",
+              "bloom": "toepassen"
+            },
+            {
+              "seq": 3,
+              "points": 1,
+              "criterion_id": "F2.30.3-01-a",
+              "group_id": "F2.30.3-01",
+              "bloom": "toepassen"
+            }
+          ],
+          "open_findings": []
+        },
+        {
+          "vraag_id": "O2-V6",
+          "number": 6,
+          "points": 2,
+          "stem": "Daan stelt: 'Door mijn winstopslag van 45% is van elke euro die een klant voor een paar Trail X betaalt € 0,45 winst voor Loopwerk.' Leg uit dat deze bewering om twee redenen niet klopt.",
+          "uitwerkbijlage": null,
+          "cv": {
+            "maximumscore": 2,
+            "model_answer": "De winstopslag van 45% is berekend over de kostprijs (de inkoopprijs). De verkoopprijs exclusief btw is hoger dan de kostprijs, dus de winst is als percentage van de verkoopprijs exclusief btw (de winstmarge) lager dan 45%.\nDe klant betaalt een consumentenprijs inclusief btw. Het btw-deel draagt Loopwerk af aan de Belastingdienst; het is voor Loopwerk geen opbrengst. Van elke euro die de klant betaalt, is daardoor nog minder winst.",
+            "calc": [],
+            "scorepunten": [
+              {
+                "seq": 1,
+                "points": 1,
+                "text": "uitleg dat de winstopslag over de kostprijs gaat en de winstmarge over de hogere verkoopprijs, zodat het margepercentage lager is",
+                "criterion_id": "F2.30.3-02-c",
+                "calc_ref": null
+              },
+              {
+                "seq": 2,
+                "points": 1,
+                "text": "uitleg dat de btw in de consumentenprijs wordt afgedragen en voor Loopwerk geen opbrengst is",
+                "criterion_id": "F2.30.3-01-d",
+                "calc_ref": null
+              }
+            ],
+            "rules": [],
+            "alternatives": [
+              "Een uitleg met een rekenvoorbeeld (bijvoorbeeld de winst als deel van de consumentenprijs) goed rekenen als beide redenen erin zitten."
+            ],
+            "follow_through": null
+          },
+          "new_concepts": [],
+          "builds_on_vragen": [],
+          "pattern": "P03",
+          "knobs": {
+            "solo": "multistructureel",
+            "route": null,
+            "steps": "2",
+            "sources": "in vraagtekst",
+            "noise": "nee",
+            "claim": "ja",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": "nee"
+          },
+          "label": {
+            "exam_id": null,
+            "question_id": "O2-V6",
+            "question_number": 6,
+            "opgave_id": "O2",
+            "first_of_opgave": false,
+            "points": 2,
+            "pattern": "P03",
+            "solo": "multistructureel",
+            "route": null,
+            "steps": "2",
+            "sources": "in vraagtekst",
+            "noise": "nee",
+            "claim": "ja",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": "nee",
+            "example_quality": null,
+            "builds_on_questions": [],
+            "proposed_pattern": null,
+            "example_quality_reason": null,
+            "combination": 2,
+            "bloom": "begrijpen",
+            "scorepunt_bloom": [
+              {
+                "points": 1,
+                "bloom": "begrijpen",
+                "group_id": "F2.30.3-02"
+              },
+              {
+                "points": 1,
+                "bloom": "begrijpen",
+                "group_id": "F2.30.3-01"
+              }
+            ],
+            "confidence": {
+              "pattern": "high",
+              "solo": "medium",
+              "route": "high",
+              "steps": "high",
+              "sources": "high",
+              "noise": "high",
+              "claim": "high",
+              "new_concept": "high",
+              "schema": "high",
+              "builds_on": "high"
+            },
+            "evidence": {
+              "pattern": "Leg uit dat deze bewering om twee redenen niet klopt.",
+              "solo": "uitleg dat de btw in de consumentenprijs wordt afgedragen en voor Loopwerk geen opbrengst is",
+              "steps": "uitleg dat de winstopslag over de kostprijs gaat en de winstmarge over de hogere verkoopprijs, zodat het margepercentage lager is",
+              "sources": "Door mijn winstopslag van 45% is van elke euro die een klant voor een paar Trail X betaalt € 0,45 winst voor Loopwerk.",
+              "noise": "Door mijn winstopslag van 45% is van elke euro die een klant voor een paar Trail X betaalt € 0,45 winst voor Loopwerk.",
+              "claim": "Daan stelt: 'Door mijn winstopslag van 45% is van elke euro die een klant voor een paar Trail X betaalt € 0,45 winst",
+              "new_concept": "De prijzen op de website zijn consumentenprijzen inclusief 21% btw.",
+              "builds_on": "Leg uit dat deze bewering om twee redenen niet klopt."
+            },
+            "repaired_fields": [],
+            "disagreements": {
+              "solo": {
+                "A": "multistructureel",
+                "B": "relationeel"
+              }
+            }
+          },
+          "scorepunten": [
+            {
+              "seq": 1,
+              "points": 1,
+              "criterion_id": "F2.30.3-02-c",
+              "group_id": "F2.30.3-02",
+              "bloom": "begrijpen"
+            },
+            {
+              "seq": 2,
+              "points": 1,
+              "criterion_id": "F2.30.3-01-d",
+              "group_id": "F2.30.3-01",
+              "bloom": "begrijpen"
+            }
+          ],
+          "open_findings": []
+        },
+        {
+          "vraag_id": "O2-V7",
+          "number": 7,
+          "points": 4,
+          "stem": "Daan wil weten hoeveel paren hij in 2027 moet verkopen om quitte te spelen en welke omzet daarbij hoort. Bereken de break-evenafzet en de break-evenomzet van Loopwerk in 2027 (zie informatiebron 1 en 2).",
+          "uitwerkbijlage": null,
+          "cv": {
+            "maximumscore": 4,
+            "model_answer": "De verkoopprijs exclusief btw is € 133,10 gedeeld door (100% + 21%), dat is € 110,00 per paar.\nDe variabele kosten per paar zijn de inkoopprijs plus de verpakkings- en verzendkosten, samen € 66,00. De dekkingsbijdrage per paar is dan € 110,00 min € 66,00, dat is € 44,00.\nDe constante kosten zijn opgeteld uit informatiebron 2 in totaal € 88.000.\nDe break-evenafzet is € 88.000 gedeeld door € 44,00, dat zijn 2.000 paren.\nDe dekkingsbijdrage in perunage van de omzet is € 44,00 gedeeld door € 110,00, dat is 0,40. De break-evenomzet is € 88.000 gedeeld door 0,40, dat is € 220.000.",
+            "calc": [
+              {
+                "name": "vp_excl_gem",
+                "expr": "prijs_incl_gem / (1 + btw)",
+                "round": 2,
+                "rounding": "half_up",
+                "shown": "€ 110,00"
+              },
+              {
+                "name": "vk_paar",
+                "expr": "inkoop_gem + verzend_paar",
+                "round": 2,
+                "rounding": "half_up",
+                "shown": "€ 66,00"
+              },
+              {
+                "name": "db_paar",
+                "expr": "vp_excl_gem - vk_paar",
+                "round": 2,
+                "rounding": "half_up",
+                "shown": "€ 44,00"
+              },
+              {
+                "name": "ck_2027",
+                "expr": "huur_opslag + website + marketing + afschrijving + loon_medewerker",
+                "round": 0,
+                "rounding": "half_up",
+                "shown": "€ 88.000"
+              },
+              {
+                "name": "bea_2027",
+                "expr": "ck_2027 / db_paar",
+                "round": 0,
+                "rounding": "up",
+                "shown": "2.000"
+              },
+              {
+                "name": "db_perunage",
+                "expr": "db_paar / vp_excl_gem",
+                "round": 2,
+                "rounding": "half_up",
+                "shown": "0,40"
+              },
+              {
+                "name": "beo_2027",
+                "expr": "ck_2027 / db_perunage",
+                "round": 0,
+                "rounding": "half_up",
+                "shown": "€ 220.000"
+              }
+            ],
+            "scorepunten": [
+              {
+                "seq": 1,
+                "points": 1,
+                "text": "berekening verkoopprijs exclusief btw",
+                "criterion_id": "F2.30.3-01-b",
+                "calc_ref": "vp_excl_gem"
+              },
+              {
+                "seq": 2,
+                "points": 1,
+                "text": "berekening dekkingsbijdrage per paar",
+                "criterion_id": "F2.30.4-01-a",
+                "calc_ref": "db_paar"
+              },
+              {
+                "seq": 3,
+                "points": 1,
+                "text": "berekening break-evenafzet",
+                "criterion_id": "F2.30.4-01-b",
+                "calc_ref": "bea_2027"
+              },
+              {
+                "seq": 4,
+                "points": 1,
+                "text": "berekening break-evenomzet met de dekkingsbijdrage in perunage van de omzet",
+                "criterion_id": "F2.30.4-01-c",
+                "calc_ref": "beo_2027"
+              }
+            ],
+            "rules": [
+              "Voor elke fout 1 scorepunt in mindering brengen.",
+              "Als met de consumentenprijs inclusief btw is gerekend, het eerste scorepunt niet toekennen."
+            ],
+            "alternatives": [
+              "break-evenomzet: 2.000 × € 110,00 = € 220.000 (ook goed rekenen)."
+            ],
+            "follow_through": null
+          },
+          "new_concepts": [],
+          "builds_on_vragen": [],
+          "pattern": "P08",
+          "knobs": {
+            "solo": "relationeel",
+            "route": "zelf vinden",
+            "steps": "4+",
+            "sources": "meerdere bronnen",
+            "noise": "ja",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": "nee"
+          },
+          "label": {
+            "exam_id": null,
+            "question_id": "O2-V7",
+            "question_number": 7,
+            "opgave_id": "O2",
+            "first_of_opgave": false,
+            "points": 4,
+            "pattern": "P08",
+            "solo": "relationeel",
+            "route": "zelf vinden",
+            "steps": "4+",
+            "sources": "meerdere bronnen",
+            "noise": "ja",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": "nee",
+            "example_quality": null,
+            "builds_on_questions": [],
+            "proposed_pattern": null,
+            "example_quality_reason": null,
+            "combination": 2,
+            "bloom": "analyseren",
+            "scorepunt_bloom": [
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "F2.30.3-01"
+              },
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "F2.30.4-01"
+              },
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "F2.30.4-01"
+              },
+              {
+                "points": 1,
+                "bloom": "analyseren",
+                "group_id": "F2.30.4-01"
+              }
+            ],
+            "confidence": {
+              "pattern": "high",
+              "solo": "high",
+              "route": "high",
+              "steps": "high",
+              "sources": "high",
+              "noise": "high",
+              "claim": "high",
+              "new_concept": "high",
+              "schema": "high",
+              "builds_on": "high"
+            },
+            "evidence": {
+              "pattern": "Bereken de break-evenafzet en de break-evenomzet van Loopwerk in 2027 (zie informatiebron 1 en 2).",
+              "solo": "De constante kosten zijn opgeteld uit informatiebron 2 in totaal € 88.000.",
+              "route": "Bereken de break-evenafzet en de break-evenomzet van Loopwerk in 2027 (zie informatiebron 1 en 2).",
+              "steps": "De dekkingsbijdrage in perunage van de omzet is € 44,00 gedeeld door € 110,00, dat is 0,40.",
+              "sources": "Bereken de break-evenafzet en de break-evenomzet van Loopwerk in 2027 (zie informatiebron 1 en 2).",
+              "noise": "| aantal schoenmodellen in het assortiment eind 2026 | 38 |",
+              "claim": "Daan wil weten hoeveel paren hij in 2027 moet verkopen om quitte te spelen en welke omzet daarbij hoort.",
+              "new_concept": "De constante kosten zijn onafhankelijk van het aantal verkochte paren.",
+              "builds_on": "De verkoopprijs exclusief btw is € 133,10 gedeeld door (100% + 21%), dat is € 110,00 per paar."
+            },
+            "repaired_fields": [],
+            "disagreements": {}
+          },
+          "scorepunten": [
+            {
+              "seq": 1,
+              "points": 1,
+              "criterion_id": "F2.30.3-01-b",
+              "group_id": "F2.30.3-01",
+              "bloom": "toepassen"
+            },
+            {
+              "seq": 2,
+              "points": 1,
+              "criterion_id": "F2.30.4-01-a",
+              "group_id": "F2.30.4-01",
+              "bloom": "toepassen"
+            },
+            {
+              "seq": 3,
+              "points": 1,
+              "criterion_id": "F2.30.4-01-b",
+              "group_id": "F2.30.4-01",
+              "bloom": "toepassen"
+            },
+            {
+              "seq": 4,
+              "points": 1,
+              "criterion_id": "F2.30.4-01-c",
+              "group_id": "F2.30.4-01",
+              "bloom": "analyseren"
+            }
+          ],
+          "open_findings": []
+        },
+        {
+          "vraag_id": "O2-V8",
+          "number": 8,
+          "points": 3,
+          "stem": "In 2028 wil Daan naast de webwinkel een kleine showroom openen. Daardoor stijgen de constante kosten. De figuur bij deze vraag op de uitwerkbijlage toont de break-evengrafiek die Daan voor 2028 heeft gemaakt. Noem de break-evenafzet die je in de figuur kunt aflezen. Licht je antwoord toe. Leg daarna uit hoe de break-evenafzet in de grafiek verschuift als de inkoopprijs per paar stijgt, terwijl de verkoopprijs en de constante kosten gelijk blijven.",
+          "uitwerkbijlage": {
+            "kind": "figure",
+            "figure_id": "f1",
+            "text": "Figuur bij vraag 8: break-evengrafiek Loopwerk 2028"
+          },
+          "cv": {
+            "maximumscore": 3,
+            "model_answer": "De break-evenafzet is 3.000 paren: bij die afzet snijden de lijn van de totale opbrengsten (TO) en de lijn van de totale kosten (TK) elkaar (beide 330 duizend euro), zodat het resultaat nul is.\nAls de inkoopprijs per paar stijgt, stijgen de variabele kosten per paar. De TK-lijn begint nog steeds bij de constante kosten, maar loopt steiler.\nHet snijpunt van de TK-lijn met de TO-lijn komt daardoor verder naar rechts te liggen: de break-evenafzet wordt hoger.",
+            "calc": [
+              {
+                "name": "bea_fig",
+                "expr": "fig_ck / ((fig_to_max - fig_tk_max + fig_ck) / fig_afzet_max)",
+                "round": 0,
+                "rounding": "half_up",
+                "shown": "3.000"
+              },
+              {
+                "name": "beo_fig",
+                "expr": "bea_fig * fig_to_max / fig_afzet_max",
+                "round": 0,
+                "rounding": "half_up",
+                "shown": "330"
+              }
+            ],
+            "scorepunten": [
+              {
+                "seq": 1,
+                "points": 1,
+                "text": "break-evenafzet 3.000 paren afgelezen, toegelicht met het snijpunt van TO en TK (resultaat nul)",
+                "criterion_id": "F2.30.4-02-b",
+                "calc_ref": "bea_fig"
+              },
+              {
+                "seq": 2,
+                "points": 1,
+                "text": "inzicht dat de TK-lijn steiler gaat lopen (hogere variabele kosten per paar) vanuit hetzelfde beginpunt",
+                "criterion_id": "F2.30.4-02-d",
+                "calc_ref": null
+              },
+              {
+                "seq": 3,
+                "points": 1,
+                "text": "conclusie dat het snijpunt met de TO-lijn naar rechts schuift en de break-evenafzet stijgt",
+                "criterion_id": "F2.30.4-02-d",
+                "calc_ref": null
+              }
+            ],
+            "rules": [
+              "Per juist toegelicht antwoord 1 scorepunt toekennen voor de afgelezen break-evenafzet; zonder toelichting geen scorepunt."
+            ],
+            "alternatives": [
+              "Een afgelezen waarde tussen 2.950 en 3.050 paren met juiste toelichting goed rekenen.",
+              "Uitleg met de dekkingsbijdrage per paar die daalt, zodat er meer paren nodig zijn om de constante kosten te dekken, voor het derde scorepunt goed rekenen als de verschuiving in de grafiek wordt genoemd."
+            ],
+            "follow_through": null
+          },
+          "new_concepts": [],
+          "builds_on_vragen": [],
+          "pattern": "P14+P01",
+          "knobs": {
+            "solo": "multistructureel",
+            "route": null,
+            "steps": "2",
+            "sources": "in vraagtekst",
+            "noise": "nee",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": "nee"
+          },
+          "label": {
+            "exam_id": null,
+            "question_id": "O2-V8",
+            "question_number": 8,
+            "opgave_id": "O2",
+            "first_of_opgave": false,
+            "points": 3,
+            "pattern": "P01+P14",
+            "solo": "multistructureel",
+            "route": null,
+            "steps": "3",
+            "sources": "in vraagtekst",
+            "noise": "nee",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": "nee",
+            "example_quality": null,
+            "builds_on_questions": [],
+            "proposed_pattern": null,
+            "example_quality_reason": null,
+            "combination": 1,
+            "bloom": "begrijpen",
+            "scorepunt_bloom": [
+              {
+                "points": 1,
+                "bloom": "begrijpen",
+                "group_id": "F2.30.4-02"
+              },
+              {
+                "points": 1,
+                "bloom": "begrijpen",
+                "group_id": "F2.30.4-02"
+              },
+              {
+                "points": 1,
+                "bloom": "begrijpen",
+                "group_id": "F2.30.4-02"
+              }
+            ],
+            "confidence": {
+              "pattern": "high",
+              "solo": "medium",
+              "route": "high",
+              "steps": "high",
+              "sources": "high",
+              "noise": "high",
+              "claim": "high",
+              "new_concept": "high",
+              "schema": "high",
+              "builds_on": "high"
+            },
+            "evidence": {
+              "pattern": "Leg daarna uit hoe de break-evenafzet in de grafiek verschuift als de inkoopprijs per paar stijgt",
+              "solo": "Noem de break-evenafzet die je in de figuur kunt aflezen. Licht je antwoord toe.",
+              "steps": "conclusie dat het snijpunt met de TO-lijn naar rechts schuift en de break-evenafzet stijgt",
+              "sources": "De figuur bij deze vraag op de uitwerkbijlage toont de break-evengrafiek die Daan voor 2028 heeft gemaakt.",
+              "noise": "bij die afzet snijden de lijn van de totale opbrengsten (TO) en de lijn van de totale kosten (TK) elkaar",
+              "claim": "Noem de break-evenafzet die je in de figuur kunt aflezen. Licht je antwoord toe.",
+              "new_concept": "inzicht dat de TK-lijn steiler gaat lopen (hogere variabele kosten per paar) vanuit hetzelfde beginpunt",
+              "builds_on": "In 2028 wil Daan naast de webwinkel een kleine showroom openen. Daardoor stijgen de constante kosten."
+            },
+            "repaired_fields": [],
+            "disagreements": {
+              "solo": {
+                "A": "relationeel",
+                "B": "multistructureel"
+              }
+            }
+          },
+          "scorepunten": [
+            {
+              "seq": 1,
+              "points": 1,
+              "criterion_id": "F2.30.4-02-b",
+              "group_id": "F2.30.4-02",
+              "bloom": "begrijpen"
+            },
+            {
+              "seq": 2,
+              "points": 1,
+              "criterion_id": "F2.30.4-02-d",
+              "group_id": "F2.30.4-02",
+              "bloom": "begrijpen"
+            },
+            {
+              "seq": 3,
+              "points": 1,
+              "criterion_id": "F2.30.4-02-d",
+              "group_id": "F2.30.4-02",
+              "bloom": "begrijpen"
+            }
+          ],
+          "open_findings": []
+        }
+      ]
+    },
+    {
+      "opgave_id": "O3",
+      "title": "Koffiebranderij Donker bv",
+      "context": "Een koffiebranderij is een bv met gewone en preferente aandelen. De opgavetekst geeft een vereenvoudigde resultatenrekening; informatiebron 1 geeft het aandelenvermogen en het dividendbeleid. De bv herwaardeert dit jaar haar bedrijfspand naar de actuele waarde.",
+      "context_tags": [
+        "voedingsmiddelenindustrie",
+        "koffiebranderij",
+        "bv"
+      ],
+      "reused_from": null,
+      "intro": "Bij deze opgave hoort informatiebron 1.\n\nIlse en Ruben Donker leiden samen Koffiebranderij Donker bv in Deventer. De bv koopt ruwe koffiebonen in, brandt ze in de eigen branderij en levert de koffie aan restaurants, hotels en speciaalzaken. Het aandelenvermogen van de bv bestaat uit gewone en preferente aandelen.\n\nBegin 2027 maakt de controller de jaarrekening over 2026 op. Hieronder staan enkele gegevens over 2026.\n\n| gegevens Koffiebranderij Donker bv over 2026 | |\n|---|---|\n| omzet | € 6.150.000 |\n| verkochte koffie | 410.000 kg |\n| aantal medewerkers aan het einde van 2026 | 38 |\n| resultaat uit de bedrijfsuitoefening | € 812.000 |\n| interestkosten van de banklening | € 58.000 |\n| schade door een brand in het magazijn, niet verzekerd | € 42.000 |\n\nDe vennootschapsbelasting bedraagt 19% over de eerste € 200.000 van het resultaat voor belasting en 25,8% over het deel daarboven.",
+      "data": {
+        "omzet": 6150000,
+        "kg_verkocht": 410000,
+        "medewerkers": 38,
+        "res_bedrijf": 812000,
+        "interestkosten": 58000,
+        "brandschade": 42000,
+        "vpb_laag": 0.19,
+        "vpb_grens": 200000,
+        "vpb_hoog": 0.258,
+        "maatsch_av": 3000000,
+        "gewoon_geplaatst": 1200000,
+        "pref_geplaatst": 500000,
+        "agio": 350000,
+        "pref_pct": 0.06,
+        "uitkering_pct": 0.5,
+        "divbel": 0.15
+      },
+      "sources": [
+        {
+          "n": 1,
+          "title": "Aandelenvermogen en dividendbeleid van Koffiebranderij Donker bv",
+          "kind": "table",
+          "text": "Dividendbeleid\n- De houders van preferente aandelen ontvangen elk jaar als eersten een dividend van 6% van het nominale bedrag van hun aandelen.\n- Van wat daarna overblijft van het resultaat na belasting keert de bv 50% uit als dividend aan de houders van gewone aandelen. De rest wordt toegevoegd aan de overige reserves.\n- Over het uitgekeerde dividend houdt de bv 15% dividendbelasting in en draagt die af aan de Belastingdienst.",
+          "table": [
+            [
+              "eigen vermogen aan het einde van 2026",
+              "bedrag"
+            ],
+            [
+              "maatschappelijk aandelenvermogen",
+              "€ 3.000.000"
+            ],
+            [
+              "geplaatst aandelenvermogen, gewone aandelen",
+              "€ 1.200.000"
+            ],
+            [
+              "geplaatst aandelenvermogen, preferente aandelen",
+              "€ 500.000"
+            ],
+            [
+              "agioreserve",
+              "€ 350.000"
+            ]
+          ],
+          "figure_id": null,
+          "uses_data": [
+            "pref_geplaatst",
+            "pref_pct",
+            "uitkering_pct",
+            "divbel"
+          ],
+          "noise_data": [
+            "maatsch_av",
+            "gewoon_geplaatst",
+            "agio"
+          ]
+        }
+      ],
+      "figures": [],
+      "vragen": [
+        {
+          "vraag_id": "O3-V9",
+          "number": 9,
+          "points": 3,
+          "stem": "Bereken het resultaat na belasting van Koffiebranderij Donker bv over 2026. Bereken hiervoor eerst het resultaat voor belasting en daarna de vennootschapsbelasting.",
+          "uitwerkbijlage": null,
+          "cv": {
+            "maximumscore": 3,
+            "model_answer": "resultaat voor belasting: € 812.000 (resultaat uit de bedrijfsuitoefening) − € 58.000 (financieringsresultaat) − € 42.000 (incidenteel resultaat) = € 712.000\nvennootschapsbelasting: over de eerste schijf 0,19 × € 200.000 geeft € 38.000, over het deel daarboven 0,258 × (€ 712.000 min € 200.000) geeft € 132.096, samen € 170.096\nresultaat na belasting: € 712.000 min € 170.096 vennootschapsbelasting geeft € 541.904",
+            "calc": [
+              {
+                "name": "rvb",
+                "expr": "res_bedrijf - interestkosten - brandschade",
+                "round": 0,
+                "rounding": null,
+                "shown": "€ 712.000"
+              },
+              {
+                "name": "vpb_schijf1",
+                "expr": "vpb_laag * vpb_grens",
+                "round": 0,
+                "rounding": null,
+                "shown": "€ 38.000"
+              },
+              {
+                "name": "vpb_schijf2",
+                "expr": "vpb_hoog * (rvb - vpb_grens)",
+                "round": 0,
+                "rounding": null,
+                "shown": "€ 132.096"
+              },
+              {
+                "name": "vpb",
+                "expr": "vpb_schijf1 + vpb_schijf2",
+                "round": 0,
+                "rounding": null,
+                "shown": "€ 170.096"
+              },
+              {
+                "name": "rnb",
+                "expr": "rvb - vpb",
+                "round": 0,
+                "rounding": null,
+                "shown": "€ 541.904"
+              }
+            ],
+            "scorepunten": [
+              {
+                "seq": 1,
+                "points": 1,
+                "text": "berekening resultaat voor belasting (financieringsresultaat en incidenteel resultaat van het resultaat uit de bedrijfsuitoefening afgetrokken)",
+                "criterion_id": "F2.30.5-01-a",
+                "calc_ref": "rvb"
+              },
+              {
+                "seq": 2,
+                "points": 1,
+                "text": "berekening vennootschapsbelasting met beide tarieven",
+                "criterion_id": "F2.30.5-01-b",
+                "calc_ref": "vpb"
+              },
+              {
+                "seq": 3,
+                "points": 1,
+                "text": "berekening resultaat na belasting",
+                "criterion_id": "F2.30.5-01-b",
+                "calc_ref": "rnb"
+              }
+            ],
+            "rules": [
+              "Voor elke fout 1 scorepunt in mindering brengen."
+            ],
+            "alternatives": [
+              "Als de omzet, de verkochte hoeveelheid of het aantal medewerkers in de berekening is gebruikt, het betreffende scorepunt niet toekennen."
+            ],
+            "follow_through": null
+          },
+          "new_concepts": [],
+          "builds_on_vragen": [],
+          "pattern": "P07",
+          "knobs": {
+            "solo": "multistructureel",
+            "route": "gegeven",
+            "steps": "3",
+            "sources": "in vraagtekst",
+            "noise": "ja",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": null
+          },
+          "label": {
+            "exam_id": null,
+            "question_id": "O3-V9",
+            "question_number": 9,
+            "opgave_id": "O3",
+            "first_of_opgave": true,
+            "points": 3,
+            "pattern": "P07",
+            "solo": "multistructureel",
+            "route": "gegeven",
+            "steps": "3",
+            "sources": "in vraagtekst",
+            "noise": "ja",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": null,
+            "example_quality": null,
+            "builds_on_questions": [],
+            "proposed_pattern": null,
+            "example_quality_reason": null,
+            "combination": 1,
+            "bloom": "toepassen",
+            "scorepunt_bloom": [
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "F2.30.5-01"
+              },
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "F2.30.5-01"
+              },
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "F2.30.5-01"
+              }
+            ],
+            "confidence": {
+              "pattern": "high",
+              "solo": "high",
+              "route": "high",
+              "steps": "high",
+              "sources": "high",
+              "noise": "high",
+              "claim": "high",
+              "new_concept": "high",
+              "schema": "high",
+              "builds_on": "high"
+            },
+            "evidence": {
+              "pattern": "Bereken hiervoor eerst het resultaat voor belasting en daarna de vennootschapsbelasting.",
+              "solo": "Bereken het resultaat na belasting van Koffiebranderij Donker bv over 2026.",
+              "route": "Bereken hiervoor eerst het resultaat voor belasting en daarna de vennootschapsbelasting.",
+              "steps": "berekening resultaat voor belasting",
+              "sources": "Hieronder staan enkele gegevens over 2026.",
+              "noise": "| verkochte koffie | 410.000 kg |",
+              "claim": "Bereken het resultaat na belasting van Koffiebranderij Donker bv over 2026.",
+              "new_concept": "De vennootschapsbelasting bedraagt 19% over de eerste € 200.000 van het resultaat voor belasting en 25,8% over het deel daarboven."
+            },
+            "repaired_fields": [],
+            "disagreements": {}
+          },
+          "scorepunten": [
+            {
+              "seq": 1,
+              "points": 1,
+              "criterion_id": "F2.30.5-01-a",
+              "group_id": "F2.30.5-01",
+              "bloom": "toepassen"
+            },
+            {
+              "seq": 2,
+              "points": 1,
+              "criterion_id": "F2.30.5-01-b",
+              "group_id": "F2.30.5-01",
+              "bloom": "toepassen"
+            },
+            {
+              "seq": 3,
+              "points": 1,
+              "criterion_id": "F2.30.5-01-b",
+              "group_id": "F2.30.5-01",
+              "bloom": "toepassen"
+            }
+          ],
+          "open_findings": []
+        },
+        {
+          "vraag_id": "O3-V10",
+          "number": 10,
+          "points": 3,
+          "stem": "Bereken het netto dividend dat de houders van gewone aandelen van Koffiebranderij Donker bv over 2026 samen ontvangen (zie informatiebron 1). Gebruik je antwoord op vraag 9.",
+          "uitwerkbijlage": null,
+          "cv": {
+            "maximumscore": 3,
+            "model_answer": "preferent dividend: 0,06 × € 500.000 geeft € 30.000\nbruto dividend gewone aandelen: 0,5 × (€ 541.904 min € 30.000 preferent dividend) geeft € 255.952\ndividendbelasting: 0,15 × € 255.952 geeft € 38.392,80\nnetto dividend: € 255.952 min € 38.392,80 dividendbelasting geeft € 217.559,20",
+            "calc": [
+              {
+                "name": "pref_div",
+                "expr": "pref_pct * pref_geplaatst",
+                "round": 0,
+                "rounding": null,
+                "shown": "€ 30.000"
+              },
+              {
+                "name": "bruto_gewoon",
+                "expr": "uitkering_pct * (rnb - pref_div)",
+                "round": 0,
+                "rounding": null,
+                "shown": "€ 255.952"
+              },
+              {
+                "name": "divbel_bedrag",
+                "expr": "divbel * bruto_gewoon",
+                "round": 2,
+                "rounding": null,
+                "shown": "€ 38.392,80"
+              },
+              {
+                "name": "netto_gewoon",
+                "expr": "bruto_gewoon - divbel_bedrag",
+                "round": 2,
+                "rounding": null,
+                "shown": "€ 217.559,20"
+              }
+            ],
+            "scorepunten": [
+              {
+                "seq": 1,
+                "points": 1,
+                "text": "berekening preferent dividend over het nominale bedrag van de preferente aandelen",
+                "criterion_id": "F2.30.5-02-a",
+                "calc_ref": "pref_div"
+              },
+              {
+                "seq": 2,
+                "points": 1,
+                "text": "berekening bruto dividend op de gewone aandelen na aftrek van het preferent dividend",
+                "criterion_id": "F2.30.5-02-b",
+                "calc_ref": "bruto_gewoon"
+              },
+              {
+                "seq": 3,
+                "points": 1,
+                "text": "berekening netto dividend na aftrek van de dividendbelasting",
+                "criterion_id": "F2.30.5-02-c",
+                "calc_ref": "netto_gewoon"
+              }
+            ],
+            "rules": [
+              "Voor elke fout 1 scorepunt in mindering brengen."
+            ],
+            "alternatives": [
+              "netto dividend als 0,85 × € 255.952 = € 217.559,20 berekend"
+            ],
+            "follow_through": "Een doorrekenfout uit vraag 9 niet opnieuw aanrekenen."
+          },
+          "new_concepts": [],
+          "builds_on_vragen": [
+            9
+          ],
+          "pattern": "P08",
+          "knobs": {
+            "solo": "relationeel",
+            "route": "zelf vinden",
+            "steps": "3",
+            "sources": "één bron",
+            "noise": "ja",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": "ja"
+          },
+          "label": {
+            "exam_id": null,
+            "question_id": "O3-V10",
+            "question_number": 10,
+            "opgave_id": "O3",
+            "first_of_opgave": false,
+            "points": 3,
+            "pattern": "P08",
+            "solo": "relationeel",
+            "route": "zelf vinden",
+            "steps": "3",
+            "sources": "één bron",
+            "noise": "ja",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": "ja",
+            "example_quality": null,
+            "builds_on_questions": [
+              9
+            ],
+            "proposed_pattern": null,
+            "example_quality_reason": null,
+            "combination": 1,
+            "bloom": "toepassen",
+            "scorepunt_bloom": [
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "F2.30.5-02"
+              },
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "F2.30.5-02"
+              },
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "F2.30.5-02"
+              }
+            ],
+            "confidence": {
+              "pattern": "high",
+              "solo": "high",
+              "route": "high",
+              "steps": "high",
+              "sources": "high",
+              "noise": "high",
+              "claim": "high",
+              "new_concept": "high",
+              "schema": "high",
+              "builds_on": "high"
+            },
+            "evidence": {
+              "pattern": "Bereken het netto dividend dat de houders van gewone aandelen van Koffiebranderij Donker bv over 2026 samen ontvangen (zie informatiebron 1).",
+              "solo": "Gebruik je antwoord op vraag 9.",
+              "route": "Bereken het netto dividend dat de houders van gewone aandelen van Koffiebranderij Donker bv over 2026 samen ontvangen (zie informatiebron 1).",
+              "steps": "berekening bruto dividend op de gewone aandelen na aftrek van het preferent dividend",
+              "sources": "Bij deze opgave hoort informatiebron 1.",
+              "noise": "| agioreserve | € 350.000 |",
+              "claim": "Gebruik je antwoord op vraag 9.",
+              "new_concept": "De houders van preferente aandelen ontvangen elk jaar als eersten een dividend van 6% van het nominale bedrag van hun aandelen.",
+              "builds_on": "Gebruik je antwoord op vraag 9."
+            },
+            "repaired_fields": [],
+            "disagreements": {}
+          },
+          "scorepunten": [
+            {
+              "seq": 1,
+              "points": 1,
+              "criterion_id": "F2.30.5-02-a",
+              "group_id": "F2.30.5-02",
+              "bloom": "toepassen"
+            },
+            {
+              "seq": 2,
+              "points": 1,
+              "criterion_id": "F2.30.5-02-b",
+              "group_id": "F2.30.5-02",
+              "bloom": "toepassen"
+            },
+            {
+              "seq": 3,
+              "points": 1,
+              "criterion_id": "F2.30.5-02-c",
+              "group_id": "F2.30.5-02",
+              "bloom": "toepassen"
+            }
+          ],
+          "open_findings": []
+        },
+        {
+          "vraag_id": "O3-V11",
+          "number": 11,
+          "points": 3,
+          "stem": "Tot en met 2025 stond het bedrijfspand van Donker op de balans voor de oorspronkelijke aankoopprijs min de afschrijvingen tot dan toe. Op 1 januari 2026 laat de bv het pand taxeren. Daarna neemt de bv het pand op de balans op voor het bedrag dat een vergelijkbaar pand op dat moment zou kosten. Dat bedrag is veel hoger dan de oude boekwaarde. Vanaf 2026 schrijft de bv over dit hogere bedrag af, zodat de jaarlijkse afschrijvingskosten van het pand stijgen.\n\na Noem de waarderingsgrondslag waartegen het pand na de taxatie op de balans staat.\nb Leg uit welk effect het hoger waarderen van het pand heeft op het eigen vermogen van Donker.\nc Leg uit waarom de hogere afschrijvingskosten het resultaat over 2026 verlagen, terwijl ze in 2026 niet tot een uitgave leiden.",
+          "uitwerkbijlage": null,
+          "cv": {
+            "maximumscore": 3,
+            "model_answer": "a de actuele waarde (vervangingswaarde)\nb Het eigen vermogen neemt toe: de waardestijging van het pand wordt niet als winst geboekt, maar als herwaarderingsreserve aan het eigen vermogen toegevoegd.\nc Afschrijvingskosten zijn kosten en verlagen daardoor het resultaat. Het geld voor het pand is al bij de aankoop uitgegeven; in 2026 betaalt de bv voor de afschrijving niets, zodat de cashflow hoger is dan het resultaat.",
+            "calc": [],
+            "scorepunten": [
+              {
+                "seq": 1,
+                "points": 1,
+                "text": "a actuele waarde",
+                "criterion_id": "F2.30.6-02-b",
+                "calc_ref": null
+              },
+              {
+                "seq": 2,
+                "points": 1,
+                "text": "b eigen vermogen stijgt via de herwaarderingsreserve (niet via het resultaat)",
+                "criterion_id": "G.32.1-04-c",
+                "calc_ref": null
+              },
+              {
+                "seq": 3,
+                "points": 1,
+                "text": "c afschrijving is een kostenpost maar geen uitgave in de periode zelf (de uitgave was bij de aankoop)",
+                "criterion_id": "F2.30.6-01-b",
+                "calc_ref": null
+              }
+            ],
+            "rules": [
+              "Bij b alleen een punt toekennen als de herwaarderingsreserve (of een herwaardering in het eigen vermogen zonder resultaat) is genoemd."
+            ],
+            "alternatives": [
+              "a vervangingswaarde",
+              "c een uitleg dat de afschrijving een toerekening is van een eerdere uitgave over de gebruiksjaren"
+            ],
+            "follow_through": null
+          },
+          "new_concepts": [],
+          "builds_on_vragen": [],
+          "pattern": "P16+B01",
+          "knobs": {
+            "solo": "multistructureel",
+            "route": null,
+            "steps": "2",
+            "sources": "in vraagtekst",
+            "noise": "nee",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": "nee"
+          },
+          "label": {
+            "exam_id": null,
+            "question_id": "O3-V11",
+            "question_number": 11,
+            "opgave_id": "O3",
+            "first_of_opgave": false,
+            "points": 3,
+            "pattern": "B01+P01",
+            "solo": "multistructureel",
+            "route": null,
+            "steps": "2",
+            "sources": "in vraagtekst",
+            "noise": "nee",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": "nee",
+            "example_quality": null,
+            "builds_on_questions": [],
+            "proposed_pattern": null,
+            "example_quality_reason": null,
+            "combination": 3,
+            "bloom": "begrijpen",
+            "scorepunt_bloom": [
+              {
+                "points": 1,
+                "bloom": "onthouden",
+                "group_id": "F2.30.6-02"
+              },
+              {
+                "points": 1,
+                "bloom": "begrijpen",
+                "group_id": "G.32.1-04"
+              },
+              {
+                "points": 1,
+                "bloom": "begrijpen",
+                "group_id": "F2.30.6-01"
+              }
+            ],
+            "confidence": {
+              "pattern": "high",
+              "solo": "high",
+              "route": "high",
+              "steps": "high",
+              "sources": "high",
+              "noise": "high",
+              "claim": "high",
+              "new_concept": "high",
+              "schema": "high",
+              "builds_on": "high"
+            },
+            "evidence": {
+              "pattern": "c Leg uit waarom de hogere afschrijvingskosten het resultaat over 2026 verlagen, terwijl ze in 2026 niet tot een uitgave leiden.",
+              "solo": "Noem de waarderingsgrondslag waartegen het pand na de taxatie op de balans staat.",
+              "steps": "Leg uit waarom de hogere afschrijvingskosten het resultaat over 2026 verlagen, terwijl ze in 2026 niet tot een uitgave leiden.",
+              "sources": "Daarna neemt de bv het pand op de balans op voor het bedrag dat een vergelijkbaar pand op dat moment zou kosten.",
+              "noise": "Dat bedrag is veel hoger dan de oude boekwaarde.",
+              "claim": "Leg uit welk effect het hoger waarderen van het pand heeft op het eigen vermogen van Donker.",
+              "new_concept": "a actuele waarde",
+              "builds_on": "Op 1 januari 2026 laat de bv het pand taxeren."
+            },
+            "repaired_fields": [
+              "pattern",
+              "route",
+              "schema"
+            ],
+            "disagreements": {
+              "pattern": {
+                "A": "B01+P01",
+                "B": "B01+P16",
+                "R": "B01+P01"
+              },
+              "route": {
+                "A": null,
+                "B": null,
+                "R": null
+              },
+              "schema": {
+                "A": null,
+                "B": null,
+                "R": null
+              }
+            }
+          },
+          "scorepunten": [
+            {
+              "seq": 1,
+              "points": 1,
+              "criterion_id": "F2.30.6-02-b",
+              "group_id": "F2.30.6-02",
+              "bloom": "onthouden"
+            },
+            {
+              "seq": 2,
+              "points": 1,
+              "criterion_id": "G.32.1-04-c",
+              "group_id": "G.32.1-04",
+              "bloom": "begrijpen"
+            },
+            {
+              "seq": 3,
+              "points": 1,
+              "criterion_id": "F2.30.6-01-b",
+              "group_id": "F2.30.6-01",
+              "bloom": "begrijpen"
+            }
+          ],
+          "open_findings": []
+        }
+      ]
+    },
+    {
+      "opgave_id": "O4",
+      "title": "Filmtheater Het Lumière",
+      "context": "Een filmtheater met vier zalen maakt elk jaar een begroting en vergelijkt die achteraf met de werkelijkheid. Informatiebron 1 geeft begrote en werkelijke bezoekersaantallen, ticketprijzen en kosten; informatiebron 2 geeft een verschillenanalyse, de bezettingsgraad van de zalen en gegevens over klanttevredenheid.",
+      "context_tags": [
+        "recreatie",
+        "filmtheater",
+        "begroting"
+      ],
+      "reused_from": null,
+      "intro": "Het Lumière is een filmtheater met vier zalen in het centrum van een middelgrote stad. Elk najaar stelt de directie een begroting op voor het jaar daarna. Na afloop van dat jaar zet de directie de begrote cijfers naast de werkelijke cijfers. Zo ziet zij waar het filmtheater het beter of slechter heeft gedaan dan verwacht. Alle bedragen in deze opgave zijn exclusief btw.\n\nGebruik bij deze opgave informatiebron 1 en 2.",
+      "data": {
+        "bezoekers_b": 150000,
+        "bezoekers_w": 138000,
+        "prijs_b": 11.0,
+        "prijs_w": 11.4,
+        "vkpb_b": 4.5,
+        "vkpb_w": 4.6,
+        "ck_b": 640000,
+        "ck_w": 652000,
+        "verkoopres": 78000,
+        "prijsres_ticket": 55200,
+        "prijsres_vk": 13800,
+        "bez_begroot": 0.45,
+        "bez_groot": 0.35,
+        "bez_fellini": 0.47,
+        "bez_varda": 0.49,
+        "bez_truffaut": 0.46,
+        "stoelen_groot": 320,
+        "stoelen_fellini": 120,
+        "stoelen_varda": 110,
+        "stoelen_truffaut": 90,
+        "tevreden_b": 8.0,
+        "tevreden_w": 8.1
+      },
+      "sources": [
+        {
+          "n": 1,
+          "title": "Begroting en werkelijkheid van Het Lumière over 2025",
+          "kind": "table",
+          "text": "De variabele kosten zijn de bedragen die Het Lumière per verkocht ticket afdraagt aan de filmdistributeurs. De constante kosten bestaan onder meer uit personeelskosten, huur van het pand en energiekosten.",
+          "table": [
+            [
+              "",
+              "begroot 2025",
+              "werkelijk 2025"
+            ],
+            [
+              "aantal bezoekers",
+              "150.000",
+              "138.000"
+            ],
+            [
+              "gemiddelde ticketprijs per bezoeker",
+              "€ 11,00",
+              "€ 11,40"
+            ],
+            [
+              "variabele kosten per bezoeker",
+              "€ 4,50",
+              "€ 4,60"
+            ],
+            [
+              "constante kosten",
+              "€ 640.000",
+              "€ 652.000"
+            ]
+          ],
+          "figure_id": null,
+          "uses_data": [
+            "bezoekers_b",
+            "bezoekers_w",
+            "prijs_b",
+            "prijs_w",
+            "vkpb_b",
+            "vkpb_w",
+            "ck_b",
+            "ck_w"
+          ],
+          "noise_data": []
+        },
+        {
+          "n": 2,
+          "title": "Verschillenanalyse, bezetting en klanttevredenheid over 2025",
+          "kind": "table",
+          "text": "De controller van Het Lumière heeft voor 2025 onderzocht hoe de verschillen tussen begroting en werkelijkheid bij de omzet en de variabele kosten zijn ontstaan. Tabel 1 geeft de deelresultaten die zij daarbij heeft gevonden.\n\nVoor elke zaal houdt het filmtheater de bezettingsgraad bij. De bezettingsgraad van een zaal is het aantal verkochte tickets als percentage van het aantal stoelen dat bij alle voorstellingen in die zaal samen beschikbaar was. In de begroting is voor elke zaal uitgegaan van een bezettingsgraad van 45%. Tabel 2 geeft per zaal het aantal stoelen en de werkelijke bezettingsgraad.\n\nNa elke voorstelling kunnen bezoekers via de app een rapportcijfer geven. Het gemiddelde rapportcijfer over 2025 was 8,1; in de begroting was uitgegaan van 8,0.",
+          "table": [
+            [
+              "tabel 1: deelresultaat (omzet en variabele kosten)",
+              "bedrag",
+              "voordelig / nadelig"
+            ],
+            [
+              "verkoopresultaat (afwijking in het aantal bezoekers)",
+              "€ 78.000",
+              "nadelig"
+            ],
+            [
+              "prijsresultaat op de tickets",
+              "€ 55.200",
+              "voordelig"
+            ],
+            [
+              "prijsresultaat op de variabele kosten",
+              "€ 13.800",
+              "nadelig"
+            ],
+            [
+              "",
+              "",
+              ""
+            ],
+            [
+              "tabel 2: zaal",
+              "aantal stoelen",
+              "werkelijke bezettingsgraad 2025"
+            ],
+            [
+              "Grote zaal",
+              "320",
+              "35%"
+            ],
+            [
+              "zaal Fellini",
+              "120",
+              "47%"
+            ],
+            [
+              "zaal Varda",
+              "110",
+              "49%"
+            ],
+            [
+              "zaal Truffaut",
+              "90",
+              "46%"
+            ]
+          ],
+          "figure_id": null,
+          "uses_data": [
+            "verkoopres",
+            "prijsres_ticket",
+            "prijsres_vk",
+            "bez_begroot",
+            "bez_groot",
+            "bez_fellini",
+            "bez_varda",
+            "bez_truffaut"
+          ],
+          "noise_data": [
+            "stoelen_groot",
+            "stoelen_fellini",
+            "stoelen_varda",
+            "stoelen_truffaut",
+            "tevreden_b",
+            "tevreden_w"
+          ]
+        }
+      ],
+      "figures": [],
+      "vragen": [
+        {
+          "vraag_id": "O4-V12",
+          "number": 12,
+          "points": 3,
+          "stem": "Stel de voorcalculatorische en de nacalculatorische resultatenrekening van Het Lumière over 2025 op en bereken het verschil tussen het werkelijke en het begrote resultaat. Geef daarbij aan of dit verschil voordelig of nadelig is (zie informatiebron 1). Vul hiervoor de uitwerkbijlage bij deze vraag in.",
+          "uitwerkbijlage": {
+            "kind": "table",
+            "rows": [
+              [
+                "(bedragen × € 1)",
+                "voorcalculatorische resultatenrekening 2025",
+                "nacalculatorische resultatenrekening 2025"
+              ],
+              [
+                "omzet",
+                "",
+                ""
+              ],
+              [
+                "variabele kosten",
+                "",
+                ""
+              ],
+              [
+                "constante kosten",
+                "",
+                ""
+              ],
+              [
+                "resultaat",
+                "",
+                ""
+              ],
+              [
+                "verschil tussen werkelijk en begroot resultaat",
+                "€ ............ voordelig / nadelig (doorhalen wat niet juist is)",
+                ""
+              ]
+            ]
+          },
+          "cv": {
+            "maximumscore": 3,
+            "model_answer": "Voorcalculatorische resultatenrekening 2025:\n- omzet: 150.000 bezoekers × € 11,00 = € 1.650.000\n- variabele kosten: 150.000 bezoekers × € 4,50 = € 675.000\n- constante kosten: € 640.000\n- resultaat: € 335.000\nNacalculatorische resultatenrekening 2025:\n- omzet: 138.000 bezoekers × € 11,40 = € 1.573.200\n- variabele kosten: 138.000 bezoekers × € 4,60 = € 634.800\n- constante kosten: € 652.000\n- resultaat: € 286.400\nVerschil: het werkelijke resultaat is € 286.400 en het begrote resultaat € 335.000, dus het verschil is € 48.600 nadelig.",
+            "calc": [
+              {
+                "name": "omzet_vc",
+                "expr": "bezoekers_b * prijs_b",
+                "round": 0,
+                "rounding": "half_up",
+                "shown": "€ 1.650.000"
+              },
+              {
+                "name": "vk_vc",
+                "expr": "bezoekers_b * vkpb_b",
+                "round": 0,
+                "rounding": "half_up",
+                "shown": "€ 675.000"
+              },
+              {
+                "name": "res_vc",
+                "expr": "omzet_vc - vk_vc - ck_b",
+                "round": 0,
+                "rounding": "half_up",
+                "shown": "€ 335.000"
+              },
+              {
+                "name": "omzet_nc",
+                "expr": "bezoekers_w * prijs_w",
+                "round": 0,
+                "rounding": "half_up",
+                "shown": "€ 1.573.200"
+              },
+              {
+                "name": "vk_nc",
+                "expr": "bezoekers_w * vkpb_w",
+                "round": 0,
+                "rounding": "half_up",
+                "shown": "€ 634.800"
+              },
+              {
+                "name": "res_nc",
+                "expr": "omzet_nc - vk_nc - ck_w",
+                "round": 0,
+                "rounding": "half_up",
+                "shown": "€ 286.400"
+              },
+              {
+                "name": "verschil",
+                "expr": "res_vc - res_nc",
+                "round": 0,
+                "rounding": "half_up",
+                "shown": "€ 48.600"
+              }
+            ],
+            "scorepunten": [
+              {
+                "seq": 1,
+                "points": 1,
+                "text": "voorcalculatorische resultatenrekening: omzet € 1.650.000, variabele kosten € 675.000, constante kosten € 640.000 en resultaat € 335.000",
+                "criterion_id": "F2.31.1-01-a",
+                "calc_ref": "res_vc"
+              },
+              {
+                "seq": 2,
+                "points": 1,
+                "text": "nacalculatorische resultatenrekening: omzet € 1.573.200, variabele kosten € 634.800, constante kosten € 652.000 en resultaat € 286.400",
+                "criterion_id": "F2.31.1-01-b",
+                "calc_ref": "res_nc"
+              },
+              {
+                "seq": 3,
+                "points": 1,
+                "text": "verschil € 48.600 nadelig",
+                "criterion_id": "F2.31.1-01-c",
+                "calc_ref": "verschil"
+              }
+            ],
+            "rules": [
+              "Per groep juiste bedragen 1 scorepunt.",
+              "Voor elke fout 1 scorepunt in mindering brengen.",
+              "Een rekenfout in een van beide resultatenrekeningen bij het derde scorepunt niet opnieuw aanrekenen.",
+              "Het derde scorepunt alleen toekennen als is aangegeven dat het verschil nadelig is."
+            ],
+            "alternatives": [
+              "Het verschil genoteerd als −€ 48.600 (of: werkelijk resultaat € 48.600 lager dan begroot) goedrekenen als nadelig verschil."
+            ],
+            "follow_through": null
+          },
+          "new_concepts": [],
+          "builds_on_vragen": [],
+          "pattern": "B02",
+          "knobs": {
+            "solo": "multistructureel",
+            "route": "gegeven",
+            "steps": "3",
+            "sources": "één bron",
+            "noise": "nee",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": "voorgestructureerd",
+            "builds_on": null
+          },
+          "label": {
+            "exam_id": null,
+            "question_id": "O4-V12",
+            "question_number": 12,
+            "opgave_id": "O4",
+            "first_of_opgave": true,
+            "points": 3,
+            "pattern": "B02",
+            "solo": "multistructureel",
+            "route": "gegeven",
+            "steps": "3",
+            "sources": "één bron",
+            "noise": "nee",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": "voorgestructureerd",
+            "builds_on": null,
+            "example_quality": null,
+            "builds_on_questions": [],
+            "proposed_pattern": null,
+            "example_quality_reason": null,
+            "combination": 1,
+            "bloom": "toepassen",
+            "scorepunt_bloom": [
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "F2.31.1-01"
+              },
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "F2.31.1-01"
+              },
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "F2.31.1-01"
+              }
+            ],
+            "confidence": {
+              "pattern": "high",
+              "solo": "high",
+              "route": "high",
+              "steps": "high",
+              "sources": "high",
+              "noise": "high",
+              "claim": "high",
+              "new_concept": "high",
+              "schema": "high",
+              "builds_on": "high"
+            },
+            "evidence": {
+              "pattern": "Stel de voorcalculatorische en de nacalculatorische resultatenrekening van Het Lumière over 2025 op",
+              "solo": "Per groep juiste bedragen 1 scorepunt.",
+              "route": "| omzet |  |  |",
+              "steps": "Een rekenfout in een van beide resultatenrekeningen bij het derde scorepunt niet opnieuw aanrekenen.",
+              "sources": "Geef daarbij aan of dit verschil voordelig of nadelig is (zie informatiebron 1).",
+              "noise": "| constante kosten | € 640.000 | € 652.000 |",
+              "claim": "bereken het verschil tussen het werkelijke en het begrote resultaat.",
+              "new_concept": "omzet: 150.000 bezoekers × € 11,00 = € 1.650.000",
+              "schema": "| variabele kosten |  |  |"
+            },
+            "repaired_fields": [],
+            "disagreements": {}
+          },
+          "scorepunten": [
+            {
+              "seq": 1,
+              "points": 1,
+              "criterion_id": "F2.31.1-01-a",
+              "group_id": "F2.31.1-01",
+              "bloom": "toepassen"
+            },
+            {
+              "seq": 2,
+              "points": 1,
+              "criterion_id": "F2.31.1-01-b",
+              "group_id": "F2.31.1-01",
+              "bloom": "toepassen"
+            },
+            {
+              "seq": 3,
+              "points": 1,
+              "criterion_id": "F2.31.1-01-c",
+              "group_id": "F2.31.1-01",
+              "bloom": "toepassen"
+            }
+          ],
+          "open_findings": []
+        },
+        {
+          "vraag_id": "O4-V13",
+          "number": 13,
+          "points": 2,
+          "stem": "Het werkelijke resultaat van Het Lumière over 2025 valt tegen. De directie wil weten wat daarvan de belangrijkste oorzaak is en welke maatregel daarbij past.\nLeg met behulp van de verschillenanalyse in informatiebron 2 uit welk deelresultaat de belangrijkste oorzaak is van het tegenvallende resultaat en welke maatregel de directie daarom kan nemen. Betrek de bezettingsgraad van de zalen in je antwoord.",
+          "uitwerkbijlage": null,
+          "cv": {
+            "maximumscore": 2,
+            "model_answer": "Voorbeeld van een juist antwoord:\nHet verkoopresultaat van € 78.000 nadelig is veel groter dan het andere nadelige deelresultaat in tabel 1 (€ 13.800) en wordt maar voor een deel goedgemaakt door het voordelige prijsresultaat op de tickets van € 55.200. De belangrijkste oorzaak is dus dat er minder bezoekers kwamen dan begroot.\nUit de bezettingsgraad blijkt dat dit vooral aan de Grote zaal ligt: daar is de bezettingsgraad 35%, terwijl 45% was begroot (10 procentpunt lager); de drie kleinere zalen zitten met 47%, 49% en 46% allemaal minstens 1 procentpunt boven de begroting. De directie kan daarom in de Grote zaal minder voorstellingen programmeren en die films vaker in de kleinere zalen draaien (de capaciteit aanpassen), of met acties zoals een lagere ticketprijs op rustige momenten de lege stoelen in de Grote zaal vullen.",
+            "calc": [
+              {
+                "name": "pp_groot",
+                "expr": "(bez_begroot - bez_groot) * 100",
+                "round": 0,
+                "rounding": "half_up",
+                "shown": "10"
+              },
+              {
+                "name": "pp_klein",
+                "expr": "(min(bez_fellini, bez_varda, bez_truffaut) - bez_begroot) * 100",
+                "round": 0,
+                "rounding": "half_up",
+                "shown": "1"
+              }
+            ],
+            "scorepunten": [
+              {
+                "seq": 1,
+                "points": 1,
+                "text": "inzicht dat het nadelige verkoopresultaat (minder bezoekers dan begroot) het grootste nadelige deelresultaat en dus de belangrijkste oorzaak is",
+                "criterion_id": "F2.31.2-01-b",
+                "calc_ref": null
+              },
+              {
+                "seq": 2,
+                "points": 1,
+                "text": "een passende maatregel die aansluit bij de lage bezettingsgraad van de Grote zaal (capaciteit aanpassen of de bezetting van die zaal verhogen)",
+                "criterion_id": "F2.31.2-01-a",
+                "calc_ref": "pp_groot"
+              }
+            ],
+            "rules": [
+              "Het tweede scorepunt alleen toekennen als de maatregel gekoppeld is aan de bezettingsgraad uit informatiebron 2.",
+              "Een maatregel die alleen de ticketprijs of de constante kosten in het algemeen noemt, zonder verband met de lege stoelen in de Grote zaal, geen scorepunt opleveren."
+            ],
+            "alternatives": [
+              "Maatregel: de Grote zaal (een deel van de tijd) verhuren voor andere activiteiten, zoals bedrijfspresentaties, zodat de lege capaciteit wordt benut.",
+              "Maatregel: extra reclame of speciale programmering (bijvoorbeeld premières of filmavonden) gericht op het vullen van de Grote zaal."
+            ],
+            "follow_through": null
+          },
+          "new_concepts": [
+            "bezettingsgraad (verkochte tickets als percentage van de beschikbare stoelen in een zaal)"
+          ],
+          "builds_on_vragen": [],
+          "pattern": "P02",
+          "knobs": {
+            "solo": "relationeel",
+            "route": null,
+            "steps": "2",
+            "sources": "één bron",
+            "noise": "ja",
+            "claim": "nee",
+            "new_concept": "ja",
+            "schema": null,
+            "builds_on": "nee"
+          },
+          "label": {
+            "exam_id": null,
+            "question_id": "O4-V13",
+            "question_number": 13,
+            "opgave_id": "O4",
+            "first_of_opgave": false,
+            "points": 2,
+            "pattern": "P02",
+            "solo": "relationeel",
+            "route": null,
+            "steps": "3",
+            "sources": "één bron",
+            "noise": "ja",
+            "claim": "nee",
+            "new_concept": "ja",
+            "schema": null,
+            "builds_on": "nee",
+            "example_quality": null,
+            "builds_on_questions": [],
+            "proposed_pattern": null,
+            "example_quality_reason": null,
+            "combination": 1,
+            "bloom": "analyseren",
+            "scorepunt_bloom": [
+              {
+                "points": 1,
+                "bloom": "analyseren",
+                "group_id": "F2.31.2-01"
+              },
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "F2.31.2-01"
+              }
+            ],
+            "confidence": {
+              "pattern": "high",
+              "solo": "high",
+              "route": "high",
+              "steps": "high",
+              "sources": "high",
+              "noise": "high",
+              "claim": "high",
+              "new_concept": "high",
+              "schema": "high",
+              "builds_on": "high"
+            },
+            "evidence": {
+              "pattern": "Betrek de bezettingsgraad van de zalen in je antwoord.",
+              "solo": "Het tweede scorepunt alleen toekennen als de maatregel gekoppeld is aan de bezettingsgraad uit informatiebron 2.",
+              "steps": "De belangrijkste oorzaak is dus dat er minder bezoekers kwamen dan begroot. Uit de bezettingsgraad blijkt dat dit vooral aan de Grote zaal ligt",
+              "sources": "Leg met behulp van de verschillenanalyse in informatiebron 2 uit welk deelresultaat de belangrijkste oorzaak is",
+              "noise": "Het gemiddelde rapportcijfer over 2025 was 8,1; in de begroting was uitgegaan van 8,0.",
+              "claim": "De directie wil weten wat daarvan de belangrijkste oorzaak is en welke maatregel daarbij past.",
+              "new_concept": "De bezettingsgraad van een zaal is het aantal verkochte tickets als percentage van het aantal stoelen",
+              "builds_on": "Leg met behulp van de verschillenanalyse in informatiebron 2 uit welk deelresultaat de belangrijkste oorzaak is"
+            },
+            "repaired_fields": [],
+            "disagreements": {}
+          },
+          "scorepunten": [
+            {
+              "seq": 1,
+              "points": 1,
+              "criterion_id": "F2.31.2-01-b",
+              "group_id": "F2.31.2-01",
+              "bloom": "analyseren"
+            },
+            {
+              "seq": 2,
+              "points": 1,
+              "criterion_id": "F2.31.2-01-a",
+              "group_id": "F2.31.2-01",
+              "bloom": "toepassen"
+            }
+          ],
+          "open_findings": []
+        },
+        {
+          "vraag_id": "O4-V14",
+          "number": 14,
+          "points": 1,
+          "stem": "Naast de financiële resultaten volgt de directie van Het Lumière ook niet-financiële informatie, omdat die soms eerder dan de cijfers laat zien dat er iets misgaat.\nNoem een voorbeeld van niet-financiële informatie, anders dan de bezettingsgraad of de klanttevredenheid, die voor Het Lumière op een risico kan wijzen.",
+          "uitwerkbijlage": null,
+          "cv": {
+            "maximumscore": 1,
+            "model_answer": "Voorbeelden van een juist antwoord:\n- het ziekteverzuim onder de medewerkers stijgt\n- het personeelsverloop neemt toe\n- een filmdistributeur levert nieuwe films later of stelt minder films beschikbaar\n- de projectoren of de kassasystemen hebben vaker storingen",
+            "calc": [],
+            "scorepunten": [
+              {
+                "seq": 1,
+                "points": 1,
+                "text": "een juist voorbeeld van niet-financiële informatie die op een risico voor het filmtheater wijst",
+                "criterion_id": "F2.31.2-02-a",
+                "calc_ref": null
+              }
+            ],
+            "rules": [
+              "De bezettingsgraad of de klanttevredenheid levert geen scorepunt op; ook klachten, rapportcijfers of (negatieve) beoordelingen door bezoekers, bijvoorbeeld op internet, gelden als klanttevredenheid en leveren geen scorepunt op.",
+              "Een financieel gegeven (zoals dalende omzet of stijgende kosten) levert geen scorepunt op."
+            ],
+            "alternatives": [
+              "Het aantal leden met een abonnement of filmpas daalt.",
+              "Een nieuwe bioscoop of een streamingdienst trekt bezoekers weg (een concurrent opent in de buurt)."
+            ],
+            "follow_through": null
+          },
+          "new_concepts": [],
+          "builds_on_vragen": [],
+          "pattern": "P16",
+          "knobs": {
+            "solo": "unistructureel",
+            "route": null,
+            "steps": "1",
+            "sources": "in vraagtekst",
+            "noise": "nee",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": "nee"
+          },
+          "label": {
+            "exam_id": null,
+            "question_id": "O4-V14",
+            "question_number": 14,
+            "opgave_id": "O4",
+            "first_of_opgave": false,
+            "points": 1,
+            "pattern": "P16",
+            "solo": "unistructureel",
+            "route": null,
+            "steps": "1",
+            "sources": "in vraagtekst",
+            "noise": "nee",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": "nee",
+            "example_quality": null,
+            "builds_on_questions": [],
+            "proposed_pattern": null,
+            "example_quality_reason": null,
+            "combination": 1,
+            "bloom": "onthouden",
+            "scorepunt_bloom": [
+              {
+                "points": 1,
+                "bloom": "onthouden",
+                "group_id": "F2.31.2-02"
+              }
+            ],
+            "confidence": {
+              "pattern": "high",
+              "solo": "high",
+              "route": "high",
+              "steps": "high",
+              "sources": "high",
+              "noise": "high",
+              "claim": "high",
+              "new_concept": "high",
+              "schema": "high",
+              "builds_on": "high"
+            },
+            "evidence": {
+              "pattern": "Noem een voorbeeld van niet-financiële informatie, anders dan de bezettingsgraad of de klanttevredenheid, die voor Het Lumière op een risico kan wijzen.",
+              "solo": "een juist voorbeeld van niet-financiële informatie die op een risico voor het filmtheater wijst",
+              "steps": "Noem een voorbeeld van niet-financiële informatie",
+              "sources": "Noem een voorbeeld van niet-financiële informatie, anders dan de bezettingsgraad of de klanttevredenheid, die voor Het Lumière op een risico kan wijzen.",
+              "noise": "Noem een voorbeeld van niet-financiële informatie, anders dan de bezettingsgraad of de klanttevredenheid",
+              "claim": "Noem een voorbeeld van niet-financiële informatie",
+              "new_concept": "Naast de financiële resultaten volgt de directie van Het Lumière ook niet-financiële informatie",
+              "builds_on": "Noem een voorbeeld van niet-financiële informatie, anders dan de bezettingsgraad of de klanttevredenheid"
+            },
+            "repaired_fields": [],
+            "disagreements": {}
+          },
+          "scorepunten": [
+            {
+              "seq": 1,
+              "points": 1,
+              "criterion_id": "F2.31.2-02-a",
+              "group_id": "F2.31.2-02",
+              "bloom": "onthouden"
+            }
+          ],
+          "open_findings": []
+        }
+      ]
+    },
+    {
+      "opgave_id": "O5",
+      "title": "Hoveniersbedrijf Groenrijk",
+      "context": "Een hovenier met een eenmanszaak koopt een nieuwe bestelbus en financiert die met een annuïteitenlening van de bank. De opgavetekst geeft het leenbedrag, de interest per jaar, de looptijd en enkele andere gegevens over het bedrijf.",
+      "context_tags": [
+        "groenvoorziening",
+        "hoveniersbedrijf",
+        "bestelbus"
+      ],
+      "reused_from": null,
+      "intro": "Femke de Wit heeft een eenmanszaak: hoveniersbedrijf Groenrijk. Groenrijk legt tuinen aan en onderhoudt tuinen van particulieren en bedrijven. Begin 2027 koopt Femke een nieuwe elektrische bestelbus voor € 52.000. Ze verwacht de bus 8 jaar te gebruiken; de restwaarde is dan naar verwachting € 7.600. Groenrijk betaalt € 12.000 van de aankoopprijs uit eigen middelen. Voor de rest sluit Femke begin 2027 bij de bank een annuïteitenlening af van € 40.000 met een looptijd van 6 jaar. De interest is 4,5% per jaar. Groenrijk betaalt de annuïteit elk jaar achteraf per bank, voor het eerst aan het eind van 2027.",
+      "data": {
+        "aankoopprijs": 52000,
+        "gebruiksduur": 8,
+        "restwaarde": 7600,
+        "eigen_middelen": 12000,
+        "lening": 40000,
+        "looptijd": 6,
+        "rente": 0.045
+      },
+      "sources": [],
+      "figures": [],
+      "vragen": [
+        {
+          "vraag_id": "O5-V15",
+          "number": 15,
+          "points": 3,
+          "stem": "Bereken het interestdeel en het aflossingsdeel van de eerste annuïteit van de lening. Bereken hiervoor eerst de jaarlijkse annuïteit: de contante waarde van alle annuïteiten samen is gelijk aan het leenbedrag. Voor de som S van een meetkundige reeks geldt: S = a × (r^n − 1) / (r − 1), met a = de eerste term, r = de reden en n = het aantal termen.",
+          "uitwerkbijlage": null,
+          "cv": {
+            "maximumscore": 3,
+            "model_answer": "De somformule uit de vraag met als eerste term a = 1 / 1,045 tot de macht 6, als reden r = 1,045 en als aantal termen n = 6 geeft een factor van 5,157872. De annuïteit vind je door het leenbedrag van € 40.000 te delen door die factor; de annuïteit is dan € 7.755,14. Het interestdeel van de eerste annuïteit is 4,5% van het leenbedrag, dus € 1.800. Het aflossingsdeel is wat van de annuïteit overblijft na aftrek van de interest: € 5.955,14.",
+            "calc": [
+              {
+                "name": "r_factor",
+                "expr": "1 + rente",
+                "round": 3,
+                "rounding": null,
+                "shown": "1,045"
+              },
+              {
+                "name": "som_s",
+                "expr": "(1 / r_factor ** looptijd) * (r_factor ** looptijd - 1) / (r_factor - 1)",
+                "round": 6,
+                "rounding": null,
+                "shown": "5,157872"
+              },
+              {
+                "name": "annuiteit",
+                "expr": "lening / som_s",
+                "round": 2,
+                "rounding": null,
+                "shown": "€ 7.755,14"
+              },
+              {
+                "name": "interest_1",
+                "expr": "rente * lening",
+                "round": 0,
+                "rounding": null,
+                "shown": "€ 1.800"
+              },
+              {
+                "name": "aflossing_1",
+                "expr": "annuiteit - interest_1",
+                "round": 2,
+                "rounding": null,
+                "shown": "€ 5.955,14"
+              }
+            ],
+            "scorepunten": [
+              {
+                "seq": 1,
+                "points": 1,
+                "text": "juiste factor voor de contante waarde van de reeks: S = 5,157872 (a, r en n juist), of een gelijkwaardige juiste annuïteitenformule",
+                "criterion_id": "B1.11.2-03-d",
+                "calc_ref": "som_s"
+              },
+              {
+                "seq": 2,
+                "points": 1,
+                "text": "annuïteit: 40.000 / 5,157872 = € 7.755,14",
+                "criterion_id": "B1.11.2-03-d",
+                "calc_ref": "annuiteit"
+              },
+              {
+                "seq": 3,
+                "points": 1,
+                "text": "interestdeel € 1.800 en aflossingsdeel € 5.955,14",
+                "criterion_id": "B1.11.2-03-a",
+                "calc_ref": "aflossing_1"
+              }
+            ],
+            "rules": [
+              "Voor elke fout 1 scorepunt in mindering brengen.",
+              "Als de annuïteit niet met de contante waarde van de reeks annuïteiten of met een gelijkwaardige juiste annuïteitenformule is berekend, voor de eerste twee scorepunten maximaal 1 scorepunt toekennen."
+            ],
+            "alternatives": [
+              "Ook goed voor de eerste twee scorepunten: de annuïteitenformule annuïteit = 40.000 × 0,045 / (1 − 1,045 tot de macht −6) = € 7.755,14 (de juiste formule met juiste waarden voor het eerste scorepunt, de uitkomst voor het tweede scorepunt).",
+              "Ook goed: de zes contante waarden 1 / 1,045 tot de macht 1 tot en met 6 optellen tot dezelfde factor.",
+              "Een kleine afwijking door afronding van de factor (bijvoorbeeld een annuïteit van € 7.755,13) goed rekenen."
+            ],
+            "follow_through": null
+          },
+          "new_concepts": [],
+          "builds_on_vragen": [],
+          "pattern": "B03",
+          "knobs": {
+            "solo": "multistructureel",
+            "route": "gegeven",
+            "steps": "3",
+            "sources": "in vraagtekst",
+            "noise": "ja",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": null
+          },
+          "label": {
+            "exam_id": null,
+            "question_id": "O5-V15",
+            "question_number": 15,
+            "opgave_id": "O5",
+            "first_of_opgave": true,
+            "points": 3,
+            "pattern": "B03",
+            "solo": "multistructureel",
+            "route": "gegeven",
+            "steps": "3",
+            "sources": "in vraagtekst",
+            "noise": "ja",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": null,
+            "example_quality": null,
+            "builds_on_questions": [],
+            "proposed_pattern": null,
+            "example_quality_reason": null,
+            "combination": 1,
+            "bloom": "toepassen",
+            "scorepunt_bloom": [
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "B1.11.2-03"
+              },
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "B1.11.2-03"
+              },
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "B1.11.2-03"
+              }
+            ],
+            "confidence": {
+              "pattern": "high",
+              "solo": "high",
+              "route": "high",
+              "steps": "high",
+              "sources": "high",
+              "noise": "high",
+              "claim": "high",
+              "new_concept": "high",
+              "schema": "high",
+              "builds_on": "high"
+            },
+            "evidence": {
+              "pattern": "Bereken hiervoor eerst de jaarlijkse annuïteit: de contante waarde van alle annuïteiten samen is gelijk aan het leenbedrag.",
+              "solo": "Bereken het interestdeel en het aflossingsdeel van de eerste annuïteit van de lening.",
+              "route": "Bereken hiervoor eerst de jaarlijkse annuïteit",
+              "steps": "annuïteit: 40.000 / 5,157872 = € 7.755,14",
+              "sources": "sluit Femke begin 2027 bij de bank een annuïteitenlening af van € 40.000 met een looptijd van 6 jaar. De interest is 4,5% per jaar.",
+              "noise": "Ze verwacht de bus 8 jaar te gebruiken; de restwaarde is dan naar verwachting € 7.600.",
+              "claim": "Bereken het interestdeel en het aflossingsdeel van de eerste annuïteit van de lening.",
+              "new_concept": "Voor de som S van een meetkundige reeks geldt: S = a × (r^n − 1) / (r − 1)"
+            },
+            "repaired_fields": [],
+            "disagreements": {}
+          },
+          "scorepunten": [
+            {
+              "seq": 1,
+              "points": 1,
+              "criterion_id": "B1.11.2-03-d",
+              "group_id": "B1.11.2-03",
+              "bloom": "toepassen"
+            },
+            {
+              "seq": 2,
+              "points": 1,
+              "criterion_id": "B1.11.2-03-d",
+              "group_id": "B1.11.2-03",
+              "bloom": "toepassen"
+            },
+            {
+              "seq": 3,
+              "points": 1,
+              "criterion_id": "B1.11.2-03-a",
+              "group_id": "B1.11.2-03",
+              "bloom": "toepassen"
+            }
+          ],
+          "open_findings": []
+        },
+        {
+          "vraag_id": "O5-V16",
+          "number": 16,
+          "points": 2,
+          "stem": "Aan het eind van 2027 betaalt Groenrijk de eerste annuïteit (interest en aflossing) per bank. Leg uit welk effect de interest en de aflossing van deze annuïteit hebben op de balans en op de resultatenrekening van Groenrijk over 2027.",
+          "uitwerkbijlage": null,
+          "cv": {
+            "maximumscore": 2,
+            "model_answer": "Balans: het banksaldo (de liquide middelen) daalt met de hele annuïteit en de schuld van de annuïteitenlening daalt alleen met het aflossingsdeel. Resultatenrekening: alleen het interestdeel is een kostenpost (interestkosten), waardoor het resultaat over 2027 lager wordt; de aflossing is geen kostenpost.",
+            "calc": [],
+            "scorepunten": [
+              {
+                "seq": 1,
+                "points": 1,
+                "text": "balans: bank daalt met de annuïteit, lening daalt met het aflossingsdeel",
+                "criterion_id": "F1.28.1-02-a",
+                "calc_ref": null
+              },
+              {
+                "seq": 2,
+                "points": 1,
+                "text": "resultatenrekening: het interestdeel is een kostenpost en verlaagt het resultaat (de aflossing niet)",
+                "criterion_id": "F1.28.1-02-a",
+                "calc_ref": null
+              }
+            ],
+            "rules": [],
+            "alternatives": [
+              "Bij de balans ook goed: aan de passiefzijde daalt daarnaast het eigen vermogen met het interestdeel (via het lagere resultaat).",
+              "Ook goed: de betaling zelf is geen kostenpost; alleen de interest over 2027 is kosten."
+            ],
+            "follow_through": null
+          },
+          "new_concepts": [],
+          "builds_on_vragen": [],
+          "pattern": "B01",
+          "knobs": {
+            "solo": "multistructureel",
+            "route": null,
+            "steps": "1",
+            "sources": "in vraagtekst",
+            "noise": "nee",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": "nee"
+          },
+          "label": {
+            "exam_id": null,
+            "question_id": "O5-V16",
+            "question_number": 16,
+            "opgave_id": "O5",
+            "first_of_opgave": false,
+            "points": 2,
+            "pattern": "B01",
+            "solo": "multistructureel",
+            "route": null,
+            "steps": "2",
+            "sources": "in vraagtekst",
+            "noise": "nee",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": "nee",
+            "example_quality": null,
+            "builds_on_questions": [],
+            "proposed_pattern": null,
+            "example_quality_reason": null,
+            "combination": 1,
+            "bloom": "begrijpen",
+            "scorepunt_bloom": [
+              {
+                "points": 1,
+                "bloom": "begrijpen",
+                "group_id": "F1.28.1-02"
+              },
+              {
+                "points": 1,
+                "bloom": "begrijpen",
+                "group_id": "F1.28.1-02"
+              }
+            ],
+            "confidence": {
+              "pattern": "high",
+              "solo": "high",
+              "route": "high",
+              "steps": "high",
+              "sources": "high",
+              "noise": "high",
+              "claim": "high",
+              "new_concept": "high",
+              "schema": "high",
+              "builds_on": "high"
+            },
+            "evidence": {
+              "pattern": "Leg uit welk effect de interest en de aflossing van deze annuïteit hebben op de balans en op de resultatenrekening van Groenrijk over 2027.",
+              "solo": "balans: bank daalt met de annuïteit, lening daalt met het aflossingsdeel",
+              "steps": "resultatenrekening: het interestdeel is een kostenpost en verlaagt het resultaat (de aflossing niet)",
+              "sources": "Aan het eind van 2027 betaalt Groenrijk de eerste annuïteit (interest en aflossing) per bank.",
+              "noise": "Aan het eind van 2027 betaalt Groenrijk de eerste annuïteit (interest en aflossing) per bank.",
+              "claim": "Leg uit welk effect de interest en de aflossing van deze annuïteit hebben op de balans",
+              "new_concept": "Leg uit welk effect de interest en de aflossing van deze annuïteit hebben op de balans en op de resultatenrekening",
+              "builds_on": "Aan het eind van 2027 betaalt Groenrijk de eerste annuïteit (interest en aflossing) per bank."
+            },
+            "repaired_fields": [],
+            "disagreements": {}
+          },
+          "scorepunten": [
+            {
+              "seq": 1,
+              "points": 1,
+              "criterion_id": "F1.28.1-02-a",
+              "group_id": "F1.28.1-02",
+              "bloom": "begrijpen"
+            },
+            {
+              "seq": 2,
+              "points": 1,
+              "criterion_id": "F1.28.1-02-a",
+              "group_id": "F1.28.1-02",
+              "bloom": "begrijpen"
+            }
+          ],
+          "open_findings": []
+        }
+      ]
+    }
+  ],
+  "realised": {
+    "matrix": [
+      {
+        "group_id": "B1.11.2-03",
+        "ordered": 3,
+        "realised": 3,
+        "ok": true
+      },
+      {
+        "group_id": "F2.30.2-01",
+        "ordered": 3,
+        "realised": 3,
+        "ok": true
+      },
+      {
+        "group_id": "F2.30.2-02",
+        "ordered": 3,
+        "realised": 3,
+        "ok": true
+      },
+      {
+        "group_id": "F2.30.2-03",
+        "ordered": 3,
+        "realised": 3,
+        "ok": true
+      },
+      {
+        "group_id": "F2.30.3-01",
+        "ordered": 3,
+        "realised": 3,
+        "ok": true
+      },
+      {
+        "group_id": "F2.30.3-02",
+        "ordered": 3,
+        "realised": 3,
+        "ok": true
+      },
+      {
+        "group_id": "F2.30.4-01",
+        "ordered": 3,
+        "realised": 3,
+        "ok": true
+      },
+      {
+        "group_id": "F2.30.4-02",
+        "ordered": 3,
+        "realised": 3,
+        "ok": true
+      },
+      {
+        "group_id": "F2.30.5-01",
+        "ordered": 3,
+        "realised": 3,
+        "ok": true
+      },
+      {
+        "group_id": "F2.30.5-02",
+        "ordered": 3,
+        "realised": 3,
+        "ok": true
+      },
+      {
+        "group_id": "F2.31.1-01",
+        "ordered": 3,
+        "realised": 3,
+        "ok": true
+      },
+      {
+        "group_id": "F1.28.1-02",
+        "ordered": 2,
+        "realised": 2,
+        "ok": true
+      },
+      {
+        "group_id": "F2.31.2-01",
+        "ordered": 2,
+        "realised": 2,
+        "ok": true
+      },
+      {
+        "group_id": "F2.30.1-01",
+        "ordered": 1,
+        "realised": 1,
+        "ok": true
+      },
+      {
+        "group_id": "F2.30.1-02",
+        "ordered": 1,
+        "realised": 1,
+        "ok": true
+      },
+      {
+        "group_id": "F2.30.1-03",
+        "ordered": 1,
+        "realised": 1,
+        "ok": true
+      },
+      {
+        "group_id": "F2.30.6-01",
+        "ordered": 1,
+        "realised": 1,
+        "ok": true
+      },
+      {
+        "group_id": "F2.30.6-02",
+        "ordered": 1,
+        "realised": 1,
+        "ok": true
+      },
+      {
+        "group_id": "F2.31.2-02",
+        "ordered": 1,
+        "realised": 1,
+        "ok": true
+      },
+      {
+        "group_id": "G.32.1-04",
+        "ordered": 1,
+        "realised": 1,
+        "ok": true
+      }
+    ],
+    "bloom": {
+      "onthouden": {
+        "ordered": 0.115,
+        "planned": 0.091,
+        "realised": 0.091,
+        "planned_points": 4.0,
+        "realised_points": 4.0,
+        "outside": false
+      },
+      "begrijpen": {
+        "ordered": 0.24,
+        "planned": 0.205,
+        "realised": 0.205,
+        "planned_points": 9.0,
+        "realised_points": 9.0,
+        "outside": false
+      },
+      "toepassen": {
+        "ordered": 0.616,
+        "planned": 0.636,
+        "realised": 0.659,
+        "planned_points": 28.0,
+        "realised_points": 29.0,
+        "outside": false
+      },
+      "analyseren": {
+        "ordered": 0.029,
+        "planned": 0.068,
+        "realised": 0.045,
+        "planned_points": 3.0,
+        "realised_points": 2.0,
+        "outside": false
+      },
+      "evalueren": {
+        "ordered": 0.0,
+        "planned": 0.0,
+        "realised": 0.0,
+        "planned_points": 0.0,
+        "realised_points": 0.0,
+        "outside": false
+      }
+    },
+    "outside_tolerance": [
+      {
+        "what": "steps",
+        "value": "1",
+        "ordered": 0.185,
+        "share": 0.068,
+        "points": 3.0,
+        "of": 44.0,
+        "slack": false
+      },
+      {
+        "what": "steps",
+        "value": "3",
+        "ordered": 0.445,
+        "share": 0.591,
+        "points": 26.0,
+        "of": 44.0,
+        "slack": false
+      }
+    ]
+  },
+  "findings_left": []
+}

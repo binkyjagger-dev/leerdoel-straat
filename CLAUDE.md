@@ -106,6 +106,14 @@ python3 tests/run_toets_fixture.py                   # exercise toets-straat ste
 - Style examples are form only; `overlap_check.py` fails on any shared 8-word shingle with exam text.
 - Patterns are added only by `scripts/toets/patterns.py add` against an answered decision.
 
+## Lessons from toets run 1 (proeftoets bedrijfseconomie periode 2, 5 VWO, 2026-11-14)
+- First end-to-end /toets run: 5 opgaven, 16 vragen, 44 p, matrix exact (20 groups), Bloom within ±5 pp. Verifier round 1: 14/16 pass; O4 (table gave away V12) and O5 (formula sheet referenced that BE does not have) repaired in one round; round 2 16/16 pass.
+- The steps knob stayed outside tolerance (steps 1 = 7 % vs 18 %, steps 3 = 59 % vs 44 %): both labellers agreed against the plan, so no R round ran and `realized.py` ignores the verifier's V5 calls. Open proposed decision: steps in combination vragen = longest chain, parallel parts = 1; who decides when labellers agree against the plan. Item repair cannot fix this.
+- `docmodel.write` now splits Markdown pipe tables out of paragraph text; a table in an opgave intro reached Word as raw `| … |` lines. Always look at the rendered leerling PDF before sending.
+- `overlap_check.py` matches number-only shingles (writers put words between numbers to pass); IT3 does not match "35%" against 0.35; BE has no `formuleblad.md` (writers must put any formula in the stem); `solver_compare` reports "mismatch" when the cv's final is a derived number (10 pp) the solver states as its parts (35 % vs 45 %).
+- Solver ambiguity notes are the best should-findings: unstated btw basis, whether an item is already in a given result, rounding. Writers should state these in the stem by default.
+- Cost: ~40 agent calls (1 planner, 5 writers, 5 solvers, 10 labellers, 1 R, 2 verifiers, 2 repair writers, 6 T4 reruns, …).
+
 ## Lessons from E7 run 1 (bedrijfseconomie 2025-I + 2026-I, 2026-11-14)
 - 59 questions labelled by 24 labellers (A/B per opgave), plus 7 R decisions and 1 relaunch after LB4; after R 566 fields high, 24 medium, 0 disputed.
 - P16 (noem/omschrijf) does occur in the central exam: it is a central-exam pattern now (bedrijfsecon-063). A new base pattern came from a NIEUW proposal: P17 *Rangschikken naar een kenmerk* (2025-I v18, bedrijfsecon-061/062), added via `patterns.py add`.
