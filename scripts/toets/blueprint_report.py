@@ -59,15 +59,15 @@ def main(argv: list[str]) -> None:
     for o in bp["opgaven"]:
         L += [f"## {o['opgave_id']} {o['title']}" + (f" (hergebruikt uit {o['reused_from']['toets_id']})" if o.get("reused_from") else ""),
               "", f"**Context:** {o['context']}  ", f"*Tags:* {', '.join(o['context_tags']) or '–'} · bronnen gepland: {o['sources_planned']}", "",
-              "| vraag | p | patroon | criteria (punten, Bloom) | SOLO | route | stappen | bronnen | bewering | nieuw begrip | schema | voortbouwen | bedoeling |",
-              "|---|---|---|---|---|---|---|---|---|---|---|---|---|"]
+              "| vraag | p | patroon | criteria (punten, Bloom) | SOLO | route | stappen | bronnen | ruis | bewering | nieuw begrip | schema | voortbouwen | bedoeling |",
+              "|---|---|---|---|---|---|---|---|---|---|---|---|---|---|"]
         for v in sorted(o["vragen"], key=lambda x: x["number"]):
             k = v["knobs"]
             crit = "; ".join(f"{s['criterion_id']} ({s['points']}, {s['bloom']})" for s in v["scorepunten"])
             bo = knob_cell(k.get("builds_on")) + (f" (vraag {', '.join(map(str, v['builds_on_vragen']))})" if v["builds_on_vragen"] else "")
             pat = v["pattern"] + "".join(f" {names[c]}" for c in v["pattern"].split("+") if c in names)
             L.append(f"| {v['number']} | {v['points']} | {pat} | {crit} | {knob_cell(k.get('solo'))} | {knob_cell(k.get('route'))} | "
-                     f"{knob_cell(k.get('steps'))} | {knob_cell(k.get('sources'))} | {knob_cell(k.get('claim'))} | "
+                     f"{knob_cell(k.get('steps'))} | {knob_cell(k.get('sources'))} | {knob_cell(k.get('noise'))} | {knob_cell(k.get('claim'))} | "
                      f"{knob_cell(k.get('new_concept'))} | {knob_cell(k.get('schema'))} | {bo} | {v['intent']} |")
         L.append("")
     # matrix

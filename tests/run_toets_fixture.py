@@ -91,8 +91,9 @@ def main():
     ok &= run("patterns validate (fixture layer)", f"{t}/patterns.py", "validate", "fixturevak", *S, "--base", str(base))
     ok &= run("patterns merged fixturevak", f"{t}/patterns.py", "merged", "fixturevak", *S, "--base", str(base), "--out", str(tmp / "merged.json"))
     m = load(tmp / "merged.json")
-    ok &= check("merged = 13 base + 1 subject pattern, P16 not in central exam",
-                len(m["patterns"]) == 14 and next(p for p in m["patterns"] if p["code"] == "P16")["in_central_exam"] is False)
+    ok &= check("merged = 14 base (incl. P17) + 1 subject pattern; P16 a central-exam pattern (bedrijfsecon-063)",
+                len(m["patterns"]) == 15 and next(p for p in m["patterns"] if p["code"] == "P16")["in_central_exam"] is True
+                and any(p["code"] == "P17" for p in m["patterns"]))
     before = (subj / "fixturevak/toets/patterns.json").read_bytes()
     ok &= run("patterns add against an OPEN decision (must fail)", f"{t}/patterns.py", "add", "fixturevak", "fixturevak-002",
               str(FX / "add/X02.json"), *S, "--base", str(base), expect_fail=True)
@@ -190,6 +191,18 @@ def main():
     ok &= check("referentieprofiel.md in Dutch with exam columns and left-out points",
                 "| waarde | eindexamen (alle) | 2030-I | 2031-I |" in md and "Weggelaten: 3 p nieuw patroon." in md
                 and "Weggelaten: 3 p nieuw patroon, 4 p niet van toepassing." in md)
+    ok &= check("noise labelled and in the profile (sources only counts numbered bronnen)",
+                lab[f"{E1}-q1"]["noise"] == "nee" and "noise" in pool and set(pool["sources"]) <= {"in vraagtekst", "één bron", "meerdere bronnen"})
+    old = tmp / "bank_old"; shutil.copytree(bank, old)
+    lf = old / f"labels/{E1}.json"; lj = load(lf)
+    lj["questions"][0]["sources"] = "één bron zonder ruis"
+    for q in lj["questions"]:
+        q.pop("noise", None)
+    lf.write_text(json.dumps(lj, ensure_ascii=False), encoding="utf-8")
+    ok &= run("profile_build with labels from before the sources/noise change (must fail)", f"{e}/profile_build.py", "fixturevak",
+              "--bank", str(old), *S, expect_fail=True)
+    ok &= check("PB3 says which exam, the old value and how to relabel",
+                f"FAIL  PB3  labels/{E1}.json" in run.last and "'één bron zonder ruis'" in run.last and "--replace" in run.last)
     bad = tmp / "bank_bad"; shutil.copytree(bank, bad)
     lf = bad / f"labels/{E1}.json"; lj = load(lf); lj["questions"][0]["points"] = 4
     lf.write_text(json.dumps(lj, ensure_ascii=False), encoding="utf-8")
@@ -225,8 +238,8 @@ def main():
     ok &= run("validate_toets order --draft (missing knobs are questions)", f"{t}/validate_toets.py", "order",
               str(FX / "orders/order_draft.json"), *O, "--draft", "--ask-out", str(tmp / "ask.json"))
     ask = load(tmp / "ask.json")["ask"]
-    ok &= check("draft: 7 knobs + bloom_mix to ask, with central-exam reference shares",
-                len(ask) == 8 and ask[0]["field"] == "bloom_mix" and ask[1]["reference"]["multistructureel"] == 0.5)
+    ok &= check("draft: 8 knobs (incl. noise) + bloom_mix to ask, with central-exam reference shares",
+                len(ask) == 9 and any(a["field"] == "knobs.noise" for a in ask) and ask[0]["field"] == "bloom_mix" and ask[1]["reference"]["multistructureel"] == 0.5)
     ok &= check("draft: O6 warnings (all criteria excluded; route without calculation pattern)",
                 run.last.count("WARN  O6") == 2)
     ok &= run("validate_toets order on the draft without --draft (incomplete; must fail)", f"{t}/validate_toets.py", "order",
@@ -246,6 +259,17 @@ def main():
                 and len(data["contexts"]) == 1 and len(data["reuse"]) == 1 and data["templates"][0]["name"] == "mijn-5vwo")
     ok &= check("no network references in the form", not re.search(r"(src|href)=[\"']https?:", text) and "fetch(" not in text)
     ok &= check("Dutch UI headings present", all(h in text for h in ("Toetsmatrijs", "Bloom-mix", "Knoppen", "Zet op eindexamen", "Download toetsopdracht.json")))
+    stale_bank = tmp / "bank_stale"; shutil.copytree(bank, stale_bank)
+    pf = stale_bank / "profiel/referentieprofiel.json"; pj = load(pf)
+    pj["pooled"]["sources"] = {"één bron zonder ruis": {"points": 3, "share": 1.0}}
+    pj["pooled"].pop("noise", None)
+    pf.write_text(json.dumps(pj, ensure_ascii=False), encoding="utf-8")
+    ok &= run("form_build with a reference from before the knob change", f"{t}/form_build.py", "fixturevak", "--bank", str(stale_bank),
+              "--toetsbank", str(tb), *S, "--base", str(base), "--out", str(tmp / "form_stale.html"))
+    g2 = ScriptGrab(); g2.feed((tmp / "form_stale.html").read_text(encoding="utf-8"))
+    d2 = next(json.loads(s) for a, s in g2.scripts if a.get("id") == "toets-data")
+    ok &= check("stale reference: sources and noise shown as unknown, label says relabel",
+                {"sources", "noise"} <= set(d2["reference"]["unknown_knobs"]) and "opnieuw labelen" in d2["reference"]["label"])
     js = next(s for a, s in g.scripts if not a)
     if shutil.which("node"):
         (tmp / "form.js").write_text(js, encoding="utf-8")
@@ -263,8 +287,8 @@ def main():
             st = json.loads(html.unescape(mt.group(1))) if mt and mt.group(1).strip() else None
         except Exception as ex:  # pragma: no cover
             st = None; print(f"   --  browser run failed: {ex}")
-        ok &= check("headless browser: page renders 2 matrix rows and 10 knob blocks, self-test order has no problems",
-                    st is not None and st["rows"] == 2 and st["knobs"] == 10 and st["problems"] == [])
+        ok &= check("headless browser: page renders 2 matrix rows and 11 knob blocks (incl. noise), self-test order has no problems",
+                    st is not None and st["rows"] == 2 and st["knobs"] == 11 and st["problems"] == [])
         if st:
             (tmp / "selftest_order.json").write_text(json.dumps(st["order"], ensure_ascii=False), encoding="utf-8")
             ok &= run("validate_toets order on the order the form built", f"{t}/validate_toets.py", "order", str(tmp / "selftest_order.json"), *O)
@@ -274,8 +298,38 @@ def main():
     ok &= step4(tmp, subj, bank, S)
     ok &= step5(tmp, subj, bank, S)
     ok &= step6(tmp, subj, bank, S)
+    ok &= uitwerkbijlage(tmp)
     print("\nALL OK" if ok else "\nSOME CHECKS FAILED")
     sys.exit(0 if ok else 1)
+
+
+def uitwerkbijlage(tmp: Path) -> bool:
+    """exam_text.py picks up a *-u.pdf (E7 run 1 lesson): text file + uitwerkbijlage_ref, used as evidence text."""
+    try:
+        import pymupdf  # noqa: F401
+    except ImportError:
+        print("   --  pymupdf not installed: uitwerkbijlage check skipped")
+        return True
+    sys.path.insert(0, str(ROOT / "tests"))
+    from run_examen_fixture import make_pdfs  # noqa: E402
+    src = load(ROOT / "tests/fixtures/examen/pdf_src.json")
+    src["files"]["vw-9999-a-30-1-u.pdf"] = [["VW-9999-a-30-1-u", "Uitwerkbijlage", "1", "Omzetschema Bakkerij Kruim", "afzet ....", "prijs ....", "omzet ...."]]
+    ex, r = tmp / "u_exams", tmp / "u_run"
+    make_pdfs(src, ex / src["folder"])
+    r.mkdir()
+    (r / "run.json").write_text(json.dumps({"run_id": "u", "subject": "fixturevak"}), encoding="utf-8")
+    ok = run("exam_text with an uitwerkbijlage (*-u.pdf)", "scripts/exam/exam_text.py", str(r), str(ex))
+    u = load(r / "21_exam_units.json")["exams"][0]
+    ok &= check("uitwerkbijlage text written and referenced (uitwerkbijlage_ref)",
+                u.get("uitwerkbijlage_ref") == "text/vwo-2030-tv1-uitwerkbijlage.txt"
+                and "Omzetschema Bakkerij Kruim" in (r / u["uitwerkbijlage_ref"]).read_text(encoding="utf-8")
+                and u["files"].get("u"))
+    sys.path.insert(0, str(ROOT / "scripts" / "exam"))
+    from lcommon import Run  # noqa: E402
+    lr = Run(r, "exam")
+    ok &= check("labels: the uitwerkbijlage counts as evidence text for every question of the exam",
+                lr.evidence_ok("vwo-2030-tv1-q1", "Omzetschema Bakkerij Kruim"))
+    return ok
 
 
 def pipeline_run(tmp: Path, subj: Path, bank: Path, S: list[str], name: str) -> Path:
@@ -403,6 +457,12 @@ def step5(tmp: Path, subj: Path, bank: Path, S: list[str]) -> bool:
     (R5 / "33_items/O1.json").write_text(json.dumps(itj, ensure_ascii=False), encoding="utf-8")
     run("items_check: explanation vraag without 'vraag n'", f"{t}/items_check.py", str(R5), *O, expect_fail=True)
     ok &= check("IT5 fails when the stem names no earlier vraag", "FAIL  IT5  O1-V2: builds_on = ja, no calc" in run.last)
+    R6 = pipeline_run(tmp, subj, bank, S, "toets_it4")
+    bpj = load(R6 / "32_blueprint.json"); bpj["opgaven"][1]["vragen"][1]["knobs"]["noise"] = "nee"
+    (R6 / "32_blueprint.json").write_text(json.dumps(bpj, ensure_ascii=False), encoding="utf-8")
+    ok &= run("items_check O2 with noise_data but noise = nee (must fail IT4)", f"{t}/items_check.py", str(R6), "--opgave", "O2", *S,
+              expect_fail=True)
+    ok &= check("IT4: noise_data only when a vraag has noise = ja", "but no vraag of O2 has noise = ja" in run.last)
     O2 = ["--opgave", "O2", *S]
     for s in ("items_check", "calc_check", "figures", "overlap_check"):
         ok &= run(f"{s} O2 (clean opgave)", f"{t}/{s}.py", str(R), *O2)
@@ -530,6 +590,22 @@ def step6(tmp: Path, subj: Path, bank: Path, S: list[str]) -> bool:
     ok &= check("reused opgave copied verbatim (stems, cv) with its labels for A and B",
                 [v["stem"] for v in o2["vragen"]] == [v["stem"] for v in orig["vragen"]]
                 and o2["vragen"][1]["cv"] == orig["vragen"][1]["cv"] and load(R3 / "34_labels.A/O2.json")["items"][1]["pattern"] == "P15")
+    tb2 = tmp / "toetsbank_renum"; shutil.copytree(tb, tb2)
+    tf = tb2 / "toetsen/fixture-pipeline.json"; tj = load(tf)
+    og2 = next(o for o in tj["opgaven"] if o["opgave_id"] == "O2")
+    for v, n in zip(og2["vragen"], (5, 6)):
+        v["number"] = n
+    og2["vragen"][1]["builds_on_vragen"] = [5]
+    og2["vragen"][1]["stem"] = og2["vragen"][1]["stem"].replace("vraag 3", "vraag 5")
+    og2["vragen"][1]["cv"]["follow_through"] = "Een doorrekenfout uit vraag 5 niet opnieuw aanrekenen."
+    tf.write_text(json.dumps(tj, ensure_ascii=False), encoding="utf-8")
+    R4 = pipeline_run(tmp, subj, bank, S, "toets_reuse_renum")
+    shutil.copy(R3 / "32_blueprint.json", R4 / "32_blueprint.json"); shutil.copy(R3 / "31_order.json", R4 / "31_order.json")
+    ok &= run("reuse_copy from a toets where the opgave had vragen 5 and 6", f"{t}/reuse_copy.py", str(R4), "--toetsbank", str(tb2), *S)
+    v4 = load(R4 / "33_items/O2.json")["vragen"][1]
+    ok &= check("decision 18: 'vraag 5' rewritten to 'vraag 3' in stem and follow-through; builds_on_vragen [3]",
+                "vraag 3" in v4["stem"] and "vraag 5" not in v4["stem"] and "uit vraag 3" in v4["cv"]["follow_through"]
+                and v4["builds_on_vragen"] == [3] and v4["number"] == 4)
     ok &= run("blueprint_check with a reused opgave (BP4 passes)", f"{t}/blueprint_check.py", str(R3), *S, "--toetsbank", str(tb))
     bp["opgaven"][1]["vragen"][0]["scorepunten"][0]["criterion_id"] = "X1.1-01-b"
     (R3 / "32_blueprint.json").write_text(json.dumps(bp, ensure_ascii=False), encoding="utf-8")

@@ -9,7 +9,7 @@ IT3 every number in intro, stems, sources, tables and the uitwerkbijlage is a `d
     answer is a `data` value or a calc `shown` value (Dutch notation; "21%" matches 0.21 or 21; reference numbers
     such as "informatiebron 2" and "vraag 3" are skipped; 0, 1, 100 and years 1900–2100 written as a plain
     four-digit number are always allowed — bouwvraag 11)
-IT4 noise_data only when a vraag of the opgave has sources = "meerdere bronnen met ruis", and then not empty;
+IT4 noise_data only when a vraag of the opgave has noise = ja, and then not empty (specs/34 IT4, 2026-11-14);
     uses_data / noise_data keys exist in data; every uses_data key is used by a calc or named in a model answer
 IT5 builds_on_vragen = blueprint; with builds_on = ja the cv has a follow_through sentence and a calc uses a calc
     name of an earlier vraag — or, for a vraag without calc, the stem names "vraag n" for an n in builds_on_vragen
@@ -135,12 +135,12 @@ def main(argv: list[str]) -> None:
     for v in it["vragen"]:
         for c in v["cv"]["calc"]:
             calc_names |= names_in(c["expr"])
-    noisy = any(b["knobs"].get("sources") == "meerdere bronnen met ruis" for b in bv.values())
+    noisy = any(b["knobs"].get("noise") == "ja" for b in bv.values())
     noise = [k for s in it["sources"] for k in s.get("noise_data", [])]
     if noise and not noisy:
-        rep.fail("IT4", f"noise_data {noise} but no vraag of {oid} has sources = meerdere bronnen met ruis")
+        rep.fail("IT4", f"noise_data {noise} but no vraag of {oid} has noise = ja")
     if noisy and not noise:
-        rep.fail("IT4", f"a vraag of {oid} has sources = meerdere bronnen met ruis but no source has noise_data")
+        rep.fail("IT4", f"a vraag of {oid} has noise = ja but no source has noise_data")
     answers = " ".join(v["cv"]["model_answer"] for v in it["vragen"])
     for s in it["sources"]:
         for k in s.get("uses_data", []) + s.get("noise_data", []):
@@ -169,7 +169,7 @@ def main(argv: list[str]) -> None:
                 if not any(defined_in.get(n, v["number"]) < v["number"] for n in used):
                     rep.fail("IT5", f"{vid}: builds_on = ja but no calc uses a result of an earlier vraag")
             else:  # a vraag without calc builds on via "vraag n" in the stem (bouwvraag 17)
-                named = {int(n) for m in re.finditer(r"\bvra(?:a|ge)g(?:en)?\s+\d+(?:\s*(?:,|en)\s*\d+)*", v["stem"], re.I)
+                named = {int(n) for m in re.finditer(r"\b(?:vraag|vragen)\s+\d+(?:\s*(?:,|en)\s*\d+)*", v["stem"], re.I)
                          for n in re.findall(r"\d+", m.group(0))}
                 if not named & set(b["builds_on_vragen"]):
                     rep.fail("IT5", f"{vid}: builds_on = ja, no calc, and the stem names none of vraag "

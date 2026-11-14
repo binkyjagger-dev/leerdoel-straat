@@ -5,7 +5,7 @@ import glob
 import re
 from pathlib import Path
 
-from tcommon import ROOT, knob_index, load_json, load_knobs, merged_catalogue, pattern_index
+from tcommon import ROOT, clean_reference, knob_index, load_json, load_knobs, merged_catalogue, pattern_index
 
 
 class ToetsRun:
@@ -28,7 +28,7 @@ class ToetsRun:
         hp = self.R / "30_context_history.json"
         self.history = load_json(hp)["contexts"] if hp.exists() else []
         rp = self.R / "30_reference_profile.json"
-        self.reference = load_json(rp) if rp.exists() else None
+        self.reference = clean_reference(load_json(rp) if rp.exists() else None, self.knobs)
 
     def blueprint(self) -> dict:
         return load_json(self.R / "32_blueprint.json")

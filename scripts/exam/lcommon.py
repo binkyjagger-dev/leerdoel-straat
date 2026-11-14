@@ -61,6 +61,7 @@ class Run:
                 texts = [u.question_text(q["unit_id"]), read_text(self.run_dir, og.get("text_ref")),
                          read_text(self.run_dir, q.get("cv_ref"))]
                 texts += [read_text(self.run_dir, f"text/{q['exam_id']}-bron{n}.txt") for n in q.get("sources", [])]
+                texts.append(read_text(self.run_dir, u.exams[q["exam_id"]].get("uitwerkbijlage_ref")))
                 self.questions[q["unit_id"]] = {
                     "question_id": q["unit_id"], "question_number": q["number"], "opgave_id": og["unit_id"],
                     "exam_id": q["exam_id"], "points": q["points"], "first_of_opgave": i == 0,

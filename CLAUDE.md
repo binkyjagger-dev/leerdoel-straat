@@ -106,6 +106,15 @@ python3 tests/run_toets_fixture.py                   # exercise toets-straat ste
 - Style examples are form only; `overlap_check.py` fails on any shared 8-word shingle with exam text.
 - Patterns are added only by `scripts/toets/patterns.py add` against an answered decision.
 
+## Lessons from E7 run 1 (bedrijfseconomie 2025-I + 2026-I, 2026-11-14)
+- 59 questions labelled by 24 labellers (A/B per opgave), plus 7 R decisions and 1 relaunch after LB4; after R 566 fields high, 24 medium, 0 disputed.
+- P16 (noem/omschrijf) does occur in the central exam: it is a central-exam pattern now (bedrijfsecon-063). A new base pattern came from a NIEUW proposal: P17 *Rangschikken naar een kenmerk* (2025-I v18, bedrijfsecon-061/062), added via `patterns.py add`.
+- `sources` mixed the number of bronnen with noise, and a table in the opgave text was sometimes counted as a bron. Now `sources` counts only numbered informatiebronnen and a separate knob `noise` (nee/ja) records unused data (bedrijfsecon-064). Labels made before this fail `profile_build.py` (PB3) until the exams are relabelled with `/examen --label --replace`.
+- The uitwerkbijlage (`*-u.pdf`) was not in the input, so schema labels were inferred from the cv. `exam_text.py` now reads a `*-u.pdf` into `text/<exam>-uitwerkbijlage.txt` (`uitwerkbijlage_ref`); put it in the exam folder.
+- In exam mode, labellers read other labellers' files of the same letter "for consistency". `item-labeller.md` now forbids opening any `26_labels.*`/`34_labels.*` file except its own output (R mode excepted).
+- LB4 accepts only the question's own texts and the bronnen in its `sources` list; one labeller quoted bron 4, which the opgave names but q23 does not list. The labeller now gets the exact list of evidence texts.
+- Graphs and figures are images in the text layer: labellers read their values from the cv. Fine for labels; a writer's style example from such a vraag lacks the figure.
+
 ## Lessons from koppel run 1 (LWEO Vraag en aanbod H1–H2, 2026-10-22/23)
 - The source run's `04_groups_student.json` was gone (only `output/*.csv` is kept); `10_criteria.json` was rebuilt from the export CSV (script in the run folder). Keep the generate run's JSON, or make the CSV rebuild a straat script.
 - A lesbrief covers a fraction of the syllabus: `scope_criteria` (decision economie-024) is needed, otherwise ~140 groups land in the gap report and every paragraph gets 250–500 candidates.

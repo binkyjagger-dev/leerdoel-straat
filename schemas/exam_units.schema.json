@@ -25,6 +25,7 @@
           "source_files": {"type": "object", "description": "part → original input path",
                            "additionalProperties": {"type": "string"}},
           "syllabus_note": {"type": ["string", "null"]},
+          "uitwerkbijlage_ref": {"type": ["string", "null"], "description": "text/<exam>-uitwerkbijlage.txt when a *-u.pdf was found"},
           "text_extraction": {"enum": ["text", "ocr", "mixed"]}
         }
       }

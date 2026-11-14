@@ -37,7 +37,7 @@ import sys
 from collections import defaultdict
 from pathlib import Path
 
-from tcommon import (MIX_LEVELS, ROOT, SHARE_EPS, BLOOM_ORDER, Report, bloom_rank, kinds_of, knob_index, load_json,
+from tcommon import (clean_reference, MIX_LEVELS, ROOT, SHARE_EPS, BLOOM_ORDER, Report, bloom_rank, kinds_of, knob_index, load_json,
                      load_knobs, merged_catalogue, pattern_index, save_json, validate_schema)
 
 REQUIRED = ["title", "level", "n_opgaven", "n_vragen"]
@@ -60,7 +60,7 @@ def reference_profile(run: Path | None, bank: Path, subjects: Path, subject: str
     for p in ([run / "30_reference_profile.json"] if run else []) + [bank / "profiel" / "referentieprofiel.json",
                                                                        subjects / subject / "toets" / "seed_profile.json"]:
         if p.exists():
-            return load_json(p)
+            return clean_reference(load_json(p), knob_index(load_knobs()))
     return None
 
 

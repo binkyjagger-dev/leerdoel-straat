@@ -54,6 +54,19 @@ def sort_values(d: dict, order: list[str]) -> dict:
     return dict(sorted(d.items(), key=lambda kv: (order.index(kv[0]) if kv[0] in order else len(order), kv[0])))
 
 
+def stale_values(lab: dict, knobs: dict) -> list[str]:
+    """Labelled knob values that are not values of the current knobs.json, and knobs the label lacks."""
+    out = []
+    for q in lab.get("questions", []):
+        for k in LABEL_KNOBS:
+            vals = knobs[k]["values"] if isinstance(knobs[k]["values"], list) else None
+            if k not in q:
+                out.append(f"v{q.get('question_number')} {k} missing")
+            elif vals and q[k] is not None and q[k] not in vals:
+                out.append(f"v{q.get('question_number')} {k}='{q[k]}'")
+    return out
+
+
 def question_values(l: dict, knobs: dict, pidx: dict) -> dict[str, list[tuple[str, float]]]:
     """knob → [(value or '!reason', points)] for one labelled question."""
     P, conf = l["points"], l["confidence"]
@@ -96,6 +109,12 @@ def from_labels(subject: str, bank: Path, reg: dict, files: dict, knobs: dict, c
         if eid not in files:
             continue
         lab = load_json(files[eid])
+        old = stale_values(lab, knobs)
+        if old:
+            rep.fail("PB3", f"labels/{eid}.json was labelled with knob values that no longer exist ({len(old)} fields, e.g. "
+                            f"{'; '.join(old[:3])}); the knobs changed on 2026-11-14 (sources/noise): relabel this exam with "
+                            f"/examen --label --subject {subject} --exam {eid} --replace")
+            continue
         errs = validate_def(lab, "item_labels.schema.json", "bank_file")
         if errs:
             rep.fail("PB1", f"labels/{eid}.json: {errs[0]}")

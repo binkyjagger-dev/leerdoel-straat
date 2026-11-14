@@ -47,8 +47,12 @@
   },
   "sources": {
    "in vraagtekst": 0.3,
-   "één bron zonder ruis": 0.4,
-   "meerdere bronnen met ruis": 0.3
+   "één bron": 0.4,
+   "meerdere bronnen": 0.3
+  },
+  "noise": {
+   "nee": 0.7,
+   "ja": 0.3
   },
   "claim": {
    "nee": 1.0

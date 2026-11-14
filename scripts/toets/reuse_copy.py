@@ -8,8 +8,9 @@ writes 33_items/<opgave>.json from toetsen/<toets_id>.json — intro, data, sour
 with the vraag ids and numbers of this toets (`builds_on_vragen` renumbered). Its stored merged labels are written as
 34_labels.A/ and 34_labels.B/<opgave>.json (identical, so label_merge.py --toets takes them as agreed), because the
 labels of a reused opgave count in the realised shares and it is not labelled, solved or verified again.
-Warns when a stem names "vraag n" with an old number that changed, or when a figure id is also used by another
-opgave of the run (both need the teacher's eye, docs/bouwvragen-toets.md Fase 3). Fails when the reused opgave in the
+References "vraag n" / "vragen n en m" to vragen of the reused opgave are rewritten to the new numbers in the stem and
+in every cv text (decision 18, 2026-11-14); the rest stays verbatim. Warns when a figure id is also used by another
+opgave of the run. Fails when the reused opgave in the
 blueprint does not match the toetsbank record (vragen, points, criteria).
 """
 from __future__ import annotations
@@ -19,6 +20,33 @@ import sys
 from pathlib import Path
 
 from tcommon import LABEL_FIELDS, Report, load_json, save_json
+
+VRAAG_REF = re.compile(r"\b(vraag|vragen)(\s+)(\d+(?:\s*(?:,|en|t/m)\s*\d+)*)", re.I)
+
+
+def renumber(text, renum: dict[int, int]):
+    """Rewrite vraag numbers in one string (or a list / dict of strings) with the old → new map; returns (new, n)."""
+    if isinstance(text, list):
+        out = [renumber(x, renum) for x in text]
+        return [x for x, _ in out], sum(n for _, n in out)
+    if isinstance(text, dict):
+        out = {k: renumber(v, renum) for k, v in text.items()}
+        return {k: v for k, (v, _) in out.items()}, sum(n for _, n in out.values())
+    if not isinstance(text, str):
+        return text, 0
+    count = 0
+
+    def sub(m):
+        nonlocal count
+        def num(mm):
+            nonlocal count
+            o = int(mm.group(0))
+            if o in renum and renum[o] != o:
+                count += 1
+                return str(renum[o])
+            return mm.group(0)
+        return m.group(1) + m.group(2) + re.sub(r"\d+", num, m.group(3))
+    return VRAAG_REF.sub(sub, text), count
 from toetsrun import ToetsRun, opt, subjects_opt
 
 
@@ -51,14 +79,22 @@ def main(argv: list[str]) -> None:
         vragen, labels = [], []
         for o, v in zip(old, new):
             item = {k: o[k] for k in ("stem", "uitwerkbijlage", "cv", "new_concepts") if k in o}
+            changed = 0
+            for k in ("stem", "uitwerkbijlage"):
+                if k in item:
+                    item[k], c = renumber(item[k], renum)
+                    changed += c
+            cv = dict(item["cv"])
+            for k in ("model_answer", "rules", "alternatives", "follow_through"):
+                cv[k], c = renumber(cv.get(k), renum)
+                changed += c
+            cv["scorepunten"] = [{**s, "text": renumber(s["text"], renum)[0]} for s in cv["scorepunten"]]
+            item["cv"] = cv
+            if changed:
+                rep.info("RU", f"{v['vraag_id']}: {changed} vraag reference(s) renumbered (decision 18)")
             item.update(vraag_id=v["vraag_id"], number=v["number"], points=o["points"],
                         builds_on_vragen=[renum.get(x, x) for x in o.get("builds_on_vragen", [])])
             vragen.append(item)
-            if o["number"] != v["number"]:
-                for m in re.finditer(r"\bvraag\s+(\d+)", o["stem"], re.I):
-                    if int(m.group(1)) in renum and renum[int(m.group(1))] != int(m.group(1)):
-                        rep.warn("RU", f"{v['vraag_id']}: the stem says 'vraag {m.group(1)}', which is vraag "
-                                       f"{renum[int(m.group(1))]} in this toets (verbatim copy: check with the teacher)")
             lab = o.get("label")
             if lab:
                 labels.append({**{f: lab.get(f) for f in LABEL_FIELDS}, "question_id": v["vraag_id"], "question_number": v["number"],

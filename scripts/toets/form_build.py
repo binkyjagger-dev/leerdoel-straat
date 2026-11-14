@@ -23,7 +23,7 @@ import sys
 from collections import defaultdict
 from pathlib import Path
 
-from tcommon import (BASE_PATTERNS_PATH, KNOBS_PATH, MIX_LEVELS, ROOT, exam_label, knob_index, load_json,
+from tcommon import (BASE_PATTERNS_PATH, KNOBS_PATH, MIX_LEVELS, ROOT, clean_reference, exam_label, knob_index, load_json,
                      merged_catalogue)
 
 
@@ -75,7 +75,9 @@ def build_data(subject: str, argv: list[str]) -> dict:
     else:
         ref = {"source": "none", "label": "referentie: geen", "n_exams": 0, "pooled": {}, "exams": [],
                "unknown_knobs": [], "points": 0}
-    reference = {"code": reference_code(ref), "label": ref.get("label") or ref["source"], "source": ref["source"],
+    ref = clean_reference(ref, knob_index(load_json(opt(argv, "--knobs") or KNOBS_PATH))) or ref
+    stale = ref.get("stale_knobs") or []
+    reference = {"code": reference_code(ref), "stale_knobs": stale, "label": (ref.get("label") or ref["source"]) + (f" (verouderd voor {', '.join(stale)}: examens opnieuw labelen)" if stale else ""), "source": ref["source"],
                  "provisional": ref["source"] != "bank-labels", "unknown_knobs": ref.get("unknown_knobs", []),
                  "pooled": {k: {v: d["share"] for v, d in vals.items()} for k, vals in (ref.get("pooled") or {}).items()},
                  "exams": [{"exam_id": e["exam_id"], "label": exam_label(e["exam_id"]),

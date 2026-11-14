@@ -16,7 +16,7 @@ KNOBS_PATH = DATA / "toets" / "knobs.json"
 BASE_PATTERNS_PATH = DATA / "toets" / "patterns_base.json"
 SHARE_EPS = 0.001
 # knobs the labeller sets per question (specs/26 §2); combination and bloom are computed
-LABEL_KNOBS = ["solo", "route", "steps", "sources", "claim", "new_concept", "schema", "builds_on"]
+LABEL_KNOBS = ["solo", "route", "steps", "sources", "noise", "claim", "new_concept", "schema", "builds_on"]
 LABEL_FIELDS = ["pattern"] + LABEL_KNOBS
 EXAMPLE_QUALITY = ["ongeschikt", "bruikbaar", "goed"]  # low → high
 MIX_LEVELS = [b for b in BLOOM_ORDER if b != "creëren"]  # creëren has no pattern (specs/31 §3)
@@ -30,6 +30,27 @@ def validate_def(data, schema_name: str, definition: str) -> list[str]:
     v = jsonschema.Draft202012Validator(sub)
     return [f"{'/'.join(str(p) for p in e.absolute_path) or '<root>'}: {e.message}"
             for e in sorted(v.iter_errors(data), key=lambda e: list(e.absolute_path))]
+
+
+def clean_reference(ref: dict | None, knobs: dict[str, dict]) -> dict | None:
+    """A reference profile whose knob values are no longer valid (e.g. labelled before `sources` changed on
+    2026-11-14) must not be shown as a reference: such knobs move to unknown_knobs and are listed in stale_knobs."""
+    if not ref or not ref.get("pooled"):
+        return ref
+    stale = []
+    for k, vals in (ref.get("pooled") or {}).items():
+        kd = knobs.get(k)
+        if kd and isinstance(kd["values"], list) and set(vals) - set(kd["values"]):
+            stale.append(k)
+    for k in knobs:
+        if knobs[k]["settable"] and k != "pattern" and k not in (ref.get("pooled") or {}) and k not in ref.get("unknown_knobs", []):
+            stale.append(k)  # knob added after the profile was built (e.g. noise)
+    if not stale:
+        return ref
+    out = dict(ref)
+    out["unknown_knobs"] = sorted(set(ref.get("unknown_knobs", [])) | set(stale))
+    out["stale_knobs"] = sorted(set(stale))
+    return out
 
 
 def subject_patterns_path(subject: str, subjects: Path | None = None) -> Path:

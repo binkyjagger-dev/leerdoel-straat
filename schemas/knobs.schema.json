@@ -13,7 +13,7 @@
         "type": "object",
         "required": ["id", "label", "ordinal", "values", "applies_to_kinds", "settable", "definition"],
         "properties": {
-          "id": {"enum": ["pattern", "solo", "route", "steps", "sources", "claim", "new_concept", "schema", "builds_on", "combination"]},
+          "id": {"enum": ["pattern", "solo", "route", "steps", "sources", "noise", "claim", "new_concept", "schema", "builds_on", "combination"]},
           "label": {"type": "string"},
           "ordinal": {"type": "boolean"},
           "values": {"oneOf": [{"const": "catalogue"},

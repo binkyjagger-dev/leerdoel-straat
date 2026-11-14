@@ -234,6 +234,7 @@
             "route",
             "steps",
             "sources",
+            "noise",
             "claim",
             "new_concept",
             "schema",

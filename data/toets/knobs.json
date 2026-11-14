@@ -1,5 +1,5 @@
 {
- "version": "seed-2026-11",
+ "version": "2026-11-14-noise",
  "knobs": [
   {
    "id": "pattern",
@@ -67,16 +67,33 @@
    "ordinal": true,
    "values": [
     "in vraagtekst",
-    "één bron zonder ruis",
-    "meerdere bronnen met ruis"
+    "één bron",
+    "meerdere bronnen"
    ],
    "applies_to_kinds": "all",
    "settable": true,
    "definition": {
-    "in vraagtekst": "alle gegevens staan in de tekst boven de vraag",
-    "één bron zonder ruis": "de gegevens staan in één informatiebron en worden allemaal gebruikt",
-    "meerdere bronnen met ruis": "de leerling haalt gegevens uit twee of meer bronnen, die ook gegevens bevatten die voor de vraag niet nodig zijn"
-   }
+    "in vraagtekst": "alle gegevens staan in de stam of de opgavetekst, ook in een tabel of grafiek die daar zonder informatiebronnummer staat",
+    "één bron": "de gegevens komen uit één genummerde informatiebron (eventueel samen met de stam)",
+    "meerdere bronnen": "de gegevens komen uit twee of meer genummerde informatiebronnen"
+   },
+   "label_evidence": "the sentence that names the informatiebron(nen) ('Gebruik informatiebron 2 en 3'), or the stem/opgave line that holds the data"
+  },
+  {
+   "id": "noise",
+   "label": "Ruis",
+   "ordinal": true,
+   "values": [
+    "nee",
+    "ja"
+   ],
+   "applies_to_kinds": "all",
+   "settable": true,
+   "definition": {
+    "nee": "elk gegeven getal in de tekst, tabellen, grafieken of bronnen die de leerling moet gebruiken, wordt gebruikt",
+    "ja": "die tekst, tabellen, grafieken of bronnen bevatten ook gegevens die de vraag niet nodig heeft (andere kolommen, perioden, producten, een tweede schijf)"
+   },
+   "label_evidence": "a number or row in the used text/table/bron that the answer does not need (or, for nee, the line that shows all data are used)"
   },
   {
    "id": "claim",

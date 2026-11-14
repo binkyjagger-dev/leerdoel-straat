@@ -2043,6 +2043,30 @@
       "raised_by": "intake",
       "supersedes": null,
       "scope": null
+    },
+    {
+      "id": "bedrijfsecon-064",
+      "question": "Knop sources herdefiniëren (alleen genummerde informatiebronnen: in vraagtekst / één bron / meerdere bronnen) en een nieuwe knop noise (nee/ja) toevoegen in data/toets/knobs.json?",
+      "context": "Na E7-run 1 (2025-I, 2026-I): de oude waarden mengden het aantal bronnen met ruis; een tabel of grafiek in de opgavetekst werd soms als bron geteld. Beide examens worden daarna opnieuw gelabeld.",
+      "options": [
+        "Ja, zoals voorgesteld",
+        "Nee"
+      ],
+      "proposed": "Ja, zoals voorgesteld",
+      "impact": "high",
+      "applies_to": [
+        "catalogue",
+        "item-labeller"
+      ],
+      "affects_units": null,
+      "status": "answered",
+      "answer": "zoals besloten 2026-11-14 (bouwvragen, Besluiten na E7-run 1)",
+      "answered_by": "user",
+      "answered_at": "2026-11-14T06:15:30Z",
+      "source_run": "toets-straat-build",
+      "raised_by": "human",
+      "supersedes": null,
+      "scope": null
     }
   ]
 }

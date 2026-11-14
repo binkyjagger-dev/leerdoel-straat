@@ -4,7 +4,8 @@
 Usage: exam_text.py <run_dir> <exam_folder> [<exam_folder> ...]
 
 Each exam folder holds `*-o.pdf` (opgaven), `*-c.pdf` (correctievoorschrift) and
-optionally `*-b.pdf` (bijlage) and `*-u.pdf` (uitwerkbijlage); a folder without PDFs
+optionally `*-b.pdf` (bijlage) and `*-u.pdf` (uitwerkbijlage → text/<exam>-uitwerkbijlage.txt, the exam's
+`uitwerkbijlage_ref`); a folder without PDFs
 is expanded to its subfolders. Copies the PDFs to <run_dir>/input/<exam_id>/, writes
 text files to <run_dir>/text/ and a draft <run_dir>/21_exam_units.json whose
 `parse_issues` the exam-ingest agent resolves. Existing exams in the units file are
@@ -315,6 +316,11 @@ def ingest_exam(run_dir: Path, folder: Path, subject: str) -> tuple[dict, list[d
     o_lines, o_empty = pdf_lines(files["o"], issues, eid, f"{code}-o")
     c_lines, c_empty = pdf_lines(files["c"], issues, eid, f"{code}-c")
     b_lines, b_empty = pdf_lines(files["b"], issues, eid, f"{code}-b") if "b" in files else ([], 0)
+    # uitwerkbijlage (*-u.pdf), when present: one text file for the labellers (specs/26 §3; E7 run 1 lesson)
+    meta["uitwerkbijlage_ref"] = None
+    if "u" in files:
+        u_lines, _ = pdf_lines(files["u"], issues, eid, f"{code}-u")
+        meta["uitwerkbijlage_ref"] = write(run_dir, f"{eid}-uitwerkbijlage.txt", u_lines)
     meta["n_questions"], meta["max_score"] = parse_header(o_lines)
     meta["syllabus_note"] = None
     meta["text_extraction"] = "text" if not (o_empty or c_empty or b_empty) else "mixed"
