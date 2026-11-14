@@ -1,0 +1,19 @@
+{
+ "approved": false,
+ "reviewed_at": "2030-10-01",
+ "entries": [
+  {
+   "target": "O2",
+   "field": "context",
+   "value": "bakkerij met een bezorgdienst voor bedrijven",
+   "note": "liever zakelijk"
+  },
+  {
+   "target": "O1-V1",
+   "field": "knobs.solo",
+   "value": "relationeel",
+   "note": "deze vraag moet zwaarder",
+   "accept_deviation": true
+  }
+ ]
+}

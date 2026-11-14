@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SolverAnswers",
+  "description": "R/34_solutions/<opgave>.json — the blind toets-solver's answers (specs/33 §3 T4, specs/34 §4).",
+  "type": "object",
+  "required": ["opgave_id", "answers"],
+  "properties": {
+    "opgave_id": {"type": "string", "pattern": "^O[0-9]+$"},
+    "answers": {"type": "array", "items": {
+      "type": "object", "required": ["vraag", "answer_text", "numbers", "confidence", "ambiguity_notes"],
+      "properties": {
+        "vraag": {"type": "integer", "minimum": 1},
+        "answer_text": {"type": "string"},
+        "numbers": {"type": "array", "items": {"type": "object", "required": ["label", "value"],
+                    "properties": {"label": {"type": "string"}, "value": {"type": "number"}}}},
+        "confidence": {"enum": ["high", "medium", "low"]},
+        "ambiguity_notes": {"type": "array", "items": {"type": "string"}}
+      }}},
+    "exam_example_errors": {"type": "array", "items": {"type": "string"}}
+  }
+}

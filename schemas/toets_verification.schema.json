@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ToetsVerification",
+  "description": "R/35_verification.json — the fresh toets-verifier's verdicts (specs/34 §5).",
+  "type": "object",
+  "required": ["round", "vragen", "toets_findings", "proposed_decisions"],
+  "properties": {
+    "round": {"type": "integer", "minimum": 1},
+    "only": {"type": ["array", "null"], "items": {"type": "string"}},
+    "vragen": {"type": "array", "items": {
+      "type": "object", "required": ["vraag_id", "verdict", "findings"],
+      "properties": {
+        "vraag_id": {"type": "string", "pattern": "^O[0-9]+-V[0-9]+$"},
+        "verdict": {"enum": ["pass", "repair"]},
+        "findings": {"type": "array", "items": {"$ref": "#/$defs/finding"}},
+        "bloom_realised": {"type": "array", "items": {"type": "object", "required": ["seq", "bloom"],
+                           "properties": {"seq": {"type": "integer"}, "bloom": {"type": "string"}}}},
+        "pattern_realised": {"type": ["string", "null"]}
+      }}},
+    "toets_findings": {"type": "array", "items": {"$ref": "#/$defs/finding"}},
+    "proposed_decisions": {"type": "array", "items": {"type": "object"}}
+  },
+  "$defs": {
+    "finding": {
+      "type": "object", "required": ["id", "severity", "evidence", "fix_hint"],
+      "properties": {
+        "id": {"enum": ["V1", "V2", "V3", "V4", "V5", "V6", "V7", "V8", "V9", "V10"]},
+        "vraag_id": {"type": ["string", "null"]},
+        "severity": {"enum": ["must", "should"]},
+        "evidence": {"type": "string"},
+        "fix_hint": {"type": "string"}
+      }
+    }
+  }
+}

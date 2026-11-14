@@ -1,0 +1,10 @@
+{
+ "run_id": "fixture-pipeline",
+ "subject": "fixturevak",
+ "level": "5vwo",
+ "criteria_run": "fixture-generate",
+ "reference": "bank-2-examens",
+ "max_repair_rounds": 2,
+ "writer_batch": 4,
+ "status": "order-confirmed"
+}

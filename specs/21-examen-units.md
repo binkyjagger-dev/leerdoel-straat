@@ -37,10 +37,20 @@ exam       vwo-2025-tv1
 |---|---|
 | `exam` | `exam_id`, `code` (`VW-0400-a-25-1`), `level`, `year`, `tijdvak`, `subject`, `n_questions`, `max_score` (both from the header), `files` (part → path), `syllabus_note` (intake), `text_extraction` (`text`/`ocr`) |
 | `opgave` | `unit_id`, `exam_id`, `number`, `title` (first heading or first line), `sources` (informatiebron numbers named in the block), `text_ref` (context text) |
-| `question` | `unit_id`, `opgave_id`, `number`, `points` (from `np` prefix), `text_ref` (question text incl. the context lines directly above it), `sources`, `formula` (formuleblad entry for this number, if any), `cv_ref` (the full correctievoorschrift entry), `cv_notes` (alternatives "of", *Opmerking(en)*) |
+| `question` | `unit_id`, `opgave_id`, `number`, `points` (from `np` prefix), `text_ref` (question text incl. the context lines directly above it), `sources` + `sources_from` (below), `formula` (formuleblad entry for this number, if any), `cv_ref` (the full correctievoorschrift entry), `cv_notes` (alternatives "of", *Opmerking(en)*) |
 | `scorepunt` | `unit_id`, `question_id`, `seq`, `points`, `scoring` (§4), `text` (the scorepunt line(s) from the correctievoorschrift, verbatim) |
 
 Questions also carry `cv_max` (the `maximumscore` of the correctievoorschrift entry).
+
+**Question `sources`** (deterministic, `exam_text.py`; fixed 2026-11-14): every informatiebron number the
+question's own text (its context lines + `[vraag]`) names, with enumerations and ranges expanded
+("informatiebron 2", "informatiebronnen 2, 3 en 4", "informatiebronnen 1 tot en met 4" / "t/m",
+"zie informatiebron 3 en 4"); the opgave's sentence "Bij deze opgave hoort/horen …" does not count as
+named by the question. `sources_from` = `"question"`. When the question names no bron, `sources` = the
+opgave's "Bij deze opgave horen de informatiebronnen …" set and `sources_from` = `"opgave"`; an opgave
+without that sentence gives `[]` (`"question"`). Bronnen are never derived from the correctievoorschrift.
+Downstream, every bron in `sources` is allowed evidence (LB4); with `"opgave"` the labeller counts for
+the `sources` knob only the bronnen the answer needs (specs/26).
 The file is `{run_id, exams: [...], units: [...], parse_issues: [{exam_id, unit_id, issue}]}`.
 
 Text files live in `runs/<run_id>/text/` only (git-ignored):

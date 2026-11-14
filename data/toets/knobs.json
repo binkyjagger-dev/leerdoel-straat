@@ -1,0 +1,165 @@
+{
+ "version": "2026-11-14-noise",
+ "knobs": [
+  {
+   "id": "pattern",
+   "label": "Patroon",
+   "ordinal": false,
+   "values": "catalogue",
+   "applies_to_kinds": "all",
+   "settable": true,
+   "definition": "het vraagpatroon uit de catalogus (basislaag + vaklaag)"
+  },
+  {
+   "id": "solo",
+   "label": "SOLO-doel",
+   "ordinal": true,
+   "values": [
+    "unistructureel",
+    "multistructureel",
+    "relationeel",
+    "uitgebreid abstract"
+   ],
+   "applies_to_kinds": "all",
+   "settable": true,
+   "definition": {
+    "unistructureel": "één relevant element of één gegeven volstaat",
+    "multistructureel": "losse elementen of een standaardprocedure die de leerling uit het hoofd kent",
+    "relationeel": "het antwoord verbindt gegevens uit verschillende bronnen of twee leerdoelen tot één uitwerking",
+    "uitgebreid abstract": "de leerling generaliseert voorbij de context of beoordeelt een model of aanname"
+   }
+  },
+  {
+   "id": "route",
+   "label": "Route",
+   "ordinal": true,
+   "values": [
+    "gegeven",
+    "zelf vinden"
+   ],
+   "applies_to_kinds": [
+    "calculation",
+    "schema"
+   ],
+   "settable": true,
+   "definition": {
+    "gegeven": "de vraag noemt de tussenstappen ('bereken hiervoor eerst …') of het schema bevat de rijen",
+    "zelf vinden": "de vraag noemt alleen het eindpunt"
+   }
+  },
+  {
+   "id": "steps",
+   "label": "Stappen",
+   "ordinal": true,
+   "values": [
+    "1",
+    "2",
+    "3",
+    "4+"
+   ],
+   "applies_to_kinds": "all",
+   "settable": true,
+   "definition": "het aantal reken- of redeneerstappen dat een volledig antwoord nodig heeft; alleen schakels die op elkaar voortbouwen tellen, parallelle onderdelen (noem twee voordelen, per groep een voorbeeld) samen tellen als 1 stap (bedrijfsecon-066)"
+  },
+  {
+   "id": "sources",
+   "label": "Bronnen",
+   "ordinal": true,
+   "values": [
+    "in vraagtekst",
+    "één bron",
+    "meerdere bronnen"
+   ],
+   "applies_to_kinds": "all",
+   "settable": true,
+   "definition": {
+    "in vraagtekst": "alle gegevens staan in de stam of de opgavetekst, ook in een tabel of grafiek die daar zonder informatiebronnummer staat",
+    "één bron": "de gegevens komen uit één genummerde informatiebron (eventueel samen met de stam)",
+    "meerdere bronnen": "de gegevens komen uit twee of meer genummerde informatiebronnen"
+   },
+   "label_evidence": "the sentence that names the informatiebron(nen) ('Gebruik informatiebron 2 en 3'), or the stem/opgave line that holds the data"
+  },
+  {
+   "id": "noise",
+   "label": "Ruis",
+   "ordinal": true,
+   "values": [
+    "nee",
+    "ja"
+   ],
+   "applies_to_kinds": "all",
+   "settable": true,
+   "definition": {
+    "nee": "de vraag heeft geen gegevens uit tekst, tabellen, grafieken of bronnen nodig, of elk gegeven getal in wat de leerling moet gebruiken wordt gebruikt (bedrijfsecon-067)",
+    "ja": "de vraag gebruikt gegevens uit tekst, tabellen, grafieken of bronnen en die bevatten ook gegevens die de vraag niet nodig heeft (andere kolommen, perioden, producten, een tweede schijf): de leerling moet selecteren"
+   },
+   "label_evidence": "a number or row in the used text/table/bron that the answer does not need (or, for nee, the line that shows all data are used)"
+  },
+  {
+   "id": "claim",
+   "label": "Bewering in de stam",
+   "ordinal": true,
+   "values": [
+    "nee",
+    "ja"
+   ],
+   "applies_to_kinds": "all",
+   "settable": true,
+   "definition": "de stam bevat een bewering, stelling of conclusie van iemand die de leerling moet onderbouwen of toetsen"
+  },
+  {
+   "id": "new_concept",
+   "label": "Nieuw begrip in de stam",
+   "ordinal": true,
+   "values": [
+    "nee",
+    "ja"
+   ],
+   "applies_to_kinds": "all",
+   "settable": true,
+   "definition": "de stam of een bron introduceert en omschrijft een begrip dat niet in de succescriteria staat en dat in het antwoord moet worden gebruikt"
+  },
+  {
+   "id": "schema",
+   "label": "Schema",
+   "ordinal": true,
+   "values": [
+    "voorgestructureerd",
+    "deels ingevuld"
+   ],
+   "applies_to_kinds": [
+    "schema"
+   ],
+   "settable": true,
+   "definition": {
+    "voorgestructureerd": "de uitwerkbijlage geeft alle rijen en kolommen, de leerling vult alleen bedragen in",
+    "deels ingevuld": "de uitwerkbijlage geeft een deel van de posten en bedragen, de leerling bepaalt zelf welke posten nog nodig zijn"
+   }
+  },
+  {
+   "id": "builds_on",
+   "label": "Voortbouwen",
+   "ordinal": true,
+   "values": [
+    "nee",
+    "ja"
+   ],
+   "applies_to_kinds": "all_but_first_of_opgave",
+   "settable": true,
+   "definition": "de vraag gebruikt een uitkomst van een eerdere vraag van dezelfde opgave ('zie vraag 2')"
+  },
+  {
+   "id": "combination",
+   "label": "Combinatie",
+   "ordinal": true,
+   "values": [
+    "1",
+    "2",
+    "3"
+   ],
+   "applies_to_kinds": "all",
+   "settable": false,
+   "definition": "aantal verschillende leerdoelen in de scorepunten van de vraag; berekend uit de koppelingen"
+  }
+ ]
+}

@@ -1,0 +1,37 @@
+{
+ "subject": "fixturevak",
+ "criteria_run": "fixture-generate",
+ "created_at": "2030-06-01",
+ "exams": [
+  {
+   "exam_id": "vwo-2030-tv1",
+   "code": "VW-9999-a-30-1",
+   "year": 2030,
+   "tijdvak": 1,
+   "level": "vwo",
+   "n_questions": 4,
+   "max_score": 9,
+   "syllabus_note": null,
+   "files": {
+    "o": "input/examens/2030 TV1/o.pdf"
+   },
+   "added_by_run": "fixture-examen",
+   "added_at": "2030-06-01"
+  },
+  {
+   "exam_id": "vwo-2031-tv1",
+   "code": "VW-9999-a-31-1",
+   "year": 2031,
+   "tijdvak": 1,
+   "level": "vwo",
+   "n_questions": 2,
+   "max_score": 5,
+   "syllabus_note": null,
+   "files": {
+    "o": "input/examens/2031 TV1/o.pdf"
+   },
+   "added_by_run": "fixture-examen",
+   "added_at": "2030-06-01"
+  }
+ ]
+}

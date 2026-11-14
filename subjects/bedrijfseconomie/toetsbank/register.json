@@ -1,0 +1,18 @@
+{
+  "subject": "bedrijfseconomie",
+  "criteria_run": "20261021-1647-bedrijfseconomie-vwo-2028-run2",
+  "created_at": "2026-11-14",
+  "toetsen": [
+    {
+      "toets_id": "20261114-1140-toets-bedrijfseconomie",
+      "title": "Proeftoets bedrijfseconomie periode 2",
+      "level": "5vwo",
+      "run_id": "20261114-1140-toets-bedrijfseconomie",
+      "created_at": "2026-11-14",
+      "max_score": 44,
+      "n_opgaven": 5,
+      "n_vragen": 16,
+      "reference": null
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Knobs",
+  "description": "data/toets/knobs.json — level knob definitions, generic for all subjects (specs/31 §4). R/30_knobs.json is a copy.",
+  "type": "object",
+  "required": ["version", "knobs"],
+  "properties": {
+    "version": {"type": "string"},
+    "knobs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "label", "ordinal", "values", "applies_to_kinds", "settable", "definition"],
+        "properties": {
+          "id": {"enum": ["pattern", "solo", "route", "steps", "sources", "noise", "claim", "new_concept", "schema", "builds_on", "combination"]},
+          "label": {"type": "string"},
+          "ordinal": {"type": "boolean"},
+          "values": {"oneOf": [{"const": "catalogue"},
+                               {"type": "array", "minItems": 2, "items": {"type": "string"}, "uniqueItems": true}],
+                     "description": "ordered low → high when ordinal; 'catalogue' = the codes of the merged pattern catalogue"},
+          "applies_to_kinds": {"oneOf": [{"enum": ["all", "all_but_first_of_opgave"]},
+                                         {"type": "array", "minItems": 1,
+                                          "items": {"enum": ["explanation", "calculation", "schema", "drawing", "choice"]}}]},
+          "settable": {"type": "boolean"},
+          "definition": {"oneOf": [{"type": "string"}, {"type": "object", "additionalProperties": {"type": "string"}}]},
+          "label_evidence": {"type": "string", "description": "what the labeller quotes as evidence for this knob"}
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

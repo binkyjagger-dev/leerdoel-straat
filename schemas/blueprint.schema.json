@@ -1,0 +1,309 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Blueprint",
+  "description": "R/32_blueprint.json — the toets-planner's plan (specs/33 §3 T2a). planned_shares is written by blueprint_check.py --write, never by the planner.",
+  "type": "object",
+  "required": [
+    "opgaven",
+    "coverage",
+    "planner_notes"
+  ],
+  "properties": {
+    "opgaven": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/opgave"
+      }
+    },
+    "coverage": {
+      "type": "object",
+      "required": [
+        "per_group"
+      ],
+      "properties": {
+        "per_group": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "group_id",
+              "points",
+              "criteria_tested",
+              "criteria_not_tested"
+            ],
+            "properties": {
+              "group_id": {
+                "type": "string"
+              },
+              "points": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "criteria_tested": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "criteria_not_tested": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "planned_shares": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "bloom": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "number"
+          }
+        },
+        "knobs": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "number"
+            }
+          }
+        }
+      }
+    },
+    "planner_notes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "accepted_deviations": {
+      "type": "array",
+      "description": "teacher changes accepted at pause 2 despite a check failure (blueprint_apply.py); they go to the verantwoording",
+      "items": {
+        "type": "object",
+        "required": [
+          "target",
+          "field"
+        ],
+        "properties": {
+          "target": {
+            "type": "string"
+          },
+          "field": {
+            "type": "string"
+          },
+          "value": {},
+          "note": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "review_rounds": {
+      "type": "integer",
+      "minimum": 0
+    }
+  },
+  "$defs": {
+    "level": {
+      "enum": [
+        "onthouden",
+        "begrijpen",
+        "toepassen",
+        "analyseren",
+        "evalueren",
+        "creëren"
+      ]
+    },
+    "opgave": {
+      "type": "object",
+      "required": [
+        "opgave_id",
+        "title",
+        "context",
+        "context_tags",
+        "sources_planned",
+        "reused_from",
+        "vragen"
+      ],
+      "properties": {
+        "opgave_id": {
+          "type": "string",
+          "pattern": "^O[0-9]+$"
+        },
+        "title": {
+          "type": "string"
+        },
+        "context": {
+          "type": "string"
+        },
+        "context_tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "sources_planned": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "reused_from": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "object",
+              "required": [
+                "toets_id",
+                "opgave_id"
+              ],
+              "properties": {
+                "toets_id": {
+                  "type": "string"
+                },
+                "opgave_id": {
+                  "type": "string"
+                }
+              }
+            }
+          ]
+        },
+        "figures_planned": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "vragen": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/vraag"
+          }
+        }
+      }
+    },
+    "vraag": {
+      "type": "object",
+      "required": [
+        "vraag_id",
+        "number",
+        "points",
+        "pattern",
+        "knobs",
+        "builds_on_vragen",
+        "scorepunten",
+        "intent",
+        "example_refs"
+      ],
+      "properties": {
+        "vraag_id": {
+          "type": "string",
+          "pattern": "^O[0-9]+-V[0-9]+$"
+        },
+        "number": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "points": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "pattern": {
+          "type": "string",
+          "pattern": "^[A-Z][0-9]{2}(\\+[A-Z][0-9]{2})?$"
+        },
+        "knobs": {
+          "type": "object",
+          "required": [
+            "solo",
+            "route",
+            "steps",
+            "sources",
+            "noise",
+            "claim",
+            "new_concept",
+            "schema",
+            "builds_on"
+          ],
+          "additionalProperties": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "builds_on_vragen": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "scorepunten": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "seq",
+              "points",
+              "criterion_id",
+              "bloom"
+            ],
+            "properties": {
+              "seq": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "points": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "criterion_id": {
+                "type": "string"
+              },
+              "bloom": {
+                "$ref": "#/$defs/level"
+              }
+            }
+          }
+        },
+        "intent": {
+          "type": "string"
+        },
+        "example_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "figure": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "accepted_deviation": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    }
+  }
+}

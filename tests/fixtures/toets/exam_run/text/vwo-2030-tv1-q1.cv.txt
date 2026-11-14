@@ -1,0 +1,4 @@
+maximumscore 3
+• omzet 2.000 x € 2 = € 4.000
+• variabele kosten 2.000 x € 0,80 = € 1.600
+• winst € 4.000 - € 1.600 - € 1.500 = € 900

@@ -25,6 +25,7 @@
           "source_files": {"type": "object", "description": "part → original input path",
                            "additionalProperties": {"type": "string"}},
           "syllabus_note": {"type": ["string", "null"]},
+          "uitwerkbijlage_ref": {"type": ["string", "null"], "description": "text/<exam>-uitwerkbijlage.txt when a *-u.pdf was found"},
           "text_extraction": {"enum": ["text", "ocr", "mixed"]}
         }
       }
@@ -41,6 +42,7 @@
           "number": {"type": "integer"},
           "title": {"type": ["string", "null"]},
           "sources": {"type": "array", "items": {"type": "integer"}},
+          "sources_from": {"enum": ["question", "opgave"]},
           "text_ref": {"type": ["string", "null"]},
           "opgave_id": {"type": "string"},
           "points": {"type": "integer", "minimum": 1},
@@ -57,7 +59,7 @@
           {"if": {"properties": {"kind": {"const": "opgave"}}},
            "then": {"required": ["number", "title", "sources", "text_ref"]}},
           {"if": {"properties": {"kind": {"const": "question"}}},
-           "then": {"required": ["opgave_id", "number", "points", "text_ref", "sources", "cv_max", "cv_ref", "cv_notes", "formula_ref"]}},
+           "then": {"required": ["opgave_id", "number", "points", "text_ref", "sources", "sources_from", "cv_max", "cv_ref", "cv_notes", "formula_ref"]}},
           {"if": {"properties": {"kind": {"const": "scorepunt"}}},
            "then": {"required": ["question_id", "seq", "points", "scoring", "text"]}}
         ]

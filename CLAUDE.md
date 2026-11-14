@@ -20,18 +20,23 @@ report + doubt list.
 
 ## Layout
 ```
-specs/            00–06 leerdoel-straat (/generate) · 10–15 methode-straat (/koppel) · 20–25 examen-straat (/examen; built and first run 2026-10-27; plan: docs/plan-examen-straat.md)
+specs/            00–06 leerdoel-straat (/generate) · 10–15 methode-straat (/koppel) · 20–25 examen-straat (/examen; built and first run 2026-10-27; plan: docs/plan-examen-straat.md) · 26 examen labels (E7) · 30–35 toets-straat (/toets; specified 2026-11-13; build steps 1–6 done 2026-11-14: schemas, catalogue, E7 labels + profile, order form, blueprint, writing and checks, export and toetsbank (T0–T6); first real run pending; open build questions: docs/bouwvragen-toets.md; plan: docs/plan-toets-straat.md)
+data/toets/       knobs.json patterns_base.json (toets-straat rule files; seed 2026-11)
+subjects/<vak>/toets/  patterns.json (subject layer) conventions.md contexten.md (human) seed_profile.json sjablonen/ — see specs/31
+subjects/<vak>/examenbank/labels/ + profiel/  (E7) pattern/knob labels per exam question + reference profile — specs/26
+subjects/<vak>/toetsbank/  (toets-straat) register.json toetsen/ contexts.json output/ — specs/35
 schemas/          JSON schemas per artefact
 data/             rule files (Bloom verbs, student-language rules)
 scripts/          validate.py bloom_check.py student_language_check.py coverage.py merge_groups.py apply_verdicts.py export.py decisions.py verb_table.py glossary.py
 subjects/<vak>/   profile.md (human) + decisions.json (straat, via decisions.py) + bloom_verbs.json (optional, via verb_table.py) + glossary.json (optional, via glossary.py) — see specs/06
 docs/             HANDLEIDING.md (one-page tutorial, Dutch)
 .claude/agents/   ingest intake planner generator student-language verifier
-.claude/commands/ generate (/generate orchestrator) · koppel (/koppel orchestrator) · examen (/examen orchestrator)
+.claude/commands/ generate (/generate orchestrator) · koppel (/koppel orchestrator) · examen (/examen orchestrator, incl. E7 and --label) · toets (/toets; T0–T6)
 .claude/agents/   method-ingest mapping-judge mapping-verifier exercise-judge   (methode-straat; intake is shared, mapping mode)
-.claude/agents/   exam-ingest exam-judge   (examen-straat; intake exam mode, mapping-verifier exam mode)
+.claude/agents/   exam-ingest exam-judge   (examen-straat; intake exam mode, mapping-verifier exam mode) · item-labeller (E7 exam mode, /toets T4 toets mode) · toets-planner toets-writer toets-solver toets-verifier (toets-straat)
 scripts/mapping/  ocr_pdf ocr_images docx_text validate_method candidates gradation check_mappings export_mappings compare_baseline · part B: ex_candidates ex_merge check_ex_mappings export_exercises · koppel_extend (/koppel --extend, specs/13 §5)
-scripts/exam/     exam_text validate_exam exam_candidates exam_merge check_exam_mappings bank_add bank_export exam_sample (ecommon = shared helpers, reuses scripts/mapping)
+scripts/exam/     exam_text validate_exam exam_candidates exam_merge check_exam_mappings bank_add bank_export exam_sample (ecommon = shared helpers, reuses scripts/mapping) · E7: label_merge check_labels bank_labels_add profile_build (lcommon)
+scripts/toets/    patterns (catalogue) form_build validate_toets (order|blueprint|items|verification) · T2: blueprint_check blueprint_report blueprint_apply · T3: exam_examples items_check calc_check figures overlap_check · T4: student_build solver_compare realized · T6: export_toets (docmodel: md + python-docx) toetsbank_add (+ --history) · reuse_copy (tcommon toetsrun shares nlnum = shared helpers)
 subjects/<vak>/examenbank/  (examen-straat) register.json + links/<exam>.json + output/ — bound to one criteria run; see specs/25
 input/examens-<vak>/<jaar TVn>/  CvTE exam PDFs (-o opgaven, -c correctievoorschrift, -b bijlage); not committed
 subjects/<vak>/methodes/<methode-id>/profile.md   (human) — book order, structure, terms
@@ -41,12 +46,13 @@ tests/fixtures/   small synthetic run used to exercise the scripts
 
 ## Running
 ```
-pip install --break-system-packages jsonschema   # once
+pip install --break-system-packages jsonschema   # once (toets-straat also: pymupdf matplotlib python-docx)
 /generate input/syllabus-economie-vwo.pdf --subject economie
 python3 scripts/export.py runs/<run_id>          # re-export only
 python3 tests/run_fixture.py                         # exercise all /generate scripts on the fixture
 python3 tests/run_koppel_fixture.py                  # exercise all /koppel scripts on the koppel fixture
 python3 tests/run_examen_fixture.py                  # exercise all /examen scripts (builds small exam PDFs itself)
+python3 tests/run_toets_fixture.py                   # exercise toets-straat steps 1–6 (catalogue, E7, order, form, blueprint, items checks, solver, realised, export, toetsbank)
 /koppel input/<m>/boek.pdf --subject economie --method <id> --from <generate-run> --chapters 1,2 --baseline nulmeting.csv
 ```
 
@@ -91,6 +97,31 @@ python3 tests/run_examen_fixture.py                  # exercise all /examen scri
 - Two judges (A, B) per paragraph in separate Agent calls; confidence from agreement + quote validity; verifier in fresh context does precision (sample), recall (per paragraph) and gradation checks; one repair round (judge R).
 - Method text lives only in `runs/<id>/text/` (git-ignored); PDFs under `input/` are not committed.
 - Criterion ids from /generate are the key everywhere; `10_criteria.json` is a copy of the source run's `04_groups_student.json`.
+
+## Toets-straat ground rules (specs/26, 30–35, decided 2026-11-13)
+- Two pauses: the order (31_order.json) and the blueprint (32_blueprint_review.json via blueprint_apply.py). Nothing is written before the teacher approves the blueprint.
+- Knob shares and the Bloom mix are by points; the reference profile is rebuilt from `examenbank/labels/` by `profile_build.py`, never edited by hand.
+- Realised knobs are measured by the same `item-labeller` that labels exam questions (two labellers + R), blind to the blueprint.
+- Every given number is named in `data`, every computed number in `calc`; `calc_check.py` recomputes, the blind solver re-solves. Figures are rendered from specs, never drawn by an agent.
+- Style examples are form only; `overlap_check.py` fails on any shared 8-word shingle with exam text.
+- Patterns are added only by `scripts/toets/patterns.py add` against an answered decision.
+
+## Lessons from toets run 1 (proeftoets bedrijfseconomie periode 2, 5 VWO, 2026-11-14)
+- First end-to-end /toets run: 5 opgaven, 16 vragen, 44 p, matrix exact (20 groups), Bloom within ±5 pp. Verifier round 1: 14/16 pass; O4 (table gave away V12) and O5 (formula sheet referenced that BE does not have) repaired in one round; round 2 16/16 pass.
+- The steps knob stayed outside tolerance (steps 1 = 7 % vs 18 %, steps 3 = 59 % vs 44 %): both labellers agreed against the plan, so no R round ran and `realized.py` ignores the verifier's V5 calls. Open proposed decision: steps in combination vragen = longest chain, parallel parts = 1; who decides when labellers agree against the plan. Item repair cannot fix this.
+- `docmodel.write` now splits Markdown pipe tables out of paragraph text; a table in an opgave intro reached Word as raw `| … |` lines. Always look at the rendered leerling PDF before sending.
+- `overlap_check.py` matches number-only shingles (writers put words between numbers to pass); IT3 does not match "35%" against 0.35; BE has no `formuleblad.md` (writers must put any formula in the stem); `solver_compare` reports "mismatch" when the cv's final is a derived number (10 pp) the solver states as its parts (35 % vs 45 %).
+- Solver ambiguity notes are the best should-findings: unstated btw basis, whether an item is already in a given result, rounding. Writers should state these in the stem by default.
+- Cost: ~40 agent calls (1 planner, 5 writers, 5 solvers, 10 labellers, 1 R, 2 verifiers, 2 repair writers, 6 T4 reruns, …).
+
+## Lessons from E7 run 1 (bedrijfseconomie 2025-I + 2026-I, 2026-11-14)
+- 59 questions labelled by 24 labellers (A/B per opgave), plus 7 R decisions and 1 relaunch after LB4; after R 566 fields high, 24 medium, 0 disputed.
+- P16 (noem/omschrijf) does occur in the central exam: it is a central-exam pattern now (bedrijfsecon-063). A new base pattern came from a NIEUW proposal: P17 *Rangschikken naar een kenmerk* (2025-I v18, bedrijfsecon-061/062), added via `patterns.py add`.
+- `sources` mixed the number of bronnen with noise, and a table in the opgave text was sometimes counted as a bron. Now `sources` counts only numbered informatiebronnen and a separate knob `noise` (nee/ja) records unused data (bedrijfsecon-064). Labels made before this fail `profile_build.py` (PB3) until the exams are relabelled with `/examen --label --replace`.
+- The uitwerkbijlage (`*-u.pdf`) was not in the input, so schema labels were inferred from the cv. `exam_text.py` now reads a `*-u.pdf` into `text/<exam>-uitwerkbijlage.txt` (`uitwerkbijlage_ref`); put it in the exam folder.
+- In exam mode, labellers read other labellers' files of the same letter "for consistency". `item-labeller.md` now forbids opening any `26_labels.*`/`34_labels.*` file except its own output (R mode excepted).
+- LB4 accepts only the question's own texts and the bronnen in its `sources` list; one labeller quoted bron 4, which the opgave names but q23 does not list. The labeller now gets the exact list of evidence texts.
+- Graphs and figures are images in the text layer: labellers read their values from the cv. Fine for labels; a writer's style example from such a vraag lacks the figure.
 
 ## Lessons from koppel run 1 (LWEO Vraag en aanbod H1–H2, 2026-10-22/23)
 - The source run's `04_groups_student.json` was gone (only `output/*.csv` is kept); `10_criteria.json` was rebuilt from the export CSV (script in the run folder). Keep the generate run's JSON, or make the CSV rebuild a straat script.

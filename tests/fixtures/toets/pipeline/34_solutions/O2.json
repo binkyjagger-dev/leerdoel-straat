@@ -1,0 +1,33 @@
+{
+ "opgave_id": "O2",
+ "answers": [
+  {
+   "vraag": 3,
+   "answer_text": "2.000 × 2,50 = 5.000",
+   "numbers": [
+    {
+     "label": "omzet",
+     "value": 5000
+    }
+   ],
+   "confidence": "high",
+   "ambiguity_notes": []
+  },
+  {
+   "vraag": 4,
+   "answer_text": "5.000 - 1.800 - 2.300 = 900, dus niet door",
+   "numbers": [
+    {
+     "label": "variabele kosten",
+     "value": 1800
+    },
+    {
+     "label": "winst",
+     "value": 900
+    }
+   ],
+   "confidence": "high",
+   "ambiguity_notes": []
+  }
+ ]
+}

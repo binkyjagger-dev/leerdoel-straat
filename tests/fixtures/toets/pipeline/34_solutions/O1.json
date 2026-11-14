@@ -1,0 +1,34 @@
+{
+ "opgave_id": "O1",
+ "answers": [
+  {
+   "vraag": 1,
+   "answer_text": "36,30 / 1,21 = 30; 30 - 6,40 = 23,60; 1.200 × 23,60 = 28.320",
+   "numbers": [
+    {
+     "label": "prijs excl",
+     "value": 30.0
+    },
+    {
+     "label": "db",
+     "value": 23.6
+    },
+    {
+     "label": "tdb",
+     "value": 28320
+    }
+   ],
+   "confidence": "high",
+   "ambiguity_notes": []
+  },
+  {
+   "vraag": 2,
+   "answer_text": "Bij een lagere prijs worden meer reparaties gevraagd; als de afzet sterker stijgt dan de prijs daalt, stijgt de omzet.",
+   "numbers": [],
+   "confidence": "medium",
+   "ambiguity_notes": [
+    "Niet duidelijk of 'omzet' per maand of per jaar bedoeld is."
+   ]
+  }
+ ]
+}

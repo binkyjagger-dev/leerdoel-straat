@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ToetsItems",
+  "description": "R/33_items/<opgave>.json — one opgave written by the toets-writer (specs/33 §3 T3). Every given number is named in data, every computed number in a cv calc.",
+  "type": "object",
+  "required": ["opgave_id", "title", "intro", "data", "sources", "figures", "vragen", "writer_notes"],
+  "properties": {
+    "opgave_id": {"type": "string", "pattern": "^O[0-9]+$"},
+    "title": {"type": "string"},
+    "intro": {"type": "string"},
+    "data": {"type": "object", "additionalProperties": {"type": "number"}},
+    "noise_data": {"type": "array", "items": {"type": "string"}, "description": "data keys printed in the intro (no bron number) that a vraag with noise = ja does not need"},
+    "sources": {"type": "array", "items": {
+      "type": "object", "required": ["n", "title", "kind"],
+      "properties": {
+        "n": {"type": "integer", "minimum": 1},
+        "title": {"type": "string"},
+        "kind": {"enum": ["text", "table", "figure"]},
+        "text": {"type": ["string", "null"]},
+        "table": {"type": ["array", "null"], "items": {"type": "array"}},
+        "figure_id": {"type": ["string", "null"]},
+        "uses_data": {"type": "array", "items": {"type": "string"}},
+        "noise_data": {"type": "array", "items": {"type": "string"}}
+      }}},
+    "figures": {"type": "array", "items": {
+      "type": "object", "required": ["figure_id", "spec"],
+      "properties": {"figure_id": {"type": "string"}, "spec": {"type": "object"}, "answer_spec": {"type": ["object", "null"]}}}},
+    "vragen": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/vraag"}},
+    "writer_notes": {"type": ["string", "null"]}
+  },
+  "$defs": {
+    "calc": {
+      "type": "object", "required": ["name", "expr", "shown"],
+      "properties": {
+        "name": {"type": "string", "pattern": "^[A-Za-z_][A-Za-z0-9_]*$"},
+        "expr": {"type": "string"},
+        "round": {"type": ["integer", "null"]},
+        "rounding": {"enum": ["half_up", "up", "down", null]},
+        "shown": {"type": "string"}
+      }
+    },
+    "vraag": {
+      "type": "object",
+      "required": ["vraag_id", "number", "points", "stem", "cv", "new_concepts", "builds_on_vragen"],
+      "properties": {
+        "vraag_id": {"type": "string", "pattern": "^O[0-9]+-V[0-9]+$"},
+        "number": {"type": "integer", "minimum": 1},
+        "points": {"type": "integer", "minimum": 1},
+        "stem": {"type": "string"},
+        "uitwerkbijlage": {"type": ["object", "null"]},
+        "cv": {
+          "type": "object", "required": ["maximumscore", "model_answer", "calc", "scorepunten", "rules", "alternatives", "follow_through"],
+          "properties": {
+            "maximumscore": {"type": "integer", "minimum": 1},
+            "model_answer": {"type": "string"},
+            "calc": {"type": "array", "items": {"$ref": "#/$defs/calc"}},
+            "scorepunten": {"type": "array", "minItems": 1, "items": {
+              "type": "object", "required": ["seq", "points", "text", "criterion_id"],
+              "properties": {"seq": {"type": "integer", "minimum": 1}, "points": {"type": "integer", "minimum": 1},
+                             "text": {"type": "string"}, "criterion_id": {"type": "string"},
+                             "calc_ref": {"type": ["string", "null"]}}}},
+            "rules": {"type": "array", "items": {"type": "string"}},
+            "alternatives": {"type": "array", "items": {"type": "string"}},
+            "follow_through": {"type": ["string", "null"]}
+          }
+        },
+        "noise_data": {"type": "array", "items": {"type": "string"}, "description": "data keys in this vraag's stem or opgave text that it does not need; only with noise = ja"},
+        "new_concepts": {"type": "array", "items": {"type": "string"}},
+        "builds_on_vragen": {"type": "array", "items": {"type": "integer"}}
+      }
+    }
+  }
+}

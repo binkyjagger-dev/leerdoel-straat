@@ -1,0 +1,102 @@
+{
+ "layer": "bedrijfseconomie",
+ "version": "seed-2026-11",
+ "patterns": [
+  {
+   "code": "B01",
+   "layer": "bedrijfseconomie",
+   "name": "Effect van een financieel feit op een kengetal of overzicht",
+   "kind": "explanation",
+   "description": "Geef per maatregel aan wat het effect is op een kengetal of overzicht, met het effect op teller en noemer of per balanspost.",
+   "stem_forms": [
+    "Leg uit welk effect … heeft op …"
+   ],
+   "scoring": "1 punt per juist effect met toelichting",
+   "points": [
+    2,
+    2
+   ],
+   "bloom": [
+    "begrijpen",
+    "toepassen",
+    "analyseren"
+   ],
+   "solo": [
+    "multistructureel",
+    "relationeel"
+   ],
+   "knobs_fixed": {},
+   "needs_figure": false,
+   "in_central_exam": true,
+   "examples_seed": [
+    "bedrijfseconomie vwo-2026-tv1 v4",
+    "bedrijfseconomie vwo-2025-tv1 v23"
+   ],
+   "status": "active",
+   "source": "seed-analysis-2026-11"
+  },
+  {
+   "code": "B02",
+   "layer": "bedrijfseconomie",
+   "name": "Financieel overzicht opstellen in een gegeven schema",
+   "kind": "schema",
+   "description": "Vul in een uitwerkbijlage een balans, exploitatiebegroting, resultatenrekening, budgetresultaat of aflossingsschema in.",
+   "stem_forms": [
+    "Stel … op. Vul hiervoor de uitwerkbijlage bij deze vraag in."
+   ],
+   "scoring": "per groep juiste bedragen een punt",
+   "points": [
+    2,
+    4
+   ],
+   "bloom": [
+    "toepassen"
+   ],
+   "solo": [
+    "multistructureel",
+    "relationeel"
+   ],
+   "knobs_fixed": {},
+   "needs_figure": false,
+   "in_central_exam": true,
+   "examples_seed": [
+    "bedrijfseconomie vwo-2026-tv1 v11",
+    "bedrijfseconomie vwo-2026-tv1 v25",
+    "bedrijfseconomie vwo-2025-tv1 v12"
+   ],
+   "status": "active",
+   "source": "seed-analysis-2026-11"
+  },
+  {
+   "code": "B03",
+   "layer": "bedrijfseconomie",
+   "name": "Financiële rekenkunde met formuleblad",
+   "kind": "calculation",
+   "description": "Contante waarde, eindwaarde of annuïteit met een formule van het formuleblad.",
+   "stem_forms": [
+    "Bereken … Gebruik het formuleblad."
+   ],
+   "scoring": "voor elke fout 1 scorepunt in mindering",
+   "points": [
+    1,
+    3
+   ],
+   "bloom": [
+    "toepassen"
+   ],
+   "solo": [
+    "unistructureel",
+    "multistructureel"
+   ],
+   "knobs_fixed": {},
+   "needs_figure": false,
+   "in_central_exam": true,
+   "examples_seed": [
+    "bedrijfseconomie vwo-2026-tv1 v28",
+    "bedrijfseconomie vwo-2025-tv1 v19"
+   ],
+   "status": "active",
+   "source": "seed-analysis-2026-11"
+  }
+ ]
+}

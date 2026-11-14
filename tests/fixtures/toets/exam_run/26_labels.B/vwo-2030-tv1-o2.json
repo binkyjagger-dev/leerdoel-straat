@@ -1,0 +1,32 @@
+{
+ "labeller": "B",
+ "mode": "exam",
+ "opgave_id": "vwo-2030-tv1-o2",
+ "items": [
+  {
+   "question_id": "vwo-2030-tv1-q4",
+   "question_number": 4,
+   "pattern": "P05",
+   "proposed_pattern": null,
+   "solo": "unistructureel",
+   "route": null,
+   "steps": "1",
+   "sources": "in vraagtekst",
+   "noise": "nee",
+   "claim": "nee",
+   "new_concept": "nee",
+   "schema": null,
+   "builds_on": null,
+   "builds_on_questions": [],
+   "example_quality": "ongeschikt",
+   "example_quality_reason": "duidelijke stam",
+   "evidence": {
+    "pattern": "Motiveer je antwoord.",
+    "solo": "Spaak werkt alleen",
+    "steps": "eenmanszaak",
+    "sources": "Spaak repareert fietsen in een eigen werkplaats."
+   },
+   "note": null
+  }
+ ]
+}

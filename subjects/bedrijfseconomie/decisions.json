@@ -1966,6 +1966,210 @@
       "raised_by": "intake",
       "supersedes": null,
       "scope": "vanvlimmeren-bedrijfseconomie-vwo-in-balans"
+    },
+    {
+      "id": "bedrijfsecon-061",
+      "question": "Nieuw vraagpatroon 'Rangschikken naar een kenmerk' toevoegen aan de catalogus (laag base)?",
+      "context": "Voorgesteld door labeller A bij vwo-2025-tv1 vraag 18. Omschrijving: De leerling zet gegeven alternatieven (letters) in volgorde op één kenmerk (risico, liquiditeit, kosten) zonder toelichting; het antwoord is één volgorde. Scoring: 1 punt voor de volledig juiste volgorde. Soort: choice.",
+      "options": [
+        "Toevoegen zoals voorgesteld",
+        "Toevoegen met aanpassing",
+        "Niet toevoegen (bestaand patroon)"
+      ],
+      "proposed": "Toevoegen zoals voorgesteld",
+      "impact": "low",
+      "applies_to": [
+        "catalogue"
+      ],
+      "affects_units": [
+        "vwo-2025-tv1-q18"
+      ],
+      "status": "answered",
+      "answer": "Toevoegen als P17 'Rangschikken naar een kenmerk' in de basislaag (soort keuze, 1–2 punten, Bloom begrijpen/toepassen).",
+      "answered_by": "user",
+      "answered_at": "2026-11-14T06:13:32Z",
+      "source_run": "20261113-2335-examen-bedrijfseconomie-label",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": null
+    },
+    {
+      "id": "bedrijfsecon-062",
+      "question": "Nieuw vraagpatroon 'Alternatieven rangschikken' toevoegen aan de catalogus (laag base)?",
+      "context": "Voorgesteld door labeller B bij vwo-2025-tv1 vraag 18. Omschrijving: De stam geeft een lijst alternatieven (a tot en met d); de leerling zet ze in volgorde op één kenmerk (bijv. risico, rendement, liquiditeit) zonder toelichting. Scoring: 1 punt voor de volledig juiste volgorde. Soort: choice.",
+      "options": [
+        "Toevoegen zoals voorgesteld",
+        "Toevoegen met aanpassing",
+        "Niet toevoegen (bestaand patroon)"
+      ],
+      "proposed": "Toevoegen zoals voorgesteld",
+      "impact": "low",
+      "applies_to": [
+        "catalogue"
+      ],
+      "affects_units": [
+        "vwo-2025-tv1-q18"
+      ],
+      "status": "answered",
+      "answer": "Zelfde patroon als bedrijfsecon-061: opgenomen als P17.",
+      "answered_by": "user",
+      "answered_at": "2026-11-14T06:13:32Z",
+      "source_run": "20261113-2335-examen-bedrijfseconomie-label",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": null
+    },
+    {
+      "id": "bedrijfsecon-063",
+      "question": "Is P16 (Kennisvraag: noem of omschrijf) een patroon van het centraal examen?",
+      "context": "De seed-catalogus zette P16 op in_central_exam=false. E7-run 1 vond P16 in beide examens (2025-I en 2026-I): 7 vragen, 11 punten (9 %).",
+      "options": [
+        "Ja, wel examenpatroon (in_central_exam=true)",
+        "Nee, label laten staan"
+      ],
+      "proposed": "Ja, wel examenpatroon (in_central_exam=true)",
+      "impact": "low",
+      "applies_to": [
+        "catalogue"
+      ],
+      "affects_units": [
+        "*"
+      ],
+      "status": "answered",
+      "answer": "Ja, wel examenpatroon (in_central_exam=true).",
+      "answered_by": "user",
+      "answered_at": "2026-11-14T06:13:32Z",
+      "source_run": "20261113-2335-examen-bedrijfseconomie-label",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": null
+    },
+    {
+      "id": "bedrijfsecon-064",
+      "question": "Knop sources herdefiniëren (alleen genummerde informatiebronnen: in vraagtekst / één bron / meerdere bronnen) en een nieuwe knop noise (nee/ja) toevoegen in data/toets/knobs.json?",
+      "context": "Na E7-run 1 (2025-I, 2026-I): de oude waarden mengden het aantal bronnen met ruis; een tabel of grafiek in de opgavetekst werd soms als bron geteld. Beide examens worden daarna opnieuw gelabeld.",
+      "options": [
+        "Ja, zoals voorgesteld",
+        "Nee"
+      ],
+      "proposed": "Ja, zoals voorgesteld",
+      "impact": "high",
+      "applies_to": [
+        "catalogue",
+        "item-labeller"
+      ],
+      "affects_units": null,
+      "status": "answered",
+      "answer": "zoals besloten 2026-11-14 (bouwvragen, Besluiten na E7-run 1)",
+      "answered_by": "user",
+      "answered_at": "2026-11-14T06:15:30Z",
+      "source_run": "toets-straat-build",
+      "raised_by": "human",
+      "supersedes": null,
+      "scope": null
+    },
+    {
+      "id": "bedrijfsecon-065",
+      "question": "Grens P14/P16: wanneer is een noem-vraag P14 en wanneer P16?",
+      "context": "E7-run 2: vier geschillen P14/P16 bij 'Noem voor <bedrijf> …' zonder gevraagde of gescoorde toelichting; R koos telkens P16.",
+      "options": [
+        "Geen toelichting gevraagd én gescoord = P16; P14 alleen bij 'licht toe'/'motiveer' die ook gescoord wordt",
+        "Antwoord moet bij de casus passen = P14"
+      ],
+      "proposed": "Geen toelichting gevraagd én gescoord = P16; P14 alleen bij 'licht toe'/'motiveer' die ook gescoord wordt",
+      "impact": "medium",
+      "applies_to": [
+        "catalogue",
+        "item-labeller"
+      ],
+      "affects_units": [
+        "*"
+      ],
+      "status": "answered",
+      "answer": "Geen toelichting gevraagd én gescoord = P16; P14 alleen bij 'licht toe'/'motiveer' die ook gescoord wordt",
+      "answered_by": "user",
+      "answered_at": "2026-11-14T06:31:03Z",
+      "source_run": "20261114-0100-examen-bedrijfseconomie-label2",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": null
+    },
+    {
+      "id": "bedrijfsecon-066",
+      "question": "Hoe tellen parallelle onderdelen (noem twee voordelen; per groep een voorbeeld) bij de knop stappen?",
+      "context": "E7-run 2: labellers telden parallelle onderdelen wisselend als 1, 2 of 3 stappen.",
+      "options": [
+        "Parallelle onderdelen samen = 1 stap; alleen op elkaar voortbouwende schakels tellen",
+        "Elk onderdeel telt als stap"
+      ],
+      "proposed": "Parallelle onderdelen samen = 1 stap; alleen op elkaar voortbouwende schakels tellen",
+      "impact": "medium",
+      "applies_to": [
+        "item-labeller",
+        "planner"
+      ],
+      "affects_units": [
+        "*"
+      ],
+      "status": "answered",
+      "answer": "Parallelle onderdelen samen = 1 stap; alleen op elkaar voortbouwende schakels tellen",
+      "answered_by": "user",
+      "answered_at": "2026-11-14T06:31:03Z",
+      "source_run": "20261114-0100-examen-bedrijfseconomie-label2",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": null
+    },
+    {
+      "id": "bedrijfsecon-067",
+      "question": "Krijgt een vraag die geen gegevens uit tekst of bronnen gebruikt ruis = ja als de context ongebruikte gegevens bevat?",
+      "context": "E7-run 2: ruis 69 % van de punten, mede doordat kennisvragen onder een context met getallen ruis = ja kregen.",
+      "options": [
+        "Nee: ruis = nee als de vraag geen gegevens uit tekst/tabellen/bronnen nodig heeft; ruis meet alleen of de leerling moet selecteren",
+        "Ja: elk ongebruikt gegeven telt"
+      ],
+      "proposed": "Nee: ruis = nee als de vraag geen gegevens uit tekst/tabellen/bronnen nodig heeft; ruis meet alleen of de leerling moet selecteren",
+      "impact": "medium",
+      "applies_to": [
+        "item-labeller",
+        "planner"
+      ],
+      "affects_units": [
+        "*"
+      ],
+      "status": "answered",
+      "answer": "Nee: ruis = nee als de vraag geen gegevens uit tekst/tabellen/bronnen nodig heeft; ruis meet alleen of de leerling moet selecteren",
+      "answered_by": "user",
+      "answered_at": "2026-11-14T06:31:03Z",
+      "source_run": "20261114-0100-examen-bedrijfseconomie-label2",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": null
+    },
+    {
+      "id": "bedrijfsecon-068",
+      "question": "Examenvraag 2025-I v17 (erfbelasting) staat als seed-voorbeeld bij P07, maar is in E7-run 3 gelabeld als P08 (de stam noemt geen tussenstappen). Voorbeeld verplaatsen?",
+      "context": "R-labeller E7-run 3: P07 fixeert route=gegeven; v17 noemt alleen het eindpunt.",
+      "options": [
+        "v17 weg bij P07 en als voorbeeld bij P08",
+        "Zo laten"
+      ],
+      "proposed": "v17 weg bij P07 en als voorbeeld bij P08",
+      "impact": "low",
+      "applies_to": [
+        "catalogue"
+      ],
+      "affects_units": [
+        "vwo-2025-tv1-q17"
+      ],
+      "status": "answered",
+      "answer": "v17 weg bij P07 en als voorbeeld bij P08.",
+      "answered_by": "user",
+      "answered_at": "2026-11-14T10:26:41Z",
+      "source_run": "20261114-0200-examen-bedrijfseconomie-label3",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": null
     }
   ]
 }

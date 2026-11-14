@@ -1,0 +1,27 @@
+{
+ "subject": "fixturevak",
+ "level": "5vwo",
+ "title": "Concept",
+ "criteria_run": "fixture-generate",
+ "n_opgaven": 1,
+ "n_vragen": 2,
+ "matrix": [
+  {
+   "group_id": "X1.2-01",
+   "points": 4
+  }
+ ],
+ "criteria_exclude": [
+  "X1.2-01-a",
+  "X1.2-01-b"
+ ],
+ "knobs": {
+  "pattern": {
+   "P01": 1.0
+  },
+  "route": {
+   "gegeven": 1.0
+  },
+  "solo": null
+ }
+}

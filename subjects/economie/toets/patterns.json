@@ -1,0 +1,96 @@
+{
+ "layer": "economie",
+ "version": "seed-2026-11",
+ "patterns": [
+  {
+   "code": "P10",
+   "layer": "economie",
+   "name": "Tekenen of arceren in een marktmodel",
+   "kind": "drawing",
+   "description": "De leerling tekent een verschuiving of arceert een oppervlak (surplus, welvaartsverlies, omzet) in een gegeven marktfiguur op de uitwerkbijlage.",
+   "stem_forms": [
+    "Teken in de figuur op de uitwerkbijlage …",
+    "Arceer in de figuur …"
+   ],
+   "scoring": "1 punt per juiste lijn of juist oppervlak",
+   "points": [
+    1,
+    3
+   ],
+   "bloom": [
+    "toepassen",
+    "analyseren"
+   ],
+   "solo": [
+    "unistructureel",
+    "multistructureel",
+    "relationeel"
+   ],
+   "knobs_fixed": {},
+   "needs_figure": true,
+   "in_central_exam": true,
+   "examples_seed": [],
+   "status": "active",
+   "source": "seed-analysis-2026-11"
+  },
+  {
+   "code": "P11",
+   "layer": "economie",
+   "name": "Speltheorie: matrix of spelboom analyseren",
+   "kind": "choice",
+   "description": "De leerling bepaalt dominante strategieën, evenwicht of uitkomst in een gegeven matrix of spelboom.",
+   "stem_forms": [
+    "Leg met behulp van de matrix uit …",
+    "Ga na of er sprake is van …"
+   ],
+   "scoring": "1 punt per juiste stap in de redenering",
+   "points": [
+    2,
+    3
+   ],
+   "bloom": [
+    "toepassen",
+    "analyseren"
+   ],
+   "solo": [
+    "multistructureel",
+    "relationeel"
+   ],
+   "knobs_fixed": {},
+   "needs_figure": true,
+   "in_central_exam": true,
+   "examples_seed": [],
+   "status": "active",
+   "source": "seed-analysis-2026-11"
+  },
+  {
+   "code": "P13",
+   "layer": "economie",
+   "name": "Dynamiek in het IS-MB-GA-model",
+   "kind": "explanation",
+   "description": "De leerling redeneert over het effect van een schok of beleid op inkomen, bestedingen en prijzen in het IS-MB-GA-model.",
+   "stem_forms": [
+    "Leg uit hoe … verandert."
+   ],
+   "scoring": "1 punt per schakel",
+   "points": [
+    2,
+    3
+   ],
+   "bloom": [
+    "toepassen",
+    "analyseren"
+   ],
+   "solo": [
+    "multistructureel",
+    "relationeel"
+   ],
+   "knobs_fixed": {},
+   "needs_figure": false,
+   "in_central_exam": true,
+   "examples_seed": [],
+   "status": "active",
+   "source": "seed-analysis-2026-11"
+  }
+ ]
+}

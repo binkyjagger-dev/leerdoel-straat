@@ -1,0 +1,19 @@
+{
+ "labeller": "R",
+ "mode": "exam",
+ "opgave_id": "vwo-2030-tv1-o1",
+ "items": [
+  {
+   "question_id": "vwo-2030-tv1-q1",
+   "question_number": 1,
+   "pattern": "P08",
+   "route": "zelf vinden",
+   "example_quality": "goed",
+   "evidence": {
+    "pattern": "Bereken de winst per week.",
+    "route": "Bereken de winst per week."
+   },
+   "reason": "De vraag noemt geen tussenstappen; de leerling vindt zelf de route via informatiebron 1."
+  }
+ ]
+}

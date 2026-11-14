@@ -1,0 +1,33 @@
+{
+ "layer": "fixturevak",
+ "version": "fixture-1",
+ "patterns": [
+  {
+   "code": "X01",
+   "layer": "fixturevak",
+   "name": "Begroting invullen in schema",
+   "kind": "schema",
+   "description": "Fixturepatroon Begroting invullen in schema.",
+   "stem_forms": [
+    "Vul … in"
+   ],
+   "scoring": "1 punt per regel",
+   "points": [
+    2,
+    4
+   ],
+   "bloom": [
+    "toepassen"
+   ],
+   "solo": [
+    "multistructureel"
+   ],
+   "knobs_fixed": {},
+   "needs_figure": false,
+   "in_central_exam": true,
+   "examples_seed": [],
+   "status": "active",
+   "source": "seed-analysis-2026-11"
+  }
+ ]
+}

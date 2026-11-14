@@ -1,0 +1,45 @@
+{
+ "subject": "fixturevak",
+ "decisions": [
+  {
+   "id": "fixturevak-001",
+   "question": "Nieuw patroon X02 Begroting vergelijken toevoegen?",
+   "context": null,
+   "options": null,
+   "proposed": "Toevoegen",
+   "impact": "low",
+   "applies_to": [
+    "catalogue"
+   ],
+   "affects_units": null,
+   "status": "answered",
+   "answer": "Toevoegen",
+   "answered_by": "user",
+   "answered_at": "2030-06-02T10:00:00Z",
+   "source_run": "fixture-label",
+   "raised_by": "human",
+   "supersedes": null,
+   "scope": null
+  },
+  {
+   "id": "fixturevak-002",
+   "question": "Patroon X01 vervalt; vervangen door B02-achtige vorm?",
+   "context": null,
+   "options": null,
+   "proposed": "Nee",
+   "impact": "low",
+   "applies_to": [
+    "catalogue"
+   ],
+   "affects_units": null,
+   "status": "open",
+   "answer": null,
+   "answered_by": null,
+   "answered_at": null,
+   "source_run": "fixture-label",
+   "raised_by": "human",
+   "supersedes": null,
+   "scope": null
+  }
+ ]
+}

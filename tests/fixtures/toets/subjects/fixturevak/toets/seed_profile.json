@@ -1,0 +1,80 @@
+{
+ "subject": "fixturevak",
+ "source": "seed-analysis-2030-05",
+ "note": "Voorlopig fixture-seed.",
+ "n_exams": 1,
+ "points": 4,
+ "by": "points",
+ "pooled": {
+  "pattern": {
+   "P07": {
+    "points": 2.0,
+    "share": 0.5
+   },
+   "P01": {
+    "points": 2.0,
+    "share": 0.5
+   }
+  },
+  "solo": {
+   "multistructureel": {
+    "points": 4,
+    "share": 1.0
+   }
+  },
+  "bloom": {
+   "toepassen": {
+    "points": 2,
+    "share": 0.5
+   },
+   "begrijpen": {
+    "points": 2,
+    "share": 0.5
+   }
+  }
+ },
+ "unknown_knobs": [
+  "route",
+  "steps",
+  "sources",
+  "claim",
+  "new_concept",
+  "schema",
+  "builds_on"
+ ],
+ "exams": [
+  {
+   "exam_id": "vwo-2029-tv1",
+   "points": 4,
+   "knobs": {
+    "pattern": {
+     "P07": 2.0,
+     "P01": 2.0
+    },
+    "solo": {
+     "multistructureel": 4
+    },
+    "bloom": {
+     "toepassen": 2,
+     "begrijpen": 2
+    }
+   },
+   "questions": [
+    {
+     "question_number": 1,
+     "points": 2,
+     "pattern": "P07",
+     "solo": "multistructureel",
+     "bloom": "toepassen"
+    },
+    {
+     "question_number": 2,
+     "points": 2,
+     "pattern": "P01",
+     "solo": "multistructureel",
+     "bloom": "begrijpen"
+    }
+   ]
+  }
+ ]
+}

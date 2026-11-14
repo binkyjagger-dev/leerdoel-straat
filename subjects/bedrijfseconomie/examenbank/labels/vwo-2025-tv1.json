@@ -1,0 +1,1825 @@
+{
+  "exam_id": "vwo-2025-tv1",
+  "criteria_run": "20261021-1647-bedrijfseconomie-vwo-2028-run2",
+  "run_id": "20261114-0200-examen-bedrijfseconomie-label3",
+  "questions": [
+    {
+      "exam_id": "vwo-2025-tv1",
+      "question_id": "vwo-2025-tv1-q1",
+      "question_number": 1,
+      "opgave_id": "vwo-2025-tv1-o1",
+      "first_of_opgave": true,
+      "points": 2,
+      "pattern": "P14",
+      "solo": "multistructureel",
+      "route": null,
+      "steps": "1",
+      "sources": "in vraagtekst",
+      "noise": "ja",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": null,
+      "example_quality": "bruikbaar",
+      "builds_on_questions": [],
+      "proposed_pattern": null,
+      "example_quality_reason": "Heldere noem-en-motiveer-stam met typische scoring per toegelicht antwoord, maar leunt op het financiële overzicht in de opgave.",
+      "combination": 1,
+      "bloom": "begrijpen",
+      "scorepunt_bloom": [
+        {
+          "points": 1,
+          "bloom": "begrijpen",
+          "group_id": "B4.14.2-01"
+        },
+        {
+          "points": 1,
+          "bloom": "begrijpen",
+          "group_id": "B4.14.2-01"
+        }
+      ],
+      "confidence": {
+        "pattern": "high",
+        "solo": "high",
+        "route": "high",
+        "steps": "medium",
+        "sources": "high",
+        "noise": "high",
+        "claim": "high",
+        "new_concept": "high",
+        "schema": "high",
+        "builds_on": "high",
+        "example_quality": "medium"
+      },
+      "evidence": {
+        "pattern": "Motiveer beide antwoorden met een verwijzing naar het bovenstaande financiële overzicht.",
+        "solo": "Noem twee verschillende maatschappelijke behoeften waarin Ahold Delhaize voorziet.",
+        "steps": "per juist toegelicht antwoord 1",
+        "sources": "Motiveer beide antwoorden met een verwijzing naar het bovenstaande financiële overzicht.",
+        "noise": "overige bedrijfskosten 3.420 3.179",
+        "claim": "Noem twee verschillende maatschappelijke behoeften waarin Ahold Delhaize voorziet.",
+        "new_concept": "Ahold Delhaize voorziet in verschillende maatschappelijke behoeften."
+      },
+      "repaired_fields": []
+    },
+    {
+      "exam_id": "vwo-2025-tv1",
+      "question_id": "vwo-2025-tv1-q2",
+      "question_number": 2,
+      "opgave_id": "vwo-2025-tv1-o1",
+      "first_of_opgave": false,
+      "points": 1,
+      "pattern": "P09",
+      "solo": "multistructureel",
+      "route": "gegeven",
+      "steps": "2",
+      "sources": "in vraagtekst",
+      "noise": "ja",
+      "claim": "ja",
+      "new_concept": "ja",
+      "schema": null,
+      "builds_on": "nee",
+      "example_quality": "goed",
+      "builds_on_questions": [],
+      "proposed_pattern": null,
+      "example_quality_reason": "Korte toon-aan-of-stam met formule in de noot en vergelijkingswaarde in de tabel; typische 1-punts berekening plus conclusie.",
+      "combination": 0,
+      "bloom": null,
+      "scorepunt_bloom": [
+        {
+          "points": 1,
+          "bloom": null,
+          "group_id": null
+        }
+      ],
+      "confidence": {
+        "pattern": "high",
+        "solo": "high",
+        "route": "high",
+        "steps": "high",
+        "sources": "high",
+        "noise": "high",
+        "claim": "high",
+        "new_concept": "high",
+        "schema": "high",
+        "builds_on": "high",
+        "example_quality": "high"
+      },
+      "evidence": {
+        "pattern": "Toon met een berekening van de resultaatmarge aan of er in 2022 sprake is geweest van graaiflatie.",
+        "solo": "de resultaatmarge is niet gestegen, dus is er in 2022 geen sprake geweest van graaiflatie.",
+        "route": "Toon met een berekening van de resultaatmarge aan of er in 2022 sprake is geweest van graaiflatie.",
+        "steps": "x 100% = 4,33% < 4,39 % / de resultaatmarge is niet gestegen",
+        "sources": "noot 1 (EBIT / omzet) x 100%",
+        "noise": "loonkosten 12.674 11.179",
+        "claim": "Het bestuur van Ahold Delhaize spreekt de kritiek van graaiflatie tegen en verwijst naar de resultaatmarge in 2022 en 2021.",
+        "new_concept": "Graaiflatie betekent dat bedrijven de verkoopprijzen meer verhogen dan de toegenomen kosten. Graaiflatie zorgt voor een toename van de resultaatmarge.",
+        "builds_on": "Toon met een berekening van de resultaatmarge aan of er in 2022 sprake is geweest van graaiflatie."
+      },
+      "repaired_fields": []
+    },
+    {
+      "exam_id": "vwo-2025-tv1",
+      "question_id": "vwo-2025-tv1-q3",
+      "question_number": 3,
+      "opgave_id": "vwo-2025-tv1-o1",
+      "first_of_opgave": false,
+      "points": 2,
+      "pattern": "P08",
+      "solo": "relationeel",
+      "route": "zelf vinden",
+      "steps": "3",
+      "sources": "in vraagtekst",
+      "noise": "ja",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": "nee",
+      "example_quality": "bruikbaar",
+      "builds_on_questions": [],
+      "proposed_pattern": null,
+      "example_quality_reason": "Heldere eindvraag zonder tussenstappen en typische scoring per tussenstap, maar afhankelijk van het overzicht en de contexttekst over de inkoop.",
+      "combination": 1,
+      "bloom": "toepassen",
+      "scorepunt_bloom": [
+        {
+          "points": 1,
+          "bloom": "toepassen",
+          "group_id": "G.32.2-04"
+        },
+        {
+          "points": 1,
+          "bloom": "toepassen",
+          "group_id": "G.32.2-04"
+        }
+      ],
+      "confidence": {
+        "pattern": "high",
+        "solo": "high",
+        "route": "high",
+        "steps": "high",
+        "sources": "high",
+        "noise": "high",
+        "claim": "high",
+        "new_concept": "high",
+        "schema": "high",
+        "builds_on": "high",
+        "example_quality": "medium"
+      },
+      "evidence": {
+        "pattern": "Bereken met hoeveel eurocent het resultaat voor vennootschapsbelasting per aandeel in 2022 is gestegen",
+        "solo": "Door de daling van het geplaatste aandelenkapitaal stijgt het resultaat per aandeel.",
+        "route": "Bereken met hoeveel eurocent het resultaat voor vennootschapsbelasting per aandeel in 2022 is gestegen",
+        "steps": "stijging resultaat per aandeel als gevolg van inkoop eigen aandelen:",
+        "sources": "resultaat voor vennootschapsbelasting per aandeel € 3,25 € 2,75",
+        "noise": "afschrijvingskosten 3.433 3.007",
+        "claim": "Bereken met hoeveel eurocent het resultaat voor vennootschapsbelasting per aandeel in 2022 is gestegen",
+        "new_concept": "Bij het inkopen van de eigen aandelen treedt er een balansmutatie op",
+        "builds_on": "Bereken met hoeveel eurocent het resultaat voor vennootschapsbelasting per aandeel in 2022 is gestegen"
+      },
+      "repaired_fields": []
+    },
+    {
+      "exam_id": "vwo-2025-tv1",
+      "question_id": "vwo-2025-tv1-q4",
+      "question_number": 4,
+      "opgave_id": "vwo-2025-tv1-o1",
+      "first_of_opgave": false,
+      "points": 2,
+      "pattern": "P01",
+      "solo": "multistructureel",
+      "route": null,
+      "steps": "2",
+      "sources": "in vraagtekst",
+      "noise": "nee",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": "nee",
+      "example_quality": "goed",
+      "builds_on_questions": [],
+      "proposed_pattern": null,
+      "example_quality_reason": "Korte zelfstandige leg-uit-hoe-stam met gegeven effect; typische score per juist toegelicht mechanisme.",
+      "combination": 1,
+      "bloom": "begrijpen",
+      "scorepunt_bloom": [
+        {
+          "points": 1,
+          "bloom": "begrijpen",
+          "group_id": "D2.20.2.4-01"
+        },
+        {
+          "points": 1,
+          "bloom": "begrijpen",
+          "group_id": "D2.20.2.4-01"
+        }
+      ],
+      "confidence": {
+        "pattern": "high",
+        "solo": "high",
+        "route": "high",
+        "steps": "high",
+        "sources": "high",
+        "noise": "high",
+        "claim": "high",
+        "new_concept": "high",
+        "schema": "high",
+        "builds_on": "high",
+        "example_quality": "high"
+      },
+      "evidence": {
+        "pattern": "Leg op twee manieren uit hoe de aandeleninkoop van Ahold Delhaize gunstig kan zijn voor het beleggersrendement",
+        "solo": "per juist toegelicht antwoord 1",
+        "steps": "Door het inkopen van eigen aandelen kan het dividend per aandeel stijgen, (omdat het resultaat / dividend over minder aandelen verdeeld hoeft te worden).",
+        "sources": "Het beleggersrendement voor aandeelhouders van Ahold Delhaize kan door de aandeleninkoop stijgen.",
+        "noise": "Leg op twee manieren uit hoe de aandeleninkoop van Ahold Delhaize gunstig kan zijn voor het beleggersrendement",
+        "claim": "Het beleggersrendement voor aandeelhouders van Ahold Delhaize kan door de aandeleninkoop stijgen.",
+        "new_concept": "Leg op twee manieren uit hoe de aandeleninkoop van Ahold Delhaize gunstig kan zijn voor het beleggersrendement",
+        "builds_on": "Leg op twee manieren uit hoe de aandeleninkoop van Ahold Delhaize gunstig kan zijn voor het beleggersrendement"
+      },
+      "repaired_fields": []
+    },
+    {
+      "exam_id": "vwo-2025-tv1",
+      "question_id": "vwo-2025-tv1-q5",
+      "question_number": 5,
+      "opgave_id": "vwo-2025-tv1-o2",
+      "first_of_opgave": true,
+      "points": 1,
+      "pattern": "P16",
+      "solo": "unistructureel",
+      "route": null,
+      "steps": "1",
+      "sources": "in vraagtekst",
+      "noise": "nee",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": null,
+      "example_quality": "goed",
+      "builds_on_questions": [],
+      "proposed_pattern": null,
+      "example_quality_reason": "Korte, zelfstandige kennisvraag; casusgegevens in twee zinnen, 1 punt voor één juist antwoord.",
+      "combination": 1,
+      "bloom": "onthouden",
+      "scorepunt_bloom": [
+        {
+          "points": 1,
+          "bloom": "onthouden",
+          "group_id": "B3.13.1-01"
+        }
+      ],
+      "confidence": {
+        "pattern": "high",
+        "solo": "high",
+        "route": "high",
+        "steps": "high",
+        "sources": "high",
+        "noise": "high",
+        "claim": "high",
+        "new_concept": "high",
+        "schema": "high",
+        "builds_on": "high",
+        "example_quality": "high"
+      },
+      "evidence": {
+        "pattern": "Noem de rechtsvorm van Camping Vogelhof.",
+        "solo": "vof / vennootschap onder firma",
+        "steps": "vof / vennootschap onder firma",
+        "sources": "gekozen voor een rechtsvorm zonder rechtspersoonlijkheid, waarbij ze allebei eigen vermogen hebben ingebracht.",
+        "noise": "gekozen voor een rechtsvorm zonder rechtspersoonlijkheid, waarbij ze allebei eigen vermogen hebben ingebracht.",
+        "claim": "Noem de rechtsvorm van Camping Vogelhof.",
+        "new_concept": "Noem de rechtsvorm van Camping Vogelhof."
+      },
+      "repaired_fields": []
+    },
+    {
+      "exam_id": "vwo-2025-tv1",
+      "question_id": "vwo-2025-tv1-q6",
+      "question_number": 6,
+      "opgave_id": "vwo-2025-tv1-o2",
+      "first_of_opgave": false,
+      "points": 4,
+      "pattern": "B02",
+      "solo": "multistructureel",
+      "route": "gegeven",
+      "steps": "4+",
+      "sources": "één bron",
+      "noise": "ja",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": "voorgestructureerd",
+      "builds_on": "nee",
+      "example_quality": "bruikbaar",
+      "builds_on_questions": [],
+      "proposed_pattern": null,
+      "example_quality_reason": "Typische omzetberekening in een tabel, maar leunt op een lange informatiebron en een uitwerkbijlage die ontbreekt.",
+      "combination": 1,
+      "bloom": "toepassen",
+      "scorepunt_bloom": [
+        {
+          "points": 1,
+          "bloom": "toepassen",
+          "group_id": "B4.14.1-01"
+        },
+        {
+          "points": 1,
+          "bloom": "toepassen",
+          "group_id": "B4.14.1-01"
+        },
+        {
+          "points": 1,
+          "bloom": "toepassen",
+          "group_id": "B4.14.1-01"
+        },
+        {
+          "points": 1,
+          "bloom": "toepassen",
+          "group_id": "B4.14.1-01"
+        }
+      ],
+      "confidence": {
+        "pattern": "high",
+        "solo": "medium",
+        "route": "high",
+        "steps": "high",
+        "sources": "high",
+        "noise": "high",
+        "claim": "high",
+        "new_concept": "high",
+        "schema": "high",
+        "builds_on": "high",
+        "example_quality": "high"
+      },
+      "evidence": {
+        "pattern": "Bereken voor Camping Vogelhof de omzet in 2024 uit de verhuur van standplaatsen. Vul hiervoor de uitwerkbijlage bij deze vraag in.",
+        "solo": "Totale omzet heel 2024 voor aftrek van kortingen:",
+        "route": "Als de kandidaat in de tabel van de uitwerkbijlage de omzet per seizoen uitrekent, geen scorepunt in mindering brengen.",
+        "steps": "0,75 x 1.464.380 + 0,95 x 0,25 x 1.464.380 = € 1.446.075,25",
+        "sources": "Het verhuurtarief van een standplaats is afhankelijk van een aantal factoren (zie informatiebron 1).",
+        "noise": "aantal standplaatsen: 280",
+        "claim": "Bereken voor Camping Vogelhof de omzet in 2024 uit de verhuur van standplaatsen.",
+        "new_concept": "wordt 5% korting gegeven (zogeheten vroegboekkorting).",
+        "schema": "Als de kandidaat in de tabel van de uitwerkbijlage de omzet per seizoen uitrekent, geen scorepunt in mindering brengen.",
+        "builds_on": "Bereken voor Camping Vogelhof de omzet in 2024 uit de verhuur van standplaatsen."
+      },
+      "repaired_fields": []
+    },
+    {
+      "exam_id": "vwo-2025-tv1",
+      "question_id": "vwo-2025-tv1-q7",
+      "question_number": 7,
+      "opgave_id": "vwo-2025-tv1-o2",
+      "first_of_opgave": false,
+      "points": 1,
+      "pattern": "P16",
+      "solo": "unistructureel",
+      "route": null,
+      "steps": "1",
+      "sources": "in vraagtekst",
+      "noise": "nee",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": "nee",
+      "example_quality": "goed",
+      "builds_on_questions": [],
+      "proposed_pattern": null,
+      "example_quality_reason": "Korte kennisvraag, zelfstandig te lezen met één inleidende zin.",
+      "combination": 1,
+      "bloom": "onthouden",
+      "scorepunt_bloom": [
+        {
+          "points": 1,
+          "bloom": "onthouden",
+          "group_id": "B2.12.2-02"
+        }
+      ],
+      "confidence": {
+        "pattern": "high",
+        "solo": "high",
+        "route": "high",
+        "steps": "high",
+        "sources": "high",
+        "noise": "high",
+        "claim": "high",
+        "new_concept": "high",
+        "schema": "high",
+        "builds_on": "high",
+        "example_quality": "high"
+      },
+      "evidence": {
+        "pattern": "Noem het onderdeel van het ondernemingsplan waaronder een concurrentieanalyse valt.",
+        "solo": "marketingplan",
+        "steps": "marketingplan",
+        "sources": "Flohr en Femke maken een concurrentieanalyse en concluderen dat de omzet van Vogelhof achterblijft bij die van concurrenten.",
+        "noise": "Noem het onderdeel van het ondernemingsplan waaronder een concurrentieanalyse valt.",
+        "claim": "Noem het onderdeel van het ondernemingsplan waaronder een concurrentieanalyse valt.",
+        "new_concept": "Noem het onderdeel van het ondernemingsplan waaronder een concurrentieanalyse valt.",
+        "builds_on": "Noem het onderdeel van het ondernemingsplan waaronder een concurrentieanalyse valt."
+      },
+      "repaired_fields": []
+    },
+    {
+      "exam_id": "vwo-2025-tv1",
+      "question_id": "vwo-2025-tv1-q8",
+      "question_number": 8,
+      "opgave_id": "vwo-2025-tv1-o2",
+      "first_of_opgave": false,
+      "points": 2,
+      "pattern": "P16",
+      "solo": "multistructureel",
+      "route": null,
+      "steps": "1",
+      "sources": "in vraagtekst",
+      "noise": "nee",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": "nee",
+      "example_quality": "bruikbaar",
+      "builds_on_questions": [],
+      "proposed_pattern": null,
+      "example_quality_reason": "Heldere noem-vraag, maar 'deze bijkomende kosten' leunt op de voorafgaande contextzin.",
+      "combination": 1,
+      "bloom": "onthouden",
+      "scorepunt_bloom": [
+        {
+          "points": 1,
+          "bloom": "onthouden",
+          "group_id": "B1.11.3-02"
+        },
+        {
+          "points": 1,
+          "bloom": "onthouden",
+          "group_id": "B1.11.3-02"
+        }
+      ],
+      "confidence": {
+        "pattern": "high",
+        "solo": "high",
+        "route": "high",
+        "steps": "high",
+        "sources": "high",
+        "noise": "high",
+        "claim": "high",
+        "new_concept": "high",
+        "schema": "high",
+        "builds_on": "high",
+        "example_quality": "high"
+      },
+      "evidence": {
+        "pattern": "Noem twee van deze bijkomende kosten.",
+        "solo": "notariskosten",
+        "steps": "Noem twee van deze bijkomende kosten.",
+        "sources": "Er zijn bijkomende kosten voor het afsluiten van een hypothecaire lening, die niet gemaakt hoeven te worden bij het afsluiten van een onderhandse lening",
+        "noise": "Noem twee van deze bijkomende kosten.",
+        "claim": "Noem twee van deze bijkomende kosten.",
+        "new_concept": "Noem twee van deze bijkomende kosten.",
+        "builds_on": "Noem twee van deze bijkomende kosten."
+      },
+      "repaired_fields": []
+    },
+    {
+      "exam_id": "vwo-2025-tv1",
+      "question_id": "vwo-2025-tv1-q9",
+      "question_number": 9,
+      "opgave_id": "vwo-2025-tv1-o2",
+      "first_of_opgave": false,
+      "points": 2,
+      "pattern": "P08",
+      "solo": "relationeel",
+      "route": "zelf vinden",
+      "steps": "3",
+      "sources": "meerdere bronnen",
+      "noise": "ja",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": "nee",
+      "example_quality": "bruikbaar",
+      "builds_on_questions": [],
+      "proposed_pattern": null,
+      "example_quality_reason": "Typische P08 met korte stam, maar vergt twee informatiebronnen om zelfstandig te zijn.",
+      "combination": 1,
+      "bloom": "toepassen",
+      "scorepunt_bloom": [
+        {
+          "points": 2,
+          "bloom": "toepassen",
+          "group_id": "B2.12.2-03"
+        }
+      ],
+      "confidence": {
+        "pattern": "high",
+        "solo": "high",
+        "route": "high",
+        "steps": "high",
+        "sources": "high",
+        "noise": "high",
+        "claim": "high",
+        "new_concept": "high",
+        "schema": "high",
+        "builds_on": "high",
+        "example_quality": "medium"
+      },
+      "evidence": {
+        "pattern": "Bereken de hoogte van de af te sluiten onderhandse lening bij de oom van Flohr (zie informatiebronnen 2 en 3).",
+        "solo": "40 x 75.000 x 0,6 = € 1.800.000",
+        "route": "Bereken de hoogte van de af te sluiten onderhandse lening bij de oom van Flohr (zie informatiebronnen 2 en 3).",
+        "steps": "63.500 + 5.500 + 6.000 = 75.000",
+        "sources": "Bereken de hoogte van de af te sluiten onderhandse lening bij de oom van Flohr (zie informatiebronnen 2 en 3).",
+        "noise": "€ 3.000 exclusief 21% btw",
+        "claim": "Bereken de hoogte van de af te sluiten onderhandse lening bij de oom van Flohr",
+        "new_concept": "Bereken de hoogte van de af te sluiten onderhandse lening bij de oom van Flohr",
+        "builds_on": "Bereken de hoogte van de af te sluiten onderhandse lening bij de oom van Flohr"
+      },
+      "repaired_fields": []
+    },
+    {
+      "exam_id": "vwo-2025-tv1",
+      "question_id": "vwo-2025-tv1-q10",
+      "question_number": 10,
+      "opgave_id": "vwo-2025-tv1-o2",
+      "first_of_opgave": false,
+      "points": 2,
+      "pattern": "P07",
+      "solo": "multistructureel",
+      "route": "gegeven",
+      "steps": "2",
+      "sources": "één bron",
+      "noise": "ja",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": "ja",
+      "example_quality": "bruikbaar",
+      "builds_on_questions": [
+        9
+      ],
+      "proposed_pattern": null,
+      "example_quality_reason": "Context noemt de tussenstap en scoring is 1 punt per stap, maar het aantal chalets komt uit vraag 9.",
+      "combination": 0,
+      "bloom": null,
+      "scorepunt_bloom": [
+        {
+          "points": 1,
+          "bloom": null,
+          "group_id": null
+        },
+        {
+          "points": 1,
+          "bloom": null,
+          "group_id": null
+        }
+      ],
+      "confidence": {
+        "pattern": "high",
+        "solo": "medium",
+        "route": "high",
+        "steps": "medium",
+        "sources": "high",
+        "noise": "high",
+        "claim": "high",
+        "new_concept": "high",
+        "schema": "high",
+        "builds_on": "high",
+        "example_quality": "medium"
+      },
+      "evidence": {
+        "pattern": "moet eerst worden berekend hoe vaak per week de chalets moeten worden schoongemaakt.",
+        "solo": "63 x 40",
+        "route": "Om te bepalen hoeveel uur de zzp’ers moeten worden ingezet, moet eerst worden berekend hoe vaak per week de chalets moeten worden schoongemaakt.",
+        "steps": "4 = 63 (keer per week een eindschoonmaak doen)",
+        "sources": "Bereken hoeveel uur per week de zzp’ers gemiddeld moeten worden ingezet (zie informatiebron 2).",
+        "noise": "Vogelhof betaalt de zzp’ers € 25 per gewerkt uur.",
+        "claim": "Bereken hoeveel uur per week de zzp’ers gemiddeld moeten worden ingezet",
+        "new_concept": "Bereken hoeveel uur per week de zzp’ers gemiddeld moeten worden ingezet",
+        "builds_on": "40 x 0,9 x 7"
+      },
+      "repaired_fields": [
+        "pattern",
+        "route",
+        "schema",
+        "builds_on"
+      ]
+    },
+    {
+      "exam_id": "vwo-2025-tv1",
+      "question_id": "vwo-2025-tv1-q11",
+      "question_number": 11,
+      "opgave_id": "vwo-2025-tv1-o2",
+      "first_of_opgave": false,
+      "points": 2,
+      "pattern": "P16",
+      "solo": "multistructureel",
+      "route": null,
+      "steps": "1",
+      "sources": "in vraagtekst",
+      "noise": "nee",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": "nee",
+      "example_quality": "goed",
+      "builds_on_questions": [],
+      "proposed_pattern": null,
+      "example_quality_reason": "Zelfstandige noem-vraag met twee parallelle elementen; context van één zin volstaat.",
+      "combination": 1,
+      "bloom": "onthouden",
+      "scorepunt_bloom": [
+        {
+          "points": 1,
+          "bloom": "onthouden",
+          "group_id": "C2.17.3-01"
+        },
+        {
+          "points": 1,
+          "bloom": "onthouden",
+          "group_id": "C2.17.3-01"
+        }
+      ],
+      "confidence": {
+        "pattern": "high",
+        "solo": "high",
+        "route": "high",
+        "steps": "high",
+        "sources": "high",
+        "noise": "high",
+        "claim": "high",
+        "new_concept": "high",
+        "schema": "high",
+        "builds_on": "high",
+        "example_quality": "high"
+      },
+      "evidence": {
+        "pattern": "Noem twee verschillende bedrijfseconomische voordelen van het inhuren van zzp’ers ten opzichte van het aannemen van personeel in loondienst.",
+        "solo": "zzp’ers hebben geen ontslagbescherming.",
+        "steps": "Noem twee verschillende bedrijfseconomische voordelen van het inhuren van zzp’ers",
+        "sources": "Flohr en Femke hebben bewust gekozen voor de inzet van zzp’ers boven het aannemen van personeel in loondienst.",
+        "noise": "Noem twee verschillende bedrijfseconomische voordelen van het inhuren van zzp’ers ten opzichte van het aannemen van personeel in loondienst.",
+        "claim": "Noem twee verschillende bedrijfseconomische voordelen van het inhuren van zzp’ers",
+        "new_concept": "Noem twee verschillende bedrijfseconomische voordelen van het inhuren van zzp’ers",
+        "builds_on": "Noem twee verschillende bedrijfseconomische voordelen van het inhuren van zzp’ers"
+      },
+      "repaired_fields": []
+    },
+    {
+      "exam_id": "vwo-2025-tv1",
+      "question_id": "vwo-2025-tv1-q12",
+      "question_number": 12,
+      "opgave_id": "vwo-2025-tv1-o2",
+      "first_of_opgave": false,
+      "points": 4,
+      "pattern": "B02",
+      "solo": "relationeel",
+      "route": "gegeven",
+      "steps": "4+",
+      "sources": "meerdere bronnen",
+      "noise": "ja",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": "voorgestructureerd",
+      "builds_on": "ja",
+      "example_quality": "bruikbaar",
+      "builds_on_questions": [
+        9,
+        10
+      ],
+      "proposed_pattern": null,
+      "example_quality_reason": "Typisch kostenoverzicht in een uitwerkbijlage, maar vergt drie bronnen en uitkomsten van vraag 9 en 10.",
+      "combination": 3,
+      "bloom": "toepassen",
+      "scorepunt_bloom": [
+        {
+          "points": 1,
+          "bloom": "toepassen",
+          "group_id": "F1.28.1-02"
+        },
+        {
+          "points": 1,
+          "bloom": "toepassen",
+          "group_id": "F1.28.1-02"
+        },
+        {
+          "points": 1,
+          "bloom": "toepassen",
+          "group_id": "B1.11.3-03"
+        },
+        {
+          "points": 1,
+          "bloom": "toepassen",
+          "group_id": "F1.28.3-03"
+        }
+      ],
+      "confidence": {
+        "pattern": "high",
+        "solo": "high",
+        "route": "high",
+        "steps": "high",
+        "sources": "high",
+        "noise": "high",
+        "claim": "high",
+        "new_concept": "high",
+        "schema": "high",
+        "builds_on": "high",
+        "example_quality": "high"
+      },
+      "evidence": {
+        "pattern": "Bereken de totale verwachte kosten van het Toekanveld voor 2025 (zie informatiebronnen 2, 3 en 4). Vul hiervoor de uitwerkbijlage bij deze vraag in.",
+        "solo": "42 (vraag 10) x 26 x 25",
+        "route": "Vul hiervoor de uitwerkbijlage bij deze vraag in.",
+        "steps": "1.800.000 x 0,06 x 6",
+        "sources": "Bereken de totale verwachte kosten van het Toekanveld voor 2025 (zie informatiebronnen 2, 3 en 4).",
+        "noise": "een lening van maximaal € 2 miljoen",
+        "claim": "Bereken de totale verwachte kosten van het Toekanveld voor 2025",
+        "new_concept": "Bereken de totale verwachte kosten van het Toekanveld voor 2025",
+        "schema": "Vul hiervoor de uitwerkbijlage bij deze vraag in.",
+        "builds_on": "42 (vraag 10) x 26 x 25"
+      },
+      "repaired_fields": []
+    },
+    {
+      "exam_id": "vwo-2025-tv1",
+      "question_id": "vwo-2025-tv1-q13",
+      "question_number": 13,
+      "opgave_id": "vwo-2025-tv1-o2",
+      "first_of_opgave": false,
+      "points": 5,
+      "pattern": "P15",
+      "solo": "relationeel",
+      "route": "gegeven",
+      "steps": "4+",
+      "sources": "meerdere bronnen",
+      "noise": "ja",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": "ja",
+      "example_quality": "bruikbaar",
+      "builds_on_questions": [
+        9,
+        10,
+        12
+      ],
+      "proposed_pattern": null,
+      "example_quality_reason": "Typische afsluitende besluitvraag met voorwaarden, maar alleen bruikbaar met de hele opgave en de uitwerkbijlage.",
+      "combination": 2,
+      "bloom": "analyseren",
+      "scorepunt_bloom": [
+        {
+          "points": 1,
+          "bloom": null,
+          "group_id": null
+        },
+        {
+          "points": 1,
+          "bloom": "toepassen",
+          "group_id": "C2.17.2-04"
+        },
+        {
+          "points": 1,
+          "bloom": "toepassen",
+          "group_id": "F1.28.3-03"
+        },
+        {
+          "points": 1,
+          "bloom": "toepassen",
+          "group_id": "F1.28.3-03"
+        },
+        {
+          "points": 1,
+          "bloom": "analyseren",
+          "group_id": "F1.28.3-03"
+        }
+      ],
+      "confidence": {
+        "pattern": "high",
+        "solo": "high",
+        "route": "high",
+        "steps": "high",
+        "sources": "high",
+        "noise": "high",
+        "claim": "high",
+        "new_concept": "high",
+        "schema": "high",
+        "builds_on": "high",
+        "example_quality": "high"
+      },
+      "evidence": {
+        "pattern": "Analyseer of Flohr en Femke zullen besluiten tot het herinrichten en plaatsen van de chalets op het Toekanveld.",
+        "solo": "Aan alle drie de voorwaarden is voldaan: het herinrichten gaat door.",
+        "route": "voorwaarde c berekening bedrag omzet verhuur",
+        "steps": "1.048.320 + 131.040 – 585.500",
+        "sources": "De financieringsbehoefte is € 1.800.000. Dit is minder dan € 2 miljoen, dus de financiering lukt.",
+        "noise": "looptijd: 15 jaar",
+        "claim": "Analyseer of Flohr en Femke zullen besluiten tot het herinrichten en plaatsen van de chalets op het Toekanveld.",
+        "new_concept": "Analyseer of Flohr en Femke zullen besluiten tot het herinrichten en plaatsen van de chalets op het Toekanveld.",
+        "builds_on": "1.048.320 + 131.040 – 585.500 (vraag 12) ="
+      },
+      "repaired_fields": [
+        "pattern",
+        "route",
+        "schema"
+      ]
+    },
+    {
+      "exam_id": "vwo-2025-tv1",
+      "question_id": "vwo-2025-tv1-q14",
+      "question_number": 14,
+      "opgave_id": "vwo-2025-tv1-o3",
+      "first_of_opgave": true,
+      "points": 1,
+      "pattern": "P16",
+      "solo": "unistructureel",
+      "route": null,
+      "steps": "1",
+      "sources": "in vraagtekst",
+      "noise": "nee",
+      "claim": "nee",
+      "new_concept": "ja",
+      "schema": null,
+      "builds_on": null,
+      "example_quality": "goed",
+      "builds_on_questions": [],
+      "proposed_pattern": null,
+      "example_quality_reason": "Korte, zelfstandige stam met één gevraagd voorbeeld en een open lijst juiste antwoorden; 1 punt zonder toelichting.",
+      "combination": 0,
+      "bloom": null,
+      "scorepunt_bloom": [
+        {
+          "points": 1,
+          "bloom": null,
+          "group_id": null
+        }
+      ],
+      "confidence": {
+        "pattern": "high",
+        "solo": "high",
+        "route": "high",
+        "steps": "high",
+        "sources": "high",
+        "noise": "high",
+        "claim": "high",
+        "new_concept": "high",
+        "schema": "high",
+        "builds_on": "high",
+        "example_quality": "high"
+      },
+      "evidence": {
+        "pattern": "Geef een voorbeeld van off-balance-financiering waardoor de omvang van de activa op de balans kan worden verlaagd.",
+        "solo": "Voorbeelden van een juist antwoord zijn:",
+        "steps": "Geef een voorbeeld van off-balance-financiering",
+        "sources": "Geef een voorbeeld van off-balance-financiering waardoor de omvang van de activa op de balans kan worden verlaagd.",
+        "noise": "Geef een voorbeeld van off-balance-financiering waardoor de omvang van de activa op de balans kan worden verlaagd.",
+        "claim": "Geef een voorbeeld van off-balance-financiering",
+        "new_concept": "balansverkorting: een balanspost van vaste en / of vlottende activa staat dan niet meer op de balans."
+      },
+      "repaired_fields": []
+    },
+    {
+      "exam_id": "vwo-2025-tv1",
+      "question_id": "vwo-2025-tv1-q15",
+      "question_number": 15,
+      "opgave_id": "vwo-2025-tv1-o3",
+      "first_of_opgave": false,
+      "points": 2,
+      "pattern": "P09",
+      "solo": "relationeel",
+      "route": "zelf vinden",
+      "steps": "3",
+      "sources": "in vraagtekst",
+      "noise": "ja",
+      "claim": "ja",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": "nee",
+      "example_quality": "bruikbaar",
+      "builds_on_questions": [],
+      "proposed_pattern": null,
+      "example_quality_reason": "Typische toon-aan-berekening met foutaftrek, maar de gegevens staan in twee grafieken (beelden) die een schrijver niet ziet.",
+      "combination": 1,
+      "bloom": "toepassen",
+      "scorepunt_bloom": [
+        {
+          "points": 2,
+          "bloom": "toepassen",
+          "group_id": "F1.28.1-01"
+        }
+      ],
+      "confidence": {
+        "pattern": "high",
+        "solo": "high",
+        "route": "high",
+        "steps": "high",
+        "sources": "high",
+        "noise": "high",
+        "claim": "high",
+        "new_concept": "high",
+        "schema": "high",
+        "builds_on": "high",
+        "example_quality": "high"
+      },
+      "evidence": {
+        "pattern": "Toon met een berekening aan dat de inkopen in week 5 lager zijn dan in week 1.",
+        "solo": "Maak gebruik van grafieken 1 en 2.",
+        "route": "Toon met een berekening aan dat de inkopen in week 5 lager zijn dan in week 1. Maak gebruik van grafieken 1 en 2.",
+        "steps": "inkopen in week 1: 6.800 – 5.000 + 1.200 = € 3.000",
+        "sources": "Maak gebruik van grafieken 1 en 2.",
+        "noise": "Gegeven zijn de onderstaande overzichten voor de eerste weken van het jaar 2024 (alle getallen x € 1.000).",
+        "claim": "Aan de hand van de overzichten kan worden berekend dat De Kleine voor een steeds lager bedrag inkoopt.",
+        "new_concept": "De inkoopwaarde van de omzet bedraagt 40% van de omzet.",
+        "builds_on": "Toon met een berekening aan dat de inkopen in week 5 lager zijn dan in week 1."
+      },
+      "repaired_fields": []
+    },
+    {
+      "exam_id": "vwo-2025-tv1",
+      "question_id": "vwo-2025-tv1-q16",
+      "question_number": 16,
+      "opgave_id": "vwo-2025-tv1-o3",
+      "first_of_opgave": false,
+      "points": 2,
+      "pattern": "P08",
+      "solo": "relationeel",
+      "route": "zelf vinden",
+      "steps": "3",
+      "sources": "in vraagtekst",
+      "noise": "ja",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": "nee",
+      "example_quality": "bruikbaar",
+      "builds_on_questions": [],
+      "proposed_pattern": null,
+      "example_quality_reason": "Heldere korte stam met alleen het eindpunt, maar de verkoopcijfers staan in grafiek 2 (beeld) uit een eerder deel van de opgave.",
+      "combination": 1,
+      "bloom": "toepassen",
+      "scorepunt_bloom": [
+        {
+          "points": 2,
+          "bloom": "toepassen",
+          "group_id": "F1.28.1-01"
+        }
+      ],
+      "confidence": {
+        "pattern": "high",
+        "solo": "high",
+        "route": "high",
+        "steps": "high",
+        "sources": "high",
+        "noise": "high",
+        "claim": "high",
+        "new_concept": "high",
+        "schema": "high",
+        "builds_on": "high",
+        "example_quality": "high"
+      },
+      "evidence": {
+        "pattern": "Bereken de omvang van de balanspost Debiteuren aan het einde van week 9.",
+        "solo": "De verkopen zijn voor 80% op rekening.",
+        "route": "Bereken de omvang van de balanspost Debiteuren aan het einde van week 9.",
+        "steps": "(2.700 + 2.600) x 0,80 x 1,21 = € 5.130,40",
+        "sources": "De verkopen zijn voor 80% op rekening.",
+        "noise": "de krediettermijn voor debiteuren verkort van 4 weken naar 2 weken.",
+        "claim": "Bereken de omvang van de balanspost Debiteuren aan het einde van week 9.",
+        "new_concept": "Afnemers maken volledig gebruik van de krediettermijn.",
+        "builds_on": "Bereken de omvang van de balanspost Debiteuren aan het einde van week 9."
+      },
+      "repaired_fields": []
+    },
+    {
+      "exam_id": "vwo-2025-tv1",
+      "question_id": "vwo-2025-tv1-q17",
+      "question_number": 17,
+      "opgave_id": "vwo-2025-tv1-o4",
+      "first_of_opgave": true,
+      "points": 2,
+      "pattern": "P08",
+      "solo": "multistructureel",
+      "route": "zelf vinden",
+      "steps": "3",
+      "sources": "in vraagtekst",
+      "noise": "ja",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": null,
+      "example_quality": "goed",
+      "builds_on_questions": [],
+      "proposed_pattern": null,
+      "example_quality_reason": "Korte heldere stam, tabellen staan in de opgavetekst, typische 'per fout 1 scorepunt'-scoring van een standaardprocedure (vrijstelling, twee schijven, aftrekken).",
+      "combination": 1,
+      "bloom": "toepassen",
+      "scorepunt_bloom": [
+        {
+          "points": 2,
+          "bloom": "toepassen",
+          "group_id": "B1.11.4-04"
+        }
+      ],
+      "confidence": {
+        "pattern": "high",
+        "solo": "high",
+        "route": "high",
+        "steps": "high",
+        "sources": "high",
+        "noise": "high",
+        "claim": "high",
+        "new_concept": "high",
+        "schema": "high",
+        "builds_on": "high",
+        "example_quality": "high"
+      },
+      "evidence": {
+        "pattern": "Bereken het bedrag dat Klaas na betaling van de erfbelasting overhoudt van zijn erfdeel.",
+        "solo": "erfbelasting: 138.642 x 0,30 + (147.342 – 138.642) x 0,40 = 45.072",
+        "route": "Bereken het bedrag dat Klaas na betaling van de erfbelasting overhoudt van zijn erfdeel.",
+        "steps": "belastbaar deel erfenis: 150.000 – 2.658 = 147.342",
+        "sources": "Op de site van de Belastingdienst ziet hij onderstaande gegevens over de te betalen erfbelasting.",
+        "noise": "kind met een beperking € 75.546 ouder € 59.643",
+        "claim": "Bereken het bedrag dat Klaas na betaling van de erfbelasting overhoudt van zijn erfdeel.",
+        "new_concept": "Bereken het bedrag dat Klaas na betaling van de erfbelasting overhoudt van zijn erfdeel."
+      },
+      "repaired_fields": [
+        "pattern",
+        "route",
+        "schema"
+      ]
+    },
+    {
+      "exam_id": "vwo-2025-tv1",
+      "question_id": "vwo-2025-tv1-q18",
+      "question_number": 18,
+      "opgave_id": "vwo-2025-tv1-o4",
+      "first_of_opgave": false,
+      "points": 1,
+      "pattern": "P17",
+      "solo": "multistructureel",
+      "route": null,
+      "steps": "1",
+      "sources": "in vraagtekst",
+      "noise": "nee",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": "nee",
+      "example_quality": "goed",
+      "builds_on_questions": [],
+      "proposed_pattern": null,
+      "example_quality_reason": "Zelfstandige lijst van vier alternatieven met één rangschikkingskenmerk en één punt voor de volledige volgorde; typisch P17.",
+      "combination": 1,
+      "bloom": "begrijpen",
+      "scorepunt_bloom": [
+        {
+          "points": 1,
+          "bloom": "begrijpen",
+          "group_id": "B1.11.2-04"
+        }
+      ],
+      "confidence": {
+        "pattern": "high",
+        "solo": "high",
+        "route": "high",
+        "steps": "high",
+        "sources": "high",
+        "noise": "high",
+        "claim": "high",
+        "new_concept": "high",
+        "schema": "high",
+        "builds_on": "high",
+        "example_quality": "high"
+      },
+      "evidence": {
+        "pattern": "Zet de letters a tot en met d in de juiste volgorde van minst risicovol naar meest risicovol.",
+        "solo": "d – c – a – b",
+        "steps": "d – c – a – b",
+        "sources": "Hij wil met het ontvangen bedrag zo min mogelijk risico lopen en overweegt een aantal mogelijkheden:",
+        "noise": "faillissement van de bank het spaargeld tot een bedrag van € 100.000 is gegarandeerd.",
+        "claim": "Zet de letters a tot en met d in de juiste volgorde van minst risicovol naar meest risicovol.",
+        "new_concept": "Zet de letters a tot en met d in de juiste volgorde van minst risicovol naar meest risicovol.",
+        "builds_on": "Klaas wil het bedrag van de erfenis na erfbelasting gebruiken als aanvulling op zijn pensioen."
+      },
+      "repaired_fields": []
+    },
+    {
+      "exam_id": "vwo-2025-tv1",
+      "question_id": "vwo-2025-tv1-q19",
+      "question_number": 19,
+      "opgave_id": "vwo-2025-tv1-o4",
+      "first_of_opgave": false,
+      "points": 4,
+      "pattern": "P09+B03",
+      "solo": "relationeel",
+      "route": "zelf vinden",
+      "steps": "4+",
+      "sources": "in vraagtekst",
+      "noise": "nee",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": "nee",
+      "example_quality": "goed",
+      "builds_on_questions": [],
+      "proposed_pattern": null,
+      "example_quality_reason": "Heldere ja/nee-vraag met berekening via het formuleblad en een apart conclusiepunt; context van twee alinea's is zelfstandig te lezen.",
+      "combination": 1,
+      "bloom": "toepassen",
+      "scorepunt_bloom": [
+        {
+          "points": 1,
+          "bloom": "toepassen",
+          "group_id": "B1.11.2-03"
+        },
+        {
+          "points": 2,
+          "bloom": "toepassen",
+          "group_id": "B1.11.2-03"
+        },
+        {
+          "points": 1,
+          "bloom": "toepassen",
+          "group_id": "B1.11.2-03"
+        }
+      ],
+      "confidence": {
+        "pattern": "high",
+        "solo": "high",
+        "route": "high",
+        "steps": "high",
+        "sources": "high",
+        "noise": "high",
+        "claim": "high",
+        "new_concept": "high",
+        "schema": "high",
+        "builds_on": "high",
+        "example_quality": "high"
+      },
+      "evidence": {
+        "pattern": "Motiveer het antwoord met een berekening (zie formuleblad).",
+        "solo": "spaarsaldo op 31 december 2033 na opnames: € 21.806,80",
+        "route": "Kan Klaas 8 jaar lang maandelijks € 1.200 opnemen en op 31 december 2033 nog € 25.000 op de spaarrekening hebben staan,",
+        "steps": "eindwaarde opnames op 31 december 2033: 1.200 x 100,706264 = 120.847,52",
+        "sources": "Samen met het bedrag van de erfenis bedraagt het spaarsaldo op deze datum dan € 128.441,92.",
+        "noise": "De samengestelde interest op deze spaarrekening bedraagt 0,1% per maand.",
+        "claim": "Kan Klaas 8 jaar lang maandelijks € 1.200 opnemen en op 31 december 2033 nog € 25.000 op de spaarrekening hebben staan,",
+        "new_concept": "Motiveer het antwoord met een berekening (zie formuleblad).",
+        "builds_on": "Samen met het bedrag van de erfenis bedraagt het spaarsaldo op deze datum dan € 128.441,92."
+      },
+      "repaired_fields": []
+    },
+    {
+      "exam_id": "vwo-2025-tv1",
+      "question_id": "vwo-2025-tv1-q20",
+      "question_number": 20,
+      "opgave_id": "vwo-2025-tv1-o5",
+      "first_of_opgave": true,
+      "points": 1,
+      "pattern": "P16",
+      "solo": "unistructureel",
+      "route": null,
+      "steps": "1",
+      "sources": "in vraagtekst",
+      "noise": "nee",
+      "claim": "nee",
+      "new_concept": "ja",
+      "schema": null,
+      "builds_on": null,
+      "example_quality": "goed",
+      "builds_on_questions": [],
+      "proposed_pattern": null,
+      "example_quality_reason": "Korte, heldere noem-vraag met korte context en noot; typische 1-puntsscoring met voorbeeldantwoorden.",
+      "combination": 1,
+      "bloom": "onthouden",
+      "scorepunt_bloom": [
+        {
+          "points": 1,
+          "bloom": "onthouden",
+          "group_id": "D2.22.2-01"
+        }
+      ],
+      "confidence": {
+        "pattern": "high",
+        "solo": "high",
+        "route": "high",
+        "steps": "high",
+        "sources": "high",
+        "noise": "high",
+        "claim": "high",
+        "new_concept": "high",
+        "schema": "high",
+        "builds_on": "high",
+        "example_quality": "high"
+      },
+      "evidence": {
+        "pattern": "Noem een bedrijfseconomisch voordeel van deze overheidsgarantie voor Air France-KLM.",
+        "solo": "goedkoper lenen / een lager interestpercentage",
+        "steps": "Voorbeelden van een juist antwoord zijn:",
+        "sources": "zich bovendien garant1) te stellen voor leningen van banken aan deze luchtvaartcombinatie.",
+        "noise": "Noem een bedrijfseconomisch voordeel van deze overheidsgarantie voor Air France-KLM.",
+        "claim": "Noem een bedrijfseconomisch voordeel van deze overheidsgarantie voor Air France-KLM.",
+        "new_concept": "noot 1 De overheid garandeert dat een lening wordt terugbetaald als de lener failliet gaat."
+      },
+      "repaired_fields": []
+    },
+    {
+      "exam_id": "vwo-2025-tv1",
+      "question_id": "vwo-2025-tv1-q21",
+      "question_number": 21,
+      "opgave_id": "vwo-2025-tv1-o5",
+      "first_of_opgave": false,
+      "points": 2,
+      "pattern": "P08",
+      "solo": "multistructureel",
+      "route": "zelf vinden",
+      "steps": "2",
+      "sources": "in vraagtekst",
+      "noise": "nee",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": "nee",
+      "example_quality": "goed",
+      "builds_on_questions": [],
+      "proposed_pattern": null,
+      "example_quality_reason": "Zelfstandige berekening met een kleine tabel in de opgavetekst; stam noemt alleen het eindpunt, typische 2-puntsscoring.",
+      "combination": 0,
+      "bloom": null,
+      "scorepunt_bloom": [
+        {
+          "points": 1,
+          "bloom": null,
+          "group_id": null
+        },
+        {
+          "points": 1,
+          "bloom": null,
+          "group_id": null
+        }
+      ],
+      "confidence": {
+        "pattern": "high",
+        "solo": "high",
+        "route": "high",
+        "steps": "high",
+        "sources": "high",
+        "noise": "high",
+        "claim": "high",
+        "new_concept": "high",
+        "schema": "high",
+        "builds_on": "high",
+        "example_quality": "high"
+      },
+      "evidence": {
+        "pattern": "Bereken de toename van het resultaat in euro’s in het derde kwartaal van 2022 ten opzichte van het resultaat van het derde kwartaal van 2021.",
+        "solo": "resultaat kwartaal 3 in 2022: 232 + 228 = 460 en resultaat kwartaal 3 in 2021: -3.164 + 2.971 = -193",
+        "route": "Bereken de toename van het resultaat in euro’s in het derde kwartaal van 2022",
+        "steps": "toename resultaat kwartaal 3 2022 t.o.v. 2021: 460 + 193 = € 653 miljoen",
+        "sources": "kwartaal 1 tot en met 3 totale resultaat (x € 1 miljoen)",
+        "noise": "resultaat kwartaal 3 in 2022: 232 + 228 = 460 en resultaat kwartaal 3 in 2021: -3.164 + 2.971 = -193",
+        "claim": "Bereken de toename van het resultaat in euro’s in het derde kwartaal van 2022",
+        "new_concept": "Bereken de toename van het resultaat in euro’s in het derde kwartaal van 2022",
+        "builds_on": "Bereken de toename van het resultaat in euro’s in het derde kwartaal van 2022"
+      },
+      "repaired_fields": []
+    },
+    {
+      "exam_id": "vwo-2025-tv1",
+      "question_id": "vwo-2025-tv1-q22",
+      "question_number": 22,
+      "opgave_id": "vwo-2025-tv1-o5",
+      "first_of_opgave": false,
+      "points": 2,
+      "pattern": "P09",
+      "solo": "multistructureel",
+      "route": "zelf vinden",
+      "steps": "3",
+      "sources": "één bron",
+      "noise": "ja",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": "nee",
+      "example_quality": "bruikbaar",
+      "builds_on_questions": [],
+      "proposed_pattern": null,
+      "example_quality_reason": "Heldere 'toon aan of'-vraag met één bron en typische scoring (berekening + conclusie), maar het negatieve eigen vermogen is atypisch.",
+      "combination": 1,
+      "bloom": "toepassen",
+      "scorepunt_bloom": [
+        {
+          "points": 1,
+          "bloom": "toepassen",
+          "group_id": "G.32.2-02"
+        },
+        {
+          "points": 1,
+          "bloom": "begrijpen",
+          "group_id": "G.32.2-02"
+        }
+      ],
+      "confidence": {
+        "pattern": "high",
+        "solo": "high",
+        "route": "high",
+        "steps": "high",
+        "sources": "high",
+        "noise": "high",
+        "claim": "high",
+        "new_concept": "high",
+        "schema": "high",
+        "builds_on": "high",
+        "example_quality": "high"
+      },
+      "evidence": {
+        "pattern": "Toon aan met een berekening of de solvabiliteit van Air France-KLM op 30 september 2022 is verbeterd ten opzichte van 31 december 2021",
+        "solo": "De verhouding EV/TV is gestegen, wat duidt op een verbetering van de solvabiliteit.",
+        "route": "Toon aan met een berekening of de solvabiliteit van Air France-KLM op 30 september 2022 is verbeterd",
+        "steps": "-2.797 + 22.775 + 14.585",
+        "sources": "is verbeterd ten opzichte van 31 december 2021 (zie informatiebron 5).",
+        "noise": "waarvan liquide middelen 8.264 6.658",
+        "claim": "Toon aan met een berekening of de solvabiliteit van Air France-KLM op 30 september 2022 is verbeterd",
+        "new_concept": "solvabiliteit (EV/TV) op 31 december 2021:",
+        "builds_on": "Toon aan met een berekening of de solvabiliteit van Air France-KLM op 30 september 2022 is verbeterd"
+      },
+      "repaired_fields": []
+    },
+    {
+      "exam_id": "vwo-2025-tv1",
+      "question_id": "vwo-2025-tv1-q23",
+      "question_number": 23,
+      "opgave_id": "vwo-2025-tv1-o5",
+      "first_of_opgave": false,
+      "points": 2,
+      "pattern": "B01",
+      "solo": "multistructureel",
+      "route": null,
+      "steps": "2",
+      "sources": "in vraagtekst",
+      "noise": "nee",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": "nee",
+      "example_quality": "goed",
+      "builds_on_questions": [],
+      "proposed_pattern": null,
+      "example_quality_reason": "Heldere 'leg uit dat'-vraag over het effect op een kengetal, korte context, scoring per juist toegelicht antwoord.",
+      "combination": 1,
+      "bloom": "begrijpen",
+      "scorepunt_bloom": [
+        {
+          "points": 1,
+          "bloom": "begrijpen",
+          "group_id": "G.32.4-01"
+        },
+        {
+          "points": 1,
+          "bloom": "begrijpen",
+          "group_id": "G.32.4-01"
+        }
+      ],
+      "confidence": {
+        "pattern": "high",
+        "solo": "high",
+        "route": "high",
+        "steps": "high",
+        "sources": "high",
+        "noise": "high",
+        "claim": "high",
+        "new_concept": "high",
+        "schema": "high",
+        "builds_on": "high",
+        "example_quality": "high"
+      },
+      "evidence": {
+        "pattern": "Door uitgifte van converteerbare obligaties stijgt het vreemd vermogen op korte termijn (en blijft het eigen vermogen gelijk), waardoor de solvabiliteit verslechtert.",
+        "solo": "waardoor na conversie het eigen vermogen stijgt, het vreemd vermogen daalt en de solvabiliteit verbetert.",
+        "steps": "zullen bij een stijging van de aandelenkoers (boven conversieprijs) worden omgewisseld in aandelen, waardoor na conversie het eigen vermogen stijgt",
+        "sources": "Air France-KLM ervan uitgaat dat de koers van het aandeel Air France-KLM op lange termijn weer zal stijgen.",
+        "noise": "Leg uit dat door een emissie van converteerbare obligaties op korte termijn de solvabiliteit verslechtert",
+        "claim": "Leg uit dat door een emissie van converteerbare obligaties op korte termijn de solvabiliteit verslechtert",
+        "new_concept": "Door uitgifte van converteerbare obligaties stijgt het vreemd vermogen op korte termijn",
+        "builds_on": "Leg uit dat door een emissie van converteerbare obligaties op korte termijn de solvabiliteit verslechtert"
+      },
+      "repaired_fields": [
+        "pattern",
+        "route",
+        "schema"
+      ]
+    },
+    {
+      "exam_id": "vwo-2025-tv1",
+      "question_id": "vwo-2025-tv1-q24",
+      "question_number": 24,
+      "opgave_id": "vwo-2025-tv1-o5",
+      "first_of_opgave": false,
+      "points": 2,
+      "pattern": "P08",
+      "solo": "relationeel",
+      "route": "zelf vinden",
+      "steps": "3",
+      "sources": "één bron",
+      "noise": "ja",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": "nee",
+      "example_quality": "bruikbaar",
+      "builds_on_questions": [],
+      "proposed_pattern": null,
+      "example_quality_reason": "Typische zelf-route-berekening met 'per fout 1 punt', maar vergt de volledige informatiebron 6.",
+      "combination": 1,
+      "bloom": "toepassen",
+      "scorepunt_bloom": [
+        {
+          "points": 2,
+          "bloom": "toepassen",
+          "group_id": "B1.11.2-03"
+        }
+      ],
+      "confidence": {
+        "pattern": "high",
+        "solo": "high",
+        "route": "high",
+        "steps": "high",
+        "sources": "high",
+        "noise": "high",
+        "claim": "high",
+        "new_concept": "high",
+        "schema": "high",
+        "builds_on": "high",
+        "example_quality": "medium"
+      },
+      "evidence": {
+        "pattern": "Bereken de totale interestopbrengst voor de Nederlandse staat over de gehele looptijd van de converteerbare obligatielening",
+        "solo": "0,093 x 300 miljoen x 0,065 x 3 + 0,093 x 300 miljoen x (0,03 + 0,013) x 7",
+        "route": "Bereken de totale interestopbrengst voor de Nederlandse staat over de gehele looptijd van de converteerbare obligatielening",
+        "steps": "0,093 x 300 miljoen x 0,065 x 3 + 0,093 x 300 miljoen x (0,03 + 0,013) x 7",
+        "sources": "voordeel op (zie informatiebron 6).",
+        "noise": "De opbrengst van de totale emissie bedraagt € 305,6 miljoen.",
+        "claim": "Bereken de totale interestopbrengst voor de Nederlandse staat",
+        "new_concept": "De eerste 3 jaar bedraagt de enkelvoudige interest op de converteerbare obligaties 6,5% per jaar.",
+        "builds_on": "Ga ervan uit dat er niet wordt geconverteerd en dat de marktinterest gedurende de gehele looptijd 3% is."
+      },
+      "repaired_fields": []
+    },
+    {
+      "exam_id": "vwo-2025-tv1",
+      "question_id": "vwo-2025-tv1-q25",
+      "question_number": 25,
+      "opgave_id": "vwo-2025-tv1-o5",
+      "first_of_opgave": false,
+      "points": 2,
+      "pattern": "P03",
+      "solo": "relationeel",
+      "route": null,
+      "steps": "2",
+      "sources": "in vraagtekst",
+      "noise": "nee",
+      "claim": "ja",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": "nee",
+      "example_quality": "goed",
+      "builds_on_questions": [],
+      "proposed_pattern": null,
+      "example_quality_reason": "Kort, zelfstandig: een stelling van een Kamerlid onderbouwen met een tweeschakelige keten, typische 1+1-scoring.",
+      "combination": 2,
+      "bloom": "begrijpen",
+      "scorepunt_bloom": [
+        {
+          "points": 1,
+          "bloom": "begrijpen",
+          "group_id": "D2.21.6-01"
+        },
+        {
+          "points": 1,
+          "bloom": "begrijpen",
+          "group_id": "D2.20.2.1-01"
+        }
+      ],
+      "confidence": {
+        "pattern": "high",
+        "solo": "high",
+        "route": "high",
+        "steps": "high",
+        "sources": "high",
+        "noise": "high",
+        "claim": "high",
+        "new_concept": "high",
+        "schema": "high",
+        "builds_on": "high",
+        "example_quality": "high"
+      },
+      "evidence": {
+        "pattern": "Een Kamerlid stelt dat de werkgelegenheid wordt geschaad door niet deel te nemen aan de emissie.",
+        "solo": "Hierdoor krijgt de Nederlandse staat minder zeggenschap waardoor die minder goed kan opkomen voor de werkgelegenheid.",
+        "steps": "zal zijn aandelenbelang in Air France-KLM mogelijk dalen.",
+        "sources": "Een Kamerlid stelt dat de werkgelegenheid wordt geschaad door niet deel te nemen aan de emissie.",
+        "noise": "Leg de stelling van het Kamerlid uit.",
+        "claim": "Een Kamerlid stelt dat de werkgelegenheid wordt geschaad door niet deel te nemen aan de emissie.",
+        "new_concept": "Leg de stelling van het Kamerlid uit.",
+        "builds_on": "Leg de stelling van het Kamerlid uit."
+      },
+      "repaired_fields": []
+    },
+    {
+      "exam_id": "vwo-2025-tv1",
+      "question_id": "vwo-2025-tv1-q26",
+      "question_number": 26,
+      "opgave_id": "vwo-2025-tv1-o5",
+      "first_of_opgave": false,
+      "points": 1,
+      "pattern": "P16",
+      "solo": "unistructureel",
+      "route": null,
+      "steps": "1",
+      "sources": "in vraagtekst",
+      "noise": "nee",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": "nee",
+      "example_quality": "bruikbaar",
+      "builds_on_questions": [],
+      "proposed_pattern": null,
+      "example_quality_reason": "Korte, heldere vraag, maar het antwoord leunt op de situatie na conversie in de context en de opmerking in het cv sluit een voor de hand liggend antwoord uit.",
+      "combination": 1,
+      "bloom": "begrijpen",
+      "scorepunt_bloom": [
+        {
+          "points": 1,
+          "bloom": "begrijpen",
+          "group_id": "D2.21.6-01"
+        }
+      ],
+      "confidence": {
+        "pattern": "high",
+        "solo": "high",
+        "route": "high",
+        "steps": "high",
+        "sources": "high",
+        "noise": "high",
+        "claim": "high",
+        "new_concept": "high",
+        "schema": "high",
+        "builds_on": "high",
+        "example_quality": "high"
+      },
+      "evidence": {
+        "pattern": "Geef een financiële reden waarom sommige beleggers er in deze situatie voor hebben gekozen hun obligaties niet te converteren.",
+        "solo": "Het verwachte rendement op de obligaties (interest en/of koersresultaat) ligt volgens hen boven het verwachte rendement op aandelen",
+        "steps": "Voorbeeld van een juist antwoord is:",
+        "sources": "In 2023 steeg de beurskoers van Air France-KLM tot boven de conversiekoers",
+        "noise": "Geef een financiële reden waarom sommige beleggers er in deze situatie voor hebben gekozen hun obligaties niet te converteren.",
+        "claim": "Geef een financiële reden waarom sommige beleggers er in deze situatie voor hebben gekozen",
+        "new_concept": "Geef een financiële reden waarom sommige beleggers er in deze situatie voor hebben gekozen hun obligaties niet te converteren.",
+        "builds_on": "Geef een financiële reden waarom sommige beleggers er in deze situatie voor hebben gekozen"
+      },
+      "repaired_fields": []
+    },
+    {
+      "exam_id": "vwo-2025-tv1",
+      "question_id": "vwo-2025-tv1-q27",
+      "question_number": 27,
+      "opgave_id": "vwo-2025-tv1-o6",
+      "first_of_opgave": true,
+      "points": 3,
+      "pattern": "P07",
+      "solo": "multistructureel",
+      "route": "gegeven",
+      "steps": "3",
+      "sources": "in vraagtekst",
+      "noise": "ja",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": null,
+      "example_quality": "bruikbaar",
+      "builds_on_questions": [],
+      "proposed_pattern": null,
+      "example_quality_reason": "Heldere stam en typische cv-splitsing (verkoop- en bezettingsresultaat), maar leunt op de kostentabel in de opgavetekst.",
+      "combination": 1,
+      "bloom": "toepassen",
+      "scorepunt_bloom": [
+        {
+          "points": 2,
+          "bloom": "toepassen",
+          "group_id": "F2.31.1-02"
+        },
+        {
+          "points": 1,
+          "bloom": "toepassen",
+          "group_id": "F2.31.1-02"
+        }
+      ],
+      "confidence": {
+        "pattern": "high",
+        "solo": "high",
+        "route": "high",
+        "steps": "high",
+        "sources": "high",
+        "noise": "high",
+        "claim": "high",
+        "new_concept": "high",
+        "schema": "high",
+        "builds_on": "high",
+        "example_quality": "medium"
+      },
+      "evidence": {
+        "pattern": "Bereken het verwachte resultaat voor Uw Krant over de eerste periode van 4 weken in 2025. Maak hierbij gebruik van het verkoopresultaat en het bezettingsresultaat.",
+        "solo": "verkoopresultaat: 34.500 x 4 x 6 x 0,05 + 25.000 x 4 x 6 x 0,22 = 173.400 voordelig / positief / +",
+        "route": "Maak hierbij gebruik van het verkoopresultaat en het bezettingsresultaat.",
+        "steps": "resultaat: 173.400 – 9.000 = € 164.400 voordelig / positief / +",
+        "sources": "Over de eerste periode van 4 weken in 2025 is het volgende van Uw Krant gegeven:",
+        "noise": "abonnementsprijs per 4 weken € 48,00 € 25,68",
+        "claim": "Bereken het verwachte resultaat voor Uw Krant over de eerste periode van 4 weken in 2025.",
+        "new_concept": "Maak hierbij gebruik van het verkoopresultaat en het bezettingsresultaat."
+      },
+      "repaired_fields": []
+    },
+    {
+      "exam_id": "vwo-2025-tv1",
+      "question_id": "vwo-2025-tv1-q28",
+      "question_number": 28,
+      "opgave_id": "vwo-2025-tv1-o6",
+      "first_of_opgave": false,
+      "points": 2,
+      "pattern": "P16",
+      "solo": "multistructureel",
+      "route": null,
+      "steps": "1",
+      "sources": "in vraagtekst",
+      "noise": "nee",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": "nee",
+      "example_quality": "goed",
+      "builds_on_questions": [],
+      "proposed_pattern": null,
+      "example_quality_reason": "Korte, zelfstandige noem-vraag met de typische scoring per juist antwoord 1; geen lange context nodig.",
+      "combination": 1,
+      "bloom": "onthouden",
+      "scorepunt_bloom": [
+        {
+          "points": 1,
+          "bloom": "onthouden",
+          "group_id": "E2.25.3-02"
+        },
+        {
+          "points": 1,
+          "bloom": "onthouden",
+          "group_id": "E2.25.3-02"
+        }
+      ],
+      "confidence": {
+        "pattern": "high",
+        "solo": "high",
+        "route": "high",
+        "steps": "high",
+        "sources": "high",
+        "noise": "high",
+        "claim": "high",
+        "new_concept": "high",
+        "schema": "high",
+        "builds_on": "high",
+        "example_quality": "high"
+      },
+      "evidence": {
+        "pattern": "Noem twee voordelen voor Uw Krant van het inzetten van social media in plaats van traditionele media.",
+        "solo": "per juist antwoord 1",
+        "steps": "Noem twee voordelen voor Uw Krant van het inzetten van social media in plaats van traditionele media.",
+        "sources": "Potentiële abonnees worden over deze actie geïnformeerd via social media.",
+        "noise": "Noem twee voordelen voor Uw Krant van het inzetten van social media in plaats van traditionele media.",
+        "claim": "Noem twee voordelen voor Uw Krant van het inzetten van social media in plaats van traditionele media.",
+        "new_concept": "Potentiële abonnees worden over deze actie geïnformeerd via social media.",
+        "builds_on": "Noem twee voordelen voor Uw Krant van het inzetten van social media in plaats van traditionele media."
+      },
+      "repaired_fields": []
+    },
+    {
+      "exam_id": "vwo-2025-tv1",
+      "question_id": "vwo-2025-tv1-q29",
+      "question_number": 29,
+      "opgave_id": "vwo-2025-tv1-o6",
+      "first_of_opgave": false,
+      "points": 2,
+      "pattern": "P09",
+      "solo": "relationeel",
+      "route": "gegeven",
+      "steps": "3",
+      "sources": "in vraagtekst",
+      "noise": "ja",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": "nee",
+      "example_quality": "bruikbaar",
+      "builds_on_questions": [],
+      "proposed_pattern": null,
+      "example_quality_reason": "Typisch berekenen-en-concluderen, maar de actieprijzen staan bij vraag 28 en de variabele kosten in de openingstabel: niet zelfstandig.",
+      "combination": 2,
+      "bloom": "toepassen",
+      "scorepunt_bloom": [
+        {
+          "points": 1,
+          "bloom": "toepassen",
+          "group_id": "F2.30.4-01"
+        },
+        {
+          "points": 1,
+          "bloom": "begrijpen",
+          "group_id": "F2.30.2-02"
+        }
+      ],
+      "confidence": {
+        "pattern": "high",
+        "solo": "high",
+        "route": "high",
+        "steps": "high",
+        "sources": "high",
+        "noise": "high",
+        "claim": "high",
+        "new_concept": "high",
+        "schema": "high",
+        "builds_on": "high",
+        "example_quality": "high"
+      },
+      "evidence": {
+        "pattern": "Welke abonnementsvorm heeft dan de voorkeur: papier of digitaal? Leg dit uit met behulp van een berekening van de dekkingsbijdrage",
+        "solo": "Het doel is het resultaat van Uw Krant te verbeteren op korte termijn.",
+        "route": "Leg dit uit met behulp van een berekening van de dekkingsbijdrage per type krant in de actieperiode.",
+        "steps": "De abonnementsvorm digitaal heeft de voorkeur (aangezien de dekkingsbijdrage hierbij het hoogste is).",
+        "sources": "Voor nieuwe abonnees geldt in de actieperiode een abonnementsprijs van € 27,60 voor 4 weken voor de papieren krant",
+        "noise": "constante kosten per krant € 0,75 € 0,75",
+        "claim": "Welke abonnementsvorm heeft dan de voorkeur: papier of digitaal?",
+        "new_concept": "Leg dit uit met behulp van een berekening van de dekkingsbijdrage per type krant in de actieperiode.",
+        "builds_on": "Leg dit uit met behulp van een berekening van de dekkingsbijdrage per type krant in de actieperiode."
+      },
+      "repaired_fields": []
+    },
+    {
+      "exam_id": "vwo-2025-tv1",
+      "question_id": "vwo-2025-tv1-q30",
+      "question_number": 30,
+      "opgave_id": "vwo-2025-tv1-o6",
+      "first_of_opgave": false,
+      "points": 2,
+      "pattern": "P05",
+      "solo": "multistructureel",
+      "route": null,
+      "steps": "2",
+      "sources": "in vraagtekst",
+      "noise": "nee",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": "nee",
+      "example_quality": "bruikbaar",
+      "builds_on_questions": [],
+      "proposed_pattern": null,
+      "example_quality_reason": "Duidelijke keuze uit de marketingmix met argument, maar de stam leunt op een lang citaat over true pricing.",
+      "combination": 2,
+      "bloom": "begrijpen",
+      "scorepunt_bloom": [
+        {
+          "points": 1,
+          "bloom": "begrijpen",
+          "group_id": "E2.25.3-01"
+        },
+        {
+          "points": 1,
+          "bloom": "begrijpen",
+          "group_id": "E2.25.3-02"
+        }
+      ],
+      "confidence": {
+        "pattern": "high",
+        "solo": "high",
+        "route": "high",
+        "steps": "high",
+        "sources": "high",
+        "noise": "high",
+        "claim": "high",
+        "new_concept": "high",
+        "schema": "high",
+        "builds_on": "high",
+        "example_quality": "high"
+      },
+      "evidence": {
+        "pattern": "Leg uit welk instrument van de marketingmix kan worden gebruikt om de abonnee goed te informeren over de achtergrond van de prijsverhoging.",
+        "solo": "Het tweede scorepunt alleen toekennen wanneer het eerste scorepunt is behaald.",
+        "steps": "zal de klant eerder bereid zijn deze hogere prijs te betalen.",
+        "sources": "Bij true pricing betaalt de consument een hoger bedrag voor zijn product.",
+        "noise": "Leg uit welk instrument van de marketingmix kan worden gebruikt om de abonnee goed te informeren over de achtergrond van de prijsverhoging.",
+        "claim": "Leg uit welk instrument van de marketingmix kan worden gebruikt om de abonnee goed te informeren",
+        "new_concept": "Bij true pricing worden de verborgen kosten van een product inzichtelijk gemaakt voor de consument.",
+        "builds_on": "Leg uit welk instrument van de marketingmix kan worden gebruikt om de abonnee goed te informeren over de achtergrond van de prijsverhoging."
+      },
+      "repaired_fields": []
+    }
+  ]
+}

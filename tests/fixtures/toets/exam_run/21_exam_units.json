@@ -1,0 +1,305 @@
+{
+ "run_id": "fixture-label",
+ "exams": [
+  {
+   "exam_id": "vwo-2030-tv1",
+   "code": "VW-9999-a-30-1",
+   "level": "vwo",
+   "year": 2030,
+   "tijdvak": 1,
+   "subject": "fixturevak",
+   "n_questions": 4,
+   "max_score": 9,
+   "files": {
+    "o": "input/vwo-2030-tv1/o.pdf"
+   },
+   "source_files": {
+    "o": "input/examens/2030 TV1/o.pdf"
+   },
+   "syllabus_note": null,
+   "text_extraction": "text"
+  },
+  {
+   "exam_id": "vwo-2031-tv1",
+   "code": "VW-9999-a-31-1",
+   "level": "vwo",
+   "year": 2031,
+   "tijdvak": 1,
+   "subject": "fixturevak",
+   "n_questions": 2,
+   "max_score": 5,
+   "files": {
+    "o": "input/vwo-2031-tv1/o.pdf"
+   },
+   "source_files": {
+    "o": "input/examens/2031 TV1/o.pdf"
+   },
+   "syllabus_note": null,
+   "text_extraction": "text"
+  }
+ ],
+ "units": [
+  {
+   "unit_id": "vwo-2030-tv1-o1",
+   "kind": "opgave",
+   "exam_id": "vwo-2030-tv1",
+   "number": 1,
+   "title": "Bakkerij Kruim",
+   "sources": [
+    1
+   ],
+   "text_ref": "text/vwo-2030-tv1-o1.txt"
+  },
+  {
+   "unit_id": "vwo-2030-tv1-q1",
+   "kind": "question",
+   "exam_id": "vwo-2030-tv1",
+   "opgave_id": "vwo-2030-tv1-o1",
+   "number": 1,
+   "points": 3,
+   "text_ref": "text/vwo-2030-tv1-q1.txt",
+   "sources": [
+    1
+   ],
+   "sources_from": "question",
+   "cv_max": 3,
+   "cv_ref": "text/vwo-2030-tv1-q1.cv.txt",
+   "cv_notes": [],
+   "formula_ref": null
+  },
+  {
+   "unit_id": "vwo-2030-tv1-q1-s1",
+   "kind": "scorepunt",
+   "exam_id": "vwo-2030-tv1",
+   "question_id": "vwo-2030-tv1-q1",
+   "seq": 1,
+   "points": 1,
+   "scoring": "bullet",
+   "text": "omzet"
+  },
+  {
+   "unit_id": "vwo-2030-tv1-q1-s2",
+   "kind": "scorepunt",
+   "exam_id": "vwo-2030-tv1",
+   "question_id": "vwo-2030-tv1-q1",
+   "seq": 2,
+   "points": 1,
+   "scoring": "bullet",
+   "text": "variabele kosten"
+  },
+  {
+   "unit_id": "vwo-2030-tv1-q1-s3",
+   "kind": "scorepunt",
+   "exam_id": "vwo-2030-tv1",
+   "question_id": "vwo-2030-tv1-q1",
+   "seq": 3,
+   "points": 1,
+   "scoring": "bullet",
+   "text": "winst"
+  },
+  {
+   "unit_id": "vwo-2030-tv1-q2",
+   "kind": "question",
+   "exam_id": "vwo-2030-tv1",
+   "opgave_id": "vwo-2030-tv1-o1",
+   "number": 2,
+   "points": 2,
+   "text_ref": "text/vwo-2030-tv1-q2.txt",
+   "sources": [],
+   "sources_from": "question",
+   "cv_max": 2,
+   "cv_ref": "text/vwo-2030-tv1-q2.cv.txt",
+   "cv_notes": [],
+   "formula_ref": null
+  },
+  {
+   "unit_id": "vwo-2030-tv1-q2-s1",
+   "kind": "scorepunt",
+   "exam_id": "vwo-2030-tv1",
+   "question_id": "vwo-2030-tv1-q2",
+   "seq": 1,
+   "points": 1,
+   "scoring": "bullet",
+   "text": "afzet stijgt"
+  },
+  {
+   "unit_id": "vwo-2030-tv1-q2-s2",
+   "kind": "scorepunt",
+   "exam_id": "vwo-2030-tv1",
+   "question_id": "vwo-2030-tv1-q2",
+   "seq": 2,
+   "points": 1,
+   "scoring": "bullet",
+   "text": "procentueel sterker"
+  },
+  {
+   "unit_id": "vwo-2030-tv1-q3",
+   "kind": "question",
+   "exam_id": "vwo-2030-tv1",
+   "opgave_id": "vwo-2030-tv1-o1",
+   "number": 3,
+   "points": 2,
+   "text_ref": "text/vwo-2030-tv1-q3.txt",
+   "sources": [],
+   "sources_from": "question",
+   "cv_max": 2,
+   "cv_ref": "text/vwo-2030-tv1-q3.cv.txt",
+   "cv_notes": [],
+   "formula_ref": null
+  },
+  {
+   "unit_id": "vwo-2030-tv1-q3-s1",
+   "kind": "scorepunt",
+   "exam_id": "vwo-2030-tv1",
+   "question_id": "vwo-2030-tv1-q3",
+   "seq": 1,
+   "points": 1,
+   "scoring": "bullet",
+   "text": "winst uit vraag 1"
+  },
+  {
+   "unit_id": "vwo-2030-tv1-q3-s2",
+   "kind": "scorepunt",
+   "exam_id": "vwo-2030-tv1",
+   "question_id": "vwo-2030-tv1-q3",
+   "seq": 2,
+   "points": 1,
+   "scoring": "bullet",
+   "text": "conclusie"
+  },
+  {
+   "unit_id": "vwo-2030-tv1-o2",
+   "kind": "opgave",
+   "exam_id": "vwo-2030-tv1",
+   "number": 2,
+   "title": "Fietsenmaker Spaak",
+   "sources": [],
+   "text_ref": "text/vwo-2030-tv1-o2.txt"
+  },
+  {
+   "unit_id": "vwo-2030-tv1-q4",
+   "kind": "question",
+   "exam_id": "vwo-2030-tv1",
+   "opgave_id": "vwo-2030-tv1-o2",
+   "number": 4,
+   "points": 2,
+   "text_ref": "text/vwo-2030-tv1-q4.txt",
+   "sources": [],
+   "sources_from": "question",
+   "cv_max": 2,
+   "cv_ref": "text/vwo-2030-tv1-q4.cv.txt",
+   "cv_notes": [],
+   "formula_ref": null
+  },
+  {
+   "unit_id": "vwo-2030-tv1-q4-s1",
+   "kind": "scorepunt",
+   "exam_id": "vwo-2030-tv1",
+   "question_id": "vwo-2030-tv1-q4",
+   "seq": 1,
+   "points": 1,
+   "scoring": "bullet",
+   "text": "eenmanszaak"
+  },
+  {
+   "unit_id": "vwo-2030-tv1-q4-s2",
+   "kind": "scorepunt",
+   "exam_id": "vwo-2030-tv1",
+   "question_id": "vwo-2030-tv1-q4",
+   "seq": 2,
+   "points": 1,
+   "scoring": "bullet",
+   "text": "alleen"
+  },
+  {
+   "unit_id": "vwo-2031-tv1-o1",
+   "kind": "opgave",
+   "exam_id": "vwo-2031-tv1",
+   "number": 1,
+   "title": "Kapsalon Knip",
+   "sources": [],
+   "text_ref": "text/vwo-2031-tv1-o1.txt"
+  },
+  {
+   "unit_id": "vwo-2031-tv1-q1",
+   "kind": "question",
+   "exam_id": "vwo-2031-tv1",
+   "opgave_id": "vwo-2031-tv1-o1",
+   "number": 1,
+   "points": 2,
+   "text_ref": "text/vwo-2031-tv1-q1.txt",
+   "sources": [],
+   "sources_from": "question",
+   "cv_max": 2,
+   "cv_ref": "text/vwo-2031-tv1-q1.cv.txt",
+   "cv_notes": [],
+   "formula_ref": null
+  },
+  {
+   "unit_id": "vwo-2031-tv1-q1-s1",
+   "kind": "scorepunt",
+   "exam_id": "vwo-2031-tv1",
+   "question_id": "vwo-2031-tv1-q1",
+   "seq": 1,
+   "points": 1,
+   "scoring": "bullet",
+   "text": "ingevuld"
+  },
+  {
+   "unit_id": "vwo-2031-tv1-q1-s2",
+   "kind": "scorepunt",
+   "exam_id": "vwo-2031-tv1",
+   "question_id": "vwo-2031-tv1-q1",
+   "seq": 2,
+   "points": 1,
+   "scoring": "bullet",
+   "text": "resultaat"
+  },
+  {
+   "unit_id": "vwo-2031-tv1-q2",
+   "kind": "question",
+   "exam_id": "vwo-2031-tv1",
+   "opgave_id": "vwo-2031-tv1-o1",
+   "number": 2,
+   "points": 3,
+   "text_ref": "text/vwo-2031-tv1-q2.txt",
+   "sources": [],
+   "sources_from": "question",
+   "cv_max": 3,
+   "cv_ref": "text/vwo-2031-tv1-q2.cv.txt",
+   "cv_notes": [],
+   "formula_ref": null
+  },
+  {
+   "unit_id": "vwo-2031-tv1-q2-s1",
+   "kind": "scorepunt",
+   "exam_id": "vwo-2031-tv1",
+   "question_id": "vwo-2031-tv1-q2",
+   "seq": 1,
+   "points": 1,
+   "scoring": "bullet",
+   "text": "kostprijs"
+  },
+  {
+   "unit_id": "vwo-2031-tv1-q2-s2",
+   "kind": "scorepunt",
+   "exam_id": "vwo-2031-tv1",
+   "question_id": "vwo-2031-tv1-q2",
+   "seq": 2,
+   "points": 1,
+   "scoring": "bullet",
+   "text": "marge"
+  },
+  {
+   "unit_id": "vwo-2031-tv1-q2-s3",
+   "kind": "scorepunt",
+   "exam_id": "vwo-2031-tv1",
+   "question_id": "vwo-2031-tv1-q2",
+   "seq": 3,
+   "points": 1,
+   "scoring": "bullet",
+   "text": "verkoopprijs"
+  }
+ ],
+ "parse_issues": []
+}

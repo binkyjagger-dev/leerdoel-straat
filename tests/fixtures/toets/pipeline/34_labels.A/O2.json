@@ -1,0 +1,49 @@
+{
+ "labeller": "A",
+ "mode": "toets",
+ "opgave_id": "O2",
+ "items": [
+  {
+   "question_id": "O2-V3",
+   "question_number": 3,
+   "pattern": "P07",
+   "proposed_pattern": null,
+   "solo": "unistructureel",
+   "route": "gegeven",
+   "steps": "1",
+   "sources": "één bron",
+   "noise": "nee",
+   "claim": "nee",
+   "new_concept": "nee",
+   "schema": null,
+   "builds_on": null,
+   "builds_on_questions": [],
+   "example_quality": null,
+   "example_quality_reason": null,
+   "evidence": {},
+   "note": null
+  },
+  {
+   "question_id": "O2-V4",
+   "question_number": 4,
+   "pattern": "P15",
+   "proposed_pattern": null,
+   "solo": "relationeel",
+   "route": "zelf vinden",
+   "steps": "3",
+   "sources": "meerdere bronnen",
+   "noise": "ja",
+   "claim": "nee",
+   "new_concept": "nee",
+   "schema": null,
+   "builds_on": "ja",
+   "builds_on_questions": [
+    3
+   ],
+   "example_quality": null,
+   "example_quality_reason": null,
+   "evidence": {},
+   "note": null
+  }
+ ]
+}

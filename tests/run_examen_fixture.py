@@ -53,6 +53,48 @@ def by_sp(r):
     return {l["scorepunt_id"].replace(E + "-", ""): l for l in load(r / "24_mappings.json")["links"]}
 
 
+def sources_cases(tmp: Path) -> bool:
+    """Question `sources` / `sources_from` (specs/21 §3): every form a question can name bronnen in,
+    the opgave fallback, and never from the correctievoorschrift."""
+    furn = ["VW-9999-a-31-1-o", "1 / 1", "einde"]
+    o = ["VW-9999-a-31-1-o", "Examen VWO", "Dit examen bestaat uit 7 vragen.", "Voor dit examen zijn maximaal 7 punten te behalen.", " ",
+         "Opgave 1", " ", "Bij deze opgave horen de informatiebronnen 1 tot en met 4.", " ", "Camping Vogelhof heeft 280 standplaatsen.", " ",
+         "1p", "1", "Bereken de omzet (zie informatiebron 2).", " ",
+         "De kosten van het veld staan in de bijlage (zie informatiebronnen 2, 3 en", "4).", " ",
+         "1p", "2", "Bereken de totale kosten.", " ",
+         "1p", "3", "Bereken de winst (zie informatiebronnen 1 tot en met 3).", " ",
+         "1p", "4", "Vergelijk de tarieven (zie informatiebron 3 en 4).", " ",
+         "Zonder herinrichting is de bijdrage aan het resultaat € 115.000 voordelig.", " ",
+         "1p", "5", "Analyseer of de eigenaren het veld herinrichten.", " ",
+         "Opgave 2", " ", "Een nieuwe camping wordt opgericht.", " ",
+         "1p", "6", "Noem een geschikte rechtsvorm.", " ",
+         "1p", "7", "Bereken de prijs per nacht (zie informatiebronnen 1 t/m 2).", " "] + furn
+    c = ["VW-9999-a-31-1-c", "4 Beoordelingsmodel", "Vraag", "Antwoord", "Scores", "Opgave 1"]
+    for n in range(1, 8):
+        c += [str(n), "maximumscore 1",
+              "eenmanszaak (zie informatiebron 1 en 4)" if n == 6 else f"antwoord {n} met informatiebron 4", " "]
+    c += ["5 Aanleveren scores", "VW-9999-a-31-1-c", "1", "einde"]
+    b = ["VW-9999-a-31-1-b", "Bijlage VWO"] + [x for n in range(1, 5) for x in (f"Informatiebron {n}", " ", f"Tabel {n}", " ")] + \
+        ["VW-9999-a-31-1-b", "1 / 1", "einde"]
+    ex, r = tmp / "src_exams", tmp / "src_run"
+    make_pdfs({"files": {"vw-9999-a-31-1-o.pdf": [o], "vw-9999-a-31-1-c.pdf": [c], "vw-9999-a-31-1-b.pdf": [b]}}, ex / "2031 TV1")
+    r.mkdir()
+    (r / "run.json").write_text(json.dumps({"run_id": "src", "subject": "fixturevak"}), encoding="utf-8")
+    ok = run("exam_text (bron forms)", "scripts/exam/exam_text.py", str(r), str(ex))
+    ok &= run("validate_exam (bron forms)", "scripts/exam/validate_exam.py", str(r))
+    q = {x["number"]: (x["sources"], x["sources_from"]) for x in load(r / "21_exam_units.json")["units"] if x["kind"] == "question"}
+    ok &= check("'informatiebron 2' -> [2]; the opgave's 'horen' sentence in q1's context does not count",
+                q[1] == ([2], "question"))
+    ok &= check("'informatiebronnen 2, 3 en' + line break + '4' in the context -> [2, 3, 4]", q[2] == ([2, 3, 4], "question"))
+    ok &= check("'informatiebronnen 1 tot en met 3' -> [1, 2, 3]", q[3] == ([1, 2, 3], "question"))
+    ok &= check("'zie informatiebron 3 en 4' -> [3, 4]", q[4] == ([3, 4], "question"))
+    ok &= check("no bron named -> the opgave's 'horen de informatiebronnen 1 tot en met 4', sources_from opgave",
+                q[5] == ([1, 2, 3, 4], "opgave"))
+    ok &= check("opgave without 'horen' sentence -> [] (question); bronnen in the cv are never used", q[6] == ([], "question"))
+    ok &= check("'informatiebronnen 1 t/m 2' -> [1, 2]", q[7] == ([1, 2], "question"))
+    return ok
+
+
 def main():
     tmp = Path(tempfile.mkdtemp())
     r = tmp / "run"
@@ -74,6 +116,10 @@ def main():
                 any("prijselasticiteit" in n for x in u["units"] if x["kind"] == "question" for n in x["cv_notes"]))
     ok &= check("Opmerking(en) never inside a scorepunt text", not any("Opmerking" in x["text"] for x in sps))
     ok &= check("informatiebron 1 found for opgave 1", u["units"][0]["sources"] == [1] and (r / f"text/{E}-bron1.txt").exists())
+    q1 = next(x for x in u["units"] if x["unit_id"] == f"{E}-q1")
+    ok &= check("q1 names no bron itself -> opgave's 'hoort informatiebron 1' (sources_from opgave)",
+                q1["sources"] == [1] and q1["sources_from"] == "opgave")
+    ok &= sources_cases(tmp)
 
     ok &= run("exam_candidates", f"{s}/exam_candidates.py", str(r))
     cand = {x["scorepunt_id"]: x["candidates"] for x in load(r / "22_candidates.json")["per_scorepunt"]}

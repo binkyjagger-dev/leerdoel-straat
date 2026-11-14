@@ -1,0 +1,170 @@
+{
+ "opgave_id": "O1",
+ "title": "Schoenmaker Zool",
+ "intro": "Schoenmaker Zool repareert schoenen in een kleine werkplaats in de binnenstad.",
+ "data": {
+  "prijs_incl": 36.3,
+  "btw": 0.21,
+  "vk": 6.4,
+  "reparaties": 1200
+ },
+ "sources": [
+  {
+   "n": 1,
+   "title": "Reparaties in maart",
+   "kind": "text",
+   "text": "Een reparatie kost € 36,30 inclusief 21% btw. De variabele kosten zijn € 6,40 per reparatie. In maart voert Zool 1.200 reparaties uit. De werkplaats bestaat 15 jaar.",
+   "table": null,
+   "figure_id": null,
+   "uses_data": [
+    "prijs_incl",
+    "btw",
+    "vk",
+    "reparaties"
+   ],
+   "noise_data": []
+  },
+  {
+   "n": 2,
+   "title": "Reparaties per maand",
+   "kind": "figure",
+   "text": null,
+   "table": null,
+   "figure_id": "f1",
+   "uses_data": [],
+   "noise_data": []
+  }
+ ],
+ "figures": [
+  {
+   "figure_id": "f1",
+   "spec": {
+    "type": "bar_chart",
+    "title": "Reparaties per maand",
+    "y": {
+     "label": "aantal",
+     "min": 0,
+     "max": 1500
+    },
+    "bars": [
+     {
+      "label": "februari",
+      "value": 1250
+     },
+     {
+      "label": "maart",
+      "value": 1200
+     }
+    ]
+   },
+   "answer_spec": null
+  }
+ ],
+ "vragen": [
+  {
+   "vraag_id": "O1-V1",
+   "number": 1,
+   "points": 3,
+   "stem": "Bereken de totale dekkingsbijdrage in maart. Bereken hiervoor eerst de prijs exclusief btw en de dekkingsbijdrage per reparatie. Gebruik informatiebron 1.",
+   "uitwerkbijlage": null,
+   "cv": {
+    "maximumscore": 3,
+    "model_answer": "€ 36,30 / 1,21 = € 30,00; € 30,00 − € 6,40 = € 23,60; 1.200 × € 23,60 = € 28.230",
+    "calc": [
+     {
+      "name": "factor",
+      "expr": "1 + btw",
+      "round": 2,
+      "rounding": null,
+      "shown": "1,21"
+     },
+     {
+      "name": "excl",
+      "expr": "prijs_incl / factor",
+      "round": 2,
+      "rounding": null,
+      "shown": "€ 30,00"
+     },
+     {
+      "name": "db",
+      "expr": "excl - vk",
+      "round": 2,
+      "rounding": null,
+      "shown": "€ 23,60"
+     },
+     {
+      "name": "tdb",
+      "expr": "db * reparaties",
+      "round": 0,
+      "rounding": null,
+      "shown": "€ 28.230"
+     }
+    ],
+    "scorepunten": [
+     {
+      "seq": 1,
+      "points": 1,
+      "text": "prijs exclusief btw",
+      "criterion_id": "X1.1-01-a",
+      "calc_ref": "excl"
+     },
+     {
+      "seq": 2,
+      "points": 1,
+      "text": "dekkingsbijdrage per reparatie",
+      "criterion_id": "X1.1-01-a",
+      "calc_ref": "db"
+     },
+     {
+      "seq": 3,
+      "points": 1,
+      "text": "totale dekkingsbijdrage",
+      "criterion_id": "X1.1-01-a",
+      "calc_ref": "tdb"
+     }
+    ],
+    "rules": [
+     "Voor elke fout 1 scorepunt in mindering brengen."
+    ],
+    "alternatives": [],
+    "follow_through": null
+   },
+   "new_concepts": [],
+   "builds_on_vragen": []
+  },
+  {
+   "vraag_id": "O1-V2",
+   "number": 2,
+   "points": 2,
+   "stem": "Zool overweegt de prijs te verlagen. Leg uit hoe een lagere prijs tot een hogere omzet kan leiden.",
+   "uitwerkbijlage": null,
+   "cv": {
+    "maximumscore": 2,
+    "model_answer": "Bij een lagere prijs stijgt het aantal reparaties. De omzet stijgt als het aantal reparaties procentueel sterker stijgt dan de prijs daalt.",
+    "calc": [],
+    "scorepunten": [
+     {
+      "seq": 1,
+      "points": 1,
+      "text": "het aantal reparaties stijgt",
+      "criterion_id": "X1.1-01-b",
+      "calc_ref": null
+     },
+     {
+      "seq": 2,
+      "points": 1,
+      "text": "procentueel sterker dan de prijsdaling",
+      "criterion_id": "X1.1-01-b",
+      "calc_ref": null
+     }
+    ],
+    "rules": [],
+    "alternatives": [],
+    "follow_through": null
+   },
+   "new_concepts": [],
+   "builds_on_vragen": []
+  }
+ ],
+ "writer_notes": "fixture met bewuste fouten"
+}

@@ -1,0 +1,12 @@
+{
+ "run_id": "fixture-label",
+ "subject": "fixturevak",
+ "criteria_run": "fixture-generate",
+ "exams": [
+  "vwo-2030-tv1",
+  "vwo-2031-tv1"
+ ],
+ "label_only": true,
+ "judge_batch": 4,
+ "status": "running"
+}

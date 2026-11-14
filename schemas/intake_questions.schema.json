@@ -75,7 +75,9 @@
                 "exercise-judge",
                 "mapping-verifier",
                 "exam-ingest",
-                "exam-judge"
+                "exam-judge",
+                "item-labeller",
+                "catalogue"
               ]
             }
           },

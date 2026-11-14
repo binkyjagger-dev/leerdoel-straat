@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Toetsbank",
+  "description": "subjects/<vak>/toetsbank/register.json (root), toetsen/<toets_id>.json (#/$defs/toets_file, = output/toets.json) and contexts.json (#/$defs/contexts) — specs/35 §4. toets_file lists only what other steps rely on; the full record is fixed in build step 6.",
+  "type": "object",
+  "required": ["subject", "criteria_run", "toetsen"],
+  "properties": {
+    "subject": {"type": "string"},
+    "criteria_run": {"type": "string"},
+    "created_at": {"type": ["string", "null"]},
+    "toetsen": {"type": "array", "items": {
+      "type": "object",
+      "required": ["toets_id", "title", "level", "run_id", "created_at", "max_score", "n_opgaven", "n_vragen", "reference"],
+      "properties": {
+        "toets_id": {"type": "string"}, "title": {"type": "string"}, "level": {"type": "string"},
+        "run_id": {"type": "string"}, "created_at": {"type": "string"}, "max_score": {"type": "integer"},
+        "n_opgaven": {"type": "integer"}, "n_vragen": {"type": "integer"}, "reference": {"type": ["string", "null"]}
+      }}}
+  },
+  "$defs": {
+    "toets_file": {
+      "type": "object",
+      "required": ["toets_id", "criteria_run", "opgaven"],
+      "properties": {
+        "toets_id": {"type": "string"},
+        "criteria_run": {"type": "string"},
+        "title": {"type": "string"},
+        "opgaven": {"type": "array", "items": {
+          "type": "object", "required": ["opgave_id", "title", "vragen"],
+          "properties": {
+            "opgave_id": {"type": "string"},
+            "title": {"type": "string"},
+            "context_tags": {"type": "array", "items": {"type": "string"}},
+            "reused_from": {"type": ["object", "null"]},
+            "vragen": {"type": "array", "items": {
+              "type": "object", "required": ["vraag_id", "points", "scorepunten"],
+              "properties": {
+                "vraag_id": {"type": "string"},
+                "points": {"type": "integer"},
+                "pattern": {"type": ["string", "null"]},
+                "scorepunten": {"type": "array", "items": {
+                  "type": "object", "required": ["points", "criterion_id"],
+                  "properties": {"points": {"type": "integer"}, "criterion_id": {"type": "string"},
+                                 "group_id": {"type": ["string", "null"]}, "bloom": {"type": ["string", "null"]}}}}
+              }}}
+          }}}
+      }
+    },
+    "contexts": {
+      "type": "object", "required": ["contexts"],
+      "properties": {"contexts": {"type": "array", "items": {
+        "type": "object", "required": ["toets_id", "opgave_id", "title", "context_tags", "level", "date"],
+        "properties": {"toets_id": {"type": "string"}, "opgave_id": {"type": "string"}, "title": {"type": "string"},
+                       "context_tags": {"type": "array", "items": {"type": "string"}}, "level": {"type": "string"},
+                       "date": {"type": "string"}}}}}
+    }
+  }
+}

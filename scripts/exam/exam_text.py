@@ -4,7 +4,8 @@
 Usage: exam_text.py <run_dir> <exam_folder> [<exam_folder> ...]
 
 Each exam folder holds `*-o.pdf` (opgaven), `*-c.pdf` (correctievoorschrift) and
-optionally `*-b.pdf` (bijlage) and `*-u.pdf` (uitwerkbijlage); a folder without PDFs
+optionally `*-b.pdf` (bijlage) and `*-u.pdf` (uitwerkbijlage → text/<exam>-uitwerkbijlage.txt, the exam's
+`uitwerkbijlage_ref`); a folder without PDFs
 is expanded to its subfolders. Copies the PDFs to <run_dir>/input/<exam_id>/, writes
 text files to <run_dir>/text/ and a draft <run_dir>/21_exam_units.json whose
 `parse_issues` the exam-ingest agent resolves. Existing exams in the units file are
@@ -26,7 +27,13 @@ FILE_RE = re.compile(r"^([a-z]{2})-(\d{4})-a-(\d{2})-(\d)-([ocbu])\.pdf$", re.I)
 PAGE_NO = re.compile(r"^(\d+( / \d+)?|einde|lees verder.*|►+)$")
 CV_HEADS = {"Vraag", "Antwoord", "Scores", "Vraag Antwoord", "Vraag Antwoord Scores"}
 PER_ITEM = re.compile(r"^per\s+(juist|juiste|goed|correct)", re.I)
-SOURCES_RE = re.compile(r"informatiebron(?:nen)?\s+(\d+)(?:\s+(tot en met|t/m|en)\s+(\d+))?", re.I)
+# "informatiebron 2", "informatiebronnen 2, 3 en 4", "informatiebronnen 1 tot en met 4", "informatiebron 3 en 4"
+# (line breaks allowed anywhere between the words); "en de uitwerkbijlage" ends the list.
+SEP = r"(?:\s*,\s*|\s+en\s+|\s+(?:tot\s+en\s+met|t/m)\s+)"
+SOURCES_RE = re.compile(r"\binformatiebron(?:nen)?\s+(\d+)((?:" + SEP + r"\d+)*)", re.I)
+SOURCES_STEP = re.compile(r"(tot\s+en\s+met|t/m|,|\ben\b)\s*(\d+)", re.I)
+# the opgave's own sentence "Bij deze opgave hoort informatiebron 1." / "… horen de informatiebronnen 1 tot en met 4."
+OPGAVE_SOURCES_RE = re.compile(r"Bij\s+deze\s+opgave\s+(?:hoort|horen)\b[^.]*\.?", re.I)
 
 
 def pdf_lines(path: Path, issues: list, exam_id: str, code: str | None) -> tuple[list[str], int]:
@@ -72,16 +79,34 @@ def strip_blank_runs(lines: list[str]) -> list[str]:
 
 
 def parse_sources(text: str) -> list[int]:
+    """Every informatiebron number the text names, with enumerations and ranges expanded."""
     found: set[int] = set()
     for m in SOURCES_RE.finditer(text):
-        a = int(m.group(1))
-        if m.group(3) and m.group(2).lower() in ("tot en met", "t/m"):
-            found.update(range(a, int(m.group(3)) + 1))
-        else:
-            found.add(a)
-            if m.group(3):
-                found.add(int(m.group(3)))
+        prev = int(m.group(1))
+        found.add(prev)
+        for sep, num in SOURCES_STEP.findall(m.group(2)):
+            n = int(num)
+            if sep.lower() in ("t/m",) or sep.lower().startswith("tot"):
+                found.update(range(prev, n + 1))
+            else:
+                found.add(n)
+            prev = n
     return sorted(found)
+
+
+def opgave_sources(text: str) -> list[int]:
+    """The opgave's "Bij deze opgave horen de informatiebronnen …" set ([] without that sentence)."""
+    return sorted({n for m in OPGAVE_SOURCES_RE.finditer(text) for n in parse_sources(m.group(0))})
+
+
+def question_sources(text: str, fallback: list[int]) -> tuple[list[int], str]:
+    """(sources, sources_from) of one question (specs/21 §3): the bronnen its own text (context + vraag)
+    names, without the opgave's "Bij deze opgave horen …" sentence; when it names none, the opgave's set.
+    Never derived from the correctievoorschrift."""
+    own = parse_sources(OPGAVE_SOURCES_RE.sub(" ", text))
+    if own or not fallback:
+        return own, "question"
+    return list(fallback), "opgave"
 
 
 def find_files(folder: Path) -> dict[str, Path]:
@@ -315,6 +340,11 @@ def ingest_exam(run_dir: Path, folder: Path, subject: str) -> tuple[dict, list[d
     o_lines, o_empty = pdf_lines(files["o"], issues, eid, f"{code}-o")
     c_lines, c_empty = pdf_lines(files["c"], issues, eid, f"{code}-c")
     b_lines, b_empty = pdf_lines(files["b"], issues, eid, f"{code}-b") if "b" in files else ([], 0)
+    # uitwerkbijlage (*-u.pdf), when present: one text file for the labellers (specs/26 §3; E7 run 1 lesson)
+    meta["uitwerkbijlage_ref"] = None
+    if "u" in files:
+        u_lines, _ = pdf_lines(files["u"], issues, eid, f"{code}-u")
+        meta["uitwerkbijlage_ref"] = write(run_dir, f"{eid}-uitwerkbijlage.txt", u_lines)
     meta["n_questions"], meta["max_score"] = parse_header(o_lines)
     meta["syllabus_note"] = None
     meta["text_extraction"] = "text" if not (o_empty or c_empty or b_empty) else "mixed"
@@ -332,6 +362,7 @@ def ingest_exam(run_dir: Path, folder: Path, subject: str) -> tuple[dict, list[d
     for og in parse_opgaven(o_lines, eid, issues):
         oid = f"{eid}-o{og['number']}"
         otext = strip_blank_runs(og["lines"])
+        og_range = opgave_sources("\n".join(otext))
         units.append({"unit_id": oid, "kind": "opgave", "exam_id": eid, "number": og["number"],
                       "title": next((s.strip() for s in otext if s.strip() and not s.strip().startswith("Bij deze opgave")), "")[:80],
                       "sources": parse_sources("\n".join(otext)),
@@ -344,6 +375,7 @@ def ingest_exam(run_dir: Path, folder: Path, subject: str) -> tuple[dict, list[d
             seen_q.add(n)
             qlines = (["[context]"] + q["context"] + [""] if q["context"] else []) + \
                      ["[vraag]", f"{q['points']}p {n} " + " ".join(q["ask"])]
+            qsrc, qsrc_from = question_sources("\n".join(q["context"] + q["ask"]), og_range)
             entry = entries.get(n)
             cv_ref, cv_max, notes = None, None, []
             if entry is None:
@@ -355,7 +387,7 @@ def ingest_exam(run_dir: Path, folder: Path, subject: str) -> tuple[dict, list[d
             units.append({"unit_id": qid, "kind": "question", "exam_id": eid, "opgave_id": oid,
                           "number": n, "points": q["points"],
                           "text_ref": write(run_dir, f"{eid}-q{n}.txt", qlines),
-                          "sources": parse_sources("\n".join(q["context"] + q["ask"])),
+                          "sources": qsrc, "sources_from": qsrc_from,
                           "cv_max": cv_max, "cv_ref": cv_ref, "cv_notes": notes,
                           "formula_ref": formula_refs.get(n)})
             if entry is None:
