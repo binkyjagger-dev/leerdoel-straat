@@ -11,7 +11,7 @@
     "pattern": {
       "P01": {
         "points": 7.0,
-        "share": 0.057
+        "share": 0.056
       },
       "P03": {
         "points": 2.0,
@@ -22,32 +22,36 @@
         "share": 0.016
       },
       "P05": {
-        "points": 7.0,
-        "share": 0.057
+        "points": 6.0,
+        "share": 0.048
       },
       "P07": {
         "points": 8.0,
         "share": 0.065
       },
       "P08": {
-        "points": 24.0,
-        "share": 0.195
+        "points": 26.0,
+        "share": 0.21
       },
       "P09": {
-        "points": 17.0,
-        "share": 0.138
+        "points": 15.0,
+        "share": 0.121
       },
       "P14": {
-        "points": 13.0,
-        "share": 0.106
+        "points": 9.0,
+        "share": 0.073
       },
       "P15": {
         "points": 7.0,
-        "share": 0.057
+        "share": 0.056
       },
       "P16": {
-        "points": 11.0,
-        "share": 0.089
+        "points": 16.0,
+        "share": 0.129
+      },
+      "P17": {
+        "points": 1.0,
+        "share": 0.008
       },
       "B01": {
         "points": 2.0,
@@ -55,11 +59,11 @@
       },
       "B02": {
         "points": 18.0,
-        "share": 0.146
+        "share": 0.145
       },
       "B03": {
         "points": 5.0,
-        "share": 0.041
+        "share": 0.04
       }
     },
     "bloom": {
@@ -82,78 +86,88 @@
     },
     "solo": {
       "unistructureel": {
-        "points": 9.0,
-        "share": 0.073
+        "points": 13.0,
+        "share": 0.105
       },
       "multistructureel": {
-        "points": 57.0,
-        "share": 0.46
+        "points": 51.0,
+        "share": 0.411
       },
       "relationeel": {
-        "points": 58.0,
-        "share": 0.468
+        "points": 60.0,
+        "share": 0.484
       }
     },
     "route": {
       "gegeven": {
-        "points": 37.0,
-        "share": 0.468
+        "points": 39.0,
+        "share": 0.494
       },
       "zelf vinden": {
-        "points": 42.0,
-        "share": 0.532
+        "points": 40.0,
+        "share": 0.506
       }
     },
     "steps": {
       "1": {
-        "points": 16.0,
-        "share": 0.129
+        "points": 15.0,
+        "share": 0.121
       },
       "2": {
-        "points": 26.0,
-        "share": 0.21
+        "points": 32.0,
+        "share": 0.258
       },
       "3": {
-        "points": 31.0,
-        "share": 0.25
+        "points": 28.0,
+        "share": 0.226
       },
       "4+": {
-        "points": 51.0,
-        "share": 0.411
+        "points": 49.0,
+        "share": 0.395
       }
     },
     "sources": {
       "in vraagtekst": {
-        "points": 66.0,
-        "share": 0.532
+        "points": 72.0,
+        "share": 0.581
       },
-      "één bron zonder ruis": {
-        "points": 21.0,
-        "share": 0.169
+      "één bron": {
+        "points": 26.0,
+        "share": 0.21
       },
-      "meerdere bronnen met ruis": {
-        "points": 37.0,
-        "share": 0.298
+      "meerdere bronnen": {
+        "points": 26.0,
+        "share": 0.21
+      }
+    },
+    "noise": {
+      "nee": {
+        "points": 38.0,
+        "share": 0.306
+      },
+      "ja": {
+        "points": 86.0,
+        "share": 0.694
       }
     },
     "claim": {
       "nee": {
-        "points": 117.0,
-        "share": 0.944
+        "points": 115.0,
+        "share": 0.927
       },
       "ja": {
-        "points": 7.0,
-        "share": 0.056
+        "points": 9.0,
+        "share": 0.073
       }
     },
     "new_concept": {
       "nee": {
-        "points": 108.0,
-        "share": 0.871
+        "points": 106.0,
+        "share": 0.855
       },
       "ja": {
-        "points": 16.0,
-        "share": 0.129
+        "points": 18.0,
+        "share": 0.145
       }
     },
     "schema": {
@@ -188,19 +202,14 @@
     }
   },
   "excluded": {
-    "pattern": {
-      "nieuw": 1.0
-    },
     "bloom": {
       "unlinked": 20.0
     },
     "route": {
-      "nieuw": 1.0,
-      "not_applicable": 44.0
+      "not_applicable": 45.0
     },
     "schema": {
-      "nieuw": 1.0,
-      "not_applicable": 103.0
+      "not_applicable": 104.0
     },
     "builds_on": {
       "not_applicable": 21.0
@@ -219,13 +228,14 @@
         "pattern": {
           "P01": 4.0,
           "P03": 2.0,
-          "P05": 3.0,
+          "P05": 2.0,
           "P07": 5.0,
-          "P08": 12.0,
-          "P09": 9.0,
-          "P14": 4.0,
+          "P08": 14.0,
+          "P09": 7.0,
+          "P14": 3.0,
           "P15": 5.0,
-          "P16": 8.0,
+          "P16": 10.0,
+          "P17": 1.0,
           "B02": 8.0,
           "B03": 2.0
         },
@@ -237,31 +247,35 @@
         },
         "solo": {
           "unistructureel": 5.0,
-          "multistructureel": 31.0,
-          "relationeel": 27.0
+          "multistructureel": 29.0,
+          "relationeel": 29.0
         },
         "route": {
           "gegeven": 21.0,
           "zelf vinden": 20.0
         },
         "steps": {
-          "1": 12.0,
-          "2": 11.0,
+          "1": 10.0,
+          "2": 13.0,
           "3": 16.0,
           "4+": 24.0
         },
         "sources": {
-          "in vraagtekst": 38.0,
-          "één bron zonder ruis": 10.0,
-          "meerdere bronnen met ruis": 15.0
+          "in vraagtekst": 42.0,
+          "één bron": 10.0,
+          "meerdere bronnen": 11.0
+        },
+        "noise": {
+          "nee": 24.0,
+          "ja": 39.0
         },
         "claim": {
           "nee": 58.0,
           "ja": 5.0
         },
         "new_concept": {
-          "nee": 58.0,
-          "ja": 5.0
+          "nee": 56.0,
+          "ja": 7.0
         },
         "schema": {
           "voorgestructureerd": 8.0
@@ -277,19 +291,14 @@
         }
       },
       "excluded": {
-        "pattern": {
-          "nieuw": 1.0
-        },
         "bloom": {
           "unlinked": 7.0
         },
         "route": {
-          "nieuw": 1.0,
-          "not_applicable": 21.0
+          "not_applicable": 22.0
         },
         "schema": {
-          "nieuw": 1.0,
-          "not_applicable": 54.0
+          "not_applicable": 55.0
         },
         "builds_on": {
           "not_applicable": 10.0
@@ -311,9 +320,9 @@
           "P07": 3.0,
           "P08": 12.0,
           "P09": 8.0,
-          "P14": 9.0,
+          "P14": 6.0,
           "P15": 2.0,
-          "P16": 3.0,
+          "P16": 6.0,
           "B01": 2.0,
           "B02": 10.0,
           "B03": 3.0
@@ -325,28 +334,32 @@
           "analyseren": 2.0
         },
         "solo": {
-          "unistructureel": 4.0,
-          "multistructureel": 26.0,
+          "unistructureel": 8.0,
+          "multistructureel": 22.0,
           "relationeel": 31.0
         },
         "route": {
-          "gegeven": 16.0,
-          "zelf vinden": 22.0
+          "gegeven": 18.0,
+          "zelf vinden": 20.0
         },
         "steps": {
-          "1": 4.0,
-          "2": 15.0,
-          "3": 15.0,
-          "4+": 27.0
+          "1": 5.0,
+          "2": 19.0,
+          "3": 12.0,
+          "4+": 25.0
         },
         "sources": {
-          "in vraagtekst": 28.0,
-          "één bron zonder ruis": 11.0,
-          "meerdere bronnen met ruis": 22.0
+          "in vraagtekst": 30.0,
+          "één bron": 16.0,
+          "meerdere bronnen": 15.0
+        },
+        "noise": {
+          "nee": 14.0,
+          "ja": 47.0
         },
         "claim": {
-          "nee": 59.0,
-          "ja": 2.0
+          "nee": 57.0,
+          "ja": 4.0
         },
         "new_concept": {
           "nee": 50.0,

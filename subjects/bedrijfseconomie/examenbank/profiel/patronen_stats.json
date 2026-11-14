@@ -13,37 +13,36 @@
         "begrijpen": 7.0
       },
       "solo": {
-        "multistructureel": 5.0,
-        "relationeel": 2.0
+        "multistructureel": 7.0
       },
       "examples": [
         {
           "exam_id": "vwo-2025-tv1",
-          "question_number": 23,
+          "question_number": 4,
           "example_quality": "goed",
-          "reason": "Effect staat in de stam ('leg uit dat'); twee duidelijk afgebakende schakels (korte en lange termijn), 1 punt per toelichting.",
-          "points": 2
-        },
-        {
-          "exam_id": "vwo-2026-tv1",
-          "question_number": 16,
-          "example_quality": "goed",
-          "reason": "Heldere 'Leg uit dat'-stam, zelfstandig leesbaar, één punt per beleggingsvorm.",
+          "reason": "Korte, op zichzelf staande 'leg uit hoe'-stam met typische 1 punt per juist toegelichte manier.",
           "points": 2
         },
         {
           "exam_id": "vwo-2025-tv1",
-          "question_number": 4,
-          "example_quality": "bruikbaar",
-          "reason": "Heldere leg-uit-hoe-stam met gegeven effect, maar scoring is twee losse ketens (per manier 1) i.p.v. twee schakels.",
+          "question_number": 23,
+          "example_quality": "goed",
+          "reason": "Heldere 'leg uit dat' met twee schakels (korte en lange termijn), weinig context nodig.",
           "points": 2
         },
         {
           "exam_id": "vwo-2026-tv1",
           "question_number": 7,
-          "example_quality": "bruikbaar",
-          "reason": "Korte, zelfstandige stam die het effect geeft; maar 1 punt voor een keten van twee schakels is atypisch.",
+          "example_quality": "goed",
+          "reason": "Korte stam, het effect is gegeven en de cv vraagt een keten van twee schakels; zelfstandig bruikbaar.",
           "points": 1
+        },
+        {
+          "exam_id": "vwo-2026-tv1",
+          "question_number": 16,
+          "example_quality": "bruikbaar",
+          "reason": "Heldere 'Leg uit dat'-stam zonder lange context, maar de twee punten zijn parallelle elementen (aandeelhouder/spaarder) in plaats van een keten.",
+          "points": 2
         }
       ]
     },
@@ -65,7 +64,7 @@
           "exam_id": "vwo-2025-tv1",
           "question_number": 25,
           "example_quality": "goed",
-          "reason": "Korte zelfstandige stam met een bewering van een Kamerlid; typische tweeschakelige scoring met alternatieve keten.",
+          "reason": "Korte stam met een bewering van een Kamerlid, twee-schakelige uitleg met alternatieve routes.",
           "points": 2
         }
       ]
@@ -87,32 +86,30 @@
         {
           "exam_id": "vwo-2026-tv1",
           "question_number": 9,
-          "example_quality": "bruikbaar",
-          "reason": "Heldere, zelfstandige \"leg uit of\"-stam met korte context, maar 1 punt in plaats van kenmerk + conclusie.",
+          "example_quality": "goed",
+          "reason": "Korte, zelfstandige \"Leg uit of\"-vraag met de regel en de conclusie in één scorepunt.",
           "points": 1
         },
         {
           "exam_id": "vwo-2026-tv1",
           "question_number": 21,
-          "example_quality": "bruikbaar",
-          "reason": "Korte, zelfstandige vraag met één scorepunt; de conclusie staat al in de stam, dus weinig typerend voor een volledige leg-uit-of.",
+          "example_quality": "goed",
+          "reason": "Heldere 'leg uit waarom' met korte eigen context en een eenduidig cv-antwoord.",
           "points": 1
         }
       ]
     },
     "P05": {
-      "n_questions": 4,
+      "n_questions": 3,
       "points": {
-        "sum": 7.0,
-        "min": 1,
+        "sum": 6.0,
+        "min": 2,
         "max": 2
       },
       "bloom": {
-        "onthouden": 1.0,
         "begrijpen": 4.0
       },
       "solo": {
-        "unistructureel": 1.0,
         "multistructureel": 6.0
       },
       "examples": [
@@ -120,28 +117,21 @@
           "exam_id": "vwo-2026-tv1",
           "question_number": 17,
           "example_quality": "goed",
-          "reason": "Korte, zelfstandige context met twee betaaltermijnen; gesloten keuze a/b/c met motivering en typische 1+1-scoring.",
+          "reason": "Korte, zelfstandige stam met gesloten keuze a/b/c en typische scoring (keuze + motivering, tweede punt alleen bij juiste keuze).",
           "points": 2
-        },
-        {
-          "exam_id": "vwo-2025-tv1",
-          "question_number": 5,
-          "example_quality": "bruikbaar",
-          "reason": "Heldere korte stam die een rechtsvorm laat kiezen uit kenmerken in de context, maar zonder gevraagde motivering (1p).",
-          "points": 1
         },
         {
           "exam_id": "vwo-2025-tv1",
           "question_number": 30,
           "example_quality": "bruikbaar",
-          "reason": "Gesloten keuze uit de vier P's met toelichting, typische scoring; de lange true-pricingtekst en de niet gebruikte bewering zijn ruis.",
+          "reason": "Gesloten keuze uit de marketingmix met toelichting, maar lange true-pricing-context en twee alternatieve antwoordroutes.",
           "points": 2
         },
         {
           "exam_id": "vwo-2026-tv1",
           "question_number": 1,
-          "example_quality": "bruikbaar",
-          "reason": "Korte, heldere stam en typische scoring (item + categorie met argument), maar de SWOT valt buiten de huidige syllabus en de tabel moet worden meegenomen.",
+          "example_quality": "ongeschikt",
+          "reason": "SWOT valt buiten de huidige syllabus en de vraag leunt op een niet goed leesbare SWOT-tabel in de opgavetekst.",
           "points": 2
         }
       ]
@@ -157,140 +147,147 @@
         "toepassen": 6.0
       },
       "solo": {
-        "multistructureel": 5.0,
-        "relationeel": 3.0
+        "multistructureel": 3.0,
+        "relationeel": 5.0
       },
       "examples": [
         {
           "exam_id": "vwo-2025-tv1",
           "question_number": 27,
           "example_quality": "goed",
-          "reason": "Heldere stam die de twee deelresultaten noemt, compacte tabel in de context, typische scoring met deelresultaten en richting.",
+          "reason": "Heldere stam met genoemde tussenstappen, typische scoring per deelresultaat, alle gegevens in één tabel in de opgave.",
           "points": 3
         },
         {
           "exam_id": "vwo-2026-tv1",
           "question_number": 8,
           "example_quality": "goed",
-          "reason": "Schoolvoorbeeld van \"Bereken hiervoor eerst\", typische scoring (2 + 1, fout = punt eraf), redelijk zelfstandig.",
+          "reason": "Typische P07-stam met \"Bereken hiervoor eerst\", scoring per stap met foutaftrek; heldere gegevens in twee bronnen.",
           "points": 3
         },
         {
           "exam_id": "vwo-2025-tv1",
           "question_number": 10,
           "example_quality": "bruikbaar",
-          "reason": "Tussenstap staat in de context, maar het aantal chalets (40) moet uit vraag 9 komen.",
+          "reason": "Route staat in de contextzin vóór de vraag; leunt op het aantal chalets uit vraag 9 en bron 2.",
           "points": 2
         }
       ]
     },
     "P08": {
-      "n_questions": 11,
+      "n_questions": 12,
       "points": {
-        "sum": 24.0,
+        "sum": 26.0,
         "min": 2,
         "max": 4
       },
       "bloom": {
-        "toepassen": 22.0
+        "toepassen": 24.0
       },
       "solo": {
         "multistructureel": 6.0,
-        "relationeel": 18.0
+        "relationeel": 20.0
       },
       "examples": [
         {
           "exam_id": "vwo-2025-tv1",
           "question_number": 3,
           "example_quality": "goed",
-          "reason": "Korte stam met alleen het eindpunt, typische zelf-te-vinden route in twee scorepunten, maar twee regels uit het overzicht nodig.",
-          "points": 2
-        },
-        {
-          "exam_id": "vwo-2025-tv1",
-          "question_number": 9,
-          "example_quality": "goed",
-          "reason": "Korte stam, alleen eindpunt gegeven; typische 'per fout 1 punt'-berekening uit twee bronnen.",
-          "points": 2
-        },
-        {
-          "exam_id": "vwo-2025-tv1",
-          "question_number": 16,
-          "example_quality": "goed",
-          "reason": "Kale 'bereken'-stam die alleen het eindpunt noemt; de leerling combineert krediettermijn, aandeel op rekening, btw en grafiekdata, met foutaftrek als typische scoring.",
+          "reason": "Heldere stam met alleen het eindpunt, typische 2-puntsscoring met alternatieve route; vergt wel de tabel uit de opgave.",
           "points": 2
         },
         {
           "exam_id": "vwo-2025-tv1",
           "question_number": 17,
           "example_quality": "goed",
-          "reason": "Korte, zelfstandige stam met een compacte tabel; typische scoring 'per gemaakte fout 1 scorepunt in mindering'.",
+          "reason": "Korte, heldere stam met alleen het eindpunt; typische foutaftrek-scoring; context is twee kleine tabellen in de opgavetekst.",
           "points": 2
         },
         {
           "exam_id": "vwo-2025-tv1",
           "question_number": 21,
           "example_quality": "goed",
-          "reason": "Compacte tabel in de stam, alleen het eindpunt gevraagd; twee scorepunten voor tussenresultaat en eindantwoord, met alternatieve route.",
+          "reason": "Zelfstandige berekening uit een kleine tabel in de stam, typische scoring met twee stappen en een alternatieve route.",
           "points": 2
         },
         {
           "exam_id": "vwo-2026-tv1",
           "question_number": 10,
           "example_quality": "goed",
-          "reason": "Korte stam met alleen het eindpunt, één bron met loonopbouw, typische \"voor elke fout 1 scorepunt\"-scoring.",
+          "reason": "Korte stam die alleen het eindpunt noemt; typische loonkostenberekening met foutaftrek uit één bron met ruis (trede 6, oude datum).",
           "points": 2
         },
         {
           "exam_id": "vwo-2026-tv1",
           "question_number": 15,
           "example_quality": "goed",
-          "reason": "Kale 'Bereken'-stam met zelfstandige gegevenstabel inclusief ruis; typische scoring per tussenstap.",
+          "reason": "Kale 'Bereken'-stam, compacte tabel met ruis (maatschappelijk kapitaal, twee belastingschijven), typische 1-punt-per-stapscoring.",
           "points": 3
+        },
+        {
+          "exam_id": "vwo-2025-tv1",
+          "question_number": 9,
+          "example_quality": "bruikbaar",
+          "reason": "Heldere stam met fout-aftrek scoring, maar het antwoord vraagt twee bronnen met veel gegevens.",
+          "points": 2
+        },
+        {
+          "exam_id": "vwo-2025-tv1",
+          "question_number": 15,
+          "example_quality": "bruikbaar",
+          "reason": "Typische toon-aan-berekening met heldere twee-stapsscoring, maar leunt op twee grafieken (afbeeldingen) en een lange context.",
+          "points": 2
+        },
+        {
+          "exam_id": "vwo-2025-tv1",
+          "question_number": 16,
+          "example_quality": "bruikbaar",
+          "reason": "Compacte berekening met zelf te vinden route (welke weken, 80% op rekening, btw), maar omzetcijfers staan alleen in grafiek 2.",
+          "points": 2
         },
         {
           "exam_id": "vwo-2025-tv1",
           "question_number": 24,
           "example_quality": "bruikbaar",
-          "reason": "Typische 'per gemaakte fout 1 scorepunt in mindering'-berekening, maar de stam steunt op het percentage uit de lange context en bron 6.",
+          "reason": "Typische zelf-te-vinden interestberekening, maar vereist de lange bron en een percentage uit de context.",
           "points": 2
         },
         {
           "exam_id": "vwo-2026-tv1",
           "question_number": 18,
           "example_quality": "bruikbaar",
-          "reason": "Heldere stam en typische 'voor elke fout'-scoring, maar het aandeel van Skybus staat in een diagram in de opgavecontext en de btw-regel bovenaan.",
+          "reason": "Kale 'Bereken'-stam met verborgen btw-stap, maar het aandeel van Skybus staat alleen in een diagram (afbeelding) in de opgavetekst.",
           "points": 2
         },
         {
           "exam_id": "vwo-2026-tv1",
           "question_number": 25,
           "example_quality": "bruikbaar",
-          "reason": "Rijk voorbeeld van een begroting met verborgen rekenstappen, maar lange context en afhankelijk van vragen 22 en 24.",
+          "reason": "Typische exploitatiebegroting met groepsscoring, maar afhankelijk van vragen 22 en 24 en een lange bron.",
           "points": 4
         },
         {
           "exam_id": "vwo-2026-tv1",
           "question_number": 29,
           "example_quality": "bruikbaar",
-          "reason": "Duidelijke ketenberekening (samengestelde interest, legaat, erfdeel, erfbelasting) met typische scoring, maar steunt op de uitkomst van vraag 28.",
+          "reason": "Typische zelf-te-vinden-route met tarieftabel, maar bouwt voort op de uitkomst van vraag 28 en vraagt de hele context.",
           "points": 3
         }
       ]
     },
     "P09": {
-      "n_questions": 9,
+      "n_questions": 8,
       "points": {
-        "sum": 17.0,
+        "sum": 15.0,
         "min": 1,
         "max": 4
       },
       "bloom": {
         "begrijpen": 2.0,
-        "toepassen": 10.0
+        "toepassen": 8.0
       },
       "solo": {
-        "multistructureel": 7.0,
+        "multistructureel": 5.0,
         "relationeel": 10.0
       },
       "examples": [
@@ -298,137 +295,108 @@
           "exam_id": "vwo-2025-tv1",
           "question_number": 19,
           "example_quality": "goed",
-          "reason": "Typische formulebladvraag met conclusie; context is kort en zelfstandig, scoring per deelstap met alternatieve route.",
+          "reason": "Zelfstandige context, bereken-en-concludeer met formuleblad; typische 1-2-1 scoring met alternatieve route.",
           "points": 4
         },
         {
           "exam_id": "vwo-2025-tv1",
-          "question_number": 22,
+          "question_number": 29,
           "example_quality": "goed",
-          "reason": "Heldere 'toon aan met een berekening of'-stam met één bron; typische scoring berekening + conclusie, EV/TV en VV/TV beide goed.",
+          "reason": "Heldere stam, typische scoring (berekening + conclusie), gegevens kort in opgavetekst en tabel.",
           "points": 2
         },
         {
           "exam_id": "vwo-2026-tv1",
           "question_number": 3,
           "example_quality": "goed",
-          "reason": "Heldere toon-aan-of-stam met de te berekenen kengetallen genoemd, typische 'voor elke fout 1 scorepunt'-scoring; alleen de balans nodig.",
+          "reason": "Typische toon-aan-of-vraag: twee kengetallen plus conclusie, 'voor elke fout 1 scorepunt'; vraagt alleen de balans uit de opgave.",
           "points": 2
         },
         {
           "exam_id": "vwo-2025-tv1",
           "question_number": 2,
           "example_quality": "bruikbaar",
-          "reason": "Heldere toon-aan-of-stam, maar berekening en conclusie samen 1 punt (atypisch) en het overzicht uit de context is nodig.",
+          "reason": "Korte, heldere 'toon aan of'-stam, maar 1 punt voor berekening en conclusie samen is atypisch en de tabel uit de opgave is nodig.",
           "points": 1
         },
         {
           "exam_id": "vwo-2025-tv1",
-          "question_number": 15,
+          "question_number": 22,
           "example_quality": "bruikbaar",
-          "reason": "Typische 'toon met een berekening aan'-vraag met foutaftrek, maar leunt op twee grafieken en een lange uitleg van het meetmoment.",
-          "points": 2
-        },
-        {
-          "exam_id": "vwo-2025-tv1",
-          "question_number": 29,
-          "example_quality": "bruikbaar",
-          "reason": "Typisch berekenen-en-concluderen (1+1), maar de gegevens staan verspreid over de tabel bij vraag 27 en de tekst bij vraag 28.",
+          "reason": "Typische bereken-en-concludeer-vraag, maar vraagt een balansbron met veel posten en een negatief eigen vermogen.",
           "points": 2
         },
         {
           "exam_id": "vwo-2026-tv1",
           "question_number": 12,
           "example_quality": "bruikbaar",
-          "reason": "Heldere \"toon met een berekening aan of\"-stam met conclusiepunt, maar afhankelijk van eerdere uitkomsten en drie bronnen.",
+          "reason": "Typische \"Toon met een berekening aan of\" met conclusiepunt, maar alleen bruikbaar met de hele opgave (uitkomsten vraag 8 en 11, grafiek bron 1).",
           "points": 3
         },
         {
           "exam_id": "vwo-2026-tv1",
           "question_number": 23,
           "example_quality": "bruikbaar",
-          "reason": "Duidelijk bereken-en-concludeer met een tabel, maar afhankelijk van de balans van vraag 22 en de CCS-tabel.",
+          "reason": "Kort en typisch (berekening + conclusie), maar leunt op het eigen scoremodel en de balans uit vraag 22.",
           "points": 1
         },
         {
           "exam_id": "vwo-2026-tv1",
           "question_number": 26,
-          "example_quality": "ongeschikt",
-          "reason": "Sterk afhankelijk van uitkomsten van vragen 24 en 25 en van drie bronnen; niet zelfstandig bruikbaar.",
+          "example_quality": "bruikbaar",
+          "reason": "Nieuw kengetal met gegeven formule en conclusie; sterk afhankelijk van eerdere uitkomsten en drie bronnen.",
           "points": 2
         }
       ]
     },
     "P14": {
-      "n_questions": 8,
+      "n_questions": 5,
       "points": {
-        "sum": 13.0,
+        "sum": 9.0,
         "min": 1,
         "max": 2
       },
       "bloom": {
-        "onthouden": 3.0,
         "begrijpen": 5.0
       },
       "solo": {
-        "unistructureel": 3.0,
-        "multistructureel": 10.0
+        "unistructureel": 5.0,
+        "multistructureel": 4.0
       },
       "examples": [
-        {
-          "exam_id": "vwo-2025-tv1",
-          "question_number": 1,
-          "example_quality": "goed",
-          "reason": "Heldere noem-en-motiveer-stam, typische scoring per toegelicht antwoord, alleen het korte overzicht nodig.",
-          "points": 2
-        },
         {
           "exam_id": "vwo-2026-tv1",
           "question_number": 14,
           "example_quality": "goed",
-          "reason": "Typische 'Noem … Licht toe'-stam met korte context en scoring per juist toegelicht antwoord.",
+          "reason": "Typisch 'Noem … Licht toe'-patroon met 1 punt per toegelicht antwoord, korte zelfstandige context.",
           "points": 2
         },
         {
           "exam_id": "vwo-2025-tv1",
-          "question_number": 20,
+          "question_number": 1,
           "example_quality": "bruikbaar",
-          "reason": "Korte, heldere 1-puntsstam zonder bron; wel dicht bij reproductie (goedkoper lenen) en geen toelichting gevraagd.",
-          "points": 1
+          "reason": "Heldere stam en typische per-antwoord-scoring, maar de leerling heeft het volledige financiële overzicht van de opgave nodig.",
+          "points": 2
         },
         {
           "exam_id": "vwo-2025-tv1",
           "question_number": 26,
           "example_quality": "bruikbaar",
-          "reason": "Korte stam en 1-puntsantwoord, maar de context (koers boven conversiekoers) is nodig en de opmerking sluit een voor de hand liggend antwoord uit.",
+          "reason": "Korte vraag met één reden, maar de situatie (koers boven conversiekoers) vergt de voorgaande context.",
           "points": 1
         },
         {
           "exam_id": "vwo-2026-tv1",
           "question_number": 5,
           "example_quality": "bruikbaar",
-          "reason": "Heldere noem-en-licht-toe-stam met typische 1+1-scoring, maar steunt op Porter (buiten syllabus) en een lange bron.",
+          "reason": "Kort en typisch Noem-plus-toelichting, maar leunt op Porter (vijfkrachtenmodel) en op een bron met veel tekst.",
           "points": 2
         },
         {
           "exam_id": "vwo-2026-tv1",
           "question_number": 6,
           "example_quality": "bruikbaar",
-          "reason": "Korte stam en typische scoring (risico + toelichting), maar vraagt vergelijking van twee bedrijfsmodellen uit lange bronnen.",
-          "points": 2
-        },
-        {
-          "exam_id": "vwo-2026-tv1",
-          "question_number": 13,
-          "example_quality": "bruikbaar",
-          "reason": "Korte, heldere stam met open voorbeeldenlijst, maar 1 punt zonder gevraagde toelichting; minder typisch dan 'Noem … Licht toe'.",
-          "points": 1
-        },
-        {
-          "exam_id": "vwo-2026-tv1",
-          "question_number": 19,
-          "example_quality": "bruikbaar",
-          "reason": "Korte, zelfstandige stam en scoring per juist antwoord, maar zonder gevraagde toelichting en met een open, brede antwoordruimte.",
+          "reason": "Heldere korte stam met typische 1+1-scoring, maar het antwoord vraagt de vergelijking van twee bedrijfsmodellen uit lange bronnen.",
           "points": 2
         }
       ]
@@ -452,82 +420,133 @@
           "exam_id": "vwo-2025-tv1",
           "question_number": 13,
           "example_quality": "bruikbaar",
-          "reason": "Schoolvoorbeeld van het voorwaardenbesluit, maar alleen bruikbaar met de hele opgavecontext en eerdere uitkomsten.",
+          "reason": "Typisch afsluitend besluit op drie voorwaarden, maar vraagt de hele opgave, uitkomsten van 9, 10 en 12 en de uitwerkbijlage.",
           "points": 5
         },
         {
           "exam_id": "vwo-2026-tv1",
           "question_number": 27,
           "example_quality": "bruikbaar",
-          "reason": "Typische afsluitende besluitvraag over een scoremodel; kort, maar steunt op uitkomsten van vragen 23 en 26.",
+          "reason": "Typische afsluitende besluitvraag met scoremodel, maar zonder eerdere uitkomsten niet zelfstandig bruikbaar.",
           "points": 2
         }
       ]
     },
     "P16": {
-      "n_questions": 7,
+      "n_questions": 11,
       "points": {
-        "sum": 11.0,
+        "sum": 16.0,
         "min": 1,
         "max": 2
       },
       "bloom": {
-        "onthouden": 8.0,
+        "onthouden": 12.0,
         "begrijpen": 2.0
       },
       "solo": {
-        "unistructureel": 3.0,
-        "multistructureel": 8.0
+        "unistructureel": 6.0,
+        "multistructureel": 10.0
       },
       "examples": [
         {
           "exam_id": "vwo-2025-tv1",
+          "question_number": 7,
+          "example_quality": "goed",
+          "reason": "Korte, zelfstandige kennisvraag met open antwoordruimte (marketingplan / externe analyse).",
+          "points": 1
+        },
+        {
+          "exam_id": "vwo-2025-tv1",
           "question_number": 11,
           "example_quality": "goed",
-          "reason": "Korte, zelfstandige noem-vraag met twee losse elementen en typische scoring per element.",
+          "reason": "Korte, zelfstandige kennisvraag met twee elementen en toelichting naar lagere kosten; typische scoring per juist toegelicht antwoord.",
+          "points": 2
+        },
+        {
+          "exam_id": "vwo-2025-tv1",
+          "question_number": 28,
+          "example_quality": "goed",
+          "reason": "Korte, op zichzelf staande kennisvraag met de typische scoring per juist antwoord 1.",
           "points": 2
         },
         {
           "exam_id": "vwo-2026-tv1",
           "question_number": 2,
           "example_quality": "goed",
-          "reason": "Zuivere kennisvraag met drie losse elementen en een typische 'indien 3/2/1 juist'-scoring, zonder context nodig.",
+          "reason": "Zelfstandige kennisvraag met drie losse elementen en duidelijke staffelscoring (3/2/1 juist), geen context nodig.",
           "points": 2
         },
         {
           "exam_id": "vwo-2025-tv1",
-          "question_number": 7,
+          "question_number": 5,
           "example_quality": "bruikbaar",
-          "reason": "Korte zuivere kennisvraag; de context is aanleiding, niet nodig voor het antwoord.",
+          "reason": "Korte, zelfstandige stam; leerling koppelt twee kenmerken uit de context aan één rechtsvorm, maar zonder gevraagde toelichting.",
           "points": 1
+        },
+        {
+          "exam_id": "vwo-2025-tv1",
+          "question_number": 8,
+          "example_quality": "bruikbaar",
+          "reason": "Eenvoudige kennisvraag, maar de verwijzing naar informatiebron 4 levert geen gegevens; als stijlvoorbeeld verwarrend.",
+          "points": 2
         },
         {
           "exam_id": "vwo-2025-tv1",
           "question_number": 14,
           "example_quality": "bruikbaar",
-          "reason": "Korte, zelfstandige stam met één gevraagd voorbeeld en een open antwoordlijst; wel een kennisvraag over off-balance-financiering, buiten de huidige syllabus.",
+          "reason": "Korte, zelfstandige noem-vraag met open lijst voorbeelden in het cv; onderwerp off-balance-financiering valt wel buiten de huidige syllabus.",
           "points": 1
         },
         {
           "exam_id": "vwo-2025-tv1",
-          "question_number": 28,
+          "question_number": 20,
           "example_quality": "bruikbaar",
-          "reason": "Korte zelfstandige stam en open antwoordlijst, maar het is een kennisvraag zonder toepassing op de context.",
+          "reason": "Korte, heldere noem-vraag; begrip overheidsgarantie staat in een voetnoot, dus de context moet mee.",
+          "points": 1
+        },
+        {
+          "exam_id": "vwo-2026-tv1",
+          "question_number": 13,
+          "example_quality": "bruikbaar",
+          "reason": "Korte, heldere stam en korte context, maar slechts 1 punt en een open voorbeeldenlijst; weinig scoringsstructuur.",
+          "points": 1
+        },
+        {
+          "exam_id": "vwo-2026-tv1",
+          "question_number": 19,
+          "example_quality": "bruikbaar",
+          "reason": "Heldere korte noem-vraag in de context met 1 punt per antwoord, maar zonder gevraagde toelichting, dus geen schoolvoorbeeld van P14.",
           "points": 2
         },
         {
           "exam_id": "vwo-2026-tv1",
           "question_number": 20,
           "example_quality": "bruikbaar",
-          "reason": "Korte, heldere noem-vraag; antwoord is vrij generiek en leunt weinig op de context.",
+          "reason": "Korte, heldere noem-vraag met open voorbeeldantwoorden; leunt licht op informatiebron 4.",
           "points": 1
-        },
+        }
+      ]
+    },
+    "P17": {
+      "n_questions": 1,
+      "points": {
+        "sum": 1.0,
+        "min": 1,
+        "max": 1
+      },
+      "bloom": {
+        "begrijpen": 1.0
+      },
+      "solo": {
+        "multistructureel": 1.0
+      },
+      "examples": [
         {
           "exam_id": "vwo-2025-tv1",
-          "question_number": 8,
-          "example_quality": "ongeschikt",
-          "reason": "De verwijzing naar informatiebron 4 helpt niet bij het antwoord en de vraag leunt op de context van twee leningen.",
-          "points": 2
+          "question_number": 18,
+          "example_quality": "goed",
+          "reason": "Zuivere rangschikvraag met vier korte alternatieven in de stam en een eenduidig antwoord.",
+          "points": 1
         }
       ]
     },
@@ -549,7 +568,7 @@
           "exam_id": "vwo-2026-tv1",
           "question_number": 4,
           "example_quality": "goed",
-          "reason": "Schoolvoorbeeld van het patroon: twee maatregelen, expliciet teller- en noemereffect gevraagd, 1 punt per juist effect met toelichting; los van de cijfers.",
+          "reason": "Schoolvoorbeeld van B01: twee maatregelen, per maatregel teller- en noemereffect, 1 punt per juist effect; zelfstandig leesbaar.",
           "points": 2
         }
       ]
@@ -571,44 +590,44 @@
       "examples": [
         {
           "exam_id": "vwo-2026-tv1",
-          "question_number": 22,
-          "example_quality": "goed",
-          "reason": "Typische balans na investering en financiering met btw-splitsing; heldere stam, gegeven rijen, korte context.",
-          "points": 2
-        },
-        {
-          "exam_id": "vwo-2026-tv1",
           "question_number": 24,
           "example_quality": "goed",
-          "reason": "Zelfstandig aflossingsschema bij annuïteiten met halfjaarlijkse rente; typische scoring per groep bedragen.",
+          "reason": "Standaard halfjaarlijks annuïteitenschema in een gegeven tabel; zelfstandig met informatiebron 7.",
           "points": 2
         },
         {
           "exam_id": "vwo-2025-tv1",
           "question_number": 6,
           "example_quality": "bruikbaar",
-          "reason": "Typische schema-opbouw per seizoen, maar leunt op een omvangrijke tarief- en bezettingsbron.",
+          "reason": "Typische omzetberekening in een uitwerkbijlage, maar vraagt de volledige tabel van informatiebron 1 en de uitwerkbijlage (niet in de input).",
           "points": 4
         },
         {
           "exam_id": "vwo-2025-tv1",
           "question_number": 12,
           "example_quality": "bruikbaar",
-          "reason": "Typisch kostenschema per kostensoort, maar vraagt drie bronnen en uitkomsten van vragen 9 en 10.",
+          "reason": "Typische kostenbegroting in een uitwerkbijlage, maar leunt op uitkomsten van vraag 9 en 10, drie bronnen en de (ontbrekende) uitwerkbijlage.",
           "points": 4
         },
         {
           "exam_id": "vwo-2026-tv1",
           "question_number": 11,
           "example_quality": "bruikbaar",
-          "reason": "Typisch budgetresultaat-schema met punt per bedrag, maar leunt op uitkomsten van vraag 8 en 10 en een uitwerkbijlage.",
+          "reason": "Typisch budgetresultaat-schema met scorepunt per bedrag, maar steunt op vraag 8 en 10 en de uitwerkbijlage ontbreekt in de tekst.",
           "points": 4
+        },
+        {
+          "exam_id": "vwo-2026-tv1",
+          "question_number": 22,
+          "example_quality": "bruikbaar",
+          "reason": "Typisch balansschema met twee groepspunten; vraagt de btw- en financieringsgegevens uit de opgavetekst.",
+          "points": 2
         },
         {
           "exam_id": "vwo-2026-tv1",
           "question_number": 25,
           "example_quality": "bruikbaar",
-          "reason": "Rijk voorbeeld van een begroting met verborgen rekenstappen, maar lange context en afhankelijk van vragen 22 en 24.",
+          "reason": "Typische exploitatiebegroting met groepsscoring, maar afhankelijk van vragen 22 en 24 en een lange bron.",
           "points": 4
         }
       ]
@@ -632,14 +651,14 @@
           "exam_id": "vwo-2025-tv1",
           "question_number": 19,
           "example_quality": "goed",
-          "reason": "Typische formulebladvraag met conclusie; context is kort en zelfstandig, scoring per deelstap met alternatieve route.",
+          "reason": "Zelfstandige context, bereken-en-concludeer met formuleblad; typische 1-2-1 scoring met alternatieve route.",
           "points": 4
         },
         {
           "exam_id": "vwo-2026-tv1",
           "question_number": 28,
           "example_quality": "goed",
-          "reason": "Heldere stam met gegeven tussenstap en formuleblad; leninggegevens compact in de context; typische scoring met 'voor elke fout 1 scorepunt in mindering'.",
+          "reason": "Heldere stam met 'bereken hiervoor eerst', compacte leningtabel en typische scoring (contante waarde via formuleblad + afrondende stap).",
           "points": 3
         }
       ]

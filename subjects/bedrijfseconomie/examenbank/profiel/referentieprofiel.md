@@ -11,18 +11,17 @@
 | P01 Mechanismeketen uitleggen | 7 p · 6 % | 4 p · 6 % | 3 p · 5 % |
 | P03 Stelling of conclusie onderbouwen | 2 p · 2 % | 2 p · 3 % | 0 p · 0 % |
 | P04 Begrip toetsen aan een casus (leg uit of) | 2 p · 2 % | 0 p · 0 % | 2 p · 3 % |
-| P05 Classificeren met onderbouwing | 7 p · 6 % | 3 p · 5 % | 4 p · 7 % |
+| P05 Classificeren met onderbouwing | 6 p · 5 % | 2 p · 3 % | 4 p · 7 % |
 | P07 Standaardberekening | 8 p · 6 % | 5 p · 8 % | 3 p · 5 % |
-| P08 Berekening met zelf te vinden route | 24 p · 20 % | 12 p · 19 % | 12 p · 20 % |
-| P09 Berekenen en concluderen (bereken of / toon aan of) | 17 p · 14 % | 9 p · 15 % | 8 p · 13 % |
-| P14 Noemen met toelichting in de context | 13 p · 11 % | 4 p · 6 % | 9 p · 15 % |
+| P08 Berekening met zelf te vinden route | 26 p · 21 % | 14 p · 22 % | 12 p · 20 % |
+| P09 Berekenen en concluderen (bereken of / toon aan of) | 15 p · 12 % | 7 p · 11 % | 8 p · 13 % |
+| P14 Noemen met toelichting in de context | 9 p · 7 % | 3 p · 5 % | 6 p · 10 % |
 | P15 Besluit aan de hand van meerdere voorwaarden | 7 p · 6 % | 5 p · 8 % | 2 p · 3 % |
-| P16 Kennisvraag: noem of omschrijf | 11 p · 9 % | 8 p · 13 % | 3 p · 5 % |
+| P16 Kennisvraag: noem of omschrijf | 16 p · 13 % | 10 p · 16 % | 6 p · 10 % |
+| P17 Rangschikken naar een kenmerk | 1 p · 1 % | 1 p · 2 % | 0 p · 0 % |
 | B01 Effect van een financieel feit op een kengetal of overzicht | 2 p · 2 % | 0 p · 0 % | 2 p · 3 % |
-| B02 Financieel overzicht opstellen in een gegeven schema | 18 p · 15 % | 8 p · 13 % | 10 p · 16 % |
+| B02 Financieel overzicht opstellen in een gegeven schema | 18 p · 14 % | 8 p · 13 % | 10 p · 16 % |
 | B03 Financiële rekenkunde met formuleblad | 5 p · 4 % | 2 p · 3 % | 3 p · 5 % |
-
-Weggelaten: 1 p nieuw patroon.
 
 ## Bloom (per scorepunt)
 
@@ -39,49 +38,56 @@ Weggelaten: 20 p geen koppeling.
 
 | waarde | eindexamen (alle) | 2025-I | 2026-I |
 |---|---|---|---|
-| unistructureel | 9 p · 7 % | 5 p · 8 % | 4 p · 7 % |
-| multistructureel | 57 p · 46 % | 31 p · 49 % | 26 p · 43 % |
-| relationeel | 58 p · 47 % | 27 p · 43 % | 31 p · 51 % |
+| unistructureel | 13 p · 10 % | 5 p · 8 % | 8 p · 13 % |
+| multistructureel | 51 p · 41 % | 29 p · 46 % | 22 p · 36 % |
+| relationeel | 60 p · 48 % | 29 p · 46 % | 31 p · 51 % |
 
 ## Route
 
 | waarde | eindexamen (alle) | 2025-I | 2026-I |
 |---|---|---|---|
-| gegeven | 37 p · 47 % | 21 p · 51 % | 16 p · 42 % |
-| zelf vinden | 42 p · 53 % | 20 p · 49 % | 22 p · 58 % |
+| gegeven | 39 p · 49 % | 21 p · 51 % | 18 p · 47 % |
+| zelf vinden | 40 p · 51 % | 20 p · 49 % | 20 p · 53 % |
 
-Weggelaten: 1 p nieuw patroon, 44 p niet van toepassing.
+Weggelaten: 45 p niet van toepassing.
 
 ## Stappen
 
 | waarde | eindexamen (alle) | 2025-I | 2026-I |
 |---|---|---|---|
-| 1 | 16 p · 13 % | 12 p · 19 % | 4 p · 7 % |
-| 2 | 26 p · 21 % | 11 p · 17 % | 15 p · 25 % |
-| 3 | 31 p · 25 % | 16 p · 25 % | 15 p · 25 % |
-| 4+ | 51 p · 41 % | 24 p · 38 % | 27 p · 44 % |
+| 1 | 15 p · 12 % | 10 p · 16 % | 5 p · 8 % |
+| 2 | 32 p · 26 % | 13 p · 21 % | 19 p · 31 % |
+| 3 | 28 p · 23 % | 16 p · 25 % | 12 p · 20 % |
+| 4+ | 49 p · 40 % | 24 p · 38 % | 25 p · 41 % |
 
 ## Bronnen
 
 | waarde | eindexamen (alle) | 2025-I | 2026-I |
 |---|---|---|---|
-| in vraagtekst | 66 p · 53 % | 38 p · 60 % | 28 p · 46 % |
-| één bron zonder ruis | 21 p · 17 % | 10 p · 16 % | 11 p · 18 % |
-| meerdere bronnen met ruis | 37 p · 30 % | 15 p · 24 % | 22 p · 36 % |
+| in vraagtekst | 72 p · 58 % | 42 p · 67 % | 30 p · 49 % |
+| één bron | 26 p · 21 % | 10 p · 16 % | 16 p · 26 % |
+| meerdere bronnen | 26 p · 21 % | 11 p · 17 % | 15 p · 25 % |
+
+## Ruis
+
+| waarde | eindexamen (alle) | 2025-I | 2026-I |
+|---|---|---|---|
+| nee | 38 p · 31 % | 24 p · 38 % | 14 p · 23 % |
+| ja | 86 p · 69 % | 39 p · 62 % | 47 p · 77 % |
 
 ## Bewering in de stam
 
 | waarde | eindexamen (alle) | 2025-I | 2026-I |
 |---|---|---|---|
-| nee | 117 p · 94 % | 58 p · 92 % | 59 p · 97 % |
-| ja | 7 p · 6 % | 5 p · 8 % | 2 p · 3 % |
+| nee | 115 p · 93 % | 58 p · 92 % | 57 p · 93 % |
+| ja | 9 p · 7 % | 5 p · 8 % | 4 p · 7 % |
 
 ## Nieuw begrip in de stam
 
 | waarde | eindexamen (alle) | 2025-I | 2026-I |
 |---|---|---|---|
-| nee | 108 p · 87 % | 58 p · 92 % | 50 p · 82 % |
-| ja | 16 p · 13 % | 5 p · 8 % | 11 p · 18 % |
+| nee | 106 p · 86 % | 56 p · 89 % | 50 p · 82 % |
+| ja | 18 p · 14 % | 7 p · 11 % | 11 p · 18 % |
 
 ## Schema
 
@@ -89,7 +95,7 @@ Weggelaten: 1 p nieuw patroon, 44 p niet van toepassing.
 |---|---|---|---|
 | voorgestructureerd | 20 p · 100 % | 8 p · 100 % | 12 p · 100 % |
 
-Weggelaten: 1 p nieuw patroon, 103 p niet van toepassing.
+Weggelaten: 104 p niet van toepassing.
 
 ## Voortbouwen
 
@@ -114,16 +120,17 @@ Weggelaten: 17 p geen koppeling.
 
 | patroon | vragen | punten (min–max) | voorbeelden (goed eerst) |
 |---|---|---|---|
-| P01 Mechanismeketen uitleggen | 4 | 7 (1–2) | 2025-I v23 (goed), 2026-I v16 (goed), 2025-I v4 (bruikbaar), 2026-I v7 (bruikbaar) |
+| P01 Mechanismeketen uitleggen | 4 | 7 (1–2) | 2025-I v4 (goed), 2025-I v23 (goed), 2026-I v7 (goed), 2026-I v16 (bruikbaar) |
 | P03 Stelling of conclusie onderbouwen | 1 | 2 (2–2) | 2025-I v25 (goed) |
-| P04 Begrip toetsen aan een casus (leg uit of) | 2 | 2 (1–1) | 2026-I v9 (bruikbaar), 2026-I v21 (bruikbaar) |
-| P05 Classificeren met onderbouwing | 4 | 7 (1–2) | 2026-I v17 (goed), 2025-I v5 (bruikbaar), 2025-I v30 (bruikbaar), 2026-I v1 (bruikbaar) |
+| P04 Begrip toetsen aan een casus (leg uit of) | 2 | 2 (1–1) | 2026-I v9 (goed), 2026-I v21 (goed) |
+| P05 Classificeren met onderbouwing | 3 | 6 (2–2) | 2026-I v17 (goed), 2025-I v30 (bruikbaar), 2026-I v1 (ongeschikt) |
 | P07 Standaardberekening | 3 | 8 (2–3) | 2025-I v27 (goed), 2026-I v8 (goed), 2025-I v10 (bruikbaar) |
-| P08 Berekening met zelf te vinden route | 11 | 24 (2–4) | 2025-I v3 (goed), 2025-I v9 (goed), 2025-I v16 (goed), 2025-I v17 (goed) |
-| P09 Berekenen en concluderen (bereken of / toon aan of) | 9 | 17 (1–4) | 2025-I v19 (goed), 2025-I v22 (goed), 2026-I v3 (goed), 2025-I v2 (bruikbaar) |
-| P14 Noemen met toelichting in de context | 8 | 13 (1–2) | 2025-I v1 (goed), 2026-I v14 (goed), 2025-I v20 (bruikbaar), 2025-I v26 (bruikbaar) |
+| P08 Berekening met zelf te vinden route | 12 | 26 (2–4) | 2025-I v3 (goed), 2025-I v17 (goed), 2025-I v21 (goed), 2026-I v10 (goed) |
+| P09 Berekenen en concluderen (bereken of / toon aan of) | 8 | 15 (1–4) | 2025-I v19 (goed), 2025-I v29 (goed), 2026-I v3 (goed), 2025-I v2 (bruikbaar) |
+| P14 Noemen met toelichting in de context | 5 | 9 (1–2) | 2026-I v14 (goed), 2025-I v1 (bruikbaar), 2025-I v26 (bruikbaar), 2026-I v5 (bruikbaar) |
 | P15 Besluit aan de hand van meerdere voorwaarden | 2 | 7 (2–5) | 2025-I v13 (bruikbaar), 2026-I v27 (bruikbaar) |
-| P16 Kennisvraag: noem of omschrijf | 7 | 11 (1–2) | 2025-I v11 (goed), 2026-I v2 (goed), 2025-I v7 (bruikbaar), 2025-I v14 (bruikbaar) |
+| P16 Kennisvraag: noem of omschrijf | 11 | 16 (1–2) | 2025-I v7 (goed), 2025-I v11 (goed), 2025-I v28 (goed), 2026-I v2 (goed) |
+| P17 Rangschikken naar een kenmerk | 1 | 1 (1–1) | 2025-I v18 (goed) |
 | B01 Effect van een financieel feit op een kengetal of overzicht | 1 | 2 (2–2) | 2026-I v4 (goed) |
-| B02 Financieel overzicht opstellen in een gegeven schema | 6 | 18 (2–4) | 2026-I v22 (goed), 2026-I v24 (goed), 2025-I v6 (bruikbaar), 2025-I v12 (bruikbaar) |
+| B02 Financieel overzicht opstellen in een gegeven schema | 6 | 18 (2–4) | 2026-I v24 (goed), 2025-I v6 (bruikbaar), 2025-I v12 (bruikbaar), 2026-I v11 (bruikbaar) |
 | B03 Financiële rekenkunde met formuleblad | 2 | 5 (3–4) | 2025-I v19 (goed), 2026-I v28 (goed) |
