@@ -9,8 +9,11 @@ IT3 every number in intro, stems, sources, tables and the uitwerkbijlage is a `d
     answer is a `data` value or a calc `shown` value (Dutch notation; "21%" matches 0.21 or 21; reference numbers
     such as "informatiebron 2" and "vraag 3" are skipped; 0, 1, 100 and years 1900–2100 written as a plain
     four-digit number are always allowed — bouwvraag 11)
-IT4 noise_data only when a vraag of the opgave has noise = ja, and then not empty (specs/34 IT4, 2026-11-14);
-    uses_data / noise_data keys exist in data; every uses_data key is used by a calc or named in a model answer
+IT4 noise (specs/34 IT4, 2026-11-14): noise_data lives on a source, on the opgave (intro data) or on a vraag (stem
+    data); any noise_data needs a vraag with noise = ja; a vraag with noise = ja has a noise item from its own
+    noise_data, the opgave's noise_data or a source it uses, not used by its own calcs; a vraag with noise = nee has
+    no own noise_data; uses_data / noise_data keys exist in data; every uses_data key is used by a calc or named
+    in a model answer
 IT5 builds_on_vragen = blueprint; with builds_on = ja the cv has a follow_through sentence and a calc uses a calc
     name of an earlier vraag — or, for a vraag without calc, the stem names "vraag n" for an n in builds_on_vragen
 IT6 conventions: "€ " with a space; btw value = the order's / conventions.md default (warning: a context may need
@@ -136,11 +139,36 @@ def main(argv: list[str]) -> None:
         for c in v["cv"]["calc"]:
             calc_names |= names_in(c["expr"])
     noisy = any(b["knobs"].get("noise") == "ja" for b in bv.values())
-    noise = [k for s in it["sources"] for k in s.get("noise_data", [])]
+    opg_noise = it.get("noise_data", [])
+    noise = ([k for s in it["sources"] for k in s.get("noise_data", [])] + opg_noise
+             + [k for v in it["vragen"] for k in v.get("noise_data", [])])
     if noise and not noisy:
         rep.fail("IT4", f"noise_data {noise} but no vraag of {oid} has noise = ja")
-    if noisy and not noise:
-        rep.fail("IT4", f"a vraag of {oid} has noise = ja but no source has noise_data")
+    for k in opg_noise:
+        if k not in data:
+            rep.fail("IT4", f"opgave noise_data: '{k}' is not a data key")
+        elif k in calc_names:
+            rep.warn("IT4", f"opgave noise_data '{k}' is used by a calc")
+    for vid, v in iv.items():
+        b = bv.get(vid)
+        own = v.get("noise_data", [])
+        mine = set().union(*(names_in(c["expr"]) for c in v["cv"]["calc"])) if v["cv"]["calc"] else set()
+        for k in own:
+            if k not in data:
+                rep.fail("IT4", f"{vid}: noise_data '{k}' is not a data key")
+            elif k in mine:
+                rep.fail("IT4", f"{vid}: noise_data '{k}' is used by its own calc")
+        if not b:
+            continue
+        if b["knobs"].get("noise") != "ja":
+            if own:
+                rep.fail("IT4", f"{vid}: noise = nee but the vraag has noise_data {own}")
+            continue
+        used_src = referenced_sources(v["stem"]) | {s["n"] for s in it["sources"] if mine & set(s.get("uses_data", []))}
+        pool_n = own + opg_noise + [k for s in it["sources"] if s["n"] in used_src for k in s.get("noise_data", [])]
+        if not [k for k in pool_n if k in data and k not in mine]:
+            rep.fail("IT4", f"{vid}: noise = ja but no noise item in its own noise_data, the opgave's noise_data or a "
+                            f"source it uses (that its calcs do not use)")
     answers = " ".join(v["cv"]["model_answer"] for v in it["vragen"])
     for s in it["sources"]:
         for k in s.get("uses_data", []) + s.get("noise_data", []):

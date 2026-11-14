@@ -9,6 +9,7 @@
     "title": {"type": "string"},
     "intro": {"type": "string"},
     "data": {"type": "object", "additionalProperties": {"type": "number"}},
+    "noise_data": {"type": "array", "items": {"type": "string"}, "description": "data keys printed in the intro (no bron number) that a vraag with noise = ja does not need"},
     "sources": {"type": "array", "items": {
       "type": "object", "required": ["n", "title", "kind"],
       "properties": {
@@ -63,6 +64,7 @@
             "follow_through": {"type": ["string", "null"]}
           }
         },
+        "noise_data": {"type": "array", "items": {"type": "string"}, "description": "data keys in this vraag's stem or opgave text that it does not need; only with noise = ja"},
         "new_concepts": {"type": "array", "items": {"type": "string"}},
         "builds_on_vragen": {"type": "array", "items": {"type": "integer"}}
       }

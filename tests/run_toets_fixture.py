@@ -465,6 +465,28 @@ def step5(tmp: Path, subj: Path, bank: Path, S: list[str]) -> bool:
     ok &= run("items_check O2 with noise_data but noise = nee (must fail IT4)", f"{t}/items_check.py", str(R6), "--opgave", "O2", *S,
               expect_fail=True)
     ok &= check("IT4: noise_data only when a vraag has noise = ja", "but no vraag of O2 has noise = ja" in run.last)
+    # IT4 with sources = in vraagtekst (bedrijfsecon-064/067): noise in the intro (opgave) or the stem (vraag)
+    for name, where, noise, expect_fail, needle in (
+            ("toets_it4_opgave", "opgave", "ja", False, None),
+            ("toets_it4_vraag", "vraag", "ja", False, None),
+            ("toets_it4_vraag_nee", "vraag", "nee", True, "O2-V3: noise = nee but the vraag has noise_data"),
+            ("toets_it4_none", None, "ja", True, "O2-V3: noise = ja but no noise item")):
+        Rn = pipeline_run(tmp, subj, bank, S, name)
+        bpj, itj = load(Rn / "32_blueprint.json"), load(Rn / "33_items/O2.json")
+        bpj["opgaven"][1]["vragen"][0]["knobs"]["noise"] = noise
+        itj["data"]["medewerkers"] = 6
+        if where == "opgave":
+            itj["intro"] += " Er werken 6 medewerkers."
+            itj["noise_data"] = ["medewerkers"]
+        elif where == "vraag":
+            itj["vragen"][0]["stem"] = "Er werken 6 medewerkers. " + itj["vragen"][0]["stem"]
+            itj["vragen"][0]["noise_data"] = ["medewerkers"]
+        (Rn / "32_blueprint.json").write_text(json.dumps(bpj, ensure_ascii=False), encoding="utf-8")
+        (Rn / "33_items/O2.json").write_text(json.dumps(itj, ensure_ascii=False), encoding="utf-8")
+        ok &= run(f"items_check O2-V3 sources = in vraagtekst, noise = {noise}, noise_data on {where or "no opgave or vraag"}"
+                  + (" (must fail IT4)" if expect_fail else ""), f"{t}/items_check.py", str(Rn), "--opgave", "O2", *S,
+                  expect_fail=expect_fail)
+        ok &= check(f"IT4 {name}: " + (needle or "passes"), (needle in run.last) if needle else "IT4" not in run.last)
     O2 = ["--opgave", "O2", *S]
     for s in ("items_check", "calc_check", "figures", "overlap_check"):
         ok &= run(f"{s} O2 (clean opgave)", f"{t}/{s}.py", str(R), *O2)

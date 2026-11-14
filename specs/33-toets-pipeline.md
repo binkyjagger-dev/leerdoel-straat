@@ -113,6 +113,7 @@ Items (schema `toets_items`), per opgave:
 ```json
 {"opgave_id": "O1", "title": "...", "intro": "...",
  "data": {"prijs_incl": 34.88, "btw": 0.09, "vk_per_knipbeurt": 6.40, "ck_maand": 12000},  // every given number, named
+ "noise_data": ["..."],                    // data in the intro (no bron number) a noise = ja vraag does not need
  "sources": [{"n": 1, "title": "...", "kind": "text|table|figure", "text": "...", "table": [[...]], "figure_id": null,
               "uses_data": ["prijs_incl"], "noise_data": ["..."]}],
  "figures": [{"figure_id": "f1", "spec": {...}, "answer_spec": {...}}],     // specs/35 §3
@@ -124,6 +125,7 @@ Items (schema `toets_items`), per opgave:
                     "scorepunten": [{"seq": 1, "points": 1, "text": "berekening dekkingsbijdrage", "criterion_id": "...", "calc_ref": "db"}],
                     "rules": ["Voor elke fout 1 scorepunt in mindering brengen."],
                     "alternatives": ["..."], "follow_through": "Een doorrekenfout uit vraag 1 niet opnieuw aanrekenen."},
+             "noise_data": [],              // data in this vraag's stem it does not need; only with noise = ja
              "new_concepts": [], "builds_on_vragen": [1]}],
  "writer_notes": "..."}
 ```
@@ -131,7 +133,8 @@ Items (schema `toets_items`), per opgave:
 Writer responsibilities: write the stem, sources and cv in the subject's exam conventions; name every
 given number in `data` and every computed number in `calc` (the cv's printed numbers are the `shown`
 values); put noise data only where `noise = ja` and list them in
-`noise_data`; make the vraag realise every planned knob and the scorepunten realise the criterion at
+`noise_data` — on the source when they sit in a numbered informatiebron, on the opgave when they sit in the
+intro, on the vraag when they sit in its stem (specs/34 IT4); make the vraag realise every planned knob and the scorepunten realise the criterion at
 the planned Bloom level; use the style examples for **form only**, never their context, numbers or
 sentences; use the glossary terms; `level` decides the reading level of stem and context.
 
