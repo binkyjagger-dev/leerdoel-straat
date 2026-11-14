@@ -1,7 +1,7 @@
 {
   "exam_id": "vwo-2026-tv1",
   "criteria_run": "20261021-1647-bedrijfseconomie-vwo-2028-run2",
-  "run_id": "20261114-0100-examen-bedrijfseconomie-label2",
+  "run_id": "20261114-0200-examen-bedrijfseconomie-label3",
   "questions": [
     {
       "exam_id": "vwo-2026-tv1",
@@ -20,10 +20,10 @@
       "new_concept": "nee",
       "schema": null,
       "builds_on": null,
-      "example_quality": "ongeschikt",
+      "example_quality": "bruikbaar",
       "builds_on_questions": [],
       "proposed_pattern": null,
-      "example_quality_reason": "SWOT valt buiten de huidige syllabus en de vraag leunt op een niet goed leesbare SWOT-tabel in de opgavetekst.",
+      "example_quality_reason": "Heldere keuze-plus-argument met typische 1+1-scoring, maar leunt op een SWOT-tabel in de opgave en SWOT valt buiten de huidige syllabus.",
       "combination": 0,
       "bloom": null,
       "scorepunt_bloom": [
@@ -49,16 +49,16 @@
         "new_concept": "high",
         "schema": "high",
         "builds_on": "high",
-        "example_quality": "medium"
+        "example_quality": "high"
       },
       "evidence": {
         "pattern": "Noem dit item en leg uit bij welk ander onderdeel van de SWOT het hoort.",
         "solo": "Het is intern (en negatief) / Pear heeft er zelf invloed op, dus hoort het bij W(eakness).",
         "steps": "Het tweede scorepunt alleen toekennen als het eerste scorepunt is behaald.",
         "sources": "De SWOT-analyse heeft Kyano al deels ingevuld.",
-        "noise": "Producten zijn van topkwaliteit.",
-        "claim": "Noem dit item en leg uit bij welk ander onderdeel van de SWOT het hoort.",
-        "new_concept": "Bij de opsomming van de Threats (T) maakt Kyano een fout."
+        "noise": "herkenbaar logo",
+        "claim": "Bij de opsomming van de Threats (T) maakt Kyano een fout.",
+        "new_concept": "Op basis van dit jaarverslag moet hij een SWOT-analyse opstellen en een kengetallenanalyse maken."
       },
       "repaired_fields": [
         "noise"
@@ -74,7 +74,7 @@
       "pattern": "P16",
       "solo": "multistructureel",
       "route": null,
-      "steps": "3",
+      "steps": "1",
       "sources": "in vraagtekst",
       "noise": "nee",
       "claim": "nee",
@@ -84,7 +84,7 @@
       "example_quality": "goed",
       "builds_on_questions": [],
       "proposed_pattern": null,
-      "example_quality_reason": "Zelfstandige kennisvraag met drie losse elementen en duidelijke staffelscoring (3/2/1 juist), geen context nodig.",
+      "example_quality_reason": "Zelfstandige kennisvraag zonder context, heldere stam en typische scoring (3 juist 2, 2 juist 1).",
       "combination": 1,
       "bloom": "begrijpen",
       "scorepunt_bloom": [
@@ -108,18 +108,16 @@
         "example_quality": "high"
       },
       "evidence": {
-        "pattern": "Geef van de volgende groepen vaste activa een voorbeeld:",
-        "solo": "indien 3 juist 2 indien 2 juist 1 indien 1 of 0 juist 0",
-        "steps": "Geef van de volgende groepen vaste activa een voorbeeld: a Immateriële vaste activa b Materiële vaste activa c Financiële vaste activa",
+        "pattern": "Geef van de volgende groepen vaste activa een voorbeeld: a Immateriële vaste activa b Materiële vaste activa c Financiële vaste activa",
+        "solo": "Van iedere groep vaste activa hoeft maar één voorbeeld te worden gegeven.",
+        "steps": "Van iedere groep vaste activa hoeft maar één voorbeeld te worden gegeven.",
         "sources": "Geef van de volgende groepen vaste activa een voorbeeld:",
-        "noise": "Van iedere groep vaste activa hoeft maar één voorbeeld te worden gegeven.",
+        "noise": "Geef van de volgende groepen vaste activa een voorbeeld:",
         "claim": "Geef van de volgende groepen vaste activa een voorbeeld:",
-        "new_concept": "a Immateriële vaste activa b Materiële vaste activa c Financiële vaste activa",
+        "new_concept": "Geef van de volgende groepen vaste activa een voorbeeld:",
         "builds_on": "Geef van de volgende groepen vaste activa een voorbeeld:"
       },
-      "repaired_fields": [
-        "steps"
-      ]
+      "repaired_fields": []
     },
     {
       "exam_id": "vwo-2026-tv1",
@@ -131,7 +129,7 @@
       "pattern": "P09",
       "solo": "multistructureel",
       "route": "gegeven",
-      "steps": "3",
+      "steps": "2",
       "sources": "in vraagtekst",
       "noise": "ja",
       "claim": "ja",
@@ -141,7 +139,7 @@
       "example_quality": "goed",
       "builds_on_questions": [],
       "proposed_pattern": null,
-      "example_quality_reason": "Typische toon-aan-of-vraag: twee kengetallen plus conclusie, 'voor elke fout 1 scorepunt'; vraagt alleen de balans uit de opgave.",
+      "example_quality_reason": "Heldere 'toon aan of'-stam met typische scoring (voor elke fout 1 punt), alleen de balanstabel van de opgave nodig.",
       "combination": 1,
       "bloom": "toepassen",
       "scorepunt_bloom": [
@@ -166,14 +164,14 @@
       },
       "evidence": {
         "pattern": "Toon aan of de liquiditeit van Pear in 2025 is verslechterd door een berekening te maken van de quick ratio",
-        "solo": "31 december 2025: 3.674 + 1.451 + 5.348 11.071 = 0,95",
+        "solo": "Voor elke fout 1 scorepunt in mindering brengen.",
         "route": "door een berekening te maken van de quick ratio op 31 december 2024 en op 31 december 2025.",
         "steps": "de liquiditeit is verslechterd (, want 0,95 < 1,17)",
-        "sources": "Voor het maken van een kengetallenanalyse heeft Kyano onderstaande balansen tot zijn beschikking:",
-        "noise": "Voorraden 2.038 3.263 Langlopende schulden 18.017 23.977",
+        "sources": "Balansen Pear nv per 31 december (getallen x € 1 miljoen)",
+        "noise": "Langlopende schulden 18.017 23.977",
         "claim": "Kyano heeft met behulp van de quick ratio onderzocht dat de liquiditeit van Pear op 31 december 2025 is verslechterd",
-        "new_concept": "Toon aan of de liquiditeit van Pear in 2025 is verslechterd door een berekening te maken van de quick ratio",
-        "builds_on": "Kyano heeft met behulp van de quick ratio onderzocht dat de liquiditeit"
+        "new_concept": "door een berekening te maken van de quick ratio op 31 december 2024 en op 31 december 2025.",
+        "builds_on": "Toon aan of de liquiditeit van Pear in 2025 is verslechterd door een berekening te maken van de quick ratio"
       },
       "repaired_fields": []
     },
@@ -185,9 +183,9 @@
       "first_of_opgave": false,
       "points": 2,
       "pattern": "B01",
-      "solo": "relationeel",
+      "solo": "multistructureel",
       "route": null,
-      "steps": "3",
+      "steps": "2",
       "sources": "in vraagtekst",
       "noise": "nee",
       "claim": "ja",
@@ -197,7 +195,7 @@
       "example_quality": "goed",
       "builds_on_questions": [],
       "proposed_pattern": null,
-      "example_quality_reason": "Schoolvoorbeeld van B01: twee maatregelen, per maatregel teller- en noemereffect, 1 punt per juist effect; zelfstandig leesbaar.",
+      "example_quality_reason": "Typische B01-vorm: twee maatregelen, effect op teller en noemer, 1 punt per juist effect met toelichting; zelfstandig.",
       "combination": 1,
       "bloom": "analyseren",
       "scorepunt_bloom": [
@@ -214,9 +212,9 @@
       ],
       "confidence": {
         "pattern": "high",
-        "solo": "high",
+        "solo": "medium",
         "route": "high",
-        "steps": "medium",
+        "steps": "high",
         "sources": "high",
         "noise": "high",
         "claim": "high",
@@ -228,12 +226,12 @@
       "evidence": {
         "pattern": "Ga bij elk advies in op zowel het teller- als het noemereffect van de quick ratio:",
         "solo": "De teller zal stijgen / de vlottende activa (exclusief voorraden) / liquide middelen zullen stijgen. De noemer / het kort vreemd vermogen zal gelijk blijven.",
-        "steps": "De teller zal stijgen / de vlottende activa (exclusief voorraden) / liquide middelen zullen stijgen. De noemer / het kort vreemd vermogen zal gelijk blijven.",
-        "sources": "a Herwaardeer de materiële vaste activa in 2026 op 1 januari 2026. b Geef een obligatielening met een looptijd van 10 jaar uit",
-        "noise": "Geef van elk van onderstaande adviezen aan of deze leiden tot een verbetering van de liquiditeit van Pear, gemeten met de quick ratio.",
+        "steps": "Ga bij elk advies in op zowel het teller- als het noemereffect van de quick ratio:",
+        "sources": "b Geef een obligatielening met een looptijd van 10 jaar uit op 1 januari 2026.",
+        "noise": "a Herwaardeer de materiële vaste activa in 2026 op 1 januari 2026.",
         "claim": "Vervolgens schrijft Kyano een advies aan Pear over hoe het bedrijf de liquiditeit kan verbeteren in 2026.",
-        "new_concept": "Een herwaardering heeft geen gevolgen voor de teller / vlottende activa (exclusief voorraden) en voor de noemer / het kort vreemd vermogen.",
-        "builds_on": "Vervolgens schrijft Kyano een advies aan Pear over hoe het bedrijf de liquiditeit kan verbeteren in 2026."
+        "new_concept": "Geef van elk van onderstaande adviezen aan of deze leiden tot een verbetering van de liquiditeit van Pear, gemeten met de quick ratio.",
+        "builds_on": "Geef van elk van onderstaande adviezen aan of deze leiden tot een verbetering van de liquiditeit van Pear"
       },
       "repaired_fields": [
         "claim"
@@ -247,7 +245,7 @@
       "first_of_opgave": true,
       "points": 2,
       "pattern": "P14",
-      "solo": "unistructureel",
+      "solo": "multistructureel",
       "route": null,
       "steps": "2",
       "sources": "één bron",
@@ -259,7 +257,7 @@
       "example_quality": "bruikbaar",
       "builds_on_questions": [],
       "proposed_pattern": null,
-      "example_quality_reason": "Kort en typisch Noem-plus-toelichting, maar leunt op Porter (vijfkrachtenmodel) en op een bron met veel tekst.",
+      "example_quality_reason": "Korte noem-en-licht-toe-stam met typische 1+1-score, maar steunt op Porter (vijfkrachtenmodel) en informatiebron 1.",
       "combination": 0,
       "bloom": null,
       "scorepunt_bloom": [
@@ -289,12 +287,12 @@
       },
       "evidence": {
         "pattern": "Noem een factor die de macht van de afnemers van DroomKaas bepaalt (zie informatiebron 1). Licht het antwoord toe.",
-        "solo": "geen andere afzetkanalen / afnemers (dan de supermarktketens)",
-        "steps": "waardoor DroomKaas voor zijn afzet volledig afhankelijk is van de supermarktketens",
+        "solo": "waardoor DroomKaas voor zijn afzet volledig afhankelijk is van de supermarktketens",
+        "steps": "geen andere afzetkanalen / afnemers (dan de supermarktketens)",
         "sources": "Noem een factor die de macht van de afnemers van DroomKaas bepaalt (zie informatiebron 1).",
         "noise": "In het tweede halfjaar van 2022 bedroeg het resultaat € 110.000.",
-        "claim": "Noem een factor die de macht van de afnemers van DroomKaas bepaalt (zie informatiebron 1).",
-        "new_concept": "Frans ziet vooral de macht van zijn afnemers (uit het vijfkrachtenmodel van Porter) als hindernis"
+        "claim": "Noem een factor die de macht van de afnemers van DroomKaas bepaalt",
+        "new_concept": "Frans ziet vooral de macht van zijn afnemers (uit het vijfkrachtenmodel van Porter) als hindernis voor verbetering van zijn resultaat."
       },
       "repaired_fields": []
     },
@@ -306,7 +304,7 @@
       "first_of_opgave": false,
       "points": 2,
       "pattern": "P14",
-      "solo": "unistructureel",
+      "solo": "multistructureel",
       "route": null,
       "steps": "2",
       "sources": "één bron",
@@ -318,7 +316,7 @@
       "example_quality": "bruikbaar",
       "builds_on_questions": [],
       "proposed_pattern": null,
-      "example_quality_reason": "Heldere korte stam met typische 1+1-scoring, maar het antwoord vraagt de vergelijking van twee bedrijfsmodellen uit lange bronnen.",
+      "example_quality_reason": "Heldere stam en typische scoring, maar het antwoord vraagt de vergelijking oud/nieuw bedrijfsmodel uit een lange context en bron.",
       "combination": 0,
       "bloom": null,
       "scorepunt_bloom": [
@@ -348,15 +346,16 @@
       },
       "evidence": {
         "pattern": "Noem een risico dat is verminderd en licht het antwoord toe.",
-        "solo": "risico op prijsdaling",
-        "steps": "In het nieuwe bedrijfsmodel worden er vaste prijsafspraken per jaar gemaakt",
+        "solo": "In het nieuwe bedrijfsmodel is DroomKaas geen eigenaar meer van de voorraad",
+        "steps": "voorraadrisico",
         "sources": "Frans Laarmans besluit om per 1 januari 2025 het bedrijfsmodel van DroomKaas drastisch aan te passen (zie informatiebron 2).",
-        "noise": "De constante kosten bestaan uit loonkosten van € 30.000 per halfjaar en overige constante kosten van € 60.000 per halfjaar.",
-        "claim": "In het nieuwe bedrijfsmodel zijn er voor DroomKaas minder risico’s dan in het oude bedrijfsmodel.",
-        "new_concept": "Noem een risico dat is verminderd en licht het antwoord toe.",
-        "builds_on": "Noem een risico dat is verminderd en licht het antwoord toe."
+        "noise": "variabele kosten per kg € 0,20 € 0,50",
+        "claim": "Noem een risico dat is verminderd en licht het antwoord toe.",
+        "new_concept": "Noem een risico dat is verminderd en licht het antwoord toe."
       },
-      "repaired_fields": []
+      "repaired_fields": [
+        "claim"
+      ]
     },
     {
       "exam_id": "vwo-2026-tv1",
@@ -369,8 +368,8 @@
       "solo": "multistructureel",
       "route": null,
       "steps": "2",
-      "sources": "één bron",
-      "noise": "ja",
+      "sources": "in vraagtekst",
+      "noise": "nee",
       "claim": "nee",
       "new_concept": "nee",
       "schema": null,
@@ -378,7 +377,7 @@
       "example_quality": "goed",
       "builds_on_questions": [],
       "proposed_pattern": null,
-      "example_quality_reason": "Korte stam, het effect is gegeven en de cv vraagt een keten van twee schakels; zelfstandig bruikbaar.",
+      "example_quality_reason": "Korte, zelfstandige stam die het effect geeft; de cv-opmerking maakt duidelijk dat de schakel naar de kosten nodig is.",
       "combination": 1,
       "bloom": "begrijpen",
       "scorepunt_bloom": [
@@ -405,11 +404,10 @@
         "pattern": "Geef een verklaring waarom DroomKaas het grootste deel van de constante kosten toerekent aan de oude kazen.",
         "solo": "De oude kazen liggen langer in het kaaspakhuis, leggen daardoor een groter beslag op de ruimte / kapitaal / personeel",
         "steps": "Het uitsluitend noemen van een langer rijpingsproces is onvoldoende voor het toekennen van het scorepunt.",
-        "sources": "Dit is vanwege een verschil in kostprijs per kg kaasrijping van jonge en oude kaas (zie informatiebron 2).",
-        "noise": "De constante kosten bestaan uit loonkosten van € 30.000 per halfjaar en overige constante kosten van € 60.000 per halfjaar.",
+        "sources": "Geef een verklaring waarom DroomKaas het grootste deel van de constante kosten toerekent aan de oude kazen.",
+        "noise": "Geef een verklaring waarom DroomKaas het grootste deel van de constante kosten toerekent aan de oude kazen.",
         "claim": "Geef een verklaring waarom DroomKaas het grootste deel van de constante kosten toerekent aan de oude kazen.",
-        "new_concept": "Geef een verklaring waarom DroomKaas het grootste deel van de constante kosten toerekent aan de oude kazen.",
-        "builds_on": "Geef een verklaring waarom DroomKaas het grootste deel van de constante kosten toerekent aan de oude kazen."
+        "new_concept": "Geef een verklaring waarom DroomKaas het grootste deel van de constante kosten toerekent aan de oude kazen."
       },
       "repaired_fields": []
     },
@@ -433,7 +431,7 @@
       "example_quality": "goed",
       "builds_on_questions": [],
       "proposed_pattern": null,
-      "example_quality_reason": "Typische P07-stam met \"Bereken hiervoor eerst\", scoring per stap met foutaftrek; heldere gegevens in twee bronnen.",
+      "example_quality_reason": "Typische standaardberekening met \"bereken hiervoor eerst\", heldere cv met foutaftrek; vraagt wel de tabel uit bron 2 en afzet uit bron 3.",
       "combination": 2,
       "bloom": "toepassen",
       "scorepunt_bloom": [
@@ -464,13 +462,12 @@
       "evidence": {
         "pattern": "Bereken hiervoor eerst de kostprijs per kg kaasrijping van jonge en van oude kaas (zie informatiebronnen 2 en 3).",
         "solo": "78.000 x (1,50 – 0,60) + 24.000 x (3,70 – 2,50) = € 99.000",
-        "route": "Bereken hiervoor eerst de kostprijs per kg kaasrijping van jonge en van oude kaas (zie informatiebronnen 2 en 3).",
-        "steps": "jonge kaas: 0,20 +",
-        "sources": "Bereken hiervoor eerst de kostprijs per kg kaasrijping van jonge en van oude kaas (zie informatiebronnen 2 en 3).",
-        "noise": "De variabele kosten per kg bedragen € 0,30 voor jonge kaas en € 0,55 voor oude kaas;",
+        "route": "Bereken hiervoor eerst de kostprijs per kg kaasrijping van jonge en van oude kaas",
+        "steps": "0,50 + 2,00 = € 2,50",
+        "sources": "(zie informatiebronnen 2 en 3)",
+        "noise": "8% vakantietoeslag over het basisbrutojaarloon;",
         "claim": "Bereken het gerealiseerde verkoopresultaat over het eerste halfjaar van 2025.",
-        "new_concept": "Bereken het gerealiseerde verkoopresultaat over het eerste halfjaar van 2025.",
-        "builds_on": "Bereken het gerealiseerde verkoopresultaat over het eerste halfjaar van 2025."
+        "new_concept": "Bereken het gerealiseerde verkoopresultaat over het eerste halfjaar van 2025."
       },
       "repaired_fields": []
     },
@@ -486,15 +483,15 @@
       "route": null,
       "steps": "2",
       "sources": "in vraagtekst",
-      "noise": "ja",
+      "noise": "nee",
       "claim": "nee",
       "new_concept": "nee",
       "schema": null,
       "builds_on": "nee",
-      "example_quality": "goed",
+      "example_quality": "bruikbaar",
       "builds_on_questions": [],
       "proposed_pattern": null,
-      "example_quality_reason": "Korte, zelfstandige \"Leg uit of\"-vraag met de regel en de conclusie in één scorepunt.",
+      "example_quality_reason": "Zelfstandige, heldere leg-uit-of-vraag, maar 1 punt in plaats van de typische 1+1-scoring van P04.",
       "combination": 1,
       "bloom": "begrijpen",
       "scorepunt_bloom": [
@@ -506,7 +503,7 @@
       ],
       "confidence": {
         "pattern": "high",
-        "solo": "high",
+        "solo": "medium",
         "route": "high",
         "steps": "high",
         "sources": "high",
@@ -515,19 +512,20 @@
         "new_concept": "high",
         "schema": "high",
         "builds_on": "high",
-        "example_quality": "high"
+        "example_quality": "medium"
       },
       "evidence": {
         "pattern": "Leg uit of DroomKaas in de individuele arbeidsovereenkomst mag afwijken van de cao.",
-        "solo": "als dit in het voordeel van de werknemer is.",
+        "solo": "mag bij de individuele arbeidsovereenkomst afwijken van de cao als dit in het voordeel van de werknemer is.",
         "steps": "Ja, DroomKaas mag bij de individuele arbeidsovereenkomst afwijken van de cao als dit in het voordeel van de werknemer is.",
         "sources": "Deze uitkering is niet in de cao van het Kaaspakhuisbedrijf opgenomen, maar wel in de individuele arbeidsovereenkomst van Milan.",
-        "noise": "Milan krijgt een eindejaarsuitkering van € 3.200 in december 2025.",
+        "noise": "Ja, DroomKaas mag bij de individuele arbeidsovereenkomst afwijken van de cao als dit in het voordeel van de werknemer is.",
         "claim": "Leg uit of DroomKaas in de individuele arbeidsovereenkomst mag afwijken van de cao.",
-        "new_concept": "Leg uit of DroomKaas in de individuele arbeidsovereenkomst mag afwijken van de cao.",
-        "builds_on": "Leg uit of DroomKaas in de individuele arbeidsovereenkomst mag afwijken van de cao."
+        "new_concept": "Leg uit of DroomKaas in de individuele arbeidsovereenkomst mag afwijken van de cao."
       },
-      "repaired_fields": []
+      "repaired_fields": [
+        "noise"
+      ]
     },
     {
       "exam_id": "vwo-2026-tv1",
@@ -539,7 +537,7 @@
       "pattern": "P08",
       "solo": "multistructureel",
       "route": "zelf vinden",
-      "steps": "4+",
+      "steps": "3",
       "sources": "één bron",
       "noise": "ja",
       "claim": "nee",
@@ -549,7 +547,7 @@
       "example_quality": "goed",
       "builds_on_questions": [],
       "proposed_pattern": null,
-      "example_quality_reason": "Korte stam die alleen het eindpunt noemt; typische loonkostenberekening met foutaftrek uit één bron met ruis (trede 6, oude datum).",
+      "example_quality_reason": "Compacte loonkostenberekening met een tabel waaruit geselecteerd moet worden; typische foutaftrek-scoring.",
       "combination": 1,
       "bloom": "toepassen",
       "scorepunt_bloom": [
@@ -563,7 +561,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
-        "steps": "high",
+        "steps": "medium",
         "sources": "high",
         "noise": "high",
         "claim": "high",
@@ -577,11 +575,10 @@
         "solo": "(3.566 x 6 x 1,08 + (0,5 x 3.200)) x 1,30 = € 32.120",
         "route": "Bereken de totale loonkosten over het eerste halfjaar van 2025 (zie informatiebron 3).",
         "steps": "(3.566 x 6 x 1,08 + (0,5 x 3.200)) x 1,30 = € 32.120",
-        "sources": "Bereken de totale loonkosten over het eerste halfjaar van 2025 (zie informatiebron 3).",
-        "noise": "6 3.300 3.432",
-        "claim": "Bereken de totale loonkosten over het eerste halfjaar van 2025 (zie informatiebron 3).",
-        "new_concept": "Bereken de totale loonkosten over het eerste halfjaar van 2025 (zie informatiebron 3).",
-        "builds_on": "Bereken de totale loonkosten over het eerste halfjaar van 2025 (zie informatiebron 3)."
+        "sources": "(zie informatiebron 3)",
+        "noise": "trede 1 juli 2024 1 januari 2025 6 3.300 3.432",
+        "claim": "Bereken de totale loonkosten over het eerste halfjaar van 2025",
+        "new_concept": "Bereken de totale loonkosten over het eerste halfjaar van 2025"
       },
       "repaired_fields": []
     },
@@ -595,7 +592,7 @@
       "pattern": "B02",
       "solo": "relationeel",
       "route": "gegeven",
-      "steps": "4+",
+      "steps": "3",
       "sources": "meerdere bronnen",
       "noise": "ja",
       "claim": "nee",
@@ -608,7 +605,7 @@
         10
       ],
       "proposed_pattern": null,
-      "example_quality_reason": "Typisch budgetresultaat-schema met scorepunt per bedrag, maar steunt op vraag 8 en 10 en de uitwerkbijlage ontbreekt in de tekst.",
+      "example_quality_reason": "Typisch budgetresultaat-schema, maar de uitwerkbijlage ontbreekt in de input en de vraag bouwt voort op vraag 8 en 10.",
       "combination": 1,
       "bloom": "toepassen",
       "scorepunt_bloom": [
@@ -637,7 +634,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
-        "steps": "high",
+        "steps": "medium",
         "sources": "high",
         "noise": "high",
         "claim": "high",
@@ -647,16 +644,16 @@
         "example_quality": "high"
       },
       "evidence": {
-        "pattern": "Vul hiervoor de uitwerkbijlage bij deze vraag in.",
-        "solo": "(24.000 – 30.000) x 2 (vraag 8) =",
+        "pattern": "Bereken het budgetresultaat over het eerste halfjaar van 2025 (zie informatiebronnen 2 en 3). Vul hiervoor de uitwerkbijlage bij deze vraag in.",
+        "solo": "(24.000 – 30.000) x 2 (vraag 8) = 12.000 negatief/–",
         "route": "Vul hiervoor de uitwerkbijlage bij deze vraag in.",
         "steps": "– 9.000 – 12.920",
-        "sources": "Bereken het budgetresultaat over het eerste halfjaar van 2025 (zie informatiebronnen 2 en 3).",
+        "sources": "(zie informatiebronnen 2 en 3).",
         "noise": "De verkooptarieven zijn onveranderd gebleven (€ 1,50 en € 3,70).",
-        "claim": "Bereken het budgetresultaat over het eerste halfjaar van 2025 (zie informatiebronnen 2 en 3).",
-        "new_concept": "Bereken het budgetresultaat over het eerste halfjaar van 2025 (zie informatiebronnen 2 en 3).",
+        "claim": "Bereken het budgetresultaat over het eerste halfjaar van 2025",
+        "new_concept": "Bereken het budgetresultaat over het eerste halfjaar van 2025",
         "schema": "bezettingsresultaat op jonge kaas 1.200 positief/+",
-        "builds_on": "(24.000 – 30.000) x 2 (vraag 8) ="
+        "builds_on": "prijsresultaat loonkosten 30.000 – 32.120 (vraag 10) = 2.120 negatief/–"
       },
       "repaired_fields": []
     },
@@ -670,7 +667,7 @@
       "pattern": "P09",
       "solo": "relationeel",
       "route": "zelf vinden",
-      "steps": "4+",
+      "steps": "3",
       "sources": "meerdere bronnen",
       "noise": "ja",
       "claim": "nee",
@@ -683,7 +680,7 @@
         11
       ],
       "proposed_pattern": null,
-      "example_quality_reason": "Typische \"Toon met een berekening aan of\" met conclusiepunt, maar alleen bruikbaar met de hele opgave (uitkomsten vraag 8 en 11, grafiek bron 1).",
+      "example_quality_reason": "Heldere toon-aan-of-stam met typische conclusiescore, maar de grafiek in bron 1 is een afbeelding en het antwoord steunt op vraag 8 en 11.",
       "combination": 1,
       "bloom": "toepassen",
       "scorepunt_bloom": [
@@ -707,7 +704,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
-        "steps": "high",
+        "steps": "medium",
         "sources": "high",
         "noise": "high",
         "claim": "high",
@@ -720,9 +717,9 @@
         "pattern": "Toon met een berekening aan of het resultaat van DroomKaas in het eerste halfjaar van 2025 voor Frans acceptabel is",
         "solo": "110.000 x 0,92 x 0,92 x 0,93 x 0,95 = 82.257,38.",
         "route": "Toon met een berekening aan of het resultaat van DroomKaas in het eerste halfjaar van 2025 voor Frans acceptabel is",
-        "steps": "Dat is voor Frans acceptabel (omdat het minder dan 10% daling is).",
+        "steps": "€ 77.080 > 0,90 x € 82.257,38, dus is het voor Frans acceptabel.",
         "sources": "(zie informatiebronnen 1 tot en met 3).",
-        "noise": "6 3.300 3.432",
+        "noise": "trede 1 juli 2024 1 januari 2025 6 3.300 3.432",
         "claim": "Frans vindt een daling van het resultaat van hooguit 10% in het eerste halfjaar van 2025 ten opzichte van het tweede halfjaar van 2024 acceptabel.",
         "new_concept": "Toon met een berekening aan of het resultaat van DroomKaas in het eerste halfjaar van 2025 voor Frans acceptabel is",
         "builds_on": "Resultaat: verkoopresultaat + budgetresultaat = 99.000 (vraag 8) – 21.920 (vraag 11) = 77.080"
@@ -746,10 +743,10 @@
       "new_concept": "nee",
       "schema": null,
       "builds_on": null,
-      "example_quality": "bruikbaar",
+      "example_quality": "goed",
       "builds_on_questions": [],
       "proposed_pattern": null,
-      "example_quality_reason": "Korte, heldere stam en korte context, maar slechts 1 punt en een open voorbeeldenlijst; weinig scoringsstructuur.",
+      "example_quality_reason": "Korte, heldere stam; één voorbeeld bij de casus zonder gevraagde toelichting, typisch 1-puntsvraag; korte context volstaat.",
       "combination": 0,
       "bloom": null,
       "scorepunt_bloom": [
@@ -775,17 +772,13 @@
       "evidence": {
         "pattern": "Geef een voorbeeld van lagere kosten voor de NLD bank door deze verbeterde risicoanalyse bij kredietverlening.",
         "solo": "Voorbeelden van een juist antwoord zijn: - minder afboeking van oninbare debiteuren",
-        "steps": "Geef een voorbeeld van lagere kosten voor de NLD bank",
+        "steps": "Voorbeelden van een juist antwoord zijn: - minder afboeking van oninbare debiteuren",
         "sources": "De kosten van de NLD bank zijn gedaald doordat de analyse van het risico op wanbetaling bij kredietverlening is verbeterd.",
-        "noise": "De kosten van de NLD bank zijn gedaald doordat de analyse van het risico op wanbetaling bij kredietverlening is verbeterd.",
+        "noise": "Geef een voorbeeld van lagere kosten voor de NLD bank door deze verbeterde risicoanalyse bij kredietverlening.",
         "claim": "Geef een voorbeeld van lagere kosten voor de NLD bank door deze verbeterde risicoanalyse bij kredietverlening.",
         "new_concept": "Geef een voorbeeld van lagere kosten voor de NLD bank door deze verbeterde risicoanalyse bij kredietverlening."
       },
-      "repaired_fields": [
-        "pattern",
-        "route",
-        "schema"
-      ]
+      "repaired_fields": []
     },
     {
       "exam_id": "vwo-2026-tv1",
@@ -807,7 +800,7 @@
       "example_quality": "goed",
       "builds_on_questions": [],
       "proposed_pattern": null,
-      "example_quality_reason": "Typisch 'Noem … Licht toe'-patroon met 1 punt per toegelicht antwoord, korte zelfstandige context.",
+      "example_quality_reason": "Heldere noem-plus-licht-toe-stam met toelichting die per antwoord gescoord wordt; context van twee zinnen volstaat.",
       "combination": 1,
       "bloom": "begrijpen",
       "scorepunt_bloom": [
@@ -836,14 +829,14 @@
         "example_quality": "high"
       },
       "evidence": {
-        "pattern": "Noem twee instrumenten van de marketingmix anders dan prijsbeleid",
-        "solo": "per juist antwoord met bijbehorende toelichting",
-        "steps": "Licht het antwoord telkens toe.",
+        "pattern": "per juist antwoord met bijbehorende toelichting",
+        "solo": "Noem twee instrumenten van de marketingmix anders dan prijsbeleid",
+        "steps": "Promotie(beleid): er kan met minder uitgaven aan reclame worden volstaan",
         "sources": "Door de loyaliteit van deze klanten kan de NLD besparen op de marketingkosten en daarmee haar resultaat vergroten.",
-        "noise": "Door de loyaliteit van deze klanten kan de NLD besparen op de marketingkosten en daarmee haar resultaat vergroten.",
-        "claim": "Noem twee instrumenten van de marketingmix anders dan prijsbeleid, waarop de NLD bank kan besparen als gevolg van de loyaliteit van haar klanten.",
-        "new_concept": "Noem twee instrumenten van de marketingmix anders dan prijsbeleid, waarop de NLD bank kan besparen als gevolg van de loyaliteit van haar klanten.",
-        "builds_on": "Noem twee instrumenten van de marketingmix anders dan prijsbeleid, waarop de NLD bank kan besparen als gevolg van de loyaliteit van haar klanten."
+        "noise": "Licht het antwoord telkens toe.",
+        "claim": "Door de loyaliteit van deze klanten kan de NLD besparen op de marketingkosten",
+        "new_concept": "Noem twee instrumenten van de marketingmix anders dan prijsbeleid",
+        "builds_on": "Uit onderzoek van de NLD bank blijkt dat klanten met een spaarrekening zelden overstappen naar een andere bank."
       },
       "repaired_fields": []
     },
@@ -864,10 +857,10 @@
       "new_concept": "ja",
       "schema": null,
       "builds_on": "nee",
-      "example_quality": "goed",
+      "example_quality": "bruikbaar",
       "builds_on_questions": [],
       "proposed_pattern": null,
-      "example_quality_reason": "Kale 'Bereken'-stam, compacte tabel met ruis (maatschappelijk kapitaal, twee belastingschijven), typische 1-punt-per-stapscoring.",
+      "example_quality_reason": "Typische zelf-te-vinden-route met ruis in een tabel en een scoring van drie stappen, maar de tabel is in de tekstlaag versnipperd en vraagt nette herschikking.",
       "combination": 3,
       "bloom": "toepassen",
       "scorepunt_bloom": [
@@ -898,18 +891,18 @@
         "new_concept": "high",
         "schema": "high",
         "builds_on": "high",
-        "example_quality": "high"
+        "example_quality": "medium"
       },
       "evidence": {
         "pattern": "Bereken het verwachte dividendrendement over 2025 bij beleggen in de aandelen van de NLD bank.",
-        "solo": "In onderstaande tabel zijn gegevens opgenomen van de NLD bank.",
+        "solo": "dividend per aandeel: 0,45 x 2.077.613.600",
         "route": "Bereken het verwachte dividendrendement over 2025 bij beleggen in de aandelen van de NLD bank.",
         "steps": "gemiddelde beurskoers: (13,16 + 13,42) / 2 = 13,29",
         "sources": "In onderstaande tabel zijn gegevens opgenomen van de NLD bank.",
         "noise": "maatschappelijk aandelenkapitaal € 4.800.000.000",
-        "claim": "Bereken het verwachte dividendrendement over 2025 bij beleggen in de aandelen van de NLD bank.",
-        "new_concept": "De pay-outratio geeft aan welk deel van het resultaat na aftrek van vennootschapsbelasting aan de aandeelhouders beschikbaar wordt gesteld.",
-        "builds_on": "Bereken het verwachte dividendrendement over 2025 bij beleggen in de aandelen van de NLD bank."
+        "claim": "Voor beleggers geldt dat het dividendrendement op beleggingen in aandelen van banken al enkele jaren boven 7% ligt.",
+        "new_concept": "noot 1 De pay-outratio geeft aan welk deel van het resultaat na aftrek van vennootschapsbelasting aan de aandeelhouders beschikbaar wordt gesteld.",
+        "builds_on": "In onderstaande tabel zijn gegevens opgenomen van de NLD bank."
       },
       "repaired_fields": []
     },
@@ -923,7 +916,7 @@
       "pattern": "P01",
       "solo": "multistructureel",
       "route": null,
-      "steps": "2",
+      "steps": "1",
       "sources": "in vraagtekst",
       "noise": "nee",
       "claim": "nee",
@@ -933,7 +926,7 @@
       "example_quality": "bruikbaar",
       "builds_on_questions": [],
       "proposed_pattern": null,
-      "example_quality_reason": "Heldere 'Leg uit dat'-stam zonder lange context, maar de twee punten zijn parallelle elementen (aandeelhouder/spaarder) in plaats van een keten.",
+      "example_quality_reason": "Heldere 'leg uit dat'-stam zonder context nodig, maar scoring is twee parallelle kanten (aandeelhouder/spaarder), geen keten.",
       "combination": 1,
       "bloom": "begrijpen",
       "scorepunt_bloom": [
@@ -959,17 +952,17 @@
         "new_concept": "high",
         "schema": "high",
         "builds_on": "high",
-        "example_quality": "high"
+        "example_quality": "medium"
       },
       "evidence": {
         "pattern": "Leg uit dat het risico van beleggen in aandelen NLD hoger is dan het risico van sparen bij NLD.",
-        "solo": "Aandeelhouders lopen het risico op waardedaling van de aandelen.",
-        "steps": "Betrek beide beleggingsvormen in het antwoord.",
+        "solo": "Betrek beide beleggingsvormen in het antwoord.",
+        "steps": "Aandeelhouders lopen het risico op waardedaling van de aandelen.",
         "sources": "Het hogere rendement van beleggen in aandelen van de NLD bank is een beloning voor het hogere risico dat de belegger loopt.",
-        "noise": "Het hogere rendement van beleggen in aandelen van de NLD bank is een beloning voor het hogere risico dat de belegger loopt.",
+        "noise": "Leg uit dat het risico van beleggen in aandelen NLD hoger is dan het risico van sparen bij NLD.",
         "claim": "Leg uit dat het risico van beleggen in aandelen NLD hoger is dan het risico van sparen bij NLD.",
-        "new_concept": "Leg uit dat het risico van beleggen in aandelen NLD hoger is dan het risico van sparen bij NLD.",
-        "builds_on": "Leg uit dat het risico van beleggen in aandelen NLD hoger is dan het risico van sparen bij NLD."
+        "new_concept": "Betrek beide beleggingsvormen in het antwoord.",
+        "builds_on": "Het hogere rendement van beleggen in aandelen van de NLD bank is een beloning voor het hogere risico dat de belegger loopt."
       },
       "repaired_fields": []
     },
@@ -993,7 +986,7 @@
       "example_quality": "goed",
       "builds_on_questions": [],
       "proposed_pattern": null,
-      "example_quality_reason": "Korte, zelfstandige stam met gesloten keuze a/b/c en typische scoring (keuze + motivering, tweede punt alleen bij juiste keuze).",
+      "example_quality_reason": "Korte, zelfstandige stam met gesloten keuze a/b/c en typische 1+1-scoring (letter, dan motivering).",
       "combination": 1,
       "bloom": "begrijpen",
       "scorepunt_bloom": [
@@ -1025,7 +1018,7 @@
         "pattern": "Kies de juiste letter en motiveer het antwoord.",
         "solo": "Bij de eerste termijn wordt eerst het geld ontvangen en daarna worden de goederen geleverd (afnemerskrediet).",
         "steps": "Bij de tweede termijn worden eerst de goederen geleverd en daarna wordt het geld ontvangen (leverancierskrediet).",
-        "sources": "eerste termijn: 25% bij bestelling, 6 maanden voor de aflevering van de vleugels;",
+        "sources": "tweede termijn: 75% twee maanden na de aflevering van de vleugels.",
         "noise": "hoe de omzet van Wings in het jaar 2025, te weten € 20 miljard, is verdeeld over de vier afnemers.",
         "claim": "Leg uit of er in bovenstaande situatie voor Wings sprake is van:",
         "new_concept": "a alleen leverancierskrediet b alleen afnemerskrediet c zowel leverancierskrediet als afnemerskrediet."
@@ -1052,7 +1045,7 @@
       "example_quality": "bruikbaar",
       "builds_on_questions": [],
       "proposed_pattern": null,
-      "example_quality_reason": "Kale 'Bereken'-stam met verborgen btw-stap, maar het aandeel van Skybus staat alleen in een diagram (afbeelding) in de opgavetekst.",
+      "example_quality_reason": "Heldere stam met zelf te vinden route, maar het aandeel van Skybus (60%) staat alleen in het cirkeldiagram, dus het voorbeeld vraagt de figuur.",
       "combination": 1,
       "bloom": "toepassen",
       "scorepunt_bloom": [
@@ -1080,11 +1073,11 @@
         "solo": "20 miljard x 0,60 x 0,75 x 1,21 = € 10,89 miljard",
         "route": "Bereken het bedrag dat in de tweede termijn aan Skybus wordt gefactureerd.",
         "steps": "20 miljard x 0,60 x 0,75 x 1,21 = € 10,89 miljard",
-        "sources": "In onderstaand diagram is af te lezen hoe de omzet van Wings in het jaar 2025, te weten € 20 miljard, is verdeeld",
+        "sources": "In onderstaand diagram is af te lezen hoe de omzet van Wings in het jaar 2025, te weten € 20 miljard, is",
         "noise": "eerste termijn: 25% bij bestelling, 6 maanden voor de aflevering van de vleugels;",
         "claim": "Bereken het bedrag dat in de tweede termijn aan Skybus wordt gefactureerd.",
-        "new_concept": "tweede termijn: 75% twee maanden na de aflevering van de vleugels.",
-        "builds_on": "Skybus heeft in 2025 slechts één order geplaatst."
+        "new_concept": "Skybus heeft in 2025 slechts één order geplaatst.",
+        "builds_on": "Op 1 juli 2025 levert Wings de order van Skybus af."
       },
       "repaired_fields": []
     },
@@ -1105,10 +1098,10 @@
       "new_concept": "nee",
       "schema": null,
       "builds_on": "nee",
-      "example_quality": "bruikbaar",
+      "example_quality": "goed",
       "builds_on_questions": [],
       "proposed_pattern": null,
-      "example_quality_reason": "Heldere korte noem-vraag in de context met 1 punt per antwoord, maar zonder gevraagde toelichting, dus geen schoolvoorbeeld van P14.",
+      "example_quality_reason": "Korte noem-vraag passend bij de casus, zonder toelichting, met per juist antwoord 1 punt; nauwelijks context nodig.",
       "combination": 1,
       "bloom": "onthouden",
       "scorepunt_bloom": [
@@ -1127,30 +1120,26 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
-        "steps": "medium",
+        "steps": "high",
         "sources": "high",
         "noise": "high",
         "claim": "high",
         "new_concept": "high",
         "schema": "high",
         "builds_on": "high",
-        "example_quality": "medium"
+        "example_quality": "high"
       },
       "evidence": {
         "pattern": "Noem voor Wings twee nadelige bedrijfseconomische gevolgen van een faillissement van Skybus.",
-        "solo": "een enorm omzetverlies voor Wings / het verlies van een grote klant voor Wings",
+        "solo": "een afboeking van de vordering op Skybus uit 2025",
         "steps": "per juist antwoord",
         "sources": "Wings gaat hiermee akkoord, omdat de financiële gevolgen van een faillissement van Skybus heel groot zijn voor Wings.",
         "noise": "Noem voor Wings twee nadelige bedrijfseconomische gevolgen van een faillissement van Skybus.",
         "claim": "Noem voor Wings twee nadelige bedrijfseconomische gevolgen van een faillissement van Skybus.",
-        "new_concept": "een afboeking van de vordering op Skybus uit 2025",
+        "new_concept": "een enorm omzetverlies voor Wings  / het verlies van een grote klant voor Wings",
         "builds_on": "Noem voor Wings twee nadelige bedrijfseconomische gevolgen van een faillissement van Skybus."
       },
-      "repaired_fields": [
-        "pattern",
-        "route",
-        "schema"
-      ]
+      "repaired_fields": []
     },
     {
       "exam_id": "vwo-2026-tv1",
@@ -1164,15 +1153,15 @@
       "route": null,
       "steps": "1",
       "sources": "één bron",
-      "noise": "ja",
+      "noise": "nee",
       "claim": "nee",
       "new_concept": "nee",
       "schema": null,
       "builds_on": null,
-      "example_quality": "bruikbaar",
+      "example_quality": "goed",
       "builds_on_questions": [],
       "proposed_pattern": null,
-      "example_quality_reason": "Korte, heldere noem-vraag met open voorbeeldantwoorden; leunt licht op informatiebron 4.",
+      "example_quality_reason": "Korte heldere noem-vraag, één scorepunt met voorbeeldantwoorden, nauwelijks context nodig.",
       "combination": 1,
       "bloom": "onthouden",
       "scorepunt_bloom": [
@@ -1193,20 +1182,18 @@
         "new_concept": "high",
         "schema": "high",
         "builds_on": "high",
-        "example_quality": "medium"
+        "example_quality": "high"
       },
       "evidence": {
         "pattern": "Noem voor Personal Gym een voordeel van financiering via crowdfunding ten opzichte van financiering met een onderhandse lening.",
         "solo": "Crowdfunding kan ervoor zorgen dat Personal Gym bekender wordt.",
         "steps": "Crowdfunding kan ervoor zorgen dat Personal Gym bekender wordt.",
         "sources": "wordt het resterende bedrag inclusief btw door Personal Gym geleend via crowdfunding (zie informatiebron 4).",
-        "noise": "Het plan is om per 1 januari 2026 te investeren in nieuwe fitnessapparaten ter waarde van € 42.350 inclusief 21% btw.",
+        "noise": "biedt de geldvrager op het platform de ruimte om het investeringsproject te promoten",
         "claim": "Noem voor Personal Gym een voordeel van financiering via crowdfunding ten opzichte van financiering met een onderhandse lening.",
         "new_concept": "Noem voor Personal Gym een voordeel van financiering via crowdfunding ten opzichte van financiering met een onderhandse lening."
       },
-      "repaired_fields": [
-        "noise"
-      ]
+      "repaired_fields": []
     },
     {
       "exam_id": "vwo-2026-tv1",
@@ -1225,10 +1212,10 @@
       "new_concept": "nee",
       "schema": null,
       "builds_on": "nee",
-      "example_quality": "goed",
+      "example_quality": "bruikbaar",
       "builds_on_questions": [],
       "proposed_pattern": null,
-      "example_quality_reason": "Heldere 'leg uit waarom' met korte eigen context en een eenduidig cv-antwoord.",
+      "example_quality_reason": "Heldere korte stam en zelfstandig, maar 1 punt en de conclusie staat al in de stam (geen typisch 'leg uit of').",
       "combination": 1,
       "bloom": "begrijpen",
       "scorepunt_bloom": [
@@ -1240,7 +1227,7 @@
       ],
       "confidence": {
         "pattern": "high",
-        "solo": "medium",
+        "solo": "high",
         "route": "high",
         "steps": "medium",
         "sources": "high",
@@ -1249,23 +1236,19 @@
         "new_concept": "high",
         "schema": "high",
         "builds_on": "high",
-        "example_quality": "high"
+        "example_quality": "medium"
       },
       "evidence": {
         "pattern": "Hypotheekrecht kan alleen gegeven worden bij leningen voor onroerende goederen (en fitnessapparaten zijn roerende goederen).",
         "solo": "Onroerend goed expliciet benoemen of een voorbeeld van een onroerend goed geven is noodzakelijk voor 1 scorepunt.",
-        "steps": "Hypotheekrecht kan alleen gegeven worden bij leningen voor onroerende goederen",
-        "sources": "Gerard en Maya kunnen hun investeerders geen recht van hypotheek verstrekken.",
-        "noise": "Gerard en Maya kunnen hun investeerders geen recht van hypotheek verstrekken.",
-        "claim": "Leg uit waarom er op de investeringen in fitnessapparaten geen recht van hypotheek kan worden gegeven.",
+        "steps": "Hypotheekrecht kan alleen gegeven worden bij leningen voor onroerende goederen (en fitnessapparaten zijn roerende goederen).",
+        "sources": "Leg uit waarom er op de investeringen in fitnessapparaten geen recht van hypotheek kan worden gegeven.",
+        "noise": "Leg uit waarom er op de investeringen in fitnessapparaten geen recht van hypotheek kan worden gegeven.",
+        "claim": "Gerard en Maya kunnen hun investeerders geen recht van hypotheek verstrekken.",
         "new_concept": "Bij de zekerheden voor de investeerder gaat het bijvoorbeeld om het hypotheekrecht",
         "builds_on": "Leg uit waarom er op de investeringen in fitnessapparaten geen recht van hypotheek kan worden gegeven."
       },
-      "repaired_fields": [
-        "pattern",
-        "route",
-        "schema"
-      ]
+      "repaired_fields": []
     },
     {
       "exam_id": "vwo-2026-tv1",
@@ -1275,9 +1258,9 @@
       "first_of_opgave": false,
       "points": 2,
       "pattern": "B02",
-      "solo": "relationeel",
+      "solo": "multistructureel",
       "route": "gegeven",
-      "steps": "4+",
+      "steps": "3",
       "sources": "één bron",
       "noise": "nee",
       "claim": "nee",
@@ -1287,7 +1270,7 @@
       "example_quality": "bruikbaar",
       "builds_on_questions": [],
       "proposed_pattern": null,
-      "example_quality_reason": "Typisch balansschema met twee groepspunten; vraagt de btw- en financieringsgegevens uit de opgavetekst.",
+      "example_quality_reason": "Typische B02-scoring per groep bedragen, maar vraagt de balans uit bron 6 en de investeringsgegevens uit de opgavetekst.",
       "combination": 1,
       "bloom": "toepassen",
       "scorepunt_bloom": [
@@ -1304,7 +1287,7 @@
       ],
       "confidence": {
         "pattern": "high",
-        "solo": "high",
+        "solo": "medium",
         "route": "high",
         "steps": "high",
         "sources": "high",
@@ -1318,14 +1301,14 @@
       "evidence": {
         "pattern": "Stel de balans per 1 januari 2026 op na investering en financiering (zie informatiebron 6). Vul hiervoor de uitwerkbijlage bij deze vraag in.",
         "solo": "Fitnessapparatuur 42.350 1,21 = 35.000 Te vorderen btw: 0,21 x 35.000 = 7.350",
-        "route": "Vul hiervoor de uitwerkbijlage bij deze vraag in.",
-        "steps": "Liquide middelen: 25.000 – 10.000 = 15.000 Crowdfunding: 42.350 – 10.000 = 32.350 en 153.350",
+        "route": "Fitnessapparatuur (nieuwe vaste activa) ..………. Banklening 45.556 Te vorderen btw ….……..",
+        "steps": "Fitnessapparatuur 42.350 1,21 = 35.000 Te vorderen btw: 0,21 x 35.000 = 7.350",
         "sources": "Stel de balans per 1 januari 2026 op na investering en financiering (zie informatiebron 6).",
-        "noise": "heeft Personal Gym € 10.000 aan liquide middelen beschikbaar,",
+        "noise": "Liquide middelen: 25.000 – 10.000 = 15.000",
         "claim": "Stel de balans per 1 januari 2026 op na investering en financiering (zie informatiebron 6).",
         "new_concept": "Stel de balans per 1 januari 2026 op na investering en financiering (zie informatiebron 6).",
-        "schema": "Vaste activa 96.000 Eigen vermogen 75.444 Fitnessapparatuur (nieuwe vaste activa)",
-        "builds_on": "Stel de balans per 1 januari 2026 op na investering en financiering (zie informatiebron 6)."
+        "schema": "Liquide middelen ………… Crowdfunding …………",
+        "builds_on": "Hiervoor wordt op deze datum eerst een nieuwe balans opgesteld."
       },
       "repaired_fields": []
     },
@@ -1351,7 +1334,7 @@
         22
       ],
       "proposed_pattern": null,
-      "example_quality_reason": "Kort en typisch (berekening + conclusie), maar leunt op het eigen scoremodel en de balans uit vraag 22.",
+      "example_quality_reason": "Heldere stam en typische 'bereken en concludeer', maar leunt op het scoremodel van bron 5 en de balans van vraag 22.",
       "combination": 1,
       "bloom": "toepassen",
       "scorepunt_bloom": [
@@ -1377,15 +1360,17 @@
       "evidence": {
         "pattern": "Welke CCS-waardering zal Personal Gym krijgen voor de solvabiliteit? Licht het antwoord toe met een berekening",
         "solo": "45.556 + 32.350 153.350 x 100% = 50,8%, dus de waardering is voldoende / 5 punten.",
-        "route": "Licht het antwoord toe met een berekening (zie informatiebronnen 5 en 6).",
+        "route": "Welke CCS-waardering zal Personal Gym krijgen voor de solvabiliteit? Licht het antwoord toe met een berekening",
         "steps": "45.556 + 32.350 153.350 x 100% = 50,8%, dus de waardering is voldoende / 5 punten.",
         "sources": "Licht het antwoord toe met een berekening (zie informatiebronnen 5 en 6).",
-        "noise": "waardering voor zekerheden punten zeer goed 40",
+        "noise": "waardering voor zekerheden punten zeer goed 40 goed 30",
         "claim": "Welke CCS-waardering zal Personal Gym krijgen voor de solvabiliteit?",
         "new_concept": "De CCS hangt af van de zekerheden, de solvabiliteit en de afloscapaciteit.",
-        "builds_on": "45.556 + 32.350 153.350 x 100% = 50,8%"
+        "builds_on": "De solvabiliteit wordt op 1 januari 2026 na verwerking van de ontvangst van het krediet berekend."
       },
-      "repaired_fields": []
+      "repaired_fields": [
+        "route"
+      ]
     },
     {
       "exam_id": "vwo-2026-tv1",
@@ -1404,10 +1389,10 @@
       "new_concept": "nee",
       "schema": "voorgestructureerd",
       "builds_on": "nee",
-      "example_quality": "goed",
+      "example_quality": "bruikbaar",
       "builds_on_questions": [],
       "proposed_pattern": null,
-      "example_quality_reason": "Standaard halfjaarlijks annuïteitenschema in een gegeven tabel; zelfstandig met informatiebron 7.",
+      "example_quality_reason": "Heldere stam en typisch aflossingsschema met scoring per groep bedragen, maar het schema van de uitwerkbijlage ontbreekt in de tekst.",
       "combination": 1,
       "bloom": "toepassen",
       "scorepunt_bloom": [
@@ -1433,19 +1418,19 @@
         "new_concept": "high",
         "schema": "high",
         "builds_on": "high",
-        "example_quality": "high"
+        "example_quality": "medium"
       },
       "evidence": {
         "pattern": "Bereken voor het jaar 2026 de interest en aflossing van de banklening (zie informatiebronnen 6 en 7). Vul hiervoor de uitwerkbijlage bij deze vraag in.",
         "solo": "0,03 x 45.556,00 = 1.366,68 en 4.033 – 1.366,68 = 2.666,32",
-        "route": "Vul hiervoor de uitwerkbijlage bij deze vraag in.",
+        "route": "schuld interest aflossing annuïteit eerste halfjaar",
         "steps": "0,03 x 42.889,68 = 1.286,69 en 4.033 – 1.286,69 = 2.746,31",
         "sources": "Bereken voor het jaar 2026 de interest en aflossing van de banklening (zie informatiebronnen 6 en 7).",
         "noise": "Het verwachte interestpercentage per jaar bedraagt 6,2%.",
-        "claim": "Bereken voor het jaar 2026 de interest en aflossing van de banklening",
+        "claim": "Bereken voor het jaar 2026 de interest en aflossing van de banklening (zie informatiebronnen 6 en 7).",
         "new_concept": "De banklening wordt op basis van halfjaarlijkse annuïteiten van € 4.033 terugbetaald.",
-        "schema": "schuld interest aflossing annuïteit eerste halfjaar",
-        "builds_on": "De banklening per 1 januari 2026 bedraagt € 45.556."
+        "schema": "schuld interest aflossing annuïteit eerste halfjaar 45.556,00 1.366,68 2.666,32 4.033 tweede halfjaar",
+        "builds_on": "Gerard en Maya berekenen eerst wat de interest en aflossing voor 2026 van de huidige banklening zal zijn."
       },
       "repaired_fields": []
     },
@@ -1472,7 +1457,7 @@
         24
       ],
       "proposed_pattern": null,
-      "example_quality_reason": "Typische exploitatiebegroting met groepsscoring, maar afhankelijk van vragen 22 en 24 en een lange bron.",
+      "example_quality_reason": "Typische exploitatiebegroting met 4 punten, maar vraagt bron 7, de uitwerkbijlage en de uitkomst van vraag 24; lange context.",
       "combination": 3,
       "bloom": "toepassen",
       "scorepunt_bloom": [
@@ -1507,22 +1492,17 @@
       },
       "evidence": {
         "pattern": "0,12 x ( 96.000 0,64 + 42.350 1,21 ) = 22.200",
-        "solo": "Zowel op de huidige vaste activa als op de investering in nieuwe fitnessapparaten zal 12% per jaar van de aanschafwaarde worden afgeschreven.",
+        "solo": "(0,062 x 32.350 x 0,5) + 0,062 x (32.350 – 32.350 10 ) x 0,5 = 1.905,42",
         "route": "Stel de exploitatiebegroting voor 2026 verder op. Vul hiervoor de uitwerkbijlage bij deze vraag in.",
-        "steps": "(0,062 x 32.350 x 0,5) + 0,062 x (32.350 – 32.350 10 ) x 0,5 = 1.905,42",
+        "steps": "0,12 x ( 96.000 0,64 + 42.350 1,21 ) = 22.200",
         "sources": "In informatiebron 7 en de uitwerkbijlage is deze gedeeltelijk ingevuld.",
         "noise": "De banklening wordt op basis van halfjaarlijkse annuïteiten van € 4.033 terugbetaald.",
         "claim": "Stel de exploitatiebegroting voor 2026 verder op.",
-        "new_concept": "Stel de exploitatiebegroting voor 2026 verder op.",
-        "schema": "In informatiebron 7 en de uitwerkbijlage is deze gedeeltelijk ingevuld.",
+        "new_concept": "Zowel op de huidige vaste activa als op de investering in nieuwe fitnessapparaten zal 12% per jaar van de aanschafwaarde worden afgeschreven.",
+        "schema": "afschrijvingskosten marketingkosten 1.000 interestkosten banklening interestkosten crowdfunding overige kosten 2.000",
         "builds_on": "interestkosten banklening (zie vraag 24)"
       },
-      "repaired_fields": [
-        "pattern",
-        "route",
-        "noise",
-        "schema"
-      ]
+      "repaired_fields": []
     },
     {
       "exam_id": "vwo-2026-tv1",
@@ -1547,7 +1527,7 @@
         25
       ],
       "proposed_pattern": null,
-      "example_quality_reason": "Nieuw kengetal met gegeven formule en conclusie; sterk afhankelijk van eerdere uitkomsten en drie bronnen.",
+      "example_quality_reason": "Heldere stam met gedefinieerd kengetal, maar steunt op uitkomsten van vraag 24 en 25 en drie bronnen.",
       "combination": 0,
       "bloom": null,
       "scorepunt_bloom": [
@@ -1572,16 +1552,18 @@
       },
       "evidence": {
         "pattern": "Welke CCS-waardering zal Personal Gym krijgen voor de afloscapaciteit van de kredietaanvraag? Licht het antwoord toe met een berekening",
-        "solo": "52.641,21 + 22.200 x 100% = 15,88%, dus de waardering is zeer goed /",
-        "route": "Licht het antwoord toe met een berekening (zie informatiebronnen 5 tot en met 7).",
-        "steps": "5.412,63 + 2 x 3.235 52.641,21 + 22.200 x 100% = 15,88%",
+        "solo": "5.412,63 + 2 x 3.235 52.641,21 + 22.200 x 100% = 15,88%, dus de waardering is zeer goed / 40 punten.",
+        "route": "Welke CCS-waardering zal Personal Gym krijgen voor de afloscapaciteit van de kredietaanvraag? Licht het antwoord toe met een berekening",
+        "steps": "5.412,63 + 2 x 3.235 52.641,21 + 22.200 x 100% = 15,88%, dus de waardering is zeer goed / 40 punten.",
         "sources": "Licht het antwoord toe met een berekening (zie informatiebronnen 5 tot en met 7).",
-        "noise": "waardering voor zekerheden punten zeer goed 40",
+        "noise": "waardering voor zekerheden punten zeer goed 40 goed 30",
         "claim": "Welke CCS-waardering zal Personal Gym krijgen voor de afloscapaciteit van de kredietaanvraag?",
         "new_concept": "De afloscapaciteit geeft aan in hoeverre de aflossingen van de leningen uit de cashflow kunnen worden gedaan.",
         "builds_on": "5.412,63 + 2 x 3.235 52.641,21 + 22.200 x 100% = 15,88%"
       },
-      "repaired_fields": []
+      "repaired_fields": [
+        "route"
+      ]
     },
     {
       "exam_id": "vwo-2026-tv1",
@@ -1592,7 +1574,7 @@
       "points": 2,
       "pattern": "P15",
       "solo": "relationeel",
-      "route": "gegeven",
+      "route": "zelf vinden",
       "steps": "2",
       "sources": "één bron",
       "noise": "ja",
@@ -1606,7 +1588,7 @@
         26
       ],
       "proposed_pattern": null,
-      "example_quality_reason": "Typische afsluitende besluitvraag met scoremodel, maar zonder eerdere uitkomsten niet zelfstandig bruikbaar.",
+      "example_quality_reason": "Typische afsluitende besluitvraag met scoremodel, maar zonder de uitkomsten van vraag 23 en 26 niet zelfstandig.",
       "combination": 0,
       "bloom": null,
       "scorepunt_bloom": [
@@ -1625,7 +1607,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
-        "steps": "high",
+        "steps": "medium",
         "sources": "high",
         "noise": "high",
         "claim": "high",
@@ -1640,8 +1622,8 @@
         "route": "Toon met een berekening van de CCS aan of Gerard en Maya de financiering via crowdfunding zullen doorzetten",
         "steps": "65 punten geeft een CCS met de waardering goed en daarmee kunnen ze de investering en financiering doorzetten.",
         "sources": "Toon met een berekening van de CCS aan of Gerard en Maya de financiering via crowdfunding zullen doorzetten (zie informatiebron 5).",
-        "noise": "90 - 100 zeer goed 5,3%",
-        "claim": "Toon met een berekening van de CCS aan of Gerard en Maya de financiering via crowdfunding zullen doorzetten",
+        "noise": "totaal aantal punten CCS interest 90 - 100 zeer goed 5,3%",
+        "claim": "Gerard en Maya zullen de financiering van het investeringsproject via crowdfunding doorzetten als er sprake is van een CCS die goed of zeer goed is.",
         "new_concept": "De CCS hangt af van de zekerheden, de solvabiliteit en de afloscapaciteit.",
         "builds_on": "Het totale aantal punten: 20 (zekerheden) + 5 (solvabiliteit) + 40 (afloscapaciteit) = 65."
       },
@@ -1659,7 +1641,7 @@
       "pattern": "B03",
       "solo": "multistructureel",
       "route": "gegeven",
-      "steps": "2",
+      "steps": "3",
       "sources": "in vraagtekst",
       "noise": "ja",
       "claim": "nee",
@@ -1669,7 +1651,7 @@
       "example_quality": "goed",
       "builds_on_questions": [],
       "proposed_pattern": null,
-      "example_quality_reason": "Heldere stam met 'bereken hiervoor eerst', compacte leningtabel en typische scoring (contante waarde via formuleblad + afrondende stap).",
+      "example_quality_reason": "Heldere stam met gegeven tussenstap en formuleblad, korte zelfstandige context met de leninggegevens in een tabel, typische scoring met foutaftrek.",
       "combination": 2,
       "bloom": "toepassen",
       "scorepunt_bloom": [
@@ -1688,7 +1670,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
-        "steps": "medium",
+        "steps": "high",
         "sources": "high",
         "noise": "high",
         "claim": "high",
@@ -1701,7 +1683,7 @@
         "pattern": "Bereken hiervoor eerst de restschuld van de hypothecaire lening op basis van de contante waarde van de toekomstige annuïteiten (zie formuleblad).",
         "solo": "13.965,82 x 13,417312 = € 187.383,76",
         "route": "Bereken hiervoor eerst de restschuld van de hypothecaire lening op basis van de contante waarde van de toekomstige annuïteiten (zie formuleblad).",
-        "steps": "Kim ontvangt: 756.000 - 187.383,76",
+        "steps": "(a = 1,0375-19 ; r = 1,0375 ; n = 19 S= 13,417312)",
         "sources": "De marktwaarde van de woning bedraagt per 1 februari 2025 € 756.000.",
         "noise": "leenbedrag € 249.000",
         "claim": "Bereken het bedrag dat Kim op 1 februari 2025 van Tarik ontvangt.",
@@ -1719,7 +1701,7 @@
       "pattern": "P08",
       "solo": "relationeel",
       "route": "zelf vinden",
-      "steps": "4+",
+      "steps": "3",
       "sources": "in vraagtekst",
       "noise": "ja",
       "claim": "nee",
@@ -1731,7 +1713,7 @@
         28
       ],
       "proposed_pattern": null,
-      "example_quality_reason": "Typische zelf-te-vinden-route met tarieftabel, maar bouwt voort op de uitkomst van vraag 28 en vraagt de hele context.",
+      "example_quality_reason": "Typische erfbelastingberekening met selectie uit een tarieventabel, maar de vraag leunt op de uitkomst van vraag 28 en een vrij lange context.",
       "combination": 2,
       "bloom": "toepassen",
       "scorepunt_bloom": [
@@ -1755,7 +1737,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
-        "steps": "high",
+        "steps": "medium",
         "sources": "high",
         "noise": "high",
         "claim": "high",
@@ -1766,14 +1748,14 @@
       },
       "evidence": {
         "pattern": "Bereken het deel van de erfenis dat elk van haar dochters ontvangt, na aftrek van de erfbelasting.",
-        "solo": "Het vermogen van Kim bestaat uit het saldo van de spaarrekening per 1 november 2025.",
+        "solo": "vermogen bij overlijden: 284.308,12 x 1,00129 = 287.393,43",
         "route": "Bereken het deel van de erfenis dat elk van haar dochters ontvangt, na aftrek van de erfbelasting. Gebruik hierbij de gegevens in onderstaande tabel.",
         "steps": "128.696,71 – 0,10 x (128.696,71– 25.490) = € 118.376(,04)",
         "sources": "Gebruik hierbij de gegevens in onderstaande tabel.",
         "noise": "schijf 2: € 154.197 en meer",
         "claim": "Bereken het deel van de erfenis dat elk van haar dochters ontvangt, na aftrek van de erfbelasting.",
-        "new_concept": "Gebruik hierbij de gegevens in onderstaande tabel.",
-        "builds_on": "Als een kandidaat met een zelfverzonnen vermogen begint omdat opgave 28 niet is gemaakt, kunnen alle scorepunten worden behaald."
+        "new_concept": "Vrijstellingen en tarieven erfbelasting 2025",
+        "builds_on": "Op 1 februari 2025 opent zij een spaarrekening waar zij het bedrag dat is verkregen uit de scheiding op zet."
       },
       "repaired_fields": []
     }
