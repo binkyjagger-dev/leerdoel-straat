@@ -2170,6 +2170,79 @@
       "raised_by": "intake",
       "supersedes": null,
       "scope": null
+    },
+    {
+      "id": "bedrijfsecon-069",
+      "question": "Telt de conclusie na een berekening (patroon P09, 'toon met een berekening aan of') als een aparte stap bij de knop steps?",
+      "context": "Open sinds ronde 1. Labellers telden bij O1-V2 en O3-V8 de conclusie als stap; steps 3 staat na ronde 3 op 48,5 % vs 25 %. bedrijfsecon-066 regelt alleen parallelle onderdelen. (Betreft: O1-V2, O3-V8, steps. Impact: Labeller-instructie (specs/26) en planner; herlabelen O1-V2, O3-V8; examenbanklabels met P09 kunnen verschuiven.)",
+      "options": [
+        "Nee: de conclusie is het oordeel van P09, geen rekenschakel",
+        "Ja: elke voortbouwende schakel, ook de conclusie, telt; de planner plant steps hoger"
+      ],
+      "proposed": "Nee: de conclusie telt niet als stap",
+      "impact": "medium",
+      "applies_to": [
+        "item-labeller",
+        "planner"
+      ],
+      "affects_units": null,
+      "status": "open",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null,
+      "source_run": "20261115-1230-toets-bedrijfseconomie",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": null
+    },
+    {
+      "id": "bedrijfsecon-070",
+      "question": "Accepteert de docent knop- en Bloomafwijkingen die itemherstel niet zonder planwijziging oplost (toepassen 66,7 % vs 61,5 %; ruis ja 57,6 % vs 45 %; steps 3 48,5 % vs 25 %; solo)?",
+      "context": "Na de laatste repairronde. O3-V8 scorepunt 2 plant analyseren op toepassen-criterium F2.30.4-01-c; de stam schrijft de redenering nu voor, dus toepassen. O1-V2 heeft altijd ruis ja. Itemherstel is uitgeput. (Betreft: O1-V2, O3-V8, noise, bloom, steps, solo. Impact: Alleen deze toets; bepaalt of O3-V8 met de huidige tekst naar de leerling kan.)",
+      "options": [
+        "Accepteren en op de twijfellijst zetten",
+        "Blauwdruk aanpassen (O3-V8 scorepunt 2 toepassen; O1-V2 ruis ja), rest accepteren",
+        "Opgave O3-V8 herontwerpen met echte analyse (nieuwe run)"
+      ],
+      "proposed": "Blauwdruk aanpassen voor O3-V8 en O1-V2 (Bloom en ruis vallen dan binnen het plan), steps en solo accepteren met vermelding op de twijfellijst",
+      "impact": "low",
+      "applies_to": [
+        "planner",
+        "verifier"
+      ],
+      "affects_units": null,
+      "status": "open",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null,
+      "source_run": "20261115-1230-toets-bedrijfseconomie",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": null
+    },
+    {
+      "id": "bedrijfsecon-071",
+      "question": "Is een rekenketen waarin de leerling zelf de volgorde vindt en elke uitkomst in de volgende stap gebruikt (kostprijs, tarief exclusief btw, tarief inclusief btw) SOLO relationeel of multistructureel?",
+      "context": "Solo multistructureel 78,8 % vs 60 %, relationeel 18,2 % vs 33 %. De planner plant zulke ketens relationeel; labellers kiezen multistructureel (O1-V1, O3-V8, O4-V11). (Betreft: O1-V1, O3-V8, O4-V11, solo. Impact: Labeller-instructie (specs/26) en planner; solo-aandelen in referentieprofiel en blauwdruk; voor deze toets alleen acceptatie nodig.)",
+      "options": [
+        "Relationeel: de leerling integreert de gegevens tot een samenhangende structuur",
+        "Multistructureel: bekende procedures na elkaar; relationeel alleen bij zelf verband leggen of afwegen"
+      ],
+      "proposed": "Multistructureel, tenzij de leerling zelf een verband tussen begrippen moet leggen; de planner plant rekenketens dan multistructureel",
+      "impact": "medium",
+      "applies_to": [
+        "item-labeller",
+        "planner"
+      ],
+      "affects_units": null,
+      "status": "open",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null,
+      "source_run": "20261115-1230-toets-bedrijfseconomie",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": null
     }
   ]
 }

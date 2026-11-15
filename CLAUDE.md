@@ -20,7 +20,7 @@ report + doubt list.
 
 ## Layout
 ```
-specs/            00–06 leerdoel-straat (/generate) · 10–15 methode-straat (/koppel) · 20–25 examen-straat (/examen; built and first run 2026-10-27; plan: docs/plan-examen-straat.md) · 26 examen labels (E7) · 30–35 toets-straat (/toets; specified 2026-11-13; build steps 1–6 done 2026-11-14: schemas, catalogue, E7 labels + profile, order form, blueprint, writing and checks, export and toetsbank (T0–T6); first real run pending; open build questions: docs/bouwvragen-toets.md; plan: docs/plan-toets-straat.md)
+specs/            00–06 leerdoel-straat (/generate) · 10–15 methode-straat (/koppel) · 20–25 examen-straat (/examen; built and first run 2026-10-27; plan: docs/plan-examen-straat.md) · 26 examen labels (E7) · 30–35 toets-straat (/toets; specified 2026-11-13; build steps 1–6 done 2026-11-14: schemas, catalogue, E7 labels + profile, order form, blueprint, writing and checks, export and toetsbank (T0–T6); real runs 2026-11-14 and 2026-11-15; open build questions: docs/bouwvragen-toets.md; plan: docs/plan-toets-straat.md)
 data/toets/       knobs.json patterns_base.json (toets-straat rule files; seed 2026-11)
 subjects/<vak>/toets/  patterns.json (subject layer) conventions.md contexten.md (human) seed_profile.json sjablonen/ — see specs/31
 subjects/<vak>/examenbank/labels/ + profiel/  (E7) pattern/knob labels per exam question + reference profile — specs/26
@@ -113,6 +113,17 @@ python3 tests/run_toets_fixture.py                   # exercise toets-straat ste
 - `overlap_check.py` matches number-only shingles (writers put words between numbers to pass); IT3 does not match "35%" against 0.35; BE has no `formuleblad.md` (writers must put any formula in the stem); `solver_compare` reports "mismatch" when the cv's final is a derived number (10 pp) the solver states as its parts (35 % vs 45 %).
 - Solver ambiguity notes are the best should-findings: unstated btw basis, whether an item is already in a given result, rounding. Writers should state these in the stem by default.
 - Cost: ~40 agent calls (1 planner, 5 writers, 5 solvers, 10 labellers, 1 R, 2 verifiers, 2 repair writers, 6 T4 reruns, …).
+
+## Lessons from toets run 2 (Toets Regulier Periode 2 26_27 5 VWO, from a teacher's order file, 2026-11-15)
+- First run from a filled-in `toetsopdracht.json` (form + template): 5 opgaven, 16 vragen, 33 p, matrix exact (11 groups), Bloom mix "zoals eindexamen", both pauses Akkoord without changes. Verifier round 1 12/16 pass, round 2 11/13, round 3 6/7; final 15/16. Two repair rounds were needed (run 1 needed one).
+- Bloom mix taken from the reference must be built from the exact reference points (12/25/64/3 of 104), not rounded percentages: the rounded mix summed to 0.999 and failed O3.
+- Knobs left outside tolerance are again labeller-vs-plan, not item faults: solo multistructureel 79 % vs 60 % (labellers call a calculation chain multistructureel, not relationeel), steps 3 48 % vs 25 % (the blueprint already planned 33 %, and labellers count the concluding step), noise ja 58 % vs 45 % (the planner gave O1-V2 a table shared with V1). One scorepunt planned analyseren became toepassen (O3-V8) and item repair cannot raise it; analyseren ended at 0 %. Three open decisions (does a conclusion count as a step; accept or replan such deviations; SOLO level of a calculation chain) are for the next intake. `blueprint_check` should warn when planned shares already sit outside tolerance.
+- The verifier's `proposed_decisions` do not fit the `decisions.py` schema (`applies_to` held vraag ids/knob names, `impact` free text). Mapped by hand into `context` + roles/high-medium-low, raw kept as `35_proposed_decisions.verifier_raw.json`. Fix the verifier prompt or add a mapping script.
+- Blindness leak: labellers can read `uses_data`/`noise_data` in `33_items/`; they should get only `34_student/` and the cv fields they need.
+- Writers still put words between numbers to pass `overlap_check.py` (as in run 1).
+- `toetsbank_add.py --history` needs `run.json`: write it in T0 before the history call.
+- No LibreOffice on this machine: no PDF, so the rendered layout (4-column uitwerkbijlage table, figure axes without thousands separators, a Markdown table in a bron) must be checked in Word by the teacher. Figure axes should use Dutch thousands separators.
+- `solver_compare` mismatch on O3-V9 was a cv illustration number, not an error (same shape as run 1's derived-number mismatch).
 
 ## Lessons from E7 run 1 (bedrijfseconomie 2025-I + 2026-I, 2026-11-14)
 - 59 questions labelled by 24 labellers (A/B per opgave), plus 7 R decisions and 1 relaunch after LB4; after R 566 fields high, 24 medium, 0 disputed.
