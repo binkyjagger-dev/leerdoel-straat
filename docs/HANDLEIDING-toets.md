@@ -57,6 +57,38 @@ Bedrijfseconomie dient hieronder als voorbeeld; voor een ander vak vervang je da
 
 Tussendoor kan de straat je een vraag stellen, bijvoorbeeld over een besluit dat nog niet genomen is. Je antwoord geldt dan ook voor volgende toetsen.
 
+## Sneller werken met een sjabloon
+
+Een sjabloon bewaart de instellingen die bij elke toets hetzelfde zijn. Per toets vul je dan alleen nog in wat anders is.
+
+| In het sjabloon (blijft gelijk) | Per toets invullen |
+|---|---|
+| leerjaar | titel |
+| aantal opgaven en vragen | toetsmatrijs: punten per leerdoel van deze periode |
+| de knoppen (hoe zwaar de vragen zijn) | Bloom-mix (de straat stelt *Zoals eindexamen* voor) |
+| | contexten die je wilt vermijden of vastleggen |
+| | opgaven die je hergebruikt uit de toetsbank |
+
+De Bloom-mix staat bewust niet in het sjabloon. Welke niveaus mogelijk zijn, hangt af van de leerdoelen in de matrijs, en die verschillen per periode.
+
+**Het sjabloon voor 5 VWO bedrijfseconomie** heet `5vwo-toets` en staat in `subjects\bedrijfseconomie\toets\sjablonen\`. Het bevat 5 opgaven, 16 vragen en de knoppen van de proeftoets van periode 2: rekenen iets zwaarder, verder iets lichter dan het eindexamen.
+
+Zo gebruik je het:
+
+1. Maak het formulier: `/toets --formulier bedrijfseconomie`.
+2. Kies bovenaan bij *Sjabloon laden* de optie **5vwo-toets**. Het leerjaar, de aantallen en de knoppen staan nu ingevuld.
+3. Vul de titel en de punten per leerdoel in.
+4. Pas eventueel een knop aan voor deze ene toets. Het sjabloon zelf verandert daardoor niet.
+5. Klik op *Download toetsopdracht.json* en ga verder bij stap 5 hierboven.
+
+Zo maak je een nieuw sjabloon:
+
+1. Stel het formulier in zoals je het vaker wilt gebruiken.
+2. Typ onderaan een *Sjabloonnaam*, bijvoorbeeld `4vwo-toets`, en klik op **Opslaan als sjabloon**.
+3. Zet het gedownloade bestand in `subjects\<vak>\toets\sjablonen\` en maak het formulier opnieuw. Vanaf dan staat het sjabloon in de keuzelijst.
+
+Een sjabloon kun je ook direct laden met de bestandsknop naast de keuzelijst, zonder het in de map te zetten.
+
 ## Wat je met het resultaat doet
 
 Begin altijd met de twijfellijst. Pas daarna de Word-bestanden aan en zet ze in je eigen huisstijl.

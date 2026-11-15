@@ -1,0 +1,50 @@
+{
+  "subject": "bedrijfseconomie",
+  "name": "5vwo-toets",
+  "level": "5vwo",
+  "n_opgaven": 5,
+  "n_vragen": 16,
+  "duration_minutes": null,
+  "knobs": {
+    "pattern": "vrij",
+    "solo": {
+      "unistructureel": 0.073,
+      "multistructureel": 0.692,
+      "relationeel": 0.235
+    },
+    "route": {
+      "gegeven": 0.668,
+      "zelf vinden": 0.332
+    },
+    "steps": {
+      "1": 0.185,
+      "2": 0.25,
+      "3": 0.445,
+      "4+": 0.12
+    },
+    "sources": {
+      "in vraagtekst": 0.588,
+      "één bron": 0.312,
+      "meerdere bronnen": 0.1
+    },
+    "noise": {
+      "nee": 0.547,
+      "ja": 0.453
+    },
+    "claim": {
+      "nee": 0.96,
+      "ja": 0.04
+    },
+    "new_concept": {
+      "nee": 0.93,
+      "ja": 0.07
+    },
+    "schema": {
+      "voorgestructureerd": 1.0
+    },
+    "builds_on": {
+      "nee": 0.909,
+      "ja": 0.091
+    }
+  }
+}
