@@ -59,6 +59,66 @@
       ],
       "level": "5vwo",
       "date": "2026-11-14"
+    },
+    {
+      "toets_id": "20261115-1230-toets-bedrijfseconomie",
+      "opgave_id": "O1",
+      "title": "Rijschool Vlot",
+      "context_tags": [
+        "rijopleiding",
+        "rijschool",
+        "lesuren"
+      ],
+      "level": "5vwo",
+      "date": "2026-11-15"
+    },
+    {
+      "toets_id": "20261115-1230-toets-bedrijfseconomie",
+      "opgave_id": "O2",
+      "title": "Lunchroom De Zuidkant",
+      "context_tags": [
+        "horeca",
+        "lunchroom",
+        "btw-aangifte"
+      ],
+      "level": "5vwo",
+      "date": "2026-11-15"
+    },
+    {
+      "toets_id": "20261115-1230-toets-bedrijfseconomie",
+      "opgave_id": "O3",
+      "title": "Escaperoom Het Raadsel",
+      "context_tags": [
+        "vrijetijdsbesteding",
+        "escaperoom",
+        "break-evenanalyse"
+      ],
+      "level": "5vwo",
+      "date": "2026-11-15"
+    },
+    {
+      "toets_id": "20261115-1230-toets-bedrijfseconomie",
+      "opgave_id": "O4",
+      "title": "Verhuisbedrijf Van Dijk",
+      "context_tags": [
+        "transport",
+        "verhuisbedrijf",
+        "verhuiswagens"
+      ],
+      "level": "5vwo",
+      "date": "2026-11-15"
+    },
+    {
+      "toets_id": "20261115-1230-toets-bedrijfseconomie",
+      "opgave_id": "O5",
+      "title": "Kapsalon Knipkunst",
+      "context_tags": [
+        "persoonlijke verzorging",
+        "kapsalon",
+        "eenmanszaak"
+      ],
+      "level": "5vwo",
+      "date": "2026-11-15"
     }
   ]
 }

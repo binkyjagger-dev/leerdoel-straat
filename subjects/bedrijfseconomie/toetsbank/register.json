@@ -13,6 +13,17 @@
       "n_opgaven": 5,
       "n_vragen": 16,
       "reference": null
+    },
+    {
+      "toets_id": "20261115-1230-toets-bedrijfseconomie",
+      "title": "Toets Regulier Periode 2 26_27_VWO5",
+      "level": "5vwo",
+      "run_id": "20261115-1230-toets-bedrijfseconomie",
+      "created_at": "2026-11-15",
+      "max_score": 33,
+      "n_opgaven": 5,
+      "n_vragen": 16,
+      "reference": "bank-2-examens"
     }
   ]
 }
