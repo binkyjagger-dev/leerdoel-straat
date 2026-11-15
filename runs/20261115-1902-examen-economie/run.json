@@ -1,0 +1,31 @@
+{
+  "run_id": "20261115-1902-examen-economie",
+  "subject": "economie",
+  "criteria_run": "20261012-2220-economie-vwo-2026-run2",
+  "exams": [
+    "vwo-2025-tv1",
+    "vwo-2025-tv2",
+    "vwo-2026-tv1"
+  ],
+  "judge_batch": 4,
+  "max_repair_rounds": 1,
+  "status": "done",
+  "started_at": "2026-11-15T19:02:05+01:00",
+  "corrections": {
+    "vwo-2025-tv1": [
+      "input/examens-economie-vwo/2025 TV1/vw-1022-a-25-1-o-e.pdf (erratum v27)",
+      "input/examens-economie-vwo/2025 TV1/vw-1022-a-25-1-c-a1.pdf (aanvulling cv v11, v12, v17)"
+    ],
+    "vwo-2025-tv2": [
+      "input/examens-economie-vwo/2025 TV2/vw-1022-a-25-2-o-e.pdf (erratum v3)"
+    ],
+    "vwo-2026-tv1": [
+      "input/examens-economie-vwo/2026 TV1/vw-1022-a-26-1-o-e.pdf (erratum v21, spelling)"
+    ]
+  },
+  "notes": [
+    "exam_text.py: opgave heading with title on the same line (economie) now parsed, 2026-11-15",
+    "vwo-2025-tv1 has no uitwerkbijlage in the input"
+  ],
+  "finished_at": "2026-11-15T22:01:49+01:00"
+}

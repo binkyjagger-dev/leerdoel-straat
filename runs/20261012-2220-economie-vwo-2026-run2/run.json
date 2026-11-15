@@ -18,5 +18,13 @@
   "status": "done",
   "started_at": "2026-10-12T20:20:00Z",
   "previous_run": "20261011-1150-economie-vwo-2026",
-  "finished_at": "2026-10-12T22:30:00Z"
+  "finished_at": "2026-10-12T22:30:00Z",
+  "restored": {
+    "at": "2026-11-15",
+    "files": [
+      "01_source_units.json (re-ingest, _reingest/; 126 leaves = CSV unit_ids)",
+      "04_groups_student.json (from export CSV)"
+    ],
+    "note": "restored for /examen economie"
+  }
 }

@@ -1,0 +1,414 @@
+{
+  "subject": "economie",
+  "source": "bank-labels",
+  "label": "referentie: 3 examens (2025-I, 2025-II, 2026-I)",
+  "note": null,
+  "n_exams": 3,
+  "n_questions": 87,
+  "points": 177,
+  "by": "points",
+  "pooled": {
+    "pattern": {
+      "P01": {
+        "points": 36.0,
+        "share": 0.203
+      },
+      "P02": {
+        "points": 18.0,
+        "share": 0.102
+      },
+      "P03": {
+        "points": 16.0,
+        "share": 0.09
+      },
+      "P04": {
+        "points": 19.0,
+        "share": 0.107
+      },
+      "P05": {
+        "points": 9.0,
+        "share": 0.051
+      },
+      "P06": {
+        "points": 4.0,
+        "share": 0.023
+      },
+      "P08": {
+        "points": 44.0,
+        "share": 0.249
+      },
+      "P09": {
+        "points": 3.0,
+        "share": 0.017
+      },
+      "P12": {
+        "points": 2.0,
+        "share": 0.011
+      },
+      "P10": {
+        "points": 10.5,
+        "share": 0.059
+      },
+      "P11": {
+        "points": 8.0,
+        "share": 0.045
+      },
+      "P13": {
+        "points": 7.5,
+        "share": 0.042
+      }
+    },
+    "bloom": {
+      "begrijpen": {
+        "points": 84.0,
+        "share": 0.488
+      },
+      "toepassen": {
+        "points": 87.0,
+        "share": 0.506
+      },
+      "analyseren": {
+        "points": 1.0,
+        "share": 0.006
+      }
+    },
+    "solo": {
+      "unistructureel": {
+        "points": 7.0,
+        "share": 0.04
+      },
+      "multistructureel": {
+        "points": 102.0,
+        "share": 0.576
+      },
+      "relationeel": {
+        "points": 68.0,
+        "share": 0.384
+      }
+    },
+    "route": {
+      "zelf vinden": {
+        "points": 47.0,
+        "share": 1.0
+      }
+    },
+    "steps": {
+      "1": {
+        "points": 7.0,
+        "share": 0.04
+      },
+      "2": {
+        "points": 115.0,
+        "share": 0.65
+      },
+      "3": {
+        "points": 39.0,
+        "share": 0.22
+      },
+      "4+": {
+        "points": 16.0,
+        "share": 0.09
+      }
+    },
+    "sources": {
+      "in vraagtekst": {
+        "points": 177.0,
+        "share": 1.0
+      }
+    },
+    "noise": {
+      "nee": {
+        "points": 132.0,
+        "share": 0.746
+      },
+      "ja": {
+        "points": 45.0,
+        "share": 0.254
+      }
+    },
+    "claim": {
+      "nee": {
+        "points": 157.0,
+        "share": 0.887
+      },
+      "ja": {
+        "points": 20.0,
+        "share": 0.113
+      }
+    },
+    "new_concept": {
+      "nee": {
+        "points": 153.0,
+        "share": 0.864
+      },
+      "ja": {
+        "points": 24.0,
+        "share": 0.136
+      }
+    },
+    "schema": {},
+    "builds_on": {
+      "nee": {
+        "points": 140.0,
+        "share": 0.986
+      },
+      "ja": {
+        "points": 2.0,
+        "share": 0.014
+      }
+    },
+    "combination": {
+      "1": {
+        "points": 107.0,
+        "share": 0.605
+      },
+      "2": {
+        "points": 64.0,
+        "share": 0.362
+      },
+      "3": {
+        "points": 6.0,
+        "share": 0.034
+      }
+    }
+  },
+  "excluded": {
+    "bloom": {
+      "unlinked": 5.0
+    },
+    "route": {
+      "not_applicable": 130.0
+    },
+    "schema": {
+      "not_applicable": 177.0
+    },
+    "builds_on": {
+      "not_applicable": 35.0
+    }
+  },
+  "unknown_knobs": [],
+  "exams": [
+    {
+      "exam_id": "vwo-2025-tv1",
+      "points": 59,
+      "n_questions": 29,
+      "knobs": {
+        "pattern": {
+          "P01": 12.0,
+          "P02": 6.0,
+          "P03": 6.0,
+          "P04": 7.0,
+          "P08": 14.0,
+          "P09": 3.0,
+          "P10": 3.0,
+          "P11": 4.0,
+          "P13": 4.0
+        },
+        "bloom": {
+          "begrijpen": 27.0,
+          "toepassen": 27.0,
+          "analyseren": 1.0
+        },
+        "solo": {
+          "unistructureel": 1.0,
+          "multistructureel": 27.0,
+          "relationeel": 31.0
+        },
+        "route": {
+          "zelf vinden": 17.0
+        },
+        "steps": {
+          "1": 3.0,
+          "2": 35.0,
+          "3": 14.0,
+          "4+": 7.0
+        },
+        "sources": {
+          "in vraagtekst": 59.0
+        },
+        "noise": {
+          "nee": 43.0,
+          "ja": 16.0
+        },
+        "claim": {
+          "nee": 51.0,
+          "ja": 8.0
+        },
+        "new_concept": {
+          "nee": 54.0,
+          "ja": 5.0
+        },
+        "schema": {},
+        "builds_on": {
+          "nee": 48.0
+        },
+        "combination": {
+          "1": 40.0,
+          "2": 19.0
+        }
+      },
+      "excluded": {
+        "bloom": {
+          "unlinked": 4.0
+        },
+        "route": {
+          "not_applicable": 42.0
+        },
+        "schema": {
+          "not_applicable": 59.0
+        },
+        "builds_on": {
+          "not_applicable": 11.0
+        }
+      }
+    },
+    {
+      "exam_id": "vwo-2025-tv2",
+      "points": 59,
+      "n_questions": 29,
+      "knobs": {
+        "pattern": {
+          "P01": 14.0,
+          "P02": 8.0,
+          "P03": 4.0,
+          "P04": 8.0,
+          "P05": 4.0,
+          "P08": 13.0,
+          "P10": 4.0,
+          "P11": 2.0,
+          "P13": 2.0
+        },
+        "bloom": {
+          "begrijpen": 30.0,
+          "toepassen": 29.0
+        },
+        "solo": {
+          "unistructureel": 3.0,
+          "multistructureel": 37.0,
+          "relationeel": 19.0
+        },
+        "route": {
+          "zelf vinden": 13.0
+        },
+        "steps": {
+          "1": 1.0,
+          "2": 37.0,
+          "3": 15.0,
+          "4+": 6.0
+        },
+        "sources": {
+          "in vraagtekst": 59.0
+        },
+        "noise": {
+          "nee": 38.0,
+          "ja": 21.0
+        },
+        "claim": {
+          "nee": 55.0,
+          "ja": 4.0
+        },
+        "new_concept": {
+          "nee": 46.0,
+          "ja": 13.0
+        },
+        "schema": {},
+        "builds_on": {
+          "nee": 45.0,
+          "ja": 2.0
+        },
+        "combination": {
+          "1": 33.0,
+          "2": 23.0,
+          "3": 3.0
+        }
+      },
+      "excluded": {
+        "route": {
+          "not_applicable": 46.0
+        },
+        "schema": {
+          "not_applicable": 59.0
+        },
+        "builds_on": {
+          "not_applicable": 12.0
+        }
+      }
+    },
+    {
+      "exam_id": "vwo-2026-tv1",
+      "points": 59,
+      "n_questions": 29,
+      "knobs": {
+        "pattern": {
+          "P01": 10.0,
+          "P02": 4.0,
+          "P03": 6.0,
+          "P04": 4.0,
+          "P05": 5.0,
+          "P06": 4.0,
+          "P08": 17.0,
+          "P12": 2.0,
+          "P10": 3.5,
+          "P11": 2.0,
+          "P13": 1.5
+        },
+        "bloom": {
+          "begrijpen": 27.0,
+          "toepassen": 31.0
+        },
+        "solo": {
+          "unistructureel": 3.0,
+          "multistructureel": 38.0,
+          "relationeel": 18.0
+        },
+        "route": {
+          "zelf vinden": 17.0
+        },
+        "steps": {
+          "1": 3.0,
+          "2": 43.0,
+          "3": 10.0,
+          "4+": 3.0
+        },
+        "sources": {
+          "in vraagtekst": 59.0
+        },
+        "noise": {
+          "nee": 51.0,
+          "ja": 8.0
+        },
+        "claim": {
+          "nee": 51.0,
+          "ja": 8.0
+        },
+        "new_concept": {
+          "nee": 53.0,
+          "ja": 6.0
+        },
+        "schema": {},
+        "builds_on": {
+          "nee": 47.0
+        },
+        "combination": {
+          "1": 34.0,
+          "2": 22.0,
+          "3": 3.0
+        }
+      },
+      "excluded": {
+        "bloom": {
+          "unlinked": 1.0
+        },
+        "route": {
+          "not_applicable": 42.0
+        },
+        "schema": {
+          "not_applicable": 59.0
+        },
+        "builds_on": {
+          "not_applicable": 12.0
+        }
+      }
+    }
+  ]
+}

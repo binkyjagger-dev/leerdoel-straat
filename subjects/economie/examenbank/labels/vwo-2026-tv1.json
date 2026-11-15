@@ -1,0 +1,1769 @@
+{
+  "exam_id": "vwo-2026-tv1",
+  "criteria_run": "20261012-2220-economie-vwo-2026-run2",
+  "run_id": "20261115-1902-examen-economie",
+  "questions": [
+    {
+      "exam_id": "vwo-2026-tv1",
+      "question_id": "vwo-2026-tv1-q1",
+      "question_number": 1,
+      "opgave_id": "vwo-2026-tv1-o1",
+      "first_of_opgave": true,
+      "points": 2,
+      "pattern": "P06",
+      "solo": "multistructureel",
+      "route": null,
+      "steps": "2",
+      "sources": "in vraagtekst",
+      "noise": "nee",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": null,
+      "example_quality": "goed",
+      "builds_on_questions": [],
+      "proposed_pattern": null,
+      "example_quality_reason": "Korte, zelfstandige stam zonder gegevens; typische 1+1-scoring (voorbeeld + uitleg).",
+      "combination": 1,
+      "bloom": "begrijpen",
+      "scorepunt_bloom": [
+        {
+          "points": 1,
+          "bloom": "begrijpen",
+          "group_id": "F2.4-01"
+        },
+        {
+          "points": 1,
+          "bloom": "begrijpen",
+          "group_id": "F2.4-01"
+        }
+      ],
+      "confidence": {
+        "pattern": "high",
+        "solo": "high",
+        "route": "high",
+        "steps": "high",
+        "sources": "high",
+        "noise": "high",
+        "claim": "high",
+        "new_concept": "high",
+        "schema": "high",
+        "builds_on": "high",
+        "example_quality": "high"
+      },
+      "evidence": {
+        "pattern": "Ga in je antwoord in op een voorbeeld van maatschappelijke kosten van het gebruik van diesel.",
+        "solo": "een voorbeeld van maatschappelijke kosten.",
+        "steps": "Deze kosten worden betaald door de maatschappij en niet door de gebruikers zelf / zijn niet in de prijs opgenomen.",
+        "sources": "Leg uit dat het gebruik van diesel leidt tot maatschappelijke kosten.",
+        "noise": "Leg uit dat het gebruik van diesel leidt tot maatschappelijke kosten.",
+        "claim": "Leg uit dat het gebruik van diesel leidt tot maatschappelijke kosten.",
+        "new_concept": "een uitleg van het ontstaan van maatschappelijke kosten."
+      },
+      "repaired_fields": []
+    },
+    {
+      "exam_id": "vwo-2026-tv1",
+      "question_id": "vwo-2026-tv1-q2",
+      "question_number": 2,
+      "opgave_id": "vwo-2026-tv1-o1",
+      "first_of_opgave": false,
+      "points": 2,
+      "pattern": "P08",
+      "solo": "multistructureel",
+      "route": "zelf vinden",
+      "steps": "3",
+      "sources": "in vraagtekst",
+      "noise": "ja",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": "nee",
+      "example_quality": "goed",
+      "builds_on_questions": [],
+      "proposed_pattern": null,
+      "example_quality_reason": "Eenregelige stam, alle gegevens in de figuurvergelijkingen en de contextzin; typische 2-puntsberekening met zelf te vinden route.",
+      "combination": 1,
+      "bloom": "toepassen",
+      "scorepunt_bloom": [
+        {
+          "points": 1,
+          "bloom": "toepassen",
+          "group_id": "D1.16-01"
+        },
+        {
+          "points": 1,
+          "bloom": "toepassen",
+          "group_id": "D1.16-01"
+        }
+      ],
+      "confidence": {
+        "pattern": "high",
+        "solo": "high",
+        "route": "high",
+        "steps": "high",
+        "sources": "high",
+        "noise": "high",
+        "claim": "high",
+        "new_concept": "high",
+        "schema": "high",
+        "builds_on": "high",
+        "example_quality": "high"
+      },
+      "evidence": {
+        "pattern": "Bereken de totale vaste (constante) kosten.",
+        "solo": "TW = TO – TK",
+        "route": "Bereken de totale vaste (constante) kosten.",
+        "steps": "1.218.000 – (336.000 + TCK) = 690.000",
+        "sources": "diesel bij een prijs van 58.000 roepia per ticket. De winst is dan 690.000",
+        "noise": "= 24 (x 1.000)",
+        "claim": "Bereken de totale vaste (constante) kosten.",
+        "new_concept": "Bereken de totale vaste (constante) kosten.",
+        "builds_on": "Bereken de totale vaste (constante) kosten."
+      },
+      "repaired_fields": []
+    },
+    {
+      "exam_id": "vwo-2026-tv1",
+      "question_id": "vwo-2026-tv1-q3",
+      "question_number": 3,
+      "opgave_id": "vwo-2026-tv1-o1",
+      "first_of_opgave": false,
+      "points": 3,
+      "pattern": "P08",
+      "solo": "multistructureel",
+      "route": "zelf vinden",
+      "steps": "4+",
+      "sources": "in vraagtekst",
+      "noise": "ja",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": "nee",
+      "example_quality": "goed",
+      "builds_on_questions": [],
+      "proposed_pattern": null,
+      "example_quality_reason": "Korte stam, typische monopolieberekening (MO = MK) met 1 scorepunt per tussenstap; de figuurvergelijkingen staan als tekst.",
+      "combination": 1,
+      "bloom": "toepassen",
+      "scorepunt_bloom": [
+        {
+          "points": 1,
+          "bloom": "toepassen",
+          "group_id": "D2.2-02"
+        },
+        {
+          "points": 1,
+          "bloom": "toepassen",
+          "group_id": "D2.2-02"
+        },
+        {
+          "points": 1,
+          "bloom": "toepassen",
+          "group_id": "D2.2-02"
+        }
+      ],
+      "confidence": {
+        "pattern": "high",
+        "solo": "high",
+        "route": "high",
+        "steps": "high",
+        "sources": "high",
+        "noise": "high",
+        "claim": "high",
+        "new_concept": "high",
+        "schema": "high",
+        "builds_on": "high",
+        "example_quality": "high"
+      },
+      "evidence": {
+        "pattern": "Bereken de procentuele prijsstijging van een ticket door de keuze voor biobrandstof.",
+        "solo": "een afleiding van de MO-functie.",
+        "route": "Bereken de procentuele prijsstijging van een ticket door de keuze voor biobrandstof.",
+        "steps": "een berekening van de afzet bij maximale winst.",
+        "sources": "= 24 (x 1.000)",
+        "noise": "De winst is dan 690.000",
+        "claim": "Bereken de procentuele prijsstijging van een ticket door de keuze voor biobrandstof.",
+        "new_concept": "Bereken de procentuele prijsstijging van een ticket door de keuze voor biobrandstof.",
+        "builds_on": "De directeur kiest vanwege sociale normen voor biobrandstof."
+      },
+      "repaired_fields": []
+    },
+    {
+      "exam_id": "vwo-2026-tv1",
+      "question_id": "vwo-2026-tv1-q4",
+      "question_number": 4,
+      "opgave_id": "vwo-2026-tv1-o1",
+      "first_of_opgave": false,
+      "points": 2,
+      "pattern": "P10",
+      "solo": "multistructureel",
+      "route": null,
+      "steps": "2",
+      "sources": "in vraagtekst",
+      "noise": "nee",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": "nee",
+      "example_quality": "bruikbaar",
+      "builds_on_questions": [],
+      "proposed_pattern": null,
+      "example_quality_reason": "Typische arceervraag met 1 punt per vlak, maar zonder de figuur (beeld) beperkt bruikbaar als tekstvoorbeeld.",
+      "combination": 1,
+      "bloom": "begrijpen",
+      "scorepunt_bloom": [
+        {
+          "points": 1,
+          "bloom": "begrijpen",
+          "group_id": "D3.3-01"
+        },
+        {
+          "points": 1,
+          "bloom": "begrijpen",
+          "group_id": "D3.3-01"
+        }
+      ],
+      "confidence": {
+        "pattern": "high",
+        "solo": "high",
+        "route": "high",
+        "steps": "high",
+        "sources": "high",
+        "noise": "high",
+        "claim": "high",
+        "new_concept": "high",
+        "schema": "high",
+        "builds_on": "high",
+        "example_quality": "high"
+      },
+      "evidence": {
+        "pattern": "Arceer in figuur 1 van de uitwerkbijlage de vlakken die deze verandering van het totale surplus bij winstmaximalisatie weergeven.",
+        "solo": "het arceren van de verandering als gevolg van de andere prijs.",
+        "steps": "het arceren van de verandering als gevolg van de andere afzet.",
+        "sources": "Arceer in figuur 1 van de uitwerkbijlage de vlakken",
+        "noise": "Als gevolg van de keuze voor biobrandstof verandert het totale surplus bij winstmaximalisatie.",
+        "claim": "Arceer in figuur 1 van de uitwerkbijlage de vlakken die deze verandering van het totale surplus bij winstmaximalisatie weergeven.",
+        "new_concept": "het arceren van de verandering als gevolg van de andere prijs.",
+        "builds_on": "Als gevolg van de keuze voor biobrandstof verandert het totale surplus bij winstmaximalisatie."
+      },
+      "repaired_fields": []
+    },
+    {
+      "exam_id": "vwo-2026-tv1",
+      "question_id": "vwo-2026-tv1-q5",
+      "question_number": 5,
+      "opgave_id": "vwo-2026-tv1-o1",
+      "first_of_opgave": false,
+      "points": 2,
+      "pattern": "P11",
+      "solo": "multistructureel",
+      "route": null,
+      "steps": "2",
+      "sources": "in vraagtekst",
+      "noise": "nee",
+      "claim": "ja",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": "nee",
+      "example_quality": "bruikbaar",
+      "builds_on_questions": [],
+      "proposed_pattern": null,
+      "example_quality_reason": "Heldere spelboomvraag met 1+1-scoring, maar de spelboom is beeld en het tweede deel steunt op de context (sociale norm).",
+      "combination": 2,
+      "bloom": "toepassen",
+      "scorepunt_bloom": [
+        {
+          "points": 1,
+          "bloom": "toepassen",
+          "group_id": "F1.11-01"
+        },
+        {
+          "points": 1,
+          "bloom": "begrijpen",
+          "group_id": "F1.8-01"
+        }
+      ],
+      "confidence": {
+        "pattern": "high",
+        "solo": "medium",
+        "route": "high",
+        "steps": "high",
+        "sources": "high",
+        "noise": "high",
+        "claim": "high",
+        "new_concept": "high",
+        "schema": "high",
+        "builds_on": "high",
+        "example_quality": "high"
+      },
+      "evidence": {
+        "pattern": "Laman heeft drie strategieën om toe te treden tot de markt (zie spelboom 1).",
+        "solo": "het aangeven van het verband tussen de sociale norm en winst in 2027.",
+        "steps": "De uitkomst is (snellere boot ; diesel) / (120 ; 160).",
+        "sources": "Spelboom 1 Winsten in roepia (x 1.000) in het jaar 2026",
+        "noise": "De uitkomst is (snellere boot ; diesel) / (120 ; 160).",
+        "claim": "De winst van Solo zal in 2027 dalen als gevolg van de speluitkomst in 2026.",
+        "new_concept": "Het afwijken van de sociale norm leidt tot reputatieschade / lagere afzet voor Solo.",
+        "builds_on": "Rederij Laman ziet winstkansen en zal in 2026 toetreden door te varen met biobrandstof."
+      },
+      "repaired_fields": [
+        "claim"
+      ]
+    },
+    {
+      "exam_id": "vwo-2026-tv1",
+      "question_id": "vwo-2026-tv1-q6",
+      "question_number": 6,
+      "opgave_id": "vwo-2026-tv1-o2",
+      "first_of_opgave": true,
+      "points": 2,
+      "pattern": "P01",
+      "solo": "multistructureel",
+      "route": null,
+      "steps": "2",
+      "sources": "in vraagtekst",
+      "noise": "nee",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": null,
+      "example_quality": "goed",
+      "builds_on_questions": [],
+      "proposed_pattern": null,
+      "example_quality_reason": "Korte, zelfstandige stam; typische 2-punts keten (gedrag gezinnen -> vraag/aanbod geld -> rente).",
+      "combination": 2,
+      "bloom": "toepassen",
+      "scorepunt_bloom": [
+        {
+          "points": 1,
+          "bloom": "begrijpen",
+          "group_id": "E1.3-01"
+        },
+        {
+          "points": 1,
+          "bloom": "toepassen",
+          "group_id": "E1.4-01"
+        }
+      ],
+      "confidence": {
+        "pattern": "high",
+        "solo": "high",
+        "route": "high",
+        "steps": "high",
+        "sources": "high",
+        "noise": "high",
+        "claim": "high",
+        "new_concept": "high",
+        "schema": "high",
+        "builds_on": "high",
+        "example_quality": "high"
+      },
+      "evidence": {
+        "pattern": "Leg uit welk effect een hoge tijdsvoorkeur van gezinnen heeft op de rente.",
+        "solo": "Hierdoor stijgt de vraag naar geld waardoor de rente zal stijgen.",
+        "steps": "Als gezinnen een hoge tijdsvoorkeur hebben, zullen ze nu meer consumeren en dus meer lenen.",
+        "sources": "Ook gezinnen zijn vragers op de geldmarkt.",
+        "noise": "Leg uit welk effect een hoge tijdsvoorkeur van gezinnen heeft op de rente.",
+        "claim": "Leg uit welk effect een hoge tijdsvoorkeur van gezinnen heeft op de rente.",
+        "new_concept": "De geldmarktrente is de rente op kortlopende leningen."
+      },
+      "repaired_fields": []
+    },
+    {
+      "exam_id": "vwo-2026-tv1",
+      "question_id": "vwo-2026-tv1-q7",
+      "question_number": 7,
+      "opgave_id": "vwo-2026-tv1-o2",
+      "first_of_opgave": false,
+      "points": 2,
+      "pattern": "P06",
+      "solo": "multistructureel",
+      "route": null,
+      "steps": "2",
+      "sources": "in vraagtekst",
+      "noise": "nee",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": "nee",
+      "example_quality": "goed",
+      "builds_on_questions": [],
+      "proposed_pattern": null,
+      "example_quality_reason": "Heldere stam, typische scoring: 1 punt voorbeeld, 1 punt mechanisme; zelfstandig leesbaar.",
+      "combination": 1,
+      "bloom": "begrijpen",
+      "scorepunt_bloom": [
+        {
+          "points": 1,
+          "bloom": "begrijpen",
+          "group_id": "E1.7-01"
+        },
+        {
+          "points": 1,
+          "bloom": "begrijpen",
+          "group_id": "E1.7-01"
+        }
+      ],
+      "confidence": {
+        "pattern": "high",
+        "solo": "high",
+        "route": "high",
+        "steps": "high",
+        "sources": "high",
+        "noise": "high",
+        "claim": "high",
+        "new_concept": "high",
+        "schema": "high",
+        "builds_on": "high",
+        "example_quality": "high"
+      },
+      "evidence": {
+        "pattern": "Ga in je antwoord in op een voorbeeld van publiek kapitaal.",
+        "solo": "verhogen de productiviteit en dus de productiecapaciteit / potentiële productie.",
+        "steps": "een uitleg over het verband tussen investeringen in publiek kapitaal en structurele economische groei.",
+        "sources": "Overheden vragen om geld als zij kortlopende leningen afsluiten om investeringen in publiek kapitaal te financieren.",
+        "noise": "Leg uit dat investeringen in publiek kapitaal kunnen leiden tot een hogere structurele economische groei.",
+        "claim": "Leg uit dat investeringen in publiek kapitaal kunnen leiden tot een hogere structurele economische groei.",
+        "new_concept": "Ga in je antwoord in op een voorbeeld van publiek kapitaal.",
+        "builds_on": "Leg uit dat investeringen in publiek kapitaal kunnen leiden tot een hogere structurele economische groei."
+      },
+      "repaired_fields": []
+    },
+    {
+      "exam_id": "vwo-2026-tv1",
+      "question_id": "vwo-2026-tv1-q8",
+      "question_number": 8,
+      "opgave_id": "vwo-2026-tv1-o2",
+      "first_of_opgave": false,
+      "points": 1,
+      "pattern": "P05",
+      "solo": "unistructureel",
+      "route": null,
+      "steps": "1",
+      "sources": "in vraagtekst",
+      "noise": "nee",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": "nee",
+      "example_quality": "goed",
+      "builds_on_questions": [],
+      "proposed_pattern": null,
+      "example_quality_reason": "Gesloten keuze uit twee categorieën met één argument; 1 punt; kort en zelfstandig.",
+      "combination": 1,
+      "bloom": "begrijpen",
+      "scorepunt_bloom": [
+        {
+          "points": 1,
+          "bloom": "begrijpen",
+          "group_id": "E1.8-01"
+        }
+      ],
+      "confidence": {
+        "pattern": "high",
+        "solo": "high",
+        "route": "high",
+        "steps": "high",
+        "sources": "high",
+        "noise": "high",
+        "claim": "high",
+        "new_concept": "high",
+        "schema": "high",
+        "builds_on": "high",
+        "example_quality": "high"
+      },
+      "evidence": {
+        "pattern": "Is het opgebouwde vermogen een stroomgrootheid of een voorraadgrootheid? Geef een argument voor je keuze.",
+        "solo": "Een voorraadgrootheid omdat het vermogen op een bepaald tijdstip wordt gemeten.",
+        "steps": "Een voorraadgrootheid omdat het vermogen op een bepaald tijdstip wordt gemeten.",
+        "sources": "Door de lagere rente na het ingrijpen van de centrale bank dalen de rente- inkomsten op opgebouwd vermogen door gezinnen.",
+        "noise": "Is het opgebouwde vermogen een stroomgrootheid of een voorraadgrootheid?",
+        "claim": "Is het opgebouwde vermogen een stroomgrootheid of een voorraadgrootheid? Geef een argument voor je keuze.",
+        "new_concept": "Is het opgebouwde vermogen een stroomgrootheid of een voorraadgrootheid?",
+        "builds_on": "Is het opgebouwde vermogen een stroomgrootheid of een voorraadgrootheid?"
+      },
+      "repaired_fields": []
+    },
+    {
+      "exam_id": "vwo-2026-tv1",
+      "question_id": "vwo-2026-tv1-q9",
+      "question_number": 9,
+      "opgave_id": "vwo-2026-tv1-o2",
+      "first_of_opgave": false,
+      "points": 2,
+      "pattern": "P08",
+      "solo": "multistructureel",
+      "route": "zelf vinden",
+      "steps": "2",
+      "sources": "in vraagtekst",
+      "noise": "nee",
+      "claim": "nee",
+      "new_concept": "ja",
+      "schema": null,
+      "builds_on": "nee",
+      "example_quality": "bruikbaar",
+      "builds_on_questions": [],
+      "proposed_pattern": null,
+      "example_quality_reason": "Standaard elasticiteitsberekening met typische 2-punts scoring, maar hangt af van figuur 2 (afbeelding) en de omschrijving in de context.",
+      "combination": 1,
+      "bloom": "toepassen",
+      "scorepunt_bloom": [
+        {
+          "points": 1,
+          "bloom": "toepassen",
+          "group_id": "D1.5-01"
+        },
+        {
+          "points": 1,
+          "bloom": "toepassen",
+          "group_id": "D1.5-01"
+        }
+      ],
+      "confidence": {
+        "pattern": "high",
+        "solo": "high",
+        "route": "high",
+        "steps": "medium",
+        "sources": "high",
+        "noise": "high",
+        "claim": "high",
+        "new_concept": "high",
+        "schema": "high",
+        "builds_on": "high",
+        "example_quality": "high"
+      },
+      "evidence": {
+        "pattern": "Bereken de rente-elasticiteit als gevolg van het ingrijpen van de centrale bank.",
+        "solo": "De rente-elasticiteit = 25% / –37,5% = –0,7",
+        "route": "Bereken de rente-elasticiteit als gevolg van het ingrijpen van de centrale bank.",
+        "steps": "Procentuele verandering rente: (2,5 – 4) / 4 x 100% = –37,5%.",
+        "sources": "Gebruik figuur 2.",
+        "noise": "Procentuele verandering vraag: (50 mld – 40 mld) / 40 mld x 100% = 25%.",
+        "claim": "Bereken de rente-elasticiteit als gevolg van het ingrijpen van de centrale bank.",
+        "new_concept": "De rente-elasticiteit meet hoe sterk de vraag naar geld reageert als gevolg van een renteverandering.",
+        "builds_on": "Gebruik figuur 2."
+      },
+      "repaired_fields": [
+        "pattern",
+        "route",
+        "schema"
+      ]
+    },
+    {
+      "exam_id": "vwo-2026-tv1",
+      "question_id": "vwo-2026-tv1-q10",
+      "question_number": 10,
+      "opgave_id": "vwo-2026-tv1-o2",
+      "first_of_opgave": false,
+      "points": 1,
+      "pattern": "P01",
+      "solo": "unistructureel",
+      "route": null,
+      "steps": "1",
+      "sources": "in vraagtekst",
+      "noise": "nee",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": "nee",
+      "example_quality": "bruikbaar",
+      "builds_on_questions": [],
+      "proposed_pattern": null,
+      "example_quality_reason": "Korte, zelfstandige stam, maar 1 punt voor één argument is geen typische tweeschakelige P01-vraag.",
+      "combination": 1,
+      "bloom": "begrijpen",
+      "scorepunt_bloom": [
+        {
+          "points": 1,
+          "bloom": "begrijpen",
+          "group_id": "I3.6-01"
+        }
+      ],
+      "confidence": {
+        "pattern": "high",
+        "solo": "high",
+        "route": "high",
+        "steps": "high",
+        "sources": "high",
+        "noise": "high",
+        "claim": "high",
+        "new_concept": "high",
+        "schema": "high",
+        "builds_on": "high",
+        "example_quality": "medium"
+      },
+      "evidence": {
+        "pattern": "Beargumenteer dat consumenten hun spaargeld bij een bank aanhouden ondanks een negatieve nominale rente.",
+        "solo": "Het aanhouden van contant geld zorgt voor risico’s (diefstal / brand).",
+        "steps": "Het aanhouden van contant geld is kostbaar / onpraktisch.",
+        "sources": "Ondanks deze negatieve nominale rente kunnen consumenten toch besluiten hun spaargeld bij een bank aan te houden.",
+        "noise": "Beargumenteer dat consumenten hun spaargeld bij een bank aanhouden ondanks een negatieve nominale rente.",
+        "claim": "Ondanks deze negatieve nominale rente kunnen consumenten toch besluiten hun spaargeld bij een bank aan te houden.",
+        "new_concept": "Ondanks deze negatieve nominale rente kunnen consumenten toch besluiten hun spaargeld bij een bank aan te houden.",
+        "builds_on": "Beargumenteer dat consumenten hun spaargeld bij een bank aanhouden ondanks een negatieve nominale rente."
+      },
+      "repaired_fields": [
+        "pattern",
+        "route",
+        "claim",
+        "schema"
+      ]
+    },
+    {
+      "exam_id": "vwo-2026-tv1",
+      "question_id": "vwo-2026-tv1-q11",
+      "question_number": 11,
+      "opgave_id": "vwo-2026-tv1-o3",
+      "first_of_opgave": true,
+      "points": 2,
+      "pattern": "P01",
+      "solo": "multistructureel",
+      "route": null,
+      "steps": "2",
+      "sources": "in vraagtekst",
+      "noise": "nee",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": null,
+      "example_quality": "goed",
+      "builds_on_questions": [],
+      "proposed_pattern": null,
+      "example_quality_reason": "Korte, zelfstandige context met een conditie (tarief = gemiddeld tarief 2025) die de keten draagt; typische 1+1-scoring.",
+      "combination": 2,
+      "bloom": "begrijpen",
+      "scorepunt_bloom": [
+        {
+          "points": 1,
+          "bloom": "begrijpen",
+          "group_id": "H4.6-01"
+        },
+        {
+          "points": 1,
+          "bloom": "begrijpen",
+          "group_id": "H4.4-01"
+        }
+      ],
+      "confidence": {
+        "pattern": "high",
+        "solo": "medium",
+        "route": "high",
+        "steps": "high",
+        "sources": "high",
+        "noise": "high",
+        "claim": "high",
+        "new_concept": "high",
+        "schema": "high",
+        "builds_on": "high",
+        "example_quality": "high"
+      },
+      "evidence": {
+        "pattern": "Een antwoord via het afschaffen van een heffingskorting kan de maximale score opleveren.",
+        "solo": "Het gekozen tarief van de vlaktaks zorgt ervoor dat huishoudens die bovengemiddeld werden belast in 2025, procentueel minder belasting gaan betalen.",
+        "steps": "Als gevolg hiervan stijgen de secundaire inkomens voor deze huishoudens (en dus is er denivellering).",
+        "sources": "Hierbij is het progressieve stelsel vervangen door een vlaktaks zonder heffingskortingen.",
+        "noise": "Het tarief van deze vlaktaks is gelijk aan het gemiddelde landelijke tarief in 2025.",
+        "claim": "Leg uit dat de hervorming van het stelsel van inkomstenbelasting leidt tot een denivellering van de secundaire inkomens.",
+        "new_concept": "Hierbij is het progressieve stelsel vervangen door een vlaktaks zonder heffingskortingen."
+      },
+      "repaired_fields": [
+        "pattern",
+        "route",
+        "schema"
+      ]
+    },
+    {
+      "exam_id": "vwo-2026-tv1",
+      "question_id": "vwo-2026-tv1-q12",
+      "question_number": 12,
+      "opgave_id": "vwo-2026-tv1-o3",
+      "first_of_opgave": false,
+      "points": 2,
+      "pattern": "P01",
+      "solo": "multistructureel",
+      "route": null,
+      "steps": "2",
+      "sources": "in vraagtekst",
+      "noise": "nee",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": "nee",
+      "example_quality": "goed",
+      "builds_on_questions": [],
+      "proposed_pattern": null,
+      "example_quality_reason": "Zelfstandige uitlegvraag van een standaardketen (rente, lenen/sparen, bestedingen, inkomen) met typische 1+1-scoring; figuur niet nodig.",
+      "combination": 1,
+      "bloom": "begrijpen",
+      "scorepunt_bloom": [
+        {
+          "points": 1,
+          "bloom": "begrijpen",
+          "group_id": "I4.2-01"
+        },
+        {
+          "points": 1,
+          "bloom": "begrijpen",
+          "group_id": "I4.2-01"
+        }
+      ],
+      "confidence": {
+        "pattern": "high",
+        "solo": "high",
+        "route": "high",
+        "steps": "high",
+        "sources": "high",
+        "noise": "high",
+        "claim": "high",
+        "new_concept": "high",
+        "schema": "high",
+        "builds_on": "high",
+        "example_quality": "high"
+      },
+      "evidence": {
+        "pattern": "Leg dit dalend verband tussen de reële rente en het inkomen uit.",
+        "solo": "Als de reële rente daalt wordt lenen aantrekkelijker / sparen minder aantrekkelijk.",
+        "steps": "Hierdoor zullen de investeringen / zal de consumptie toenemen en stijgt het inkomen.",
+        "sources": "De IS-curve geeft het dalend verband weer tusen de reële rente en het inkomen.",
+        "noise": "Leg dit dalend verband tussen de reële rente en het inkomen uit.",
+        "claim": "De IS-curve geeft het dalend verband weer tusen de reële rente en het inkomen.",
+        "new_concept": "Een econoom analyseert dit met het IS-MB-GA model.",
+        "builds_on": "Leg dit dalend verband tussen de reële rente en het inkomen uit."
+      },
+      "repaired_fields": []
+    },
+    {
+      "exam_id": "vwo-2026-tv1",
+      "question_id": "vwo-2026-tv1-q13",
+      "question_number": 13,
+      "opgave_id": "vwo-2026-tv1-o3",
+      "first_of_opgave": false,
+      "points": 3,
+      "pattern": "P10+P13",
+      "solo": "relationeel",
+      "route": null,
+      "steps": "3",
+      "sources": "in vraagtekst",
+      "noise": "nee",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": "nee",
+      "example_quality": "bruikbaar",
+      "builds_on_questions": [],
+      "proposed_pattern": null,
+      "example_quality_reason": "Heldere opdracht in twee delen met typische 1+1+1-scoring, maar volledig afhankelijk van de figuur op de uitwerkbijlage.",
+      "combination": 3,
+      "bloom": "toepassen",
+      "scorepunt_bloom": [
+        {
+          "points": 1,
+          "bloom": "toepassen",
+          "group_id": "I4.4-02"
+        },
+        {
+          "points": 1,
+          "bloom": "toepassen",
+          "group_id": "I4.3-01"
+        },
+        {
+          "points": 1,
+          "bloom": "toepassen",
+          "group_id": "I4.4-01"
+        }
+      ],
+      "confidence": {
+        "pattern": "high",
+        "solo": "high",
+        "route": "high",
+        "steps": "high",
+        "sources": "high",
+        "noise": "high",
+        "claim": "high",
+        "new_concept": "high",
+        "schema": "high",
+        "builds_on": "high",
+        "example_quality": "high"
+      },
+      "evidence": {
+        "pattern": "Teken in figuur 3 van de uitwerkbijlage de nieuwe MB-curve (MB1) en GA-curve (GA1) van periode 1.",
+        "solo": "Vul in de tabel in de uitwerkbijlage de reële rente (r) en de inflatie (π) in na de renteaanpassing.",
+        "steps": "In het evenwicht geldt dat r = 1% en π = 2%.",
+        "sources": "Teken in figuur 3 van de uitwerkbijlage de nieuwe MB-curve (MB1) en GA-curve (GA1) van periode 1.",
+        "noise": "MB1 verschuift naar r = 1%.",
+        "claim": "De econoom neemt aan dat de centrale bank met één rentestap de economie terugbrengt naar de potentiële productie (Y*).",
+        "new_concept": "In periode 1 verschuift de IS-curve naar IS1.",
+        "builds_on": "In periode 1 verschuift de IS-curve naar IS1."
+      },
+      "repaired_fields": []
+    },
+    {
+      "exam_id": "vwo-2026-tv1",
+      "question_id": "vwo-2026-tv1-q14",
+      "question_number": 14,
+      "opgave_id": "vwo-2026-tv1-o3",
+      "first_of_opgave": false,
+      "points": 2,
+      "pattern": "P05",
+      "solo": "multistructureel",
+      "route": null,
+      "steps": "2",
+      "sources": "in vraagtekst",
+      "noise": "nee",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": "nee",
+      "example_quality": "goed",
+      "builds_on_questions": [],
+      "proposed_pattern": null,
+      "example_quality_reason": "Gesloten keuze (kleiner/groter) met korte standaardketen via belastinglek; zelfstandig te stellen zonder lange context.",
+      "combination": 1,
+      "bloom": "toepassen",
+      "scorepunt_bloom": [
+        {
+          "points": 1,
+          "bloom": "begrijpen",
+          "group_id": "I4.1-02"
+        },
+        {
+          "points": 1,
+          "bloom": "toepassen",
+          "group_id": "I4.1-02"
+        }
+      ],
+      "confidence": {
+        "pattern": "high",
+        "solo": "high",
+        "route": "high",
+        "steps": "high",
+        "sources": "high",
+        "noise": "high",
+        "claim": "high",
+        "new_concept": "high",
+        "schema": "high",
+        "builds_on": "high",
+        "example_quality": "high"
+      },
+      "evidence": {
+        "pattern": "Leidt een hoger tarief van de vlaktaks tot een kleinere of grotere multiplier? Leg je keuze uit.",
+        "solo": "Bij een hoger vlaktakstarief zal het belastinglek / de marginale belastingquote groter worden.",
+        "steps": "Hierdoor heeft een hoger inkomen een kleiner effect op de bestedingen, waardoor de multiplier kleiner wordt.",
+        "sources": "Leidt een hoger tarief van de vlaktaks tot een kleinere of grotere multiplier?",
+        "noise": "Leidt een hoger tarief van de vlaktaks tot een kleinere of grotere multiplier? Leg je keuze uit.",
+        "claim": "Leidt een hoger tarief van de vlaktaks tot een kleinere of grotere multiplier? Leg je keuze uit.",
+        "new_concept": "a het verhogen van het tarief van de vlaktaks;",
+        "builds_on": "Leidt een hoger tarief van de vlaktaks tot een kleinere of grotere multiplier? Leg je keuze uit."
+      },
+      "repaired_fields": []
+    },
+    {
+      "exam_id": "vwo-2026-tv1",
+      "question_id": "vwo-2026-tv1-q15",
+      "question_number": 15,
+      "opgave_id": "vwo-2026-tv1-o3",
+      "first_of_opgave": false,
+      "points": 2,
+      "pattern": "P12",
+      "solo": "relationeel",
+      "route": null,
+      "steps": "2",
+      "sources": "in vraagtekst",
+      "noise": "nee",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": "nee",
+      "example_quality": "goed",
+      "builds_on_questions": [],
+      "proposed_pattern": null,
+      "example_quality_reason": "Typische 'Vind jij'-vraag: eenzijdig argument volstaat, context geeft condities (lage rente, onderbesteding) die het argument voeden.",
+      "combination": 2,
+      "bloom": "toepassen",
+      "scorepunt_bloom": [
+        {
+          "points": 1,
+          "bloom": "toepassen",
+          "group_id": "E2.2-01"
+        },
+        {
+          "points": 1,
+          "bloom": "toepassen",
+          "group_id": "I1.5-01"
+        }
+      ],
+      "confidence": {
+        "pattern": "high",
+        "solo": "high",
+        "route": "high",
+        "steps": "high",
+        "sources": "high",
+        "noise": "high",
+        "claim": "high",
+        "new_concept": "high",
+        "schema": "high",
+        "builds_on": "high",
+        "example_quality": "high"
+      },
+      "evidence": {
+        "pattern": "Vind jij dat de overheid nieuwe staatsobligaties moet uitgeven om de extra bestedingen te financieren? Leg je keuze uit.",
+        "solo": "Door de lage rente zullen de rentekosten voor het aangaan van nieuwe leningen laag zijn.",
+        "steps": "Daardoor wordt er meer geïnvesteerd en stijgt het bbp.",
+        "sources": "Ga uit van een situatie van een lage inflatie en een lage rente.",
+        "noise": "Ga uit van een situatie van een lage inflatie en een lage rente.",
+        "claim": "Vind jij dat de overheid nieuwe staatsobligaties moet uitgeven om de extra bestedingen te financieren?",
+        "new_concept": "Er is sprake van onderbesteding. Daarom streeft de overheid naar een toename van het bbp.",
+        "builds_on": "Vind jij dat de overheid nieuwe staatsobligaties moet uitgeven om de extra bestedingen te financieren? Leg je keuze uit."
+      },
+      "repaired_fields": []
+    },
+    {
+      "exam_id": "vwo-2026-tv1",
+      "question_id": "vwo-2026-tv1-q16",
+      "question_number": 16,
+      "opgave_id": "vwo-2026-tv1-o4",
+      "first_of_opgave": true,
+      "points": 2,
+      "pattern": "P05",
+      "solo": "multistructureel",
+      "route": null,
+      "steps": "2",
+      "sources": "in vraagtekst",
+      "noise": "nee",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": null,
+      "example_quality": "goed",
+      "builds_on_questions": [],
+      "proposed_pattern": null,
+      "example_quality_reason": "Korte context met twee aannames, heldere stam, typische scoring kenmerken plus gevolgtrekking.",
+      "combination": 1,
+      "bloom": "begrijpen",
+      "scorepunt_bloom": [
+        {
+          "points": 1,
+          "bloom": "begrijpen",
+          "group_id": "D2.1-01"
+        },
+        {
+          "points": 1,
+          "bloom": "begrijpen",
+          "group_id": "D2.1-01"
+        }
+      ],
+      "confidence": {
+        "pattern": "high",
+        "solo": "high",
+        "route": "high",
+        "steps": "high",
+        "sources": "high",
+        "noise": "high",
+        "claim": "high",
+        "new_concept": "high",
+        "schema": "high",
+        "builds_on": "high",
+        "example_quality": "high"
+      },
+      "evidence": {
+        "pattern": "Leg met behulp van twee kenmerken uit van welke marktvorm er sprake is bij kaphout.",
+        "solo": "twee marktkenmerken.",
+        "steps": "een correcte gevolgtrekking met de marktvorm volledige mededinging / volkomen concurrentie.",
+        "sources": "Gebruik bovenstaande tekst.",
+        "noise": "Al het gekapte hout is van dezelfde kwaliteit",
+        "claim": "Leg met behulp van twee kenmerken uit van welke marktvorm er sprake is bij kaphout.",
+        "new_concept": "Leg met behulp van twee kenmerken uit van welke marktvorm er sprake is bij kaphout."
+      },
+      "repaired_fields": []
+    },
+    {
+      "exam_id": "vwo-2026-tv1",
+      "question_id": "vwo-2026-tv1-q17",
+      "question_number": 17,
+      "opgave_id": "vwo-2026-tv1-o4",
+      "first_of_opgave": false,
+      "points": 2,
+      "pattern": "P03",
+      "solo": "relationeel",
+      "route": null,
+      "steps": "2",
+      "sources": "in vraagtekst",
+      "noise": "nee",
+      "claim": "ja",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": "nee",
+      "example_quality": "goed",
+      "builds_on_questions": [],
+      "proposed_pattern": null,
+      "example_quality_reason": "Bewering van de econoom met drie aannames; korte, zelfstandige context en scoring per schakel.",
+      "combination": 1,
+      "bloom": "begrijpen",
+      "scorepunt_bloom": [
+        {
+          "points": 1,
+          "bloom": "begrijpen",
+          "group_id": "F1.5-01"
+        },
+        {
+          "points": 1,
+          "bloom": "begrijpen",
+          "group_id": "F1.5-01"
+        }
+      ],
+      "confidence": {
+        "pattern": "high",
+        "solo": "high",
+        "route": "high",
+        "steps": "high",
+        "sources": "high",
+        "noise": "high",
+        "claim": "high",
+        "new_concept": "high",
+        "schema": "high",
+        "builds_on": "high",
+        "example_quality": "high"
+      },
+      "evidence": {
+        "pattern": "Leg de conclusie van de econoom uit.",
+        "solo": "een uitleg dat de marginale winst leidt tot een dominante strategie.",
+        "steps": "een uitleg dat de dominante strategie op termijn suboptimaal is.",
+        "sources": "Houthakkers ontvangen nu een marktprijs die hoger is dan de variabele kosten per eenheid product.",
+        "noise": "Houthakkers hebben alleen de keuze om minder hout te kappen of meer hout te kappen.",
+        "claim": "De econoom concludeert:",
+        "new_concept": "Leg de conclusie van de econoom uit.",
+        "builds_on": "Leg de conclusie van de econoom uit."
+      },
+      "repaired_fields": []
+    },
+    {
+      "exam_id": "vwo-2026-tv1",
+      "question_id": "vwo-2026-tv1-q18",
+      "question_number": 18,
+      "opgave_id": "vwo-2026-tv1-o4",
+      "first_of_opgave": false,
+      "points": 1,
+      "pattern": "P01",
+      "solo": "unistructureel",
+      "route": null,
+      "steps": "1",
+      "sources": "in vraagtekst",
+      "noise": "nee",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": "nee",
+      "example_quality": "bruikbaar",
+      "builds_on_questions": [],
+      "proposed_pattern": null,
+      "example_quality_reason": "Heldere korte stam, maar 1 punt en leunt op figuur 4 en de kostenaanname uit de vorige context.",
+      "combination": 1,
+      "bloom": "begrijpen",
+      "scorepunt_bloom": [
+        {
+          "points": 1,
+          "bloom": "begrijpen",
+          "group_id": "D1.18-01"
+        }
+      ],
+      "confidence": {
+        "pattern": "high",
+        "solo": "high",
+        "route": "high",
+        "steps": "high",
+        "sources": "high",
+        "noise": "high",
+        "claim": "high",
+        "new_concept": "high",
+        "schema": "high",
+        "builds_on": "high",
+        "example_quality": "high"
+      },
+      "evidence": {
+        "pattern": "Geef een verklaring voor het horizontale verloop van de aanbodlijn van segment A1.",
+        "solo": "De variabele kosten per product zijn constant, waardoor de marginale kosten constant zijn.",
+        "steps": "De variabele kosten per product zijn constant, waardoor de marginale kosten constant zijn.",
+        "sources": "Figuur 4 Model kaphout in 2026",
+        "noise": "Geef een verklaring voor het horizontale verloop van de aanbodlijn van segment A1.",
+        "claim": "Geef een verklaring voor het horizontale verloop van de aanbodlijn van segment A1.",
+        "new_concept": "De econoom stelt een collectieve aanbodlijn op bestaande uit twee segmenten: A1 en A2.",
+        "builds_on": "Geef een verklaring voor het horizontale verloop van de aanbodlijn van segment A1."
+      },
+      "repaired_fields": [
+        "noise"
+      ]
+    },
+    {
+      "exam_id": "vwo-2026-tv1",
+      "question_id": "vwo-2026-tv1-q19",
+      "question_number": 19,
+      "opgave_id": "vwo-2026-tv1-o4",
+      "first_of_opgave": false,
+      "points": 2,
+      "pattern": "P08",
+      "solo": "multistructureel",
+      "route": "zelf vinden",
+      "steps": "3",
+      "sources": "in vraagtekst",
+      "noise": "nee",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": "nee",
+      "example_quality": "bruikbaar",
+      "builds_on_questions": [],
+      "proposed_pattern": null,
+      "example_quality_reason": "Typische zelf-te-vinden berekening, maar vraagt figuur 4 uit een eerdere context naast de eigen tekst.",
+      "combination": 1,
+      "bloom": "toepassen",
+      "scorepunt_bloom": [
+        {
+          "points": 1,
+          "bloom": "toepassen",
+          "group_id": "D1.23-01"
+        },
+        {
+          "points": 1,
+          "bloom": null,
+          "group_id": null
+        }
+      ],
+      "confidence": {
+        "pattern": "high",
+        "solo": "medium",
+        "route": "high",
+        "steps": "high",
+        "sources": "high",
+        "noise": "high",
+        "claim": "high",
+        "new_concept": "high",
+        "schema": "high",
+        "builds_on": "high",
+        "example_quality": "medium"
+      },
+      "evidence": {
+        "pattern": "Bereken met hoeveel hectare het tropisch regenwoud krimpt in 2026.",
+        "solo": "Qa = Qv bij Qv = 5% - De krimp is 5 – 2,2 = 2,8% (per jaar).",
+        "route": "Bereken met hoeveel hectare het tropisch regenwoud krimpt in 2026.",
+        "steps": "Dit is: 0,028 x 700 miljoen = 19,6 miljoen hectare.",
+        "sources": "De totale omvang van het tropisch regenwoud is 700 miljoen hectare aan het begin van 2026.",
+        "noise": "Qa = Qv bij Qv = 5% - De krimp is 5 – 2,2 = 2,8% (per jaar).",
+        "claim": "Bereken met hoeveel hectare het tropisch regenwoud krimpt in 2026.",
+        "new_concept": "De werkelijke jaarlijkse verandering van het tropisch regenwoud in procentpunten is het groeipercentage minus het gekapte hout in procenten.",
+        "builds_on": "Ga uit van het marktevenwicht."
+      },
+      "repaired_fields": [
+        "noise"
+      ]
+    },
+    {
+      "exam_id": "vwo-2026-tv1",
+      "question_id": "vwo-2026-tv1-q20",
+      "question_number": 20,
+      "opgave_id": "vwo-2026-tv1-o4",
+      "first_of_opgave": false,
+      "points": 2,
+      "pattern": "P08",
+      "solo": "multistructureel",
+      "route": "zelf vinden",
+      "steps": "2",
+      "sources": "in vraagtekst",
+      "noise": "nee",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": "nee",
+      "example_quality": "bruikbaar",
+      "builds_on_questions": [],
+      "proposed_pattern": null,
+      "example_quality_reason": "Korte stam en heldere tweestapsscoring, maar vergt de vraag- en aanbodfuncties uit figuur 4.",
+      "combination": 1,
+      "bloom": "toepassen",
+      "scorepunt_bloom": [
+        {
+          "points": 1,
+          "bloom": "toepassen",
+          "group_id": "D3.9-01"
+        },
+        {
+          "points": 1,
+          "bloom": "toepassen",
+          "group_id": "D3.9-01"
+        }
+      ],
+      "confidence": {
+        "pattern": "high",
+        "solo": "medium",
+        "route": "high",
+        "steps": "high",
+        "sources": "high",
+        "noise": "high",
+        "claim": "high",
+        "new_concept": "high",
+        "schema": "high",
+        "builds_on": "high",
+        "example_quality": "medium"
+      },
+      "evidence": {
+        "pattern": "Bereken de hoogte van de heffing per m² in dollars.",
+        "solo": "een berekening van de nieuwe evenwichtsprijs per m2.",
+        "route": "Bereken de hoogte van de heffing per m² in dollars.",
+        "steps": "De heffing is dan gelijk aan 260 – 100 = $ 160 (per m2).",
+        "sources": "Hierdoor zal de vraag naar kaphout in het model 1,8% worden als percentage van het tropisch regenwoud.",
+        "noise": "Prijs bij Qa = 1,8 is gelijk aan $ 100.",
+        "claim": "Bereken de hoogte van de heffing per m² in dollars.",
+        "new_concept": "stelt voor om een heffing te introduceren op de koop van hout.",
+        "builds_on": "Bereken de hoogte van de heffing per m² in dollars."
+      },
+      "repaired_fields": [
+        "noise"
+      ]
+    },
+    {
+      "exam_id": "vwo-2026-tv1",
+      "question_id": "vwo-2026-tv1-q21",
+      "question_number": 21,
+      "opgave_id": "vwo-2026-tv1-o5",
+      "first_of_opgave": true,
+      "points": 2,
+      "pattern": "P03",
+      "solo": "relationeel",
+      "route": null,
+      "steps": "2",
+      "sources": "in vraagtekst",
+      "noise": "nee",
+      "claim": "ja",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": null,
+      "example_quality": "goed",
+      "builds_on_questions": [],
+      "proposed_pattern": null,
+      "example_quality_reason": "Korte context met een expliciete stelling, typische 2-puntsscoring (prijs stijgt, inelastische productie dus weinig werkgelegenheid); zelfstandig bruikbaar.",
+      "combination": 2,
+      "bloom": "begrijpen",
+      "scorepunt_bloom": [
+        {
+          "points": 1,
+          "bloom": "begrijpen",
+          "group_id": "D1.24-01"
+        },
+        {
+          "points": 1,
+          "bloom": "begrijpen",
+          "group_id": "D1.6-01"
+        }
+      ],
+      "confidence": {
+        "pattern": "high",
+        "solo": "high",
+        "route": "high",
+        "steps": "medium",
+        "sources": "high",
+        "noise": "high",
+        "claim": "high",
+        "new_concept": "high",
+        "schema": "high",
+        "builds_on": "high",
+        "example_quality": "high"
+      },
+      "evidence": {
+        "pattern": "Leg de stelling van de econoom uit.",
+        "solo": "De productie is (zeer) prijsinelastisch, waardoor deze niet / nauwelijks verandert. Hierdoor zal de vraag naar arbeid weinig veranderen",
+        "steps": "Een hoogconjunctuur zorgt voor een hogere vraag naar de Australische delfstoffen waardoor de prijs stijgt.",
+        "sources": "De productie van delfstoffen in Australië is zeer prijsinelastisch.",
+        "noise": "De productie van delfstoffen in Australië is zeer prijsinelastisch.",
+        "claim": "Een econoom stelt: “Een hoogconjunctuur in de rest van de wereld heeft,",
+        "new_concept": "via de prijselasticiteit van de productie van delfstoffen, een zwak effect op de werkgelegenheid"
+      },
+      "repaired_fields": []
+    },
+    {
+      "exam_id": "vwo-2026-tv1",
+      "question_id": "vwo-2026-tv1-q22",
+      "question_number": 22,
+      "opgave_id": "vwo-2026-tv1-o5",
+      "first_of_opgave": false,
+      "points": 2,
+      "pattern": "P02",
+      "solo": "relationeel",
+      "route": null,
+      "steps": "2",
+      "sources": "in vraagtekst",
+      "noise": "nee",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": "nee",
+      "example_quality": "goed",
+      "builds_on_questions": [],
+      "proposed_pattern": null,
+      "example_quality_reason": "Eén zin contextconditie (loonrigiditeit) die verplicht in de keten moet; heldere 'leg uit dat'-stam en typische 1+1-scoring.",
+      "combination": 2,
+      "bloom": "begrijpen",
+      "scorepunt_bloom": [
+        {
+          "points": 1,
+          "bloom": "begrijpen",
+          "group_id": "D1.19-01"
+        },
+        {
+          "points": 1,
+          "bloom": "begrijpen",
+          "group_id": "H1.1-03"
+        }
+      ],
+      "confidence": {
+        "pattern": "high",
+        "solo": "high",
+        "route": "high",
+        "steps": "high",
+        "sources": "high",
+        "noise": "high",
+        "claim": "high",
+        "new_concept": "high",
+        "schema": "high",
+        "builds_on": "high",
+        "example_quality": "high"
+      },
+      "evidence": {
+        "pattern": "Omdat er sprake is van loonrigiditeit stijgen de winsten harder dan de lonen (en dus neemt de AIQ af).",
+        "solo": "Omdat er sprake is van loonrigiditeit stijgen de winsten harder dan de lonen",
+        "steps": "Als de exportprijzen stijgen, dan zullen (bij dezelfde kosten) de winsten / dividenden / aandelenkoersen van bedrijven stijgen.",
+        "sources": "In Australië is sprake van loonrigiditeit.",
+        "noise": "In Australië is sprake van loonrigiditeit.",
+        "claim": "Leg uit dat hogere exportprijzen voor delfstoffen leiden tot een lagere arbeidsinkomensquote.",
+        "new_concept": "In Australië is sprake van loonrigiditeit.",
+        "builds_on": "In Australië is sprake van loonrigiditeit."
+      },
+      "repaired_fields": []
+    },
+    {
+      "exam_id": "vwo-2026-tv1",
+      "question_id": "vwo-2026-tv1-q23",
+      "question_number": 23,
+      "opgave_id": "vwo-2026-tv1-o5",
+      "first_of_opgave": false,
+      "points": 3,
+      "pattern": "P08",
+      "solo": "multistructureel",
+      "route": "zelf vinden",
+      "steps": "2",
+      "sources": "in vraagtekst",
+      "noise": "nee",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": "nee",
+      "example_quality": "bruikbaar",
+      "builds_on_questions": [],
+      "proposed_pattern": null,
+      "example_quality_reason": "Typische kringloopberekening met deelscore 2/1/0 naar aantal juiste waarden, maar zonder figuur 5 (beeld) niet zelfstandig te gebruiken.",
+      "combination": 2,
+      "bloom": "toepassen",
+      "scorepunt_bloom": [
+        {
+          "points": 2,
+          "bloom": "toepassen",
+          "group_id": "H1.2-02"
+        },
+        {
+          "points": 1,
+          "bloom": "toepassen",
+          "group_id": "H1.2-01"
+        }
+      ],
+      "confidence": {
+        "pattern": "high",
+        "solo": "high",
+        "route": "high",
+        "steps": "high",
+        "sources": "high",
+        "noise": "high",
+        "claim": "high",
+        "new_concept": "high",
+        "schema": "high",
+        "builds_on": "high",
+        "example_quality": "high"
+      },
+      "evidence": {
+        "pattern": "Geef: - de berekening van de vier ontbrekende waarden in figuur 5;",
+        "solo": "een berekening van de vier ontbrekende waarden.",
+        "route": "Geef: - de berekening van de vier ontbrekende waarden in figuur 5;",
+        "steps": "Pijl 1 loopt van banken naar buitenland en pijl 3 loopt van overheid naar banken.",
+        "sources": "Een econoom analyseert de economie van Australië in 2023 met behulp van een kringloopmodel (zie figuur 5).",
+        "noise": "I = 2.385 - 1.237 - 885 - 671 + 527 = 119",
+        "claim": "Een econoom analyseert de economie van Australië in 2023 met behulp van een kringloopmodel (zie figuur 5).",
+        "new_concept": "(vervangingsinvesteringen en afschrijvingen blijven buiten beschouwing)",
+        "builds_on": "Een econoom analyseert de economie van Australië in 2023 met behulp van een kringloopmodel (zie figuur 5)."
+      },
+      "repaired_fields": []
+    },
+    {
+      "exam_id": "vwo-2026-tv1",
+      "question_id": "vwo-2026-tv1-q24",
+      "question_number": 24,
+      "opgave_id": "vwo-2026-tv1-o5",
+      "first_of_opgave": false,
+      "points": 2,
+      "pattern": "P01",
+      "solo": "multistructureel",
+      "route": null,
+      "steps": "2",
+      "sources": "in vraagtekst",
+      "noise": "nee",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": "nee",
+      "example_quality": "goed",
+      "builds_on_questions": [],
+      "proposed_pattern": null,
+      "example_quality_reason": "Eén zin context, standaardketen saldo -> wisselkoers -> concurrentiepositie met 1 punt per schakel; zelfstandig bruikbaar.",
+      "combination": 2,
+      "bloom": "toepassen",
+      "scorepunt_bloom": [
+        {
+          "points": 1,
+          "bloom": "toepassen",
+          "group_id": "I3.8-02"
+        },
+        {
+          "points": 1,
+          "bloom": "toepassen",
+          "group_id": "I3.8-01"
+        }
+      ],
+      "confidence": {
+        "pattern": "high",
+        "solo": "high",
+        "route": "high",
+        "steps": "high",
+        "sources": "high",
+        "noise": "high",
+        "claim": "high",
+        "new_concept": "high",
+        "schema": "high",
+        "builds_on": "high",
+        "example_quality": "high"
+      },
+      "evidence": {
+        "pattern": "Leg uit welk effect dit positieve saldo, via de valutamarkt, heeft op de internationale concurrentiepositie van Australië.",
+        "solo": "een uitleg over de relatie tussen de wisselkoers en de internationale concurrentiepositie.",
+        "steps": "een uitleg over de relatie tussen het saldo op de betalingsbalans en de wisselkoers.",
+        "sources": "Australië heeft in 2023 een positief saldo op de betalingsbalans.",
+        "noise": "Australië heeft in 2023 een positief saldo op de betalingsbalans.",
+        "claim": "Australië heeft in 2023 een positief saldo op de betalingsbalans.",
+        "new_concept": "Australië heeft in 2023 een positief saldo op de betalingsbalans.",
+        "builds_on": "Australië heeft in 2023 een positief saldo op de betalingsbalans."
+      },
+      "repaired_fields": []
+    },
+    {
+      "exam_id": "vwo-2026-tv1",
+      "question_id": "vwo-2026-tv1-q25",
+      "question_number": 25,
+      "opgave_id": "vwo-2026-tv1-o6",
+      "first_of_opgave": true,
+      "points": 2,
+      "pattern": "P02",
+      "solo": "relationeel",
+      "route": null,
+      "steps": "2",
+      "sources": "in vraagtekst",
+      "noise": "nee",
+      "claim": "nee",
+      "new_concept": "ja",
+      "schema": null,
+      "builds_on": null,
+      "example_quality": "goed",
+      "builds_on_questions": [],
+      "proposed_pattern": null,
+      "example_quality_reason": "Korte stam, conditie (inkomenstoets) verplicht in de keten, typische 1+1-scoring; tabel is niet nodig.",
+      "combination": 2,
+      "bloom": "toepassen",
+      "scorepunt_bloom": [
+        {
+          "points": 1,
+          "bloom": "toepassen",
+          "group_id": "D1.4b-01"
+        },
+        {
+          "points": 1,
+          "bloom": "toepassen",
+          "group_id": "D1.24-01"
+        }
+      ],
+      "confidence": {
+        "pattern": "high",
+        "solo": "high",
+        "route": "high",
+        "steps": "high",
+        "sources": "high",
+        "noise": "high",
+        "claim": "high",
+        "new_concept": "high",
+        "schema": "high",
+        "builds_on": "high",
+        "example_quality": "high"
+      },
+      "evidence": {
+        "pattern": "Leg uit welk effect een hoogconjunctuur heeft, via de inkomenstoets, op de koopwoningprijzen.",
+        "solo": "een uitleg over de relatie tussen een hoogconjunctuur en de leencapaciteit.",
+        "steps": "een uitleg over de relatie tussen de leencapaciteit en de prijzen.",
+        "sources": "Leg uit welk effect een hoogconjunctuur heeft, via de inkomenstoets, op de koopwoningprijzen.",
+        "noise": "Een inkomenstoets van 5,7 betekent dat huishoudens een maximale hypotheek kunnen krijgen van 5,7 keer hun primair inkomen.",
+        "claim": "Leg uit welk effect een hoogconjunctuur heeft, via de inkomenstoets, op de koopwoningprijzen.",
+        "new_concept": "De inkomenstoets is een eis van DNB."
+      },
+      "repaired_fields": []
+    },
+    {
+      "exam_id": "vwo-2026-tv1",
+      "question_id": "vwo-2026-tv1-q26",
+      "question_number": 26,
+      "opgave_id": "vwo-2026-tv1-o6",
+      "first_of_opgave": false,
+      "points": 2,
+      "pattern": "P03",
+      "solo": "relationeel",
+      "route": null,
+      "steps": "2",
+      "sources": "in vraagtekst",
+      "noise": "nee",
+      "claim": "ja",
+      "new_concept": "ja",
+      "schema": null,
+      "builds_on": "nee",
+      "example_quality": "goed",
+      "builds_on_questions": [],
+      "proposed_pattern": null,
+      "example_quality_reason": "Stelling in twee zinnen, kale opdracht, twee schakels als scorepunten; zelfstandig bruikbaar.",
+      "combination": 1,
+      "bloom": "begrijpen",
+      "scorepunt_bloom": [
+        {
+          "points": 1,
+          "bloom": "begrijpen",
+          "group_id": "E1.5-02"
+        },
+        {
+          "points": 1,
+          "bloom": "begrijpen",
+          "group_id": "E1.5-02"
+        }
+      ],
+      "confidence": {
+        "pattern": "high",
+        "solo": "high",
+        "route": "high",
+        "steps": "high",
+        "sources": "high",
+        "noise": "high",
+        "claim": "high",
+        "new_concept": "high",
+        "schema": "high",
+        "builds_on": "high",
+        "example_quality": "high"
+      },
+      "evidence": {
+        "pattern": "Stelling: “Bij een hogere hypotheekrente stijgt het risico van wanbetaling. Hierdoor verlaagt DNB de inkomenstoets.”",
+        "solo": "Dit risico wordt kleiner door een lagere inkomenstoets, omdat dit zorgt voor een lagere maximale hypotheek (en dus lagere lasten).",
+        "steps": "Bij een hogere rente zullen de (rente)kosten van een hypothecaire lening toenemen. Hierdoor stijgt het risico op wanbetaling.",
+        "sources": "Leg de stelling uit.",
+        "noise": "Leg de stelling uit.",
+        "claim": "Stelling: “Bij een hogere hypotheekrente stijgt het risico van wanbetaling. Hierdoor verlaagt DNB de inkomenstoets.”",
+        "new_concept": "Een inkomenstoets van 5,7 betekent dat huishoudens een maximale hypotheek kunnen krijgen van 5,7 keer hun primair inkomen.",
+        "builds_on": "Leg de stelling uit."
+      },
+      "repaired_fields": []
+    },
+    {
+      "exam_id": "vwo-2026-tv1",
+      "question_id": "vwo-2026-tv1-q27",
+      "question_number": 27,
+      "opgave_id": "vwo-2026-tv1-o6",
+      "first_of_opgave": false,
+      "points": 3,
+      "pattern": "P08",
+      "solo": "relationeel",
+      "route": "zelf vinden",
+      "steps": "3",
+      "sources": "in vraagtekst",
+      "noise": "ja",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": "nee",
+      "example_quality": "goed",
+      "builds_on_questions": [],
+      "proposed_pattern": null,
+      "example_quality_reason": "Kale bereken-opdracht op één tabel, route zelf vinden met typische 1-punt-per-tussenstap-scoring; tabel moet mee.",
+      "combination": 2,
+      "bloom": "toepassen",
+      "scorepunt_bloom": [
+        {
+          "points": 1,
+          "bloom": "toepassen",
+          "group_id": "I1.1-01"
+        },
+        {
+          "points": 1,
+          "bloom": "toepassen",
+          "group_id": "I1.1-01"
+        },
+        {
+          "points": 1,
+          "bloom": "toepassen",
+          "group_id": "E1.6-01"
+        }
+      ],
+      "confidence": {
+        "pattern": "high",
+        "solo": "high",
+        "route": "high",
+        "steps": "high",
+        "sources": "high",
+        "noise": "high",
+        "claim": "high",
+        "new_concept": "high",
+        "schema": "high",
+        "builds_on": "high",
+        "example_quality": "high"
+      },
+      "evidence": {
+        "pattern": "Bereken op basis van tabel 1 de inflatie in de periode begin 2021 tot eind 2022.",
+        "solo": "stijging = (960,96 – 795,81) / 795,81 x 100% = 20,8% (NIC = 120,8)",
+        "route": "Bereken op basis van tabel 1 de inflatie in de periode begin 2021 tot eind 2022.",
+        "steps": "(120,8 / 109,6) x 100 = 110,2 - De inflatie is 10,2%.",
+        "sources": "Tabel 1 Gegevens onderzoek Nederlandse koopwoningmarkt",
+        "noise": "hypotheekrente (looptijd 10 jaar) 1,80% 4,05% inkomenstoets van DNB 5,7 4,4",
+        "claim": "Bereken op basis van tabel 1 de inflatie in de periode begin 2021 tot eind 2022.",
+        "new_concept": "een berekening van de stijging van het nominale bbp / NIC.",
+        "builds_on": "Bereken op basis van tabel 1 de inflatie in de periode begin 2021 tot eind 2022."
+      },
+      "repaired_fields": []
+    },
+    {
+      "exam_id": "vwo-2026-tv1",
+      "question_id": "vwo-2026-tv1-q28",
+      "question_number": 28,
+      "opgave_id": "vwo-2026-tv1-o6",
+      "first_of_opgave": false,
+      "points": 2,
+      "pattern": "P04",
+      "solo": "multistructureel",
+      "route": null,
+      "steps": "2",
+      "sources": "in vraagtekst",
+      "noise": "nee",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": "nee",
+      "example_quality": "goed",
+      "builds_on_questions": [],
+      "proposed_pattern": null,
+      "example_quality_reason": "Klassieke leg-uit-of met één beslissend kenmerk in een korte context (verplichte verzekering) en conclusie.",
+      "combination": 1,
+      "bloom": "toepassen",
+      "scorepunt_bloom": [
+        {
+          "points": 1,
+          "bloom": "toepassen",
+          "group_id": "G4.4-01"
+        },
+        {
+          "points": 1,
+          "bloom": "toepassen",
+          "group_id": "G4.4-01"
+        }
+      ],
+      "confidence": {
+        "pattern": "high",
+        "solo": "medium",
+        "route": "high",
+        "steps": "high",
+        "sources": "high",
+        "noise": "high",
+        "claim": "high",
+        "new_concept": "high",
+        "schema": "high",
+        "builds_on": "high",
+        "example_quality": "high"
+      },
+      "evidence": {
+        "pattern": "Leg uit of er averechtse selectie kan optreden bij een woonhuisverzekering voor huizenkopers met een hypothecaire lening.",
+        "solo": "Hierdoor zullen de goede risico’s zich ook verzekeren waardoor er geen averechtse selectie kan optreden.",
+        "steps": "Voor huizenkopers met een hypothecaire lening geldt dat de woonhuisverzekering een verplichte verzekering is.",
+        "sources": "verplichten banken de huishoudens een woonhuisverzekering af te sluiten.",
+        "noise": "verplichten banken de huishoudens een woonhuisverzekering af te sluiten.",
+        "claim": "Leg uit of er averechtse selectie kan optreden bij een woonhuisverzekering voor huizenkopers met een hypothecaire lening.",
+        "new_concept": "Deze verzekering dekt onverwachte schade aan woningen, bijvoorbeeld waterschade als gevolg van stormen.",
+        "builds_on": "Leg uit of er averechtse selectie kan optreden bij een woonhuisverzekering voor huizenkopers met een hypothecaire lening."
+      },
+      "repaired_fields": []
+    },
+    {
+      "exam_id": "vwo-2026-tv1",
+      "question_id": "vwo-2026-tv1-q29",
+      "question_number": 29,
+      "opgave_id": "vwo-2026-tv1-o6",
+      "first_of_opgave": false,
+      "points": 2,
+      "pattern": "P04",
+      "solo": "multistructureel",
+      "route": null,
+      "steps": "2",
+      "sources": "in vraagtekst",
+      "noise": "nee",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": "nee",
+      "example_quality": "bruikbaar",
+      "builds_on_questions": [],
+      "proposed_pattern": null,
+      "example_quality_reason": "Heldere leg-uit-of, maar beide conclusies worden goedgerekend, dus het contextkenmerk stuurt het antwoord weinig.",
+      "combination": 1,
+      "bloom": "toepassen",
+      "scorepunt_bloom": [
+        {
+          "points": 1,
+          "bloom": "begrijpen",
+          "group_id": "G4.5-01"
+        },
+        {
+          "points": 1,
+          "bloom": "toepassen",
+          "group_id": "G4.5-01"
+        }
+      ],
+      "confidence": {
+        "pattern": "high",
+        "solo": "medium",
+        "route": "high",
+        "steps": "high",
+        "sources": "high",
+        "noise": "high",
+        "claim": "high",
+        "new_concept": "high",
+        "schema": "high",
+        "builds_on": "high",
+        "example_quality": "medium"
+      },
+      "evidence": {
+        "pattern": "Leg uit of er sprake kan zijn van moral hazard na het afsluiten van een woonhuisverzekering.",
+        "solo": "Moral hazard betekent dat mensen zich risicovoller / nalatig gedragen nadat zij zich hebben verzekerd.",
+        "steps": "Bij de woonhuisverzekering is er geen sprake van moral hazard, omdat de schade door het klimaat / collectieve gebeurtenissen ontstaat",
+        "sources": "Leg uit of er sprake kan zijn van moral hazard na het afsluiten van een woonhuisverzekering.",
+        "noise": "Leg uit of er sprake kan zijn van moral hazard na het afsluiten van een woonhuisverzekering.",
+        "claim": "Leg uit of er sprake kan zijn van moral hazard na het afsluiten van een woonhuisverzekering.",
+        "new_concept": "Leg uit of er sprake kan zijn van moral hazard na het afsluiten van een woonhuisverzekering.",
+        "builds_on": "Leg uit of er sprake kan zijn van moral hazard na het afsluiten van een woonhuisverzekering."
+      },
+      "repaired_fields": []
+    }
+  ]
+}
