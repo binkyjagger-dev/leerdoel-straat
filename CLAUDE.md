@@ -29,7 +29,7 @@ schemas/          JSON schemas per artefact
 data/             rule files (Bloom verbs, student-language rules)
 scripts/          validate.py bloom_check.py student_language_check.py coverage.py merge_groups.py apply_verdicts.py export.py decisions.py verb_table.py glossary.py
 subjects/<vak>/   profile.md (human) + decisions.json (straat, via decisions.py) + bloom_verbs.json (optional, via verb_table.py) + glossary.json (optional, via glossary.py) — see specs/06
-docs/             HANDLEIDING.md (one-page tutorial, Dutch)
+docs/             HANDLEIDING.md (one-page tutorial, Dutch) · HANDLEIDING-toets.md (toets-straat, step by step for non-technical teachers)
 .claude/agents/   ingest intake planner generator student-language verifier
 .claude/commands/ generate (/generate orchestrator) · koppel (/koppel orchestrator) · examen (/examen orchestrator, incl. E7 and --label) · toets (/toets; T0–T6)
 .claude/agents/   method-ingest mapping-judge mapping-verifier exercise-judge   (methode-straat; intake is shared, mapping mode)
