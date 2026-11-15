@@ -2503,6 +2503,459 @@
       "raised_by": "intake",
       "supersedes": null,
       "scope": "lweo-economie-vwo-levensloop-2025"
+    },
+    {
+      "id": "economie-082",
+      "question": "Voor welke syllabusversie zijn de drie examens geschreven, zodat dat bij elk examen in de examenbank vermeld wordt?",
+      "context": "De drie examens (2025-I, 2025-II, 2026-I; 87 vragen, 177 punten) worden gekoppeld aan de criteria van de CE-syllabus economie vwo 2026, versie 2 (juli 2024). Volgens de toelichting op p. 3 van die syllabus wijkt 2026 alleen 'voornamelijk redactioneel' af van de syllabus 2025; de wijzigingen staan geel gemarkeerd op p. 19 (domein H1-H2) en p. 24 (I3.9 en het Keynesiaanse kruis, IS- en MB-curve, o.a. 'hogere/lagere spaarquote', 'steiler/vlakker', multipliers). De notitie bij elk examen legt uit waarom een scorepunt 'buiten huidige syllabus' kan vallen. Zelfde vraag als bedrijfsecon-041, maar die geldt alleen voor bedrijfseconomie.",
+      "options": [
+        "Per examen het examenjaar noemen: 2025-I en 2025-II 'geschreven voor de CE-syllabus economie vwo 2025', 2026-I 'geschreven voor de CE-syllabus economie vwo 2026 (versie 2)'; alle drie gekoppeld aan syllabus 2026 versie 2, met de opmerking dat 2025 alleen redactioneel afwijkt (p. 19 en 24)",
+        "Zoals optie 1, zonder de opmerking over de redactionele verschillen",
+        "De docent geeft per examen de precieze syllabusversie (jaar en versienummer) op"
+      ],
+      "proposed": "Optie 1: het examenjaar bepaalt de syllabus. Omdat 2025 alleen redactioneel verschilt, mag een scorepunt van 2025 zonder criterium niet als 'vervallen stof' gelezen worden; de opmerking maakt dat zichtbaar.",
+      "impact": "medium",
+      "applies_to": [
+        "exam-judge",
+        "mapping-verifier",
+        "exporter"
+      ],
+      "affects_units": [
+        "vwo-2025-tv1",
+        "vwo-2025-tv2",
+        "vwo-2026-tv1"
+      ],
+      "status": "answered",
+      "answer": "Optie 1: per examen het examenjaar noemen: 2025-I en 2025-II 'geschreven voor de CE-syllabus economie vwo 2025', 2026-I 'geschreven voor de CE-syllabus economie vwo 2026 (versie 2)'; alle drie gekoppeld aan syllabus 2026 versie 2, met de opmerking dat 2025 alleen redactioneel verschilt (gewijzigd: p. 19 domein H1-H2 en p. 24 I3.9, I4.1-I4.3).",
+      "answered_by": "user",
+      "answered_at": "2026-11-15T20:17:29Z",
+      "source_run": "20261115-1902-examen-economie",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": null
+    },
+    {
+      "id": "economie-083",
+      "question": "Koppelen we een scorepunt aan een criterium als het examen een begrip of model zelf in de context uitlegt (bijvoorbeeld de dekkingsgraad of de inkomenstoets) en de gevraagde prestatie een mechanisme of berekening uit de syllabus is?",
+      "context": "Ongeveer 14 vragen in alle drie examens gebruiken een begrip dat geen criterium noemt, maar dat de opgave zelf definieert; de gevraagde redenering valt wel onder een criterium. 2025-I: v9-v11 dekkingsgraad van pensioenfondsen (formule in figuur 1; inflatie -> rente -> contante waarde -> dekkingsgraad; E2.1, I4.3), v5 vergelijkingssites (informatie -> concurrentie -> totaal surplus; G2, D3.4), v16 laagsteprijsgarantie als zelfbinding (F1.11), v29 afzetmaximalisatie als doelstelling in een pay-off matrix (dominante strategie F1.5, externe effecten F2.4). 2025-II: v13-v14 geld-overmaak-bedrijf met commissie en eigen wisselkoers (I3.8), v17 lumpsum-financiering als internalisering (F2.4), v28-v29 schijvenstelsel met vrijstelling en heffingskorting op drinkwater (H4.6, maar geen inkomstenbelasting). 2026-I: v25-v26 inkomenstoets van DNB (hoogconjunctuur -> leencapaciteit -> woningprijs), v22 loonrigiditeit en AIQ (H1.1, I4.4). Zonder afspraak koppelt de ene beoordelaar en meldt de andere 'buiten huidige syllabus'. Bedrijfsecon-042 koos voor bedrijfseconomie 'de prestatie telt'; voor economie is nog niets besloten.",
+      "options": [
+        "De prestatie telt: koppelen aan het criterium waarvan het scorepunt de prestatie (mechanisme, berekening, analyse) vraagt, ook als het begrip of model alleen in het examen staat; het begrip uit de context gaat in de notitie",
+        "Alleen koppelen als het begrip zelf in de syllabus staat; scorepunten bij een begrip dat alleen het examen definieert worden 'buiten huidige syllabus'",
+        "Per scorepunt laten beoordelen, zonder afspraak"
+      ],
+      "proposed": "Optie 1: de syllabus zegt 'in contexten herkennen en toepassen', en het CvTE legt nieuwe begrippen juist in de context uit zodat de leerling er een bekend mechanisme op toepast. Optie 2 zou ongeveer 30 punten als buiten de syllabus tonen terwijl het gewoon examenstof is.",
+      "impact": "high",
+      "applies_to": [
+        "exam-judge",
+        "mapping-verifier",
+        "exporter"
+      ],
+      "affects_units": [
+        "vwo-2025-tv1-q5",
+        "vwo-2025-tv1-q9",
+        "vwo-2025-tv1-q10",
+        "vwo-2025-tv1-q11",
+        "vwo-2025-tv1-q16",
+        "vwo-2025-tv1-q29",
+        "vwo-2025-tv2-q13",
+        "vwo-2025-tv2-q14",
+        "vwo-2025-tv2-q17",
+        "vwo-2025-tv2-q28",
+        "vwo-2025-tv2-q29",
+        "vwo-2026-tv1-q22",
+        "vwo-2026-tv1-q25",
+        "vwo-2026-tv1-q26"
+      ],
+      "status": "answered",
+      "answer": "Optie 1: de prestatie telt. Koppelen aan het criterium waarvan het scorepunt de prestatie (mechanisme, berekening, analyse) vraagt, ook als het begrip of model alleen in het examen staat (bijv. dekkingsgraad, inkomenstoets, lumpsum); het begrip uit de context gaat in de notitie.",
+      "answered_by": "user",
+      "answered_at": "2026-11-15T20:17:29Z",
+      "source_run": "20261115-1902-examen-economie",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": null
+    },
+    {
+      "id": "economie-084",
+      "question": "Hoe koppelen we scorepunten waarvan de prestatie zelf geen eindterm heeft, maar wel lijkt op een criterium (een andere elasticiteit, de soort variabele kosten)?",
+      "context": "Anders dan bij de vorige vraag ontbreekt hier de prestatie zelf in de criteria. 2026-I v9 (2 p): de rente-elasticiteit van de geldvraag berekenen; de criteria kennen alleen prijs- en inkomenselasticiteit (D1.5-D1.9). 2025-II v1 (2 p): bepalen of er sprake is van degressief, proportioneel of progressief variabele kosten; geen criterium noemt die soorten (D1.16/D1.17 gaan over TK, TCK, TVK, GTK, MK). Bij het koppelen van de lesbrieven is dezelfde lijn al gekozen, maar alleen voor die lesbrieven: economie-035 (prijselasticiteit van het aanbod niet analoog aan D1.5/D1.6 koppelen, 'zou de dekking te hoog laten lijken') en economie-041 (soort variabele kosten = buiten syllabus). Raakt 2 vragen, 4 punten; in latere examens waarschijnlijk vaker.",
+      "options": [
+        "Zelfde lijn als economie-035 en -041: 'buiten huidige syllabus' met de notitie 'geen eindterm, lijkt op D1.5 / D1.16'; een deelstap die wel een criterium heeft (bijvoorbeeld procentuele veranderingen of de MK-lijn) wordt wel gekoppeld",
+        "Analoog koppelen aan het meest verwante criterium (rente-elasticiteit aan D1.5, soorten variabele kosten aan D1.16/D1.17), met de notitie 'analoog'",
+        "Het hele scorepunt 'buiten huidige syllabus', ook deelstappen"
+      ],
+      "proposed": "Optie 1: consistent met de beslissingen bij de lesbrieven, en de examenbank laat dan eerlijk zien dat het examen hier iets vraagt dat de syllabus niet noemt.",
+      "impact": "medium",
+      "applies_to": [
+        "exam-judge",
+        "mapping-verifier",
+        "exporter"
+      ],
+      "affects_units": [
+        "vwo-2026-tv1-q9",
+        "vwo-2025-tv2-q1"
+      ],
+      "status": "answered",
+      "answer": "Analoog koppelen (antwoord docent: 'Dit is een variant van elasticiteiten en eigenlijk een impliciete toepassing ervan'). 2026-I v9 (rente-elasticiteit van de geldvraag) koppelen aan het meest verwante elasticiteitscriterium (D1.5-D1.9, voorgesteld D1.5); 2025-II v1 (degressief/proportioneel/progressief variabele kosten) koppelen aan het meest verwante kostencriterium (D1.16/D1.17). Notitie 'analoog: geen eigen eindterm'. Bindt exam-judge, mapping-verifier, exporter.",
+      "answered_by": "user",
+      "answered_at": "2026-11-15T20:17:29Z",
+      "source_run": "20261115-1902-examen-economie",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": null
+    },
+    {
+      "id": "economie-085",
+      "question": "Hoe koppelen we scorepunten die alleen een algemene rekenstap belonen (procentuele verandering, een uitkomst omrekenen) zonder eigen economische prestatie?",
+      "context": "Het profiel zet domein A (vaardigheden) buiten de scope, dus daarvoor zijn geen criteria. Per examen gaan enkele punten naar zulke stappen: 2025-I v14 laatste scorepunt (gestegen prijs als percentage van de gestegen variabele kosten), v27 (procentuele stijging van de TCK), 2026-I v3 (procentuele prijsstijging van een ticket), v19 tweede scorepunt (krimp in procenten omrekenen naar hectare), 2025-II v13 (verschil van twee wisselkoersbedragen terugrekenen naar euro's). Vaak is de eerste stap wel economisch (MK-functie, TCK, marktevenwicht, wisselkoers) en alleen de laatste stap rekenwerk. Zonder afspraak verschijnen die punten als 'buiten huidige syllabus', alsof de stof vervallen is. Raakt ongeveer 5 vragen, circa 6 punten. Voor bedrijfseconomie is dit besloten in bedrijfsecon-043; voor economie nog niet.",
+      "options": [
+        "Koppelen aan het criterium van de grootheid die berekend wordt als die er is (TCK aan D1.16, prijs uit het evenwicht aan D2.2/D1.24, wisselkoers aan I3.8); alleen de zuivere rekenstap niet koppelen, met de notitie 'vaardigheid uit domein A (geen criteria), geen vervallen stof'",
+        "Elke rekenstap koppelen aan het criterium van de vraag, ook de laatste omrekening",
+        "Alle zuivere rekenstappen 'buiten huidige syllabus', zonder aparte notitie"
+      ],
+      "proposed": "Optie 1: houdt de puntentelling per criterium eerlijk en laat zien dat het om vaardigheden gaat, niet om stof die uit de syllabus is gehaald.",
+      "impact": "medium",
+      "applies_to": [
+        "exam-judge",
+        "mapping-verifier",
+        "exporter"
+      ],
+      "affects_units": [
+        "vwo-2025-tv1-q14",
+        "vwo-2025-tv1-q27",
+        "vwo-2026-tv1-q3",
+        "vwo-2026-tv1-q19",
+        "vwo-2025-tv2-q13"
+      ],
+      "status": "answered",
+      "answer": "Optie 1: koppelen aan het criterium van de grootheid die berekend wordt als die er is (TCK aan D1.16, prijs uit het evenwicht aan D2.2/D1.24, wisselkoers aan I3.8); alleen de zuivere rekenstap (procentuele verandering, omrekenen) niet koppelen, met de notitie 'vaardigheid uit domein A (geen criteria)'.",
+      "answered_by": "user",
+      "answered_at": "2026-11-15T20:17:29Z",
+      "source_run": "20261115-1902-examen-economie",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": null
+    },
+    {
+      "id": "economie-086",
+      "question": "Hoe koppelen we een scorepunt dat gelijkwaardig meerdere criteria toetst, of waarvan de alternatieve antwoordroutes onder verschillende criteria vallen?",
+      "context": "Een scorepunt krijgt één criterium; andere criteria kunnen als 'raakt ook' mee (0 punten). Dat wringt bij scorepunten met een schaal over meerdere elementen (2025-I v19: één scorepunt van 2 p voor tekeningen op arbeids-, goederen- en valutamarkt; 2025-II v3: drie elementen bij prijsdiscriminatie; 2026-I v23: vier waarden en pijlen in de kringloop) en bij antwoordroutes na 'of' die een ander criterium raken (2025-I v5 en v10; 2026-I v22: route via winsten of via bbp naar de AIQ; 2025-II v13, v16, v20, v26). Raakt ongeveer 10 vragen in alle drie examens. Bedrijfseconomie koos in bedrijfsecon-046 voor één criterium plus 'raakt ook'; voor economie geldt dat nog niet.",
+      "options": [
+        "Eén criterium (het element met het meeste gewicht, of de eerste route in het correctievoorschrift), de andere criteria als 'raakt ook'",
+        "De punten van het scorepunt naar rato verdelen over de criteria (vraagt een aanpassing van de straat)",
+        "Koppelen aan de leerdoelgroep in plaats van een criterium als alle betrokken criteria uit dezelfde groep komen"
+      ],
+      "proposed": "Optie 1: past zonder aanpassing in de straat, houdt de puntentelling eenduidig, en de docent ziet via 'raakt ook' dat de andere criteria ook getoetst worden (zelfde keuze als bij bedrijfseconomie).",
+      "impact": "medium",
+      "applies_to": [
+        "exam-judge",
+        "mapping-verifier",
+        "exporter"
+      ],
+      "affects_units": [
+        "vwo-2025-tv1-q5",
+        "vwo-2025-tv1-q10",
+        "vwo-2025-tv1-q19",
+        "vwo-2025-tv2-q3",
+        "vwo-2025-tv2-q13",
+        "vwo-2025-tv2-q16",
+        "vwo-2025-tv2-q20",
+        "vwo-2025-tv2-q26",
+        "vwo-2026-tv1-q22",
+        "vwo-2026-tv1-q23"
+      ],
+      "status": "answered",
+      "answer": "Optie 1: een criterium per scorepunt (het element met het meeste gewicht, of de eerste route in het correctievoorschrift), de andere criteria als 'raakt ook' (0 punten).",
+      "answered_by": "user",
+      "answered_at": "2026-11-15T20:17:29Z",
+      "source_run": "20261115-1902-examen-economie",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": null
+    },
+    {
+      "id": "economie-087",
+      "question": "Welk Bloom-niveau krijgt een scorepunt bij een examenvraag met 'leg uit', 'motiveer', 'beargumenteer' of 'geef een verklaring'?",
+      "context": "61 van de 87 vragen (118 van de 177 punten) zijn uitlegvragen. In de algemene werkwoordenlijst staat 'uitleggen' bij begrijpen en 'beargumenteren' bij evalueren; economie heeft geen eigen werkwoordentabel. Twee soorten: 29 vragen (57 p) geven de conclusie ('Leg uit dat hogere inflatie zorgt voor een stijgende dekkingsgraad', 'Leg de stelling van de econoom uit'), 32 vragen (61 p) laten de leerling de uitkomst zelf bepalen ('Leg uit of monetair beleid effectiever wordt', 'Leg uit welk effect ... via de valutamarkt ... heeft'). Veel antwoorden zijn een keten van twee of drie schakels in een nieuwe context. Voor de lesbrieven is economie-063 besloten (begrijpen als de conclusie gegeven is, toepassen als de leerling de uitkomst zelf met gegevens bepaalt), maar dat besluit geldt alleen voor Levensloop en Marktgedrag (economie-065). economie-001 staat analyseren toe waar de eindterm zelf een verband of oorzaak-gevolg vraagt. Het niveau bepaalt de Bloom-verdeling van de examenbank en later van de toets-straat.",
+      "options": [
+        "Regel van economie-063 ook voor examens: begrijpen als de conclusie in de vraag staat; toepassen als de leerling de uitkomst zelf met gegevens of een model bepaalt; 'Analyseer' blijft analyseren",
+        "Zoals optie 1, maar analyseren als de leerling zelf een keten van twee of meer schakels moet opbouwen naar een niet gegeven uitkomst en het criterium zelf op analyseren staat (lijn van economie-001)",
+        "Altijd het werkwoord van de vraag volgen: uitleggen = begrijpen, beargumenteren = evalueren"
+      ],
+      "proposed": "Optie 1: dezelfde regel als bij de lesbrieven, dus examenbank en methodekoppeling zijn vergelijkbaar, en de beoordelaars hebben een toetsbare grens (staat de conclusie in de vraag of niet). Optie 2 is preciezer maar laat de beoordelaars schakels tellen, waarover ze vaak verschillen.",
+      "impact": "high",
+      "applies_to": [
+        "exam-judge",
+        "mapping-verifier",
+        "item-labeller"
+      ],
+      "affects_units": [
+        "*"
+      ],
+      "status": "answered",
+      "answer": "Optie 1: regel van economie-063 ook voor examens: 'leg uit / motiveer / beargumenteer / geef een verklaring' = begrijpen als de conclusie in de vraag staat; toepassen als de leerling de uitkomst zelf met gegevens of een model bepaalt; 'Analyseer' blijft analyseren. Bindt exam-judge, mapping-verifier, item-labeller.",
+      "answered_by": "user",
+      "answered_at": "2026-11-15T20:17:29Z",
+      "source_run": "20261115-1902-examen-economie",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": null
+    },
+    {
+      "id": "economie-088",
+      "question": "Welk Bloom-niveau krijgen teken-, arceer- en 'toon met een berekening aan'-vragen in het examen?",
+      "context": "'Tekenen' staat in de algemene lijst als twijfelgeval tussen toepassen en creëren; 'arceren' en 'aantonen' staan er niet in. Teken/arceer: 2025-I v13 (TCK arceren), v19 (verschuivingen op drie markten tekenen), 2025-II v4 (GO- en MO-lijn met subsidie), v5 (subsidiebedrag arceren), 2026-I v4 (verandering totaal surplus arceren), v13 (MB- en GA-curve tekenen in het IS-MB-GA-model). Toon aan: 2025-II v19 en v28 (gegeven uitkomst narekenen). 8 vragen, circa 17 punten.",
+      "options": [
+        "Toepassen: tekenen of arceren in een gegeven figuur en aantonen met een berekening is een geleerde procedure uitvoeren, ook als de leerling een verschuiving uit een gegeven oorzaak tekent (2025-I v19, 2026-I v13)",
+        "Zoals optie 1, maar tekeningen die een verschuiving uit een oorzaak afleiden (2025-I v19, 2026-I v13) op analyseren",
+        "Arceren en aantonen op begrijpen, tekenen op toepassen"
+      ],
+      "proposed": "Optie 1: past bij de lesbrieven (economie-046 koppelt tekenopdrachten aan het rekencriterium van de grootheid) en bij de aanhef 'in contexten toepassen'.",
+      "impact": "low",
+      "applies_to": [
+        "exam-judge",
+        "mapping-verifier",
+        "item-labeller"
+      ],
+      "affects_units": [
+        "vwo-2025-tv1-q13",
+        "vwo-2025-tv1-q19",
+        "vwo-2025-tv2-q4",
+        "vwo-2025-tv2-q5",
+        "vwo-2025-tv2-q19",
+        "vwo-2025-tv2-q28",
+        "vwo-2026-tv1-q4",
+        "vwo-2026-tv1-q13"
+      ],
+      "status": "answered",
+      "answer": "Optie 3: arceren en 'toon met een berekening aan' op begrijpen; tekenen (ook een verschuiving uit een gegeven oorzaak, 2025-I v19, 2026-I v13) op toepassen. Bindt exam-judge, mapping-verifier, item-labeller.",
+      "answered_by": "user",
+      "answered_at": "2026-11-15T20:17:29Z",
+      "source_run": "20261115-1902-examen-economie",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": null
+    },
+    {
+      "id": "economie-089",
+      "question": "Mogen de volgende termen uit de examens bij het koppelen gelijkstaan aan de term in de syllabus of het criterium (woordenlijst voor alle examens)?",
+      "context": "Voorgestelde paren: 'effectieve vraag' / 'EV-curve' (2025-I v21) = de bestedingen in het Keynesiaanse kruis (I4.1); 'productiepotentieel' (2025-II v24) = 'potentiële productie (Y*)'; 'Pareto-efficiënt' (2025-II v6) = 'Pareto efficiënt' (D3.5); 'vaste (constante) kosten' / 'totale vaste kosten' (2025-I v13, v27; 2026-I v2) = 'TCK'; 'starre arbeidsmarkt' / 'loonrigiditeit' (2025-II v24; 2026-I v22) = 'loon- en prijsrigiditeit' (I4.4); 'reële evenwichtsrente' (2025-I v24) = de reële rente bij Y = Y* (I4.2/I4.3); 'speluitkomst' (2026-I v5) = de uitkomst van het spel (F1.2). Daarnaast staan in de woordenlijst paren die nu alleen voor een lesbrief gelden en ook in de examens voorkomen: 'ruilen over de tijd' = 'intertemporele ruil' (2025-II v7), 'schijventarief' = 'tarieftabel' (2025-II v28), 'adverse selection' = 'averechtse selectie'. Raakt ongeveer 11 vragen in alle drie examens.",
+      "options": [
+        "Alle nieuwe paren vastleggen voor alle examens (zonder scope) en de genoemde lesbriefparen ook voor de examens laten gelden",
+        "Alleen de nieuwe paren vastleggen; lesbriefparen blijven bij hun lesbrief",
+        "Geen woordenlijst; per scorepunt laten beoordelen"
+      ],
+      "proposed": "Optie 1: het zijn gangbare synoniemen in examen- en lesboektaal; zonder woordenlijst missen de kandidaatcriteria juist deze scorepunten.",
+      "impact": "medium",
+      "applies_to": [
+        "exam-judge",
+        "mapping-verifier"
+      ],
+      "affects_units": [
+        "vwo-2025-tv1-q13",
+        "vwo-2025-tv1-q21",
+        "vwo-2025-tv1-q24",
+        "vwo-2025-tv1-q27",
+        "vwo-2025-tv2-q6",
+        "vwo-2025-tv2-q7",
+        "vwo-2025-tv2-q24",
+        "vwo-2025-tv2-q28",
+        "vwo-2026-tv1-q2",
+        "vwo-2026-tv1-q5",
+        "vwo-2026-tv1-q22"
+      ],
+      "status": "answered",
+      "answer": "Optie 1: alle nieuwe paren vastleggen voor alle examens (zonder scope) en de lesbriefparen 'ruilen over de tijd' = 'intertemporele ruil', 'schijventarief' = 'tarieftabel', 'adverse selection' = 'averechtse selectie' ook voor de examens laten gelden.",
+      "answered_by": "user",
+      "answered_at": "2026-11-15T20:17:29Z",
+      "source_run": "20261115-1902-examen-economie",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": null
+    },
+    {
+      "id": "economie-090",
+      "question": "Tellen 'Bron 1' en 'Matrix 1' in de tekst van opgave 4 van 2025-II als informatiebronnen van die vragen?",
+      "context": "Economie-examens hebben geen apart bronnenboekje; in 2025-II opgave 4 (Strijd om de leerling, v17-v21) staan 'Bron 1' en 'Matrix 1' als blok in de opgavetekst. Het inlezen telt alleen 'informatiebron N' uit een bijlage, dus nu heeft geen enkele vraag een bron; v19 noemt 'bron 1' en v20 de matrix. Dit bepaalt welke teksten een beoordelaar als bewijs mag citeren en later de knop 'bronnen' bij het labelen van examenvragen (voor bedrijfseconomie telt alleen een genummerde informatiebron, bedrijfsecon-064).",
+      "options": [
+        "Ja: Bron 1 en Matrix 1 tellen als bronnen van de vragen die ze gebruiken (v19 en v20)",
+        "Nee: het is opgavetekst; geen bronnen, beoordelaars citeren ze als opgavetekst"
+      ],
+      "proposed": "Optie 2: het staat in de opgavetekst die de beoordelaar toch leest, en zo blijft 'bronnen' vergelijkbaar met de andere examens (allemaal 0).",
+      "impact": "low",
+      "applies_to": [
+        "exam-ingest",
+        "exam-judge",
+        "item-labeller"
+      ],
+      "affects_units": [
+        "vwo-2025-tv2-q17",
+        "vwo-2025-tv2-q18",
+        "vwo-2025-tv2-q19",
+        "vwo-2025-tv2-q20",
+        "vwo-2025-tv2-q21"
+      ],
+      "status": "answered",
+      "answer": "Optie 2: nee, 'Bron 1' en 'Matrix 1' in 2025-II opgave 4 zijn opgavetekst; geen informatiebronnen (sources blijft leeg); beoordelaars citeren ze als opgavetekst.",
+      "answered_by": "user",
+      "answered_at": "2026-11-15T20:17:29Z",
+      "source_run": "20261115-1902-examen-economie",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "vwo-2025-tv2"
+    },
+    {
+      "id": "economie-091",
+      "question": "De uitwerkbijlage van 2025-I ontbreekt in de invoer: koppelen we de teken- en arceervragen op de vraag- en correctietekst, of voegt u het bestand nog toe?",
+      "context": "v13 (1 p, TCK arceren bij een prijs van € 3) en v19 (2 p, verschuivingen op drie markten tekenen) verwijzen naar de uitwerkbijlage; het correctievoorschrift is daar alleen een figuur, die in de tekst ontbreekt (bij v13 staat een korte beschrijving tussen haken). Ook met de bijlage blijven figuren afbeeldingen, dus de koppeling komt in beide gevallen uit de vraag- en correctietekst. Raakt 2 vragen, 3 punten.",
+      "options": [
+        "Doorgaan op vraag- en correctietekst, met de notitie 'uitwerkbijlage niet in de invoer'; het bestand later toevoegen (vw-1022-a-25-1-u.pdf)",
+        "Pauzeren tot de docent vw-1022-a-25-1-u.pdf in input/examens-economie-vwo/2025 TV1/ zet"
+      ],
+      "proposed": "Optie 1: de koppeling hangt niet van de figuur af (de vraagtekst noemt de grootheid of de markten), en de notitie houdt het zichtbaar.",
+      "impact": "low",
+      "applies_to": [
+        "exam-ingest",
+        "exam-judge",
+        "item-labeller"
+      ],
+      "affects_units": [
+        "vwo-2025-tv1-q13",
+        "vwo-2025-tv1-q19"
+      ],
+      "status": "answered",
+      "answer": "Optie 1: doorgaan op vraag- en correctietekst met de notitie 'uitwerkbijlage niet in de invoer' (2025-I v13, v19); het bestand vw-1022-a-25-1-u.pdf later toevoegen.",
+      "answered_by": "user",
+      "answered_at": "2026-11-15T20:17:29Z",
+      "source_run": "20261115-1902-examen-economie",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": "vwo-2025-tv1"
+    },
+    {
+      "id": "economie-092",
+      "question": "Koppelen we examenpunten over contante waarde (disconteren van een toekomstig bedrag) analoog aan het spaarcriterium met samengestelde interest, of telt contante waarde voor de examens als 'buiten huidige syllabus'?",
+      "context": "2025-I opgave 2 (pensioenen) vraagt in v9-s2 het effect van de rente op de huidige waarde van toekomstige uitkeringen en in v11-s1/s2 de berekening 450 mld / 1,01^25 en / 1,02^25 (3 punten). Geen criterium noemt contante waarde. Nu gekoppeld aan E1.2-01-c (berekent extra bestedingsruimte later door nu te sparen, met samengestelde interest) via economie-084 (analoog koppelen). economie-042 zette contante waarde voor de lesbrief Vraag en aanbod buiten de syllabus (verrijking); die scope geldt niet voor de examens, en één judge volgde 042 toch. Het examen toetst het dus wel; in de examenbank wordt E1.2-01-c daardoor het zwaarst getoetste criterium van 2025-I.",
+      "options": [
+        "Analoog koppelen aan E1.2-01-c met de notitie 'analoog: contante waarde, geen eigen eindterm' (zoals nu, lijn van economie-084)",
+        "Niet koppelen: 'buiten huidige syllabus' (lijn van economie-042), punten tellen als ongekoppeld",
+        "Koppelen aan E1.2-01-c en de docent laat bij een volgende /generate een criterium voor contante waarde toevoegen aan E1.2"
+      ],
+      "proposed": "Optie 1: het examen behandelt disconteren als omkering van sparen met samengestelde interest; economie-084 is voor de examens het bindende besluit, en de notitie houdt het verschil zichtbaar.",
+      "impact": "medium",
+      "applies_to": [
+        "exam-judge",
+        "mapping-verifier",
+        "exporter"
+      ],
+      "affects_units": [
+        "vwo-2025-tv1-q9",
+        "vwo-2025-tv1-q11"
+      ],
+      "status": "open",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null,
+      "source_run": "20261115-1902-examen-economie",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": null
+    },
+    {
+      "id": "economie-093",
+      "question": "Welk Bloom-niveau krijgen de punten van een 'leg uit of / leg uit welk effect / leidt X tot meer of minder? Leg uit'-vraag met twee scorepunten: toepassen voor beide punten, of toepassen alleen voor het punt dat de conclusie draagt en begrijpen voor de mechanismestap? En blijven classificatievragen met open conclusie ('Is dit een collectief goed?', 'stroom of voorraad?', 'is er sprake van verzonken kosten?') op begrijpen?",
+      "context": "economie-087 zegt toepassen als de leerling de uitkomst zelf bepaalt, maar zegt niet of dat per vraag of per scorepunt geldt. De judges wisselen: 2025-I v23 en 2026-I v6/v29 alleen het conclusiepunt op toepassen; 2025-I v2/v20, 2025-II v16 en 2026-I v24/v25 beide punten; 2026-I v14 en 2025-I v24-s1 geen. Classificatievragen staan nu consequent op begrijpen (economie-002: herkennen in een context = begrijpen), ook al is de conclusie open. Raakt ongeveer 20 scorepunten in drie examens en het Bloom-profiel van de examenbank (E7).",
+      "options": [
+        "Per scorepunt: het punt dat de (open) conclusie draagt = toepassen, mechanismestappen = begrijpen (zoals 22 §3 voor Analyseer-vragen); classificatievragen blijven begrijpen",
+        "Per vraag: alle punten van een vraag met open conclusie = toepassen; classificatievragen ook toepassen",
+        "Per vraag toepassen, maar classificatievragen met open conclusie blijven begrijpen (economie-002 gaat voor)"
+      ],
+      "proposed": "Optie 1: sluit aan op de bestaande regel voor Analyseer-vragen (conclusiepunt draagt het niveau van de vraag, steunpunten hun eigen niveau) en op economie-002.",
+      "impact": "medium",
+      "applies_to": [
+        "exam-judge",
+        "mapping-verifier",
+        "item-labeller"
+      ],
+      "affects_units": [
+        "vwo-2025-tv1-q2",
+        "vwo-2025-tv1-q20",
+        "vwo-2025-tv1-q23",
+        "vwo-2025-tv1-q24",
+        "vwo-2025-tv2-q16",
+        "vwo-2026-tv1-q6",
+        "vwo-2026-tv1-q14",
+        "vwo-2026-tv1-q24",
+        "vwo-2026-tv1-q25",
+        "vwo-2026-tv1-q29"
+      ],
+      "status": "open",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null,
+      "source_run": "20261115-1902-examen-economie",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": null
+    },
+    {
+      "id": "economie-094",
+      "question": "Welk Bloom-niveau krijgt een 'noem' of 'geef aan' waarvan het antwoord eerst met gegevens bepaald moet worden (Nash-evenwichten uit een matrix, de speluitkomst uit een spelboom, de evenwichtsrente uit een grafiek)?",
+      "context": "In de werkwoordtabel staat 'noemen' op onthouden en 'aangeven' op onthouden/begrijpen. 2025-I v28 ('Noem de Nash-evenwichten uit tabel 2') kreeg onthouden (judge A) tegenover toepassen (judge B); 2025-I v24-s2 ('Noem de nieuwe reële evenwichtsrente') en 2026-I v5-s1 ('Geef aan wat de speluitkomst is') kregen toepassen. economie-072 (juist/onjuist over een regel = onthouden) gaat over herkennen van een bewering, niet over het bepalen van een uitkomst. Gedisputeerd: 2025-I v28 naar toepassen.",
+      "options": [
+        "Toepassen als het genoemde antwoord met een geleerde procedure uit gegevens van de vraag bepaald moet worden; onthouden alleen bij een feit of begrip zonder gegevens",
+        "Het werkwoord beslist: noemen = onthouden, ook bij een bepaalde uitkomst"
+      ],
+      "proposed": "Optie 1: dezelfde lijn als de antwoordvormregel (een uit gegevens bepaald antwoord is minstens toepassen) en als economie-063/087.",
+      "impact": "low",
+      "applies_to": [
+        "exam-judge",
+        "mapping-verifier",
+        "item-labeller"
+      ],
+      "affects_units": [
+        "vwo-2025-tv1-q24",
+        "vwo-2025-tv1-q28",
+        "vwo-2026-tv1-q5"
+      ],
+      "status": "open",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null,
+      "source_run": "20261115-1902-examen-economie",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": null
+    },
+    {
+      "id": "economie-095",
+      "question": "Hoe koppelen we scorepunten die vragen dat meer concurrentie (marktwerking, vergelijkingssites, meer aanbieders) aanbieders dwingt efficiënter te werken of kosten en prijzen te verlagen?",
+      "context": "2025-I v10-s1 (marktwerking -> pensioenfondsen werken efficiënter -> lagere bedrijfskosten) is nu ongekoppeld ('buiten huidige syllabus'); 2025-I v10-s2 (lagere kosten doorberekend in de premie) is analoog aan D1.12-01-a gekoppeld; 2025-I v5-s1 (meer informatie -> meer concurrentie -> lagere premies) en 2025-II v14-s1 (meer aanbieders -> lagere commissies) aan D2.1-01-d (marktmacht uit het aantal aanbieders). De criteria over marktvormen gaan over marktmacht, prijsafzetlijn en surplus, niet over kostenefficiëntie. Het mechanisme komt in twee van de drie examens terug (4 punten).",
+      "options": [
+        "Analoog koppelen: concurrentie -> lagere prijs aan D2.1-01-d, kostendoorberekening aan D1.12-01-a, en kostenefficiëntie door concurrentiedruk ook aan D2.1-01-d, met de notitie 'analoog'",
+        "Alleen het prijseffect van minder marktmacht koppelen (D2.1-01-d); kostenefficiëntie door concurrentiedruk blijft 'buiten huidige syllabus'",
+        "Alles over efficiëntie door concurrentie buiten de syllabus, ook het prijseffect"
+      ],
+      "proposed": "Optie 2: het prijseffect van meer aanbieders volgt uit D2.1-01-d; productieve efficiëntie (X-efficiëntie) staat niet in de syllabus en blijft als gat zichtbaar.",
+      "impact": "low",
+      "applies_to": [
+        "exam-judge",
+        "mapping-verifier",
+        "exporter"
+      ],
+      "affects_units": [
+        "vwo-2025-tv1-q5",
+        "vwo-2025-tv1-q10",
+        "vwo-2025-tv2-q14"
+      ],
+      "status": "open",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null,
+      "source_run": "20261115-1902-examen-economie",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": null
     }
   ]
 }

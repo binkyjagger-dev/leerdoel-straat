@@ -1,0 +1,519 @@
+# Bevindingen examenbank economie
+
+## vaardigheid domein A
+
+- vwo-2025-tv1 vraag 14 scorepunt 4 (1 p): vaardigheid uit domein A (geen criteria): gestegen prijs als percentage van de gestegen variabele kosten.; Zuivere rekenstap (aandeel als percentage); geen criterium voor 'doorberekening van kosten in de prijs'; vaardigheid uit domein A (geen criteria), economie-085.
+- vwo-2025-tv1 vraag 27 scorepunt 2 (1 p): vaardigheid uit domein A (geen criteria): zuivere rekenstap procentuele verandering; Procentuele verandering: vaardigheid uit domein A (geen criteria), economie-085.
+- vwo-2026-tv1 vraag 19 scorepunt 2 (1 p): vaardigheid uit domein A (geen criteria): percentage van het regenwoud omrekenen naar hectare; Pure arithmetic step: 2,8% of 700 miljoen hectare = 19,6 miljoen hectare; vaardigheid uit domein A (geen criteria), per economie-085.
+
+## buiten huidige syllabus
+
+- vwo-2025-tv1 vraag 4 scorepunt 2 (1 p): Getoetst: gevolg van vroegere huisartszorg voor de totale zorgkosten (vermijden van duurdere zorg); geen criterium vraagt deze redenering - buiten huidige syllabus.; Kostenbesparing door eerdere behandeling / vermijden van specialistische zorg: geen criterium vraagt dit mechanisme.
+- vwo-2025-tv1 vraag 10 scorepunt 1 (1 p): Concurrentiedruk -> doelmatiger werken/lagere bedrijfskosten (X-efficientie) heeft geen criterium in de huidige syllabus.; Concurrentie -> efficienter werken -> lagere kosten: geen criterium in de huidige syllabus (marktvormcriteria gaan over marktmacht/surplus, niet over kosten).
+
+## examen boven criterium
+
+- G4.4-01-c (begrijpen) — vwo-2025-tv1 vraag 2 scorepunt 1: toepassen
+- G4.4-01-c (begrijpen) — vwo-2025-tv1 vraag 2 scorepunt 2: toepassen
+- E2.1-02-b (begrijpen) — vwo-2025-tv1 vraag 11 scorepunt 3: analyseren
+- I3.8-01-c (begrijpen) — vwo-2025-tv1 vraag 20 scorepunt 2: toepassen
+- I4.2-01-b (begrijpen) — vwo-2025-tv1 vraag 24 scorepunt 1: toepassen
+- F2.4-01-b (begrijpen) — vwo-2025-tv1 vraag 29 scorepunt 2: toepassen
+- D1.16-01-b (begrijpen) — vwo-2025-tv2 vraag 1 scorepunt 1: toepassen
+- D3.5-01-a (onthouden) — vwo-2025-tv2 vraag 6 scorepunt 2: begrijpen
+- E1.6-01-a (begrijpen) — vwo-2025-tv2 vraag 8 scorepunt 1: toepassen
+- E2.1-01-a (begrijpen) — vwo-2025-tv2 vraag 8 scorepunt 2: toepassen
+- I3.8-03-a (begrijpen) — vwo-2025-tv2 vraag 16 scorepunt 1: toepassen
+- I3.8-02-a (begrijpen) — vwo-2025-tv2 vraag 16 scorepunt 2: toepassen
+- I4.3-02-a (begrijpen) — vwo-2025-tv2 vraag 25 scorepunt 2: toepassen
+- D1.15-01-a (begrijpen) — vwo-2025-tv2 vraag 26 scorepunt 2: toepassen
+- I4.1-02-b (begrijpen) — vwo-2026-tv1 vraag 14 scorepunt 2: toepassen
+- E2.2-01-d (begrijpen) — vwo-2026-tv1 vraag 15 scorepunt 1: toepassen
+- I1.5-01-b (begrijpen) — vwo-2026-tv1 vraag 15 scorepunt 2: toepassen
+- I3.8-02-b (begrijpen) — vwo-2026-tv1 vraag 24 scorepunt 1: toepassen
+- D1.24-01-a (begrijpen) — vwo-2026-tv1 vraag 25 scorepunt 2: toepassen
+- G4.4-01-c (begrijpen) — vwo-2026-tv1 vraag 28 scorepunt 1: toepassen
+- G4.4-01-c (begrijpen) — vwo-2026-tv1 vraag 28 scorepunt 2: toepassen
+- G4.5-01-a (begrijpen) — vwo-2026-tv1 vraag 29 scorepunt 2: toepassen
+
+## examen onder criterium
+
+- D2.1-01-d (analyseren) — vwo-2025-tv1 vraag 5 scorepunt 1: begrijpen
+- G3.2-01-c (toepassen) — vwo-2025-tv1 vraag 6 scorepunt 1: begrijpen
+- G3.2-01-c (toepassen) — vwo-2025-tv1 vraag 6 scorepunt 2: begrijpen
+- E1.2-01-c (toepassen) — vwo-2025-tv1 vraag 9 scorepunt 2: begrijpen
+- D1.16-01-c (toepassen) — vwo-2025-tv1 vraag 13 scorepunt 1: begrijpen
+- F1.11-01-d (analyseren) — vwo-2025-tv1 vraag 16 scorepunt 2: begrijpen
+- I1.1-01-c (toepassen) — vwo-2025-tv1 vraag 25 scorepunt 2: begrijpen
+- D3.9-02-b (toepassen) — vwo-2025-tv2 vraag 5 scorepunt 1: begrijpen
+- E2.1-02-d (toepassen) — vwo-2025-tv2 vraag 11 scorepunt 1: begrijpen
+- E2.1-02-d (toepassen) — vwo-2025-tv2 vraag 11 scorepunt 2: begrijpen
+- D2.1-01-d (analyseren) — vwo-2025-tv2 vraag 14 scorepunt 1: begrijpen
+- D1.14-01-b (toepassen) — vwo-2025-tv2 vraag 19 scorepunt 1: begrijpen
+- D1.16-01-c (toepassen) — vwo-2025-tv2 vraag 19 scorepunt 2: begrijpen
+- D1.19-01-a (toepassen) — vwo-2025-tv2 vraag 19 scorepunt 3: begrijpen
+- H4.6-02-b (toepassen) — vwo-2025-tv2 vraag 28 scorepunt 1: begrijpen
+- H4.6-02-b (toepassen) — vwo-2025-tv2 vraag 28 scorepunt 2: begrijpen
+- H4.6-02-b (toepassen) — vwo-2025-tv2 vraag 28 scorepunt 3: begrijpen
+- H4.6-01-a (toepassen) — vwo-2025-tv2 vraag 29 scorepunt 2: begrijpen
+- D3.3-01-a (toepassen) — vwo-2026-tv1 vraag 4 scorepunt 1: begrijpen
+- D3.3-01-a (toepassen) — vwo-2026-tv1 vraag 4 scorepunt 2: begrijpen
+- H4.4-01-d (toepassen) — vwo-2026-tv1 vraag 11 scorepunt 2: begrijpen
+- D1.18-01-c (analyseren) — vwo-2026-tv1 vraag 18 scorepunt 1: begrijpen
+- D1.19-01-c (analyseren) — vwo-2026-tv1 vraag 22 scorepunt 1: begrijpen
+
+## alleen geraakt (77 criteria: wel in een scorepunt, 0 punten)
+
+- D1.2-01-b (toepassen) Ik kan de gevraagde hoeveelheid van één vrager bij een gegeven prijs bepalen met de vraaglijn of de vraagfunctie. — vwo-2025-tv2 vraag 19
+- D1.5-01-a (onthouden) Ik kan de prijselasticiteit omschrijven als procentuele verandering van de gevraagde hoeveelheid gedeeld door die van de prijs. — vwo-2026-tv1 vraag 9
+- D1.12-01-b (toepassen) Ik kan bepalen of de collectieve aanbodlijn naar links of rechts verschuift door productiefactorprijzen, technische ontwikkeling of het aantal aanbieders. — vwo-2025-tv2 vraag 14
+- D1.13-01-a (begrijpen) Ik kan uitleggen waarom een heffing de aanbodlijn naar links en een subsidie naar rechts verschuift, vanuit de kosten. — vwo-2025-tv2 vraag 27; vwo-2026-tv1 vraag 20
+- D1.13-01-c (toepassen) Ik kan de nieuwe aanbodlijn tekenen na een heffing of subsidie, per product of als percentage van de prijs. — vwo-2025-tv2 vraag 4
+- D1.14-01-d (toepassen) Ik kan uit procentuele veranderingen van prijs en afzet die van TO berekenen door indexcijfers te vermenigvuldigen, zoals 1,10 × 0,95 = 1,045. — vwo-2026-tv1 vraag 27
+- D1.17-01-a (begrijpen) Ik kan het verschil uitleggen tussen TK (alle kosten), GTK (per eenheid) en MK (van één extra eenheid). — vwo-2025-tv2 vraag 1; vwo-2026-tv1 vraag 18
+- D1.17-01-b (toepassen) Ik kan de grootheden uit elkaar berekenen met GTK = TK / q, MK = ΔTK / Δq en TK = GTK × q, uit tabel, functie of grafiek. — vwo-2025-tv1 vraag 12; vwo-2025-tv1 vraag 13; vwo-2025-tv1 vraag 14; vwo-2025-tv2 vraag 2
+- D1.17-01-c (analyseren) Ik kan met MK afleiden of GTK daalt of stijgt, en verklaren waarom MK de GTK in het minimum snijdt. — vwo-2025-tv2 vraag 1
+- D1.18-01-a (begrijpen) Ik kan uitleggen waarom een hoeveelheidsaanpasser tot p = MK aanbiedt: bij een kleinere hoeveelheid levert een extra eenheid meer op dan ze kost. — vwo-2026-tv1 vraag 18
+- D1.21-01-a (begrijpen) Ik kan uitleggen dat de winst stijgt zolang MO groter is dan MK, daalt zodra MK groter is, en maximaal is bij MO = MK. — vwo-2026-tv1 vraag 17
+- D1.21-01-b (toepassen) Ik kan de winstmaximaliserende afzet bepalen uit een tabel, grafiek of functies van MO en MK. — vwo-2025-tv2 vraag 2
+- D1.21-01-d (analyseren) Ik kan afleiden hoe de winstmaximaliserende afzet verandert: hogere MK verkleint de afzet, andere constante kosten laten haar gelijk. — vwo-2025-tv1 vraag 14; vwo-2026-tv1 vraag 3
+- D1.22-01-b (toepassen) Ik kan bij een prijs bepalen of er een vraagoverschot (tekort) of aanbodoverschot is en hoe de prijs zich aanpast. — vwo-2025-tv2 vraag 27
+- D1.23-01-c (toepassen) Ik kan de evenwichtsprijs en evenwichtshoeveelheid aflezen in een grafiek bij het snijpunt van de vraaglijn en aanbodlijn. — vwo-2025-tv2 vraag 27
+- D1.24-01-c (toepassen) Ik kan na een verschuiving van vraag- of aanbodfunctie het nieuwe evenwicht en de verandering van de totale opbrengst (p × q) berekenen. — vwo-2025-tv2 vraag 19; vwo-2026-tv1 vraag 20
+- D2.1-01-a (begrijpen) Ik kan per marktvorm beschrijven hoeveel aanbieders er zijn, of het goed homogeen of heterogeen is en hoe groot de toetreding is. — vwo-2025-tv2 vraag 14; vwo-2026-tv1 vraag 16
+- D2.1-01-c (toepassen) Ik kan de prijsafzetlijn van een aanbieder tekenen: horizontaal bij volkomen concurrentie, dalend bij monopolistische concurrentie, oligopolie en monopolie. — vwo-2025-tv2 vraag 4
+- D2.2-02-b (toepassen) Ik kan in een grafiek de winstmaximaliserende afzet bepalen, de prijs aflezen op de prijsafzetlijn en de maximale winst als oppervlakte tonen. — vwo-2025-tv1 vraag 12; vwo-2025-tv1 vraag 13; vwo-2025-tv2 vraag 5
+- D2.3-01-b (begrijpen) Ik kan uitleggen waarom prijsdiscriminatie mislukt als afnemers op de goedkope deelmarkt kopen en op de dure deelmarkt doorverkopen. — vwo-2025-tv2 vraag 3
+- D3.1-01-a (onthouden) Ik kan consumentensurplus omschrijven als het voordeel van vragers die meer willen betalen dan de marktprijs die ze betalen. — vwo-2025-tv1 vraag 5
+- D3.6-01-a (toepassen) Ik kan in een monopoliegrafiek de Harberger-driehoek bepalen als surplus tussen de afzet bij marginale opbrengst (MO) = marginale kosten (MK) en bij p = MK. — vwo-2026-tv1 vraag 4
+- D3.7-01-a (toepassen) Ik kan in een grafiek het consumentensurplus en producentensurplus bepalen bij monopolie en bij volkomen concurrentie. — vwo-2026-tv1 vraag 4
+- D3.7-01-c (analyseren) Ik kan verklaren waarom marktmacht het producentensurplus vergroot en het consumentensurplus verkleint, terwijl het totale surplus afneemt. — vwo-2025-tv1 vraag 5
+- E1.3-01-d (toepassen) Ik kan bij sparen of een autolening bepalen of iemand vermogen vraagt of aanbiedt, met tijdsvoorkeur of risico-aversie als argument. — vwo-2026-tv1 vraag 6
+- E1.5-02-d (analyseren) Ik kan uit informatie over een lener of inflatieverwachting afleiden hoe vraag en aanbod van vermogen en de rente veranderen. — vwo-2026-tv1 vraag 26
+- E1.7-01-a (begrijpen) Ik kan in een context herkennen of een investering publiek kapitaal (infrastructuur) of privaat kapitaal (zoals menselijk kapitaal) vormt. — vwo-2026-tv1 vraag 7
+- E1.7-01-d (begrijpen) Ik kan toelichten hoe investeren in menselijk kapitaal, zoals een opleiding, leidt tot hogere arbeidsproductiviteit en later hoger inkomen. — vwo-2025-tv2 vraag 17; vwo-2025-tv2 vraag 23; vwo-2026-tv1 vraag 7
+- E1.8-01-a (begrijpen) Ik kan het verschil uitleggen tussen een voorraadgrootheid (op een tijdstip gemeten) en een stroomgrootheid (over een periode gemeten). — vwo-2025-tv2 vraag 9; vwo-2026-tv1 vraag 8
+- E1.8-01-d (analyseren) Ik kan uit een reeks stromen afleiden hoe een voorraad zich ontwikkelt, bijvoorbeeld dat vermogen daalt zolang een huishouden ontspaart. — vwo-2025-tv2 vraag 10
+- E1.9-01-c (begrijpen) Ik kan uitleggen waarom de overheid, anders dan een huishouden, de lasten van de staatsschuld op latere belastingbetalers kan afschuiven. — vwo-2026-tv1 vraag 15
+- E2.1-01-b (begrijpen) Ik kan uitleggen waarom een gepensioneerde met waardevast pensioen koopkracht behoudt maar bij reële loonstijging achterraakt bij werkenden. — vwo-2025-tv1 vraag 8
+- E2.1-01-c (toepassen) Ik kan een waardevast en een welvaartsvast pensioen berekenen na indexering met prijs- en loonstijgingen over één of meer jaren. — vwo-2025-tv2 vraag 8
+- E2.1-02-a (begrijpen) Ik kan de levensloop beschrijven als sparen tijdens het werk en ontsparen na pensionering, met de overheid als verzorger van de AOW. — vwo-2025-tv2 vraag 7
+- E2.2-01-b (toepassen) Ik kan het begrotingssaldo berekenen uit overheidsinkomsten en overheidsuitgaven, inclusief rentelasten. — vwo-2025-tv1 vraag 18
+- E2.2-02-b (toepassen) Ik kan het begrotingstekort als percentage van het bbp en de staatsschuldquote berekenen uit gegeven bedragen. — vwo-2026-tv1 vraag 27
+- F1.2-01-c (toepassen) Ik kan uit een pay-off matrix aflezen welke pay-off elke speler krijgt bij een combinatie van strategieën. — vwo-2025-tv1 vraag 27
+- F1.2-02-c (toepassen) Ik kan uit een spelboom aflezen welke pay-offs de spelers krijgen bij een reeks keuzes. — vwo-2026-tv1 vraag 5
+- F1.4-01-a (begrijpen) Ik kan uitleggen dat een Nash-evenwicht een uitkomst is waarbij geen speler zijn pay-off verhoogt door eenzijdig af te wijken. — vwo-2025-tv2 vraag 20
+- F1.4-01-b (toepassen) Ik kan met de beste-antwoordmethode in een pay-off matrix bepalen of een uitkomst een Nash-evenwicht is. — vwo-2025-tv1 vraag 29
+- F1.7-01-c (analyseren) Ik kan uit de aangepaste matrix afleiden hoe zelfbinding de beste keuze van de ander verandert en welke uitkomst volgt. — vwo-2025-tv1 vraag 16
+- F1.9-01-b (toepassen) Ik kan bepalen hoe de pay-offs in een volgende periode veranderen als een speler reputatie verliest of versterkt, zoals na bedrog. — vwo-2026-tv1 vraag 5
+- F1.12-01-a (begrijpen) Ik kan uitleggen dat binding in een langdurige relatie zekerheid en vertrouwen oplevert, maar de ruimte voor aanpassing beperkt. — vwo-2025-tv2 vraag 22
+- F1.12-01-c (toepassen) Ik kan in een context, zoals vast tegenover flexibel arbeidscontract, per partij bepalen wat binding oplevert en aan flexibiliteit kost. — vwo-2025-tv2 vraag 22
+- F2.1-01-c (toepassen) Ik kan een berovingsprobleem in een spelboom uitwerken en door terugredeneren bepalen dat de investeerder niet investeert, hoewel beiden daar beter van worden. — vwo-2025-tv2 vraag 23
+- F2.2-01-a (onthouden) Ik kan een collectief goed omschrijven met de kenmerken niet-rivaliserend en niet-uitsluitbaar. — vwo-2025-tv1 vraag 1
+- F2.4-02-a (begrijpen) Ik kan uitleggen dat internaliseren betekent dat de veroorzaker de externe kosten of baten in zijn eigen afweging meeneemt. — vwo-2025-tv2 vraag 17
+- G2.1-01-b (begrijpen) Ik kan uitleggen waarom partijen bij onvolledige informatie kosten maken om te zoeken, te onderhandelen en afspraken te controleren. — vwo-2025-tv1 vraag 5
+- G2.2-01-b (begrijpen) Ik kan in een ruilsituatie, zoals de verkoop van een tweedehands auto, herkennen wie de informatievoorsprong en wie de achterstand heeft. — vwo-2025-tv1 vraag 6
+- G3.1-02-b (begrijpen) Ik kan uitleggen hoe onderpand het risico voor een kredietgever met informatieachterstand verkleint en de kredietnemer prikkelt terug te betalen. — vwo-2026-tv1 vraag 26
+- G3.2-01-a (onthouden) Ik kan de vier kenmerken van een principaal-agentrelatie noemen: principaal, agent, asymmetrische informatie en tegengestelde belangen. — vwo-2025-tv1 vraag 6
+- G3.2-01-b (begrijpen) Ik kan in een context, zoals opdrachtgever en opdrachtnemer, herkennen wie de principaal en wie de agent is. — vwo-2025-tv1 vraag 6; vwo-2025-tv2 vraag 18
+- G3.2-02-c (begrijpen) Ik kan moral hazard herkennen in een bedrijfscontext, bijvoorbeeld een manager die minder inspanning levert dan de eigenaren verwachten. — vwo-2026-tv1 vraag 29
+- G3.4-01-b (begrijpen) Ik kan uitleggen hoe een toezichthouder op financiële markten de gevolgen van informatieasymmetrie beperkt, bijvoorbeeld met eisen aan informatie. — vwo-2026-tv1 vraag 26
+- G4.2-01-a (toepassen) Ik kan voor de verzekerde het verschil tussen de premie en de verwachte schade (kans maal schadebedrag) berekenen. — vwo-2025-tv1 vraag 3
+- G4.4-01-a (begrijpen) Ik kan uitleggen hoe averechtse selectie bij verzekeren ontstaat: bij gemiddelde premie verzekeren vooral hoge risico's zich en haken lage af. — vwo-2025-tv1 vraag 2; vwo-2026-tv1 vraag 28
+- H1.2-01-a (begrijpen) Ik kan uitleggen dat bestedingen van de een inkomen van een ander zijn, dus bij evenwicht Y = C + I + O + E – M. — vwo-2026-tv1 vraag 22
+- H1.2-01-c (toepassen) Ik kan met Y = C + I + O + E – M een ontbrekende grootheid berekenen, zoals investeringen. — vwo-2025-tv1 vraag 18; vwo-2026-tv1 vraag 23
+- H1.2-02-d (begrijpen) Ik kan voorspellen hoe het saldo lopende rekening verandert bij een verandering, bijvoorbeeld een groter overheidstekort bij gelijk particulier spaarsaldo. — vwo-2025-tv2 vraag 15
+- H2.1-01-a (begrijpen) Ik kan beschrijven dat meer bestedingen de productie tijdelijk verhogen en productiefactoren en technologie de productiecapaciteit blijvend laten groeien. — vwo-2025-tv2 vraag 14; vwo-2026-tv1 vraag 7
+- H2.2-01-b (begrijpen) Ik kan in een grafiek van Y tegen K aangeven dat meer K langs de curve beweegt en meer L of A haar verschuift. — vwo-2025-tv1 vraag 25
+- H2.4-01-c (begrijpen) Ik kan maatregelen in een context indelen naar A, K of L en aangeven dat de potentiële productie daardoor stijgt. — vwo-2025-tv2 vraag 11
+- H4.2-01-a (onthouden) Ik kan primair inkomen omschrijven als inkomen uit arbeid en vermogen vóór herverdeling, en secundair inkomen als primair inkomen min belastingen en premies plus uitkeringen en toeslagen. — vwo-2025-tv2 vraag 11; vwo-2026-tv1 vraag 11
+- H4.5-01-a (begrijpen) Ik kan uitleggen hoe herverdeling via belastingen of uitkeringen de prikkel kan verzwakken om te werken, sparen, leren of ondernemen. — vwo-2025-tv2 vraag 29
+- H4.6-01-b (toepassen) Ik kan uit het gemiddeld tarief bij stijgend inkomen bepalen of een stelsel progressief (tarief stijgt) of degressief (tarief daalt) is. — vwo-2026-tv1 vraag 11
+- H4.6-02-a (begrijpen) Ik kan het verschil uitleggen tussen aftrekpost (lager belastbaar inkomen), bijtelling (hoger belastbaar inkomen) en heffingskorting (lagere te betalen belasting). — vwo-2025-tv2 vraag 28
+- I1.1-02-a (begrijpen) Ik kan uitleggen dat het prijspeil met de consumentenprijsindex wordt gemeten en inflatie de procentuele stijging van dat prijspeil is. — vwo-2026-tv1 vraag 27
+- I1.2-01-a (begrijpen) Ik kan uitleggen dat potentiële productie (Y*) het structurele aanbod op lange termijn is en feitelijke productie (Y) door vraag bepaald wordt. — vwo-2025-tv1 vraag 20; vwo-2025-tv1 vraag 25; vwo-2025-tv2 vraag 12; vwo-2026-tv1 vraag 25
+- I3.6-01-a (begrijpen) Ik kan uitleggen waarom bij een negatieve nominale rente een prikkel ontstaat om vermogen contant aan te houden. — vwo-2026-tv1 vraag 10
+- I3.8-03-b (begrijpen) Ik kan uitleggen waarom een centrale bank bij vaste wisselkoers en vrij kapitaalverkeer geen eigen rentepolitiek kan voeren: renteverhoging geeft appreciatie. — vwo-2025-tv2 vraag 16
+- I3.9-02-b (begrijpen) Ik kan per mechanisme uitleggen hoe het een schok opvangt, bijvoorbeeld lagere lonen en prijzen, migratie of transfers. — vwo-2025-tv2 vraag 12
+- I4.1-03-b (begrijpen) Ik kan uitleggen hoe hogere overheidsuitgaven (O) of lagere belastingen (B) de bestedingen en het evenwichtsinkomen verhogen, en omgekeerd. — vwo-2025-tv1 vraag 22; vwo-2026-tv1 vraag 15
+- I4.3-01-b (begrijpen) Ik kan uitleggen dat ruimer (krapper) monetair beleid, met hogere (lagere) inflatiedoelstelling, een lagere (hogere) reële rente bij elk inkomen betekent. — vwo-2025-tv1 vraag 24
+- I4.3-02-c (toepassen) Ik kan in een grafiek met de evenwichtscurve van de goederenmarkt (IS-curve) en de MB-curve de verschuiving tekenen en het gevolg voor het inkomen bepalen bij sterke en zwakke afkeer. — vwo-2026-tv1 vraag 13
+- I4.4-01-b (begrijpen) Ik kan uitleggen waarom de GA-curve stijgt: nominale lonen en inkoopprijzen liggen op korte termijn in contracten vast, dus bij hogere inflatie dan verwacht dalen reële lonen en kosten en produceren bedrijven meer. — vwo-2025-tv2 vraag 24; vwo-2026-tv1 vraag 22
+- I4.4-02-a (begrijpen) Ik kan uitleggen dat bij stijgende (dalende) inflatie de inflatieverwachting stijgt (daalt), lonen opnieuw onderhandeld worden en de GA-curve omhoog (omlaag) schuift. — vwo-2026-tv1 vraag 13
+- I4.6-02-c (toepassen) Ik kan in een grafiek met een stijgende of verticale GA-curve het effect van budgettaire of monetaire vraagstimulering op inkomen en inflatie bepalen. — vwo-2025-tv2 vraag 25
+
+## nooit getoetst (373 van 551 criteria)
+
+- D1.1-01-a (onthouden) Ik kan betalingsbereidheid omschrijven als de maximale prijs die een vrager voor één eenheid van een goed wil betalen.
+- D1.1-01-b (begrijpen) Ik kan uitleggen waarom een vrager alleen koopt als de prijs niet hoger is dan zijn betalingsbereidheid.
+- D1.1-01-c (toepassen) Ik kan bepalen hoeveel eenheden een vrager bij een gegeven prijs koopt, uit gegeven betalingsbereidheden per eenheid.
+- D1.2-01-a (begrijpen) Ik kan uitleggen waarom de vraaglijn van één vrager daalt: hij waardeert elke extra eenheid lager.
+- D1.2-01-c (toepassen) Ik kan de individuele vraaglijn tekenen uit een tabel of vraagfunctie, met prijs verticaal en hoeveelheid horizontaal.
+- D1.3-01-a (begrijpen) Ik kan uitleggen dat de collectieve hoeveelheid per prijs de som van alle vragers is: horizontaal optellen, niet de prijzen.
+- D1.3-01-b (toepassen) Ik kan de collectief gevraagde hoeveelheid bij een gegeven prijs berekenen uit een tabel of individuele vraagfuncties.
+- D1.3-01-c (analyseren) Ik kan het verloop van de collectieve vraaglijn afleiden, inclusief de knik waar een vrager niets meer vraagt.
+- D1.4a-01-a (begrijpen) Ik kan uitleggen waarom de collectieve vraaglijn daalt: bij een lagere prijs liggen meer betalingsbereidheden op of boven de prijs.
+- D1.4a-01-b (toepassen) Ik kan de collectieve vraaglijn tekenen als trapvormige lijn door de betalingsbereidheden van hoog naar laag uit te zetten.
+- D1.4a-01-c (analyseren) Ik kan in een grafiek het verband leggen tussen spreiding van betalingsbereidheden en steilheid van de vraaglijn.
+- D1.4a-01-d (analyseren) Ik kan grafisch afleiden hoe de collectieve vraaglijn verandert als de betalingsbereidheid van sommige vragers stijgt of daalt.
+- D1.4b-01-a (begrijpen) Ik kan uitleggen waarom de eigen prijs een beweging langs de vraaglijn geeft en een andere factor een verschuiving.
+- D1.5-01-c (toepassen) Ik kan met een gegeven prijselasticiteit en prijsverandering in procenten de procentuele verandering van de gevraagde hoeveelheid berekenen.
+- D1.5-01-d (begrijpen) Ik kan een berekende prijselasticiteit interpreteren als gevoeligheid van de vraag, bijvoorbeeld −2 als 2% minder bij 1% duurder.
+- D1.6-01-a (begrijpen) Ik kan de vraag indelen als prijselastisch (kleiner dan −1) of prijsinelastisch (tussen −1 en 0) met een gegeven prijselasticiteit.
+- D1.6-01-c (toepassen) Ik kan uit procentuele veranderingen van prijs en hoeveelheid bepalen of de vraag prijselastisch of prijsinelastisch is, zoals bij tabak.
+- D1.7-01-a (onthouden) Ik kan de inkomenselasticiteit omschrijven als procentuele verandering van de gevraagde hoeveelheid gedeeld door procentuele verandering van het inkomen.
+- D1.7-01-b (toepassen) Ik kan de inkomenselasticiteit berekenen tussen twee combinaties van inkomen en hoeveelheid (segmentelasticiteit) uit de procentuele veranderingen.
+- D1.7-01-c (toepassen) Ik kan met een gegeven inkomenselasticiteit en inkomensverandering in procenten de procentuele verandering van de gevraagde hoeveelheid berekenen.
+- D1.7-01-d (begrijpen) Ik kan een berekende inkomenselasticiteit interpreteren als gevoeligheid van de vraag, bijvoorbeeld 0,5 als 0,5% meer bij 1% meer inkomen.
+- D1.8-01-a (begrijpen) Ik kan een goed indelen als inferieur (Ey < 0), normaal (0 < Ey < 1) of luxe (Ey > 1) met een gegeven inkomenselasticiteit (Ey).
+- D1.8-01-b (begrijpen) Ik kan uit de reactie op een inkomensverandering herkennen of een goed inferieur, normaal of luxe is, zoals huismerkproducten.
+- D1.8-01-c (toepassen) Ik kan met gegeven inkomenselasticiteiten van meerdere goederen berekenen of de vraag daalt, minder of meer dan evenredig stijgt.
+- D1.9-01-a (begrijpen) Ik kan in een context herkennen of goederen substituten (zoals koffie en thee) of complementen (zoals printers en inktpatronen) zijn.
+- D1.9-01-b (begrijpen) Ik kan met het gedrag van vragers uitleggen waarom een duurder substituut de vraag vergroot en een duurder complement verkleint.
+- D1.9-01-c (toepassen) Ik kan met een vraagfunctie berekenen hoe de prijs van goed A de vraag naar goed B verandert, en uit het teken van de coëfficiënt substituut of complement afleiden.
+- D1.9-02-a (toepassen) Ik kan de kruislingse prijselasticiteit berekenen als procentuele hoeveelheidsverandering van het ene goed gedeeld door procentuele prijsverandering van het andere.
+- D1.9-02-b (begrijpen) Ik kan twee goederen indelen als substituten (positieve kruislingse prijselasticiteit) of complementen (negatieve) op basis van het teken.
+- D1.9-02-c (begrijpen) Ik kan de grootte van de kruislingse prijselasticiteit interpreteren: verder van nul sterker vervangen of aanvullen, rond nul vrijwel onafhankelijk.
+- D1.9-02-d (toepassen) Ik kan met een kruislingse prijselasticiteit de procentuele hoeveelheidsverandering van het ene goed berekenen bij een prijsverandering van het andere.
+- D1.10-01-a (begrijpen) Ik kan uitleggen waarom de aanbodlijn van één aanbieder stijgt: hij biedt pas bij een hogere prijs extra eenheden aan.
+- D1.10-01-b (toepassen) Ik kan de aangeboden hoeveelheid van één aanbieder bij een gegeven prijs bepalen met de aanbodlijn of de aanbodfunctie.
+- D1.10-01-c (toepassen) Ik kan de individuele aanbodlijn tekenen uit een tabel of aanbodfunctie, met prijs verticaal en hoeveelheid horizontaal.
+- D1.11-01-a (begrijpen) Ik kan uitleggen dat de collectief aangeboden hoeveelheid per prijs de som van alle aanbieders is: horizontaal optellen.
+- D1.11-01-b (toepassen) Ik kan in een grafiek de collectieve aanbodlijn tekenen door bij meerdere prijzen de hoeveelheden horizontaal op te tellen, inclusief de knik.
+- D1.11-01-c (analyseren) Ik kan verklaren waarom de collectieve aanbodlijn na de knik vlakker loopt: meer aanbieders reageren op een prijsstijging.
+- D1.12-01-c (toepassen) Ik kan in een gegeven grafiek de nieuwe collectieve aanbodlijn aan de juiste kant van de oorspronkelijke lijn tekenen.
+- D1.13-01-b (begrijpen) Ik kan vergelijken hoe de aanbodlijn verschuift bij een vast bedrag per product en bij een percentage van de prijs.
+- D1.13-01-d (toepassen) Ik kan de nieuwe aanbodfunctie bepalen na een heffing of subsidie, bijvoorbeeld van Qa = 2p − 10 naar Qa = 2(p − 1) − 10.
+- D1.14-01-a (begrijpen) Ik kan uitleggen dat de prijs gelijk is aan de gemiddelde opbrengst (GO), omdat GO = TO / q = (p × q) / q = p.
+- D1.14-01-c (toepassen) Ik kan in een vraaggrafiek de TO bij een prijs bepalen als de oppervlakte van de rechthoek p × q.
+- D1.15-01-b (toepassen) Ik kan met een gegeven prijselasticiteit de procentuele verandering van afzet en omzet berekenen bij een gegeven prijsverandering.
+- D1.15-01-c (analyseren) Ik kan in een context uit de prijselasticiteit afleiden of een prijsverhoging of prijsverlaging de omzet vergroot, en dit onderbouwen.
+- D1.16-01-a (begrijpen) Ik kan kostenposten in een context indelen als constante (vaste) of variabele kosten, zoals huur van een pand en grondstoffen.
+- D1.18-01-b (toepassen) Ik kan uit een stijgende MK-lijn of MK-functie de aangeboden hoeveelheid en de aanbodfunctie bepalen, bijvoorbeeld van MK = 0,5q + 2 naar q = 2p − 4.
+- D1.19-01-b (toepassen) Ik kan in een grafiek de totale winst bepalen als afstand tussen TO- en TK-lijn, of als oppervlakte (GO − GTK) × q.
+- D1.19-01-d (analyseren) Ik kan met een tabel of grafiek verklaren waarom de hoogste winst per eenheid niet altijd de hoogste totale winst geeft.
+- D1.20-01-a (begrijpen) Ik kan uitleggen dat bij de break-even-afzet de winst nul is, met winst bij grotere en verlies bij kleinere afzet.
+- D1.20-01-c (toepassen) Ik kan de break-even-afzet aflezen in een grafiek bij het snijpunt van TO en TK of van GO en GTK.
+- D1.21-01-c (analyseren) Ik kan bij een afzet met MO en MK afleiden of de aanbieder zijn winst verhoogt door meer of minder te produceren.
+- D1.22-01-a (begrijpen) Ik kan uitleggen hoe de prijs de keuzes van vragers en aanbieders, die los van elkaar beslissen, op elkaar afstemt.
+- D1.23-01-a (begrijpen) Ik kan uitleggen dat er bij de evenwichtsprijs geen vraag- of aanbodoverschot is, zodat de prijs niet verder verandert.
+- D1.24-01-d (analyseren) Ik kan afleiden wat gelijktijdige verschuiving van vraag en aanbod betekent voor prijs, hoeveelheid en opbrengst, en wat onbepaald blijft.
+- D2.2-01-a (begrijpen) Ik kan uitleggen waarom een aanbieder bij volkomen concurrentie prijsnemer is: marginale opbrengst (MO) gelijk aan p, horizontale prijsafzetlijn.
+- D2.2-01-b (toepassen) Ik kan met een marktprijs en MK-functie de winstmaximaliserende afzet berekenen uit p = MK, en de maximale winst als totale opbrengst (TO) min totale kosten (TK).
+- D2.2-01-c (toepassen) Ik kan in een grafiek met prijslijn, MK-lijn en lijn van de gemiddelde totale kosten (GTK) de winstmaximaliserende afzet bepalen en de winst tonen als oppervlakte (p − GTK) × q.
+- D2.2-02-c (analyseren) Ik kan analyseren hoe prijs en afzet van een prijszetter afwijken van volkomen concurrentie (p > MK, minder afzet) en dat verklaren.
+- D2.3-01-a (onthouden) Ik kan de voorwaarden voor prijsdiscriminatie noemen: splitsbare deelmarkten, verschillende prijselasticiteit van de vraag en geen doorverkoop tussen deelmarkten.
+- D2.3-01-d (analyseren) Ik kan in een context prijsdiscriminatie onderscheiden van prijsverschillen door kostenverschillen, zoals hogere bezorgkosten in een afgelegen gebied.
+- D2.3-02-a (toepassen) Ik kan per deelmarkt de winstmaximaliserende prijs en afzet berekenen met marginale opbrengst (MO) = marginale kosten (MK).
+- D2.3-02-b (toepassen) Ik kan de totale winst bij prijsdiscriminatie berekenen en vergelijken met de totale winst bij één uniforme prijs.
+- D2.3-02-c (analyseren) Ik kan met het verschil in prijselasticiteit verklaren waarom de monopolist op de prijsinelastische deelmarkt een hogere prijs vraagt.
+- D3.1-01-b (toepassen) Ik kan in een grafiek het consumentensurplus bepalen als de oppervlakte onder de vraaglijn en boven de marktprijs.
+- D3.1-01-c (toepassen) Ik kan het consumentensurplus in euro's berekenen uit een vraagfunctie en marktprijs of uit een tabel met betalingsbereidheden.
+- D3.2-01-a (onthouden) Ik kan producentensurplus omschrijven als het voordeel van aanbieders die voor minder willen aanbieden dan de marktprijs die ze ontvangen.
+- D3.2-01-b (toepassen) Ik kan in een grafiek het producentensurplus bepalen als de oppervlakte boven de aanbodlijn en onder de marktprijs.
+- D3.2-01-c (toepassen) Ik kan het producentensurplus in euro's berekenen uit een aanbodfunctie en marktprijs of uit een tabel met minimale aanbiedprijzen.
+- D3.3-01-b (toepassen) Ik kan in een marktsituatie het totale surplus berekenen door consumentensurplus en producentensurplus op te tellen.
+- D3.4-01-b (begrijpen) Ik kan uitleggen waarom de verdeling van het totale surplus tussen vragers en aanbieders niets zegt over doelmatigheid.
+- D3.4-01-c (toepassen) Ik kan met het totale surplus van twee marktuitkomsten aangeven welke het meest doelmatig is, zoals marktevenwicht tegenover kleinere hoeveelheid.
+- D3.5-01-c (toepassen) Ik kan in een grafiek bepalen of een marktuitkomst Pareto efficiënt is door het totale surplus met dat bij evenwicht te vergelijken.
+- D3.6-01-b (toepassen) Ik kan bij monopolie het totale surplus en het verloren surplus (dead weight loss) berekenen en vergelijken met volkomen concurrentie.
+- D3.6-01-c (analyseren) Ik kan verklaren waarom het verloren surplus ontstaat: marktmacht geeft minder afzet dan bij p = MK, dus valt ruil met betalingsbereidheid boven MK weg.
+- D3.7-01-b (toepassen) Ik kan berekenen welk deel van het consumentensurplus bij volkomen concurrentie door marktmacht naar de aanbieder overgaat als producentensurplus.
+- D3.8-01-a (begrijpen) Ik kan uitleggen dat een monopolist met verschillende prijzen voor groepen met verschillende betalingsbereidheid consumentensurplus omzet in producentensurplus.
+- D3.8-01-b (toepassen) Ik kan in een grafiek met twee of meer prijzen bepalen hoeveel consumentensurplus de monopolist afroomt en hoeveel overblijft.
+- D3.8-01-c (toepassen) Ik kan het afgeroomde consumentensurplus berekenen bij een indeling in prijsgroepen, bijvoorbeeld een normaal tarief en een studententarief.
+- D3.9-01-b (toepassen) Ik kan na een heffing consumentensurplus, producentensurplus, belastingopbrengst en verloren surplus (dead weight loss) berekenen.
+- D3.9-01-c (analyseren) Ik kan uit vraaglijn en aanbodlijn afleiden welk deel van de heffing vragers en welk deel aanbieders dragen.
+- D3.9-01-d (analyseren) Ik kan verklaren waarom een heffing het totale surplus verkleint: ruil valt weg waarbij betalingsbereidheid hoger is dan de aanbiedprijs.
+- D3.9-02-a (toepassen) Ik kan in een marktgrafiek na een subsidie evenwichtsprijs, hoeveelheid en de prijs inclusief subsidie voor de aanbieder bepalen.
+- D3.9-02-c (analyseren) Ik kan uit vraaglijn en aanbodlijn afleiden welk deel van de subsidie naar vragers en welk deel naar aanbieders gaat.
+- D3.9-02-d (analyseren) Ik kan verklaren waarom een subsidie het totale surplus verkleint: extra eenheden kosten meer dan ze opleveren, dus de subsidie weegt zwaarder.
+- D3.10-01-a (toepassen) Ik kan in een marktgrafiek bij een minimumprijs boven de evenwichtsprijs de gevraagde en aangeboden hoeveelheid en het aanbodoverschot bepalen.
+- D3.10-01-b (toepassen) Ik kan bij een minimumprijs de surplussen en het verloren surplus (dead weight loss) berekenen en vergelijken met het evenwicht.
+- D3.10-01-c (analyseren) Ik kan verklaren waarom een minimumprijs het totale surplus verkleint en surplus naar aanbieders verschuift: alleen de gevraagde hoeveelheid wordt verhandeld.
+- D3.10-02-a (toepassen) Ik kan in een marktgrafiek bij een maximumprijs onder de evenwichtsprijs de gevraagde en aangeboden hoeveelheid en het vraagoverschot bepalen.
+- D3.10-02-b (toepassen) Ik kan bij een maximumprijs de surplussen en het verloren surplus (dead weight loss) berekenen en vergelijken met het evenwicht.
+- D3.10-02-c (analyseren) Ik kan verklaren waarom een maximumprijs, zoals huurregulering, het totale surplus verkleint en surplus naar vragers verschuift die nog kopen.
+- D3.11-01-a (begrijpen) Ik kan uitleggen dat een octrooi/patent de houder tijdelijk het alleenrecht op een uitvinding geeft en zo concurrenten tegenhoudt.
+- D3.11-01-b (toepassen) Ik kan in een grafiek prijs, afzet en totaal surplus bepalen voor de octrooihouder als monopolist en na afloop bij toetreding.
+- D3.11-01-c (analyseren) Ik kan verklaren waarom door tijdelijke marktmacht de prijs hoger, de afzet lager en het totale surplus kleiner is dan zonder octrooi.
+- D3.11-01-d (analyseren) Ik kan het verband leggen tussen winstverwachting door een octrooi en de prikkel om te investeren in innovatie.
+- E1.1-01-b (begrijpen) Ik kan de individuele prijs van tijd beschrijven als het extra rendement dat iemand minimaal vraagt om uit te stellen.
+- E1.1-01-c (toepassen) Ik kan uit bedragen nu en later het rendement van uitstel in procenten berekenen, zoals bij een investeringsproject.
+- E1.1-01-d (toepassen) Ik kan bepalen of uitstel loont door het rendement te vergelijken met de individuele prijs van tijd en de marktrente.
+- E1.2-01-a (begrijpen) Ik kan uitleggen dat een spaarder bestedingen van nu naar later verschuift en een lener bestedingen van later naar nu.
+- E1.2-01-b (begrijpen) Ik kan in een context, zoals een hypotheek of pensioensparen, herkennen of koopkracht naar voren of naar later verschuift.
+- E1.2-01-d (toepassen) Ik kan bij een gegeven rente berekenen hoeveel bestedingsruimte later wegvalt door nu een bedrag te lenen (aflossing plus rente).
+- E1.3-01-a (onthouden) Ik kan tijdsvoorkeur omschrijven als de mate waarin iemand consumptie nu verkiest boven consumptie later.
+- E1.3-01-c (begrijpen) Ik kan uitleggen waarom iemand met risico-aversie bij onzekere terugbetaling minder vermogen aanbiedt of niet leent voor een onzekere opbrengst.
+- E1.4-01-a (onthouden) Ik kan de drie functies van rente noemen: beloning voor uitstel van consumptie, beloning voor risico en compensatie voor inflatie.
+- E1.4-01-b (begrijpen) Ik kan in een context, zoals een spaaraanbieding of leningvoorstel, herkennen welke functie van rente wordt bedoeld.
+- E1.4-02-a (begrijpen) Ik kan uitleggen waarom een lening met langere looptijd doorgaans een hogere rente heeft dan een met kortere looptijd.
+- E1.4-02-b (begrijpen) Ik kan uitleggen waarom een minder liquide belegging, zoals een termijndeposito, een hogere rente oplevert dan een direct opneembaar tegoed.
+- E1.4-02-c (toepassen) Ik kan van twee leenvormen bepalen welke de hogere rente heeft en of looptijd, liquiditeit of risico van de lener dat verklaart.
+- E1.5-01-a (begrijpen) Ik kan beschrijven hoe een bank spaartegoeden van spaarders omzet in leningen aan investeerders.
+- E1.5-01-b (begrijpen) Ik kan met een voorbeeld, zoals een verzekeraar, uitleggen hoe een financiële instelling risico overneemt en bij wie het wil dragen onderbrengt.
+- E1.5-01-c (toepassen) Ik kan aangeven welke problemen spaarder en investeerder zonder financiële sector zelf oplossen: tegenpartij, bedrag en looptijd, risico.
+- E1.5-02-b (begrijpen) Ik kan uitleggen hoe informatieasymmetrie (de lener weet meer dan de uitlener) leidt tot hogere rente, zekerheden of minder uitlenen.
+- E1.5-02-c (begrijpen) Ik kan uitleggen waarom onzekerheid over inflatie aanbieders van vermogen een hogere nominale rente laat vragen, vooral bij lange looptijd.
+- E1.6-01-b (begrijpen) Ik kan in een context, zoals loon of omzet, herkennen of een bedrag of verandering nominaal of reëel is uitgedrukt.
+- E1.6-01-d (analyseren) Ik kan een nominale verandering ontleden in een prijsdeel en een reëel deel en aangeven welk deel haar vooral verklaart.
+- E1.7-01-b (begrijpen) Ik kan uitleggen dat investeren intertemporele ruil is: nu bestedingen opofferen om later de kapitaalvoorraad en productiemogelijkheden te vergroten.
+- E1.8-01-c (toepassen) Ik kan met eindvoorraad = beginvoorraad + instroom − uitstroom een ontbrekende voorraad of stroom berekenen, zoals de kapitaalgoederenvoorraad.
+- E1.9-01-a (begrijpen) Ik kan lenen door de overheid vergelijken met lenen door huishoudens en bedrijven: de overheid betaalt uit toekomstige belastingen.
+- E1.9-01-b (begrijpen) Ik kan uitleggen waarom een overheidstekort uitgestelde belastingheffing is: wat nu met lenen wordt betaald, moet later via belastingen terugkomen.
+- E1.9-01-d (toepassen) Ik kan met overheidstekort, rente en aflossingstermijn berekenen hoeveel belasting later per jaar nodig is voor rente en aflossing.
+- E1.10-01-a (begrijpen) Ik kan uitleggen dat belasting welvaartsverlies veroorzaakt doordat transacties wegvallen die zonder belasting wel plaatsvinden.
+- E1.10-01-b (begrijpen) Ik kan uitleggen dat het welvaartsverlies van een belasting meer dan evenredig toeneemt met het belastingtarief.
+- E1.10-01-c (toepassen) Ik kan uit welvaartsverliezen per tarief het totale verlies van een eenmalige hoge en een gespreide heffing berekenen en vergelijken.
+- E1.10-01-d (toepassen) Ik kan bij eenmalige hoge uitgaven, zoals na een ramp, toepassen waarom lenen met jarenlang lichte belastingverhoging minder welvaartsverlies geeft.
+- E2.2-01-a (begrijpen) Ik kan uitleggen dat staatsschuld een voorraad en begrotingssaldo een stroom is: een tekort vergroot de schuld, een overschot verkleint haar.
+- E2.2-01-c (toepassen) Ik kan de staatsschuld aan het eind van een jaar berekenen uit de schuld aan het begin en het begrotingssaldo.
+- E2.2-02-a (onthouden) Ik kan de twee eisen van het Stabiliteits- en groeipact noemen: tekort maximaal 3% en schuld maximaal 60% van het bbp.
+- E2.2-02-c (toepassen) Ik kan met de berekende percentages bepalen of een land in een situatie aan beide eisen voldoet.
+- F1.1-01-a (begrijpen) Ik kan uitleggen dat een speler pas zijn beste keuze kan bepalen als hij alle strategieën en pay-offs kent.
+- F1.1-01-b (begrijpen) Ik kan in een context herkennen of spelers voldoende en gelijke informatie hebben of dat één speler een informatievoorsprong heeft.
+- F1.1-01-c (toepassen) Ik kan bepalen welke informatie over strategieën of pay-offs van de ander een speler mist voor zijn beste keuze.
+- F1.2-01-a (onthouden) Ik kan in een pay-off matrix de spelers, hun strategieën en de pay-offs bij elke combinatie van strategieën benoemen.
+- F1.2-01-b (toepassen) Ik kan een pay-off matrix invullen met de juiste spelers, strategieën en pay-offs per uitkomst, uit een beschreven context.
+- F1.2-02-a (onthouden) Ik kan in een spelboom de beslissingsknopen per speler, de takken als keuzes en de eindpunten met pay-offs benoemen.
+- F1.2-02-b (toepassen) Ik kan uit een context een spelboom tekenen met de volgorde van zetten, keuzes per speler en pay-offs per eindpunt.
+- F1.3-01-a (begrijpen) Ik kan het verschil uitleggen tussen simultaan (tegelijk kiezen), sequentieel (na elkaar, met zichtbare eerdere zet) en herhaald simultaan spel.
+- F1.3-01-b (begrijpen) Ik kan een spelsituatie classificeren als simultaan, sequentieel of herhaald (simultaan) spel, op volgorde en aantal keren kiezen.
+- F1.3-01-c (toepassen) Ik kan bepalen of een spelsituatie in een pay-off matrix of spelboom weergegeven moet worden, passend bij het soort spel.
+- F1.4-01-c (begrijpen) Ik kan bij een uitkomst zonder Nash-evenwicht uitleggen welke speler eenzijdig wil afwijken en welke hogere pay-off hij zo bereikt.
+- F1.6-01-b (toepassen) Ik kan het Nash-evenwicht bepalen als één speler een dominante strategie heeft, via het beste antwoord van de ander daarop.
+- F1.6-01-d (begrijpen) Ik kan uitleggen waarom bij meerdere Nash-evenwichten uit de pay-off matrix alleen niet volgt welke uitkomst optreedt.
+- F1.7-01-b (toepassen) Ik kan de pay-offs in een matrix bepalen na zelfbinding, zoals een contract met een boete bij afwijken.
+- F1.7-01-d (analyseren) Ik kan vergelijken en verklaren waarom wie zich bindt, ondanks lagere pay-off van die strategie, toch beter af kan zijn.
+- F1.8-01-b (toepassen) Ik kan de nieuwe pay-offs in een matrix bepalen als een sociale norm een extra kost of opbrengst toevoegt.
+- F1.8-01-c (analyseren) Ik kan uit de aangepaste matrix afleiden hoe de sociale norm dominante strategie of Nash-evenwicht en keuzes verandert.
+- F1.9-01-a (begrijpen) Ik kan uitleggen hoe gedrag in eerdere perioden, zoals afspraken nakomen of bedriegen, een reputatie opbouwt die anderen verwachtingen geeft.
+- F1.9-01-c (analyseren) Ik kan afleiden hoe het belang van reputatie voor latere pay-offs de keuze nu verandert, bijvoorbeeld waarom bedrog niet loont.
+- F1.10-01-a (begrijpen) Ik kan uitleggen hoe een vergeldingsstrategie werkt: samenwerken zolang de ander samenwerkt, afwijken straffen met niet meer samenwerken.
+- F1.10-01-b (toepassen) Ik kan met een pay-off matrix de totale pay-off over meerdere perioden berekenen bij samenwerken en bij afwijken met vergelding.
+- F1.10-01-c (analyseren) Ik kan uit die totale pay-offs afleiden of samenwerken in het herhaalde spel een evenwicht kan zijn, in het eenmalige niet.
+- F1.11-01-a (begrijpen) Ik kan uitleggen dat een dreiging alleen geloofwaardig is als uitvoeren ervan op het moment van kiezen echt de beste keuze is.
+- F1.11-01-c (toepassen) Ik kan de pay-offs in de spelboom bepalen na zelfbinding van de dreigende speler, bijvoorbeeld investeren in overcapaciteit.
+- F1.12-01-b (begrijpen) Ik kan in een langdurige relatie, zoals een arbeidsrelatie of kartelafspraak, herkennen welke afspraken binding geven en welke flexibiliteit laten.
+- F2.2-01-c (begrijpen) Ik kan uitleggen waarom niet-uitsluitbaarheid het individuele belang (niet betalen, wel profiteren) laat botsen met het collectieve belang (financieren).
+- F2.2-01-d (toepassen) Ik kan met kosten en baten per persoon bepalen dat een goed collectief gewenst is, terwijl ieders eigen baat kleiner is dan de bijdrage.
+- F2.3-01-a (begrijpen) Ik kan meeliftersgedrag herkennen in een context: een speler profiteert van een collectief goed zonder bij te dragen.
+- F2.3-01-b (toepassen) Ik kan een pay-off matrix invullen voor spelers die wel of niet bijdragen aan een collectief goed, met kosten en baten.
+- F2.3-01-c (toepassen) Ik kan in die pay-off matrix bepalen dat niet bijdragen voor elke speler de dominante strategie is.
+- F2.3-01-d (begrijpen) Ik kan uitleggen dat het Nash-evenwicht waarin niemand bijdraagt tot onderproductie leidt, terwijl iedereen beter af is als iedereen bijdraagt.
+- F2.4-01-c (toepassen) Ik kan met private en externe kosten of baten bepalen of de marktuitkomst boven of onder de maatschappelijk optimale hoeveelheid ligt.
+- F2.4-02-c (toepassen) Ik kan de heffing of subsidie per eenheid bepalen die een extern effect internaliseert, en hoe de hoeveelheid daardoor verandert.
+- G1.1-01-a (begrijpen) Ik kan in een context beschrijven welk onzeker voorval het risico vormt en welk gevolg (schade of gemiste opbrengst) daaraan hangt.
+- G1.1-01-b (toepassen) Ik kan de omvang van het risico berekenen als verwachte schade: de kans op het voorval maal het schadebedrag.
+- G1.1-01-c (toepassen) Ik kan de verwachtingswaarde van een beslissing met meer dan twee uitkomsten berekenen: elke uitkomst maal haar kans, daarna optellen.
+- G1.2-01-a (onthouden) Ik kan risicoavers, risiconeutraal en risicozoekend gedrag omschrijven via de keuze tussen een zekere en onzekere uitkomst met gelijke verwachtingswaarde.
+- G1.2-01-b (begrijpen) Ik kan in een context herkennen of een beslisser risicoavers, risiconeutraal of risicozoekend handelt.
+- G1.2-01-c (toepassen) Ik kan in een transactie, zoals vast loon tegenover winstafhankelijke beloning, bepalen wie het meest risicoavers is en wie het risico draagt.
+- G2.1-01-a (onthouden) Ik kan onvolledige informatie omschrijven als een situatie waarin beide transactiepartijen relevante informatie missen.
+- G2.1-01-c (toepassen) Ik kan in een ruilsituatie bepalen welke zoek-, onderhandelings- en controlekosten door onvolledige informatie ontstaan.
+- G2.2-01-a (onthouden) Ik kan informatieasymmetrie omschrijven als een situatie waarin de ene transactiepartij meer relevante informatie heeft dan de andere.
+- G2.2-01-c (toepassen) Ik kan bepalen welk risico de partij met informatieachterstand loopt, zoals te veel betalen, en welke informatie ze mist.
+- G3.1-01-a (begrijpen) Ik kan eigen en vreemd vermogen vergelijken op vergoeding (winstafhankelijk dividend tegenover vaste rente), aflossingsplicht en zeggenschap.
+- G3.1-01-b (begrijpen) Ik kan uitleggen waarom een vermogensverschaffer met informatieachterstand een hogere vergoeding vraagt en zo de vermogenskosten van de ondernemer verhoogt.
+- G3.1-01-c (toepassen) Ik kan in een context bepalen welke vorm van vermogen een ondernemer kiest, met vermogenskosten, risico en gewenste zeggenschap.
+- G3.1-02-a (onthouden) Ik kan onderpand omschrijven als bezitting die de kredietnemer als zekerheid geeft en die de kredietgever bij wanbetaling mag verkopen.
+- G3.1-02-c (toepassen) Ik kan bepalen hoe wel of geen onderpand de toegang tot krediet en de rente beïnvloedt, bijvoorbeeld bij een starter.
+- G3.2-02-a (begrijpen) Ik kan het verschil beschrijven tussen averechtse selectie (vooraf: door informatieachterstand van de principaal kiezen vooral ongunstige agenten zelf voor het contract) en moral hazard (achteraf past de agent zijn gedrag aan).
+- G3.2-02-b (begrijpen) Ik kan averechtse selectie herkennen in een bedrijfscontext, zoals een kredietgever die bij hogere rente vooral risicovolle kredietnemers aantrekt.
+- G3.2-02-d (toepassen) Ik kan bepalen welk nadeel de principaal door averechtse selectie of moral hazard lijdt, zoals meer wanbetalers of lagere winst.
+- G3.3-01-a (begrijpen) Ik kan uitleggen hoe een contract de belangen van agent en principaal gelijk richt door beloning aan een waarneembaar resultaat te koppelen.
+- G3.3-01-b (begrijpen) Ik kan een vaste en een resultaatafhankelijke beloning vergelijken op prikkel voor de agent en risico dat hij draagt.
+- G3.3-01-c (toepassen) Ik kan de beloning van een agent berekenen onder een resultaatafhankelijk contract, zoals een bonus of winstdeling, bij verschillende uitkomsten.
+- G3.3-01-d (toepassen) Ik kan bepalen welke contractvoorwaarde of prikkel het gedrag van de agent in het belang van de principaal stuurt.
+- G3.4-01-a (onthouden) Ik kan toezichthouders noemen: De Nederlandsche Bank (DNB), de Autoriteit Financiële Markten (AFM) en de Autoriteit Consument & Markt (ACM).
+- G3.4-01-c (begrijpen) Ik kan uitleggen hoe een toezichthouder op andere markten consumenten beschermt tegen misbruik van informatievoorsprong of marktmacht.
+- G4.1-01-a (begrijpen) Ik kan uitleggen waarom een risicoavers persoon een zekere premie verkiest boven een onzekere schade met dezelfde verwachtingswaarde.
+- G4.1-01-b (toepassen) Ik kan met schadekans, schadebedrag en maximale premie berekenen hoeveel een risicoavers persoon boven de verwachte schade wil betalen.
+- G4.1-01-c (begrijpen) Ik kan de betalingsbereidheid voor dezelfde verzekering van twee personen met verschillende risicoaversie vergelijken.
+- G4.2-01-b (toepassen) Ik kan voor de verzekeraar het verwachte resultaat op een groep polissen berekenen: premie-inkomsten min verwachte uitkeringen en kosten.
+- G4.2-01-c (begrijpen) Ik kan uitleggen waarom een verzekeraar door risicospreiding een premie onder de maximale betalingsbereidheid van de verzekerde kan vragen.
+- G4.2-01-d (toepassen) Ik kan bij premie, schadekans, schadebedrag en risicohouding bepalen of de verzekerde afsluit en of de verzekeraar de verzekering aanbiedt.
+- G4.3-01-a (begrijpen) Ik kan solidariteit beschrijven als premie los van individueel risico, en verplichte solidariteit als wettelijke plicht, zoals de acceptatieplicht.
+- G4.3-01-b (toepassen) Ik kan bij risicogroepen de premie bij solidariteit en naar risico berekenen en bepalen hoeveel lage risico's voor hoge meebetalen.
+- G4.3-01-c (analyseren) Ik kan afleiden hoe solidariteit de prikkel tot risicomanagement verandert en dit verklaren uit het ontbreken van koppeling tussen gedrag en premie.
+- G4.4-01-b (toepassen) Ik kan bij risicogroepen berekenen hoe de kostendekkende premie stijgt als de lage risico's zich niet meer verzekeren.
+- G4.4-01-d (toepassen) Ik kan bij een collectieve verzekering, zoals via de werkgever, bepalen waarom de groep niet door risico-inschatting ontstaat en de premie laag blijft.
+- G5.1-01-a (toepassen) Ik kan het verwachte rendement van een belegging berekenen uit mogelijke rendementen en hun kansen.
+- G5.1-01-b (begrijpen) Ik kan beleggingen, zoals een spaardeposito, een vastgoedfonds en opkomende markten, vergelijken op risico en verwacht rendement.
+- G5.1-01-c (analyseren) Ik kan met risicoaversie van beleggers verklaren waarom een risicovollere belegging alleen kopers vindt bij hoger verwacht rendement (risicopremie).
+- G5.1-01-d (analyseren) Ik kan uit rendementscijfers afleiden of hoger risico samengaat met hoger verwacht rendement en hoe groot de risicopremie is.
+- G5.2-01-a (begrijpen) Ik kan obligaties en aandelen vergelijken op vergoeding (rente tegenover dividend en koersresultaat) en rangorde van terugbetaling bij faillissement.
+- G5.2-01-b (begrijpen) Ik kan uitleggen waarom een aandeel meer risico heeft dan een obligatie van dezelfde onderneming en dus hoger verwacht rendement moet bieden.
+- G5.2-01-c (toepassen) Ik kan het rendement op een obligatie en een aandeel berekenen uit rente of dividend, koersverandering en aankoopkoers.
+- G5.2-01-d (toepassen) Ik kan bepalen of een belegger met een risicohouding of beleggingshorizon eerder obligaties of aandelen kiest en dit toelichten.
+- H1.1-01-a (begrijpen) Ik kan uitleggen waarom drie methoden hetzelfde bbp geven: de waarde van de productie wordt inkomen en wordt besteed.
+- H1.1-01-b (toepassen) Ik kan het bbp berekenen met de bestedingsmethode: consumptie plus investeringen plus overheidsbestedingen plus export min import.
+- H1.1-01-c (toepassen) Ik kan het bbp berekenen met de objectieve methode: som van toegevoegde waarden (omzet min inkoop bij derden).
+- H1.1-01-d (toepassen) Ik kan het bbp berekenen met de subjectieve methode: arbeidsinkomen (ook toegerekend loon zelfstandigen) plus kapitaalinkomen plus afschrijvingen.
+- H1.1-02-a (begrijpen) Ik kan inkomensbestanddelen (loon, toegerekend loon zelfstandigen, rente, dividend, pacht, huur, winst) indelen als arbeidsinkomen of kapitaalinkomen.
+- H1.1-02-b (begrijpen) Ik kan het verschil uitleggen tussen categoriale (naar soort inkomen) en personele inkomensverdeling (over personen of huishoudens).
+- H1.1-02-c (toepassen) Ik kan uit bedragen de procentuele verdeling van het nationaal inkomen over loon, rente, dividend, pacht, huur en winst berekenen.
+- H1.1-03-a (toepassen) Ik kan de loonkosten per eenheid product berekenen als loonkosten gedeeld door productie, of loonkosten per werknemer gedeeld door arbeidsproductiviteit.
+- H1.1-03-b (toepassen) Ik kan de procentuele verandering van loonkosten per eenheid product berekenen uit die van loonkosten per werknemer en arbeidsproductiviteit.
+- H1.2-02-a (begrijpen) Ik kan uitleggen dat bij elke reële transactie een financiële hoort en de vordering van de een de verplichting van de ander is.
+- H1.2-03-a (begrijpen) Ik kan buitenlandse transacties indelen bij de lopende rekening (export, import, primaire inkomens) of de financiële rekening (aandelen, leningen).
+- H1.2-03-b (begrijpen) Ik kan uitleggen waarom een overschot op de lopende rekening samengaat met meer vorderingen op het buitenland op de financiële rekening.
+- H1.2-03-c (toepassen) Ik kan uit posten van de betalingsbalans het saldo van de lopende en van de financiële rekening berekenen.
+- H2.1-01-b (begrijpen) Ik kan uitleggen waarom groei op lange termijn wordt begrensd door productiefactoren en technologie en niet door bestedingen.
+- H2.1-01-c (toepassen) Ik kan uit bruto binnenlands product (bbp) en potentiële productie de groei op lange termijn en per jaar berekenen en vergelijken.
+- H2.2-01-a (onthouden) Ik kan de grootheden in Y = Af(K, L) benoemen: potentiële productie (Y), productiviteit (A), kapitaal en land (K), arbeid (L).
+- H2.2-01-c (toepassen) Ik kan in een grafiek van de productiefunctie het effect van meer of minder K, L of A tekenen.
+- H2.2-02-a (begrijpen) Ik kan uitleggen dat bij afnemende meeropbrengsten elke extra eenheid K, bij gelijke L, minder extra productie oplevert dan de vorige.
+- H2.2-02-b (toepassen) Ik kan de productiefunctie als functie van K (of L) tekenen als stijgende curve die steeds minder steil loopt.
+- H2.2-02-c (toepassen) Ik kan uit een grafiek aflezen dat de meeropbrengst van extra K of L positief is maar afneemt naarmate er meer is.
+- H2.2-02-d (begrijpen) Ik kan uitleggen dat bij constante schaalopbrengsten K en L verdubbelen de productie verdubbelt, alleen K verdubbelen minder dan dat.
+- H2.3-01-a (onthouden) Ik kan factoren noemen die A verhogen, zoals innovatie, research and development (R&D), learning-by-doing, onderwijs, onderzoek, handel, infrastructuur, een beter milieu, een gunstige ligging en politieke stabiliteit.
+- H2.3-01-b (onthouden) Ik kan omschrijven wat instituties zijn: kwaliteit van de overheid, eigendomsrechten en rechtsstaat, en regels voor eerlijke mededinging.
+- H2.3-01-c (begrijpen) Ik kan uitleggen hoe een factor, zoals learning-by-doing, handel of eigendomsrechten, met dezelfde kapitaal en arbeid tot meer productie leidt.
+- H2.3-01-d (begrijpen) Ik kan in een context, zoals een nieuwe spoorverbinding of opleidingsprogramma, herkennen welke factor van A aan de orde is.
+- H2.4-01-a (onthouden) Ik kan structureel beleid omschrijven als beleid dat productiviteit (A), kapitaal (K) of arbeid (L) en zo de potentiële productie verhoogt.
+- H2.4-01-d (toepassen) Ik kan met cijfers over een maatregel bepalen welke productiefactor met hoeveel verandert en of de potentiële productie stijgt of daalt.
+- H3.1-01-a (onthouden) Ik kan brede welvaart omschrijven als waarde van behoeftebevrediging uit schaarse goederen, ook vrije tijd, milieu, leefomgeving, infrastructuur en veiligheid.
+- H3.1-01-b (begrijpen) Ik kan uitleggen waarom meer risico en meer ongelijkheid de brede welvaart van een huishouden verlagen.
+- H3.1-01-c (toepassen) Ik kan in een context, zoals een baan met hoger loon maar langere reistijd, bepalen welke elementen van brede welvaart stijgen of dalen.
+- H3.2-01-a (onthouden) Ik kan maatschappelijke (brede) welvaart omschrijven als de optelsom van de brede welvaart van alle huishoudens.
+- H3.2-01-b (begrijpen) Ik kan uitleggen waarom alleen huishoudens meetellen in maatschappelijke welvaart en ondernemingen alleen indirect bijdragen via winstuitkeringen.
+- H3.2-01-c (begrijpen) Ik kan uitleggen dat de keuze hoe zwaar huishoudens wegen in de optelling een politiek waardeoordeel over ongelijkheid is.
+- H3.2-01-d (toepassen) Ik kan met welvaart en weegfactoren per huishouden de maatschappelijke welvaart gewogen berekenen, ook als lage inkomens zwaarder wegen.
+- H3.2-02-a (onthouden) Ik kan de voorwaarden noemen: alle materiële en immateriële kosten en baten zijn in geld uit te drukken en welvaart is tussen huishoudens vergelijkbaar.
+- H3.2-02-b (begrijpen) Ik kan uitleggen waarom het moeilijk is om bijvoorbeeld risico, milieu, leefomgeving of veiligheid in geld uit te drukken.
+- H3.2-02-c (begrijpen) Ik kan het verschil beschrijven tussen brede welvaart en bbp: alle behoeftebevrediging uit schaarse goederen tegenover de waarde van markttransacties.
+- H3.2-02-d (toepassen) Ik kan in een context, zoals meer vrije tijd of files, bepalen of bbp en brede welvaart gelijk of tegengesteld veranderen.
+- H3.3-01-a (onthouden) Ik kan een Pareto-optimum omschrijven als situatie waarin niemand vooruit kan gaan zonder dat een ander achteruitgaat.
+- H3.3-01-b (begrijpen) Ik kan uitleggen waarom maximale welvaart niet gelijk is aan een Pareto-optimum: welvaart stijgt als de winst van de een het verlies van de ander overtreft.
+- H3.3-01-c (toepassen) Ik kan met winsten en verliezen per groep bepalen of een maatregel de welvaart verhoogt en of het een Pareto-verbetering is.
+- H3.4-01-a (onthouden) Ik kan welzijn omschrijven als behoeftebevrediging uit schaarse en niet-schaarse goederen en brede welvaart als behoeftebevrediging uit alleen schaarse goederen.
+- H3.4-01-b (begrijpen) Ik kan een voorbeeld geven van een niet-schaars goed dat bijdraagt aan welzijn maar niet aan brede welvaart, zoals zonlicht.
+- H3.4-01-c (begrijpen) Ik kan in een context herkennen of een verandering alleen het welzijn raakt of ook de brede welvaart van een huishouden.
+- H3.5-01-b (toepassen) Ik kan groen bbp berekenen als bbp min de geschatte waarde van milieuschade plus de geschatte waarde van milieuverbetering.
+- H3.5-01-c (toepassen) Ik kan groen bbp per hoofd en de procentuele verandering ervan berekenen uit bbp, milieuschade, milieuverbetering en bevolkingsomvang.
+- H3.5-01-d (begrijpen) Ik kan uitleggen waarom de uitkomst afhangt van de onzekere schatting van de waarde van milieuschade en milieuverbetering.
+- H4.1-01-a (toepassen) Ik kan een Lorenzcurve tekenen uit cumulatieve percentages van huishoudens en inkomen.
+- H4.1-01-b (toepassen) Ik kan de Gini-coëfficiënt berekenen als oppervlak tussen gelijkheidslijn en Lorenzcurve gedeeld door het oppervlak onder de gelijkheidslijn.
+- H4.1-01-c (begrijpen) Ik kan de hoogte van een Gini-coëfficiënt (0 tot 1) en een verandering ervan interpreteren als meer of minder ongelijkheid.
+- H4.1-02-a (onthouden) Ik kan een percentielenratio, bijvoorbeeld P90/P10, omschrijven als inkomen op een hoog percentiel gedeeld door inkomen op een laag percentiel.
+- H4.1-02-b (toepassen) Ik kan een percentielenratio berekenen uit de inkomensgrenzen van percentielen van een inkomensverdeling.
+- H4.1-02-c (begrijpen) Ik kan een verandering van een percentielenratio in een context interpreteren als toe- of afname van inkomensongelijkheid.
+- H4.1-02-d (begrijpen) Ik kan uitleggen waarom een percentielenratio, anders dan de Gini-coëfficiënt, niet verandert door verschuivingen aan de uiteinden.
+- H4.2-01-b (begrijpen) Ik kan uitleggen waarom gemeten ongelijkheid tussen huishoudens kleiner kan zijn dan tussen individuen, doordat huishoudensleden inkomens delen.
+- H4.2-01-c (begrijpen) Ik kan uitleggen waarom totaal inkomen anders verdeeld kan zijn dan arbeidsinkomen, doordat kapitaalinkomen ongelijker en uitkeringen gelijker verdeeld zijn.
+- H4.2-01-d (toepassen) Ik kan met inkomensgegevens bepalen hoe de verhouding tussen hoog en laag inkomen verandert van primair naar secundair inkomen.
+- H4.3-01-a (onthouden) Ik kan vermogen omschrijven als bezittingen min schulden, bijvoorbeeld eigen woning, spaargeld en aandelen min hypotheek en andere schulden.
+- H4.3-01-b (begrijpen) Ik kan uitleggen waarom vermogen ongelijker verdeeld is dan inkomen, bijvoorbeeld door erfenissen, rendement op vermogen en sparen door hoge inkomens.
+- H4.3-01-c (toepassen) Ik kan met een maatstaf, zoals het aandeel van de 10% rijkste huishoudens of de Gini-coëfficiënt, vermogensongelijkheid met inkomensongelijkheid vergelijken.
+- H4.4-01-a (onthouden) Ik kan nivelleren omschrijven als met beleid verkleinen en denivelleren als met beleid vergroten van relatieve inkomensverschillen tussen huishoudens.
+- H4.4-01-b (begrijpen) Ik kan uitleggen waarom een gelijke absolute inkomensstijging voor alle huishoudens nivellerend werkt, terwijl de absolute verschillen gelijk blijven.
+- H4.4-01-c (toepassen) Ik kan de procentuele verandering van het besteedbaar inkomen van verschillende huishoudens na een beleidsmaatregel berekenen.
+- H4.5-01-b (begrijpen) Ik kan uitleggen hoe herverdeling de prikkel kan vergroten om te migreren of belasting te ontwijken.
+- H4.5-01-c (begrijpen) Ik kan uitleggen waarom herverdeling via onderwijs, kinderopvang of sociale zekerheid geen afruil hoeft te geven: prikkels worden niet zwakker.
+- H4.5-01-d (toepassen) Ik kan bij een herverdelingsmaatregel bepalen welke prikkel verandert en of daardoor een afruil tussen doelmatigheid en rechtvaardigheid optreedt.
+- H4.6-02-c (toepassen) Ik kan de belastingwig berekenen als verschil tussen loonkosten voor de werkgever en nettoloon van de werknemer.
+- H4.6-02-d (begrijpen) Ik kan uitleggen waarom een aftrekpost bij hoger marginaal tarief meer belasting bespaart, een vaste heffingskorting voor iedereen evenveel.
+- H4.6-03-a (begrijpen) Ik kan een belasting indelen als belasting op arbeidsinkomen, vermogen, winst van vennootschappen of indirecte belasting zoals btw en accijns.
+- H4.6-03-b (begrijpen) Ik kan het verschil uitleggen tussen directe belasting (bij wie inkomen of vermogen heeft) en indirecte belasting (via de prijs).
+- H4.6-03-c (toepassen) Ik kan de consumentenprijs berekenen uit prijs exclusief belasting, accijns (vast per eenheid) en btw (percentage over prijs inclusief accijns).
+- H4.6-03-d (begrijpen) Ik kan uitleggen waarom indirecte belastingen degressief kunnen uitwerken, doordat lage inkomens een groter deel van hun inkomen besteden.
+- H4.7-01-a (onthouden) Ik kan herverdeling omschrijven als inkomen overdragen van hoge naar lage inkomens en verzekering als inkomensrisico's, zoals werkloosheid, spreiden.
+- H4.7-01-b (begrijpen) Ik kan een regeling in een context, zoals bijstand of huurtoeslag, classificeren als instrument voor herverdeling, verzekering of beide.
+- H4.7-01-c (begrijpen) Ik kan uitleggen waarom een inkomensafhankelijke toeslag vooral herverdeelt en een uitkering gefinancierd met premies vooral verzekert.
+- H5.1-01-a (onthouden) Ik kan arbeidsaanbod omschrijven als de beroepsbevolking (werkenden plus werklozen) en arbeidsvraag als werkgelegenheid plus openstaande vacatures.
+- H5.1-01-b (toepassen) Ik kan uit arbeidsmarktgegevens een ontbrekende grootheid en het werkloosheidspercentage berekenen.
+- H5.1-01-c (toepassen) Ik kan uit het verschil tussen arbeidsvraag en arbeidsaanbod (vacatures tegenover werklozen) bepalen of de arbeidsmarkt ruim of krap is.
+- H5.1-02-a (toepassen) Ik kan de nominale en de reële loonontwikkeling in procenten berekenen uit loon- en prijsgegevens.
+- H5.1-02-b (begrijpen) Ik kan uitleggen waarom de loonstijging bij een krappe arbeidsmarkt groter is dan bij een ruime arbeidsmarkt.
+- H5.1-02-c (onthouden) Ik kan flexwerk, zoals uitzendwerk, en werken als zzp omschrijven als vormen van arbeid naast een vast dienstverband.
+- H5.2-01-a (onthouden) Ik kan conjuncturele werkloosheid omschrijven als werkloosheid door te lage bestedingen in laagconjunctuur, structurele als werkloosheid bij normale conjunctuur.
+- H5.2-01-b (onthouden) Ik kan frictiewerkloosheid, werkloosheid door mismatch en institutionele werkloosheid noemen als vormen van structurele werkloosheid.
+- H5.2-01-c (begrijpen) Ik kan werkloosheid in een context, zoals schoolverlaters die een baan zoeken, indelen als frictie-, mismatch-, institutionele of conjuncturele werkloosheid.
+- H5.2-01-d (toepassen) Ik kan met gegevens over werkloosheid en vacatures bepalen of de werkloosheid vooral structureel of vooral conjunctureel is.
+- H5.3-01-a (begrijpen) Ik kan uitleggen hoe de zoektijd van werkzoekenden en werkgevers tot frictiewerkloosheid leidt, ook bij evenveel vacatures als werklozen.
+- H5.3-01-b (begrijpen) Ik kan uitleggen hoe een mismatch tussen gevraagde en aangeboden vaardigheden, beroepen of regio's werkloosheid naast vacatures geeft.
+- H5.3-01-c (begrijpen) Ik kan uitleggen hoe een hoge uitkering ten opzichte van het loon de prikkel om te zoeken verzwakt en structurele werkloosheid vergroot.
+- H5.3-01-d (toepassen) Ik kan in een arbeidsmarktgrafiek bij een minimumloon boven het evenwichtsloon de werkloosheid bepalen als verschil tussen arbeidsaanbod en arbeidsvraag.
+- I1.1-01-a (begrijpen) Ik kan uitleggen wat het verschil is tussen bbp-niveau en bbp-groei, en tussen werkloosheid en werkgelegenheid.
+- I1.1-01-d (toepassen) Ik kan uit jaarreeksen de procentuele verandering van de werkgelegenheid en het aantal werklozen berekenen en met de bbp-groei de ontwikkeling van productie en arbeidsmarkt beschrijven.
+- I1.1-02-b (toepassen) Ik kan de inflatie berekenen uit de consumentenprijsindex van twee opeenvolgende perioden.
+- I1.1-02-c (begrijpen) Ik kan het verschil uitleggen tussen de nominale rente van de centrale bank en de reële rente, gecorrigeerd voor inflatie.
+- I1.1-02-d (toepassen) Ik kan bepalen of de reële rente positief of negatief is bij gegeven nominale rente en inflatie.
+- I1.2-01-b (onthouden) Ik kan natuurlijke werkloosheid omschrijven als de structurele werkloosheid (frictie, mismatch, institutioneel) die bij potentiële productie en constante inflatie hoort.
+- I1.2-01-c (begrijpen) Ik kan uitleggen waarom bij overbesteding (output gap > 0) de werkloosheid onder de structurele ligt, bij onderbesteding (< 0) erboven.
+- I1.2-01-d (toepassen) Ik kan uit gegevens over Y en Y*, bestedingen of werkloosheid bepalen of er hoogconjunctuur of laagconjunctuur is.
+- I1.3-01-a (begrijpen) Ik kan uitleggen waarom schommelende inflatie welvaart kost, bijvoorbeeld door onzekerheid bij contracten en onbedoelde herverdeling tussen schuldeisers en schuldenaren.
+- I1.3-01-b (begrijpen) Ik kan uitleggen waarom schommelingen in inkomen en werkloosheid welvaart kosten, bijvoorbeeld door gederfde productie en onzekerheid voor werklozen.
+- I1.3-01-c (toepassen) Ik kan uit feitelijke en potentiële productie het totale productieverlies over een periode van laagconjunctuur berekenen, in euro's en in procenten van de potentiële productie.
+- I1.4-01-a (begrijpen) Ik kan uitleggen waarom de koopkracht van een geldbedrag daalt bij inflatie en stijgt bij deflatie.
+- I1.4-01-b (toepassen) Ik kan met een prijsindexcijfer de koopkracht van een bedrag ten opzichte van het basisjaar en de procentuele verandering berekenen.
+- I1.4-01-c (begrijpen) Ik kan geldillusie herkennen: iemand ziet een nominale stijging van loon, prijs of rente als verbetering zonder naar inflatie te kijken.
+- I1.4-02-a (begrijpen) Ik kan uitleggen waarom de reële rente met verwachte inflatie wordt berekend: de nominale rente ligt vast, de koopkracht hangt van inflatie af.
+- I1.4-02-b (toepassen) Ik kan de reële rente berekenen met (1 + nominale rente)/(1 + verwachte inflatie) − 1.
+- I1.4-02-c (toepassen) Ik kan met dezelfde formule de nominale rente of de verwachte inflatie berekenen als de andere twee gegeven zijn.
+- I1.4-02-d (begrijpen) Ik kan uit de reële rente concluderen of een spaarder of lener er in koopkracht op vooruit of achteruit gaat.
+- I1.5-01-a (begrijpen) Ik kan het verschil aangeven tussen monetair beleid (de centrale bank stuurt de rente) en begrotingsbeleid (de overheid past uitgaven en belastingen aan).
+- I1.5-01-c (toepassen) Ik kan bij een beschreven maatregel met bedragen bepalen welke bestedingscategorie als eerste verandert, in welke richting en hoeveel euro.
+- I1.5-02-a (begrijpen) Ik kan uitleggen welke vertragingen er zijn tussen conjunctuurprobleem en effect van beleid: signaleren, besluiten en doorwerking op bestedingen.
+- I1.5-02-b (begrijpen) Ik kan uitleggen waarom beleid dat pas in de volgende conjunctuurfase werkt de schommeling kan versterken in plaats van dempen.
+- I1.5-02-c (begrijpen) Ik kan uitleggen wat de gevolgen zijn van een te zware dosering (oververhitting, inflatie, krimp) en een te lichte (te weinig effect).
+- I1.5-02-d (toepassen) Ik kan met een tijdlijn bepalen of een maatregel op tijd en goed gedoseerd werkte en wat dat voor productie of inflatie betekende.
+- I2.1-01-a (begrijpen) Ik kan een begrotingsmaatregel indelen als stimulerend (hogere overheidsuitgaven of lagere belastingen) of verkrappend (lagere uitgaven of hogere belastingen).
+- I2.1-01-c (toepassen) Ik kan eerst de conjunctuurfase bepalen, bijvoorbeeld uit de output gap, en daarna of begrotingsmaatregelen anticyclisch of procyclisch zijn.
+- I2.2-01-a (begrijpen) Ik kan uitleggen dat automatische stabilisatoren zonder nieuw beleidsbesluit met de conjunctuur meebewegen.
+- I2.2-01-c (toepassen) Ik kan met cijfers berekenen welk deel van de verandering van het begrotingssaldo automatisch door de conjunctuur komt en welk deel door nieuw beleid.
+- I2.3-01-a (begrijpen) Ik kan uitleggen waarom stimulerend beleid via meer inkomen en werk meer belasting en minder uitkeringen geeft (inverdieneffect), verkrappend beleid omgekeerd (uitverdieneffect).
+- I2.3-01-b (toepassen) Ik kan een inverdieneffect of uitverdieneffect berekenen uit veranderingen van inkomen of werkgelegenheid, het belastingtarief en de uitkering per werkloze.
+- I2.3-01-c (toepassen) Ik kan de netto kosten of opbrengst van een maatregel berekenen door het in- of uitverdieneffect te verrekenen met de oorspronkelijke verandering.
+- I3.1-01-a (onthouden) Ik kan de twee taken van de ECB noemen: monetair beleid voeren en financieel toezicht houden.
+- I3.1-01-b (begrijpen) Ik kan beschrijven wat elke taak inhoudt: monetair beleid stuurt via de rente de geldhoeveelheid voor prijsstabiliteit, toezicht bewaakt banken.
+- I3.1-01-c (begrijpen) Ik kan een ECB-maatregel, zoals een renteverhoging of bufferseis aan banken, indelen bij monetair beleid of financieel toezicht.
+- I3.2-01-a (onthouden) Ik kan M1 omschrijven als chartaal geld (munten en bankbiljetten) plus direct opeisbare tegoeden (giraal geld) bij het publiek.
+- I3.2-01-b (begrijpen) Ik kan uitleggen waarom geld in handen van banken en van de centrale bank niet tot de maatschappelijke geldhoeveelheid behoort.
+- I3.2-01-c (begrijpen) Ik kan geldbezit in een context (contant geld, betaalrekeningtegoeden, kasgeld van banken) indelen als wel of niet behorend tot M1.
+- I3.2-01-d (toepassen) Ik kan M1 berekenen uit een overzicht van posten.
+- I3.3-01-a (onthouden) Ik kan de doelstelling noemen bij enkelvoudig mandaat (prijsstabiliteit, ECB) en bij duaal mandaat (ook groei, zoals de FED).
+- I3.3-01-b (begrijpen) Ik kan uitleggen waarom een centrale bank met duaal mandaat bij conflict tussen prijsstabiliteit en groei anders afweegt dan bij enkelvoudig mandaat.
+- I3.3-01-c (begrijpen) Ik kan een motivering van een rentebesluit in een context classificeren als passend bij een enkelvoudig of een duaal mandaat.
+- I3.4-01-a (begrijpen) Ik kan uitleggen dat een bank bij kredietverlening een vordering en deposito creëert, de geldhoeveelheid groeit, en aflossing geld vernietigt.
+- I3.4-01-b (toepassen) Ik kan een kredietverlening of aflossing uitwerken als mutaties op de bankbalans en daarmee de verandering van de geldhoeveelheid bepalen.
+- I3.4-01-c (begrijpen) Ik kan bij een renteverandering van de centrale bank de keten uitleggen: hogere (lagere) rente, hogere (lagere) financieringskosten van banken, minder (meer) kredietverlening en depositocreatie, lagere (hogere) geldgroei.
+- I3.5-01-a (onthouden) Ik kan de refi-rente omschrijven als de rente waartegen de ECB banken liquiditeit verstrekt.
+- I3.5-01-b (begrijpen) Ik kan uitleggen hoe de centrale bank door liquiditeit te verstrekken of te onttrekken de geldmarktrente naar de aangekondigde rente stuurt.
+- I3.5-01-c (toepassen) Ik kan uit geldmarktgegevens bepalen of de centrale bank liquiditeit moet verstrekken of onttrekken om de aangekondigde rente te bereiken, en hoeveel.
+- I3.5-01-d (onthouden) Ik kan aangeven dat de zo bereikte rente uiteindelijk doorwerkt in de omvang van de geldhoeveelheid.
+- I3.6-01-c (toepassen) Ik kan bij negatieve rente en kosten van contant geld bepalen of een spaarder of belegger beter contant aanhoudt of op rekening of obligaties.
+- I3.7-01-a (begrijpen) Ik kan de posten van een bankbalans indelen als langlopende bezittingen (zoals hypotheken) en kortlopende verplichtingen (zoals direct opvraagbare deposito's).
+- I3.7-01-b (begrijpen) Ik kan uitleggen waarom een bank niet aan massale opvragingen van deposito's kan voldoen als langlopende bezittingen niet snel te verkopen zijn.
+- I3.7-01-c (toepassen) Ik kan met een bankbalans bepalen hoeveel deposito's de bank snel kan uitbetalen en vanaf welke opvragingen betalingsproblemen ontstaan.
+- I3.7-02-a (begrijpen) Ik kan uitleggen waarom een depositogarantiestelsel de prikkel voor spaarders om massaal deposito's op te vragen vermindert.
+- I3.7-02-b (begrijpen) Ik kan uitleggen hoe de ECB als lener-in-laatste-instantie een bank met liquiditeitstekort geld leent, zodat geen bezittingen met verlies verkocht worden.
+- I3.7-02-c (toepassen) Ik kan bij een garantiebedrag berekenen welk deel van de tegoeden van een spaarder onder het depositogarantiestelsel valt.
+- I3.8-03-c (toepassen) Ik kan uit beleidsgegevens van een land bepalen welk doel uit het trilemma is opgegeven en in welke richting kapitaal stroomt en de wisselkoers onder druk komt als dat doel niet was opgegeven.
+- I3.9-01-a (begrijpen) Ik kan uitleggen waarom een muntunie wisselkoersschommelingen tussen lidstaten voorkomt en zo de financiële stabiliteit kan bevorderen.
+- I3.9-01-b (begrijpen) Ik kan uitleggen waarom een land in een muntunie een schok niet met de wisselkoers kan opvangen, waardoor de conjunctuurbeweging versterkt wordt.
+- I3.9-01-c (toepassen) Ik kan bij een schok in één lidstaat bepalen welk voor- of nadeel van de muntunie optreedt en het gevolg voor de conjunctuur van die lidstaat.
+- I3.9-02-a (onthouden) Ik kan de alternatieve aanpassingsmechanismen noemen zonder wisselkoers: prijzen, lonen, migratie en inkomensoverdrachten (transfers).
+- I3.9-02-c (toepassen) Ik kan bepalen met hoeveel procent lonen en prijzen in de getroffen lidstaat ten opzichte van andere lidstaten moeten dalen om evenveel concurrentiepositie te winnen als bij een gegeven depreciatie.
+- I4.1-01-b (begrijpen) Ik kan uitleggen hoe het inkomen Y zich aanpast tot de goederenmarkt in evenwicht is als bestedingen en productie verschillen.
+- I4.1-01-c (toepassen) Ik kan het evenwichtsinkomen bepalen door berekening en grafisch als snijpunt van bestedingslijn en lijn bestedingen = inkomen.
+- I4.1-01-d (toepassen) Ik kan bij het evenwichtsinkomen de besparingen berekenen en aantonen dat S = I + (O − B), dus de vermogensmarkt in evenwicht is.
+- I4.1-02-c (toepassen) Ik kan de multiplier berekenen uit een model met marginale consumptiequote en belastingtarief.
+- I4.1-02-d (toepassen) Ik kan met de multiplier het effect van een verandering van de autonome bestedingen op het evenwichtsinkomen berekenen.
+- I4.1-03-c (toepassen) Ik kan in het Keynesiaanse kruis de verschuiving van de bestedingslijn tekenen bij ander vertrouwen of begrotingsbeleid en het evenwichtsinkomen bepalen.
+- I4.2-01-a (onthouden) Ik kan de IS-curve omschrijven als combinaties van inkomen (horizontaal) en reële rente (verticaal) waarbij de goederenmarkt in evenwicht is.
+- I4.2-02-a (begrijpen) Ik kan uitleggen waarom meer (minder) autonome bestedingen de IS-curve naar rechts (links) verschuiven: bij elke reële rente is het evenwichtsinkomen hoger (lager).
+- I4.2-02-b (begrijpen) Ik kan het verschil aangeven tussen beweging langs de IS-curve door andere reële rente en verschuiving door andere autonome bestedingen.
+- I4.2-02-c (toepassen) Ik kan in een IS-grafiek de verschuiving bij andere autonome bestedingen tekenen en het inkomen bij een reële rente bepalen.
+- I4.3-01-a (onthouden) Ik kan de MB-curve omschrijven als de reële rente die de centrale bank bij elk inkomen Y zet: een horizontale lijn.
+- I4.3-02-b (begrijpen) Ik kan uitleggen waarom een centrale bank met sterkere afkeer van inflatie de rente meer aanpast, zodat de MB-curve verder verschuift.
+- I4.4-01-a (onthouden) Ik kan de GA-curve omschrijven als geaggregeerd aanbod (inkomen, horizontaal) bij elk inflatieniveau (verticaal), met Y = Y* bij verwachte inflatie.
+- I4.4-02-b (begrijpen) Ik kan uitleggen dat deze aanpassing de economie naar het langetermijnevenwicht brengt, met inflatie gelijk aan verwachting en Y = Y*.
+- I4.5-01-a (onthouden) Ik kan conjuncturele werkloosheid omschrijven als werkloosheid boven de structurele (natuurlijke) werkloosheid door een tekort aan bestedingen.
+- I4.5-01-b (begrijpen) Ik kan uitleggen waarom conjuncturele werkloosheid toeneemt bij een negatievere output gap: bij lagere productie is minder arbeid nodig.
+- I4.5-01-c (toepassen) Ik kan conjuncturele werkloosheid berekenen als feitelijke min structurele werkloosheid en bepalen of die bij de output gap toe- of afneemt.
+- I4.6-01-a (begrijpen) Ik kan het verschil aangeven tussen Keynesianen (begrotingsbeleid krachtig, monetair zwak) en monetaristen (begrotingsbeleid zwak, monetair sterk).
+- I4.6-02-a (begrijpen) Ik kan uitleggen dat zonder perfecte loon- en prijsflexibiliteit (Keynesianen en monetaristen) de GA-curve niet verticaal is, zodat Y kan afwijken van Y*.
+- I4.6-02-b (begrijpen) Ik kan uitleggen dat bij perfecte loon- en prijsflexibiliteit (neo- en nieuw-klassieken) de GA-curve verticaal is en Y gelijk is aan Y*.

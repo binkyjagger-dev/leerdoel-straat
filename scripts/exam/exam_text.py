@@ -142,9 +142,9 @@ def parse_opgaven(lines: list[str], exam_id: str, issues: list) -> list[dict]:
     i = 0
     while i < len(lines):
         s = lines[i].strip()
-        mo = re.match(r"^Opgave (\d+)$", s)
+        mo = re.match(r"^Opgave (\d+)(?:\s+(\S.*))?$", s)  # economie prints the title on the heading line
         if mo:
-            cur = {"number": int(mo.group(1)), "lines": [], "questions": []}
+            cur = {"number": int(mo.group(1)), "lines": [], "questions": [], "title": (mo.group(2) or "").strip()}
             opgaven.append(cur)
             context = []
             i += 1
@@ -228,7 +228,7 @@ def cv_entries(lines: list[str]) -> dict[int, dict]:
                 entries[int(s)] = cur
                 i = j + 1
                 continue
-        if re.match(r"^Opgave \d+$", s):
+        if re.match(r"^Opgave \d+(?:\s+\S.*)?$", s):
             i += 1
             continue
         if cur is not None:
@@ -364,7 +364,7 @@ def ingest_exam(run_dir: Path, folder: Path, subject: str) -> tuple[dict, list[d
         otext = strip_blank_runs(og["lines"])
         og_range = opgave_sources("\n".join(otext))
         units.append({"unit_id": oid, "kind": "opgave", "exam_id": eid, "number": og["number"],
-                      "title": next((s.strip() for s in otext if s.strip() and not s.strip().startswith("Bij deze opgave")), "")[:80],
+                      "title": og.get("title") or next((s.strip() for s in otext if s.strip() and not s.strip().startswith("Bij deze opgave")), "")[:80],
                       "sources": parse_sources("\n".join(otext)),
                       "text_ref": write(run_dir, f"{eid}-o{og['number']}.txt", [f"Opgave {og['number']}", ""] + otext)})
         for q in og["questions"]:

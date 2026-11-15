@@ -1,0 +1,57 @@
+{
+  "subject": "economie",
+  "criteria_run": "20261012-2220-economie-vwo-2026-run2",
+  "created_at": "2026-11-15",
+  "exams": [
+    {
+      "exam_id": "vwo-2025-tv1",
+      "code": "VW-1022-a-25-1",
+      "year": 2025,
+      "tijdvak": 1,
+      "level": "vwo",
+      "n_questions": 29,
+      "max_score": 59,
+      "syllabus_note": "Geschreven voor de CE-syllabus economie vwo 2025. Gekoppeld aan de criteria van syllabus 2026 versie 2; 2025 verschilt alleen redactioneel (p. 19 domein H1-H2, p. 24 I3.9 en I4.1-I4.3) (economie-082).",
+      "files": {
+        "c": "input/examens-economie-vwo/2025 TV1/vw-1022-a-25-1-c.pdf",
+        "o": "input/examens-economie-vwo/2025 TV1/vw-1022-a-25-1-o.pdf"
+      },
+      "added_by_run": "20261115-1902-examen-economie",
+      "added_at": "2026-11-15"
+    },
+    {
+      "exam_id": "vwo-2025-tv2",
+      "code": "VW-1022-a-25-2",
+      "year": 2025,
+      "tijdvak": 2,
+      "level": "vwo",
+      "n_questions": 29,
+      "max_score": 59,
+      "syllabus_note": "Geschreven voor de CE-syllabus economie vwo 2025. Gekoppeld aan de criteria van syllabus 2026 versie 2; 2025 verschilt alleen redactioneel (p. 19 domein H1-H2, p. 24 I3.9 en I4.1-I4.3) (economie-082).",
+      "files": {
+        "c": "input/examens-economie-vwo/2025 TV2/vw-1022-a-25-2-c.pdf",
+        "o": "input/examens-economie-vwo/2025 TV2/vw-1022-a-25-2-o.pdf",
+        "u": "input/examens-economie-vwo/2025 TV2/vw-1022-a-25-2-u.pdf"
+      },
+      "added_by_run": "20261115-1902-examen-economie",
+      "added_at": "2026-11-15"
+    },
+    {
+      "exam_id": "vwo-2026-tv1",
+      "code": "VW-1022-a-26-1",
+      "year": 2026,
+      "tijdvak": 1,
+      "level": "vwo",
+      "n_questions": 29,
+      "max_score": 59,
+      "syllabus_note": "Geschreven voor de CE-syllabus economie vwo 2026 (versie 2). Gekoppeld aan de criteria van syllabus 2026 versie 2; 2025 verschilt alleen redactioneel (p. 19 domein H1-H2, p. 24 I3.9 en I4.1-I4.3) (economie-082).",
+      "files": {
+        "c": "input/examens-economie-vwo/2026 TV1/vw-1022-a-26-1-c.pdf",
+        "o": "input/examens-economie-vwo/2026 TV1/vw-1022-a-26-1-o.pdf",
+        "u": "input/examens-economie-vwo/2026 TV1/vw-1022-a-26-1-u.pdf"
+      },
+      "added_by_run": "20261115-1902-examen-economie",
+      "added_at": "2026-11-15"
+    }
+  ]
+}

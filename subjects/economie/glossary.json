@@ -503,6 +503,92 @@
       "scope": "lweo-economie-vwo-levensloop-2025",
       "decision": "economie-080",
       "added_at": "2026-11-06"
+    },
+    {
+      "term": "bestedingen",
+      "synonyms": [
+        "effectieve vraag",
+        "EV-curve"
+      ],
+      "scope": null,
+      "decision": "economie-089",
+      "added_at": "2026-11-15"
+    },
+    {
+      "term": "potentiële productie",
+      "synonyms": [
+        "productiepotentieel"
+      ],
+      "scope": null,
+      "decision": "economie-089",
+      "added_at": "2026-11-15"
+    },
+    {
+      "term": "TCK",
+      "synonyms": [
+        "vaste (constante) kosten",
+        "totale vaste kosten",
+        "vaste kosten",
+        "constante kosten"
+      ],
+      "scope": null,
+      "decision": "economie-089",
+      "added_at": "2026-11-15"
+    },
+    {
+      "term": "loon- en prijsrigiditeit",
+      "synonyms": [
+        "starre arbeidsmarkt",
+        "loonrigiditeit"
+      ],
+      "scope": null,
+      "decision": "economie-089",
+      "added_at": "2026-11-15"
+    },
+    {
+      "term": "reële rente",
+      "synonyms": [
+        "reële evenwichtsrente"
+      ],
+      "scope": null,
+      "decision": "economie-089",
+      "added_at": "2026-11-15"
+    },
+    {
+      "term": "uitkomst van het spel",
+      "synonyms": [
+        "speluitkomst"
+      ],
+      "scope": null,
+      "decision": "economie-089",
+      "added_at": "2026-11-15"
+    },
+    {
+      "term": "intertemporele ruil",
+      "synonyms": [
+        "ruilen over de tijd"
+      ],
+      "scope": null,
+      "decision": "economie-089",
+      "added_at": "2026-11-15"
+    },
+    {
+      "term": "tarieftabel",
+      "synonyms": [
+        "schijventarief"
+      ],
+      "scope": null,
+      "decision": "economie-089",
+      "added_at": "2026-11-15"
+    },
+    {
+      "term": "averechtse selectie",
+      "synonyms": [
+        "adverse selection"
+      ],
+      "scope": null,
+      "decision": "economie-089",
+      "added_at": "2026-11-15"
     }
   ]
 }

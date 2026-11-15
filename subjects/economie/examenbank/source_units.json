@@ -1,0 +1,1640 @@
+{
+ "source": {
+  "source_id": "cvte-economie-vwo-ce-2026-v2",
+  "source_type": "syllabus",
+  "title": "Syllabus economie VWO centraal examen 2026, versie 2 (juli 2024)",
+  "subject": "economie",
+  "level": "vwo",
+  "file": "input/syllabus-economie-vwo-2026.pdf",
+  "ingested_at": "2026-11-15T17:57:02Z",
+  "exam_allocation": [
+   {
+    "code": "A",
+    "title": "Vaardigheden",
+    "in_ce": true,
+    "must_in_se": true,
+    "page": 6,
+    "ingested": false
+   },
+   {
+    "code": "B",
+    "title": "Concept Schaarste",
+    "in_ce": false,
+    "must_in_se": true,
+    "page": 6,
+    "ingested": false
+   },
+   {
+    "code": "C",
+    "title": "Concept Ruil",
+    "in_ce": false,
+    "must_in_se": true,
+    "page": 6,
+    "ingested": false
+   },
+   {
+    "code": "D",
+    "title": "Concept Markt",
+    "in_ce": true,
+    "must_in_se": false,
+    "page": 6,
+    "ingested": true
+   },
+   {
+    "code": "E",
+    "title": "Concept Ruilen over de tijd",
+    "in_ce": true,
+    "must_in_se": false,
+    "page": 6,
+    "ingested": true
+   },
+   {
+    "code": "F",
+    "title": "Concept Samenwerken en onderhandelen",
+    "in_ce": true,
+    "must_in_se": false,
+    "page": 6,
+    "ingested": true
+   },
+   {
+    "code": "G",
+    "title": "Concept Risico en informatie",
+    "in_ce": true,
+    "must_in_se": false,
+    "page": 6,
+    "ingested": true
+   },
+   {
+    "code": "H",
+    "title": "Concept Welvaart en groei",
+    "in_ce": true,
+    "must_in_se": false,
+    "page": 6,
+    "ingested": true
+   },
+   {
+    "code": "I",
+    "title": "Concept Goede tijden, slechte tijden",
+    "in_ce": true,
+    "must_in_se": false,
+    "page": 6,
+    "ingested": true
+   },
+   {
+    "code": "J",
+    "title": "Onderzoek en experiment",
+    "in_ce": false,
+    "must_in_se": true,
+    "page": 6,
+    "ingested": false
+   },
+   {
+    "code": "K",
+    "title": "Keuzeonderwerpen",
+    "in_ce": false,
+    "must_in_se": true,
+    "page": 6,
+    "ingested": false
+   }
+  ],
+  "concept_corrections": null
+ },
+ "units": [
+  {
+   "unit_id": "D",
+   "parent_id": null,
+   "kind": "domein",
+   "code": "D",
+   "title": "Markt",
+   "text": "De kandidaat kan in contexten analyseren dat keuzes en ruil die plaatsvinden worden gecoördineerd via de markt. Prijsvorming is het coördinatiemechanisme waarmee vraag en aanbod op elkaar worden afgestemd. De manier waarop prijsvorming plaatsvindt, is afhankelijk van de marktstructuur (marktvormen) en heeft gevolgen voor toetreding, welvaart en economische politiek.",
+   "is_leaf": false,
+   "page": 10,
+   "exam": "CE"
+  },
+  {
+   "unit_id": "D1",
+   "parent_id": "D",
+   "kind": "subdomein",
+   "code": "D1",
+   "title": "Vraag en Aanbod",
+   "text": "De kandidaat kan in contexten herkennen en toepassen:",
+   "is_leaf": false,
+   "page": 10
+  },
+  {
+   "unit_id": "D1.1",
+   "parent_id": "D1",
+   "kind": "eindterm",
+   "code": "1.1",
+   "title": null,
+   "text": "Betalingsbereidheid als de maximale prijs die een vrager bereid is te betalen voor één eenheid van een goed.",
+   "is_leaf": true,
+   "page": 10
+  },
+  {
+   "unit_id": "D1.2",
+   "parent_id": "D1",
+   "kind": "eindterm",
+   "code": "1.2",
+   "title": null,
+   "text": "De individuele vraaglijn die het verband weergeeft tussen de gevraagde hoeveelheid van één vrager bij uiteenlopende prijzen.",
+   "is_leaf": true,
+   "page": 10
+  },
+  {
+   "unit_id": "D1.3",
+   "parent_id": "D1",
+   "kind": "eindterm",
+   "code": "1.3",
+   "title": null,
+   "text": "Het verband tussen de individuele vraaglijn en de collectieve vraaglijn.",
+   "is_leaf": true,
+   "page": 10
+  },
+  {
+   "unit_id": "D1.4a",
+   "parent_id": "D1",
+   "kind": "eindterm",
+   "code": "1.4a",
+   "title": null,
+   "text": "Het verband tussen de betalingsbereidheid van alle vragers en het verloop van de collectieve vraaglijn. (1)",
+   "is_leaf": true,
+   "page": 10
+  },
+  {
+   "unit_id": "D1.4b",
+   "parent_id": "D1",
+   "kind": "eindterm",
+   "code": "1.4b",
+   "title": null,
+   "text": "Parallelle verschuiving van de collectieve vraaglijn als gevolg van verandering van het inkomen, de behoeften, prijzen van andere goederen en het aantal vragers. (1)",
+   "is_leaf": true,
+   "page": 10
+  },
+  {
+   "unit_id": "D1.5",
+   "parent_id": "D1",
+   "kind": "eindterm",
+   "code": "1.5",
+   "title": null,
+   "text": "Prijselasticiteit (alleen segmentelasticiteit) als een maat voor de relatieve verandering van de gevraagde hoeveelheid als gevolg van een relatieve prijsverandering.",
+   "is_leaf": true,
+   "page": 10
+  },
+  {
+   "unit_id": "D1.6",
+   "parent_id": "D1",
+   "kind": "eindterm",
+   "code": "1.6",
+   "title": null,
+   "text": "Het onderscheid tussen een prijselastische- en een prijsinelastische vraag.",
+   "is_leaf": true,
+   "page": 10
+  },
+  {
+   "unit_id": "D1.7",
+   "parent_id": "D1",
+   "kind": "eindterm",
+   "code": "1.7",
+   "title": null,
+   "text": "Inkomenselasticiteit (alleen segmentelasticiteit) als een maat voor de relatieve verandering van de gevraagde hoeveelheid als gevolg van een relatieve inkomensverandering. (2)",
+   "is_leaf": true,
+   "page": 10
+  },
+  {
+   "unit_id": "D1.8",
+   "parent_id": "D1",
+   "kind": "eindterm",
+   "code": "1.8",
+   "title": null,
+   "text": "Het onderscheid tussen inferieure, normale en luxe goederen, in relatie met de waarde van de inkomenselasticiteit.",
+   "is_leaf": true,
+   "page": 10
+  },
+  {
+   "unit_id": "D1.9",
+   "parent_id": "D1",
+   "kind": "eindterm",
+   "code": "1.9",
+   "title": null,
+   "text": "Substitueerbaarheid en complementariteit van goederen, in relatie tot de vraag naar een (ander) goed; kruislingse elasticiteit.",
+   "is_leaf": true,
+   "page": 10
+  },
+  {
+   "unit_id": "D1.10",
+   "parent_id": "D1",
+   "kind": "eindterm",
+   "code": "1.10",
+   "title": null,
+   "text": "De individuele aanbodlijn die het verband weergeeft tussen de aangeboden hoeveelheid van één aanbieder bij uiteenlopende prijzen.",
+   "is_leaf": true,
+   "page": 10
+  },
+  {
+   "unit_id": "D1.11",
+   "parent_id": "D1",
+   "kind": "eindterm",
+   "code": "1.11",
+   "title": null,
+   "text": "Het verband tussen de individuele aanbodlijn en de collectieve aanbodlijn. (1)",
+   "is_leaf": true,
+   "page": 10
+  },
+  {
+   "unit_id": "D1.12",
+   "parent_id": "D1",
+   "kind": "eindterm",
+   "code": "1.12",
+   "title": null,
+   "text": "De verschuiving van de collectieve aanbodlijn als gevolg van een verandering van de prijzen van productiefactoren, technische ontwikkeling en aantal aanbieders.(1)",
+   "is_leaf": true,
+   "page": 10
+  },
+  {
+   "unit_id": "D1.13",
+   "parent_id": "D1",
+   "kind": "eindterm",
+   "code": "1.13",
+   "title": null,
+   "text": "De verschuiving van de collectieve aanbodlijn als gevolg van heffingen of subsidies.",
+   "is_leaf": true,
+   "page": 10
+  },
+  {
+   "unit_id": "D1.14",
+   "parent_id": "D1",
+   "kind": "eindterm",
+   "code": "1.14",
+   "title": null,
+   "text": "De samenhang tussen prijs (p of GO), afzet (q of Q) en totale opbrengst (omzet, TO).",
+   "is_leaf": true,
+   "page": 10
+  },
+  {
+   "unit_id": "D1.15",
+   "parent_id": "D1",
+   "kind": "eindterm",
+   "code": "1.15",
+   "title": null,
+   "text": "De betekenis van de prijselasticiteit van de vraag voor de verandering van de totale opbrengst (omzet) bij prijsveranderingen.",
+   "is_leaf": true,
+   "page": 10
+  },
+  {
+   "unit_id": "D1.16",
+   "parent_id": "D1",
+   "kind": "eindterm",
+   "code": "1.16",
+   "title": null,
+   "text": "De onderverdeling van totale kosten (TK) in vaste/constante kosten (TCK) en variabele kosten (TVK).",
+   "is_leaf": true,
+   "page": 10
+  },
+  {
+   "unit_id": "D1.17",
+   "parent_id": "D1",
+   "kind": "eindterm",
+   "code": "1.17",
+   "title": null,
+   "text": "Het onderscheid en de samenhang tussen totale, gemiddelde totale (GTK) en marginale kosten (MK).",
+   "is_leaf": true,
+   "page": 10
+  },
+  {
+   "unit_id": "D1.18",
+   "parent_id": "D1",
+   "kind": "eindterm",
+   "code": "1.18",
+   "title": null,
+   "text": "Het verband tussen de individuele aanbodlijn en het verloop van de marginale kosten(lijn) bij hoeveelheidsaanpassing.",
+   "is_leaf": true,
+   "page": 11
+  },
+  {
+   "unit_id": "D1.19",
+   "parent_id": "D1",
+   "kind": "eindterm",
+   "code": "1.19",
+   "title": null,
+   "text": "De invloed van het verloop van opbrengst en kosten voor de omvang van de winst, zowel gemiddeld als totaal.",
+   "is_leaf": true,
+   "page": 11
+  },
+  {
+   "unit_id": "D1.20",
+   "parent_id": "D1",
+   "kind": "eindterm",
+   "code": "1.20",
+   "title": null,
+   "text": "De bepaling van de break-even-afzet bij een gelijkheid van totale / gemiddeld totale kosten en totale / gemiddeld totale opbrengsten",
+   "is_leaf": true,
+   "page": 11
+  },
+  {
+   "unit_id": "D1.21",
+   "parent_id": "D1",
+   "kind": "eindterm",
+   "code": "1.21",
+   "title": null,
+   "text": "De invloed van marginale opbrengsten en marginale kosten op de (maximale) winst.",
+   "is_leaf": true,
+   "page": 11
+  },
+  {
+   "unit_id": "D1.22",
+   "parent_id": "D1",
+   "kind": "eindterm",
+   "code": "1.22",
+   "title": null,
+   "text": "De betekenis van de markt als coördinatiemechanisme van vraag en aanbod.",
+   "is_leaf": true,
+   "page": 11
+  },
+  {
+   "unit_id": "D1.23",
+   "parent_id": "D1",
+   "kind": "eindterm",
+   "code": "1.23",
+   "title": null,
+   "text": "Marktevenwicht als zijnde de gelijkheid van de gevraagde en aangeboden hoeveelheid bij de evenwichtsprijs.",
+   "is_leaf": true,
+   "page": 11
+  },
+  {
+   "unit_id": "D1.24",
+   "parent_id": "D1",
+   "kind": "eindterm",
+   "code": "1.24",
+   "title": null,
+   "text": "De invloed van veranderingen in vraag en aanbod op de evenwichtsprijs, de evenwichtshoeveelheid en de totale evenwichtsopbrengst (omzet).",
+   "is_leaf": true,
+   "page": 11
+  },
+  {
+   "unit_id": "D2",
+   "parent_id": "D",
+   "kind": "subdomein",
+   "code": "D2",
+   "title": "Marktstructuur",
+   "text": "De kandidaat kan analyseren welke invloed de kenmerken van de markt, zoals aantal marktpartijen, heterogeniteit van de goederen en toetredingsmogelijkheden, hebben op de marktmacht van de aanbieder en daardoor op het marktresultaat.",
+   "is_leaf": false,
+   "page": 11
+  },
+  {
+   "unit_id": "D2.1",
+   "parent_id": "D2",
+   "kind": "eindterm",
+   "code": "2.1",
+   "title": null,
+   "text": "Het onderscheid tussen de marktvormen op basis van het aantal marktpartijen, heterogeniteit van de goederen en toetredingsmogelijkheden (1)\nI Volledige mededinging/ volkomen concurrentie: veel aanbieders, een homogeen goed en vrije toetreding.\nMarktvormen waarbij sprake is van onvolkomen concurrentie kennen beperkte toetredingsmogelijkheden:\nII Monopolistische concurrentie: veel aanbieders en heterogene goederen.\nIII Oligopolie: weinig aanbieders en een homogeen goed of heterogene goederen.\nIV Monopolie: één aanbieder.",
+   "is_leaf": true,
+   "page": 11
+  },
+  {
+   "unit_id": "D2.2",
+   "parent_id": "D2",
+   "kind": "eindterm",
+   "code": "2.2",
+   "title": null,
+   "text": "Het bepalen van de prijs en afzet die bij volkomen concurrentie, monopolistische concurrentie, oligopolie of monopolie maximale totale winst opleveren.",
+   "is_leaf": true,
+   "page": 11
+  },
+  {
+   "unit_id": "D2.3",
+   "parent_id": "D2",
+   "kind": "eindterm",
+   "code": "2.3",
+   "title": null,
+   "text": "De mogelijkheden voor en gevolgen van prijsdiscriminatie voor de prijzen, afzet en winst bij monopolie.",
+   "is_leaf": true,
+   "page": 11
+  },
+  {
+   "unit_id": "D3",
+   "parent_id": "D",
+   "kind": "subdomein",
+   "code": "D3",
+   "title": "Doelmatigheid en economische politiek",
+   "text": "De kandidaat kan in contexten herkennen en toepassen:",
+   "is_leaf": false,
+   "page": 12
+  },
+  {
+   "unit_id": "D3.1",
+   "parent_id": "D3",
+   "kind": "eindterm",
+   "code": "3.1",
+   "title": null,
+   "text": "Consumentensurplus als het verschil tussen de marktprijs en de betalingsbereidheid van vragers die bereid zijn meer te betalen dan die marktprijs.",
+   "is_leaf": true,
+   "page": 12
+  },
+  {
+   "unit_id": "D3.2",
+   "parent_id": "D3",
+   "kind": "eindterm",
+   "code": "3.2",
+   "title": null,
+   "text": "Producentensurplus als het verschil tussen de marktprijs en de prijs waartegen alle producenten bereid zijn aan te bieden.",
+   "is_leaf": true,
+   "page": 12
+  },
+  {
+   "unit_id": "D3.3",
+   "parent_id": "D3",
+   "kind": "eindterm",
+   "code": "3.3",
+   "title": null,
+   "text": "Het totale surplus als de optelsom van het consumentensurplus en het producentensurplus.",
+   "is_leaf": true,
+   "page": 12
+  },
+  {
+   "unit_id": "D3.4",
+   "parent_id": "D3",
+   "kind": "eindterm",
+   "code": "3.4",
+   "title": null,
+   "text": "De omvang van het totale surplus als maatstaf voor de economische doelmatigheid van de economische uitkomst.",
+   "is_leaf": true,
+   "page": 12
+  },
+  {
+   "unit_id": "D3.5",
+   "parent_id": "D3",
+   "kind": "eindterm",
+   "code": "3.5",
+   "title": null,
+   "text": "Bij een maximaal totaal surplus (som van consumenten- en producentensurplus) is de uitkomst Pareto efficiënt.",
+   "is_leaf": true,
+   "page": 12
+  },
+  {
+   "unit_id": "D3.6",
+   "parent_id": "D3",
+   "kind": "eindterm",
+   "code": "3.6",
+   "title": null,
+   "text": "De invloed van marktmacht op de omvang van het totale surplus en het verloren surplus/Harberger-driehoek (dead weight loss).",
+   "is_leaf": true,
+   "page": 12
+  },
+  {
+   "unit_id": "D3.7",
+   "parent_id": "D3",
+   "kind": "eindterm",
+   "code": "3.7",
+   "title": null,
+   "text": "De invloed van marktmacht op de verdeling van het totale surplus tussen aanbieders en vragers.",
+   "is_leaf": true,
+   "page": 12
+  },
+  {
+   "unit_id": "D3.8",
+   "parent_id": "D3",
+   "kind": "eindterm",
+   "code": "3.8",
+   "title": null,
+   "text": "De manier waarop een monopolist via prijsdiscriminatie een deel van het consumentensurplus kan afromen.",
+   "is_leaf": true,
+   "page": 12
+  },
+  {
+   "unit_id": "D3.9",
+   "parent_id": "D3",
+   "kind": "eindterm",
+   "code": "3.9",
+   "title": null,
+   "text": "De invloed van overheidsingrijpen via heffingen of subsidies op het marktresultaat en daardoor op de omvang en de verdeling van het totale surplus.",
+   "is_leaf": true,
+   "page": 12
+  },
+  {
+   "unit_id": "D3.10",
+   "parent_id": "D3",
+   "kind": "eindterm",
+   "code": "3.10",
+   "title": null,
+   "text": "De invloed van prijsregulering door middel van minimumprijzen of maximumprijzen op het marktresultaat en daardoor op de omvang en verdeling van het totale surplus.",
+   "is_leaf": true,
+   "page": 12
+  },
+  {
+   "unit_id": "D3.11",
+   "parent_id": "D3",
+   "kind": "eindterm",
+   "code": "3.11",
+   "title": null,
+   "text": "Effecten van octrooien/patenten op marktgedrag en marktresultaat.",
+   "is_leaf": true,
+   "page": 12
+  },
+  {
+   "unit_id": "E",
+   "parent_id": null,
+   "kind": "domein",
+   "code": "E",
+   "title": "Ruilen over de tijd",
+   "text": "De kandidaat kan, binnen de contexten van gezinshuishoudingen1, bedrijfs- en overheidshuishoudingen, analyseren dat ruil niet alleen op één moment in de tijd plaatsvindt, maar ook over de tijd. De prijs die deze intertemporele ruil coördineert is de rente.",
+   "is_leaf": false,
+   "page": 13,
+   "exam": "CE"
+  },
+  {
+   "unit_id": "E1",
+   "parent_id": "E",
+   "kind": "subdomein",
+   "code": "E1",
+   "title": "Intertemporele ruil",
+   "text": "De kandidaat kan in contexten herkennen en toepassen:",
+   "is_leaf": false,
+   "page": 13
+  },
+  {
+   "unit_id": "E1.1",
+   "parent_id": "E1",
+   "kind": "eindterm",
+   "code": "1.1",
+   "title": null,
+   "text": "De intertemporele ruil waarbij niet in de tijd samenvallende rendementen vergeleken worden: afweging tussen individuele prijs van tijd en marktprijs van tijd.",
+   "is_leaf": true,
+   "page": 13
+  },
+  {
+   "unit_id": "E1.2",
+   "parent_id": "E1",
+   "kind": "eindterm",
+   "code": "1.2",
+   "title": null,
+   "text": "Lenen en sparen door deelnemers aan intertemporele ruil als schuiven met koopkracht / bestedingen in de tijd.",
+   "is_leaf": true,
+   "page": 13
+  },
+  {
+   "unit_id": "E1.3",
+   "parent_id": "E1",
+   "kind": "eindterm",
+   "code": "1.3",
+   "title": null,
+   "text": "De keuze om al dan niet vermogen te vragen of aan te bieden met daarbij argumenten als tijdsvoorkeur en risico-aversie.",
+   "is_leaf": true,
+   "page": 13
+  },
+  {
+   "unit_id": "E1.4",
+   "parent_id": "E1",
+   "kind": "eindterm",
+   "code": "1.4",
+   "title": null,
+   "text": "Rente als beloning voor het uitstellen van consumptie (sparen) en het dragen van risico (lenen) en als compensatie voor inflatie;\n• Verschillende rentes door bijvoorbeeld verschillen in looptijd, risico en liquiditeit.\n• Rente op bijvoorbeeld staatsobligaties, bedrijfsleningen en consumentenkrediet.",
+   "is_leaf": true,
+   "page": 13
+  },
+  {
+   "unit_id": "E1.5",
+   "parent_id": "E1",
+   "kind": "eindterm",
+   "code": "1.5",
+   "title": null,
+   "text": "Financiële sector en financieel risico\n• De financiële sector bemiddelt tussen spaarders en investeerders en verschuift risico van mensen/partijen die risico willen afstaan naar mensen/partijen die risico willen dragen\n• De invloed van risico’s als (dreiging van) wanbetaling en informatieasymmetrie\n• Het risico omtrent inflatie op het gedrag van aanbieders en/of vragers van vermogen en daarmee op de rente",
+   "is_leaf": true,
+   "page": 13
+  },
+  {
+   "unit_id": "E1.6",
+   "parent_id": "E1",
+   "kind": "eindterm",
+   "code": "1.6",
+   "title": null,
+   "text": "Het onderscheid en de samenhang tussen nominale en reële grootheden.",
+   "is_leaf": true,
+   "page": 13
+  },
+  {
+   "unit_id": "E1.7",
+   "parent_id": "E1",
+   "kind": "eindterm",
+   "code": "1.7",
+   "title": null,
+   "text": "Het belang van investeringen bij de vorming van publiek kapitaal zoals infrastructuur, of privaat kapitaal zoals menselijk kapitaal of kapitaalgoederen van bedrijven.",
+   "is_leaf": true,
+   "page": 13
+  },
+  {
+   "unit_id": "E1.8",
+   "parent_id": "E1",
+   "kind": "eindterm",
+   "code": "1.8",
+   "title": null,
+   "text": "Het verschil tussen voorraad- en stroomgrootheden en hun onderlinge verband.",
+   "is_leaf": true,
+   "page": 13
+  },
+  {
+   "unit_id": "E1.9",
+   "parent_id": "E1",
+   "kind": "eindterm",
+   "code": "1.9",
+   "title": null,
+   "text": "Intertemporele ruil door de overheid vergelijken met een dergelijke ruil in de private sector gelet op de staatsschuld en de bijzondere positie van het overheidstekort als uitgestelde belastingheffing.",
+   "is_leaf": true,
+   "page": 13
+  },
+  {
+   "unit_id": "E1.10",
+   "parent_id": "E1",
+   "kind": "eindterm",
+   "code": "1.10",
+   "title": null,
+   "text": "Belastingspreiding in de tijd als methode om welvaartsverliezen als gevolg van belastingheffing te spreiden in de tijd.",
+   "is_leaf": true,
+   "page": 13
+  },
+  {
+   "unit_id": "E2",
+   "parent_id": "E",
+   "kind": "subdomein",
+   "code": "E2",
+   "title": "Registratie intertemporele ruil",
+   "text": "De kandidaat kan in contexten herkennen en toepassen:",
+   "is_leaf": false,
+   "page": 13
+  },
+  {
+   "unit_id": "E2.1",
+   "parent_id": "E2",
+   "kind": "eindterm",
+   "code": "2.1",
+   "title": null,
+   "text": "De levensloop binnen gezinshuishoudingen en de rol van de overheid met daarbij:\n- welvaartsvaste- of waardevaste pensioenen / inkomens\n- het omslagstelsel en het kapitaaldekkingsstelsel als het gaat om de financiering van het pensioen / inkomen\n- intergenerationele ruil",
+   "is_leaf": true,
+   "page": 13
+  },
+  {
+   "unit_id": "E2.2",
+   "parent_id": "E2",
+   "kind": "eindterm",
+   "code": "2.2",
+   "title": null,
+   "text": "De vermogenspositie van de overheid met daarbij:\n• de staatsschuld\n• het begrotingsaldo (tekort/overschot)\nDe eisen van het Stabiliteits- en groeipact zijn:\n• Het begrotingstekort mag niet boven de 3 procent van het bbp komen\n• De staatsschuld als percentage van het bbp (staatsschuldquote) mag niet meer dan 60 procent van het bbp bedragen",
+   "is_leaf": true,
+   "page": 14
+  },
+  {
+   "unit_id": "F",
+   "parent_id": null,
+   "kind": "domein",
+   "code": "F",
+   "title": "Samenwerken en onderhandelen",
+   "text": "De kandidaat kan in contexten analyseren dat, wanneer belangen van individuele actoren conflicteren, samenwerken en onderhandelen meer oplevert voor (markt)partijen dan vertrouwen op individuele acties. Centralisatie, waarbij (collectieve) dwang het middel is om acties tot stand te brengen, kan een alternatief coördinatiemechanisme zijn voor keuzes.",
+   "is_leaf": false,
+   "page": 15,
+   "exam": "CE"
+  },
+  {
+   "unit_id": "F1",
+   "parent_id": "F",
+   "kind": "subdomein",
+   "code": "F1",
+   "title": "Speltheorie",
+   "text": "De kandidaat kan in contexten herkennen en toepassen:",
+   "is_leaf": false,
+   "page": 15
+  },
+  {
+   "unit_id": "F1.1",
+   "parent_id": "F1",
+   "kind": "eindterm",
+   "code": "1.1",
+   "title": null,
+   "text": "Het belang van voldoende en van gelijke informatie voor de spelers.",
+   "is_leaf": true,
+   "page": 15
+  },
+  {
+   "unit_id": "F1.2",
+   "parent_id": "F1",
+   "kind": "eindterm",
+   "code": "1.2",
+   "title": null,
+   "text": "De weergave van het spel in een pay-off matrix of een spelboom (beslisboom).",
+   "is_leaf": true,
+   "page": 15
+  },
+  {
+   "unit_id": "F1.3",
+   "parent_id": "F1",
+   "kind": "eindterm",
+   "code": "1.3",
+   "title": null,
+   "text": "Het onderscheid tussen een simultaan, een sequentieel spel en een herhaald (simultaan) spel.",
+   "is_leaf": true,
+   "page": 15
+  },
+  {
+   "unit_id": "F1.4",
+   "parent_id": "F1",
+   "kind": "eindterm",
+   "code": "1.4",
+   "title": null,
+   "text": "Het optreden van een Nash-evenwicht.",
+   "is_leaf": true,
+   "page": 15
+  },
+  {
+   "unit_id": "F1.5",
+   "parent_id": "F1",
+   "kind": "eindterm",
+   "code": "1.5",
+   "title": null,
+   "text": "Het optreden van een gevangenendilemma waarin sprake is van een dominante strategie voor de spelers met daarbij het suboptimale Nash evenwicht.",
+   "is_leaf": true,
+   "page": 15
+  },
+  {
+   "unit_id": "F1.6",
+   "parent_id": "F1",
+   "kind": "eindterm",
+   "code": "1.6",
+   "title": null,
+   "text": "Een spelsituatie waarbij niet altijd een dominante strategie aanwezig is.",
+   "is_leaf": true,
+   "page": 15
+  },
+  {
+   "unit_id": "F1.7",
+   "parent_id": "F1",
+   "kind": "eindterm",
+   "code": "1.7",
+   "title": null,
+   "text": "Zelfbinding als alternatief voor de eigen dominante strategie indien zelfbinding een lagere pay-off oplevert en het effect hiervan op de keuze die één of meerdere spelers gedurende het verdere verloop van het spel maken.",
+   "is_leaf": true,
+   "page": 15
+  },
+  {
+   "unit_id": "F1.8",
+   "parent_id": "F1",
+   "kind": "eindterm",
+   "code": "1.8",
+   "title": null,
+   "text": "De invloed van sociale normen op de pay-offs in de matrix en het effect hiervan op de keuze die één of meerdere spelers gedurende het verdere verloop van het spel maken.",
+   "is_leaf": true,
+   "page": 15
+  },
+  {
+   "unit_id": "F1.9",
+   "parent_id": "F1",
+   "kind": "eindterm",
+   "code": "1.9",
+   "title": null,
+   "text": "Het effect van de reputatie die de spelers gedurende het spel hebben opgebouwd op de pay-offs in de matrix gedurende een tijdsperiode en het effect hiervan op de keuze (s) die één of meerdere spelers gedurende het verloop van het spel maken.",
+   "is_leaf": true,
+   "page": 15
+  },
+  {
+   "unit_id": "F1.10",
+   "parent_id": "F1",
+   "kind": "eindterm",
+   "code": "1.10",
+   "title": null,
+   "text": "De invloed van het herhalen van een simultaan spel op de mogelijke evenwichten.",
+   "is_leaf": true,
+   "page": 15
+  },
+  {
+   "unit_id": "F1.11",
+   "parent_id": "F1",
+   "kind": "eindterm",
+   "code": "1.11",
+   "title": null,
+   "text": "De invloed van zelfbinding op de geloofwaardigheid van een dreiging, bijvoorbeeld de dreiging van een prijzenoorlog bij toetreding.",
+   "is_leaf": true,
+   "page": 15
+  },
+  {
+   "unit_id": "F1.12",
+   "parent_id": "F1",
+   "kind": "eindterm",
+   "code": "1.12",
+   "title": null,
+   "text": "De afruil tussen binding en flexibiliteit bij langdurige relaties, bijvoorbeeld arbeidsrelaties, kartelafspraken en internationale handel.",
+   "is_leaf": true,
+   "page": 15
+  },
+  {
+   "unit_id": "F2",
+   "parent_id": "F",
+   "kind": "subdomein",
+   "code": "F2",
+   "title": "Suboptimale situaties",
+   "text": "De kandidaat kan in contexten herkennen en toepassen:",
+   "is_leaf": false,
+   "page": 15
+  },
+  {
+   "unit_id": "F2.1",
+   "parent_id": "F2",
+   "kind": "eindterm",
+   "code": "2.1",
+   "title": null,
+   "text": "Het optreden van een berovingsprobleem indien er sprake is van verzonken kosten: kosten die al gemaakt zijn en niet kunnen worden teruggedraaid vanwege het specifieke karakter van de investering.",
+   "is_leaf": true,
+   "page": 15
+  },
+  {
+   "unit_id": "F2.2",
+   "parent_id": "F2",
+   "kind": "eindterm",
+   "code": "2.2",
+   "title": null,
+   "text": "Het optreden van een tegenstelling tussen individueel en collectief belang bij collectieve goederen.",
+   "is_leaf": true,
+   "page": 15
+  },
+  {
+   "unit_id": "F2.3",
+   "parent_id": "F2",
+   "kind": "eindterm",
+   "code": "2.3",
+   "title": null,
+   "text": "Het optreden van meeliftersgedrag indien er sprake is van een dominante strategie van niet bijdragen aan een collectief goed.",
+   "is_leaf": true,
+   "page": 16
+  },
+  {
+   "unit_id": "F2.4",
+   "parent_id": "F2",
+   "kind": "eindterm",
+   "code": "2.4",
+   "title": null,
+   "text": "Het optreden en internaliseren van positieve of negatieve externe effecten.",
+   "is_leaf": true,
+   "page": 16
+  },
+  {
+   "unit_id": "G",
+   "parent_id": null,
+   "kind": "domein",
+   "code": "G",
+   "title": "Risico en informatie",
+   "text": "De kandidaat kan in contexten analyseren dat gezinnen en bedrijven bij het maken van keuzes informatie verzamelen ten einde onzekerheid te verkleinen. Aangezien de informatie vaak een beperkt karakter zal hebben moeten transactiepartijen een inschatting maken van mogelijke gebeurtenissen (risico) en de mate waarin transactiepartners gebeurtenissen beïnvloeden of informatie achterhouden die relevant is voor het tot stand brengen van een transactie (asymmetrische informatie).",
+   "is_leaf": false,
+   "page": 17,
+   "exam": "CE"
+  },
+  {
+   "unit_id": "G1",
+   "parent_id": "G",
+   "kind": "subdomein",
+   "code": "G1",
+   "title": "Risico",
+   "text": "De kandidaat kan in contexten herkennen en toepassen:",
+   "is_leaf": false,
+   "page": 17
+  },
+  {
+   "unit_id": "G1.1",
+   "parent_id": "G1",
+   "kind": "eindterm",
+   "code": "1.1",
+   "title": null,
+   "text": "De aard en de omvang van het risico dat ontstaat bij het nemen van een beslissing in een situatie van onzekerheid (onzeker voorval).",
+   "is_leaf": true,
+   "page": 17
+  },
+  {
+   "unit_id": "G1.2",
+   "parent_id": "G1",
+   "kind": "eindterm",
+   "code": "1.2",
+   "title": null,
+   "text": "Risicoaversie en verschillen daarin tussen transactiepartners.",
+   "is_leaf": true,
+   "page": 17
+  },
+  {
+   "unit_id": "G2",
+   "parent_id": "G",
+   "kind": "subdomein",
+   "code": "G2",
+   "title": "Asymmetrische informatie",
+   "text": "De kandidaat kan in contexten het verschijnsel onvolledige en / of asymmetrische informatie herkennen en toepassen:",
+   "is_leaf": false,
+   "page": 17
+  },
+  {
+   "unit_id": "G2.1",
+   "parent_id": "G2",
+   "kind": "eindterm",
+   "code": "2.1",
+   "title": null,
+   "text": "Onvolledige informatie leidt in een ruilsituatie tot transactiekosten",
+   "is_leaf": true,
+   "page": 17
+  },
+  {
+   "unit_id": "G2.2",
+   "parent_id": "G2",
+   "kind": "eindterm",
+   "code": "2.2",
+   "title": null,
+   "text": "Informatieasymmetrie: informatieachterstand of informatievoorsprong van de ene transactiepartij t.o.v. de andere partij",
+   "is_leaf": true,
+   "page": 17
+  },
+  {
+   "unit_id": "G3",
+   "parent_id": "G",
+   "kind": "subdomein",
+   "code": "G3",
+   "title": "Asymmetrische informatie in bedrijf",
+   "text": "De kandidaat kan in contexten herkennen en toepassen:",
+   "is_leaf": false,
+   "page": 17
+  },
+  {
+   "unit_id": "G3.1",
+   "parent_id": "G3",
+   "kind": "eindterm",
+   "code": "3.1",
+   "title": null,
+   "text": "De keuze die een ondernemer maakt bij het verkrijgen van vermogen en de functie van onderpand bij het verkrijgen van krediet.",
+   "is_leaf": true,
+   "page": 17
+  },
+  {
+   "unit_id": "G3.2",
+   "parent_id": "G3",
+   "kind": "eindterm",
+   "code": "3.2",
+   "title": null,
+   "text": "Principaal-agentrelaties, het risico op averechtse selectie en moral hazard2.\nTe denken valt aan:\n• opdrachtgever – opdrachtnemer\n• vermogensverschaffer(eigendom) – ondernemer(leiding)\n• kredietgever – kredietnemer\nBij een principaal-agentrelatie is er sprake van een principaal, een agent, asymmetrische informatie en tegengestelde belangen.",
+   "is_leaf": true,
+   "page": 17
+  },
+  {
+   "unit_id": "G3.3",
+   "parent_id": "G3",
+   "kind": "eindterm",
+   "code": "3.3",
+   "title": null,
+   "text": "Het hanteren van contracten in een principaal-agentrelatie en het inzetten van prikkels.",
+   "is_leaf": true,
+   "page": 17
+  },
+  {
+   "unit_id": "G3.4",
+   "parent_id": "G3",
+   "kind": "eindterm",
+   "code": "3.4",
+   "title": null,
+   "text": "De rol van toezichthouders op financiële en op andere markten",
+   "is_leaf": true,
+   "page": 17
+  },
+  {
+   "unit_id": "G4",
+   "parent_id": "G",
+   "kind": "subdomein",
+   "code": "G4",
+   "title": "Risico verzekeren",
+   "text": "De kandidaat kan in contexten herkennen en toepassen:",
+   "is_leaf": false,
+   "page": 18
+  },
+  {
+   "unit_id": "G4.1",
+   "parent_id": "G4",
+   "kind": "eindterm",
+   "code": "4.1",
+   "title": null,
+   "text": "De betekenis van risicoaversie met betrekking tot het afsluiten van een verzekering.",
+   "is_leaf": true,
+   "page": 18
+  },
+  {
+   "unit_id": "G4.2",
+   "parent_id": "G4",
+   "kind": "eindterm",
+   "code": "4.2",
+   "title": null,
+   "text": "De afweging tussen kosten en risico bij verzekeren door beide transactiepartijen.",
+   "is_leaf": true,
+   "page": 18
+  },
+  {
+   "unit_id": "G4.3",
+   "parent_id": "G4",
+   "kind": "eindterm",
+   "code": "4.3",
+   "title": null,
+   "text": "Het effect dat (verplichte)solidariteit kan hebben op risicomanagement van verzekerden.",
+   "is_leaf": true,
+   "page": 18
+  },
+  {
+   "unit_id": "G4.4",
+   "parent_id": "G4",
+   "kind": "eindterm",
+   "code": "4.4",
+   "title": null,
+   "text": "Averechtse selectie en middelen om dit te beperken: het verplicht voorschrijven van een verzekering; het instellen van een collectieve verzekering",
+   "is_leaf": true,
+   "page": 18
+  },
+  {
+   "unit_id": "G4.5",
+   "parent_id": "G4",
+   "kind": "eindterm",
+   "code": "4.5",
+   "title": null,
+   "text": "Moral hazard en middelen om dit te beperken: bijvoorbeeld eigen risico, bonus-malussysteem.",
+   "is_leaf": true,
+   "page": 18
+  },
+  {
+   "unit_id": "G5",
+   "parent_id": "G",
+   "kind": "subdomein",
+   "code": "G5",
+   "title": "Beleggen",
+   "text": "De kandidaat kan in contexten herkennen en toepassen:",
+   "is_leaf": false,
+   "page": 18
+  },
+  {
+   "unit_id": "G5.1",
+   "parent_id": "G5",
+   "kind": "eindterm",
+   "code": "5.1",
+   "title": null,
+   "text": "De relatie tussen de hoogte van het risico en het te verwachten rendement bij beleggingen.",
+   "is_leaf": true,
+   "page": 18
+  },
+  {
+   "unit_id": "G5.2",
+   "parent_id": "G5",
+   "kind": "eindterm",
+   "code": "5.2",
+   "title": null,
+   "text": "Het verschil tussen obligaties en aandelen ten aanzien van de mate van risico en het te verwachten rendement.",
+   "is_leaf": true,
+   "page": 18
+  },
+  {
+   "unit_id": "H",
+   "parent_id": null,
+   "kind": "domein",
+   "code": "H",
+   "title": "Welvaart en groei",
+   "text": "De kandidaat kan in contexten analyseren wat op nationaal en op mondiaal niveau de oorzaken zijn van economische groei en van de verdeling van inkomen en welvaart. Keuzes op microniveau werken door op macroniveau in elke economie die gekenmerkt wordt door wederzijds afhankelijke markten.",
+   "is_leaf": false,
+   "page": 19,
+   "exam": "CE"
+  },
+  {
+   "unit_id": "H1",
+   "parent_id": "H",
+   "kind": "subdomein",
+   "code": "H1",
+   "title": "Macro-economische kringloop",
+   "text": "De kandidaat kan in contexten herkennen en toepassen:",
+   "is_leaf": false,
+   "page": 19
+  },
+  {
+   "unit_id": "H1.1",
+   "parent_id": "H1",
+   "kind": "eindterm",
+   "code": "1.1",
+   "title": null,
+   "text": "Macro-economische begrippen\n• Inkomen: de vorming van het bbp (Bruto Binnenlands Product) waarbij de volgende methoden kunnen worden onderscheiden:\n- Bestedingsmethode: inkomen = consumptie + investeringen + overheidsbestedingen + export – import\n- Objectieve methode: inkomen = som toegevoegde waarde = totale omzet – totale kosten leveringen van derden\n- Subjectieve methode: inkomen = arbeidsinkomen (loonsom werknemers + toegerekende lonen zelfstandigen) + kapitaalinkomen (rente, dividend, pacht, huur en winst) + afschrijvingen\n• Categoriale inkomensverdeling\n• Loonkosten per eenheid product en de arbeidsinkomensquote (=AIQ) arbeidsinkomen als deel van het nationaal inkomen.",
+   "is_leaf": true,
+   "page": 19
+  },
+  {
+   "unit_id": "H1.2",
+   "parent_id": "H1",
+   "kind": "eindterm",
+   "code": "1.2",
+   "title": null,
+   "text": "De economische kringloop, reëel en financieel\n• Reële kringloop: Y = C + I + O + E – M\n• Bestedingen van de een is het inkomen van een ander (evenwicht goederenmarkt)\n• Financiële kringloop: S = I + (O – B) + (E – M)\n• De vordering van de een is de verplichting van de ander (evenwicht vermogensmarkt)\n• In open economie: saldo lopende rekening = nationaal spaarsaldo = particulier spaarsaldo + overheidssaldo\n• Voor iedere transactie in de reële sfeer (reële kringloop) bestaat er een transactie in de financiële sfeer (financiële kringloop)\n• Betalingsbalans, lopende rekening (reële transacties met buitenland) en financiële rekening (financiële transacties met buitenland).",
+   "is_leaf": true,
+   "page": 19
+  },
+  {
+   "unit_id": "H2",
+   "parent_id": "H",
+   "kind": "subdomein",
+   "code": "H2",
+   "title": "Structurele groei",
+   "text": "De kandidaat kan in contexten herkennen en toepassen:",
+   "is_leaf": false,
+   "page": 19
+  },
+  {
+   "unit_id": "H2.1",
+   "parent_id": "H2",
+   "kind": "eindterm",
+   "code": "2.1",
+   "title": null,
+   "text": "Op lange termijn wordt de economische groei bepaald door de groei van de productiefactoren en technologie (het aanbod) in de economie.",
+   "is_leaf": true,
+   "page": 19
+  },
+  {
+   "unit_id": "H2.2",
+   "parent_id": "H2",
+   "kind": "eindterm",
+   "code": "2.2",
+   "title": null,
+   "text": "De productiefunctie: Y = Af(K, L) (1)\n• f(·): productiefunctie, A: (totale factor) productiviteit, K: kapitaal en land, L: arbeid\n• Potentiële productie Y stijgt/daalt door meer/minder kapitaal (K hoger/lager), meer/minder arbeid (L hoger/lager), hogere/lagere (totale factor) productiviteit (A hoger/lager)\n• Positieve maar afnemende meeropbrengsten van kapitaal K en arbeid L\n• Constante schaalopbrengsten: verdubbeling K en L leidt tot verdubbeling Y",
+   "is_leaf": true,
+   "page": 19
+  },
+  {
+   "unit_id": "H2.3",
+   "parent_id": "H2",
+   "kind": "eindterm",
+   "code": "2.3",
+   "title": null,
+   "text": "Factoren die de totale factorproductiviteit bepalen De totale factorproductiviteit stijgt (A hoger) door innovatie (proces- en product-), R&D, learning-by-doing, onderwijs, onderzoek, handel, betere instituties, betere infrastructuur, beter milieu, gunstige geografische ligging politieke stabiliteit;\n• Onder instituties wordt onder meer verstaan: kwaliteit overheid, eigendomsrechten en rechtsstaat, regels voor eerlijke mededinging.",
+   "is_leaf": true,
+   "page": 19
+  },
+  {
+   "unit_id": "H2.4",
+   "parent_id": "H2",
+   "kind": "eindterm",
+   "code": "2.4",
+   "title": null,
+   "text": "Structureel of groeibevorderend beleid: beleid dat A, K, of L verhoogt.",
+   "is_leaf": true,
+   "page": 19
+  },
+  {
+   "unit_id": "H3",
+   "parent_id": "H",
+   "kind": "subdomein",
+   "code": "H3",
+   "title": "Inkomen, welvaart en welzijn",
+   "text": "De kandidaat kan in contexten herkennen en toepassen",
+   "is_leaf": false,
+   "page": 20
+  },
+  {
+   "unit_id": "H3.1",
+   "parent_id": "H3",
+   "kind": "eindterm",
+   "code": "3.1",
+   "title": null,
+   "text": "Welvaart van een huishouden\n• De (brede) welvaart van een gezinshuishouden is waarde van behoeftebevrediging van schaarse goederen zoals consumptie van goederen en diensten, vrije tijd, milieu, leefomgeving, collectieve goederen, infrastructuur, risico (negatief), ongelijkheid (negatief), veiligheid, overheidspaternalisme.",
+   "is_leaf": true,
+   "page": 20
+  },
+  {
+   "unit_id": "H3.2",
+   "parent_id": "H3",
+   "kind": "eindterm",
+   "code": "3.2",
+   "title": null,
+   "text": "Maatschappelijke welvaart\n• Maatschappelijke (brede) welvaart = een optelsom van (brede) welvaart van alle huishoudens;\n• Alleen gezinshuishoudens dragen bij aan de maatschappelijke welvaart. Ondernemingen dragen indirect bij aan de welvaart via de winstuitkeringen aan de huishoudens;\n• Maatschappelijke welvaart houdt politieke waardeoordelen in over ongelijkheid (wiens welvaart weegt het zwaarste in de optelling van welvaart van huishoudens);\n• De maatschappelijke welvaart kan alleen in geld worden uitgedrukt als alle (materiële en immateriële) maatschappelijke kosten en baten van schaarse goederen, bijvoorbeeld als de baten of kosten van (inkomens)risico, infrastructuur, milieu, leefomgeving en veiligheid in geld kunnen worden uitgedrukt, en welvaartsvergelijking tussen huishoudens mogelijk is;\n• Verschil tussen welvaart en bbp: het verschil tussen brede maatschappelijke welvaart en de totale waarde van markttransacties.",
+   "is_leaf": true,
+   "page": 20
+  },
+  {
+   "unit_id": "H3.3",
+   "parent_id": "H3",
+   "kind": "eindterm",
+   "code": "3.3",
+   "title": null,
+   "text": "Maximale maatschappelijke welvaart is niet gelijk aan Pareto-optimum: maatschappelijke welvaart neemt toe als de maatschappelijke winst van de een groter is dan het maatschappelijke verlies van de ander.",
+   "is_leaf": true,
+   "page": 20
+  },
+  {
+   "unit_id": "H3.4",
+   "parent_id": "H3",
+   "kind": "eindterm",
+   "code": "3.4",
+   "title": null,
+   "text": "Welzijn gaat over de behoeftebevrediging ontleend aan schaarse en niet-schaarse goederen en brede welvaart alleen over de behoeftebevrediging ontleend aan schaarse goederen.",
+   "is_leaf": true,
+   "page": 20
+  },
+  {
+   "unit_id": "H3.5",
+   "parent_id": "H3",
+   "kind": "eindterm",
+   "code": "3.5",
+   "title": null,
+   "text": "Groen bbp per hoofd: groen bbp = bbp minus geschatte (monetaire) waarde van schade aan milieu plus geschatte (monetaire) waarde van verbetering aan milieu.",
+   "is_leaf": true,
+   "page": 20
+  },
+  {
+   "unit_id": "H4",
+   "parent_id": "H",
+   "kind": "subdomein",
+   "code": "H4",
+   "title": "Ongelijkheid en herverdeling",
+   "text": "De kandidaat kan in contexten herkennen en toepassen:",
+   "is_leaf": false,
+   "page": 20
+  },
+  {
+   "unit_id": "H4.1",
+   "parent_id": "H4",
+   "kind": "eindterm",
+   "code": "4.1",
+   "title": null,
+   "text": "Gini-coëfficiënt en percentielenratio als maatstaven voor inkomensongelijkheid.",
+   "is_leaf": true,
+   "page": 20
+  },
+  {
+   "unit_id": "H4.2",
+   "parent_id": "H4",
+   "kind": "eindterm",
+   "code": "4.2",
+   "title": null,
+   "text": "Maatstaven voor inkomen kunnen verschillen:\n• huishouden vs. individu\n• arbeidsinkomen vs. totaal inkomen (inclusief kapitaalinkomen en uitkeringen)\n• primair en secundair inkomen.",
+   "is_leaf": true,
+   "page": 20
+  },
+  {
+   "unit_id": "H4.3",
+   "parent_id": "H4",
+   "kind": "eindterm",
+   "code": "4.3",
+   "title": null,
+   "text": "Ongelijkheid van vermogen",
+   "is_leaf": true,
+   "page": 20
+  },
+  {
+   "unit_id": "H4.4",
+   "parent_id": "H4",
+   "kind": "eindterm",
+   "code": "4.4",
+   "title": null,
+   "text": "Nivelleren en denivelleren: met beleid verkleinen of vergroten van de relatieve inkomensverschillen tussen huishoudens.",
+   "is_leaf": true,
+   "page": 20
+  },
+  {
+   "unit_id": "H4.5",
+   "parent_id": "H4",
+   "kind": "eindterm",
+   "code": "4.5",
+   "title": null,
+   "text": "Er kan een afruil zijn tussen doelmatigheid en rechtvaardigheid als herverdeling van inkomen en vermogen leidt tot minder prikkels voor economische activiteiten, bijvoorbeeld om te werken (uren, participatie, uittreding), te sparen, te scholen, te ondernemen, en tot meer prikkels om te migreren of belasting te ontwijken. Deze afruil hoeft niet op te treden als herverdeling niet leidt tot minder sterke prikkels voor economische activiteiten (via bijvoorbeeld onderwijs, kinderopvang, sociale zekerheid).",
+   "is_leaf": true,
+   "page": 20
+  },
+  {
+   "unit_id": "H4.6",
+   "parent_id": "H4",
+   "kind": "eindterm",
+   "code": "4.6",
+   "title": null,
+   "text": "Belasting\n• Gemiddeld en marginaal tarief\n• Belastingwig\n• Progressief /degressief belastingstelsel: gemiddeld tarief stijgt /daalt met inkomen\n• Vlaktaks: 1 marginaal tarief\n• Belasting op inkomen uit arbeid\n• Belasting op vermogen\n• Heffingskortingen\n• Aftrekposten en bijtellingen\n• Vennootschapsbelasting\n• Indirecte belastingen, zoals de btw en de accijnzen",
+   "is_leaf": true,
+   "page": 21
+  },
+  {
+   "unit_id": "H4.7",
+   "parent_id": "H4",
+   "kind": "eindterm",
+   "code": "4.7",
+   "title": null,
+   "text": "Uitkeringen en toeslagen als instrumenten voor herverdeling en verzekering.",
+   "is_leaf": true,
+   "page": 21
+  },
+  {
+   "unit_id": "H5",
+   "parent_id": "H",
+   "kind": "subdomein",
+   "code": "H5",
+   "title": "Arbeidsmarkt en werkloosheid",
+   "text": "De kandidaat kan in contexten herkennen en toepassen:",
+   "is_leaf": false,
+   "page": 21
+  },
+  {
+   "unit_id": "H5.1",
+   "parent_id": "H5",
+   "kind": "eindterm",
+   "code": "5.1",
+   "title": null,
+   "text": "Begrippen voor de beschrijving van de arbeidsmarkt\n• Arbeidsaanbod (= beroepsbevolking)\n• Arbeidsvraag (werkgelegenheid + openstaande vacatures)\n• Werkloosheid\n• Vacatures\n• Loonontwikkeling\n• Flexwerk en zzp",
+   "is_leaf": true,
+   "page": 21
+  },
+  {
+   "unit_id": "H5.2",
+   "parent_id": "H5",
+   "kind": "eindterm",
+   "code": "5.2",
+   "title": null,
+   "text": "Verschillende soorten werkloosheid\n• Structurele werkloosheid, waaronder frictiewerkloosheid\n• Conjuncturele werkloosheid",
+   "is_leaf": true,
+   "page": 21
+  },
+  {
+   "unit_id": "H5.3",
+   "parent_id": "H5",
+   "kind": "eindterm",
+   "code": "5.3",
+   "title": null,
+   "text": "Verklaringen structurele en frictiewerkloosheid",
+   "is_leaf": true,
+   "page": 21
+  },
+  {
+   "unit_id": "I",
+   "parent_id": null,
+   "kind": "domein",
+   "code": "I",
+   "title": "Goede tijden, slechte tijden",
+   "text": "De kandidaat kan in contexten analyseren waarom er sprake is van korte termijn schommelingen in economische activiteiten en welke mogelijkheden en grenzen er zijn voor conjunctuurbeleid. Markten laten zich niet gemakkelijk reguleren mede door toedoen van rigiditeiten.",
+   "is_leaf": false,
+   "page": 22,
+   "exam": "CE"
+  },
+  {
+   "unit_id": "I1",
+   "parent_id": "I",
+   "kind": "subdomein",
+   "code": "I1",
+   "title": "Conjunctuur",
+   "text": "De kandidaat kan in contexten herkennen en toepassen:",
+   "is_leaf": false,
+   "page": 22
+  },
+  {
+   "unit_id": "I1.1",
+   "parent_id": "I1",
+   "kind": "eindterm",
+   "code": "1.1",
+   "title": null,
+   "text": "Begrippen voor de beschrijving van de conjunctuur\n• Bbp-groei & niveau\n• Output gap = feitelijke productie (= Y) – potentiële productie (= Y*)\n• Werkloosheid en werkgelegenheid\n• Inflatie en prijspeil (consumentenprijsindex)\n• Nominale rente centrale bank\n• Reële rente",
+   "is_leaf": true,
+   "page": 22
+  },
+  {
+   "unit_id": "I1.2",
+   "parent_id": "I1",
+   "kind": "eindterm",
+   "code": "1.2",
+   "title": null,
+   "text": "Conjunctuur, output gap en werkloosheid\n• Structureel aanbod op lange termijn = potentiële productie Y*\n• Geaggregeerde vraag = feitelijke productie Y\n• Natuurlijke werkloosheid: structurele werkloosheid die hoort bij potentiële productie en constante inflatie\n• Hoogconjunctuur: overbesteding, output gap > 0, werkloosheid < structurele werkloosheid\n• Laagconjunctuur: onderbesteding, output gap < 0, werkloosheid > structurele werkloosheid",
+   "is_leaf": true,
+   "page": 22
+  },
+  {
+   "unit_id": "I1.3",
+   "parent_id": "I1",
+   "kind": "eindterm",
+   "code": "1.3",
+   "title": null,
+   "text": "Conjunctuur en welvaart\n• Schommelingen in de inflatie, het inkomen en werkloosheid veroorzaken welvaartsverliezen",
+   "is_leaf": true,
+   "page": 22
+  },
+  {
+   "unit_id": "I1.4",
+   "parent_id": "I1",
+   "kind": "eindterm",
+   "code": "1.4",
+   "title": null,
+   "text": "Reële versus nominale grootheden\n• Koopkracht en inflatie\n• De relatie tussen het prijsindexcijfer, koopkracht en inflatie/deflatie\n• Reële rente = (1 + nominale rente)/(1 + verwachte inflatie) – 1\n• Geldillusie: mensen verwarren reële en nominale grootheden",
+   "is_leaf": true,
+   "page": 22
+  },
+  {
+   "unit_id": "I1.5",
+   "parent_id": "I1",
+   "kind": "eindterm",
+   "code": "1.5",
+   "title": null,
+   "text": "Conjunctuurpolitiek\n• Het beïnvloeden van de conjunctuur door middel van monetair of begrotingsbeleid\n• Timing en dosering van actieve begrotingspolitiek en monetair beleid",
+   "is_leaf": true,
+   "page": 22
+  },
+  {
+   "unit_id": "I2",
+   "parent_id": "I",
+   "kind": "subdomein",
+   "code": "I2",
+   "title": "Begrotingsbeleid",
+   "text": "De kandidaat kan in contexten herkennen en toepassen:",
+   "is_leaf": false,
+   "page": 22
+  },
+  {
+   "unit_id": "I2.1",
+   "parent_id": "I2",
+   "kind": "eindterm",
+   "code": "2.1",
+   "title": null,
+   "text": "Anticyclisch / procyclisch begrotingsbeleid: stimulerend / verkrappend begrotingsbeleid (hogere uitgaven of lagere belastingen) bij laagconjunctuur en verkrappend / stimulerend begrotingsbeleid bij hoogconjunctuur",
+   "is_leaf": true,
+   "page": 22
+  },
+  {
+   "unit_id": "I2.2",
+   "parent_id": "I2",
+   "kind": "eindterm",
+   "code": "2.2",
+   "title": null,
+   "text": "Automatische stabilisatoren bij hoogconjunctuur en laagconjunctuur: sociale uitkeringen en belastingen",
+   "is_leaf": true,
+   "page": 22
+  },
+  {
+   "unit_id": "I2.3",
+   "parent_id": "I2",
+   "kind": "eindterm",
+   "code": "2.3",
+   "title": null,
+   "text": "Inverdieneffecten bij het begrotingsbeleid zijn de hogere belastinginkomsten en lagere uitgaven aan uitkeringen doordat economie wordt gestimuleerd. Omgekeerde geldt bij uitverdieneffecten",
+   "is_leaf": true,
+   "page": 22
+  },
+  {
+   "unit_id": "I3",
+   "parent_id": "I",
+   "kind": "subdomein",
+   "code": "I3",
+   "title": "Monetair beleid en de centrale bank",
+   "text": "De kandidaat kan in contexten herkennen en toepassen:",
+   "is_leaf": false,
+   "page": 23
+  },
+  {
+   "unit_id": "I3.1",
+   "parent_id": "I3",
+   "kind": "eindterm",
+   "code": "3.1",
+   "title": null,
+   "text": "De Europese Centrale Bank (ECB) voert monetair beleid en houdt financieel toezicht.",
+   "is_leaf": true,
+   "page": 23
+  },
+  {
+   "unit_id": "I3.2",
+   "parent_id": "I3",
+   "kind": "eindterm",
+   "code": "3.2",
+   "title": null,
+   "text": "De geldhoeveelheid: geld in handen van publiek in omloop\n• M1 als maatstaf van de maatschappelijke geldhoeveelheid",
+   "is_leaf": true,
+   "page": 23
+  },
+  {
+   "unit_id": "I3.3",
+   "parent_id": "I3",
+   "kind": "eindterm",
+   "code": "3.3",
+   "title": null,
+   "text": "Doelstelling monetair beleid centrale bank\n• Enkelvoudig mandaat: prijsstabiliteit (ECB)\n• Duaal mandaat: prijsstabiliteit en economische groei (bijvoorbeeld FED)",
+   "is_leaf": true,
+   "page": 23
+  },
+  {
+   "unit_id": "I3.4",
+   "parent_id": "I3",
+   "kind": "eindterm",
+   "code": "3.4",
+   "title": null,
+   "text": "Geldschepping\n• Proces van geldschepping via simultane kredietverlening en creatie van bankdeposito’s en vice versa voor geldvernietiging\n• Hogere rente centrale bank remt kredietverlening en creatie deposito’s af en vertraagt de geldgroei omdat de financieringskosten van banken toenemen.",
+   "is_leaf": true,
+   "page": 23
+  },
+  {
+   "unit_id": "I3.5",
+   "parent_id": "I3",
+   "kind": "eindterm",
+   "code": "3.5",
+   "title": null,
+   "text": "Monetair beleid (rentebeleid)\n• De rente van de centrale bank (ECB: refi-rente) bepaalt uiteindelijk de geldhoeveelheid: een hogere (lagere) rente leidt tot minder (meer) kredietverlening door banken en dus een lagere (hogere) geldhoeveelheid;\n• De Centrale Bank bereikt de aangekondigde rente door interventies op de geldmarkt.",
+   "is_leaf": true,
+   "page": 23
+  },
+  {
+   "unit_id": "I3.6",
+   "parent_id": "I3",
+   "kind": "eindterm",
+   "code": "3.6",
+   "title": null,
+   "text": "Effectieve ondergrens nominale rente\n• Zodra de nominale rente negatief wordt, ontstaan er prikkels om vermogen contant aan te houden;\n• In een geldeconomie kan de rente op spaargeld en overheidsobligaties enigszins negatief worden want het aanhouden van veel kasgeld is onpraktisch en kostbaar.",
+   "is_leaf": true,
+   "page": 23
+  },
+  {
+   "unit_id": "I3.7",
+   "parent_id": "I3",
+   "kind": "eindterm",
+   "code": "3.7",
+   "title": null,
+   "text": "Banken en financieel toezicht\n• Een bankrun kan ontstaan doordat de langlopende bezittingen van een bank niet op korte termijn kunnen worden verkocht om aan de kortlopende verplichtingen te voldoen;\n• Depositogarantiestelsel vermindert de kans op bankruns;\n• De ECB treedt op als lener-in-laatste-instantie aan banken.",
+   "is_leaf": true,
+   "page": 23
+  },
+  {
+   "unit_id": "I3.8",
+   "parent_id": "I3",
+   "kind": "eindterm",
+   "code": "3.8",
+   "title": null,
+   "text": "Rente, wisselkoersen en kapitaalverkeer\n• Wisselkoers: prijs van een munt in termen van een andere munt (bijvoorbeeld euro per dollar);\n• Internationale concurrentiepositie van een land hangt af van buitenlands prijspeil ten opzichte van binnenlands prijspeil en de wisselkoers;\n• Depreciatie/appreciatie van de munt leidt tot toename/afname van het saldo op de lopende rekening en een toename/afname van het saldo op de financiële rekening;\n• Een hogere/lagere nominale rente leidt tot appreciatie/depreciatie van de munt door een hogere/lagere kapitaalinvoer;\n• Wisselkoersregimes: vaste en zwevende wisselkoersen;\n• Bij vaste wisselkoersen en vrij kapitaalverkeer kan de Centrale Bank geen onafhankelijke rentepolitiek voeren: als de centrale bank de rente verhoogt, leidt dat tot een kapitaalinstroom uit het buitenland, waardoor de wisselkoers apprecieert;\n• Trilemma monetair beleid: maar twee van de volgende drie kunnen worden gekozen\no vrij kapitaalverkeer\no zelfstandig monetair beleid\no vaste wisselkoers.",
+   "is_leaf": true,
+   "page": 23
+  },
+  {
+   "unit_id": "I3.9",
+   "parent_id": "I3",
+   "kind": "eindterm",
+   "code": "3.9",
+   "title": null,
+   "text": "EMU\n• Een muntunie heeft als voordeel dat wisselkoersschommelingen worden voorkomen waardoor financiële stabiliteit kan worden bevorderd;\n• Een muntunie heeft als nadeel dat economieën in de muntunie niet meer schokken kunnen opvangen via aanpassing van de wisselkoers waardoor de conjunctuurbeweging wordt versterkt;\n• Theorie optimale valutagebieden: bij afwezigheid van wisselkoers is alternatief aanpassingsmechanisme nodig via prijzen, lonen, migratie of inkomensoverdrachten (transfers).",
+   "is_leaf": true,
+   "page": 24
+  },
+  {
+   "unit_id": "I4",
+   "parent_id": "I",
+   "kind": "subdomein",
+   "code": "I4",
+   "title": "Conjunctuuranalyse aan de hand van IS-MB-GA-model voor een gesloten economie",
+   "text": "De kandidaat kan in contexten herkennen en toepassen:",
+   "is_leaf": false,
+   "page": 24
+  },
+  {
+   "unit_id": "I4.1",
+   "parent_id": "I4",
+   "kind": "eindterm",
+   "code": "4.1",
+   "title": null,
+   "text": "Het Keynesiaanse kruis\n• De consumptie stijgt als het besteedbaar inkomen toeneemt en als de autonome consumptie toeneemt;\n• De investeringen zijn autonoom;\n• Het Keynesiaanse kruis geeft het evenwicht tussen de bestedingen en het inkomen bij gegeven rente en inflatie;\n• De bestedingen van de een zijn het inkomen van een ander: de totale bestedingen nemen toe/af als het inkomen stijgt/daalt (ceteris paribus);\n• Mechanisme: inkomen Y past zich aan om evenwicht te geven op de goederenmarkt;\n• Consumentenvertrouwen en producentenvertrouwen, optimisme/pessimisme (‘animal spirits’): hogere/ lagere autonome consumptie of investeringen;\no Bij ieder inkomen willen huishoudens of bedrijven meer/minder consumeren of investeren;\n• Hogere/lagere overheidsuitgaven O of lagere/hogere belastingen B verhogen/verlagen bestedingen waardoor een hoger/lager inkomen wordt bereikt (en vice versa);\n• Als de goederenmarkt in evenwicht is, dan is de vermogensmarkt automatisch ook in evenwicht;\no Uit de kringloop (bij gesloten economie) volgt dat aanbod gelijk is aan de vraag op de vermogensmarkt: S = I + (O – B);\n• Een hogere / lagere marginale consumptiequote (= lagere / hogere marginale spaarquote) zorgt ervoor dat een steilere (vlakkere) helling van de bestedingslijn steiler / vlakker wordt, waardoor de effecten van hogere bestedingen op het inkomen (multipliers) groter /kleiner zijn en vice versa;\n• De grootte van de multiplier hangt af van het spaarlek en het belastinglek.",
+   "is_leaf": true,
+   "page": 24
+  },
+  {
+   "unit_id": "I4.2",
+   "parent_id": "I4",
+   "kind": "eindterm",
+   "code": "4.2",
+   "title": null,
+   "text": "IS-curve\n• De IS-curve geeft de combinaties van inkomen en reële rente waarbij de goederenmarkt in evenwicht is: productie = bestedingen. Op de horizontale as staat het inkomen en op de verticale as de reële rente. De IS-curve geeft een dalend verband weer tussen de rente en het inkomen;\n• Mechanisme voor dalend verband: de consumptie en de investeringen stijgen/dalen als de reële rente daalt/stijgt;\n• Stijging/daling van autonome bestedingen (bijvoorbeeld door lagere autonome consumptie of investeringen of stimulerend/verkrappend begrotingsbeleid) leidt tot een hoger/lager inkomen. De IS-curve schuift naar rechts/links, want bij iedere reële rente zal het inkomen hoger/lager zijn om evenwicht op de goederenmarkt te realiseren.",
+   "is_leaf": true,
+   "page": 24
+  },
+  {
+   "unit_id": "I4.3",
+   "parent_id": "I4",
+   "kind": "eindterm",
+   "code": "4.3",
+   "title": null,
+   "text": "MB-curve\n• De MB-curve geeft de monetaire beleidsregel van de Centrale Bank. Op de horizontale as staat het inkomen en op de verticale as de reële rente. De MB-curve geeft een horizontaal verband tussen de reële rente r en het inkomen Y;\n• De centrale bank voert een ruimer/krapper monetair beleid (heeft een hogere/lagere inflatiedoelstelling) als het een lagere/hogere rente zet bij ieder inkomen Y;\n• Monetaire beleidsregel centrale bank: de reële rente gaat omhoog/omlaag (MB-curve schuift omhoog/omlaag) als inflatie stijgt/daalt;\n• Mechanisme: de Centrale Bank verhoogt/verlaagt de nominale rente als de inflatie stijgt/daalt. Bij gegeven inflatieverwachtingen betekent dit dat de reële rente stijgt/daalt;\n• Bij een sterkere afkeer van inflatie zal de Centrale Bank de nominale rente meer aanpassen als de inflatie stijgt/daalt (en zal de MB-curve meer omhoog/omlaag verschuiven).",
+   "is_leaf": true,
+   "page": 24
+  },
+  {
+   "unit_id": "I4.4",
+   "parent_id": "I4",
+   "kind": "eindterm",
+   "code": "4.4",
+   "title": null,
+   "text": "GA-curve\n• De GA-curve geeft het geaggregeerde aanbod van goederen en diensten bij ieder inflatieniveau. De GA-curve is stijgend in de inflatie. Op de horizontale as staat het inkomen en op de verticale as de inflatie. Punt op de GA-curve waarbij Y = Y* geeft de verwachte inflatie weer;\n• Hoe groter/kleiner de mate van loon- en prijsflexibiliteit is, hoe steiler/vlakker de helling van de GA-curve;\n• Mechanisme: GA is stijgend door loon- en prijsrigiditeit. Bij een hogere/lagere dan verwachte inflatie dalen/stijgen de reële lonen en de reële productiekosten omdat nominale lonen en inkoopprijzen op de korte termijn zijn vastgelegd in contracten. Bij lagere/hogere reële productiekosten zullen bedrijven meer/minder produceren;\n• Mechanisme achter verschuiving curve over de tijd: Aanpassingen van KT naar LT-evenwicht verlopen via de aanpassing van de verwachte inflatie over de tijd. Als de inflatie stijgt /daalt, zal de inflatieverwachting ook toenemen/afnemen, waardoor lonen en inkoopprijzen opnieuw worden onderhandeld op basis van de hogere/lagere inflatieverwachtingen. De GA-curve schuift dan omhoog/omlaag over de tijd.",
+   "is_leaf": true,
+   "page": 25
+  },
+  {
+   "unit_id": "I4.5",
+   "parent_id": "I4",
+   "kind": "eindterm",
+   "code": "4.5",
+   "title": null,
+   "text": "Conjuncturele werkloosheid\n• Conjuncturele werkloosheid treedt op bij een negatieve output gap en neemt toe als de output gap negatiever wordt.",
+   "is_leaf": true,
+   "page": 25
+  },
+  {
+   "unit_id": "I4.6",
+   "parent_id": "I4",
+   "kind": "eindterm",
+   "code": "4.6",
+   "title": null,
+   "text": "Economische scholen en IS-MB-GA\n• Keynesianen: begrotingsbeleid is krachtig, monetair beleid is zwak;\no IS-curve is steil: bestedingen reageren weinig op de renteveranderingen;\no MB verschuift weinig: centrale bank verhoogt rente weinig bij stijgende inflatie.\n• Monetaristen: begrotingsbeleid is zwak, monetair beleid is sterk;\no IS-curve is vlak: bestedingen reageren sterk op de rente;\no MB verschuift veel: centrale bank verhoogt rente sterk bij stijgende inflatie.\n• Keynesianen en monetaristen: er is geen perfecte loon- en prijsflexibiliteit waardoor GA-curve niet verticaal is. Op korte termijn is Y niet gelijk aan potentiële productie Y*.\n• Neo- en Nieuw klassieken: er is sprake van perfecte loon- en prijsflexibiliteit. GA is verticaal en Y is gelijk aan potentiële productie Y*. Hierdoor is vraagstimulering (budgettair en monetair) niet effectief: geen effect op inkomen, alleen effect op inflatie.",
+   "is_leaf": true,
+   "page": 25
+  }
+ ]
+}
