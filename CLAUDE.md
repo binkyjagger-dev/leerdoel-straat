@@ -21,7 +21,7 @@ report + doubt list.
 ## Layout
 ```
 specs/            00–06 leerdoel-straat (/generate) · 10–15 methode-straat (/koppel) · 20–25 examen-straat (/examen; built and first run 2026-10-27; plan: docs/plan-examen-straat.md) · 26 examen labels (E7) · 30–35 toets-straat (/toets; specified 2026-11-13; 36 v2 house rules: reading budget, cueing, lead/task form, storyline, toets size — decided 2026-11-17, to build; build steps 1–6 done 2026-11-14: schemas, catalogue, E7 labels + profile, order form, blueprint, writing and checks, export and toetsbank (T0–T6); real runs 2026-11-14 and 2026-11-15; open build questions: docs/bouwvragen-toets.md; plan: docs/plan-toets-straat.md)
-data/toets/       knobs.json patterns_base.json (toets-straat rule files; seed 2026-11)
+data/toets/       knobs.json patterns_base.json (toets-straat rule files; seed 2026-11) · asking_verbs.json cue_phrases.json (specs/36: task counting, cue scan)
 subjects/<vak>/toets/  patterns.json (subject layer) conventions.md contexten.md (human) seed_profile.json sjablonen/ — see specs/31
 subjects/<vak>/examenbank/labels/ + profiel/  (E7) pattern/knob labels per exam question + reference profile — specs/26
 subjects/<vak>/toetsbank/  (toets-straat) register.json toetsen/ contexts.json output/ — specs/35
@@ -35,8 +35,8 @@ docs/             HANDLEIDING.md (one-page tutorial, Dutch) · HANDLEIDING-toets
 .claude/agents/   method-ingest mapping-judge mapping-verifier exercise-judge   (methode-straat; intake is shared, mapping mode)
 .claude/agents/   exam-ingest exam-judge   (examen-straat; intake exam mode, mapping-verifier exam mode) · item-labeller (E7 exam mode, /toets T4 toets mode) · toets-planner toets-writer toets-solver toets-verifier (toets-straat)
 scripts/mapping/  ocr_pdf ocr_images docx_text validate_method candidates gradation check_mappings export_mappings compare_baseline · part B: ex_candidates ex_merge check_ex_mappings export_exercises · koppel_extend (/koppel --extend, specs/13 §5)
-scripts/exam/     exam_text validate_exam exam_candidates exam_merge check_exam_mappings bank_add bank_export exam_sample (ecommon = shared helpers, reuses scripts/mapping) · E7: label_merge check_labels bank_labels_add profile_build (lcommon)
-scripts/toets/    patterns (catalogue) form_build validate_toets (order|blueprint|items|verification) · T2: blueprint_check blueprint_report blueprint_apply · T3: exam_examples items_check calc_check figures overlap_check · T4: student_build solver_compare realized · T6: export_toets (docmodel: md + python-docx) toetsbank_add (+ --history) · reuse_copy (tcommon toetsrun shares nlnum = shared helpers)
+scripts/exam/     exam_text validate_exam exam_candidates exam_merge check_exam_mappings bank_add bank_export exam_sample (ecommon = shared helpers, reuses scripts/mapping) · E7: label_merge (--fields) check_labels bank_labels_add profile_build (lcommon) · specs/36: exam_metrics (B/metrics/) house_rules
+scripts/toets/    patterns (catalogue) form_build validate_toets (order|blueprint|items|verification) · T2: blueprint_check blueprint_report blueprint_apply · T3: exam_examples items_check calc_check figures overlap_check · T4: student_build solver_compare realized · T6: export_toets (docmodel: md + python-docx) toetsbank_add (+ --history) · reuse_copy · specs/36: tasks (shared with exam_metrics) house_checks (IT8–IT11, RB, --budget) (tcommon toetsrun shares nlnum = shared helpers)
 subjects/<vak>/examenbank/  (examen-straat) register.json + links/<exam>.json + output/ — bound to one criteria run; see specs/25
 input/examens-<vak>/<jaar TVn>/  CvTE exam PDFs (-o opgaven, -c correctievoorschrift, -b bijlage); not committed
 subjects/<vak>/methodes/<methode-id>/profile.md   (human) — book order, structure, terms

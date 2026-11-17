@@ -1,0 +1,23 @@
+{
+  "version": "2026-11-17",
+  "description": "specs/36 §6 IT9/IT10: stem phrases that give a route or a direction (regex, matched case-insensitively on intro, lead and task), and the D4 allowlist (a cue inside an allowed span is not counted). IT10 also uses the route patterns: a concept inside a route hint (the match plus the next five words) is a term giveaway even in an asking sentence. Subject overlay: subjects/<s>/toets/cue_phrases.json (lists are added).",
+  "route": [
+    {"id": "hiervoor-eerst", "pattern": "\\bbereken\\s+(?:hiervoor|daarvoor)\\s+eerst\\b", "example": "Bereken hiervoor eerst …"},
+    {"id": "gebruik-begrip", "pattern": "\\bgebruik\\s+(?:in\\s+je\\s+(?:uitleg|antwoord)\\s+)?(?:de|het)\\s+(?!informatiebron|uitwerkbijlage|gegevens)\\S+", "example": "gebruik de cpi · gebruik in je uitleg het begrip prijspeil"},
+    {"id": "stap-tussen-haakjes", "pattern": "\\([^)]*\\b(?:plus|min|gedeeld\\s+door|maal|vermenigvuldigd)\\b[^)]*\\)", "example": "(koers plus ontvangen dividend)"},
+    {"id": "met-behulp-van", "pattern": "\\bmet\\s+behulp\\s+van\\b", "example": "met behulp van …"}
+  ],
+  "direction": [
+    {"id": "toch", "pattern": "\\btoch\\b", "example": "… is toch gedaald"},
+    {"id": "leg-uit-dat", "pattern": "\\bleg\\b[^.?]*?\\buit\\s+dat\\b", "example": "Leg uit dat …"},
+    {"id": "toon-aan-dat", "pattern": "\\btoon\\b[^.?]*?\\baan\\s+dat\\b", "example": "Toon aan dat …"},
+    {"id": "leg-uit-waarom-sprake-van", "pattern": "\\bleg\\b[^.?]*?\\buit\\s+waarom\\b[^.?]*?\\bsprake\\s+is\\s+van\\b", "example": "Leg uit waarom er sprake is van … ('waarom' presupposes the conclusion; decided 2026-11-17)"},
+    {"id": "leg-uit-waardoor", "pattern": "\\bleg\\b[^.?]*?\\buit\\s+waardoor\\b", "example": "Leg uit waardoor … (presupposes the conclusion; decided 2026-11-17)"}
+  ],
+  "allow": [
+    {"id": "gebruik-informatiebron", "pattern": "\\bgebruik\\s+(?:de\\s+)?informatiebron(?:nen)?\\s+\\d+", "example": "Gebruik informatiebron 2."},
+    {"id": "gebruik-antwoord", "pattern": "\\bgebruik\\s+(?:je|jouw)\\s+antwoord\\s+(?:op|bij|van)\\s+vraag\\s+\\d+", "example": "Gebruik je antwoord op vraag 3."},
+    {"id": "afronden", "pattern": "\\brond\\b[^.?]*?\\baf\\b", "example": "Rond af op hele euro's."},
+    {"id": "ga-uit-van", "pattern": "\\bga\\s+(?:er\\s+)?(?:bij\\s+)?uit\\s+van\\b", "example": "Ga uit van het belastbaar inkomen."}
+  ]
+}

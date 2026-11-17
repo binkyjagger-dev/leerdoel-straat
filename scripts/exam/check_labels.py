@@ -5,7 +5,8 @@ Usage: check_labels.py <run_dir> [--toets] [--bank <dir>] [--subjects <dir>]
 
 LB1 every question of every opgave has a label from A and from B (files valid against item_labels)
 LB2 pattern exists in base + subject catalogue (or is NIEUW with a proposal); a retired pattern warns
-LB3 applicability: route only on calculation/schema patterns, schema only on schema patterns, builds_on null on
+LB3 applicability from knobs.json: schema only on schema patterns, direction only on explanation/calculation patterns,
+    route on every question (specs/36 §3.2), builds_on null on
     the first question of an opgave; a value against a pattern's knobs_fixed warns
 LB4 evidence quotes verbatim (question, opgave context, sources or correctievoorschrift) and ≤ 25 words
 LB5 builds_on_questions refer to earlier questions of the same opgave; builds_on = ja ⇔ at least one
@@ -19,7 +20,7 @@ from pathlib import Path
 
 from lcommon import PREFIX, Run, bank_dir, subjects_dir, load_labeller
 from ecommon import MAX_QUOTE_WORDS, Report, load_json, words
-from tcommon import kinds_of, knob_applies, pattern_codes
+from tcommon import LABEL_KNOBS, kinds_of, knob_applies, pattern_codes
 
 
 def main(argv: list[str]) -> None:
@@ -71,9 +72,23 @@ def main(argv: list[str]) -> None:
     rep.print_and_exit(str(run_dir / f"{PREFIX[mode].replace('labels', 'label_check')}.json"))
 
 
+def bank_pattern(run: Run, qid: str) -> str | None:
+    """The bank's pattern of an exam question (for LB3 on a partial relabelling, specs/36 §3.3)."""
+    cache = getattr(run, "_bank_patterns", None)
+    if cache is None:
+        cache = {}
+        for eid in {q["exam_id"] for q in run.questions.values() if q.get("exam_id")}:
+            p = run.bank / "labels" / f"{eid}.json"
+            if p.exists():
+                cache.update({l["question_id"]: l.get("pattern") for l in load_json(p)["questions"]})
+        run._bank_patterns = cache
+    return cache.get(qid)
+
+
 def check_item(rep: Report, run: Run, q: dict, it: dict, tag: str, repair: bool) -> None:
+    partial = it.get("_fields")
     pat = it.get("pattern")
-    # LB2
+    # LB2 (the item's own pattern only; a partial relabelling takes the bank's pattern for LB3 below)
     if pat is not None:
         if pat == "NIEUW":
             if not it.get("proposed_pattern"):
@@ -86,9 +101,11 @@ def check_item(rep: Report, run: Run, q: dict, it: dict, tag: str, repair: bool)
                 elif p.get("status") == "retired":
                     rep.warn("LB2", f"{tag}: pattern {code} is retired ({p.get('retired_by')})")
     # LB3 (only when the item carries a pattern the knob depends on)
+    if pat is None and partial:
+        pat = bank_pattern(run, q["question_id"])
     known = pat is not None and pat != "NIEUW" and all(c in run.pidx for c in pattern_codes(pat))
     kinds = kinds_of(pat, run.pidx) if known else set()
-    for k in ("route", "schema"):
+    for k in [x for x in LABEL_KNOBS if x != "builds_on"]:
         if k not in it or not known:
             continue
         applies = knob_applies(run.knobs[k], kinds, q["first_of_opgave"])
@@ -114,7 +131,7 @@ def check_item(rep: Report, run: Run, q: dict, it: dict, tag: str, repair: bool)
             rep.fail("LB4", f"{tag}: evidence for {field} not verbatim in the question, context, sources or cv: "
                             f"'{quote[:60]}'")
     if not repair:
-        for f in ("pattern", "solo", "steps", "sources"):
+        for f in [x for x in ("pattern", "solo", "steps", "sources") if not partial or x in partial]:
             if f not in (it.get("evidence") or {}):
                 rep.warn("LB4", f"{tag}: no evidence for {f}")
     # LB5

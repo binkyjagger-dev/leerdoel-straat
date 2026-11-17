@@ -182,6 +182,40 @@
             }
           ]
         },
+        "storyline": {
+          "description": "specs/36 §5.3: one situation per opgave with fixed actors and data; the vragen are consecutive steps. Required for opgaven that are not reused (BP11).",
+          "type": "object",
+          "required": [
+            "problem",
+            "actors",
+            "shared_data",
+            "steps"
+          ],
+          "properties": {
+            "problem": {
+              "type": "string"
+            },
+            "actors": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "shared_data": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "steps": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
         "figures_planned": {
           "type": "array",
           "items": {
@@ -232,6 +266,7 @@
           "required": [
             "solo",
             "route",
+            "direction",
             "steps",
             "sources",
             "noise",
@@ -296,6 +331,16 @@
             "string",
             "null"
           ]
+        },
+        "story_step": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "1-based index into the opgave's storyline.steps (specs/36 §5.3, §11 B12)"
+        },
+        "n_tasks": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "planned number of tasks in the vraag, ≤ the pattern's max_tasks (specs/36 §5.1–5.2)"
         },
         "accepted_deviation": {
           "type": [

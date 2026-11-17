@@ -8,6 +8,17 @@
     "horeca",
     "ijssalon"
    ],
+   "storyline": {
+    "problem": "ijssalon aan zee",
+    "actors": [
+     "IJssalon Hoorn"
+    ],
+    "shared_data": [],
+    "steps": [
+     "Omzet berekenen.",
+     "Omzetverandering uitleggen."
+    ]
+   },
    "sources_planned": 1,
    "reused_from": null,
    "vragen": [
@@ -19,6 +30,7 @@
      "knobs": {
       "solo": "multistructureel",
       "route": "gegeven",
+      "direction": "open",
       "steps": "2",
       "sources": "één bron",
       "noise": "nee",
@@ -43,7 +55,9 @@
       }
      ],
      "intent": "Omzet berekenen.",
-     "example_refs": []
+     "example_refs": [],
+     "story_step": 1,
+     "n_tasks": 1
     },
     {
      "vraag_id": "O1-V2",
@@ -52,7 +66,8 @@
      "pattern": "P01",
      "knobs": {
       "solo": "multistructureel",
-      "route": null,
+      "route": "zelf vinden",
+      "direction": "open",
       "steps": "2",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -77,7 +92,9 @@
       }
      ],
      "intent": "Omzetverandering uitleggen.",
-     "example_refs": []
+     "example_refs": [],
+     "story_step": 2,
+     "n_tasks": 1
     }
    ]
   }

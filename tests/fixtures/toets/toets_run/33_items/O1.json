@@ -27,7 +27,8 @@
    "vraag_id": "O1-V1",
    "number": 1,
    "points": 2,
-   "stem": "Bereken de omzet per dag in juli. Bereken hiervoor eerst de afzet per dag.",
+   "lead": "",
+   "task": "Bereken de omzet per dag in juli. Bereken hiervoor eerst de afzet per dag.",
    "uitwerkbijlage": null,
    "cv": {
     "maximumscore": 2,
@@ -68,7 +69,8 @@
    "vraag_id": "O1-V2",
    "number": 2,
    "points": 2,
-   "stem": "Leg uit hoe de omzet verandert als Hoorn de prijs verhoogt.",
+   "lead": "",
+   "task": "Leg uit hoe de omzet verandert als Hoorn de prijs verhoogt.",
    "uitwerkbijlage": null,
    "cv": {
     "maximumscore": 2,

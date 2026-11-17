@@ -16,6 +16,12 @@ Step 5: nlnum (Dutch numbers, rounding, safe evaluator), exam_examples.py, items
 Step 6: export_toets.py (docx re-read with python-docx, PDF via LibreOffice when present, verantwoording numbers
         equal to 34_realized.json and the order), toetsbank_add.py (append, duplicate refused, --replace, contexts,
         overzicht, --history), reuse_copy.py + blueprint_check BP4 for a reused opgave.
+specs/36 (toets-straat v2): route on every vraag and the knob direction in labels and profile; labels from before
+        specs/36 (route/direction 'onbekend'); /examen --fields (partial relabelling); tasks.py on the CE forms; the
+        order's duration and reading budget (O7–O10, pause-1 summary) with house rules from a metrics file; the form
+        (12 knob rows, duration, budget; headless Edge/Chrome self-test); BP11/BP12 and the storyline in bouwplan.md;
+        step_v2: a two-opgave toets with a term giveaway, a route cue, a double task and an over-budget opgave (each
+        caught), the run-3 vraag 2 and 13 shapes as warnings, IT11, a legacy stem, and the verantwoording's Huisregels.
 Everything runs in a temp dir; the repo's subjects/ are only read.
 """
 from __future__ import annotations
@@ -70,6 +76,8 @@ def browser():
     for b in ("google-chrome", "chromium", "chromium-browser", "chrome", "msedge"):
         p = shutil.which(b)
         if p: return p
+    for p in (r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe", r"C:\Program Files\Google\Chrome\Application\chrome.exe"):
+        if Path(p).exists(): return p
     return None
 
 
@@ -138,7 +146,9 @@ def main():
     ok &= check("combination and bloom computed from the bank links (q3: 2 leerdoelen, evalueren)",
                 lab[f"{E1}-q3"]["combination"] == 2 and lab[f"{E1}-q3"]["bloom"] == "evalueren")
     ok &= check("points from units, not from labeller B (q1 of 2031: 2, B said 5)", lab[f"{E2}-q1"]["points"] == 2)
-    ok &= check("route/schema null where the pattern does not apply (P01)", lab[f"{E1}-q2"]["route"] is None and lab[f"{E1}-q2"]["schema"] is None)
+    ok &= check("schema null where the pattern does not apply (P01); route on every question and direction on an "
+                "explanation pattern (specs/36 §3.2)", lab[f"{E1}-q2"]["schema"] is None and lab[f"{E1}-q2"]["route"] == "zelf vinden"
+                and lab[f"{E1}-q2"]["direction"] == "open" and lab[f"{E1}-q4"]["direction"] is None)
     pp = load(r / "26_proposed_patterns.json")
     ok &= check("NIEUW proposal collected once, as an open catalogue question",
                 len(pp["questions"]) == 1 and pp["questions"][0]["applies_to"] == ["catalogue"]
@@ -175,9 +185,12 @@ def main():
     ok &= check("combined pattern P08+X01 (2 p) split evenly: P08 3 + 1 = 4, X01 1 (bouwvraag 2)",
                 pool["pattern"]["P08"]["points"] == 4 and pool["pattern"]["X01"]["points"] == 1
                 and sum(prof["exams"][1]["knobs"]["pattern"].values()) + 3 == 5)
-    ok &= check("route only over calculation/schema questions; NIEUW left out of route and schema (bouwvraag 6)",
-                pool["route"] == {"gegeven": {"points": 2.0, "share": 0.286}, "zelf vinden": {"points": 5.0, "share": 0.714}}
-                and prof["excluded"]["route"] == {"nieuw": 3.0, "not_applicable": 4.0}
+    ok &= check("route over all questions, NIEUW included (specs/36); direction over explanation/calculation, NIEUW left "
+                "out of the kind-dependent knobs direction and schema (bouwvraag 6)",
+                pool["route"] == {"gegeven": {"points": 5.0, "share": 0.357}, "zelf vinden": {"points": 9.0, "share": 0.643}}
+                and "route" not in prof["excluded"]
+                and pool["direction"] == {"open": {"points": 9.0, "share": 1.0}}
+                and prof["excluded"]["direction"] == {"nieuw": 3.0, "not_applicable": 2.0}
                 and prof["excluded"]["schema"] == {"nieuw": 3.0, "not_applicable": 9.0})
     ok &= check("builds_on over non-first questions only (7 p first of opgave)", prof["excluded"]["builds_on"] == {"not_applicable": 7.0})
     ok &= check("bloom per scorepunt from links; unlinked point excluded",
@@ -190,7 +203,7 @@ def main():
     md = (bank / "profiel/referentieprofiel.md").read_text(encoding="utf-8")
     ok &= check("referentieprofiel.md in Dutch with exam columns and left-out points",
                 "| waarde | eindexamen (alle) | 2030-I | 2031-I |" in md and "Weggelaten: 3 p nieuw patroon." in md
-                and "Weggelaten: 3 p nieuw patroon, 4 p niet van toepassing." in md)
+                and "Weggelaten: 3 p nieuw patroon, 2 p niet van toepassing." in md and "## Richting" in md)
     ok &= check("noise labelled and in the profile (sources only counts numbered bronnen)",
                 lab[f"{E1}-q1"]["noise"] == "nee" and "noise" in pool and set(pool["sources"]) <= {"in vraagtekst", "één bron", "meerdere bronnen"})
     old = tmp / "bank_old"; shutil.copytree(bank, old)
@@ -213,6 +226,88 @@ def main():
     ok &= run("profile_build for a subject without labels and seed (empty reference)", f"{e}/profile_build.py", "bedrijfseconomie",
               "--bank", str(tmp / "nobank"))
     ok &= check("empty reference says so", load(tmp / "nobank/profiel/referentieprofiel.json")["source"] == "none")
+
+    # ---------------- specs/36 step 2: labels from before specs/36, partial relabelling (--fields) ----------------
+    st = tmp / "bank_spec36"; shutil.copytree(bank, st)
+    for lf in (st / "labels").glob("vwo-*-tv1.json"):
+        lj = load(lf)
+        for q in lj["questions"]:
+            q.pop("direction", None)
+        lf.write_text(json.dumps(lj, ensure_ascii=False), encoding="utf-8")
+    ok &= run("profile_build with labels from before specs/36 (no direction): passes, knobs unknown", f"{e}/profile_build.py",
+              "fixturevak", "--bank", str(st), *S)
+    sp = load(st / "profiel/referentieprofiel.json")
+    ok &= check("route and direction 'onbekend' (unknown_knobs), PB3 warning names --fields; other knobs kept (§11 B2)",
+                {"route", "direction"} <= set(sp["unknown_knobs"]) and "route" not in sp["pooled"] and "solo" in sp["pooled"]
+                and "WARN  PB3" in run.last and "--fields route,direction" in run.last
+                and "Onbekend" in (st / "profiel/referentieprofiel.md").read_text(encoding="utf-8").split("## Richting")[1][:40])
+    r2 = tmp / "label_run_fields"
+    shutil.copytree(r, r2)
+    for d in ("26_labels.A", "26_labels.B", "26_labels.R"):
+        shutil.rmtree(r2 / d, ignore_errors=True)
+    for letter in ("A", "B"):
+        (r2 / f"26_labels.{letter}").mkdir()
+        for f in (r / f"26_labels.{letter}").glob("*.json"):
+            d = load(f)
+            items = []
+            for it in d["items"]:
+                x = {"question_id": it["question_id"], "question_number": it["question_number"], "route": it["route"],
+                     "direction": it["direction"], "evidence": {k: v for k, v in it["evidence"].items() if k in ("route", "direction")}}
+                if x["question_id"] == f"{E1}-q1":
+                    x["route"] = "zelf vinden"
+                if x["question_id"] == f"{E2}-q1":
+                    x["route"] = "zelf vinden"
+                if letter == "B" and x["question_id"] == f"{E1}-q2":
+                    x["direction"] = "gegeven"
+                items.append(x)
+            (r2 / f"26_labels.{letter}" / f.name).write_text(json.dumps(
+                {"labeller": letter, "mode": "exam", "opgave_id": d["opgave_id"], "fields": ["route", "direction"],
+                 "items": items}, ensure_ascii=False), encoding="utf-8")
+    ok &= run("label_merge --fields route,direction", f"{e}/label_merge.py", str(r2), *B, "--fields", "route,direction")
+    l2 = {l["question_id"]: l for l in load(r2 / "26_labels.json")["labels"]}
+    bank_q = {q["question_id"]: q for q in load(bank / f"labels/{E1}.json")["questions"]}
+    ok &= check("--fields: route updated (2031 q1 gegeven → zelf vinden); direction dispute only on 2030 q2",
+                l2[f"{E2}-q1"]["route"] == "zelf vinden" and l2[f"{E1}-q2"]["direction"] is None
+                and l2[f"{E1}-q2"]["confidence"]["direction"] == "disputed"
+                and [f["field"] for f in load(r2 / "26_label_findings.json")["findings"]] == ["direction"])
+    ok &= check("--fields: other fields keep the bank's value, confidence, evidence and repairs (q2 solo medium, q1 R pattern)",
+                l2[f"{E1}-q2"]["solo"] == bank_q[f"{E1}-q2"]["solo"] and l2[f"{E1}-q2"]["confidence"]["solo"] == "medium"
+                and l2[f"{E1}-q1"]["evidence"]["pattern"] == bank_q[f"{E1}-q1"]["evidence"]["pattern"]
+                and "pattern" in l2[f"{E1}-q1"]["repaired_fields"] and l2[f"{E1}-q1"]["example_quality"] == "goed"
+                and load(r2 / "26_proposed_patterns.json")["questions"] == [])
+    ok &= run("check_labels on the partial labellers", f"{e}/check_labels.py", str(r2), *B)
+    ok &= check("no LB4 'no evidence for pattern/solo' warnings on partial items", "no evidence for" not in run.last)
+    ok &= run("bank_labels_add --replace (partial relabelling)", f"{e}/bank_labels_add.py", str(r2), "--bank", str(bank), "--replace")
+    ok &= check("bank labels updated with the new route", next(q for q in load(bank / f"labels/{E2}.json")["questions"]
+                                                            if q["question_id"] == f"{E2}-q1")["route"] == "zelf vinden")
+
+    # tasks.py (specs/36 §5.2, §11 B4): counting tasks, the shared instrument of exam_metrics and items_check
+    sys.path.insert(0, str(ROOT / "scripts" / "toets"))
+    import tasks as T  # noqa: E402
+    rules = T.load_rules()
+    cases = {"Bereken de winst per week. Gebruik informatiebron 1.": 1,
+             "Bereken de omzet en leg uit waarom de omzet stijgt.": 2,
+             "Is Spaak een eenmanszaak of een vof? Motiveer je antwoord.": 1,
+             "Bereken de verkoopprijs. Bereken hiervoor eerst de kostprijs.": 1,
+             "Vind jij dat dit klopt? Licht je antwoord toe.": 1,
+             "Leg uit welk beleid de bank voert. Noem de nieuwe rente.": 2,
+             "Is er sprake van ruil? Leg je antwoord uit.": 1,
+             "Bereken de rente. Ga ervan uit dat er niet wordt geconverteerd.": 1}
+    got = {c: T.count_tasks(c, rules) for c in cases}
+    ok &= check("count_tasks on the CE forms (helpers never a new task; 'en leg uit' adds one)", got == cases)
+    ok &= check("task_form_ok: a statement is not a task", not T.task_form_ok("Kruim verlaagt de prijs.", rules)
+                and T.task_form_ok("Welke prijs vraagt Kruim?", rules))
+    firsts = set()
+    for pf in [ROOT / "data/toets/patterns_base.json", *ROOT.glob("subjects/*/toets/patterns.json"), FX / "subjects/fixturevak/toets/patterns.json"]:
+        for p in load(pf)["patterns"]:
+            for f in p["stem_forms"]:
+                w = f.split()[0].lower().strip("….")
+                if w:
+                    firsts.add(w)
+    ok &= check("every first word of a catalogue stem_form is an asking verb in asking_verbs.json", firsts <= rules["verbs"])
+    ok &= check("asking_verbs.json and cue_phrases.json validate against text_rules",
+                not __import__("tcommon").validate_def(load(ROOT / "data/toets/asking_verbs.json"), "text_rules.schema.json", "asking_verbs")
+                and not __import__("tcommon").validate_def(load(ROOT / "data/toets/cue_phrases.json"), "text_rules.schema.json", "cue_phrases"))
 
     # ---------------- step 2: toets mode ----------------
     tr = tmp / "toets_run"
@@ -238,12 +333,40 @@ def main():
     ok &= run("validate_toets order --draft (missing knobs are questions)", f"{t}/validate_toets.py", "order",
               str(FX / "orders/order_draft.json"), *O, "--draft", "--ask-out", str(tmp / "ask.json"))
     ask = load(tmp / "ask.json")["ask"]
-    ok &= check("draft: 8 knobs (incl. noise) + bloom_mix to ask, with central-exam reference shares",
-                len(ask) == 9 and any(a["field"] == "knobs.noise" for a in ask) and ask[0]["field"] == "bloom_mix" and ask[1]["reference"]["multistructureel"] == 0.5)
+    askf = {a["field"]: a for a in ask}
+    ok &= check("draft: 8 knobs (incl. noise, direction) + bloom_mix + duration + reading budget to ask, with reference shares",
+                len(ask) == 11 and "knobs.noise" in askf and "knobs.direction" in askf and "duration_minutes" in askf
+                and "reading_budget_pct" in askf and "bloom_mix" in askf and askf["knobs.solo"]["reference"]["multistructureel"] == 0.5)
     ok &= check("draft: O6 warnings (all criteria excluded; route without calculation pattern)",
                 run.last.count("WARN  O6") == 2)
     ok &= run("validate_toets order on the draft without --draft (incomplete; must fail)", f"{t}/validate_toets.py", "order",
               str(FX / "orders/order_draft.json"), *O, expect_fail=True)
+
+    # O7–O10 with CE house rules (specs/36 §4): a bank with metrics → profile with house_rules
+    hb = tmp / "bank_house"; shutil.copytree(bank, hb)
+    (hb / "metrics").mkdir(exist_ok=True)
+    shutil.copy(FX / "bank_metrics" / f"{E1}.json", hb / "metrics" / f"{E1}.json")
+    ok &= run("profile_build with a metrics file (house rules)", f"{e}/profile_build.py", "fixturevak", "--bank", str(hb), *S)
+    hr = load(hb / "profiel/referentieprofiel.json").get("house_rules") or {}
+    ok &= check("house rules: 3 min/punt (27/9), 4,5 points per opgave, groups per point 0,111",
+                hr.get("minutes_per_point") == 3.0 and hr["points_per_opgave"]["mean"] == 4.5 and hr["groups_per_point"]["max"] == 0.111)
+    OH = ["--bank", str(hb), "--toetsbank", str(tb), *S]
+    ok &= run("validate_toets order with house rules (warnings only)", f"{t}/validate_toets.py", "order",
+              str(FX / "orders/order_valid.json"), *OH, "--summary-out", str(tmp / "summary.json"))
+    sm = load(tmp / "summary.json")
+    ok &= check("O7 warning (5 min per point vs CE 3: > 1.5 ×), O9 warning (0,2 leerdoelen per point > 0,111), no O8 (2 = round(10/4,5))",
+                "WARN  O7" in run.last and "WARN  O9" in run.last and "O8" not in run.last)
+    ok &= check("pause-1 summary numbers: minutes per point, CE proposal, reading budget in words vs CE",
+                sm["minutes_per_point"] == 5.0 and sm["ce_minutes_per_point"] == 3.0 and sm["ce_n_opgaven"] == 2
+                and sm["ce_words"] == round(10 * hr["words_per_point"]["pooled"]) and sm["reading_budget_words"] == round(sm["ce_words"] * 0.6)
+                and [w["id"] for w in sm["warnings"]] == ["O7", "O9"])
+    ov = load(FX / "orders/order_valid.json")
+    ov.update(duration_minutes=4, reading_budget_pct=200, n_opgaven=3, n_vragen=4)
+    (tmp / "order_house_bad.json").write_text(json.dumps(ov, ensure_ascii=False), encoding="utf-8")
+    ok &= run("validate_toets order: 4 minutes for 10 points, budget 200 % (must fail)", f"{t}/validate_toets.py", "order",
+              str(tmp / "order_house_bad.json"), *OH, expect_fail=True)
+    ok &= check("O7 error (below half a minute per point), O10 error (budget outside 20–150), O8 warning offers both options",
+                "FAIL  O7" in run.last and "FAIL  O10" in run.last and "WARN  O8" in run.last and "Zoals eindexamen (2)" in run.last)
     ok &= run("validate_toets without a subcommand prints usage (exit 2)", f"{t}/validate_toets.py", "nothing", expect_code=2)
 
     # ---------------- step 3: form ----------------
@@ -287,8 +410,10 @@ def main():
             st = json.loads(html.unescape(mt.group(1))) if mt and mt.group(1).strip() else None
         except Exception as ex:  # pragma: no cover
             st = None; print(f"   --  browser run failed: {ex}")
-        ok &= check("headless browser: page renders 2 matrix rows and 11 knob blocks (incl. noise), self-test order has no problems",
-                    st is not None and st["rows"] == 2 and st["knobs"] == 11 and st["problems"] == [])
+        ok &= check("headless browser: page renders 2 matrix rows and 12 knob blocks (incl. noise, direction), self-test order "
+                    "has no problems and carries duration and reading budget (specs/36 §4)",
+                    st is not None and st["rows"] == 2 and st["knobs"] == 12 and st["problems"] == []
+                    and st["order"].get("duration_minutes") == 50 and st["order"].get("reading_budget_pct") == 60)
         if st:
             (tmp / "selftest_order.json").write_text(json.dumps(st["order"], ensure_ascii=False), encoding="utf-8")
             ok &= run("validate_toets order on the order the form built", f"{t}/validate_toets.py", "order", str(tmp / "selftest_order.json"), *O)
@@ -298,6 +423,7 @@ def main():
     ok &= step4(tmp, subj, bank, S)
     ok &= step5(tmp, subj, bank, S)
     ok &= step6(tmp, subj, bank, S)
+    ok &= step_v2(tmp, subj, bank, S)
     ok &= uitwerkbijlage(tmp)
     print("\nALL OK" if ok else "\nSOME CHECKS FAILED")
     sys.exit(0 if ok else 1)
@@ -396,6 +522,100 @@ def step4(tmp: Path, subj: Path, bank: Path, S: list[str]) -> bool:
     before = (R / "32_blueprint.json").read_bytes()
     ok &= run("blueprint_apply replan (exit 3, nothing applied)", f"{t}/blueprint_apply.py", str(R), expect_code=3)
     ok &= check("replan left the blueprint untouched", (R / "32_blueprint.json").read_bytes() == before)
+
+    # BP11/BP12 with CE house rules (specs/36 §5.3, §6): reference from the bank with metrics (step 3)
+    R5 = pipeline_run(tmp, subj, bank, S, "toets_t2_house")
+    shutil.copy(tmp / "bank_house/profiel/referentieprofiel.json", R5 / "30_reference_profile.json")
+    ok &= run("blueprint_check with house rules (valid)", f"{t}/blueprint_check.py", str(R5), *S)
+    ok &= check("BP11 passes on the fixture blueprint (points per opgave 2-7, leerdoelen per opgave <= 2)", "BP11" not in run.last)
+    bp5 = load(R5 / "32_blueprint.json")
+    bp5["opgaven"][0].pop("storyline")
+    v2 = bp5["opgaven"][1]["vragen"][0]
+    v2["n_tasks"] = 2
+    bp5["opgaven"][1]["vragen"][1].pop("story_step")
+    (R5 / "32_blueprint_bp11.json").write_text(json.dumps(bp5, ensure_ascii=False), encoding="utf-8")
+    ok &= run("blueprint_check: no storyline, a double task above max_tasks, a missing story_step (must fail BP11)",
+              f"{t}/blueprint_check.py", str(R5), *S, "--file", str(R5 / "32_blueprint_bp11.json"), expect_fail=True)
+    ok &= check("BP11: storyline, story_step and n_tasks > max_tasks reported",
+                "FAIL  BP11 O1: no storyline" in run.last and f"FAIL  BP11 {v2['vraag_id']}: n_tasks 2 > max_tasks 1" in run.last
+                and "no story_step" in run.last)
+    od = load(R5 / "31_order.json"); od["knobs"]["route"] = {"gegeven": 0.5, "zelf vinden": 0.5}
+    (R5 / "31_order.json").write_text(json.dumps(od, ensure_ascii=False), encoding="utf-8")
+    ok &= run("blueprint_check: route 44 % planned vs 50 % ordered (within tolerance, little margin)", f"{t}/blueprint_check.py", str(R5), *S)
+    ok &= check("BP12 warns 'weinig marge' for route", "WARN  BP12 route" in run.last and "weinig marge" in run.last)
+    ok &= run("blueprint_report with storyline and margin", f"{t}/blueprint_report.py", str(R5), *S)
+    md5 = (R5 / "output/bouwplan.md").read_text(encoding="utf-8")
+    ok &= check("bouwplan.md: storyline with its steps and vragen above the table; route row marked 'weinig marge'",
+                "**Verhaallijn:**" in md5 and "1. " in md5 and "— vraag 1" in md5 and "*weinig marge*" in md5
+                and "| taken |" in md5 and "| richting |" in md5)
+    return ok
+
+
+def step_v2(tmp: Path, subj: Path, bank: Path, S: list[str]) -> bool:
+    """specs/36 §10 step 7: a two-opgave toets with one term giveaway, one route cue, one double task and one
+    over-budget opgave, each caught by its check; plus the warning cases after toets run 3 vraag 2 and 13 and
+    'Omschrijf wat X is' (no hit). House rules from the bank with a metrics file (step 3)."""
+    t, ok = "scripts/toets", True
+    R = tmp / "toets_v2"
+    shutil.copytree(FX / "v2", R)
+    shutil.copy(FX / "criteria.json", R / "30_criteria.json")
+    shutil.copy(ROOT / "data/toets/knobs.json", R / "30_knobs.json")
+    shutil.copy(tmp / "bank_house/profiel/referentieprofiel.json", R / "30_reference_profile.json")
+    subprocess.run([PY, "-X", "utf8", f"{t}/patterns.py", "merged", "fixturevak", *S, "--out", str(R / "30_patterns.json")],
+                   cwd=ROOT, capture_output=True)
+    ok &= run("validate_toets items (lead/task schema)", f"{t}/validate_toets.py", "items", str(R))
+    ok &= run("house_checks --budget (the writers' limits per opgave)", f"{t}/house_checks.py", str(R), "--budget", *S)
+    ok &= check("budget lines: O1 4 p ≤ 54 words, O2 5 p ≤ 67 words, lead ≤ 16 words, task ≤ 13,4 words",
+                "O1: 4 p; reading budget ≤ 54 words" in run.last and "O2: 5 p; reading budget ≤ 67 words" in run.last
+                and "lead ≤ 16 words" in run.last and "task ≤ 13.4 words" in run.last)
+    O1, O2 = ["--opgave", "O1", *S], ["--opgave", "O2", *S]
+    ok &= run("items_check O1 (term giveaway; must fail)", f"{t}/items_check.py", str(R), *O1, expect_fail=True)
+    out = run.last
+    ok &= check("IT10 error: 'filiaal' defined in the lead of O1-V1 (onthouden)",
+                "FAIL  IT10 O1-V1 s1: 'filiaal' stands in the lead" in out)
+    ok &= check("IT10: 'Omschrijf wat een filiaal is.' (object of the asking verb) is no hit", "O1-V2" not in out)
+    ok &= check("IT9 warning: 'Bereken hiervoor eerst' while route = zelf vinden (O1-V3)",
+                "WARN  IT9  O1-V3: route planned 'zelf vinden' but the task says 'Bereken hiervoor eerst'" in out)
+    ok &= check("O1 has no RB, IT8 or IT11 failure of its own (within its budget; the toets total includes O2)",
+                not any(s in out for s in ("FAIL  RB   O1", "FAIL  IT8", "FAIL  IT11")) and "FAIL  RB   toets:" in out)
+    ok &= run("items_check O2 (double task, over budget; must fail)", f"{t}/items_check.py", str(R), *O2, expect_fail=True)
+    out = run.last
+    ok &= check("IT8: 'Bereken … en leg uit …' = 2 tasks, planned 1, max_tasks of P01 = 1",
+                "FAIL  IT8  O2-V4: 2 task(s) in the task, the blueprint plans 1" in out and "O2-V4: 2 tasks > max_tasks 1 of P01" in out)
+    ok &= check("RB: opgave O2 over its reading budget (and the toets total)", "FAIL  RB   O2:" in out and "FAIL  RB   toets:" in out)
+    ok &= check("run 3 vraag 13 shape: direction and route cues are warnings (IT9), the prescribed concept an IT10 warning",
+                "WARN  IT9  O2-V5: direction planned 'open' but the task says 'Leg uit dat'" in out
+                and "the task says 'toch'" in out and "WARN  IT9  O2-V5: route planned 'zelf vinden' but the task says 'Gebruik in je uitleg het begrip'" in out
+                and "WARN  IT10 O2-V5 s1: 'afzet' stands in the task" in out)
+    ok &= check("run 3 vraag 2 shape: a concept defined in the lead with a begrijpen scorepunt is an IT10 warning, not an error",
+                "WARN  IT10 O2-V6 s1: 'afzet' stands in the lead" in out and "FAIL  IT10 O2-V6" not in out)
+    hj = load(R / "33_checks/O2.house.json")
+    ok &= check("33_checks/O2.house.json holds words, tasks, cue hits and giveaways for the verantwoording",
+                hj["words"]["total"] > 67 and hj["tasks"]["O2-V4"] == 2 and hj["cues"] and hj["giveaways"])
+    # IT11 lead limits and IT8 form on a variant
+    it = load(R / "33_items/O1.json")
+    it["vragen"][2]["lead"] = "In 2030 verkocht Spaak 120 fietsen per week voor 35 euro per stuk aan studenten en forenzen uit de buurt."
+    it["vragen"][1]["task"] = "Een filiaal heeft voordelen."
+    it["data"] = {"afzet": 120, "prijs": 35}
+    (R / "33_items/O1.json").write_text(json.dumps(it, ensure_ascii=False), encoding="utf-8")
+    ok &= run("items_check O1 variant (long lead with new numbers, a task without asking verb; must fail)",
+              f"{t}/items_check.py", str(R), *O1, expect_fail=True)
+    ok &= check("IT11: lead longer than 16 words and 2 new numbers (> 1,7); IT8: task is no question",
+                "FAIL  IT11 O1-V3: lead has 20 words" in run.last and "FAIL  IT11 O1-V3: 2 new numbers in the lead" in run.last
+                and "FAIL  IT8  O1-V2: the task does not start with an asking verb" in run.last)
+    # a legacy vraag with only `stem` (toetsbank before specs/36): read as task, IT8 asks for lead/task
+    it["vragen"][1].pop("task"); it["vragen"][1].pop("lead"); it["vragen"][1]["stem"] = "Omschrijf wat een filiaal is."
+    (R / "33_items/O1.json").write_text(json.dumps(it, ensure_ascii=False), encoding="utf-8")
+    ok &= run("student_build reads a legacy stem as the task", f"{t}/student_build.py", str(R), "--opgave", "O1")
+    md = (R / "34_student/O1.md").read_text(encoding="utf-8")
+    ok &= check("student version: lead above the points line, '**1p 2** <task>' for the legacy stem",
+                "**1p 2** Omschrijf wat een filiaal is." in md and md.index("In 2030 verkocht Spaak") < md.index("**2p 3**"))
+    ok &= run("items_check O1 with a legacy stem (must fail IT8)", f"{t}/items_check.py", str(R), *O1, expect_fail=True)
+    ok &= check("IT8 asks for lead/task on a non-reused opgave", "FAIL  IT8  O1-V2: no `task`" in run.last)
+    # the verifier's proposed decisions use the roles of the decisions schema (specs/36 §7, §11 B18)
+    roles_v = load(ROOT / "schemas/toets_verification.schema.json")["$defs"]["proposed_decision"]["properties"]["applies_to"]["items"]["enum"]
+    roles_d = load(ROOT / "schemas/decisions.schema.json")["properties"]["decisions"]["items"]["properties"]["applies_to"]["items"]["enum"]
+    ok &= check("proposed_decision.applies_to enum = decisions.schema roles", roles_v == roles_d)
     return ok
 
 
@@ -437,25 +657,25 @@ def step5(tmp: Path, subj: Path, bank: Path, S: list[str]) -> bool:
     (R / "text" / "zz-allow.txt").write_text("Bereken hiervoor eerst de prijs exclusief btw en de winst.\n", encoding="utf-8")
     ok &= run("overlap_check O1 (copied exam sentence; must fail)", f"{t}/overlap_check.py", str(R), *O, expect_fail=True)
     ok &= check("OV: O1-V2 shares 8 words with the exam text and the P01 example; the allowlisted phrase in O1-V1 does not count",
-                "O1-V2 stem: shares 'leg uit hoe een lagere prijs tot een'" in run.last and "33_examples/P01.md" in run.last
+                "O1-V2 task: shares 'leg uit hoe een lagere prijs tot een'" in run.last and "33_examples/P01.md" in run.last
                 and "O1-V1" not in run.last)
     conv = subj / "fixturevak/toets/conventions.md"
     keep = conv.read_text(encoding="utf-8")
     conv.write_text("# Conventies\n", encoding="utf-8")
     run("overlap_check O1 without the allowlist", f"{t}/overlap_check.py", str(R), *O, expect_fail=True)
-    ok &= check("without the allowlist the same phrase is a hit", "O1-V1 stem: shares 'bereken hiervoor eerst" in run.last)
+    ok &= check("without the allowlist the same phrase is a hit", "O1-V1 task: shares 'bereken hiervoor eerst" in run.last)
     conv.write_text(keep, encoding="utf-8")
     # IT5 for a vraag without calc (bouwvraag 17): O1-V2 builds on vraag 1
     R5 = pipeline_run(tmp, subj, bank, S, "toets_it5")
     bpj, itj = load(R5 / "32_blueprint.json"), load(R5 / "33_items/O1.json")
     bv = bpj["opgaven"][0]["vragen"][1]; bv["knobs"]["builds_on"] = "ja"; bv["builds_on_vragen"] = [1]
     iv = itj["vragen"][1]; iv["builds_on_vragen"] = [1]; iv["cv"]["follow_through"] = "Een doorrekenfout uit vraag 1 niet opnieuw aanrekenen."
-    iv["stem"] = "Gebruik je antwoord op vraag 1. " + iv["stem"]
+    iv["task"] = iv["task"] + " Gebruik je antwoord op vraag 1."
     (R5 / "32_blueprint.json").write_text(json.dumps(bpj, ensure_ascii=False), encoding="utf-8")
     (R5 / "33_items/O1.json").write_text(json.dumps(itj, ensure_ascii=False), encoding="utf-8")
     run("items_check: explanation vraag naming 'vraag 1'", f"{t}/items_check.py", str(R5), *O, expect_fail=True)
     ok &= check("IT5 passes for a vraag without calc that names 'vraag 1' (only IT3 '15' fails)", "IT5" not in run.last)
-    iv["stem"] = iv["stem"].replace("Gebruik je antwoord op vraag 1. ", "")
+    iv["task"] = iv["task"].replace(" Gebruik je antwoord op vraag 1.", "")
     (R5 / "33_items/O1.json").write_text(json.dumps(itj, ensure_ascii=False), encoding="utf-8")
     run("items_check: explanation vraag without 'vraag n'", f"{t}/items_check.py", str(R5), *O, expect_fail=True)
     ok &= check("IT5 fails when the stem names no earlier vraag", "FAIL  IT5  O1-V2: builds_on = ja, no calc" in run.last)
@@ -479,7 +699,7 @@ def step5(tmp: Path, subj: Path, bank: Path, S: list[str]) -> bool:
             itj["intro"] += " Er werken 6 medewerkers."
             itj["noise_data"] = ["medewerkers"]
         elif where == "vraag":
-            itj["vragen"][0]["stem"] = "Er werken 6 medewerkers. " + itj["vragen"][0]["stem"]
+            itj["vragen"][0]["lead"] = ("Er werken 6 medewerkers. " + itj["vragen"][0]["lead"]).strip()
             itj["vragen"][0]["noise_data"] = ["medewerkers"]
         (Rn / "32_blueprint.json").write_text(json.dumps(bpj, ensure_ascii=False), encoding="utf-8")
         (Rn / "33_items/O2.json").write_text(json.dumps(itj, ensure_ascii=False), encoding="utf-8")
@@ -544,10 +764,12 @@ def step6(tmp: Path, subj: Path, bank: Path, S: list[str]) -> bool:
         txt = {k: "\n".join(p.text for p in docx.Document(str(out / f"{slug}-{k}.docx")).paragraphs)
                for k in ("leerling", "correctievoorschrift", "verantwoording")}
         tables = len(docx.Document(str(out / f"{slug}-verantwoording.docx")).tables)
-        ok &= check("docx files re-open with python-docx and hold the content (vraag 4, maximumscore 3, 7 sections, tables)",
-                    "3p 4 De eigenaar gaat alleen door" in txt["leerling"] and "Informatiebronnen" in txt["leerling"]
+        ok &= check("docx files re-open with python-docx and hold the content (lead above '3p 4', maximumscore 3, 8 sections incl. Huisregels, tables)",
+                    "De eigenaar gaat alleen door" in txt["leerling"] and "3p 4 Bereken met je antwoord op vraag 3" in txt["leerling"]
+                    and txt["leerling"].index("De eigenaar gaat alleen door") < txt["leerling"].index("3p 4 Bereken")
+                    and "Informatiebronnen" in txt["leerling"]
                     and "maximumscore 3" in txt["correctievoorschrift"] and "Een doorrekenfout uit vraag 3" in txt["correctievoorschrift"]
-                    and all(f"{i}. " in txt["verantwoording"] for i in range(1, 8)) and tables >= 10)
+                    and all(f"{i}. " in txt["verantwoording"] for i in range(1, 9)) and tables >= 11)
     except ImportError:
         ok &= check("python-docx installed", False)
     if shutil.which("soffice") or shutil.which("libreoffice"):
@@ -611,8 +833,8 @@ def step6(tmp: Path, subj: Path, bank: Path, S: list[str]) -> bool:
     ok &= run("reuse_copy", f"{t}/reuse_copy.py", str(R3), "--toetsbank", str(tb), *S)
     o2 = load(R3 / "33_items/O2.json")
     orig = load(FX / "pipeline/33_items/O2.json")
-    ok &= check("reused opgave copied verbatim (stems, cv) with its labels for A and B",
-                [v["stem"] for v in o2["vragen"]] == [v["stem"] for v in orig["vragen"]]
+    ok &= check("reused opgave copied verbatim (lead, task, cv) with its labels for A and B",
+                [(v["lead"], v["task"]) for v in o2["vragen"]] == [(v["lead"], v["task"]) for v in orig["vragen"]]
                 and o2["vragen"][1]["cv"] == orig["vragen"][1]["cv"] and load(R3 / "34_labels.A/O2.json")["items"][1]["pattern"] == "P15")
     tb2 = tmp / "toetsbank_renum"; shutil.copytree(tb, tb2)
     tf = tb2 / "toetsen/fixture-pipeline.json"; tj = load(tf)
@@ -620,15 +842,15 @@ def step6(tmp: Path, subj: Path, bank: Path, S: list[str]) -> bool:
     for v, n in zip(og2["vragen"], (5, 6)):
         v["number"] = n
     og2["vragen"][1]["builds_on_vragen"] = [5]
-    og2["vragen"][1]["stem"] = og2["vragen"][1]["stem"].replace("vraag 3", "vraag 5")
+    og2["vragen"][1]["task"] = og2["vragen"][1]["task"].replace("vraag 3", "vraag 5")
     og2["vragen"][1]["cv"]["follow_through"] = "Een doorrekenfout uit vraag 5 niet opnieuw aanrekenen."
     tf.write_text(json.dumps(tj, ensure_ascii=False), encoding="utf-8")
     R4 = pipeline_run(tmp, subj, bank, S, "toets_reuse_renum")
     shutil.copy(R3 / "32_blueprint.json", R4 / "32_blueprint.json"); shutil.copy(R3 / "31_order.json", R4 / "31_order.json")
     ok &= run("reuse_copy from a toets where the opgave had vragen 5 and 6", f"{t}/reuse_copy.py", str(R4), "--toetsbank", str(tb2), *S)
     v4 = load(R4 / "33_items/O2.json")["vragen"][1]
-    ok &= check("decision 18: 'vraag 5' rewritten to 'vraag 3' in stem and follow-through; builds_on_vragen [3]",
-                "vraag 3" in v4["stem"] and "vraag 5" not in v4["stem"] and "uit vraag 3" in v4["cv"]["follow_through"]
+    ok &= check("decision 18: 'vraag 5' rewritten to 'vraag 3' in task and follow-through; builds_on_vragen [3]",
+                "vraag 3" in v4["task"] and "vraag 5" not in v4["task"] and "uit vraag 3" in v4["cv"]["follow_through"]
                 and v4["builds_on_vragen"] == [3] and v4["number"] == 4)
     ok &= run("blueprint_check with a reused opgave (BP4 passes)", f"{t}/blueprint_check.py", str(R3), *S, "--toetsbank", str(tb))
     bp["opgaven"][1]["vragen"][0]["scorepunten"][0]["criterion_id"] = "X1.1-01-b"

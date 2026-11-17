@@ -30,6 +30,21 @@ class ToetsRun:
         rp = self.R / "30_reference_profile.json"
         self.reference = clean_reference(load_json(rp) if rp.exists() else None, self.knobs)
 
+    @property
+    def house(self) -> dict | None:
+        """The CE house rules of the reference profile (specs/36 §3.1), None = geen huisregels gemeten."""
+        return (self.reference or {}).get("house_rules")
+
+    def max_tasks(self, pattern: str | None) -> int | None:
+        """specs/36 §5.1 (D5): the highest n_tasks seen on >= 10 % of the pattern's CE vragen; a pattern without CE
+        vragen -> 1; a '+'-combination -> the larger of its codes; None without house rules."""
+        hr = self.house
+        if not hr:
+            return None
+        nt = hr.get("n_tasks") or {}
+        codes = [c for c in (pattern or "").split("+") if c]
+        return max([(nt.get(c) or {}).get("max_tasks", 1) for c in codes] or [1])
+
     def blueprint(self) -> dict:
         return load_json(self.R / "32_blueprint.json")
 

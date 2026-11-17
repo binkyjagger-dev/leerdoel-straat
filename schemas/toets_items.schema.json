@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "ToetsItems",
-  "description": "R/33_items/<opgave>.json — one opgave written by the toets-writer (specs/33 §3 T3). Every given number is named in data, every computed number in a cv calc.",
+  "description": "R/33_items/<opgave>.json — one opgave written by the toets-writer (specs/33 §3 T3). Every given number is named in data, every computed number in a cv calc. A vraag has `lead` (optional context lines above the vraag) and `task` (the asking sentences), specs/36 §5.1; legacy items with only `stem` are read as lead \"\" + task = stem (tcommon.lead_task).",
   "type": "object",
   "required": ["opgave_id", "title", "intro", "data", "sources", "figures", "vragen", "writer_notes"],
   "properties": {
@@ -41,12 +41,15 @@
     },
     "vraag": {
       "type": "object",
-      "required": ["vraag_id", "number", "points", "stem", "cv", "new_concepts", "builds_on_vragen"],
+      "required": ["vraag_id", "number", "points", "cv", "new_concepts", "builds_on_vragen"],
+      "anyOf": [{"required": ["task"]}, {"required": ["stem"]}],
       "properties": {
         "vraag_id": {"type": "string", "pattern": "^O[0-9]+-V[0-9]+$"},
         "number": {"type": "integer", "minimum": 1},
         "points": {"type": "integer", "minimum": 1},
-        "stem": {"type": "string"},
+        "lead": {"type": "string", "description": "context lines above the vraag: new facts for this step of the storyline (may be empty)"},
+        "task": {"type": "string", "description": "the asking sentence(s), printed on the line '2p 3 <task>'"},
+        "stem": {"type": "string", "description": "legacy (before specs/36): read as lead '' + task = stem"},
         "uitwerkbijlage": {"type": ["object", "null"]},
         "cv": {
           "type": "object", "required": ["maximumscore", "model_answer", "calc", "scorepunten", "rules", "alternatives", "follow_through"],

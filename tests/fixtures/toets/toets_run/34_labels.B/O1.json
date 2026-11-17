@@ -10,6 +10,7 @@
    "proposed_pattern": null,
    "solo": "multistructureel",
    "route": "gegeven",
+   "direction": "open",
    "steps": "1",
    "sources": "één bron",
    "noise": "nee",
@@ -25,7 +26,8 @@
     "route": "Bereken hiervoor eerst de afzet per dag.",
     "solo": "500 × € 1,50 = € 750",
     "steps": "afzet 500",
-    "sources": "In juli verkoopt Hoorn 500 bolletjes per dag voor € 1,50."
+    "sources": "In juli verkoopt Hoorn 500 bolletjes per dag voor € 1,50.",
+    "direction": "Bereken de omzet per dag in juli."
    },
    "note": null
   },
@@ -35,7 +37,8 @@
    "pattern": "P01",
    "proposed_pattern": null,
    "solo": "multistructureel",
-   "route": null,
+   "route": "zelf vinden",
+   "direction": "open",
    "steps": "2",
    "sources": "in vraagtekst",
    "noise": "nee",
@@ -51,7 +54,9 @@
     "solo": "de afzet daalt",
     "steps": "conclusie over de omzet",
     "sources": "Leg uit hoe de omzet verandert als Hoorn de prijs verhoogt.",
-    "builds_on": "Leg uit hoe de omzet verandert"
+    "builds_on": "Leg uit hoe de omzet verandert",
+    "route": "Leg uit hoe de omzet verandert als Hoorn de prijs verhoogt.",
+    "direction": "Leg uit hoe de omzet verandert als Hoorn de prijs verhoogt."
    },
    "note": null
   }

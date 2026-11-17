@@ -1,0 +1,98 @@
+{
+ "opgave_id": "O2",
+ "title": "Bakkerij Kruim",
+ "intro": "Bakkerij Kruim staat al lang aan de markt in het centrum van de stad. De bakkerij verkoopt brood, taart en koekjes aan buurtbewoners, scholieren en mensen die op weg zijn naar hun werk. Sinds een paar maanden is er een supermarkt aan de overkant die ook vers brood verkoopt. Veel vaste klanten vertellen de eigenaar dat het brood bij de supermarkt goedkoper is. De eigenaar wil haar klanten niet kwijtraken en denkt daarom na over een lagere prijs voor haar brood in de komende maanden.",
+ "data": {},
+ "sources": [],
+ "figures": [],
+ "writer_notes": null,
+ "vragen": [
+  {
+   "vraag_id": "O2-V4",
+   "number": 4,
+   "points": 2,
+   "lead": "",
+   "task": "Bereken de omzet en leg uit waarom die stijgt.",
+   "cv": {
+    "maximumscore": 2,
+    "model_answer": "De omzet is afzet maal prijs; die stijgt als de afzet sterker stijgt dan de prijs daalt.",
+    "calc": [],
+    "scorepunten": [
+     {
+      "seq": 1,
+      "points": 1,
+      "text": "berekening van de omzet",
+      "criterion_id": "X1.1-01-a"
+     },
+     {
+      "seq": 2,
+      "points": 1,
+      "text": "uitleg van de stijging",
+      "criterion_id": "X1.1-01-b"
+     }
+    ],
+    "rules": [],
+    "alternatives": [],
+    "follow_through": null
+   },
+   "new_concepts": [],
+   "builds_on_vragen": []
+  },
+  {
+   "vraag_id": "O2-V5",
+   "number": 5,
+   "points": 2,
+   "lead": "Kruim verlaagde de prijs.",
+   "task": "Leg uit dat de omzet toch kan dalen. Gebruik in je uitleg het begrip afzet.",
+   "cv": {
+    "maximumscore": 2,
+    "model_answer": "De afzet stijgt minder sterk dan de prijs daalt, dus de omzet daalt.",
+    "calc": [],
+    "scorepunten": [
+     {
+      "seq": 1,
+      "points": 1,
+      "text": "de afzet stijgt minder sterk dan de prijs daalt",
+      "criterion_id": "X1.1-01-b"
+     },
+     {
+      "seq": 2,
+      "points": 1,
+      "text": "conclusie over de omzet",
+      "criterion_id": "X1.1-01-b"
+     }
+    ],
+    "rules": [],
+    "alternatives": [],
+    "follow_through": null
+   },
+   "new_concepts": [],
+   "builds_on_vragen": []
+  },
+  {
+   "vraag_id": "O2-V6",
+   "number": 6,
+   "points": 1,
+   "lead": "Kruim noemt de afzet maal de prijs de omzet.",
+   "task": "Leg uit hoe een lagere prijs de omzet kan verhogen.",
+   "cv": {
+    "maximumscore": 1,
+    "model_answer": "Bij een lagere prijs stijgt de afzet zo sterk dat de omzet stijgt.",
+    "calc": [],
+    "scorepunten": [
+     {
+      "seq": 1,
+      "points": 1,
+      "text": "de afzet stijgt sterker dan de prijs daalt",
+      "criterion_id": "X1.1-01-b"
+     }
+    ],
+    "rules": [],
+    "alternatives": [],
+    "follow_through": null
+   },
+   "new_concepts": [],
+   "builds_on_vragen": []
+  }
+ ]
+}

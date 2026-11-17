@@ -17,6 +17,8 @@
     "excluded": {"type": "object", "additionalProperties": {"type": "object", "additionalProperties": {"type": "number"}},
                  "description": "knob → reason (disputed, not_applicable, unlinked, nieuw) → points left out, pooled"},
     "unknown_knobs": {"type": "array", "items": {"type": "string"}},
+    "house_rules": {"$ref": "#/$defs/house_rules",
+                    "description": "specs/36 §3.1: CE house rules from B/metrics/ (profile_build.py) or a seed block; absent = 'geen huisregels gemeten'"},
     "exams": {"type": "array", "items": {
       "type": "object", "required": ["exam_id", "points", "knobs"],
       "properties": {
@@ -29,6 +31,44 @@
       }}}
   },
   "$defs": {
+    "stat3": {"type": "object", "required": ["mean", "min", "max"],
+              "properties": {"mean": {"type": "number"}, "min": {"type": "number"}, "max": {"type": "number"}}},
+    "pq": {"type": "object", "required": ["p50", "p90"],
+           "properties": {"p50": {"type": "number"}, "p90": {"type": "number"}, "empty_share": {"type": "number"}}},
+    "house_rules": {
+      "type": "object",
+      "required": ["source", "n_exams", "exams", "minutes_per_point", "words_per_point", "points_per_opgave",
+                   "vragen_per_opgave", "groups_per_point", "groups_per_opgave", "words_task", "words_lead",
+                   "numbers_lead", "n_tasks"],
+      "properties": {
+        "source": {"type": "string", "description": "'bank-metrics' or the seed's source"},
+        "label": {"type": ["string", "null"]},
+        "n_exams": {"type": "integer", "minimum": 0},
+        "exams": {"type": "array", "items": {"type": "string"}},
+        "minutes_per_point": {"type": ["number", "null"], "description": "duration / max_score, pooled over exams with a known duration"},
+        "words_per_point": {"type": "object", "required": ["pooled", "p25", "p50", "p75"],
+                            "properties": {"pooled": {"type": "number"}, "p25": {"type": "number"},
+                                           "p50": {"type": "number"}, "p75": {"type": "number"}},
+                            "description": "pooled = all words / all points; p25/p50/p75 over opgaven"},
+        "points_per_opgave": {"$ref": "#/$defs/stat3"},
+        "vragen_per_opgave": {"$ref": "#/$defs/stat3"},
+        "groups_per_point": {"type": "object", "required": ["pooled", "max"],
+                             "properties": {"pooled": {"type": ["number", "null"]}, "max": {"type": ["number", "null"]}},
+                             "description": "distinct groups / points per exam; pooled over exams and the max over exams (O9)"},
+        "groups_per_opgave": {"type": "object", "required": ["mean", "max"],
+                              "properties": {"mean": {"type": ["number", "null"]}, "max": {"type": ["number", "null"]}}},
+        "words_task": {"$ref": "#/$defs/pq"},
+        "words_lead": {"$ref": "#/$defs/pq"},
+        "numbers_lead": {"$ref": "#/$defs/pq"},
+        "n_tasks": {"type": "object", "description": "pattern code → share of vragen with 1, 2, 3+ tasks and max_tasks",
+                    "additionalProperties": {
+                      "type": "object", "required": ["n_vragen", "shares", "max_tasks"],
+                      "properties": {"n_vragen": {"type": "integer"},
+                                     "shares": {"type": "object", "additionalProperties": {"type": "number"}},
+                                     "max_tasks": {"type": "integer", "minimum": 1}}}},
+        "per_exam": {"type": "array", "items": {"type": "object", "required": ["exam_id"]}}
+      }
+    },
     "knob_shares": {"type": "object", "additionalProperties": {
       "type": "object", "required": ["points", "share"],
       "properties": {"points": {"type": "number", "minimum": 0}, "share": {"type": "number", "minimum": 0, "maximum": 1}}}},

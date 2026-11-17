@@ -1,0 +1,92 @@
+{
+ "opgave_id": "O1",
+ "title": "Fietsenmaker Spaak",
+ "intro": "Spaak repareert fietsen in een eigen werkplaats en denkt na over uitbreiding.",
+ "data": {},
+ "sources": [],
+ "figures": [],
+ "writer_notes": null,
+ "vragen": [
+  {
+   "vraag_id": "O1-V1",
+   "number": 1,
+   "points": 1,
+   "lead": "Een filiaal is een tweede winkel van hetzelfde bedrijf.",
+   "task": "Noem een voordeel van een filiaal voor Spaak.",
+   "cv": {
+    "maximumscore": 1,
+    "model_answer": "Met een filiaal bereikt Spaak meer klanten.",
+    "calc": [],
+    "scorepunten": [
+     {
+      "seq": 1,
+      "points": 1,
+      "text": "een voordeel van een filiaal, zoals meer klanten",
+      "criterion_id": "X1.2-01-a"
+     }
+    ],
+    "rules": [],
+    "alternatives": [],
+    "follow_through": null
+   },
+   "new_concepts": [],
+   "builds_on_vragen": []
+  },
+  {
+   "vraag_id": "O1-V2",
+   "number": 2,
+   "points": 1,
+   "lead": "",
+   "task": "Omschrijf wat een filiaal is.",
+   "cv": {
+    "maximumscore": 1,
+    "model_answer": "Een filiaal is een vestiging van hetzelfde bedrijf op een andere plaats.",
+    "calc": [],
+    "scorepunten": [
+     {
+      "seq": 1,
+      "points": 1,
+      "text": "omschrijving van een filiaal",
+      "criterion_id": "X1.2-01-a"
+     }
+    ],
+    "rules": [],
+    "alternatives": [],
+    "follow_through": null
+   },
+   "new_concepts": [],
+   "builds_on_vragen": []
+  },
+  {
+   "vraag_id": "O1-V3",
+   "number": 3,
+   "points": 2,
+   "lead": "",
+   "task": "Bereken de omzet per week. Bereken hiervoor eerst de afzet per week.",
+   "cv": {
+    "maximumscore": 2,
+    "model_answer": "De afzet per week maal de prijs per fiets geeft de omzet per week.",
+    "calc": [],
+    "scorepunten": [
+     {
+      "seq": 1,
+      "points": 1,
+      "text": "berekening van de afzet",
+      "criterion_id": "X1.1-01-a"
+     },
+     {
+      "seq": 2,
+      "points": 1,
+      "text": "berekening van de omzet",
+      "criterion_id": "X1.1-01-a"
+     }
+    ],
+    "rules": [],
+    "alternatives": [],
+    "follow_through": null
+   },
+   "new_concepts": [],
+   "builds_on_vragen": []
+  }
+ ]
+}

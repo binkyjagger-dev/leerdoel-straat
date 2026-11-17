@@ -1,0 +1,23 @@
+{
+  "version": "2026-11-17",
+  "description": "specs/36 §5.2 and §11 B4: asking verbs (imperative heads, lower case) that start a task, and helper sentences that never count as a new task. Used by scripts/toets/tasks.py (exam_metrics.py, items_check.py IT8). Subject overlay: subjects/<s>/toets/asking_verbs.json (verbs and helpers are added). Every first word of a catalogue stem_form must be a verb here (checked by the toets fixture).",
+  "verbs": ["arceer", "beargumenteer", "beoordeel", "bepaal", "bereken", "beredeneer", "beschrijf", "controleer", "geef",
+            "ga", "kies", "leg", "maak", "noem", "omschrijf", "onderbouw", "rangschik", "schat", "schets", "schrijf",
+            "stel", "teken", "toon", "vergelijk", "verklaar", "vind", "vul", "zet"],
+  "helpers": [
+    {"id": "licht-toe", "pattern": "^licht\\b.*\\btoe\\b", "example": "Licht je antwoord toe."},
+    {"id": "motiveer", "pattern": "^motiveer\\b", "example": "Motiveer je antwoord."},
+    {"id": "hiervoor", "pattern": "\\bhiervoor\\b", "example": "Bereken hiervoor eerst … / Vul hiervoor de uitwerkbijlage in."},
+    {"id": "gebruik", "pattern": "^gebruik\\b", "example": "Gebruik informatiebron 2."},
+    {"id": "betrek", "pattern": "^betrek\\b", "example": "Betrek … in je antwoord."},
+    {"id": "ga-uit-van", "pattern": "^ga\\s+(?:er\\s*)?(?:bij\\s+)?(?:van\\s+)?uit\\b", "example": "Ga uit van … / Ga ervan uit dat …"},
+    {"id": "rond-af", "pattern": "^rond\\b.*\\baf\\b", "example": "Rond af op één decimaal."},
+    {"id": "leg-je-antwoord-uit", "pattern": "^leg\\s+(?:je|jouw)\\s+(?:antwoord|keuze)\\s+uit\\b", "example": "Leg je antwoord uit. / Leg je keuze uit. (2026-11-17, CE check)"},
+    {"id": "argument-voor-keuze", "pattern": "^geef\\s+een\\s+argument\\s+voor\\s+(?:je|jouw)\\s+keuze\\b", "example": "Geef een argument voor je keuze."},
+    {"id": "ga-in-je-antwoord-in", "pattern": "^ga\\s+in\\s+je\\s+antwoord\\s+in\\s+op\\b", "example": "Ga in je antwoord in op een voorbeeld van …"},
+    {"id": "maak-gebruik-van", "pattern": "^maak\\s+(?:hierbij\\s+|daarbij\\s+)?gebruik\\s+van\\b", "example": "Maak (hierbij) gebruik van grafieken 1 en 2."},
+    {"id": "kies-en-motiveer", "pattern": "^kies\\s+de\\s+juiste\\s+letter\\s+en\\s+motiveer\\b", "example": "Kies de juiste letter en motiveer het antwoord."},
+    {"id": "stel-dat", "pattern": "^stel\\s+dat\\b", "example": "Stel dat de overheid … (a lead sentence, never a task)"}
+  ],
+  "joiners": ["en"]
+}

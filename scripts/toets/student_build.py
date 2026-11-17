@@ -3,7 +3,8 @@
 
 Usage: student_build.py <run_dir> [--opgave <id>]
 
-Writes 34_student/<opgave>.md from 33_items/<opgave>.json: title, intro, the vragen ("**2p 3** stem"),
+Writes 34_student/<opgave>.md from 33_items/<opgave>.json: title, intro, the vragen (the lead as plain paragraphs
+above the points line, then "**2p 3** task", as the CE prints it; specs/36 §5.1; a legacy stem is the task),
 the informatiebronnen (text, table, figure path) and the uitwerkbijlage. No correctievoorschrift, no data block,
 no writer notes, no blueprint content. Figures point to figures/<id>.png (student version, without answer lines);
 a game_matrix figure with a `table` is written as a Markdown table.
@@ -13,7 +14,7 @@ from __future__ import annotations
 import sys
 from pathlib import Path
 
-from tcommon import load_json
+from tcommon import lead_task, load_json
 from toetsrun import ToetsRun, opt
 
 
@@ -30,7 +31,10 @@ def build(R: Path, it: dict, number: int) -> str:
     figs = {f["figure_id"]: f for f in it["figures"]}
     L = [f"# Opgave {number} {it['title']}", "", it["intro"], ""]
     for v in sorted(it["vragen"], key=lambda x: x["number"]):
-        L += [f"**{v['points']}p {v['number']}** {v['stem']}", ""]
+        lead, task = lead_task(v)
+        if lead.strip():
+            L += [lead, ""]
+        L += [f"**{v['points']}p {v['number']}** {task}", ""]
     if it["sources"]:
         L += ["## Informatiebronnen", ""]
     for s in sorted(it["sources"], key=lambda x: x["n"]):

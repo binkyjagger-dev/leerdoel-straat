@@ -10,6 +10,7 @@
    "proposed_pattern": null,
    "solo": "relationeel",
    "route": "zelf vinden",
+   "direction": "open",
    "steps": "3",
    "sources": "één bron",
    "noise": "nee",
@@ -25,7 +26,8 @@
     "solo": "Gebruik informatiebron 1.",
     "steps": "winst € 4.000 - € 1.600 - € 1.500 = € 900",
     "sources": "Gebruik informatiebron 1.",
-    "route": "Bereken de winst per week."
+    "route": "Bereken de winst per week.",
+    "direction": "Bereken de winst per week."
    },
    "note": null
   },
@@ -35,7 +37,8 @@
    "pattern": "P01",
    "proposed_pattern": null,
    "solo": "multistructureel",
-   "route": null,
+   "route": "zelf vinden",
+   "direction": "open",
    "steps": "2",
    "sources": "in vraagtekst",
    "noise": "nee",
@@ -51,7 +54,9 @@
     "solo": "de afzet stijgt procentueel sterker dan de prijs daalt",
     "steps": "bij een lagere prijs stijgt de afzet",
     "sources": "Kruim verlaagt de prijs.",
-    "builds_on": "Leg uit hoe een lagere prijs tot een hogere omzet kan leiden."
+    "builds_on": "Leg uit hoe een lagere prijs tot een hogere omzet kan leiden.",
+    "route": "Leg uit hoe een lagere prijs tot een hogere omzet kan leiden.",
+    "direction": "Leg uit hoe een lagere prijs tot een hogere omzet kan leiden."
    },
    "note": null
   },
@@ -62,6 +67,7 @@
    "proposed_pattern": null,
    "solo": "relationeel",
    "route": "zelf vinden",
+   "direction": "open",
    "steps": "2",
    "sources": "in vraagtekst",
    "noise": "nee",
@@ -80,7 +86,8 @@
     "steps": "juiste conclusie",
     "sources": "Kruim overweegt een tweede filiaal.",
     "builds_on": "met je antwoord op vraag 1",
-    "route": "Beoordeel met je antwoord op vraag 1"
+    "route": "Beoordeel met je antwoord op vraag 1",
+    "direction": "Beoordeel met je antwoord op vraag 1 of het tweede filiaal verstandig is."
    },
    "note": null
   }

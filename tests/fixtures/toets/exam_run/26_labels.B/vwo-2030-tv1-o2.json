@@ -9,7 +9,8 @@
    "pattern": "P05",
    "proposed_pattern": null,
    "solo": "unistructureel",
-   "route": null,
+   "route": "zelf vinden",
+   "direction": null,
    "steps": "1",
    "sources": "in vraagtekst",
    "noise": "nee",
@@ -24,7 +25,8 @@
     "pattern": "Motiveer je antwoord.",
     "solo": "Spaak werkt alleen",
     "steps": "eenmanszaak",
-    "sources": "Spaak repareert fietsen in een eigen werkplaats."
+    "sources": "Spaak repareert fietsen in een eigen werkplaats.",
+    "route": "Motiveer je antwoord."
    },
    "note": null
   }

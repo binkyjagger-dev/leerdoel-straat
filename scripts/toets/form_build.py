@@ -130,6 +130,7 @@ def build_data(subject: str, argv: list[str]) -> dict:
     if sj.exists():
         for f in sorted(sj.glob("*.json")):
             templates.append({"name": f.stem, "data": load_json(f)})
+    reference["house"] = ref.get("house_rules")  # specs/36 §3.1: CE house rules (or the seed's), None = not measured
     return {"subject": subject, "criteria_run": reg["criteria_run"], "groups": groups, "reference": reference,
             "exam_bloom": exam_bloom, "catalogue": catalogue, "knobs": knobs, "mix_levels": MIX_LEVELS,
             "levels": ["4vwo", "5vwo", "6vwo"], "contexts": contexts, "reuse": reuse, "templates": templates}
@@ -215,9 +216,13 @@ TEMPLATE = r"""<!DOCTYPE html>
   <p>Niveau <span id="levels"></span> <span class="note">Het niveau zet geen knoppen; het stuurt taal, context en getallen.</span></p>
   <p>
     <label>Aantal opgaven <input type="number" id="n_opgaven" min="1" step="1"></label>
-    <label>Aantal vragen <input type="number" id="n_vragen" min="1" step="1"></label>
-    <label>Tijdsduur (min) <input type="number" id="duration" min="1" step="5"></label>
+    <span class="ref" id="opgref"></span> <button id="opgce">Zet op eindexamen</button>
   </p>
+  <p><label>Aantal vragen <input type="number" id="n_vragen" min="1" step="1"></label></p>
+  <p><b>Totaal punten (uit de matrijs):</b> <span id="ptotal">0</span></p>
+  <p><label>Toetsduur (minuten) <input type="number" id="duration" min="1" step="5"></label>
+     <span class="ref" id="durref"></span></p>
+  <div id="budget"></div>
   <p><label>Sjabloon laden <select id="tplsel"><option value="">—</option></select></label>
      <label>of bestand <input type="file" id="tplfile" accept=".json,application/json"></label></p>
 </section>
@@ -273,10 +278,11 @@ TEMPLATE = r"""<!DOCTYPE html>
 const D = JSON.parse(document.getElementById("toets-data").textContent);
 const KNOBS = D.knobs.filter(k => k.settable);
 const COMPUTED = D.knobs.filter(k => !k.settable);
-const APPLIES_NOTE = {route: "telt alleen over reken- en schemavragen", schema: "telt alleen over schemavragen",
+const APPLIES_NOTE = {direction: "telt alleen over uitleg- en rekenvragen", schema: "telt alleen over schemavragen",
                       builds_on: "telt niet over de eerste vraag van een opgave"};
+const HR = D.reference.house || null;   // specs/36 §3.1 house rules of the central exam
 const LEVEL_NL = {"4vwo": "4 VWO", "5vwo": "5 VWO", "6vwo": "6 VWO"};
-const S = {title: "", level: null, n_opgaven: null, n_vragen: null, duration: null, points: {}, exclude: {},
+const S = {title: "", level: null, n_opgaven: null, n_vragen: null, duration: null, budgetMode: "ask", budget: 60, points: {}, exclude: {},
            bloomMode: "ask", bloom: {}, knobs: {}, contexts: {}, avoid: "", reuse: {}, template: null};
 const STORE = "toetsformulier-" + D.subject;
 
@@ -290,6 +296,40 @@ function el(tag, attrs, ...kids) {
   return e;
 }
 const pct = x => (Math.round(x * 1000) / 10).toString().replace(".", ",") + " %";
+const nl = (x, d) => { const f = Number(x).toFixed(d || 0).split("."); return f[0].replace(/\B(?=(\d{3})+(?!\d))/g, ".") + (f[1] ? "," + f[1] : ""); };
+const round100 = x => Math.round(x / 100) * 100;
+function ceOpgaven() { return HR && HR.points_per_opgave.mean && total() ? Math.max(1, Math.round(total() / HR.points_per_opgave.mean)) : null; }
+function renderHouse() {   // live lines next to duration, opgaven and the reading budget (specs/36 §4)
+  const T = total();
+  document.getElementById("ptotal").textContent = T;
+  const dr = document.getElementById("durref");
+  const mppCE = HR && HR.minutes_per_point ? HR.minutes_per_point : null;
+  dr.textContent = (S.duration && T ? "≈ " + nl(S.duration / T, 1) + " min per punt" : "")
+    + (mppCE ? " (eindexamen: " + nl(mppCE, 1) + ")" : HR ? "" : " (geen huisregels gemeten)");
+  const orf = document.getElementById("opgref"), ce = ceOpgaven();
+  orf.textContent = HR ? "eindexamen: ≈ " + nl(HR.points_per_opgave.mean, 0) + " punten per opgave" + (ce ? " → " + ce + " opgave" + (ce === 1 ? "" : "n") : "") : "eindexamen: geen huisregels gemeten";
+  const ob = document.getElementById("opgce"); ob.disabled = !ce;
+  ob.onclick = () => { S.n_opgaven = ce; document.getElementById("n_opgaven").value = ce; changed(); renderContexts(); };
+  const bl = document.getElementById("budgetline");
+  if (bl) {
+    const wpp = HR ? HR.words_per_point.pooled : null;
+    bl.textContent = S.budgetMode === "set" && wpp && T ? "≈ " + nl(round100(T * wpp * S.budget / 100)) + " woorden (eindexamen: " + nl(round100(T * wpp)) + " voor " + T + " punten)"
+      : S.budgetMode === "set" && !wpp ? "geen huisregels gemeten: het budget wordt niet gecontroleerd" : "";
+  }
+}
+function renderBudget() {
+  const box = document.getElementById("budget"); box.innerHTML = "";
+  const modes = el("span", {}, [["ask", "Niet ingesteld (/toets vraagt het)"], ["none", "Geen leesbudget"], ["set", "Leesbudget instellen"]].map(([m, lab]) =>
+    el("button", {class: S.budgetMode === m ? "on" : "", onclick: () => { S.budgetMode = m; changed(); renderBudget(); }}, lab)));
+  box.append(el("p", {}, el("b", {}, "Leesbudget "), modes, " ", el("span", {class: "note"}, "% van de woorden per punt in het eindexamen")));
+  if (S.budgetMode === "set") {
+    const sl = el("input", {type: "range", min: "30", max: "120", step: "5", value: S.budget, id: "budgetpct"});
+    const v = el("span", {}, S.budget + " %");
+    sl.oninput = () => { S.budget = parseInt(sl.value, 10); v.textContent = S.budget + " %"; changed(); };
+    box.append(el("p", {class: "vals"}, sl, " ", v, " ", el("span", {class: "ref", id: "budgetline"})));
+  }
+  renderHouse();
+}
 function valuesOf(k) { return k.values === "catalogue" ? D.catalogue.map(p => p.code) : k.values; }
 function valueLabel(k, v) {
   if (k.values !== "catalogue") return v;
@@ -351,6 +391,8 @@ function applyTemplate(t, name) {
   if (t.level !== undefined) S.level = t.level;
   for (const k of ["n_opgaven", "n_vragen"]) if (t[k] !== undefined) S[k] = t[k];
   if (t.duration_minutes !== undefined) S.duration = t.duration_minutes;
+  if (t.reading_budget_pct === null) S.budgetMode = "none";
+  else if (typeof t.reading_budget_pct === "number") { S.budgetMode = "set"; S.budget = t.reading_budget_pct; }
   if (t.matrix) { S.points = {}; for (const r of t.matrix) S.points[r.group_id] = r.points; }
   if (t.criteria_exclude) { S.exclude = {}; for (const c of t.criteria_exclude) S.exclude[c] = true; }
   if (t.bloom_mix === null) S.bloomMode = "none";
@@ -514,6 +556,7 @@ function buildOrder(asTemplate) {
   const o = {subject: D.subject, level: S.level};
   if (asTemplate) o.name = document.getElementById("tplname").value.trim() || "sjabloon"; else o.title = S.title.trim() || null;
   o.criteria_run = D.criteria_run; o.n_opgaven = S.n_opgaven; o.n_vragen = S.n_vragen; o.duration_minutes = S.duration || null;
+  if (S.budgetMode === "none") o.reading_budget_pct = null; else if (S.budgetMode === "set") o.reading_budget_pct = S.budget;
   o.matrix = D.groups.filter(g => S.points[g.group_id] > 0).map(g => ({group_id: g.group_id, points: S.points[g.group_id]}));
   o.criteria_include = null;
   const ex = Object.keys(S.exclude).filter(c => S.exclude[c]); o.criteria_exclude = ex.length ? ex.sort() : null;
@@ -545,6 +588,11 @@ function problems() {
   for (const [f, lab] of [["title", "titel"], ["level", "niveau"], ["n_opgaven", "aantal opgaven"], ["n_vragen", "aantal vragen"]])
     if (!S[f]) w.push("Geen " + lab + " — /toets vraagt het.");
   if (S.bloomMode === "ask") w.push("Bloom-mix: nog niet gekozen — /toets vraagt het.");
+  if (!S.duration) w.push("Geen toetsduur — /toets vraagt het.");
+  else if (total() && S.duration < total() * 0.5) p.push("De toetsduur (" + S.duration + " min) is minder dan een halve minuut per punt: is dit het aantal punten?");
+  if (S.budgetMode === "ask") w.push("Leesbudget: niet ingesteld — /toets vraagt het.");
+  const ce = ceOpgaven();
+  if (ce && S.n_opgaven && S.n_opgaven !== ce) w.push("Aantal opgaven " + S.n_opgaven + "; het eindexamen zou " + ce + " opgaven geven (≈ " + nl(HR.points_per_opgave.mean, 0) + " punten per opgave).");
   return {p, w};
 }
 function changed() {
@@ -552,6 +600,7 @@ function changed() {
   document.getElementById("topsum").textContent = "Totaal " + total() + " punten · " + Object.keys(S.points).length + " leerdoelen · "
     + (S.n_opgaven || "?") + " opgaven · " + (S.n_vragen || "?") + " vragen · " + D.reference.label;
   document.getElementById("mtotal").textContent = "(totaal " + total() + " punten)";
+  renderHouse();
   const {p, w} = problems(), ul = document.getElementById("messages"); ul.innerHTML = "";
   for (const x of p) ul.append(el("li", {class: "warn"}, x));
   for (const x of w) ul.append(el("li", {class: "muted"}, x));
@@ -563,7 +612,7 @@ function download(name, obj) {
   const a = el("a", {href: URL.createObjectURL(blob), download: name}); document.body.append(a); a.click();
   setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 1000);
 }
-function renderAll() { renderToets(); renderMatrix(); renderBloom(); renderKnobs(); renderContexts(); renderReuse(); changed(); }
+function renderAll() { renderToets(); renderBudget(); renderMatrix(); renderBloom(); renderKnobs(); renderContexts(); renderReuse(); changed(); }
 
 document.getElementById("dl").onclick = () => download("toetsopdracht.json", buildOrder(false));
 document.getElementById("dltpl").onclick = () => { const o = buildOrder(true); download((o.name || "sjabloon") + ".json", o); };
@@ -572,7 +621,7 @@ document.getElementById("clear").onclick = () => { try { localStorage.removeItem
 if (location.hash !== "#selftest") load();
 renderAll();
 if (location.hash === "#selftest") {   // used by tests/run_toets_fixture.py with a headless browser
-  S.title = "Zelftest"; S.level = "5vwo"; S.n_opgaven = 2; S.n_vragen = 4;
+  S.title = "Zelftest"; S.level = "5vwo"; S.n_opgaven = 2; S.n_vragen = 4; S.duration = 50; S.budgetMode = "set"; S.budget = 60;
   D.groups.slice(0, 2).forEach((g, i) => S.points[g.group_id] = 6 - 2 * i);
   for (const k of KNOBS) { const r = refFor(k.id); S.knobs[k.id] = r ? roundTo100(r.pooled, valuesOf(k)) : "vrij"; }
   S.bloomMode = "none"; renderAll();

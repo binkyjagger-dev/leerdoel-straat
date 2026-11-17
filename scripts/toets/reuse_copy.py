@@ -78,9 +78,9 @@ def main(argv: list[str]) -> None:
         renum = {o["number"]: v["number"] for o, v in zip(old, new)}
         vragen, labels = [], []
         for o, v in zip(old, new):
-            item = {k: o[k] for k in ("stem", "uitwerkbijlage", "cv", "new_concepts") if k in o}
+            item = {k: o[k] for k in ("lead", "task", "stem", "uitwerkbijlage", "cv", "new_concepts") if k in o}
             changed = 0
-            for k in ("stem", "uitwerkbijlage"):
+            for k in ("lead", "task", "stem", "uitwerkbijlage"):
                 if k in item:
                     item[k], c = renumber(item[k], renum)
                     changed += c

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TextRules",
+  "description": "Rule files for the deterministic text checks of the toets-straat (specs/36 §5.2, §6): #/$defs/asking_verbs = data/toets/asking_verbs.json (and a subject overlay), #/$defs/cue_phrases = data/toets/cue_phrases.json (and a subject overlay). Patterns are Python regular expressions, matched case-insensitively.",
+  "$defs": {
+    "rule": {
+      "type": "object", "required": ["id", "pattern"],
+      "properties": {"id": {"type": "string"}, "pattern": {"type": "string", "minLength": 1}, "example": {"type": "string"}},
+      "additionalProperties": false
+    },
+    "asking_verbs": {
+      "type": "object", "required": ["version", "verbs", "helpers", "joiners"],
+      "properties": {
+        "version": {"type": "string"}, "description": {"type": "string"},
+        "verbs": {"type": "array", "items": {"type": "string", "pattern": "^[a-zà-ÿ]+$"}},
+        "helpers": {"type": "array", "items": {"$ref": "#/$defs/rule"}},
+        "joiners": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": false
+    },
+    "cue_phrases": {
+      "type": "object", "required": ["version", "route", "direction", "allow"],
+      "properties": {
+        "version": {"type": "string"}, "description": {"type": "string"},
+        "route": {"type": "array", "items": {"$ref": "#/$defs/rule"}},
+        "direction": {"type": "array", "items": {"$ref": "#/$defs/rule"}},
+        "allow": {"type": "array", "items": {"$ref": "#/$defs/rule"}}
+      },
+      "additionalProperties": false
+    }
+  }
+}

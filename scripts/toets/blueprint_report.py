@@ -4,8 +4,9 @@
 Usage: blueprint_report.py <run_dir> [--subjects <dir>]
 
 Reads 31_order.json, 32_blueprint.json, 32_blueprint.check.json (when present), 30_criteria.json, 30_patterns.json,
-30_knobs.json and 30_reference_profile.json. Writes output/bouwplan.md: per opgave the context and per vraag the
-points, pattern, criteria, Bloom and knobs; then the matrix, the Bloom mix and the knob shares **opdracht vs
+30_knobs.json and 30_reference_profile.json. Writes output/bouwplan.md: per opgave the context, the storyline (problem,
+actors, shared data, the steps with their vragen; specs/36 §5.3) and per vraag the points, pattern, criteria, tasks,
+Bloom and knobs; then the matrix, the Bloom mix and the knob shares **opdracht vs
 bouwplan vs centraal examen**; then per leerdoel the tested and untested criteria; accepted deviations and open
 check findings. Computes nothing an agent wrote in prose: shares come from shares.py.
 """
@@ -14,7 +15,8 @@ from __future__ import annotations
 import sys
 from pathlib import Path
 
-from shares import BLOOM_TOL, KNOB_TOL, as_shares, blueprint_records, group_points, ordered_levels, point_shares, tolerance_report
+from shares import (BLOOM_TOL, KNOB_TOL, as_shares, blueprint_records, group_points, margin_report, ordered_levels, point_shares,
+                    tolerance_report)
 from tcommon import LABEL_KNOBS, MIX_LEVELS, load_json
 from toetsrun import ToetsRun, subjects_opt
 
@@ -39,11 +41,12 @@ def main(argv: list[str]) -> None:
     recs = blueprint_records(bp)
     sh = point_shares(recs, run.pidx, run.knobs)
     dev = {(d["what"], d["value"]): d for d in tolerance_report(order, sh)}
+    margin = {(d["what"], d["value"]) for d in margin_report(order, sh)}  # BP12: 'weinig marge' (specs/36 §6)
     acc_fields = {a["field"].split(".")[-1] for a in bp.get("accepted_deviations") or []}
 
-    def flag(what: str, d) -> str:
+    def flag(what: str, d, value=None) -> str:
         if not d or d["slack"]:
-            return ""
+            return " *weinig marge*" if (what, value) in margin else ""
         key = "scorepunten" if what == "bloom" else what
         return " **buiten tolerantie (geaccepteerd)**" if key in acc_fields else " **buiten tolerantie**"
     ref = run.reference or {}
@@ -58,15 +61,25 @@ def main(argv: list[str]) -> None:
     # opgaven
     for o in bp["opgaven"]:
         L += [f"## {o['opgave_id']} {o['title']}" + (f" (hergebruikt uit {o['reused_from']['toets_id']})" if o.get("reused_from") else ""),
-              "", f"**Context:** {o['context']}  ", f"*Tags:* {', '.join(o['context_tags']) or '–'} · bronnen gepland: {o['sources_planned']}", "",
-              "| vraag | p | patroon | criteria (punten, Bloom) | SOLO | route | stappen | bronnen | ruis | bewering | nieuw begrip | schema | voortbouwen | bedoeling |",
-              "|---|---|---|---|---|---|---|---|---|---|---|---|---|---|"]
+              "", f"**Context:** {o['context']}  ", f"*Tags:* {', '.join(o['context_tags']) or '–'} · bronnen gepland: {o['sources_planned']}", ""]
+        st = o.get("storyline")
+        if st:  # specs/36 §5.3: the storyline above the vraag table
+            by_step = {}
+            for v in o["vragen"]:
+                by_step.setdefault(v.get("story_step"), []).append(str(v["number"]))
+            L += [f"**Verhaallijn:** {st['problem']}  ", f"*Personen/bedrijven:* {', '.join(st['actors']) or '–'} · "
+                  f"*gedeelde gegevens:* {', '.join(st['shared_data']) or '–'}", ""]
+            L += [f"{i}. {step}" + (f" — vraag {', '.join(by_step[i])}" if i in by_step else "") for i, step in enumerate(st["steps"], start=1)]
+            L.append("")
+        L += ["| vraag | p | patroon | criteria (punten, Bloom) | taken | SOLO | route | richting | stappen | bronnen | ruis | bewering | nieuw begrip | schema | voortbouwen | bedoeling |",
+              "|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|"]
         for v in sorted(o["vragen"], key=lambda x: x["number"]):
             k = v["knobs"]
             crit = "; ".join(f"{s['criterion_id']} ({s['points']}, {s['bloom']})" for s in v["scorepunten"])
             bo = knob_cell(k.get("builds_on")) + (f" (vraag {', '.join(map(str, v['builds_on_vragen']))})" if v["builds_on_vragen"] else "")
             pat = v["pattern"] + "".join(f" {names[c]}" for c in v["pattern"].split("+") if c in names)
-            L.append(f"| {v['number']} | {v['points']} | {pat} | {crit} | {knob_cell(k.get('solo'))} | {knob_cell(k.get('route'))} | "
+            L.append(f"| {v['number']} | {v['points']} | {pat} | {crit} | {knob_cell(v.get('n_tasks'))} | {knob_cell(k.get('solo'))} | "
+                     f"{knob_cell(k.get('route'))} | {knob_cell(k.get('direction'))} | "
                      f"{knob_cell(k.get('steps'))} | {knob_cell(k.get('sources'))} | {knob_cell(k.get('noise'))} | {knob_cell(k.get('claim'))} | "
                      f"{knob_cell(k.get('new_concept'))} | {knob_cell(k.get('schema'))} | {bo} | {v['intent']} |")
         L.append("")
@@ -85,7 +98,7 @@ def main(argv: list[str]) -> None:
     for lv in MIX_LEVELS:
         if not (bm or {}).get(lv) and lv not in planned and lv not in (refp.get("bloom") or {}):
             continue
-        mark = flag("bloom", dev.get(("bloom", lv)))
+        mark = flag("bloom", dev.get(("bloom", lv)), lv)
         L.append(f"| {lv} | {pct((bm or {}).get(lv)) if bm else 'geen mix'} | {pct(planned.get(lv, 0))}{mark} | "
                  f"{pct((refp.get('bloom') or {}).get(lv, {}).get('share')) if 'bloom' in refp else 'onbekend'} |")
     L += ["", f"Tolerantie ±{BLOOM_TOL * 100:.0f} procentpunt; één scorepunt speling.", ""]
@@ -99,14 +112,16 @@ def main(argv: list[str]) -> None:
               "| waarde | opdracht | bouwplan | centraal examen |", "|---|---|---|---|"]
         vals = list(dict.fromkeys([*(target.keys() if isinstance(target, dict) else []), *pl.keys()]))
         for v in vals:
-            mark = flag(k, dev.get((k, v)))
+            mark = flag(k, dev.get((k, v)), v)
             refv = "onbekend" if k in unknown or k not in refp else pct((refp[k].get(v) or {}).get("share", 0))
             label = f"{v} {names[v]}" if k == "pattern" and v in names else v
             L.append(f"| {label} | {pct(target.get(v, 0)) if isinstance(target, dict) else 'vrij'} | {pct(pl.get(v, 0))}{mark} | {refv} |")
         if not vals:
             L.append("| – | – | – | – |")
         L.append("")
-    L += [f"Tolerantie ±{KNOB_TOL * 100:.0f} procentpunt; één vraag speling.", ""]
+    L += [f"Tolerantie ±{KNOB_TOL * 100:.0f} procentpunt; één vraag speling. *Weinig marge*: binnen de tolerantie maar al "
+          f"≥ 5 procentpunt (Bloom ≥ 3) van de opdracht, of alleen binnen door de speling; na het schrijven valt zo'n "
+          f"aandeel er snel buiten (BP12).", ""]
     # coverage
     L += ["## Getoetste en niet-getoetste criteria per leerdoel", ""]
     tested = {}

@@ -19,7 +19,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "mapping"))
 from mcommon import norm  # noqa: E402
 from items_check import texts_of  # noqa: E402
-from tcommon import Report, load_json  # noqa: E402
+from tcommon import Report, lead_task, load_json  # noqa: E402
 from toetsrun import ToetsRun, opt, subjects_opt  # noqa: E402
 
 N = 8
@@ -62,7 +62,10 @@ def main(argv: list[str]) -> None:
     run = ToetsRun(R, subjects_opt(argv))
     it = load_json(R / "33_items" / f"{oid}.json")
     allow = [tokens(p) for p in run.allowlist() if p.strip()]
-    parts = [("intro", it["intro"])] + [(f"{v['vraag_id']} stem", v["stem"]) for v in it["vragen"]]
+    parts = [("intro", it["intro"])]
+    for v in it["vragen"]:
+        lead, task = lead_task(v)
+        parts += [(f"{v['vraag_id']} lead", lead), (f"{v['vraag_id']} task", task)]
     parts += [(f"informatiebron {s['n']}", t) for s in it["sources"] for t in texts_of([s.get("title"), s.get("text"), s.get("table")])]
     parts += [(f"{v['vraag_id']} model answer", v["cv"]["model_answer"]) for v in it["vragen"]]
     mine = {}
