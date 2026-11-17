@@ -35,13 +35,21 @@ Bedrijfseconomie dient hieronder als voorbeeld; voor een ander vak vervang je da
 2. **Maak het toetsformulier.** Typ `/toets --formulier bedrijfseconomie`. Claude maakt een formulier en noemt waar het staat (`subjects\bedrijfseconomie\toets\toetsformulier-bedrijfseconomie.html`).
 3. **Vul het formulier in.** Open het bestand door erop te dubbelklikken; het werkt in elke browser, ook zonder internet. Vul in:
     - de titel en het leerjaar;
-    - per leerdoel hoeveel punten het krijgt (de toetsmatrijs);
-    - het aantal opgaven en vragen;
+    - per leerdoel hoeveel punten het krijgt (de toetsmatrijs). Het totaal staat bovenaan bij *Totaal punten (uit de matrijs)*; dat getal vul je niet zelf in;
+    - het aantal opgaven en vragen. Naast *Aantal opgaven* staat hoeveel opgaven het eindexamen bij dit aantal punten zou hebben (ongeveer 10 punten per opgave). Met **Zet op eindexamen** neem je dat over;
+    - de **toetsduur in minuten**: de tijd die leerlingen krijgen, bijvoorbeeld 90. Ernaast zie je hoeveel minuten per punt dat is en wat het eindexamen geeft (ongeveer 3 minuten per punt). Let op: vul hier geen punten in;
+    - het **leesbudget**: hoeveel tekst de toets mag hebben, als percentage van het eindexamen. 60 % betekent: per punt 60 % van het aantal woorden dat het eindexamen gebruikt. Ernaast zie je hoeveel woorden dat voor jouw toets is. Kies *Geen leesbudget* als je geen grens wilt, of laat het op *Niet ingesteld*: dan vraagt de straat het;
     - de Bloom-mix en de knoppen. Naast elke knop zie je het eindexamen als referentie; wat je leeg laat, vraagt de straat straks na.
 4. **Download de opdracht.** Klik op *Download toetsopdracht.json*. Het bestand komt meestal in je map Downloads.
 5. **Start de toets.** Typ in Claude Code: `/toets C:\Users\<jouw naam>\Downloads\toetsopdracht.json --subject bedrijfseconomie`.
-6. **Pauze 1: de opdracht.** De straat stelt vragen over wat je open liet, steeds met knoppen als *Zoals eindexamen*, *Lichter* of *Zwaarder*. Daarna leest hij de hele opdracht terug. Klopt het, kies dan **Akkoord**; anders **Aanpassen** en typ wat er anders moet.
-7. **Wacht op het bouwplan** (ongeveer 5 minuten). De straat bedenkt per opgave een context en per vraag het type, de punten en de leerdoelen. Je krijgt een korte samenvatting en het bestand `bouwplan.md`.
+6. **Pauze 1: de opdracht.** De straat stelt vragen over wat je open liet, steeds met knoppen als *Zoals eindexamen*, *Lichter* of *Zwaarder*. Daarna leest hij de hele opdracht terug. Daarin staat altijd, telkens naast het eindexamen:
+    - de toetsduur en het aantal minuten per punt;
+    - het leesbudget in woorden;
+    - het aantal opgaven en wat het eindexamen zou voorstellen;
+    - hoeveel leerdoelen er per punt zijn.
+
+    Wijkt iets veel af, dan vraagt de straat het, bijvoorbeeld *Zoals eindexamen (3)* of *Houden (5)* voor het aantal opgaven. Klopt het, kies dan **Akkoord**; anders **Aanpassen** en typ wat er anders moet.
+7. **Wacht op het bouwplan** (ongeveer 5 minuten). De straat bedenkt per opgave één verhaal: een situatie met vaste personen of bedrijven, waarin de vragen elkaar opvolgen, zoals in het eindexamen. Per vraag staan het type, de punten, de leerdoelen en het aantal opdrachten in de vraag. Je krijgt een korte samenvatting en het bestand `bouwplan.md`. Staat bij een knop *weinig marge*, dan zit het plan al dicht bij de grens van wat je bestelde; na het schrijven valt zo'n knop er makkelijk buiten.
 8. **Pauze 2: het bouwplan.** Lees het plan. Kies **Akkoord**, of:
     - **Context vervangen**, als een onderwerp je niet bevalt (bijvoorbeeld "geen fietsen");
     - **Vraag aanpassen**, als een vraag zwaarder, lichter of anders moet;
@@ -65,7 +73,9 @@ Een sjabloon bewaart de instellingen die bij elke toets hetzelfde zijn. Per toet
 |---|---|
 | leerjaar | titel |
 | aantal opgaven en vragen | toetsmatrijs: punten per leerdoel van deze periode |
-| de knoppen (hoe zwaar de vragen zijn) | Bloom-mix (de straat stelt *Zoals eindexamen* voor) |
+| toetsduur | Bloom-mix (de straat stelt *Zoals eindexamen* voor) |
+| leesbudget (bijvoorbeeld 60 % voor 4 VWO) | |
+| de knoppen (hoe zwaar de vragen zijn) | |
 | | contexten die je wilt vermijden of vastleggen |
 | | opgaven die je hergebruikt uit de toetsbank |
 
@@ -76,7 +86,7 @@ De Bloom-mix staat bewust niet in het sjabloon. Welke niveaus mogelijk zijn, han
 Zo gebruik je het:
 
 1. Maak het formulier: `/toets --formulier bedrijfseconomie`.
-2. Kies bovenaan bij *Sjabloon laden* de optie **5vwo-toets**. Het leerjaar, de aantallen en de knoppen staan nu ingevuld.
+2. Kies bij *Sjabloon laden* de optie **5vwo-toets**. Het leerjaar, de aantallen, de toetsduur, het leesbudget en de knoppen staan nu ingevuld (voor zover het sjabloon ze bevat).
 3. Vul de titel en de punten per leerdoel in.
 4. Pas eventueel een knop aan voor deze ene toets. Het sjabloon zelf verandert daardoor niet.
 5. Klik op *Download toetsopdracht.json* en ga verder bij stap 5 hierboven.
@@ -98,7 +108,7 @@ Begin altijd met de twijfellijst. Pas daarna de Word-bestanden aan en zet ze in 
 | `twijfellijst.md` | Lees dit eerst. **must**-punten moet je oplossen, **should**-punten zijn suggesties: vaak een zin die in de vraag ontbreekt ("exclusief btw") of een extra goed antwoord voor het correctievoorschrift. |
 | `…-leerling.docx` | De toets voor leerlingen. Lees hem zelf één keer helemaal, alsof je hem maakt. |
 | `…-correctievoorschrift.docx` | Voor het nakijken. Vul aan met antwoorden uit de twijfellijst die je ook goed wilt rekenen. |
-| `…-verantwoording.docx` | Voor jezelf of de sectie: dekking per leerdoel, Bloom-mix en knoppen naast het eindexamen. |
+| `…-verantwoording.docx` | Voor jezelf of de sectie: dekking per leerdoel, Bloom-mix en knoppen naast het eindexamen. Het laatste onderdeel, *Huisregels*, zet de toets naast het eindexamen: minuten per punt, aantal woorden tegen het leesbudget, punten en vragen per opgave, opdrachten per vraag, hoe vaak de vraag de aanpak of de conclusie al geeft, en of een begrip dat getoetst wordt al in de vraag staat. |
 | `bouwplan.md` | Het goedgekeurde plan, ter controle. |
 
 De `.md`-bestanden openen in Kladblok of in Claude. De straat zet de toets ook in de toetsbank van het vak. Zo vermijdt hij bij een volgende toets dezelfde contexten.
@@ -111,12 +121,16 @@ Wil je iets aan een vraag veranderen? Doe dat in Word. Je kunt het ook in Claude
 - **Bloom-mix**: welk deel van de punten onthouden, begrijpen, toepassen of analyseren is. De afwijking mag hooguit 5 procentpunt zijn.
 - **Referentieprofiel**: hoe het centraal examen van dit vak scoort op Bloom en op de knoppen. De straat meet het uit echte examens; elk nieuw examen in de examenbank maakt het beter.
 - **Patroon**: het soort vraag, zoals *standaardberekening*, *verklaar met een keten* of *noem en omschrijf*. De patronen komen uit de eindexamens.
+- **Huisregels**: wat het centraal examen van dit vak gewoon vindt, gemeten uit de echte examens: minuten per punt, woorden per punt, punten per opgave, hoe lang een vraagzin is en hoeveel opdrachten één vraag bevat. De straat houdt zich hieraan; jij stelt alleen het leesbudget en de toetsduur in.
+- **Leesbudget**: de hoeveelheid tekst in de toets (inleiding, bronnen en vragen), als percentage van het eindexamen per punt. Een lager percentage geeft kortere teksten, bijvoorbeeld voor 4 VWO.
+- **Opbouw van een vraag**: eerst eventueel een paar regels nieuwe informatie voor deze stap van het verhaal, daarna op de regel met de punten de vraag zelf ("2p **3** Bereken …"). Zo staat het ook in het eindexamen.
 - **Knoppen**: regelaars voor hoe zwaar een vraag is. De afwijking per knop mag hooguit 10 procentpunt zijn.
 
 | Knop | Wat hij regelt | Lichter → zwaarder |
 |---|---|---|
 | Stappen | Hoeveel denkstappen achter elkaar | 1 → 4 of meer |
-| Route | Zegt de vraag hoe je het aanpakt? | gegeven → zelf vinden |
+| Route | Noemt de vraag een tussenstap, methode, formule of begrip dat je moet gebruiken ("bereken hiervoor eerst …", "gebruik de cpi")? Geldt voor alle vragen | gegeven → zelf vinden |
+| Richting | Noemt de vraag de conclusie al ("leg uit dat …", "toon aan dat …") of moet de leerling die zelf vinden ("leg uit of …")? Geldt voor uitleg- en rekenvragen | gegeven → open |
 | Bronnen | Waar de gegevens staan | in de vraag → meerdere informatiebronnen |
 | Ruis | Staan er gegevens die je niet nodig hebt? | nee → ja |
 | SOLO-doel | Hoeveel samenhang het antwoord vraagt | één punt → verbanden leggen |
@@ -127,6 +141,8 @@ Wil je iets aan een vraag veranderen? Doe dat in Word. Je kunt het ook in Claude
 
 Kies je bij een knop *Vrij*, dan bepaalt de straat zelf de verdeling.
 
+Niet als aanwijzing tellen: "gebruik informatiebron 2", "gebruik je antwoord op vraag 3", een algemene afrondregel ("rond af op één decimaal") en de uitleg van een nieuw begrip dat niet getoetst wordt.
+
 ## Als er iets misgaat
 
 | Je ziet | Oplossing |
@@ -136,6 +152,8 @@ Kies je bij een knop *Vrij*, dan bepaalt de straat zelf de verdeling.
 | `/toets` wordt niet herkend | Claude Code staat niet in de map `leerdoel-straat`. Sluit af en open het opnieuw in die map. |
 | "De toets-straat heeft een criteriaversie nodig" | Dit vak heeft nog geen examenbank. Draai eerst `/examen` met eindexamens van dit vak. |
 | Een fout over een bestand dat open is (PermissionError) | Sluit het Word-bestand en vraag Claude de export opnieuw te draaien. |
+| "duration_minutes … < half a minute per point" (O7) | De toetsduur is te kort voor het aantal punten; waarschijnlijk staan er punten in het veld *Toetsduur (minuten)*. Vul het aantal minuten in. |
+| "geen huisregels gemeten" | Voor dit vak zijn de eindexamens nog niet gemeten. De straat werkt gewoon, maar zonder leesbudget en grenzen per opgave. Vraag Claude `exam_metrics.py` voor dit vak te draaien. |
 | € verschijnt als � in het venster | Alleen een weergavefout van Windows; de bestanden zijn goed. |
 | De run stopt halverwege | Typ "ga verder met de toets-run". De straat gaat verder waar hij was, want alles staat in de runmap. |
 | Na een tijd zonder gebruik werkt iets niet | Haal eerst de nieuwste versie op: `git pull` in de map `leerdoel-straat`. |
