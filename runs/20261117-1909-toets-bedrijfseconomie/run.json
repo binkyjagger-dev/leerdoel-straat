@@ -1,0 +1,15 @@
+{
+  "run_id": "20261117-1909-toets-bedrijfseconomie",
+  "subject": "bedrijfseconomie",
+  "level": "5vwo",
+  "criteria_run": "20261021-1647-bedrijfseconomie-vwo-2028-run2",
+  "reference": "bank-2-examens (referentie: 2 examens (2025-I, 2026-I))",
+  "max_repair_rounds": 2,
+  "writer_batch": 4,
+  "status": "done",
+  "started_at": "2026-11-17T19:09:19",
+  "n_opgaven_note": "O8: docent koos 4 (CE-voorstel 3, opdracht 5)",
+  "examples_missing": [],
+  "finished_at": "2026-11-17T20:08:11",
+  "toets_id": "20261117-1909-toets-bedrijfseconomie"
+}

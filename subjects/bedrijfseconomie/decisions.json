@@ -2186,11 +2186,11 @@
         "planner"
       ],
       "affects_units": null,
-      "status": "open",
-      "answer": null,
-      "answered_by": null,
-      "answered_at": null,
-      "source_run": "20261115-1230-toets-bedrijfseconomie",
+      "status": "answered",
+      "answer": "Nee: de conclusie is het oordeel van P09, geen rekenschakel; telt niet als stap bij steps.",
+      "answered_by": "docent",
+      "answered_at": "2026-11-17T18:09:10Z",
+      "source_run": "20261117-1909-toets-bedrijfseconomie",
       "raised_by": "intake",
       "supersedes": null,
       "scope": null
@@ -2211,11 +2211,11 @@
         "verifier"
       ],
       "affects_units": null,
-      "status": "open",
-      "answer": null,
-      "answered_by": null,
-      "answered_at": null,
-      "source_run": "20261115-1230-toets-bedrijfseconomie",
+      "status": "answered",
+      "answer": "Blauwdruk aanpassen waar itemherstel het geplande niveau niet haalt (Bloom, ruis); steps- en solo-afwijkingen accepteren met vermelding op de twijfellijst.",
+      "answered_by": "docent",
+      "answered_at": "2026-11-17T18:09:10Z",
+      "source_run": "20261117-1909-toets-bedrijfseconomie",
       "raised_by": "intake",
       "supersedes": null,
       "scope": null
@@ -2235,12 +2235,40 @@
         "planner"
       ],
       "affects_units": null,
+      "status": "answered",
+      "answer": "Multistructureel: bekende procedures na elkaar; relationeel alleen wanneer de leerling zelf een verband tussen begrippen legt of afweegt. De planner plant rekenketens multistructureel.",
+      "answered_by": "docent",
+      "answered_at": "2026-11-17T18:09:10Z",
+      "source_run": "20261117-1909-toets-bedrijfseconomie",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": null
+    },
+    {
+      "id": "bedrijfsecon-072",
+      "question": "Telt een voorgestructureerd schema in de uitwerkbijlage (benoemde rijen zoals 'Afschrijvingskosten' en 'Resultaat') als route gegeven, of telt route alleen bij een aanwijzing in lead of taak (B20)?",
+      "context": "O3-V11 (B02, 4 p) is gepland met route gegeven; de labellers volgen B20 en geven zelf vinden, waardoor route gegeven buiten tolerantie valt (21,2 % tegen 34,7 %). Als CE-schemavragen ook zo zijn gelabeld, plant de planner B02 beter als zelf vinden.",
+      "options": [
+        "Alleen lead/taak telt (B20); de planner plant B02-schema's als route zelf vinden",
+        "Een schema met benoemde rijen telt als route gegeven; labellers en planner tellen het zo",
+        "Per schema beslissen: alleen rijen die een tussenstap noemen tellen als route"
+      ],
+      "proposed": "Alleen lead/taak telt (B20); de planner plant B02-schema's als route zelf vinden",
+      "impact": "medium",
+      "applies_to": [
+        "planner",
+        "item-labeller",
+        "verifier"
+      ],
+      "affects_units": [
+        "O3-V11"
+      ],
       "status": "open",
       "answer": null,
       "answered_by": null,
       "answered_at": null,
-      "source_run": "20261115-1230-toets-bedrijfseconomie",
-      "raised_by": "intake",
+      "source_run": "20261117-1909-toets-bedrijfseconomie",
+      "raised_by": "verifier",
       "supersedes": null,
       "scope": null
     }

@@ -1,6 +1,6 @@
 # Toetsbank — bedrijfseconomie
 
-Criteriaversie: `20261021-1647-bedrijfseconomie-vwo-2028-run2` · 2 toets(en).
+Criteriaversie: `20261021-1647-bedrijfseconomie-vwo-2028-run2` · 3 toets(en).
 
 *Gebouwd door `scripts/toets/toetsbank_add.py`; niet met de hand bewerken.*
 
@@ -10,6 +10,7 @@ Criteriaversie: `20261021-1647-bedrijfseconomie-vwo-2028-run2` · 2 toets(en).
 |---|---|---|---|---|---|---|
 | 20261114-1140-toets-bedrijfseconomie | Proeftoets bedrijfseconomie periode 2 | 5vwo | 44 | 5 | 16 | 2026-11-14 |
 | 20261115-1230-toets-bedrijfseconomie | Toets Regulier Periode 2 26_27_VWO5 | 5vwo | 33 | 5 | 16 | 2026-11-15 |
+| 20261117-1909-toets-bedrijfseconomie | Toets Regulier Periode 2 26_27_VWO5 | 5vwo | 33 | 4 | 16 | 2026-11-17 |
 
 ## Per leerdoel en criterium
 
@@ -21,7 +22,7 @@ Criteriaversie: `20261021-1647-bedrijfseconomie-vwo-2028-run2` · 2 toets(en).
 
 **F1.28.1-02** Ik kan analyseren wat financiële feiten rond schulden, afschrijving en overige ontvangsten en uitgaven per kas en bank doen met de balans en de resultatenrekening, zonder journaalposten op te stellen.
 - F1.28.1-02-a: 20261114-1140-toets-bedrijfseconomie · O5 Hoveniersbedrijf Groenrijk · vraag 16 · 1 p; 20261114-1140-toets-bedrijfseconomie · O5 Hoveniersbedrijf Groenrijk · vraag 16 · 1 p
-- F1.28.1-02-b: 20261115-1230-toets-bedrijfseconomie · O4 Verhuisbedrijf Van Dijk · vraag 10 · 1 p; 20261115-1230-toets-bedrijfseconomie · O4 Verhuisbedrijf Van Dijk · vraag 10 · 1 p; 20261115-1230-toets-bedrijfseconomie · O4 Verhuisbedrijf Van Dijk · vraag 11 · 1 p; 20261115-1230-toets-bedrijfseconomie · O4 Verhuisbedrijf Van Dijk · vraag 11 · 1 p; 20261115-1230-toets-bedrijfseconomie · O4 Verhuisbedrijf Van Dijk · vraag 11 · 1 p; 20261115-1230-toets-bedrijfseconomie · O4 Verhuisbedrijf Van Dijk · vraag 12 · 1 p; 20261115-1230-toets-bedrijfseconomie · O4 Verhuisbedrijf Van Dijk · vraag 12 · 1 p; 20261115-1230-toets-bedrijfseconomie · O4 Verhuisbedrijf Van Dijk · vraag 12 · 1 p; 20261115-1230-toets-bedrijfseconomie · O4 Verhuisbedrijf Van Dijk · vraag 12 · 1 p
+- F1.28.1-02-b: 20261115-1230-toets-bedrijfseconomie · O4 Verhuisbedrijf Van Dijk · vraag 10 · 1 p; 20261115-1230-toets-bedrijfseconomie · O4 Verhuisbedrijf Van Dijk · vraag 10 · 1 p; 20261115-1230-toets-bedrijfseconomie · O4 Verhuisbedrijf Van Dijk · vraag 11 · 1 p; 20261115-1230-toets-bedrijfseconomie · O4 Verhuisbedrijf Van Dijk · vraag 11 · 1 p; 20261115-1230-toets-bedrijfseconomie · O4 Verhuisbedrijf Van Dijk · vraag 11 · 1 p; 20261115-1230-toets-bedrijfseconomie · O4 Verhuisbedrijf Van Dijk · vraag 12 · 1 p; 20261115-1230-toets-bedrijfseconomie · O4 Verhuisbedrijf Van Dijk · vraag 12 · 1 p; 20261115-1230-toets-bedrijfseconomie · O4 Verhuisbedrijf Van Dijk · vraag 12 · 1 p; 20261115-1230-toets-bedrijfseconomie · O4 Verhuisbedrijf Van Dijk · vraag 12 · 1 p; 20261117-1909-toets-bedrijfseconomie · O3 Drukkerij De Pers · vraag 9 · 1 p; 20261117-1909-toets-bedrijfseconomie · O3 Drukkerij De Pers · vraag 9 · 1 p; 20261117-1909-toets-bedrijfseconomie · O3 Drukkerij De Pers · vraag 10 · 1 p; 20261117-1909-toets-bedrijfseconomie · O3 Drukkerij De Pers · vraag 10 · 1 p; 20261117-1909-toets-bedrijfseconomie · O3 Drukkerij De Pers · vraag 10 · 1 p; 20261117-1909-toets-bedrijfseconomie · O3 Drukkerij De Pers · vraag 11 · 1 p; 20261117-1909-toets-bedrijfseconomie · O3 Drukkerij De Pers · vraag 11 · 1 p; 20261117-1909-toets-bedrijfseconomie · O3 Drukkerij De Pers · vraag 11 · 1 p; 20261117-1909-toets-bedrijfseconomie · O3 Drukkerij De Pers · vraag 11 · 1 p
 - F1.28.1-02-c: niet getoetst
 - F1.28.1-02-d: niet getoetst
 
@@ -31,7 +32,7 @@ Criteriaversie: `20261021-1647-bedrijfseconomie-vwo-2028-run2` · 2 toets(en).
 - F2.30.1-01-c: 20261114-1140-toets-bedrijfseconomie · O1 Dierenkliniek De Hoefslag · vraag 4 · 1 p
 
 **F2.30.1-02** Ik kan uitleggen wat het verschil is tussen constante en (proportioneel) variabele kosten.
-- F2.30.1-02-a: 20261114-1140-toets-bedrijfseconomie · O1 Dierenkliniek De Hoefslag · vraag 1 · 1 p
+- F2.30.1-02-a: 20261114-1140-toets-bedrijfseconomie · O1 Dierenkliniek De Hoefslag · vraag 1 · 1 p; 20261117-1909-toets-bedrijfseconomie · O1 Boulderhal Grip · vraag 1 · 1 p
 - F2.30.1-02-b: 20261115-1230-toets-bedrijfseconomie · O1 Rijschool Vlot · vraag 3 · 1 p
 - F2.30.1-02-c: niet getoetst
 - F2.30.1-02-d: niet getoetst
@@ -48,40 +49,40 @@ Criteriaversie: `20261021-1647-bedrijfseconomie-vwo-2028-run2` · 2 toets(en).
 
 **F2.30.2-02** Ik kan het resultaat van een dienstverlenende onderneming over een periode berekenen met de variabele kostencalculatiemethode.
 - F2.30.2-02-a: 20261114-1140-toets-bedrijfseconomie · O1 Dierenkliniek De Hoefslag · vraag 4 · 1 p; 20261115-1230-toets-bedrijfseconomie · O1 Rijschool Vlot · vraag 2 · 1 p
-- F2.30.2-02-b: 20261114-1140-toets-bedrijfseconomie · O1 Dierenkliniek De Hoefslag · vraag 4 · 1 p; 20261114-1140-toets-bedrijfseconomie · O1 Dierenkliniek De Hoefslag · vraag 4 · 1 p; 20261115-1230-toets-bedrijfseconomie · O1 Rijschool Vlot · vraag 2 · 1 p
-- F2.30.2-02-c: 20261115-1230-toets-bedrijfseconomie · O1 Rijschool Vlot · vraag 3 · 1 p
+- F2.30.2-02-b: 20261114-1140-toets-bedrijfseconomie · O1 Dierenkliniek De Hoefslag · vraag 4 · 1 p; 20261114-1140-toets-bedrijfseconomie · O1 Dierenkliniek De Hoefslag · vraag 4 · 1 p; 20261115-1230-toets-bedrijfseconomie · O1 Rijschool Vlot · vraag 2 · 1 p; 20261117-1909-toets-bedrijfseconomie · O4 Glazenwasserij Helder · vraag 13 · 1 p
+- F2.30.2-02-c: 20261115-1230-toets-bedrijfseconomie · O1 Rijschool Vlot · vraag 3 · 1 p; 20261117-1909-toets-bedrijfseconomie · O4 Glazenwasserij Helder · vraag 15 · 1 p; 20261117-1909-toets-bedrijfseconomie · O4 Glazenwasserij Helder · vraag 15 · 1 p
 
 **F2.30.2-03** Ik kan de verschillen tussen de integrale kostprijs en de variabele kostprijs van een dienst uitleggen en berekenen.
-- F2.30.2-03-a: 20261114-1140-toets-bedrijfseconomie · O1 Dierenkliniek De Hoefslag · vraag 3 · 1 p; 20261114-1140-toets-bedrijfseconomie · O1 Dierenkliniek De Hoefslag · vraag 3 · 1 p; 20261115-1230-toets-bedrijfseconomie · O1 Rijschool Vlot · vraag 1 · 1 p
+- F2.30.2-03-a: 20261114-1140-toets-bedrijfseconomie · O1 Dierenkliniek De Hoefslag · vraag 3 · 1 p; 20261114-1140-toets-bedrijfseconomie · O1 Dierenkliniek De Hoefslag · vraag 3 · 1 p; 20261115-1230-toets-bedrijfseconomie · O1 Rijschool Vlot · vraag 1 · 1 p; 20261117-1909-toets-bedrijfseconomie · O2 Fotostudio Lens & Licht · vraag 5 · 1 p
 - F2.30.2-03-b: 20261114-1140-toets-bedrijfseconomie · O1 Dierenkliniek De Hoefslag · vraag 3 · 1 p
 - F2.30.2-03-c: niet getoetst
 
 **F2.30.3-01** Ik kan de verkoopprijs inclusief btw berekenen als de verkoopprijs exclusief btw bekend is, en omgekeerd.
-- F2.30.3-01-a: 20261114-1140-toets-bedrijfseconomie · O2 Webwinkel Loopwerk · vraag 5 · 1 p; 20261115-1230-toets-bedrijfseconomie · O1 Rijschool Vlot · vraag 1 · 1 p
-- F2.30.3-01-b: 20261114-1140-toets-bedrijfseconomie · O2 Webwinkel Loopwerk · vraag 7 · 1 p; 20261115-1230-toets-bedrijfseconomie · O2 Lunchroom De Zuidkant · vraag 4 · 1 p
-- F2.30.3-01-c: 20261115-1230-toets-bedrijfseconomie · O2 Lunchroom De Zuidkant · vraag 4 · 1 p; 20261115-1230-toets-bedrijfseconomie · O2 Lunchroom De Zuidkant · vraag 4 · 1 p
-- F2.30.3-01-d: 20261114-1140-toets-bedrijfseconomie · O2 Webwinkel Loopwerk · vraag 6 · 1 p; 20261115-1230-toets-bedrijfseconomie · O2 Lunchroom De Zuidkant · vraag 5 · 1 p; 20261115-1230-toets-bedrijfseconomie · O2 Lunchroom De Zuidkant · vraag 5 · 1 p
+- F2.30.3-01-a: 20261114-1140-toets-bedrijfseconomie · O2 Webwinkel Loopwerk · vraag 5 · 1 p; 20261115-1230-toets-bedrijfseconomie · O1 Rijschool Vlot · vraag 1 · 1 p; 20261117-1909-toets-bedrijfseconomie · O2 Fotostudio Lens & Licht · vraag 5 · 1 p
+- F2.30.3-01-b: 20261114-1140-toets-bedrijfseconomie · O2 Webwinkel Loopwerk · vraag 7 · 1 p; 20261115-1230-toets-bedrijfseconomie · O2 Lunchroom De Zuidkant · vraag 4 · 1 p; 20261117-1909-toets-bedrijfseconomie · O2 Fotostudio Lens & Licht · vraag 7 · 1 p
+- F2.30.3-01-c: 20261115-1230-toets-bedrijfseconomie · O2 Lunchroom De Zuidkant · vraag 4 · 1 p; 20261115-1230-toets-bedrijfseconomie · O2 Lunchroom De Zuidkant · vraag 4 · 1 p; 20261117-1909-toets-bedrijfseconomie · O2 Fotostudio Lens & Licht · vraag 7 · 1 p; 20261117-1909-toets-bedrijfseconomie · O2 Fotostudio Lens & Licht · vraag 7 · 1 p
+- F2.30.3-01-d: 20261114-1140-toets-bedrijfseconomie · O2 Webwinkel Loopwerk · vraag 6 · 1 p; 20261115-1230-toets-bedrijfseconomie · O2 Lunchroom De Zuidkant · vraag 5 · 1 p; 20261115-1230-toets-bedrijfseconomie · O2 Lunchroom De Zuidkant · vraag 5 · 1 p; 20261117-1909-toets-bedrijfseconomie · O2 Fotostudio Lens & Licht · vraag 8 · 1 p; 20261117-1909-toets-bedrijfseconomie · O2 Fotostudio Lens & Licht · vraag 8 · 1 p
 
 **F2.30.3-02** Ik kan met de kostprijs en een winstopslag de verkoopprijs berekenen.
-- F2.30.3-02-a: 20261114-1140-toets-bedrijfseconomie · O2 Webwinkel Loopwerk · vraag 5 · 1 p; 20261115-1230-toets-bedrijfseconomie · O1 Rijschool Vlot · vraag 1 · 1 p
-- F2.30.3-02-b: 20261114-1140-toets-bedrijfseconomie · O2 Webwinkel Loopwerk · vraag 5 · 1 p; 20261115-1230-toets-bedrijfseconomie · O2 Lunchroom De Zuidkant · vraag 6 · 1 p
+- F2.30.3-02-a: 20261114-1140-toets-bedrijfseconomie · O2 Webwinkel Loopwerk · vraag 5 · 1 p; 20261115-1230-toets-bedrijfseconomie · O1 Rijschool Vlot · vraag 1 · 1 p; 20261117-1909-toets-bedrijfseconomie · O2 Fotostudio Lens & Licht · vraag 5 · 1 p
+- F2.30.3-02-b: 20261114-1140-toets-bedrijfseconomie · O2 Webwinkel Loopwerk · vraag 5 · 1 p; 20261115-1230-toets-bedrijfseconomie · O2 Lunchroom De Zuidkant · vraag 6 · 1 p; 20261117-1909-toets-bedrijfseconomie · O2 Fotostudio Lens & Licht · vraag 6 · 1 p
 - F2.30.3-02-c: 20261114-1140-toets-bedrijfseconomie · O2 Webwinkel Loopwerk · vraag 6 · 1 p
 
 **F2.30.4-01** Ik kan voor een handels- of dienstverlenende organisatie de break-evenafzet en de break-evenomzet berekenen met de dekkingsbijdrage.
-- F2.30.4-01-a: 20261114-1140-toets-bedrijfseconomie · O2 Webwinkel Loopwerk · vraag 7 · 1 p; 20261115-1230-toets-bedrijfseconomie · O3 Escaperoom Het Raadsel · vraag 7 · 1 p
-- F2.30.4-01-b: 20261114-1140-toets-bedrijfseconomie · O2 Webwinkel Loopwerk · vraag 7 · 1 p; 20261115-1230-toets-bedrijfseconomie · O3 Escaperoom Het Raadsel · vraag 7 · 1 p
-- F2.30.4-01-c: 20261114-1140-toets-bedrijfseconomie · O2 Webwinkel Loopwerk · vraag 7 · 1 p; 20261115-1230-toets-bedrijfseconomie · O3 Escaperoom Het Raadsel · vraag 8 · 1 p; 20261115-1230-toets-bedrijfseconomie · O3 Escaperoom Het Raadsel · vraag 8 · 1 p
+- F2.30.4-01-a: 20261114-1140-toets-bedrijfseconomie · O2 Webwinkel Loopwerk · vraag 7 · 1 p; 20261115-1230-toets-bedrijfseconomie · O3 Escaperoom Het Raadsel · vraag 7 · 1 p; 20261117-1909-toets-bedrijfseconomie · O1 Boulderhal Grip · vraag 2 · 1 p
+- F2.30.4-01-b: 20261114-1140-toets-bedrijfseconomie · O2 Webwinkel Loopwerk · vraag 7 · 1 p; 20261115-1230-toets-bedrijfseconomie · O3 Escaperoom Het Raadsel · vraag 7 · 1 p; 20261117-1909-toets-bedrijfseconomie · O1 Boulderhal Grip · vraag 2 · 1 p
+- F2.30.4-01-c: 20261114-1140-toets-bedrijfseconomie · O2 Webwinkel Loopwerk · vraag 7 · 1 p; 20261115-1230-toets-bedrijfseconomie · O3 Escaperoom Het Raadsel · vraag 8 · 1 p; 20261115-1230-toets-bedrijfseconomie · O3 Escaperoom Het Raadsel · vraag 8 · 1 p; 20261117-1909-toets-bedrijfseconomie · O1 Boulderhal Grip · vraag 3 · 1 p; 20261117-1909-toets-bedrijfseconomie · O1 Boulderhal Grip · vraag 3 · 1 p
 
 **F2.30.4-02** Ik kan de totale opbrengsten, de totale kosten en het totale resultaat in een grafiek opstellen en de break-evenafzet en break-evenomzet in de grafiek toepassen en uitleggen.
 - F2.30.4-02-a: niet getoetst
-- F2.30.4-02-b: 20261114-1140-toets-bedrijfseconomie · O2 Webwinkel Loopwerk · vraag 8 · 1 p
-- F2.30.4-02-c: 20261115-1230-toets-bedrijfseconomie · O3 Escaperoom Het Raadsel · vraag 9 · 1 p; 20261115-1230-toets-bedrijfseconomie · O3 Escaperoom Het Raadsel · vraag 9 · 1 p
+- F2.30.4-02-b: 20261114-1140-toets-bedrijfseconomie · O2 Webwinkel Loopwerk · vraag 8 · 1 p; 20261117-1909-toets-bedrijfseconomie · O1 Boulderhal Grip · vraag 4 · 1 p
+- F2.30.4-02-c: 20261115-1230-toets-bedrijfseconomie · O3 Escaperoom Het Raadsel · vraag 9 · 1 p; 20261115-1230-toets-bedrijfseconomie · O3 Escaperoom Het Raadsel · vraag 9 · 1 p; 20261117-1909-toets-bedrijfseconomie · O1 Boulderhal Grip · vraag 4 · 1 p
 - F2.30.4-02-d: 20261114-1140-toets-bedrijfseconomie · O2 Webwinkel Loopwerk · vraag 8 · 1 p; 20261114-1140-toets-bedrijfseconomie · O2 Webwinkel Loopwerk · vraag 8 · 1 p
 
 **F2.30.5-01** Ik kan de resultaatverdeling opstellen, van het resultaat via het resultaat voor belasting tot de verdeling van het resultaat na belasting.
 - F2.30.5-01-a: 20261114-1140-toets-bedrijfseconomie · O3 Koffiebranderij Donker bv · vraag 9 · 1 p
 - F2.30.5-01-b: 20261114-1140-toets-bedrijfseconomie · O3 Koffiebranderij Donker bv · vraag 9 · 1 p; 20261114-1140-toets-bedrijfseconomie · O3 Koffiebranderij Donker bv · vraag 9 · 1 p
-- F2.30.5-01-c: 20261115-1230-toets-bedrijfseconomie · O5 Kapsalon Knipkunst · vraag 14 · 1 p
+- F2.30.5-01-c: 20261115-1230-toets-bedrijfseconomie · O5 Kapsalon Knipkunst · vraag 14 · 1 p; 20261117-1909-toets-bedrijfseconomie · O4 Glazenwasserij Helder · vraag 16 · 1 p
 - F2.30.5-01-d: niet getoetst
 
 **F2.30.5-02** Ik kan in de resultaatverdeling van een bv of nv het bruto en het netto dividend in euro's op gewone en preferente aandelen berekenen.
@@ -96,7 +97,7 @@ Criteriaversie: `20261021-1647-bedrijfseconomie-vwo-2028-run2` · 2 toets(en).
 - F2.30.6-01-c: niet getoetst
 
 **F2.30.6-02** Ik kan uitleggen dat het resultaat wordt beïnvloed door de gekozen afschrijvingsperiode en de gekozen waarderingsgrondslag van de activa.
-- F2.30.6-02-a: 20261115-1230-toets-bedrijfseconomie · O4 Verhuisbedrijf Van Dijk · vraag 13 · 1 p
+- F2.30.6-02-a: 20261115-1230-toets-bedrijfseconomie · O4 Verhuisbedrijf Van Dijk · vraag 13 · 1 p; 20261117-1909-toets-bedrijfseconomie · O3 Drukkerij De Pers · vraag 12 · 1 p
 - F2.30.6-02-b: 20261114-1140-toets-bedrijfseconomie · O3 Koffiebranderij Donker bv · vraag 11 · 1 p
 - F2.30.6-02-c: niet getoetst
 - F2.30.6-02-d: niet getoetst
@@ -104,8 +105,8 @@ Criteriaversie: `20261021-1647-bedrijfseconomie-vwo-2028-run2` · 2 toets(en).
 **F2.31.1-01** Ik kan voor een niet-industriële organisatie de voorcalculatorische en de nacalculatorische resultatenrekening opstellen en het verschil tussen het voorcalculatorische en het gerealiseerde resultaat berekenen en uitleggen.
 - F2.31.1-01-a: 20261114-1140-toets-bedrijfseconomie · O4 Filmtheater Het Lumière · vraag 12 · 1 p
 - F2.31.1-01-b: 20261114-1140-toets-bedrijfseconomie · O4 Filmtheater Het Lumière · vraag 12 · 1 p; 20261115-1230-toets-bedrijfseconomie · O5 Kapsalon Knipkunst · vraag 15 · 1 p
-- F2.31.1-01-c: 20261114-1140-toets-bedrijfseconomie · O4 Filmtheater Het Lumière · vraag 12 · 1 p; 20261115-1230-toets-bedrijfseconomie · O5 Kapsalon Knipkunst · vraag 15 · 1 p
-- F2.31.1-01-d: 20261115-1230-toets-bedrijfseconomie · O5 Kapsalon Knipkunst · vraag 16 · 1 p
+- F2.31.1-01-c: 20261114-1140-toets-bedrijfseconomie · O4 Filmtheater Het Lumière · vraag 12 · 1 p; 20261115-1230-toets-bedrijfseconomie · O5 Kapsalon Knipkunst · vraag 15 · 1 p; 20261117-1909-toets-bedrijfseconomie · O4 Glazenwasserij Helder · vraag 13 · 1 p
+- F2.31.1-01-d: 20261115-1230-toets-bedrijfseconomie · O5 Kapsalon Knipkunst · vraag 16 · 1 p; 20261117-1909-toets-bedrijfseconomie · O4 Glazenwasserij Helder · vraag 14 · 1 p; 20261117-1909-toets-bedrijfseconomie · O4 Glazenwasserij Helder · vraag 14 · 1 p
 
 **F2.31.2-01** Ik kan uit de behaalde resultaten per financiële en niet-financiële informatiecategorie passende beheermaatregelen voor het management afleiden.
 - F2.31.2-01-a: 20261114-1140-toets-bedrijfseconomie · O4 Filmtheater Het Lumière · vraag 13 · 1 p
@@ -129,14 +130,14 @@ Criteriaversie: `20261021-1647-bedrijfseconomie-vwo-2028-run2` · 2 toets(en).
 | patroon | vragen |
 |---|---|
 | B01 | 2 |
-| B02 | 4 |
+| B02 | 5 |
 | B03 | 1 |
-| P01 | 3 |
+| P01 | 4 |
 | P02 | 1 |
-| P03 | 2 |
-| P05 | 1 |
-| P07 | 4 |
-| P08 | 6 |
-| P09 | 3 |
-| P14 | 2 |
-| P16 | 5 |
+| P03 | 3 |
+| P05 | 3 |
+| P07 | 5 |
+| P08 | 10 |
+| P09 | 5 |
+| P14 | 3 |
+| P16 | 8 |
