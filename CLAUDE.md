@@ -111,7 +111,7 @@ python3 tests/run_toets_fixture.py                   # exercise toets-straat ste
 - The steps knob stayed outside tolerance (steps 1 = 7 % vs 18 %, steps 3 = 59 % vs 44 %): both labellers agreed against the plan, so no R round ran and `realized.py` ignores the verifier's V5 calls. Open proposed decision: steps in combination vragen = longest chain, parallel parts = 1; who decides when labellers agree against the plan. Item repair cannot fix this.
 - `docmodel.write` now splits Markdown pipe tables out of paragraph text; a table in an opgave intro reached Word as raw `| … |` lines. Always look at the rendered leerling PDF before sending.
 - `overlap_check.py` matches number-only shingles (writers put words between numbers to pass); IT3 does not match "35%" against 0.35; BE has no `formuleblad.md` (writers must put any formula in the stem); `solver_compare` reports "mismatch" when the cv's final is a derived number (10 pp) the solver states as its parts (35 % vs 45 %).
-- Solver ambiguity notes are the best should-findings: unstated btw basis, whether an item is already in a given result, rounding. Writers should state these in the stem by default.
+- Solver ambiguity notes are the best should-findings: unstated btw basis, whether an item is already in a given result, rounding. Disambiguate the situation, never the method (economie-098, specs/36 §5.4).
 - Cost: ~40 agent calls (1 planner, 5 writers, 5 solvers, 10 labellers, 1 R, 2 verifiers, 2 repair writers, 6 T4 reruns, …).
 
 ## Lessons from toets run 2 (Toets Regulier Periode 2 26_27 5 VWO, from a teacher's order file, 2026-11-15)
@@ -203,3 +203,11 @@ python3 tests/run_toets_fixture.py                   # exercise toets-straat ste
 - `verb_level_exceptions` must be set from every answered level decision before `ex_merge` (economie-063 moved 10 links from medium to high). It was missing because the decision came after the previous run.
 - H4 had many answer-key errors (4.4a, 4.15a/b, 4.20d, 4.28d, 4.29d); asking exercise judges to report them works, and they recompute. Collect them for the teacher.
 - Cost: 63 agent calls (2 transcribe, 1 ingest, 1 intake, 30 paragraph judges, 1+3 verify/repair, 21 exercise judges, 1+3 verify/repair).
+
+## Lessons from the specs/36 migration (route/direction relabel, 2026-11-17)
+- `exam_metrics.py` on both banks: duration found on every cover (180 min). Economie 3,05 min/punt, 30,5 woorden/punt, 9,8 p/opgave; bedrijfseconomie 2,90, 55,6, 10,3. `exam_text.py` needed two fixes for SSL copies (question text ran into the next "3p" line; SSL footers and bare page numbers).
+- In the SSL copy of economie 2025-II the lead of a vraag sometimes lands in the previous vraag's task (no blank line between them). Accepted as measurement noise in words_lead/words_task; `asking_verbs.json` treats "Stel dat …" as a helper so n_tasks is not inflated.
+- `/examen --label --fields route,direction`: 60 labellers + 12 R decisions for 5 exams. Labellers disagreed mainly on whether a sentence in the context or a stelling counts as route; decided as B20 (only lead/task instructions that say how). Direction on noem-/voorbeeld-vragen was meaningless (B19). Give R a separate `<opgave>.rN.json` so earlier R decisions stay auditable.
+- Labeller prompts must name the exact disputed question ids per opgave; an R prompt that named the wrong opgave was correctly refused by the labeller.
+- Bedrijfseconomie exam folders have no uitwerkbijlage (`*-u.pdf`): schema rows were inferred from the cv. Open: the teacher supplies them.
+

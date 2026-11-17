@@ -23,6 +23,8 @@
                                          {"type": "array", "minItems": 1,
                                           "items": {"enum": ["explanation", "calculation", "schema", "drawing", "choice"]}}]},
           "settable": {"type": "boolean"},
+          "excluded_patterns": {"type": "array", "items": {"type": "string", "pattern": "^[A-Z][0-9]{2}$"},
+                                "description": "pattern codes the knob never applies to, whatever their kind (specs/36 §11 B19)"},
           "definition": {"oneOf": [{"type": "string"}, {"type": "object", "additionalProperties": {"type": "string"}}]},
           "label_evidence": {"type": "string", "description": "what the labeller quotes as evidence for this knob"}
         },

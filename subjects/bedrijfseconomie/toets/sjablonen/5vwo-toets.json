@@ -5,6 +5,7 @@
   "n_opgaven": 5,
   "n_vragen": 16,
   "duration_minutes": null,
+  "reading_budget_pct": 80,
   "knobs": {
     "pattern": "vrij",
     "solo": {
@@ -13,8 +14,12 @@
       "relationeel": 0.235
     },
     "route": {
-      "gegeven": 0.668,
-      "zelf vinden": 0.332
+      "gegeven": 0.347,
+      "zelf vinden": 0.653
+    },
+    "direction": {
+      "gegeven": 0.168,
+      "open": 0.832
     },
     "steps": {
       "1": 0.185,

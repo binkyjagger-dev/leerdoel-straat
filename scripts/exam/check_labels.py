@@ -108,7 +108,7 @@ def check_item(rep: Report, run: Run, q: dict, it: dict, tag: str, repair: bool)
     for k in [x for x in LABEL_KNOBS if x != "builds_on"]:
         if k not in it or not known:
             continue
-        applies = knob_applies(run.knobs[k], kinds, q["first_of_opgave"])
+        applies = knob_applies(run.knobs[k], kinds, q["first_of_opgave"], pat)
         if not applies and it[k] is not None:
             rep.fail("LB3", f"{tag}: {k}='{it[k]}' on pattern {pat} ({'/'.join(sorted(kinds))}); must be null")
         if applies and it[k] is None and not repair:

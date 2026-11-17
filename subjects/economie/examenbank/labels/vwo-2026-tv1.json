@@ -1,7 +1,7 @@
 {
   "exam_id": "vwo-2026-tv1",
   "criteria_run": "20261012-2220-economie-vwo-2026-run2",
-  "run_id": "20261115-1902-examen-economie",
+  "run_id": "20261117-1324-examen-economie-label-fields",
   "questions": [
     {
       "exam_id": "vwo-2026-tv1",
@@ -12,7 +12,8 @@
       "points": 2,
       "pattern": "P06",
       "solo": "multistructureel",
-      "route": null,
+      "route": "zelf vinden",
+      "direction": "gegeven",
       "steps": "2",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -42,6 +43,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -52,6 +54,8 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Leg uit dat het gebruik van diesel leidt tot maatschappelijke kosten.",
+        "direction": "Leg uit dat het gebruik van diesel leidt tot maatschappelijke kosten.",
         "pattern": "Ga in je antwoord in op een voorbeeld van maatschappelijke kosten van het gebruik van diesel.",
         "solo": "een voorbeeld van maatschappelijke kosten.",
         "steps": "Deze kosten worden betaald door de maatschappij en niet door de gebruikers zelf / zijn niet in de prijs opgenomen.",
@@ -72,6 +76,7 @@
       "pattern": "P08",
       "solo": "multistructureel",
       "route": "zelf vinden",
+      "direction": "open",
       "steps": "3",
       "sources": "in vraagtekst",
       "noise": "ja",
@@ -101,6 +106,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -111,9 +117,10 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Bereken de totale vaste (constante) kosten.",
+        "direction": "Bereken de totale vaste (constante) kosten.",
         "pattern": "Bereken de totale vaste (constante) kosten.",
         "solo": "TW = TO – TK",
-        "route": "Bereken de totale vaste (constante) kosten.",
         "steps": "1.218.000 – (336.000 + TCK) = 690.000",
         "sources": "diesel bij een prijs van 58.000 roepia per ticket. De winst is dan 690.000",
         "noise": "= 24 (x 1.000)",
@@ -133,6 +140,7 @@
       "pattern": "P08",
       "solo": "multistructureel",
       "route": "zelf vinden",
+      "direction": "open",
       "steps": "4+",
       "sources": "in vraagtekst",
       "noise": "ja",
@@ -167,6 +175,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -177,9 +186,10 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Bereken de procentuele prijsstijging van een ticket door de keuze voor biobrandstof.",
+        "direction": "Bereken de procentuele prijsstijging van een ticket door de keuze voor biobrandstof.",
         "pattern": "Bereken de procentuele prijsstijging van een ticket door de keuze voor biobrandstof.",
         "solo": "een afleiding van de MO-functie.",
-        "route": "Bereken de procentuele prijsstijging van een ticket door de keuze voor biobrandstof.",
         "steps": "een berekening van de afzet bij maximale winst.",
         "sources": "= 24 (x 1.000)",
         "noise": "De winst is dan 690.000",
@@ -198,7 +208,8 @@
       "points": 2,
       "pattern": "P10",
       "solo": "multistructureel",
-      "route": null,
+      "route": "zelf vinden",
+      "direction": null,
       "steps": "2",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -228,6 +239,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -238,6 +250,7 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Arceer in figuur 1 van de uitwerkbijlage de vlakken die deze verandering van het totale surplus bij winstmaximalisatie weergeven.",
         "pattern": "Arceer in figuur 1 van de uitwerkbijlage de vlakken die deze verandering van het totale surplus bij winstmaximalisatie weergeven.",
         "solo": "het arceren van de verandering als gevolg van de andere prijs.",
         "steps": "het arceren van de verandering als gevolg van de andere afzet.",
@@ -258,7 +271,8 @@
       "points": 2,
       "pattern": "P11",
       "solo": "multistructureel",
-      "route": null,
+      "route": "zelf vinden",
+      "direction": null,
       "steps": "2",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -288,6 +302,7 @@
         "pattern": "high",
         "solo": "medium",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -298,6 +313,7 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "dat de winst van Solo in 2027 zal dalen als gevolg van het afwijken van de sociale norm.",
         "pattern": "Laman heeft drie strategieën om toe te treden tot de markt (zie spelboom 1).",
         "solo": "het aangeven van het verband tussen de sociale norm en winst in 2027.",
         "steps": "De uitkomst is (snellere boot ; diesel) / (120 ; 160).",
@@ -308,7 +324,8 @@
         "builds_on": "Rederij Laman ziet winstkansen en zal in 2026 toetreden door te varen met biobrandstof."
       },
       "repaired_fields": [
-        "claim"
+        "claim",
+        "route"
       ]
     },
     {
@@ -320,7 +337,8 @@
       "points": 2,
       "pattern": "P01",
       "solo": "multistructureel",
-      "route": null,
+      "route": "zelf vinden",
+      "direction": "open",
       "steps": "2",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -350,6 +368,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -360,6 +379,8 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Leg uit welk effect een hoge tijdsvoorkeur van gezinnen heeft op de rente.",
+        "direction": "Leg uit welk effect een hoge tijdsvoorkeur van gezinnen heeft op de rente.",
         "pattern": "Leg uit welk effect een hoge tijdsvoorkeur van gezinnen heeft op de rente.",
         "solo": "Hierdoor stijgt de vraag naar geld waardoor de rente zal stijgen.",
         "steps": "Als gezinnen een hoge tijdsvoorkeur hebben, zullen ze nu meer consumeren en dus meer lenen.",
@@ -379,7 +400,8 @@
       "points": 2,
       "pattern": "P06",
       "solo": "multistructureel",
-      "route": null,
+      "route": "zelf vinden",
+      "direction": "gegeven",
       "steps": "2",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -409,6 +431,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -419,6 +442,8 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Leg uit dat investeringen in publiek kapitaal kunnen leiden tot een hogere structurele economische groei.",
+        "direction": "Leg uit dat investeringen in publiek kapitaal kunnen leiden tot een hogere structurele economische groei.",
         "pattern": "Ga in je antwoord in op een voorbeeld van publiek kapitaal.",
         "solo": "verhogen de productiviteit en dus de productiecapaciteit / potentiële productie.",
         "steps": "een uitleg over het verband tussen investeringen in publiek kapitaal en structurele economische groei.",
@@ -439,7 +464,8 @@
       "points": 1,
       "pattern": "P05",
       "solo": "unistructureel",
-      "route": null,
+      "route": "zelf vinden",
+      "direction": null,
       "steps": "1",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -464,6 +490,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -474,6 +501,7 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Is het opgebouwde vermogen een stroomgrootheid of een voorraadgrootheid? Geef een argument voor je keuze.",
         "pattern": "Is het opgebouwde vermogen een stroomgrootheid of een voorraadgrootheid? Geef een argument voor je keuze.",
         "solo": "Een voorraadgrootheid omdat het vermogen op een bepaald tijdstip wordt gemeten.",
         "steps": "Een voorraadgrootheid omdat het vermogen op een bepaald tijdstip wordt gemeten.",
@@ -495,6 +523,7 @@
       "pattern": "P08",
       "solo": "multistructureel",
       "route": "zelf vinden",
+      "direction": "open",
       "steps": "2",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -524,6 +553,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "medium",
         "sources": "high",
         "noise": "high",
@@ -534,9 +564,10 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Bereken de rente-elasticiteit als gevolg van het ingrijpen van de centrale bank.",
+        "direction": "Bereken de rente-elasticiteit als gevolg van het ingrijpen van de centrale bank.",
         "pattern": "Bereken de rente-elasticiteit als gevolg van het ingrijpen van de centrale bank.",
         "solo": "De rente-elasticiteit = 25% / –37,5% = –0,7",
-        "route": "Bereken de rente-elasticiteit als gevolg van het ingrijpen van de centrale bank.",
         "steps": "Procentuele verandering rente: (2,5 – 4) / 4 x 100% = –37,5%.",
         "sources": "Gebruik figuur 2.",
         "noise": "Procentuele verandering vraag: (50 mld – 40 mld) / 40 mld x 100% = 25%.",
@@ -546,7 +577,6 @@
       },
       "repaired_fields": [
         "pattern",
-        "route",
         "schema"
       ]
     },
@@ -559,7 +589,8 @@
       "points": 1,
       "pattern": "P01",
       "solo": "unistructureel",
-      "route": null,
+      "route": "zelf vinden",
+      "direction": "gegeven",
       "steps": "1",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -584,6 +615,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -594,6 +626,8 @@
         "example_quality": "medium"
       },
       "evidence": {
+        "route": "Beargumenteer dat consumenten hun spaargeld bij een bank aanhouden ondanks een negatieve nominale rente.",
+        "direction": "Beargumenteer dat consumenten hun spaargeld bij een bank aanhouden ondanks een negatieve nominale rente.",
         "pattern": "Beargumenteer dat consumenten hun spaargeld bij een bank aanhouden ondanks een negatieve nominale rente.",
         "solo": "Het aanhouden van contant geld zorgt voor risico’s (diefstal / brand).",
         "steps": "Het aanhouden van contant geld is kostbaar / onpraktisch.",
@@ -605,7 +639,6 @@
       },
       "repaired_fields": [
         "pattern",
-        "route",
         "claim",
         "schema"
       ]
@@ -619,7 +652,8 @@
       "points": 2,
       "pattern": "P01",
       "solo": "multistructureel",
-      "route": null,
+      "route": "zelf vinden",
+      "direction": "gegeven",
       "steps": "2",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -649,6 +683,7 @@
         "pattern": "high",
         "solo": "medium",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -659,6 +694,8 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Leg uit dat de hervorming van het stelsel van inkomstenbelasting leidt tot een denivellering van de secundaire inkomens.",
+        "direction": "Leg uit dat de hervorming van het stelsel van inkomstenbelasting leidt tot een denivellering",
         "pattern": "Een antwoord via het afschaffen van een heffingskorting kan de maximale score opleveren.",
         "solo": "Het gekozen tarief van de vlaktaks zorgt ervoor dat huishoudens die bovengemiddeld werden belast in 2025, procentueel minder belasting gaan betalen.",
         "steps": "Als gevolg hiervan stijgen de secundaire inkomens voor deze huishoudens (en dus is er denivellering).",
@@ -669,7 +706,6 @@
       },
       "repaired_fields": [
         "pattern",
-        "route",
         "schema"
       ]
     },
@@ -682,7 +718,8 @@
       "points": 2,
       "pattern": "P01",
       "solo": "multistructureel",
-      "route": null,
+      "route": "zelf vinden",
+      "direction": "gegeven",
       "steps": "2",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -712,6 +749,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -722,6 +760,8 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Leg dit dalend verband tussen de reële rente en het inkomen uit.",
+        "direction": "De IS-curve geeft het dalend verband weer tusen de reële rente en het inkomen.",
         "pattern": "Leg dit dalend verband tussen de reële rente en het inkomen uit.",
         "solo": "Als de reële rente daalt wordt lenen aantrekkelijker / sparen minder aantrekkelijk.",
         "steps": "Hierdoor zullen de investeringen / zal de consumptie toenemen en stijgt het inkomen.",
@@ -742,7 +782,8 @@
       "points": 3,
       "pattern": "P10+P13",
       "solo": "relationeel",
-      "route": null,
+      "route": "gegeven",
+      "direction": "open",
       "steps": "3",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -777,6 +818,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -787,6 +829,8 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Doe het als volgt: - Teken in figuur 3 van de uitwerkbijlage de nieuwe MB-curve (MB1) en GA-curve (GA1) van periode 1.",
+        "direction": "Geef de aanpassing van de economie weer over de tijd.",
         "pattern": "Teken in figuur 3 van de uitwerkbijlage de nieuwe MB-curve (MB1) en GA-curve (GA1) van periode 1.",
         "solo": "Vul in de tabel in de uitwerkbijlage de reële rente (r) en de inflatie (π) in na de renteaanpassing.",
         "steps": "In het evenwicht geldt dat r = 1% en π = 2%.",
@@ -807,7 +851,8 @@
       "points": 2,
       "pattern": "P05",
       "solo": "multistructureel",
-      "route": null,
+      "route": "zelf vinden",
+      "direction": null,
       "steps": "2",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -837,6 +882,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -847,6 +893,7 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Leidt een hoger tarief van de vlaktaks tot een kleinere of grotere multiplier? Leg je keuze uit.",
         "pattern": "Leidt een hoger tarief van de vlaktaks tot een kleinere of grotere multiplier? Leg je keuze uit.",
         "solo": "Bij een hoger vlaktakstarief zal het belastinglek / de marginale belastingquote groter worden.",
         "steps": "Hierdoor heeft een hoger inkomen een kleiner effect op de bestedingen, waardoor de multiplier kleiner wordt.",
@@ -867,7 +914,8 @@
       "points": 2,
       "pattern": "P12",
       "solo": "relationeel",
-      "route": null,
+      "route": "zelf vinden",
+      "direction": "open",
       "steps": "2",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -897,6 +945,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -907,6 +956,8 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Vind jij dat de overheid nieuwe staatsobligaties moet uitgeven om de extra bestedingen te financieren? Leg je keuze uit.",
+        "direction": "Vind jij dat de overheid nieuwe staatsobligaties moet uitgeven om de extra bestedingen te financieren?",
         "pattern": "Vind jij dat de overheid nieuwe staatsobligaties moet uitgeven om de extra bestedingen te financieren? Leg je keuze uit.",
         "solo": "Door de lage rente zullen de rentekosten voor het aangaan van nieuwe leningen laag zijn.",
         "steps": "Daardoor wordt er meer geïnvesteerd en stijgt het bbp.",
@@ -927,7 +978,8 @@
       "points": 2,
       "pattern": "P05",
       "solo": "multistructureel",
-      "route": null,
+      "route": "gegeven",
+      "direction": null,
       "steps": "2",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -957,6 +1009,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -967,6 +1020,7 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Leg met behulp van twee kenmerken uit van welke marktvorm er sprake is bij kaphout.",
         "pattern": "Leg met behulp van twee kenmerken uit van welke marktvorm er sprake is bij kaphout.",
         "solo": "twee marktkenmerken.",
         "steps": "een correcte gevolgtrekking met de marktvorm volledige mededinging / volkomen concurrentie.",
@@ -986,7 +1040,8 @@
       "points": 2,
       "pattern": "P03",
       "solo": "relationeel",
-      "route": null,
+      "route": "zelf vinden",
+      "direction": "gegeven",
       "steps": "2",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -1016,6 +1071,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -1026,6 +1082,8 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Leg de conclusie van de econoom uit.",
+        "direction": "heeft iedere houthakker een dominante strategie waardoor op termijn een suboptimaal Nash-evenwicht ontstaat.",
         "pattern": "Leg de conclusie van de econoom uit.",
         "solo": "een uitleg dat de marginale winst leidt tot een dominante strategie.",
         "steps": "een uitleg dat de dominante strategie op termijn suboptimaal is.",
@@ -1046,7 +1104,8 @@
       "points": 1,
       "pattern": "P01",
       "solo": "unistructureel",
-      "route": null,
+      "route": "zelf vinden",
+      "direction": "gegeven",
       "steps": "1",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -1071,6 +1130,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -1081,6 +1141,8 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Geef een verklaring voor het horizontale verloop van de aanbodlijn van segment A1.",
+        "direction": "Geef een verklaring voor het horizontale verloop van de aanbodlijn van segment A1.",
         "pattern": "Geef een verklaring voor het horizontale verloop van de aanbodlijn van segment A1.",
         "solo": "De variabele kosten per product zijn constant, waardoor de marginale kosten constant zijn.",
         "steps": "De variabele kosten per product zijn constant, waardoor de marginale kosten constant zijn.",
@@ -1103,7 +1165,8 @@
       "points": 2,
       "pattern": "P08",
       "solo": "multistructureel",
-      "route": "zelf vinden",
+      "route": "gegeven",
+      "direction": "open",
       "steps": "3",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -1133,6 +1196,7 @@
         "pattern": "high",
         "solo": "medium",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -1143,9 +1207,10 @@
         "example_quality": "medium"
       },
       "evidence": {
+        "route": "De werkelijke jaarlijkse verandering van het tropisch regenwoud in procentpunten is het groeipercentage minus het gekapte hout in procenten.",
+        "direction": "Bereken met hoeveel hectare het tropisch regenwoud krimpt in 2026.",
         "pattern": "Bereken met hoeveel hectare het tropisch regenwoud krimpt in 2026.",
         "solo": "Qa = Qv bij Qv = 5% - De krimp is 5 – 2,2 = 2,8% (per jaar).",
-        "route": "Bereken met hoeveel hectare het tropisch regenwoud krimpt in 2026.",
         "steps": "Dit is: 0,028 x 700 miljoen = 19,6 miljoen hectare.",
         "sources": "De totale omvang van het tropisch regenwoud is 700 miljoen hectare aan het begin van 2026.",
         "noise": "Qa = Qv bij Qv = 5% - De krimp is 5 – 2,2 = 2,8% (per jaar).",
@@ -1154,7 +1219,8 @@
         "builds_on": "Ga uit van het marktevenwicht."
       },
       "repaired_fields": [
-        "noise"
+        "noise",
+        "route"
       ]
     },
     {
@@ -1167,6 +1233,7 @@
       "pattern": "P08",
       "solo": "multistructureel",
       "route": "zelf vinden",
+      "direction": "open",
       "steps": "2",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -1196,6 +1263,7 @@
         "pattern": "high",
         "solo": "medium",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -1206,9 +1274,10 @@
         "example_quality": "medium"
       },
       "evidence": {
+        "route": "Bereken de hoogte van de heffing per m² in dollars.",
+        "direction": "Bereken de hoogte van de heffing per m² in dollars.",
         "pattern": "Bereken de hoogte van de heffing per m² in dollars.",
         "solo": "een berekening van de nieuwe evenwichtsprijs per m2.",
-        "route": "Bereken de hoogte van de heffing per m² in dollars.",
         "steps": "De heffing is dan gelijk aan 260 – 100 = $ 160 (per m2).",
         "sources": "Hierdoor zal de vraag naar kaphout in het model 1,8% worden als percentage van het tropisch regenwoud.",
         "noise": "Prijs bij Qa = 1,8 is gelijk aan $ 100.",
@@ -1229,7 +1298,8 @@
       "points": 2,
       "pattern": "P03",
       "solo": "relationeel",
-      "route": null,
+      "route": "zelf vinden",
+      "direction": "gegeven",
       "steps": "2",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -1259,6 +1329,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "medium",
         "sources": "high",
         "noise": "high",
@@ -1269,6 +1340,8 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Leg de stelling van de econoom uit.",
+        "direction": "Leg de stelling van de econoom uit.",
         "pattern": "Leg de stelling van de econoom uit.",
         "solo": "De productie is (zeer) prijsinelastisch, waardoor deze niet / nauwelijks verandert. Hierdoor zal de vraag naar arbeid weinig veranderen",
         "steps": "Een hoogconjunctuur zorgt voor een hogere vraag naar de Australische delfstoffen waardoor de prijs stijgt.",
@@ -1277,7 +1350,9 @@
         "claim": "Een econoom stelt: “Een hoogconjunctuur in de rest van de wereld heeft,",
         "new_concept": "via de prijselasticiteit van de productie van delfstoffen, een zwak effect op de werkgelegenheid"
       },
-      "repaired_fields": []
+      "repaired_fields": [
+        "route"
+      ]
     },
     {
       "exam_id": "vwo-2026-tv1",
@@ -1288,7 +1363,8 @@
       "points": 2,
       "pattern": "P02",
       "solo": "relationeel",
-      "route": null,
+      "route": "zelf vinden",
+      "direction": "gegeven",
       "steps": "2",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -1318,6 +1394,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -1328,6 +1405,8 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Leg uit dat hogere exportprijzen voor delfstoffen leiden tot een lagere arbeidsinkomensquote.",
+        "direction": "Leg uit dat hogere exportprijzen voor delfstoffen leiden tot een lagere arbeidsinkomensquote.",
         "pattern": "Omdat er sprake is van loonrigiditeit stijgen de winsten harder dan de lonen (en dus neemt de AIQ af).",
         "solo": "Omdat er sprake is van loonrigiditeit stijgen de winsten harder dan de lonen",
         "steps": "Als de exportprijzen stijgen, dan zullen (bij dezelfde kosten) de winsten / dividenden / aandelenkoersen van bedrijven stijgen.",
@@ -1349,6 +1428,7 @@
       "pattern": "P08",
       "solo": "multistructureel",
       "route": "zelf vinden",
+      "direction": "open",
       "steps": "2",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -1378,6 +1458,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -1388,9 +1469,10 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "de berekening van de vier ontbrekende waarden in figuur 5",
+        "direction": "de berekening van de vier ontbrekende waarden in figuur 5",
         "pattern": "Geef: - de berekening van de vier ontbrekende waarden in figuur 5;",
         "solo": "een berekening van de vier ontbrekende waarden.",
-        "route": "Geef: - de berekening van de vier ontbrekende waarden in figuur 5;",
         "steps": "Pijl 1 loopt van banken naar buitenland en pijl 3 loopt van overheid naar banken.",
         "sources": "Een econoom analyseert de economie van Australië in 2023 met behulp van een kringloopmodel (zie figuur 5).",
         "noise": "I = 2.385 - 1.237 - 885 - 671 + 527 = 119",
@@ -1409,7 +1491,8 @@
       "points": 2,
       "pattern": "P01",
       "solo": "multistructureel",
-      "route": null,
+      "route": "gegeven",
+      "direction": "open",
       "steps": "2",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -1439,6 +1522,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -1449,6 +1533,8 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Leg uit welk effect dit positieve saldo, via de valutamarkt, heeft op de internationale concurrentiepositie van Australië.",
+        "direction": "Leg uit welk effect dit positieve saldo, via de valutamarkt, heeft op de internationale concurrentiepositie",
         "pattern": "Leg uit welk effect dit positieve saldo, via de valutamarkt, heeft op de internationale concurrentiepositie van Australië.",
         "solo": "een uitleg over de relatie tussen de wisselkoers en de internationale concurrentiepositie.",
         "steps": "een uitleg over de relatie tussen het saldo op de betalingsbalans en de wisselkoers.",
@@ -1469,7 +1555,8 @@
       "points": 2,
       "pattern": "P02",
       "solo": "relationeel",
-      "route": null,
+      "route": "gegeven",
+      "direction": "open",
       "steps": "2",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -1499,6 +1586,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -1509,6 +1597,8 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Leg uit welk effect een hoogconjunctuur heeft, via de inkomenstoets, op de koopwoningprijzen.",
+        "direction": "Leg uit welk effect een hoogconjunctuur heeft",
         "pattern": "Leg uit welk effect een hoogconjunctuur heeft, via de inkomenstoets, op de koopwoningprijzen.",
         "solo": "een uitleg over de relatie tussen een hoogconjunctuur en de leencapaciteit.",
         "steps": "een uitleg over de relatie tussen de leencapaciteit en de prijzen.",
@@ -1528,7 +1618,8 @@
       "points": 2,
       "pattern": "P03",
       "solo": "relationeel",
-      "route": null,
+      "route": "zelf vinden",
+      "direction": "gegeven",
       "steps": "2",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -1558,6 +1649,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -1568,6 +1660,8 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Leg de stelling uit.",
+        "direction": "Stelling: “Bij een hogere hypotheekrente stijgt het risico van wanbetaling. Hierdoor verlaagt DNB de inkomenstoets.”",
         "pattern": "Stelling: “Bij een hogere hypotheekrente stijgt het risico van wanbetaling. Hierdoor verlaagt DNB de inkomenstoets.”",
         "solo": "Dit risico wordt kleiner door een lagere inkomenstoets, omdat dit zorgt voor een lagere maximale hypotheek (en dus lagere lasten).",
         "steps": "Bij een hogere rente zullen de (rente)kosten van een hypothecaire lening toenemen. Hierdoor stijgt het risico op wanbetaling.",
@@ -1577,7 +1671,9 @@
         "new_concept": "Een inkomenstoets van 5,7 betekent dat huishoudens een maximale hypotheek kunnen krijgen van 5,7 keer hun primair inkomen.",
         "builds_on": "Leg de stelling uit."
       },
-      "repaired_fields": []
+      "repaired_fields": [
+        "route"
+      ]
     },
     {
       "exam_id": "vwo-2026-tv1",
@@ -1589,6 +1685,7 @@
       "pattern": "P08",
       "solo": "relationeel",
       "route": "zelf vinden",
+      "direction": "open",
       "steps": "3",
       "sources": "in vraagtekst",
       "noise": "ja",
@@ -1623,6 +1720,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -1633,9 +1731,10 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Bereken op basis van tabel 1 de inflatie in de periode begin 2021 tot eind 2022.",
+        "direction": "Bereken op basis van tabel 1 de inflatie",
         "pattern": "Bereken op basis van tabel 1 de inflatie in de periode begin 2021 tot eind 2022.",
         "solo": "stijging = (960,96 – 795,81) / 795,81 x 100% = 20,8% (NIC = 120,8)",
-        "route": "Bereken op basis van tabel 1 de inflatie in de periode begin 2021 tot eind 2022.",
         "steps": "(120,8 / 109,6) x 100 = 110,2 - De inflatie is 10,2%.",
         "sources": "Tabel 1 Gegevens onderzoek Nederlandse koopwoningmarkt",
         "noise": "hypotheekrente (looptijd 10 jaar) 1,80% 4,05% inkomenstoets van DNB 5,7 4,4",
@@ -1654,7 +1753,8 @@
       "points": 2,
       "pattern": "P04",
       "solo": "multistructureel",
-      "route": null,
+      "route": "zelf vinden",
+      "direction": "open",
       "steps": "2",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -1684,6 +1784,7 @@
         "pattern": "high",
         "solo": "medium",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -1694,6 +1795,8 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Leg uit of er averechtse selectie kan optreden bij een woonhuisverzekering voor huizenkopers met een hypothecaire lening.",
+        "direction": "Leg uit of er averechtse selectie kan optreden",
         "pattern": "Leg uit of er averechtse selectie kan optreden bij een woonhuisverzekering voor huizenkopers met een hypothecaire lening.",
         "solo": "Hierdoor zullen de goede risico’s zich ook verzekeren waardoor er geen averechtse selectie kan optreden.",
         "steps": "Voor huizenkopers met een hypothecaire lening geldt dat de woonhuisverzekering een verplichte verzekering is.",
@@ -1714,7 +1817,8 @@
       "points": 2,
       "pattern": "P04",
       "solo": "multistructureel",
-      "route": null,
+      "route": "zelf vinden",
+      "direction": "open",
       "steps": "2",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -1744,6 +1848,7 @@
         "pattern": "high",
         "solo": "medium",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -1754,6 +1859,8 @@
         "example_quality": "medium"
       },
       "evidence": {
+        "route": "Leg uit of er sprake kan zijn van moral hazard na het afsluiten van een woonhuisverzekering.",
+        "direction": "Leg uit of er sprake kan zijn van moral hazard",
         "pattern": "Leg uit of er sprake kan zijn van moral hazard na het afsluiten van een woonhuisverzekering.",
         "solo": "Moral hazard betekent dat mensen zich risicovoller / nalatig gedragen nadat zij zich hebben verzekerd.",
         "steps": "Bij de woonhuisverzekering is er geen sprake van moral hazard, omdat de schade door het klimaat / collectieve gebeurtenissen ontstaat",

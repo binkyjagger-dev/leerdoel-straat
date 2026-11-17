@@ -187,7 +187,7 @@ def main(argv: list[str]) -> None:
         kinds = kinds_of(rec["pattern"], run.pidx)
         if rec["pattern"] is not None and rec["pattern"] != "NIEUW":
             for k in LABEL_KNOBS:
-                if not knob_applies(run.knobs[k], kinds, q["first_of_opgave"]) and rec[k] is not None:
+                if not knob_applies(run.knobs[k], kinds, q["first_of_opgave"], rec["pattern"]) and rec[k] is not None:
                     rec[k], conf[k] = None, "high"
                     evidence.pop(k, None)
         elif q["first_of_opgave"]:
@@ -241,7 +241,8 @@ def main(argv: list[str]) -> None:
                     f"{sum(1 for l in labels if l['repaired_fields'])} repaired by R; {left} disputed fields left")
     rep.info("LB2", f"patterns {dict(Counter(l['pattern'] for l in labels))}; {len(proposals)} new-pattern proposals")
     if left:
-        per = Counter(l["opgave_id"] for l in labels if "disputed" in l["confidence"].values() and not l["repaired_fields"])
+        per = Counter(l["opgave_id"] for l in labels
+                      if any(c == "disputed" and f not in l["repaired_fields"] for f, c in l["confidence"].items()))
         if per:
             rep.info("LB1", f"opgaven for the R round: {', '.join(sorted(per))}")
     rep.print_and_exit()

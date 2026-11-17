@@ -1,0 +1,18 @@
+{
+ "run_id": "20261117-1324-examen-economie-label-fields",
+ "subject": "economie",
+ "criteria_run": "20261012-2220-economie-vwo-2026-run2",
+ "exams": [
+  "vwo-2025-tv1",
+  "vwo-2025-tv2",
+  "vwo-2026-tv1"
+ ],
+ "label_only": true,
+ "label_fields": [
+  "route",
+  "direction"
+ ],
+ "judge_batch": 4,
+ "status": "running",
+ "started_at": "2026-11-17T13:25:00"
+}

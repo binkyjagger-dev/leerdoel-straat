@@ -173,7 +173,7 @@ def main(argv: list[str]) -> None:
         kinds = kinds_of(r["pattern"], run.pidx)
         for k in LABEL_KNOBS:
             kd, v = run.knobs[k], r["knobs"].get(k)
-            applies = knob_applies(kd, kinds, r["first"])
+            applies = knob_applies(kd, kinds, r["first"], r["pattern"])
             if not applies and v is not None:
                 C.fail("BP6", f"{r['vraag_id']}: {k}='{v}' but the knob does not apply here (must be null)", r["vraag_id"], k)
             elif applies and v is None:

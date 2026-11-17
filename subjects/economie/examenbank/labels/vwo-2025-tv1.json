@@ -1,7 +1,7 @@
 {
   "exam_id": "vwo-2025-tv1",
   "criteria_run": "20261012-2220-economie-vwo-2026-run2",
-  "run_id": "20261115-1902-examen-economie",
+  "run_id": "20261117-1324-examen-economie-label-fields",
   "questions": [
     {
       "exam_id": "vwo-2025-tv1",
@@ -12,7 +12,8 @@
       "points": 1,
       "pattern": "P04",
       "solo": "unistructureel",
-      "route": null,
+      "route": "zelf vinden",
+      "direction": "open",
       "steps": "1",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -37,6 +38,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -47,6 +49,8 @@
         "example_quality": "medium"
       },
       "evidence": {
+        "route": "Is een zorgbehandeling een collectief goed? Motiveer je antwoord.",
+        "direction": "Is een zorgbehandeling een collectief goed? Motiveer je antwoord.",
         "pattern": "Is een zorgbehandeling een collectief goed? Motiveer je antwoord.",
         "solo": "Nee, er is geen sprake van een collectief goed want een zorgbehandeling is rivaliserend",
         "steps": "maximumscore 1",
@@ -66,7 +70,8 @@
       "points": 2,
       "pattern": "P04",
       "solo": "multistructureel",
-      "route": null,
+      "route": "zelf vinden",
+      "direction": "open",
       "steps": "2",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -96,6 +101,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -106,6 +112,8 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Leg uit of averechtse selectie kan optreden binnen de zorgverzekeringen.",
+        "direction": "Leg uit of averechtse selectie kan optreden binnen de zorgverzekeringen.",
         "pattern": "Leg uit of averechtse selectie kan optreden binnen de zorgverzekeringen.",
         "solo": "Er is geen sprake van averechtse selectie omdat binnen de markt van zorgverzekeringen sprake is van een verplichte verzekering.",
         "steps": "Hierdoor moeten de goede risico’s zich ook verzekeren / hierdoor worden de goede risico’s niet uit de markt gedreven.",
@@ -127,6 +135,7 @@
       "pattern": "P08",
       "solo": "multistructureel",
       "route": "zelf vinden",
+      "direction": "open",
       "steps": "3",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -156,6 +165,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -166,9 +176,10 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Bereken tot welk bedrag aan zorgkosten per jaar het voor een jongere voordeliger is om een verhoogd eigen risico te nemen.",
+        "direction": "Bereken tot welk bedrag aan zorgkosten per jaar het voor een jongere voordeliger is om een verhoogd eigen risico te nemen.",
         "pattern": "Bereken tot welk bedrag aan zorgkosten per jaar het voor een jongere voordeliger is om een verhoogd eigen risico te nemen.",
         "solo": "De totale zorgkosten voor een jongere bestaan uit de premie en de zorgkosten die binnen het eigen risico worden gemaakt.",
-        "route": "Bereken tot welk bedrag aan zorgkosten per jaar het voor een jongere voordeliger is om een verhoogd eigen risico te nemen.",
         "steps": "De hogere maandelijkse zorgkosten zijn (108,25 – 86,25) = € 22. Dit is 22 x 12 = € 264 per jaar.",
         "sources": "Tabel 1 Zoohee! zorgverzekering",
         "noise": "((86,25 x 12) + 885) – ((108,25 x 12) + 385) = € 236.",
@@ -176,7 +187,9 @@
         "new_concept": "De totale zorgkosten voor een jongere bestaan uit de premie en de zorgkosten die binnen het eigen risico worden gemaakt.",
         "builds_on": "Bereken tot welk bedrag aan zorgkosten per jaar het voor een jongere voordeliger is om een verhoogd eigen risico te nemen."
       },
-      "repaired_fields": []
+      "repaired_fields": [
+        "route"
+      ]
     },
     {
       "exam_id": "vwo-2025-tv1",
@@ -187,7 +200,8 @@
       "points": 2,
       "pattern": "P01",
       "solo": "multistructureel",
-      "route": null,
+      "route": "zelf vinden",
+      "direction": "gegeven",
       "steps": "2",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -217,6 +231,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -227,6 +242,8 @@
         "example_quality": "medium"
       },
       "evidence": {
+        "route": "Leg uit dat de totale zorgkosten kunnen afnemen door het besluit van de overheid.",
+        "direction": "Leg uit dat de totale zorgkosten kunnen afnemen door het besluit van de overheid.",
         "pattern": "Leg uit dat de totale zorgkosten kunnen afnemen door het besluit van de overheid.",
         "solo": "Als er geen eigen risico is voor huisartsenbezoek, gaan mensen eerder naar de huisarts.",
         "steps": "Dat kan uiteindelijk leiden tot lagere totale zorgkosten, omdat zieken eerder worden behandeld / duurdere specialistische zorg wordt vermeden.",
@@ -247,7 +264,8 @@
       "points": 2,
       "pattern": "P01",
       "solo": "relationeel",
-      "route": null,
+      "route": "zelf vinden",
+      "direction": "gegeven",
       "steps": "3",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -277,6 +295,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -287,6 +306,8 @@
         "example_quality": "medium"
       },
       "evidence": {
+        "route": "Leg uit dat de opkomst van vergelijkingssites de doelmatigheid van de zorgverzekeringsmarkt kan vergroten.",
+        "direction": "Leg uit dat de opkomst van vergelijkingssites de doelmatigheid van de zorgverzekeringsmarkt kan vergroten.",
         "pattern": "Leg uit dat de opkomst van vergelijkingssites de doelmatigheid van de zorgverzekeringsmarkt kan vergroten.",
         "solo": "Een uitleg van het verband tussen de premies en het totale surplus / consumentensurplus.",
         "steps": "Door de vergelijkingssites neemt de informatie toe. Dit leidt tot meer concurrentie waardoor zorgverzekeraars zorg scherper zullen inkopen.",
@@ -307,7 +328,8 @@
       "points": 2,
       "pattern": "P03",
       "solo": "multistructureel",
-      "route": null,
+      "route": "zelf vinden",
+      "direction": "gegeven",
       "steps": "1",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -337,6 +359,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "medium",
         "sources": "high",
         "noise": "high",
@@ -347,6 +370,8 @@
         "example_quality": "medium"
       },
       "evidence": {
+        "route": "Leg uit dat er sprake kan zijn van een principaal-agentprobleem.",
+        "direction": "Leg uit dat er sprake kan zijn van een principaal-agentprobleem.",
         "pattern": "Hierdoor ontstaat een principaal-agentprobleem tussen de consument (de principaal) en de vergelijkingssite (de agent).”",
         "solo": "Er is sprake van asymmetrische informatie: de verzekeringsnemer / consument weet niet of de vergelijkingssite in het belang van de verzekeringsnemer adviseert.",
         "steps": "Er is sprake van tegengestelde belangen: de consument / verzekeringsnemer (principaal) wil de goedkoopste / beste verzekering,",
@@ -367,7 +392,8 @@
       "points": 2,
       "pattern": "P04",
       "solo": "multistructureel",
-      "route": null,
+      "route": "zelf vinden",
+      "direction": "open",
       "steps": "2",
       "sources": "in vraagtekst",
       "noise": "ja",
@@ -392,6 +418,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -402,6 +429,8 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Is er bij het staatspensioen of bij het aanvullend pensioen sprake van intergenerationele ruil? Leg je antwoord uit.",
+        "direction": "Is er bij het staatspensioen of bij het aanvullend pensioen sprake van intergenerationele ruil?",
         "pattern": "Is er bij het staatspensioen of bij het aanvullend pensioen sprake van intergenerationele ruil? Leg je antwoord uit.",
         "solo": "Bij het staatspensioen worden de pensioenuitkeringen van de huidige gepensioneerden gefinancierd door de premies die de huidige werkenden betalen.",
         "steps": "Er is dus sprake van intergenerationele ruil.",
@@ -421,7 +450,8 @@
       "points": 2,
       "pattern": "P02",
       "solo": "relationeel",
-      "route": null,
+      "route": "zelf vinden",
+      "direction": "gegeven",
       "steps": "2",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -451,6 +481,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "medium",
         "sources": "high",
         "noise": "high",
@@ -461,6 +492,8 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Leg uit dat de premie voor het aanvullend pensioen kan dalen als de inflatie stijgt.",
+        "direction": "Leg uit dat de premie voor het aanvullend pensioen kan dalen",
         "pattern": "Een uitleg van het effect van stijgende staatspensioenen op het aanvullend pensioen en de pensioenpremie.",
         "solo": "Het pensioenfonds hoeft minder aanvullend pensioen uit te keren om het totale pensioen aan te vullen tot 70% van het laatstverdiende brutoloon.",
         "steps": "Het staatspensioen is waardevast. Een hogere inflatie betekent dat het staatspensioen wordt verhoogd.",
@@ -481,7 +514,8 @@
       "points": 2,
       "pattern": "P01",
       "solo": "relationeel",
-      "route": null,
+      "route": "zelf vinden",
+      "direction": "gegeven",
       "steps": "2",
       "sources": "in vraagtekst",
       "noise": "ja",
@@ -511,6 +545,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "medium",
         "sources": "high",
         "noise": "high",
@@ -521,6 +556,8 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Leg met behulp van figuur 1 uit dat deze hogere inflatie zorgt voor een stijgende dekkingsgraad.",
+        "direction": "uit dat deze hogere inflatie zorgt voor een stijgende dekkingsgraad",
         "pattern": "Leg met behulp van figuur 1 uit dat deze hogere inflatie zorgt voor een stijgende dekkingsgraad.",
         "solo": "Een uitleg van het effect van de rente via huidige waarde van de toekomstige pensioenuitkeringen (de noemer).",
         "steps": "Een uitleg van het effect van inflatie op de rentestand.",
@@ -543,7 +580,8 @@
       "points": 2,
       "pattern": "P01",
       "solo": "multistructureel",
-      "route": null,
+      "route": "zelf vinden",
+      "direction": "gegeven",
       "steps": "2",
       "sources": "in vraagtekst",
       "noise": "ja",
@@ -573,6 +611,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -583,6 +622,8 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Leg met behulp van figuur 1 uit dat marktwerking tot een lagere premie kan leiden.",
+        "direction": "uit dat marktwerking tot een lagere premie kan leiden",
         "pattern": "Leg met behulp van figuur 1 uit dat marktwerking tot een lagere premie kan leiden.",
         "solo": "Een uitleg van het effect van marktwerking op de bedrijfskosten.",
         "steps": "Een uitleg van het effect van bedrijfskosten op de premies.",
@@ -603,7 +644,8 @@
       "points": 3,
       "pattern": "P09",
       "solo": "relationeel",
-      "route": "zelf vinden",
+      "route": "gegeven",
+      "direction": "open",
       "steps": "4+",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -638,6 +680,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -648,9 +691,10 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Doe het als volgt: - Bereken de nieuwe dekkingsgraad. - Leg uit of de betaalbaarheid van de pensioenen verbetert.",
+        "direction": "Leg uit of de betaalbaarheid van de pensioenen verbetert.",
         "pattern": "Een correcte gevolgtrekking uit de berekening van de dekkingsgraad / een correcte uitleg over de betaalbaarheid van de toekomstige pensioenen.",
         "solo": "Analyseer het effect van de stijgende rente op de betaalbaarheid van de pensioenen.",
-        "route": "Bereken de nieuwe dekkingsgraad.",
         "steps": "Huidig vermogen is 350,896 miljard x 0,92 = 322,82 miljard.",
         "sources": "Naar verwachting hebben de pensioenfondsen over 25 jaar een bedrag nodig van € 450 miljard.",
         "noise": "Momenteel is de gemiddelde dekkingsgraad van alle pensioenfondsen samen gelijk aan 92%, waarbij wordt uitgegaan van een rente van 1%.",
@@ -672,6 +716,7 @@
       "pattern": "P08",
       "solo": "multistructureel",
       "route": "zelf vinden",
+      "direction": "open",
       "steps": "2",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -696,6 +741,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "medium",
         "sources": "high",
         "noise": "high",
@@ -706,9 +752,10 @@
         "example_quality": "medium"
       },
       "evidence": {
+        "route": "Bereken de winst per ijsje.",
+        "direction": "Bereken de winst per ijsje.",
         "pattern": "Bereken de winst per ijsje.",
         "solo": "GW = GO – GTK = 3 – 2 = € 1",
-        "route": "Bereken de winst per ijsje.",
         "steps": "Uit het antwoord moet blijken (via berekening of aflezen): GW = GO – GTK = 3 – 2 = € 1",
         "sources": "TK = 0,005Q² + 1,2Q + 30",
         "noise": "Guarda behaalt maximale winst bij een prijs van € 3 per ijsje.",
@@ -726,7 +773,8 @@
       "points": 1,
       "pattern": "P10",
       "solo": "multistructureel",
-      "route": null,
+      "route": "zelf vinden",
+      "direction": null,
       "steps": "2",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -751,6 +799,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -761,6 +810,7 @@
         "example_quality": "medium"
       },
       "evidence": {
+        "route": "Arceer in de uitwerkbijlage de totale vaste (constante) kosten bij een verkoopprijs van € 3 per ijsje.",
         "pattern": "Arceer in de uitwerkbijlage de totale vaste (constante) kosten bij een verkoopprijs van € 3 per ijsje.",
         "solo": "de gearceerde rechthoek loopt van Q = 0 tot 60 (x 1.000) en van P = 1,5 tot 2 (in €)",
         "steps": "de gearceerde rechthoek loopt van Q = 0 tot 60 (x 1.000) en van P = 1,5 tot 2 (in €)",
@@ -782,6 +832,7 @@
       "pattern": "P08",
       "solo": "relationeel",
       "route": "zelf vinden",
+      "direction": "open",
       "steps": "4+",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -821,6 +872,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -831,9 +883,10 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Bereken hoeveel procent van de gestegen variabele kosten wordt doorberekend in de verkoopprijs.",
+        "direction": "Bereken hoeveel procent van de gestegen variabele kosten wordt doorberekend in de verkoopprijs.",
         "pattern": "Bereken hoeveel procent van de gestegen variabele kosten wordt doorberekend in de verkoopprijs.",
         "solo": "MO = MK - –0,04Q + 4,2 = 0,01Q + 1,45 - Q = 55",
-        "route": "Bereken hoeveel procent van de gestegen variabele kosten wordt doorberekend in de verkoopprijs.",
         "steps": "Een berekening van de gestegen verkoopprijs als percentage van de gestegen variabele kosten.",
         "sources": "met € 0,25 per ijsje. De overige gegevens blijven hetzelfde.",
         "noise": "((3,1 – 3) / 0,25) x 100% = 40%.",
@@ -852,7 +905,8 @@
       "points": 2,
       "pattern": "P01",
       "solo": "multistructureel",
-      "route": null,
+      "route": "zelf vinden",
+      "direction": "gegeven",
       "steps": "2",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -882,6 +936,7 @@
         "pattern": "high",
         "solo": "medium",
         "route": "high",
+        "direction": "high",
         "steps": "medium",
         "sources": "high",
         "noise": "high",
@@ -892,6 +947,8 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Leg uit dat Guarda en Orso Bianco in een gevangenendilemma kunnen belanden als consumenten de ijsjes als perfecte substituten zien.",
+        "direction": "Leg uit dat Guarda en Orso Bianco in een gevangenendilemma kunnen belanden",
         "pattern": "Een uitleg dat beide ijssalons een dominante strategie hebben om de prijs te verlagen.",
         "solo": "Een uitleg dat beide ijssalons een dominante strategie hebben om de prijs te verlagen.",
         "steps": "Een uitleg dat voor beide de omzet / winst zal dalen en er hierdoor een gevangenendilemma ontstaat.",
@@ -903,7 +960,6 @@
       },
       "repaired_fields": [
         "pattern",
-        "route",
         "schema"
       ]
     },
@@ -916,7 +972,8 @@
       "points": 2,
       "pattern": "P02",
       "solo": "relationeel",
-      "route": null,
+      "route": "zelf vinden",
+      "direction": "gegeven",
       "steps": "2",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -946,6 +1003,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "medium",
         "sources": "high",
         "noise": "high",
@@ -956,6 +1014,8 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Leg uit dat door deze manier van zelfbinding het risico op een prijzenoorlog wordt beperkt.",
+        "direction": "Leg uit dat door deze manier van zelfbinding het risico op een prijzenoorlog wordt beperkt.",
         "pattern": "Leg uit dat door deze manier van zelfbinding het risico op een prijzenoorlog wordt beperkt.",
         "solo": "Hierdoor weet Orso Bianco (op voorhand) dat hun omzet / winst bij een prijsdaling zal dalen",
         "steps": "Een uitleg dat het verlagen van de prijs door Orso Bianco leidt tot een omzetdaling van Orso Bianco en dat een prijzenoorlog wordt beperkt.",
@@ -979,6 +1039,7 @@
       "pattern": "P08",
       "solo": "multistructureel",
       "route": "zelf vinden",
+      "direction": "open",
       "steps": "2",
       "sources": "in vraagtekst",
       "noise": "ja",
@@ -1008,6 +1069,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -1018,9 +1080,10 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Bereken de arbeidsinkomensquote (AIQ) van Curaçao.",
+        "direction": "Bereken de arbeidsinkomensquote (AIQ) van Curaçao.",
         "pattern": "Bereken de arbeidsinkomensquote (AIQ) van Curaçao.",
         "solo": "Het totale arbeidsinkomen = 120 x 1.000 x 26.000 = 3,12 miljard (XCG)",
-        "route": "Bereken de arbeidsinkomensquote (AIQ) van Curaçao.",
         "steps": "AIQ = (3,12 mld / 5,45 mld) = 0,572 (of 57,2%).",
         "sources": "stelt een econoom een korte-termijnmodel op voor Curaçao (zie figuur 1).",
         "noise": "stelt een econoom een korte-termijnmodel op voor Curaçao (zie figuur 1).",
@@ -1039,6 +1102,7 @@
       "pattern": "P08",
       "solo": "multistructureel",
       "route": "zelf vinden",
+      "direction": "open",
       "steps": "2",
       "sources": "in vraagtekst",
       "noise": "ja",
@@ -1068,6 +1132,7 @@
         "pattern": "high",
         "solo": "medium",
         "route": "high",
+        "direction": "high",
         "steps": "medium",
         "sources": "high",
         "noise": "high",
@@ -1078,9 +1143,10 @@
         "example_quality": "medium"
       },
       "evidence": {
+        "route": "Bereken het overheidssaldo van Curaçao en geef aan of er sprake is van een tekort of een overschot.",
+        "direction": "geef aan of er sprake is van een tekort of een overschot.",
         "pattern": "De Curaçaose overheid is niet getoond in het model, maar het overheidssaldo kan wel worden berekend.",
         "solo": "(S – I) + (B – O) = (E – M)",
-        "route": "De Curaçaose overheid is niet getoond in het model, maar het overheidssaldo kan wel worden berekend.",
         "steps": "B – O = –74 Dus er is sprake van een tekort (van 74 miljoen XCG).",
         "sources": "stelt een econoom een korte-termijnmodel op voor Curaçao (zie figuur 1).",
         "noise": "stelt een econoom een korte-termijnmodel op voor Curaçao (zie figuur 1).",
@@ -1090,7 +1156,6 @@
       },
       "repaired_fields": [
         "pattern",
-        "route",
         "schema"
       ]
     },
@@ -1103,7 +1168,8 @@
       "points": 2,
       "pattern": "P10",
       "solo": "relationeel",
-      "route": null,
+      "route": "gegeven",
+      "direction": null,
       "steps": "3",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -1128,6 +1194,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -1138,6 +1205,7 @@
         "example_quality": "medium"
       },
       "evidence": {
+        "route": "Doe het als volgt: - Teken de nieuwe vraag en/of aanbodlijnen op: - de Curaçaose arbeidsmarkt, - de Curaçaose goederen- en dienstenmarkt,",
         "pattern": "Teken deze oorzaak en gevolgen in de uitwerkbijlage.",
         "solo": "Het correct tekenen van de vraaglijn naar rechts op de Arubaanse goederen- en dienstenmarkt en de conclusie dat de inflatie op Aruba stijgt.",
         "steps": "In Curaçao stijgt de vraag naar arbeid, waardoor de loonkosten stijgen. De econoom wil uitzoeken wat de gevolgen zijn voor het inflatieniveau op Aruba.",
@@ -1158,7 +1226,8 @@
       "points": 2,
       "pattern": "P02",
       "solo": "relationeel",
-      "route": null,
+      "route": "gegeven",
+      "direction": "open",
       "steps": "3",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -1188,6 +1257,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -1198,6 +1268,8 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Leg uit welk effect het monetair beleid van de Curaçaose centrale bank, via de valutamarkt, heeft op de conjunctuur van Aruba.",
+        "direction": "Leg uit welk effect het monetair beleid van de Curaçaose centrale bank, via de valutamarkt, heeft op de conjunctuur van Aruba.",
         "pattern": "Leg uit welk effect het monetair beleid van de Curaçaose centrale bank, via de valutamarkt, heeft op de conjunctuur van Aruba.",
         "solo": "Een uitleg over het verband tussen de wisselkoers en de conjuncturele situatie op Aruba.",
         "steps": "Dit leidt tot meer import / minder export door Aruba en minder productie door Aruba. Hiermee verslechtert de conjuncturele situatie op Aruba.",
@@ -1209,7 +1281,6 @@
       },
       "repaired_fields": [
         "pattern",
-        "route",
         "schema"
       ]
     },
@@ -1222,7 +1293,8 @@
       "points": 2,
       "pattern": "P03",
       "solo": "multistructureel",
-      "route": null,
+      "route": "zelf vinden",
+      "direction": "gegeven",
       "steps": "2",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -1252,6 +1324,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -1262,6 +1335,8 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Leg beide veranderingen van de EV1-curve ten opzichte van de EV0-curve uit.",
+        "direction": "zowel de ligging als de helling van de EV1-curve veranderd ten opzichte van de EV0-curve.",
         "pattern": "De econoom stelt: “Door de gedragsverandering van consumenten is zowel de ligging als de helling van de EV1-curve veranderd ten opzichte van de EV0-curve.”",
         "solo": "Een uitleg over de helling van de effectieve vraagcurve.",
         "steps": "de autonome consumptie daalt / bij ieder inkomen besluiten consumenten minder te consumeren, waardoor de effectieve vraagcurve naar beneden verschuift.",
@@ -1281,7 +1356,8 @@
       "points": 2,
       "pattern": "P01",
       "solo": "relationeel",
-      "route": null,
+      "route": "zelf vinden",
+      "direction": "gegeven",
       "steps": "2",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -1311,6 +1387,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -1321,6 +1398,8 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Leg uit dat door de hogere overheidsbestedingen het groen bbp zowel kan dalen als kan stijgen.",
+        "direction": "Leg uit dat door de hogere overheidsbestedingen het groen bbp zowel kan dalen als kan stijgen.",
         "pattern": "Leg uit dat door de hogere overheidsbestedingen het groen bbp zowel kan dalen als kan stijgen.",
         "solo": "van de monetaire waarde (verbetering - schade) van het milieu negatief is en groter dan de bbp stijging, dan daalt het groen bbp.",
         "steps": "Hogere overheidsbestedingen leiden tot een hoger bbp. Als het saldo van de monetaire waarde (verbetering - schade) van het milieu positief",
@@ -1340,7 +1419,8 @@
       "points": 2,
       "pattern": "P13",
       "solo": "relationeel",
-      "route": null,
+      "route": "zelf vinden",
+      "direction": "open",
       "steps": "3",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -1370,6 +1450,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -1380,6 +1461,8 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Leg uit of monetair beleid effectiever of minder effectief is geworden door de gedragsverandering.",
+        "direction": "Leg uit of monetair beleid effectiever of minder effectief is geworden door de gedragsverandering.",
         "pattern": "Door de gedragsverandering is de helling van de IS-curve veranderd. Dit heeft effect op de effectiviteit van monetair beleid.",
         "solo": "zullen mensen minder sterk reageren op deze prikkel om minder te sparen / om meer te consumeren (door de steilere IS-curve).",
         "steps": "Hierdoor zal de output gap minder afnemen en de inflatie langzamer op het gewenste / stabiele niveau (van de centrale bank) komen.",
@@ -1388,7 +1471,9 @@
         "claim": "Leg uit of monetair beleid effectiever of minder effectief is geworden door de gedragsverandering.",
         "new_concept": "Door de gedragsverandering is de helling van de IS-curve veranderd."
       },
-      "repaired_fields": []
+      "repaired_fields": [
+        "route"
+      ]
     },
     {
       "exam_id": "vwo-2025-tv1",
@@ -1399,7 +1484,8 @@
       "points": 2,
       "pattern": "P13",
       "solo": "relationeel",
-      "route": null,
+      "route": "zelf vinden",
+      "direction": "open",
       "steps": "3",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -1429,6 +1515,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -1439,6 +1526,8 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Leg uit welk monetair beleid de centrale bank zal voeren waardoor het oude evenwicht wordt bereikt.",
+        "direction": "Leg uit welk monetair beleid de centrale bank zal voeren waardoor het oude evenwicht wordt bereikt.",
         "pattern": "Leg uit welk monetair beleid de centrale bank zal voeren waardoor het oude evenwicht wordt bereikt. Noem de nieuwe reële evenwichtsrente.",
         "solo": "Bij een reële rente van 1% ontstaat een evenwicht (bij Y = Y* = 800).",
         "steps": "De centrale bank zal de rente verlagen / ruimer monetair beleid voeren waardoor de consumptie / investeringen stijgt / stijgen en daardoor het inkomen",
@@ -1458,7 +1547,8 @@
       "points": 2,
       "pattern": "P03",
       "solo": "relationeel",
-      "route": null,
+      "route": "zelf vinden",
+      "direction": "gegeven",
       "steps": "2",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -1488,6 +1578,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -1498,6 +1589,8 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Leg de stelling van de econoom uit.",
+        "direction": "De econoom stelt: “Als consumenten minder uren gaan werken, verdwijnt de output gap.”",
         "pattern": "De econoom stelt: “Als consumenten minder uren gaan werken, verdwijnt de output gap.”",
         "solo": "Als mensen minder uren werken, dan zal het potentiële inkomen / de productiecapaciteit dalen (naar Y* = 600).",
         "steps": "Hierdoor zal het verschil tussen het werkelijke / gewenste inkomen en het potentiële inkomen verdwijnen (en dus ook de output gap verdwijnt).",
@@ -1506,7 +1599,9 @@
         "claim": "De econoom stelt: “Als consumenten minder uren gaan werken, verdwijnt de output gap.”",
         "new_concept": "Leg de stelling van de econoom uit."
       },
-      "repaired_fields": []
+      "repaired_fields": [
+        "route"
+      ]
     },
     {
       "exam_id": "vwo-2025-tv1",
@@ -1517,7 +1612,8 @@
       "points": 2,
       "pattern": "P04",
       "solo": "multistructureel",
-      "route": null,
+      "route": "zelf vinden",
+      "direction": "open",
       "steps": "2",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -1542,6 +1638,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -1552,6 +1649,8 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Leg uit of er bij een investering voor biologische teelt sprake is van verzonken kosten.",
+        "direction": "Leg uit of er bij een investering voor biologische teelt sprake is van verzonken kosten.",
         "pattern": "Leg uit of er bij een investering voor biologische teelt sprake is van verzonken kosten.",
         "solo": "dat eventueel (als de biologische teelt niet doorgaat) alternatief kan worden aangewend",
         "steps": "Er is dus geen sprake van verzonken kosten.",
@@ -1572,6 +1671,7 @@
       "pattern": "P08",
       "solo": "relationeel",
       "route": "zelf vinden",
+      "direction": "open",
       "steps": "3",
       "sources": "in vraagtekst",
       "noise": "ja",
@@ -1601,6 +1701,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -1611,9 +1712,10 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Bereken de procentuele stijging van de totale vaste (constante) kosten bij boer B als gevolg van de investering in biologische teelt.",
+        "direction": "Bereken de procentuele stijging van de totale vaste (constante) kosten bij boer B",
         "pattern": "Bereken de procentuele stijging van de totale vaste (constante) kosten bij boer B als gevolg van de investering in biologische teelt.",
         "solo": "TCK = TO – TVK – TW = 46.050 kg x (3 – 1) – 75.000 = € 17.100.",
-        "route": "Bereken de procentuele stijging van de totale vaste (constante) kosten bij boer B",
         "steps": "(17.100 – 14.250) / 14.250 x 100 = 20%.",
         "sources": "Gebruik tabellen 1 en 2.",
         "noise": "verkoopprijs per kg € 2,20 € 3,00",
@@ -1632,7 +1734,8 @@
       "points": 2,
       "pattern": "P11",
       "solo": "multistructureel",
-      "route": null,
+      "route": "zelf vinden",
+      "direction": null,
       "steps": "2",
       "sources": "in vraagtekst",
       "noise": "ja",
@@ -1662,6 +1765,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -1672,6 +1776,7 @@
         "example_quality": "medium"
       },
       "evidence": {
+        "route": "Noem de Nash-evenwichten uit tabel 2 bij winstmaximalisatie.",
         "pattern": "Noem de Nash-evenwichten uit tabel 2 bij winstmaximalisatie.",
         "solo": "traditioneel ; traditioneel / (€ 80.000 ; € 80.000).",
         "steps": "biologisch ; biologisch / (€ 92.900 ; € 92.900).",
@@ -1692,7 +1797,8 @@
       "points": 2,
       "pattern": "P11",
       "solo": "relationeel",
-      "route": null,
+      "route": "zelf vinden",
+      "direction": null,
       "steps": "2",
       "sources": "in vraagtekst",
       "noise": "ja",
@@ -1722,6 +1828,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -1732,6 +1839,7 @@
         "example_quality": "medium"
       },
       "evidence": {
+        "route": "Leg met behulp van getallen uit of de negatieve externe effecten dalen als de boeren kiezen voor afzetmaximalisatie.",
         "pattern": "Leg met behulp van getallen uit of de negatieve externe effecten dalen als de boeren kiezen voor afzetmaximalisatie.",
         "solo": "Daardoor zullen de negatieve gevolgen van groenteteelt op het milieu niet afnemen, waardoor de negatieve externe effecten niet dalen.",
         "steps": "hebben zij beiden een dominante strategie van traditionele teelt, want 65.000 > 46.050 en 70.000 > 55.000.",
@@ -1741,7 +1849,9 @@
         "new_concept": "de negatieve externe effecten dalen als de boeren kiezen voor afzetmaximalisatie.",
         "builds_on": "Gebruik tabel 2."
       },
-      "repaired_fields": []
+      "repaired_fields": [
+        "route"
+      ]
     }
   ]
 }

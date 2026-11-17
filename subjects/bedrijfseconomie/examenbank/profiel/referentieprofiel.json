@@ -100,12 +100,22 @@
     },
     "route": {
       "gegeven": {
-        "points": 37.0,
-        "share": 0.468
+        "points": 43.0,
+        "share": 0.347
       },
       "zelf vinden": {
-        "points": 42.0,
-        "share": 0.532
+        "points": 81.0,
+        "share": 0.653
+      }
+    },
+    "direction": {
+      "gegeven": {
+        "points": 14.0,
+        "share": 0.184
+      },
+      "open": {
+        "points": 62.0,
+        "share": 0.816
       }
     },
     "steps": {
@@ -205,8 +215,8 @@
     "bloom": {
       "unlinked": 20.0
     },
-    "route": {
-      "not_applicable": 45.0
+    "direction": {
+      "not_applicable": 48.0
     },
     "schema": {
       "not_applicable": 104.0
@@ -252,8 +262,12 @@
           "relationeel": 27.0
         },
         "route": {
-          "gegeven": 21.0,
-          "zelf vinden": 20.0
+          "gegeven": 25.0,
+          "zelf vinden": 38.0
+        },
+        "direction": {
+          "gegeven": 8.0,
+          "open": 31.0
         },
         "steps": {
           "1": 14.0,
@@ -295,8 +309,8 @@
         "bloom": {
           "unlinked": 7.0
         },
-        "route": {
-          "not_applicable": 22.0
+        "direction": {
+          "not_applicable": 24.0
         },
         "schema": {
           "not_applicable": 55.0
@@ -340,8 +354,12 @@
           "relationeel": 27.0
         },
         "route": {
-          "gegeven": 16.0,
-          "zelf vinden": 22.0
+          "gegeven": 18.0,
+          "zelf vinden": 43.0
+        },
+        "direction": {
+          "gegeven": 6.0,
+          "open": 31.0
         },
         "steps": {
           "1": 9.0,
@@ -383,8 +401,8 @@
         "bloom": {
           "unlinked": 13.0
         },
-        "route": {
-          "not_applicable": 23.0
+        "direction": {
+          "not_applicable": 24.0
         },
         "schema": {
           "not_applicable": 49.0
@@ -397,5 +415,212 @@
         }
       }
     }
-  ]
+  ],
+  "house_rules": {
+    "source": "bank-metrics",
+    "label": "huisregels: 2 examens (2025-I, 2026-I)",
+    "n_exams": 2,
+    "exams": [
+      "vwo-2025-tv1",
+      "vwo-2026-tv1"
+    ],
+    "minutes_per_point": 2.9,
+    "words_per_point": {
+      "pooled": 55.6,
+      "p25": 46.7,
+      "p50": 52.4,
+      "p75": 58.6
+    },
+    "points_per_opgave": {
+      "mean": 10.33,
+      "min": 5,
+      "max": 23
+    },
+    "vragen_per_opgave": {
+      "mean": 4.92,
+      "min": 2,
+      "max": 9
+    },
+    "groups_per_point": {
+      "pooled": 0.411,
+      "max": 0.429
+    },
+    "groups_per_opgave": {
+      "mean": 4.33,
+      "max": 10
+    },
+    "words_task": {
+      "p50": 21.0,
+      "p90": 29.4
+    },
+    "words_lead": {
+      "p50": 30.0,
+      "p90": 101.6,
+      "empty_share": 0.271
+    },
+    "numbers_lead": {
+      "p50": 0.0,
+      "p90": 2.0
+    },
+    "n_tasks": {
+      "B01": {
+        "n_vragen": 2,
+        "shares": {
+          "1": 0.5,
+          "2": 0.5,
+          "3+": 0.0
+        },
+        "max_tasks": 2
+      },
+      "B02": {
+        "n_vragen": 6,
+        "shares": {
+          "1": 1.0,
+          "2": 0.0,
+          "3+": 0.0
+        },
+        "max_tasks": 1
+      },
+      "B03": {
+        "n_vragen": 2,
+        "shares": {
+          "1": 1.0,
+          "2": 0.0,
+          "3+": 0.0
+        },
+        "max_tasks": 1
+      },
+      "P01": {
+        "n_vragen": 3,
+        "shares": {
+          "1": 1.0,
+          "2": 0.0,
+          "3+": 0.0
+        },
+        "max_tasks": 1
+      },
+      "P03": {
+        "n_vragen": 1,
+        "shares": {
+          "1": 1.0,
+          "2": 0.0,
+          "3+": 0.0
+        },
+        "max_tasks": 1
+      },
+      "P04": {
+        "n_vragen": 2,
+        "shares": {
+          "1": 1.0,
+          "2": 0.0,
+          "3+": 0.0
+        },
+        "max_tasks": 1
+      },
+      "P05": {
+        "n_vragen": 3,
+        "shares": {
+          "1": 0.667,
+          "2": 0.333,
+          "3+": 0.0
+        },
+        "max_tasks": 2
+      },
+      "P07": {
+        "n_vragen": 3,
+        "shares": {
+          "1": 0.667,
+          "2": 0.333,
+          "3+": 0.0
+        },
+        "max_tasks": 2
+      },
+      "P08": {
+        "n_vragen": 11,
+        "shares": {
+          "1": 1.0,
+          "2": 0.0,
+          "3+": 0.0
+        },
+        "max_tasks": 1
+      },
+      "P09": {
+        "n_vragen": 9,
+        "shares": {
+          "1": 0.889,
+          "2": 0.111,
+          "3+": 0.0
+        },
+        "max_tasks": 2
+      },
+      "P14": {
+        "n_vragen": 4,
+        "shares": {
+          "1": 1.0,
+          "2": 0.0,
+          "3+": 0.0
+        },
+        "max_tasks": 1
+      },
+      "P15": {
+        "n_vragen": 2,
+        "shares": {
+          "1": 1.0,
+          "2": 0.0,
+          "3+": 0.0
+        },
+        "max_tasks": 1
+      },
+      "P16": {
+        "n_vragen": 12,
+        "shares": {
+          "1": 1.0,
+          "2": 0.0,
+          "3+": 0.0
+        },
+        "max_tasks": 1
+      },
+      "P17": {
+        "n_vragen": 1,
+        "shares": {
+          "1": 1.0,
+          "2": 0.0,
+          "3+": 0.0
+        },
+        "max_tasks": 1
+      }
+    },
+    "per_exam": [
+      {
+        "exam_id": "vwo-2025-tv1",
+        "duration_minutes": 180,
+        "max_score": 63,
+        "minutes_per_point": 2.86,
+        "words": 3501,
+        "words_per_point": 55.6,
+        "n_opgaven": 6,
+        "points_per_opgave": {
+          "mean": 10.5,
+          "min": 5,
+          "max": 23
+        },
+        "groups_per_point": 0.429
+      },
+      {
+        "exam_id": "vwo-2026-tv1",
+        "duration_minutes": 180,
+        "max_score": 61,
+        "minutes_per_point": 2.95,
+        "words": 3389,
+        "words_per_point": 55.6,
+        "n_opgaven": 6,
+        "points_per_opgave": {
+          "mean": 10.17,
+          "min": 6,
+          "max": 18
+        },
+        "groups_per_point": 0.393
+      }
+    ]
+  }
 }

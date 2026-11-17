@@ -1,5 +1,5 @@
 {
- "version": "2026-11-17-direction",
+ "version": "2026-11-17-route-lead-task",
  "knobs": [
   {
    "id": "pattern",
@@ -40,10 +40,10 @@
    "applies_to_kinds": "all",
    "settable": true,
    "definition": {
-    "gegeven": "de stam noemt naast de gegevens en het gevraagde eindpunt een stap, methode, hulpmiddel, formule, tussengrootheid of een te gebruiken begrip ('bereken hiervoor eerst …', '(koers plus ontvangen dividend)', 'gebruik de cpi', 'gebruik in je uitleg het begrip prijspeil'); geen route: uitleg van een nieuw begrip dat niet getoetst wordt, 'gebruik informatiebron n', 'gebruik je antwoord op vraag n', een algemene afrond- of basisregel (specs/36 D4, economie-098)",
-    "zelf vinden": "de stam noemt alleen de gegevens en het eindpunt"
+    "gegeven": "de lead of de taak zegt hoe het moet: een stap, methode, hulpmiddel of formule die de leerling moet gebruiken ('bereken hiervoor eerst …', '(koers plus ontvangen dividend)', 'gebruik de cpi', 'gebruik in je uitleg het begrip prijspeil', 'met behulp van de cpi'). Een feitelijke beschrijving van de situatie in de opgavetekst of een stelling is context, geen route. Ook geen route: uitleg van een nieuw begrip dat niet getoetst wordt, 'gebruik informatiebron n', 'gebruik je antwoord op vraag n', 'met behulp van de gegevens/getallen/tabel/informatiebron', een algemene afrond- of basisregel (specs/36 D4, §11 B20, economie-098)",
+    "zelf vinden": "de lead en de taak noemen alleen de gegevens en het eindpunt, niet hoe het moet"
    },
-   "label_evidence": "the stem phrase that gives the step, method, tool, formula, intermediate quantity or concept (for zelf vinden: the asking sentence)"
+   "label_evidence": "the phrase in the lead or task that says how (step, method, tool, formula); for zelf vinden the asking sentence"
   },
   {
    "id": "direction",
@@ -56,6 +56,10 @@
    "applies_to_kinds": [
     "explanation",
     "calculation"
+   ],
+   "excluded_patterns": [
+    "P14",
+    "P16"
    ],
    "settable": true,
    "definition": {

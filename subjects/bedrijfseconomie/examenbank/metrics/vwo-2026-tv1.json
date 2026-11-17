@@ -1,0 +1,403 @@
+{
+  "exam_id": "vwo-2026-tv1",
+  "subject": "bedrijfseconomie",
+  "built_at": "2026-11-17",
+  "duration_minutes": 180,
+  "duration_source": "cover",
+  "max_score": 61,
+  "n_opgaven": 6,
+  "n_vragen": 29,
+  "n_groups": 24,
+  "opgaven": [
+    {
+      "opgave_id": "vwo-2026-tv1-o1",
+      "number": 1,
+      "points": 8,
+      "n_vragen": 4,
+      "n_groups": 2,
+      "words_intro": 75,
+      "words_sources": 0,
+      "sources": []
+    },
+    {
+      "opgave_id": "vwo-2026-tv1-o2",
+      "number": 2,
+      "points": 18,
+      "n_vragen": 8,
+      "n_groups": 5,
+      "words_intro": 183,
+      "words_sources": 590,
+      "sources": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "opgave_id": "vwo-2026-tv1-o3",
+      "number": 3,
+      "points": 8,
+      "n_vragen": 4,
+      "n_groups": 5,
+      "words_intro": 68,
+      "words_sources": 0,
+      "sources": []
+    },
+    {
+      "opgave_id": "vwo-2026-tv1-o4",
+      "number": 4,
+      "points": 6,
+      "n_vragen": 3,
+      "n_groups": 3,
+      "words_intro": 107,
+      "words_sources": 0,
+      "sources": []
+    },
+    {
+      "opgave_id": "vwo-2026-tv1-o5",
+      "number": 5,
+      "points": 15,
+      "n_vragen": 8,
+      "n_groups": 6,
+      "words_intro": 109,
+      "words_sources": 524,
+      "sources": [
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "opgave_id": "vwo-2026-tv1-o6",
+      "number": 6,
+      "points": 6,
+      "n_vragen": 2,
+      "n_groups": 3,
+      "words_intro": 149,
+      "words_sources": 0,
+      "sources": []
+    }
+  ],
+  "vragen": [
+    {
+      "question_id": "vwo-2026-tv1-q1",
+      "number": 1,
+      "opgave_id": "vwo-2026-tv1-o1",
+      "points": 2,
+      "words_lead": 0,
+      "words_task": 15,
+      "n_tasks": 2,
+      "numbers_lead": 0,
+      "pattern": "P05"
+    },
+    {
+      "question_id": "vwo-2026-tv1-q2",
+      "number": 2,
+      "opgave_id": "vwo-2026-tv1-o1",
+      "points": 2,
+      "words_lead": 57,
+      "words_task": 21,
+      "n_tasks": 1,
+      "numbers_lead": 1,
+      "pattern": "P16"
+    },
+    {
+      "question_id": "vwo-2026-tv1-q3",
+      "number": 3,
+      "opgave_id": "vwo-2026-tv1-o1",
+      "points": 2,
+      "words_lead": 26,
+      "words_task": 29,
+      "n_tasks": 1,
+      "numbers_lead": 1,
+      "pattern": "P09"
+    },
+    {
+      "question_id": "vwo-2026-tv1-q4",
+      "number": 4,
+      "opgave_id": "vwo-2026-tv1-o1",
+      "points": 2,
+      "words_lead": 17,
+      "words_task": 66,
+      "n_tasks": 2,
+      "numbers_lead": 0,
+      "pattern": "B01"
+    },
+    {
+      "question_id": "vwo-2026-tv1-q5",
+      "number": 5,
+      "opgave_id": "vwo-2026-tv1-o2",
+      "points": 2,
+      "words_lead": 0,
+      "words_task": 19,
+      "n_tasks": 1,
+      "numbers_lead": 0,
+      "pattern": "P14"
+    },
+    {
+      "question_id": "vwo-2026-tv1-q6",
+      "number": 6,
+      "opgave_id": "vwo-2026-tv1-o2",
+      "points": 2,
+      "words_lead": 37,
+      "words_task": 11,
+      "n_tasks": 1,
+      "numbers_lead": 0,
+      "pattern": "P14"
+    },
+    {
+      "question_id": "vwo-2026-tv1-q7",
+      "number": 7,
+      "opgave_id": "vwo-2026-tv1-o2",
+      "points": 1,
+      "words_lead": 30,
+      "words_task": 17,
+      "n_tasks": 1,
+      "numbers_lead": 0,
+      "pattern": "P01"
+    },
+    {
+      "question_id": "vwo-2026-tv1-q8",
+      "number": 8,
+      "opgave_id": "vwo-2026-tv1-o2",
+      "points": 3,
+      "words_lead": 18,
+      "words_task": 29,
+      "n_tasks": 1,
+      "numbers_lead": 0,
+      "pattern": "P07"
+    },
+    {
+      "question_id": "vwo-2026-tv1-q9",
+      "number": 9,
+      "opgave_id": "vwo-2026-tv1-o2",
+      "points": 1,
+      "words_lead": 40,
+      "words_task": 13,
+      "n_tasks": 1,
+      "numbers_lead": 0,
+      "pattern": "P04"
+    },
+    {
+      "question_id": "vwo-2026-tv1-q10",
+      "number": 10,
+      "opgave_id": "vwo-2026-tv1-o2",
+      "points": 2,
+      "words_lead": 0,
+      "words_task": 17,
+      "n_tasks": 1,
+      "numbers_lead": 0,
+      "pattern": "P08"
+    },
+    {
+      "question_id": "vwo-2026-tv1-q11",
+      "number": 11,
+      "opgave_id": "vwo-2026-tv1-o2",
+      "points": 4,
+      "words_lead": 0,
+      "words_task": 22,
+      "n_tasks": 1,
+      "numbers_lead": 0,
+      "pattern": "B02"
+    },
+    {
+      "question_id": "vwo-2026-tv1-q12",
+      "number": 12,
+      "opgave_id": "vwo-2026-tv1-o2",
+      "points": 3,
+      "words_lead": 43,
+      "words_task": 27,
+      "n_tasks": 1,
+      "numbers_lead": 1,
+      "pattern": "P09"
+    },
+    {
+      "question_id": "vwo-2026-tv1-q13",
+      "number": 13,
+      "opgave_id": "vwo-2026-tv1-o3",
+      "points": 1,
+      "words_lead": 0,
+      "words_task": 16,
+      "n_tasks": 1,
+      "numbers_lead": 0,
+      "pattern": "P16"
+    },
+    {
+      "question_id": "vwo-2026-tv1-q14",
+      "number": 14,
+      "opgave_id": "vwo-2026-tv1-o3",
+      "points": 2,
+      "words_lead": 74,
+      "words_task": 28,
+      "n_tasks": 1,
+      "numbers_lead": 0,
+      "pattern": "P14"
+    },
+    {
+      "question_id": "vwo-2026-tv1-q15",
+      "number": 15,
+      "opgave_id": "vwo-2026-tv1-o3",
+      "points": 3,
+      "words_lead": 104,
+      "words_task": 15,
+      "n_tasks": 1,
+      "numbers_lead": 12,
+      "pattern": "P08"
+    },
+    {
+      "question_id": "vwo-2026-tv1-q16",
+      "number": 16,
+      "opgave_id": "vwo-2026-tv1-o3",
+      "points": 2,
+      "words_lead": 22,
+      "words_task": 25,
+      "n_tasks": 1,
+      "numbers_lead": 0,
+      "pattern": "P01"
+    },
+    {
+      "question_id": "vwo-2026-tv1-q17",
+      "number": 17,
+      "opgave_id": "vwo-2026-tv1-o4",
+      "points": 2,
+      "words_lead": 0,
+      "words_task": 31,
+      "n_tasks": 1,
+      "numbers_lead": 0,
+      "pattern": "P05"
+    },
+    {
+      "question_id": "vwo-2026-tv1-q18",
+      "number": 18,
+      "opgave_id": "vwo-2026-tv1-o4",
+      "points": 2,
+      "words_lead": 35,
+      "words_task": 12,
+      "n_tasks": 1,
+      "numbers_lead": 0,
+      "pattern": "P08"
+    },
+    {
+      "question_id": "vwo-2026-tv1-q19",
+      "number": 19,
+      "opgave_id": "vwo-2026-tv1-o4",
+      "points": 2,
+      "words_lead": 59,
+      "words_task": 12,
+      "n_tasks": 1,
+      "numbers_lead": 0,
+      "pattern": "P16"
+    },
+    {
+      "question_id": "vwo-2026-tv1-q20",
+      "number": 20,
+      "opgave_id": "vwo-2026-tv1-o5",
+      "points": 1,
+      "words_lead": 0,
+      "words_task": 18,
+      "n_tasks": 1,
+      "numbers_lead": 0,
+      "pattern": "P16"
+    },
+    {
+      "question_id": "vwo-2026-tv1-q21",
+      "number": 21,
+      "opgave_id": "vwo-2026-tv1-o5",
+      "points": 1,
+      "words_lead": 94,
+      "words_task": 16,
+      "n_tasks": 1,
+      "numbers_lead": 0,
+      "pattern": "P04"
+    },
+    {
+      "question_id": "vwo-2026-tv1-q22",
+      "number": 22,
+      "opgave_id": "vwo-2026-tv1-o5",
+      "points": 2,
+      "words_lead": 54,
+      "words_task": 23,
+      "n_tasks": 1,
+      "numbers_lead": 0,
+      "pattern": "B02"
+    },
+    {
+      "question_id": "vwo-2026-tv1-q23",
+      "number": 23,
+      "opgave_id": "vwo-2026-tv1-o5",
+      "points": 1,
+      "words_lead": 0,
+      "words_task": 21,
+      "n_tasks": 1,
+      "numbers_lead": 0,
+      "pattern": "P09"
+    },
+    {
+      "question_id": "vwo-2026-tv1-q24",
+      "number": 24,
+      "opgave_id": "vwo-2026-tv1-o5",
+      "points": 2,
+      "words_lead": 18,
+      "words_task": 25,
+      "n_tasks": 1,
+      "numbers_lead": 0,
+      "pattern": "B02"
+    },
+    {
+      "question_id": "vwo-2026-tv1-q25",
+      "number": 25,
+      "opgave_id": "vwo-2026-tv1-o5",
+      "points": 4,
+      "words_lead": 17,
+      "words_task": 15,
+      "n_tasks": 1,
+      "numbers_lead": 0,
+      "pattern": "P08+B02"
+    },
+    {
+      "question_id": "vwo-2026-tv1-q26",
+      "number": 26,
+      "opgave_id": "vwo-2026-tv1-o5",
+      "points": 2,
+      "words_lead": 38,
+      "words_task": 26,
+      "n_tasks": 1,
+      "numbers_lead": 0,
+      "pattern": "P09"
+    },
+    {
+      "question_id": "vwo-2026-tv1-q27",
+      "number": 27,
+      "opgave_id": "vwo-2026-tv1-o5",
+      "points": 2,
+      "words_lead": 47,
+      "words_task": 21,
+      "n_tasks": 1,
+      "numbers_lead": 0,
+      "pattern": "P15"
+    },
+    {
+      "question_id": "vwo-2026-tv1-q28",
+      "number": 28,
+      "opgave_id": "vwo-2026-tv1-o6",
+      "points": 3,
+      "words_lead": 0,
+      "words_task": 33,
+      "n_tasks": 1,
+      "numbers_lead": 0,
+      "pattern": "B03"
+    },
+    {
+      "question_id": "vwo-2026-tv1-q29",
+      "number": 29,
+      "opgave_id": "vwo-2026-tv1-o6",
+      "points": 3,
+      "words_lead": 107,
+      "words_task": 24,
+      "n_tasks": 1,
+      "numbers_lead": 2,
+      "pattern": "P08"
+    }
+  ]
+}
