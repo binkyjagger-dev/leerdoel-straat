@@ -1,0 +1,2911 @@
+{
+  "toets_id": "20261115-2242-toets-economie",
+  "subject": "economie",
+  "criteria_run": "20261012-2220-economie-vwo-2026-run2",
+  "title": "Toetsweek 2 – 4 VWO – Levensloop",
+  "level": "4vwo",
+  "run_id": "20261115-2242-toets-economie",
+  "created_at": "2026-11-15",
+  "max_score": 33,
+  "reference": "bank-3-examens",
+  "opgaven": [
+    {
+      "opgave_id": "O1",
+      "title": "Pensioenfonds Horizon",
+      "context": "Pensioenfonds Horizon (voor werknemers in de bouw) legt in een nieuwsbrief aan jonge deelnemers uit hoe hun pensioen werkt: de AOW van de overheid (omslagstelsel) en het aanvullende pensioen van het fonds (kapitaaldekking), de indexering van de pensioenen en de beleggingen van het fonds.",
+      "context_tags": [
+        "pensioenfonds",
+        "aow en aanvullend pensioen"
+      ],
+      "reused_from": null,
+      "intro": "Pensioenfonds Horizon regelt het aanvullende pensioen van werknemers in de bouw. In een nieuwsbrief legt Horizon aan jonge deelnemers uit waaruit hun pensioen later bestaat: de AOW van de overheid en het aanvullende pensioen van het fonds. Ook laat de nieuwsbrief zien hoe het fonds de pensioenen aanpast als prijzen en lonen stijgen, en wat het fonds verdient met zijn beleggingen.",
+      "data": {
+        "gd_nu": 35,
+        "gd_later": 50,
+        "aow_uitk": 15600,
+        "pensioen_2025": 12000,
+        "idx_2026": 0.025,
+        "idx_2027": 0.03,
+        "prijs_2026": 0.025,
+        "prijs_2027": 0.03,
+        "loon_2026": 0.04,
+        "loon_2027": 0.035,
+        "koers_begin": 40.0,
+        "dividend": 1.6,
+        "koers_eind": 42.4,
+        "prijsindex": 104
+      },
+      "sources": [],
+      "figures": [],
+      "vragen": [
+        {
+          "vraag_id": "O1-V1",
+          "number": 1,
+          "points": 2,
+          "stem": "In de nieuwsbrief noemt Horizon het pensioenvermogen van het fonds en de premie-inleg van alle deelnemers samen.\nKies voor het pensioenvermogen en voor de premie-inleg of het een voorraadgrootheid of een stroomgrootheid is. Licht bij elk van beide grootheden je keuze toe.",
+          "uitwerkbijlage": null,
+          "cv": {
+            "maximumscore": 2,
+            "model_answer": "Een voorbeeld van een juist antwoord is:\n• Het pensioenvermogen is een voorraadgrootheid, want het wordt gemeten op een bepaald tijdstip.\n• De premie-inleg is een stroomgrootheid, want die wordt gemeten over een periode (bijvoorbeeld per jaar).",
+            "calc": [],
+            "scorepunten": [
+              {
+                "seq": 1,
+                "points": 1,
+                "text": "pensioenvermogen is een voorraadgrootheid met argument: gemeten op een tijdstip",
+                "criterion_id": "E1.8-01-b",
+                "calc_ref": null
+              },
+              {
+                "seq": 2,
+                "points": 1,
+                "text": "premie-inleg is een stroomgrootheid met argument: gemeten over een periode",
+                "criterion_id": "E1.8-01-b",
+                "calc_ref": null
+              }
+            ],
+            "rules": [
+              "Alleen een juiste keuze zonder toelichting levert geen scorepunt op."
+            ],
+            "alternatives": [
+              "Als toelichting bij het pensioenvermogen ook goed rekenen: het vermogen is wat het fonds op een moment bezit / de premie-inleg vult het vermogen aan (de stroom verandert de voorraad)."
+            ],
+            "follow_through": null
+          },
+          "noise_data": [],
+          "new_concepts": [],
+          "builds_on_vragen": [],
+          "pattern": "P05",
+          "knobs": {
+            "solo": "multistructureel",
+            "route": null,
+            "steps": "1",
+            "sources": "in vraagtekst",
+            "noise": "nee",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": null
+          },
+          "label": {
+            "exam_id": null,
+            "question_id": "O1-V1",
+            "question_number": 1,
+            "opgave_id": "O1",
+            "first_of_opgave": true,
+            "points": 2,
+            "pattern": "P05",
+            "solo": "multistructureel",
+            "route": null,
+            "steps": "1",
+            "sources": "in vraagtekst",
+            "noise": "nee",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": null,
+            "example_quality": null,
+            "builds_on_questions": [],
+            "proposed_pattern": null,
+            "example_quality_reason": null,
+            "combination": 1,
+            "bloom": "begrijpen",
+            "scorepunt_bloom": [
+              {
+                "points": 1,
+                "bloom": "begrijpen",
+                "group_id": "E1.8-01"
+              },
+              {
+                "points": 1,
+                "bloom": "begrijpen",
+                "group_id": "E1.8-01"
+              }
+            ],
+            "confidence": {
+              "pattern": "high",
+              "solo": "high",
+              "route": "high",
+              "steps": "high",
+              "sources": "high",
+              "noise": "high",
+              "claim": "high",
+              "new_concept": "high",
+              "schema": "high",
+              "builds_on": "high"
+            },
+            "evidence": {
+              "pattern": "Kies voor het pensioenvermogen en voor de premie-inleg of het een voorraadgrootheid of een stroomgrootheid is.",
+              "solo": "Licht bij elk van beide grootheden je keuze toe.",
+              "steps": "pensioenvermogen is een voorraadgrootheid met argument: gemeten op een tijdstip",
+              "sources": "In de nieuwsbrief noemt Horizon het pensioenvermogen van het fonds en de premie-inleg van alle deelnemers samen.",
+              "noise": "Alleen een juiste keuze zonder toelichting levert geen scorepunt op.",
+              "claim": "Kies voor het pensioenvermogen en voor de premie-inleg of het een voorraadgrootheid of een stroomgrootheid is.",
+              "new_concept": "Kies voor het pensioenvermogen en voor de premie-inleg of het een voorraadgrootheid of een stroomgrootheid is."
+            },
+            "repaired_fields": [],
+            "disagreements": {}
+          },
+          "scorepunten": [
+            {
+              "seq": 1,
+              "points": 1,
+              "criterion_id": "E1.8-01-b",
+              "group_id": "E1.8-01",
+              "bloom": "begrijpen"
+            },
+            {
+              "seq": 2,
+              "points": 1,
+              "criterion_id": "E1.8-01-b",
+              "group_id": "E1.8-01",
+              "bloom": "begrijpen"
+            }
+          ],
+          "open_findings": []
+        },
+        {
+          "vraag_id": "O1-V2",
+          "number": 2,
+          "points": 2,
+          "stem": "De AOW is een omslagstelsel: de werkenden betalen met hun AOW-premie de uitkeringen van de gepensioneerden van dat moment. In de nieuwsbrief gebruikt Horizon het begrip grijze druk: het aantal AOW-gerechtigden per 100 werkenden. Nu is de grijze druk 35. Door de vergrijzing stijgt de grijze druk naar 50. Een AOW-gerechtigde ontvangt een uitkering van € 15.600 per jaar.\nGa ervan uit dat de AOW volledig uit de premie van de werkenden wordt betaald en dat de uitkering per AOW-gerechtigde gelijk blijft.\nBereken met hoeveel procent de AOW-premie per werkende per jaar door de vergrijzing stijgt. Rond je antwoord af op één decimaal.",
+          "uitwerkbijlage": null,
+          "cv": {
+            "maximumscore": 2,
+            "model_answer": "Een voorbeeld van een juiste berekening is:\n• premie per werkende nu: 35 × € 15.600 / 100 = € 5.460 en na de vergrijzing: 50 × € 15.600 / 100 = € 7.800\n• De premie per werkende stijgt met € 2.340, dat is 2.340 / 5.460 × 100% = 42,9%.",
+            "calc": [
+              {
+                "name": "premie_nu",
+                "expr": "gd_nu * aow_uitk / 100",
+                "round": 0,
+                "rounding": null,
+                "shown": "€ 5.460"
+              },
+              {
+                "name": "premie_later",
+                "expr": "gd_later * aow_uitk / 100",
+                "round": 0,
+                "rounding": null,
+                "shown": "€ 7.800"
+              },
+              {
+                "name": "premie_verschil",
+                "expr": "premie_later - premie_nu",
+                "round": 0,
+                "rounding": null,
+                "shown": "€ 2.340"
+              },
+              {
+                "name": "premie_stijging",
+                "expr": "premie_verschil / premie_nu * 100",
+                "round": 1,
+                "rounding": null,
+                "shown": "42,9%"
+              }
+            ],
+            "scorepunten": [
+              {
+                "seq": 1,
+                "points": 1,
+                "text": "berekening premie per werkende nu en na de vergrijzing",
+                "criterion_id": "E2.1-02-d",
+                "calc_ref": "premie_later"
+              },
+              {
+                "seq": 2,
+                "points": 1,
+                "text": "berekening procentuele stijging van de premie per werkende",
+                "criterion_id": "E2.1-02-d",
+                "calc_ref": "premie_stijging"
+              }
+            ],
+            "rules": [
+              "Voor elke rekenfout 1 scorepunt aftrekken."
+            ],
+            "alternatives": [
+              "Zonder bedragen: de premie per werkende is evenredig met de grijze druk, dus (50 − 35) / 35 × 100% = 42,9%; dit levert beide scorepunten op als de leerling laat zien dat de premie per werkende gelijk is aan grijze druk × uitkering / 100."
+            ],
+            "follow_through": null
+          },
+          "noise_data": [],
+          "new_concepts": [
+            "grijze druk"
+          ],
+          "builds_on_vragen": [],
+          "pattern": "P08",
+          "knobs": {
+            "solo": "multistructureel",
+            "route": "zelf vinden",
+            "steps": "2",
+            "sources": "in vraagtekst",
+            "noise": "nee",
+            "claim": "nee",
+            "new_concept": "ja",
+            "schema": null,
+            "builds_on": "nee"
+          },
+          "label": {
+            "exam_id": null,
+            "question_id": "O1-V2",
+            "question_number": 2,
+            "opgave_id": "O1",
+            "first_of_opgave": false,
+            "points": 2,
+            "pattern": "P08",
+            "solo": "multistructureel",
+            "route": "zelf vinden",
+            "steps": "2",
+            "sources": "in vraagtekst",
+            "noise": "nee",
+            "claim": "nee",
+            "new_concept": "ja",
+            "schema": null,
+            "builds_on": "nee",
+            "example_quality": null,
+            "builds_on_questions": [],
+            "proposed_pattern": null,
+            "example_quality_reason": null,
+            "combination": 1,
+            "bloom": "toepassen",
+            "scorepunt_bloom": [
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "E2.1-02"
+              },
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "E2.1-02"
+              }
+            ],
+            "confidence": {
+              "pattern": "high",
+              "solo": "medium",
+              "route": "high",
+              "steps": "high",
+              "sources": "high",
+              "noise": "high",
+              "claim": "high",
+              "new_concept": "high",
+              "schema": "high",
+              "builds_on": "high"
+            },
+            "evidence": {
+              "pattern": "Bereken met hoeveel procent de AOW-premie per werkende per jaar door de vergrijzing stijgt.",
+              "solo": "berekening premie per werkende nu en na de vergrijzing",
+              "route": "Bereken met hoeveel procent de AOW-premie per werkende per jaar door de vergrijzing stijgt. Rond je antwoord af op één decimaal.",
+              "steps": "berekening premie per werkende nu en na de vergrijzing",
+              "sources": "Nu is de grijze druk 35. Door de vergrijzing stijgt de grijze druk naar 50.",
+              "noise": "Een AOW-gerechtigde ontvangt een uitkering van € 15.600 per jaar.",
+              "claim": "Bereken met hoeveel procent de AOW-premie per werkende per jaar door de vergrijzing stijgt.",
+              "new_concept": "In de nieuwsbrief gebruikt Horizon het begrip grijze druk: het aantal AOW-gerechtigden per 100 werkenden.",
+              "builds_on": "Bereken met hoeveel procent de AOW-premie per werkende per jaar door de vergrijzing stijgt."
+            },
+            "repaired_fields": [],
+            "disagreements": {
+              "solo": {
+                "A": "relationeel",
+                "B": "multistructureel"
+              }
+            }
+          },
+          "scorepunten": [
+            {
+              "seq": 1,
+              "points": 1,
+              "criterion_id": "E2.1-02-d",
+              "group_id": "E2.1-02",
+              "bloom": "toepassen"
+            },
+            {
+              "seq": 2,
+              "points": 1,
+              "criterion_id": "E2.1-02-d",
+              "group_id": "E2.1-02",
+              "bloom": "toepassen"
+            }
+          ],
+          "open_findings": []
+        },
+        {
+          "vraag_id": "O1-V3",
+          "number": 3,
+          "points": 1,
+          "stem": "Over het aanvullende pensioen schrijft Horizon in de nieuwsbrief: \"De premie die u en uw werkgever elke maand betalen, zetten wij op uw naam en beleggen wij voor u. Zo groeit uw eigen pensioenpot tot u met pensioen gaat. Uit die pot betalen wij later uw pensioen.\"\nKies of het aanvullende pensioen van Horizon bij het omslagstelsel of bij het kapitaaldekkingsstelsel hoort. Noem het kenmerk in de tekst van Horizon waaraan je dat ziet.",
+          "uitwerkbijlage": null,
+          "cv": {
+            "maximumscore": 1,
+            "model_answer": "Een voorbeeld van een juist antwoord is:\nHet is een kapitaaldekkingsstelsel, want elke deelnemer bouwt met zijn premie een eigen vermogen (pensioenpot) op waaruit later zijn eigen pensioen wordt betaald. Bij een omslagstelsel betalen de werkenden de uitkeringen van de gepensioneerden van nu.",
+            "calc": [],
+            "scorepunten": [
+              {
+                "seq": 1,
+                "points": 1,
+                "text": "kapitaaldekkingsstelsel met kenmerk: de premie bouwt een eigen vermogen op voor het eigen pensioen later",
+                "criterion_id": "E2.1-02-b",
+                "calc_ref": null
+              }
+            ],
+            "rules": [
+              "Alleen de keuze kapitaaldekkingsstelsel zonder kenmerk levert geen scorepunt op."
+            ],
+            "alternatives": [
+              "Ook goed als kenmerk: de premie wordt belegd en op naam van de deelnemer gezet / de deelnemer betaalt niet voor de gepensioneerden van nu."
+            ],
+            "follow_through": null
+          },
+          "noise_data": [],
+          "new_concepts": [],
+          "builds_on_vragen": [],
+          "pattern": "P05",
+          "knobs": {
+            "solo": "unistructureel",
+            "route": null,
+            "steps": "1",
+            "sources": "in vraagtekst",
+            "noise": "nee",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": "nee"
+          },
+          "label": {
+            "exam_id": null,
+            "question_id": "O1-V3",
+            "question_number": 3,
+            "opgave_id": "O1",
+            "first_of_opgave": false,
+            "points": 1,
+            "pattern": "P05",
+            "solo": "unistructureel",
+            "route": null,
+            "steps": "1",
+            "sources": "in vraagtekst",
+            "noise": "nee",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": "nee",
+            "example_quality": null,
+            "builds_on_questions": [],
+            "proposed_pattern": null,
+            "example_quality_reason": null,
+            "combination": 1,
+            "bloom": "begrijpen",
+            "scorepunt_bloom": [
+              {
+                "points": 1,
+                "bloom": "begrijpen",
+                "group_id": "E2.1-02"
+              }
+            ],
+            "confidence": {
+              "pattern": "high",
+              "solo": "high",
+              "route": "high",
+              "steps": "high",
+              "sources": "high",
+              "noise": "high",
+              "claim": "high",
+              "new_concept": "high",
+              "schema": "high",
+              "builds_on": "high"
+            },
+            "evidence": {
+              "pattern": "Kies of het aanvullende pensioen van Horizon bij het omslagstelsel of bij het kapitaaldekkingsstelsel hoort.",
+              "solo": "Noem het kenmerk in de tekst van Horizon waaraan je dat ziet.",
+              "steps": "kapitaaldekkingsstelsel met kenmerk: de premie bouwt een eigen vermogen op voor het eigen pensioen later",
+              "sources": "Zo groeit uw eigen pensioenpot tot u met pensioen gaat. Uit die pot betalen wij later uw pensioen.",
+              "noise": "Zo groeit uw eigen pensioenpot tot u met pensioen gaat.",
+              "claim": "Kies of het aanvullende pensioen van Horizon bij het omslagstelsel of bij het kapitaaldekkingsstelsel hoort.",
+              "new_concept": "Kies of het aanvullende pensioen van Horizon bij het omslagstelsel of bij het kapitaaldekkingsstelsel hoort.",
+              "builds_on": "Noem het kenmerk in de tekst van Horizon waaraan je dat ziet."
+            },
+            "repaired_fields": [],
+            "disagreements": {}
+          },
+          "scorepunten": [
+            {
+              "seq": 1,
+              "points": 1,
+              "criterion_id": "E2.1-02-b",
+              "group_id": "E2.1-02",
+              "bloom": "begrijpen"
+            }
+          ],
+          "open_findings": []
+        },
+        {
+          "vraag_id": "O1-V4",
+          "number": 4,
+          "points": 2,
+          "stem": "Meneer De Vries is gepensioneerd. In 2025 ontving hij van Horizon een aanvullend pensioen van € 12.000 per jaar. Horizon heeft dit pensioen in 2026 verhoogd met 2,5% en in 2027 met 3,0%. In de bouw stegen de prijzen in 2026 met 2,5% en in 2027 met 3,0%. De cao-lonen in de bouw stegen in 2026 met 4,0% en in 2027 met 3,5%.\nBereken het aanvullende pensioen per jaar van De Vries in 2027. Rond af op hele euro's.\nKies of Horizon het pensioen van De Vries waardevast of welvaartsvast heeft geïndexeerd. Licht je keuze toe met de gegeven prijs- en loonstijging.",
+          "uitwerkbijlage": null,
+          "cv": {
+            "maximumscore": 2,
+            "model_answer": "Een voorbeeld van een juist antwoord is:\n• In 2026 wordt het pensioen € 12.000 × 1,025 = € 12.300 en in 2027 wordt het € 12.300 × 1,03 = € 12.669.\n• Het pensioen is waardevast geïndexeerd, want het is elk jaar met hetzelfde percentage verhoogd als de prijzen (2,5% en 3,0%) en niet met de loonstijging (4,0% en 3,5%).",
+            "calc": [
+              {
+                "name": "factor_2026",
+                "expr": "1 + idx_2026",
+                "round": 3,
+                "rounding": null,
+                "shown": "1,025"
+              },
+              {
+                "name": "factor_2027",
+                "expr": "1 + idx_2027",
+                "round": 2,
+                "rounding": null,
+                "shown": "1,03"
+              },
+              {
+                "name": "pensioen_2026",
+                "expr": "pensioen_2025 * factor_2026",
+                "round": 0,
+                "rounding": null,
+                "shown": "€ 12.300"
+              },
+              {
+                "name": "pensioen_2027",
+                "expr": "pensioen_2026 * factor_2027",
+                "round": 0,
+                "rounding": null,
+                "shown": "€ 12.669"
+              }
+            ],
+            "scorepunten": [
+              {
+                "seq": 1,
+                "points": 1,
+                "text": "berekening pensioen in 2027 na twee indexeringen",
+                "criterion_id": "E2.1-01-c",
+                "calc_ref": "pensioen_2027"
+              },
+              {
+                "seq": 2,
+                "points": 1,
+                "text": "waardevast met argument: indexering volgt de prijsstijging en niet de loonstijging",
+                "criterion_id": "E2.1-01-a",
+                "calc_ref": null
+              }
+            ],
+            "rules": [
+              "Wie de percentages optelt (€ 12.000 × 1,055 = € 12.660), krijgt voor de berekening geen scorepunt."
+            ],
+            "alternatives": [
+              "Ook goed als argument: de koopkracht van het pensioen blijft gelijk, maar De Vries gaat er ten opzichte van de werkenden op achteruit, omdat de lonen sneller stegen."
+            ],
+            "follow_through": null
+          },
+          "noise_data": [],
+          "new_concepts": [],
+          "builds_on_vragen": [],
+          "pattern": "P05",
+          "knobs": {
+            "solo": "multistructureel",
+            "route": null,
+            "steps": "2",
+            "sources": "in vraagtekst",
+            "noise": "nee",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": "nee"
+          },
+          "label": {
+            "exam_id": null,
+            "question_id": "O1-V4",
+            "question_number": 4,
+            "opgave_id": "O1",
+            "first_of_opgave": false,
+            "points": 2,
+            "pattern": "P08+P05",
+            "solo": "multistructureel",
+            "route": "zelf vinden",
+            "steps": "2",
+            "sources": "in vraagtekst",
+            "noise": "nee",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": "nee",
+            "example_quality": null,
+            "builds_on_questions": [],
+            "proposed_pattern": null,
+            "example_quality_reason": null,
+            "combination": 1,
+            "bloom": "toepassen",
+            "scorepunt_bloom": [
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "E2.1-01"
+              },
+              {
+                "points": 1,
+                "bloom": "begrijpen",
+                "group_id": "E2.1-01"
+              }
+            ],
+            "confidence": {
+              "pattern": "high",
+              "solo": "high",
+              "route": "high",
+              "steps": "high",
+              "sources": "high",
+              "noise": "high",
+              "claim": "high",
+              "new_concept": "high",
+              "schema": "high",
+              "builds_on": "high"
+            },
+            "evidence": {
+              "pattern": "Bereken het aanvullende pensioen per jaar van De Vries in 2027. Rond af op hele euro's.",
+              "solo": "Kies of Horizon het pensioen van De Vries waardevast of welvaartsvast heeft geïndexeerd.",
+              "route": "Bereken het aanvullende pensioen per jaar van De Vries in 2027. Rond af op hele euro's.",
+              "steps": "In 2026 wordt het pensioen € 12.000 × 1,025 = € 12.300 en in 2027 wordt het € 12.300 × 1,03 = € 12.669.",
+              "sources": "De cao-lonen in de bouw stegen in 2026 met 4,0% en in 2027 met 3,5%.",
+              "noise": "Licht je keuze toe met de gegeven prijs- en loonstijging.",
+              "claim": "Kies of Horizon het pensioen van De Vries waardevast of welvaartsvast heeft geïndexeerd.",
+              "new_concept": "Kies of Horizon het pensioen van De Vries waardevast of welvaartsvast heeft geïndexeerd.",
+              "builds_on": "Meneer De Vries is gepensioneerd. In 2025 ontving hij van Horizon een aanvullend pensioen van € 12.000 per jaar."
+            },
+            "repaired_fields": [],
+            "disagreements": {}
+          },
+          "scorepunten": [
+            {
+              "seq": 1,
+              "points": 1,
+              "criterion_id": "E2.1-01-c",
+              "group_id": "E2.1-01",
+              "bloom": "toepassen"
+            },
+            {
+              "seq": 2,
+              "points": 1,
+              "criterion_id": "E2.1-01-a",
+              "group_id": "E2.1-01",
+              "bloom": "begrijpen"
+            }
+          ],
+          "open_findings": []
+        },
+        {
+          "vraag_id": "O1-V5",
+          "number": 5,
+          "points": 2,
+          "stem": "Horizon kocht begin 2026 aandelen van een bouwconcern voor € 40,00 per aandeel. In 2026 ontving het fonds een dividend van € 1,60 per aandeel. Eind 2026 was de koers van het aandeel € 42,40. Het prijsindexcijfer van eind 2026 is 104 (begin 2026 = 100).\nBereken met hoeveel procent de reële waarde van de belegging per aandeel (koers plus ontvangen dividend) in 2026 is gestegen. Rond je antwoord af op één decimaal.",
+          "uitwerkbijlage": null,
+          "cv": {
+            "maximumscore": 2,
+            "model_answer": "Een voorbeeld van een juiste berekening is:\n• koerswinst per aandeel: € 42,40 − € 40 = € 2,40\nrendement: (1,60 + 2,40) / 40 × 100% = 10%\n• reëel indexcijfer: 110 / 104 × 100 = 105,8, dus de reële waarde is met 5,8% gestegen",
+            "calc": [
+              {
+                "name": "koerswinst",
+                "expr": "koers_eind - koers_begin",
+                "round": 2,
+                "rounding": null,
+                "shown": "€ 2,40"
+              },
+              {
+                "name": "rendement",
+                "expr": "(dividend + koerswinst) / koers_begin * 100",
+                "round": 0,
+                "rounding": null,
+                "shown": "10%"
+              },
+              {
+                "name": "nominaal_index",
+                "expr": "100 + rendement",
+                "round": 0,
+                "rounding": null,
+                "shown": "110"
+              },
+              {
+                "name": "reeel_index",
+                "expr": "nominaal_index / prijsindex * 100",
+                "round": 1,
+                "rounding": null,
+                "shown": "105,8"
+              },
+              {
+                "name": "reeel_stijging",
+                "expr": "reeel_index - 100",
+                "round": 1,
+                "rounding": null,
+                "shown": "5,8%"
+              }
+            ],
+            "scorepunten": [
+              {
+                "seq": 1,
+                "points": 1,
+                "text": "berekening rendement op het aandeel uit dividend en koersstijging",
+                "criterion_id": "G5.2-01-c",
+                "calc_ref": "rendement"
+              },
+              {
+                "seq": 2,
+                "points": 1,
+                "text": "omrekening met het prijsindexcijfer naar de stijging van de reële waarde",
+                "criterion_id": "E1.6-01-c",
+                "calc_ref": "reeel_stijging"
+              }
+            ],
+            "rules": [
+              "Voor elke rekenfout 1 scorepunt aftrekken.",
+              "Wie 10% − 4% = 6% berekent, krijgt het tweede scorepunt niet."
+            ],
+            "alternatives": [
+              "Met bedragen: nominale waarde eind 2026 € 42,40 + € 1,60 = € 44,00 (1 scorepunt); reële waarde € 44,00 / 104 × 100 = € 42,31, stijging (42,31 − 40,00) / 40,00 × 100% = 5,8% (1 scorepunt)."
+            ],
+            "follow_through": null
+          },
+          "noise_data": [],
+          "new_concepts": [],
+          "builds_on_vragen": [],
+          "pattern": "P08",
+          "knobs": {
+            "solo": "relationeel",
+            "route": "zelf vinden",
+            "steps": "2",
+            "sources": "in vraagtekst",
+            "noise": "nee",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": "nee"
+          },
+          "label": {
+            "exam_id": null,
+            "question_id": "O1-V5",
+            "question_number": 5,
+            "opgave_id": "O1",
+            "first_of_opgave": false,
+            "points": 2,
+            "pattern": "P08",
+            "solo": "relationeel",
+            "route": "zelf vinden",
+            "steps": "3",
+            "sources": "in vraagtekst",
+            "noise": "nee",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": "nee",
+            "example_quality": null,
+            "builds_on_questions": [],
+            "proposed_pattern": null,
+            "example_quality_reason": null,
+            "combination": 2,
+            "bloom": "toepassen",
+            "scorepunt_bloom": [
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "G5.2-01"
+              },
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "E1.6-01"
+              }
+            ],
+            "confidence": {
+              "pattern": "high",
+              "solo": "high",
+              "route": "high",
+              "steps": "high",
+              "sources": "high",
+              "noise": "high",
+              "claim": "high",
+              "new_concept": "high",
+              "schema": "high",
+              "builds_on": "high"
+            },
+            "evidence": {
+              "pattern": "Bereken met hoeveel procent de reële waarde van de belegging per aandeel (koers plus ontvangen dividend) in 2026 is gestegen.",
+              "solo": "omrekening met het prijsindexcijfer naar de stijging van de reële waarde",
+              "route": "Bereken met hoeveel procent de reële waarde van de belegging per aandeel (koers plus ontvangen dividend) in 2026 is gestegen.",
+              "steps": "reëel indexcijfer: 110 / 104 × 100 = 105,8, dus de reële waarde is met 5,8% gestegen",
+              "sources": "Eind 2026 was de koers van het aandeel € 42,40. Het prijsindexcijfer van eind 2026 is 104 (begin 2026 = 100).",
+              "noise": "Horizon kocht begin 2026 aandelen van een bouwconcern voor € 40,00 per aandeel.",
+              "claim": "Bereken met hoeveel procent de reële waarde van de belegging per aandeel (koers plus ontvangen dividend) in 2026 is gestegen.",
+              "new_concept": "Bereken met hoeveel procent de reële waarde van de belegging per aandeel (koers plus ontvangen dividend) in 2026 is gestegen.",
+              "builds_on": "Horizon kocht begin 2026 aandelen van een bouwconcern voor € 40,00 per aandeel."
+            },
+            "repaired_fields": [],
+            "disagreements": {}
+          },
+          "scorepunten": [
+            {
+              "seq": 1,
+              "points": 1,
+              "criterion_id": "G5.2-01-c",
+              "group_id": "G5.2-01",
+              "bloom": "toepassen"
+            },
+            {
+              "seq": 2,
+              "points": 1,
+              "criterion_id": "E1.6-01-c",
+              "group_id": "E1.6-01",
+              "bloom": "toepassen"
+            }
+          ],
+          "open_findings": []
+        }
+      ]
+    },
+    {
+      "opgave_id": "O2",
+      "title": "Mila's eerste belastingaangifte",
+      "context": "Mila (26) werkt als software-ontwikkelaar bij een ICT-bedrijf, rijdt een leaseauto van de zaak en heeft net een huis gekocht met een hypotheek. Ze doet voor het eerst zelf aangifte inkomstenbelasting; de informatiebronnen geven de tarieftabel met heffingskortingen (bron 1), haar jaaropgave (bron 2) en het inkomen en de belasting van twee collega's (bron 3).",
+      "context_tags": [
+        "ict",
+        "inkomstenbelasting starter"
+      ],
+      "reused_from": null,
+      "intro": "Mila werkt sinds kort als software-ontwikkelaar bij een ICT-bedrijf. Van haar werkgever heeft zij een leaseauto, die zij ook privé gebruikt. Vorig jaar heeft zij met een hypotheek haar eerste huis gekocht. Over 2026 vult Mila voor het eerst zelf haar aangifte inkomstenbelasting in. Informatiebron 1 geeft de vereenvoudigde tarieftabel en de heffingskortingen voor 2026, informatiebron 2 de gegevens uit haar jaaropgave en haar hypotheekoverzicht, en informatiebron 3 het inkomen en de inkomstenbelasting van twee collega's.",
+      "data": {
+        "grens_1": 38000,
+        "grens_2": 76000,
+        "tarief_1": 0.36,
+        "tarief_2": 0.38,
+        "tarief_3": 0.495,
+        "ahk": 2100,
+        "arbeidskorting": 4200,
+        "ouderenkorting": 1800,
+        "brutoloon": 52400,
+        "vakantiegeld": 3880,
+        "bijtelling": 7600,
+        "hypotheekrente": 9800,
+        "bruto_noor": 36000,
+        "bi_noor": 34500,
+        "ib_noor": 6120,
+        "bruto_joost": 74000,
+        "bi_joost": 82000,
+        "ib_joost": 24790
+      },
+      "sources": [
+        {
+          "n": 1,
+          "title": "Tarieftabel inkomstenbelasting 2026 (vereenvoudigd)",
+          "kind": "table",
+          "text": "Heffingskortingen 2026 (in deze opgave vaste bedragen, die van de belasting volgens de tarieftabel afgaan):\n- algemene heffingskorting: € 2.100 (voor iedereen)\n- arbeidskorting: € 4.200 (voor iedereen die werkt)\n- ouderenkorting: € 1.800 (alleen voor wie de AOW-leeftijd heeft bereikt)",
+          "table": [
+            [
+              "schijf",
+              "belastbaar inkomen",
+              "tarief"
+            ],
+            [
+              "eerste schijf",
+              "€ 0 tot € 38.000",
+              "36%"
+            ],
+            [
+              "tweede schijf",
+              "€ 38.000 tot € 76.000",
+              "38%"
+            ],
+            [
+              "derde schijf",
+              "meer dan € 76.000",
+              "49,5%"
+            ]
+          ],
+          "figure_id": null,
+          "uses_data": [
+            "grens_1",
+            "tarief_1",
+            "tarief_2",
+            "ahk",
+            "arbeidskorting"
+          ],
+          "noise_data": [
+            "tarief_3",
+            "ouderenkorting"
+          ]
+        },
+        {
+          "n": 2,
+          "title": "Gegevens van Mila over 2026",
+          "kind": "table",
+          "text": "Bron: jaaropgave van de werkgever en jaaroverzicht van de hypotheek. Het brutoloon is inclusief vakantiegeld. De bijtelling voor het privégebruik van de leaseauto is al berekend. De betaalde hypotheekrente is volledig aftrekbaar. Mila heeft geen andere inkomsten en geen andere aftrekposten of bijtellingen.",
+          "table": [
+            [
+              "post",
+              "bedrag"
+            ],
+            [
+              "brutoloon (inclusief vakantiegeld)",
+              "€ 52.400"
+            ],
+            [
+              "waarvan vakantiegeld",
+              "€ 3.880"
+            ],
+            [
+              "bijtelling privégebruik leaseauto",
+              "€ 7.600"
+            ],
+            [
+              "betaalde hypotheekrente",
+              "€ 9.800"
+            ]
+          ],
+          "figure_id": null,
+          "uses_data": [
+            "brutoloon",
+            "bijtelling",
+            "hypotheekrente"
+          ],
+          "noise_data": [
+            "vakantiegeld"
+          ]
+        },
+        {
+          "n": 3,
+          "title": "Inkomen en inkomstenbelasting van twee collega's van Mila in 2026",
+          "kind": "table",
+          "text": "De te betalen inkomstenbelasting is berekend met de tarieftabel en de heffingskortingen uit informatiebron 1. Het belastbaar inkomen van Joost is hoger dan zijn bruto-inkomen, omdat hij een bijtelling heeft voor het privégebruik van een leaseauto.",
+          "table": [
+            [
+              "collega",
+              "bruto-inkomen",
+              "belastbaar inkomen",
+              "te betalen inkomstenbelasting"
+            ],
+            [
+              "Noor",
+              "€ 36.000",
+              "€ 34.500",
+              "€ 6.120"
+            ],
+            [
+              "Joost",
+              "€ 74.000",
+              "€ 82.000",
+              "€ 24.790"
+            ]
+          ],
+          "figure_id": null,
+          "uses_data": [
+            "bi_noor",
+            "ib_noor",
+            "bi_joost",
+            "ib_joost"
+          ],
+          "noise_data": [
+            "bruto_noor",
+            "bruto_joost"
+          ]
+        }
+      ],
+      "figures": [],
+      "vragen": [
+        {
+          "vraag_id": "O2-V6",
+          "number": 6,
+          "points": 3,
+          "stem": "Bereken het bedrag aan inkomstenbelasting dat Mila over 2026 moet betalen. Gebruik informatiebron 1 en informatiebron 2.",
+          "uitwerkbijlage": null,
+          "cv": {
+            "maximumscore": 3,
+            "model_answer": "Belastbaar inkomen: brutoloon € 52.400 + bijtelling € 7.600 − aftrekpost hypotheekrente € 9.800 = € 50.200. Belasting volgens de tarieftabel: eerste schijf 36% van € 38.000 = € 13.680; in de tweede schijf valt € 12.200, dus 38% van € 12.200 = € 4.636; samen € 18.316. Heffingskortingen: algemene heffingskorting € 2.100 + arbeidskorting € 4.200 = € 6.300 (geen ouderenkorting). Te betalen inkomstenbelasting: € 18.316 − € 6.300 aan heffingskortingen = € 12.016.",
+            "calc": [
+              {
+                "name": "belastbaar",
+                "expr": "brutoloon + bijtelling - hypotheekrente",
+                "round": 0,
+                "rounding": null,
+                "shown": "€ 50.200"
+              },
+              {
+                "name": "sch1",
+                "expr": "grens_1 * tarief_1",
+                "round": 0,
+                "rounding": null,
+                "shown": "€ 13.680"
+              },
+              {
+                "name": "deel2",
+                "expr": "belastbaar - grens_1",
+                "round": 0,
+                "rounding": null,
+                "shown": "€ 12.200"
+              },
+              {
+                "name": "sch2",
+                "expr": "deel2 * tarief_2",
+                "round": 0,
+                "rounding": null,
+                "shown": "€ 4.636"
+              },
+              {
+                "name": "bel_tabel",
+                "expr": "sch1 + sch2",
+                "round": 0,
+                "rounding": null,
+                "shown": "€ 18.316"
+              },
+              {
+                "name": "kortingen",
+                "expr": "ahk + arbeidskorting",
+                "round": 0,
+                "rounding": null,
+                "shown": "€ 6.300"
+              },
+              {
+                "name": "ib_mila",
+                "expr": "bel_tabel - kortingen",
+                "round": 0,
+                "rounding": null,
+                "shown": "€ 12.016"
+              }
+            ],
+            "scorepunten": [
+              {
+                "seq": 1,
+                "points": 1,
+                "text": "berekening van het belastbaar inkomen (brutoloon plus bijtelling min aftrekpost hypotheekrente)",
+                "criterion_id": "H4.6-02-b",
+                "calc_ref": "belastbaar"
+              },
+              {
+                "seq": 2,
+                "points": 1,
+                "text": "berekening van de belasting volgens de tarieftabel over de eerste en de tweede schijf",
+                "criterion_id": "H4.6-02-b",
+                "calc_ref": "bel_tabel"
+              },
+              {
+                "seq": 3,
+                "points": 1,
+                "text": "aftrekken van de algemene heffingskorting en de arbeidskorting (zonder ouderenkorting)",
+                "criterion_id": "H4.6-02-b",
+                "calc_ref": "ib_mila"
+              }
+            ],
+            "rules": [
+              "Voor elke fout 1 scorepunt in mindering brengen.",
+              "Als het vakantiegeld nog een keer bij het brutoloon is opgeteld, het eerste scorepunt niet toekennen."
+            ],
+            "alternatives": [
+              "Een berekening waarin de heffingskortingen afzonderlijk van de belasting volgens de tarieftabel worden afgetrokken, is ook goed."
+            ],
+            "follow_through": null
+          },
+          "noise_data": [],
+          "new_concepts": [],
+          "builds_on_vragen": [],
+          "pattern": "P08",
+          "knobs": {
+            "solo": "multistructureel",
+            "route": "zelf vinden",
+            "steps": "3",
+            "sources": "meerdere bronnen",
+            "noise": "ja",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": null
+          },
+          "label": {
+            "exam_id": null,
+            "question_id": "O2-V6",
+            "question_number": 6,
+            "opgave_id": "O2",
+            "first_of_opgave": true,
+            "points": 3,
+            "pattern": "P08",
+            "solo": "relationeel",
+            "route": "zelf vinden",
+            "steps": "3",
+            "sources": "meerdere bronnen",
+            "noise": "ja",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": null,
+            "example_quality": null,
+            "builds_on_questions": [],
+            "proposed_pattern": null,
+            "example_quality_reason": null,
+            "combination": 1,
+            "bloom": "toepassen",
+            "scorepunt_bloom": [
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "H4.6-02"
+              },
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "H4.6-02"
+              },
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "H4.6-02"
+              }
+            ],
+            "confidence": {
+              "pattern": "high",
+              "solo": "high",
+              "route": "high",
+              "steps": "high",
+              "sources": "high",
+              "noise": "high",
+              "claim": "high",
+              "new_concept": "high",
+              "schema": "high",
+              "builds_on": "high"
+            },
+            "evidence": {
+              "pattern": "Bereken het bedrag aan inkomstenbelasting dat Mila over 2026 moet betalen.",
+              "solo": "Gebruik informatiebron 1 en informatiebron 2.",
+              "route": "Bereken het bedrag aan inkomstenbelasting dat Mila over 2026 moet betalen.",
+              "steps": "berekening van de belasting volgens de tarieftabel over de eerste en de tweede schijf",
+              "sources": "Gebruik informatiebron 1 en informatiebron 2.",
+              "noise": "| waarvan vakantiegeld | € 3.880 |",
+              "claim": "Bereken het bedrag aan inkomstenbelasting dat Mila over 2026 moet betalen.",
+              "new_concept": "De bijtelling voor het privégebruik van de leaseauto is al berekend. De betaalde hypotheekrente is volledig aftrekbaar."
+            },
+            "repaired_fields": [],
+            "disagreements": {}
+          },
+          "scorepunten": [
+            {
+              "seq": 1,
+              "points": 1,
+              "criterion_id": "H4.6-02-b",
+              "group_id": "H4.6-02",
+              "bloom": "toepassen"
+            },
+            {
+              "seq": 2,
+              "points": 1,
+              "criterion_id": "H4.6-02-b",
+              "group_id": "H4.6-02",
+              "bloom": "toepassen"
+            },
+            {
+              "seq": 3,
+              "points": 1,
+              "criterion_id": "H4.6-02-b",
+              "group_id": "H4.6-02",
+              "bloom": "toepassen"
+            }
+          ],
+          "open_findings": []
+        },
+        {
+          "vraag_id": "O2-V7",
+          "number": 7,
+          "points": 2,
+          "stem": "Mila's teamleider Ruben verdient veel meer dan Mila. Ook hij heeft een eigen huis en hij betaalt evenveel hypotheekrente als Mila. Zijn belastbaar inkomen valt ook na de aftrek van die hypotheekrente in de derde schijf. Ruben stelt: 'Een aftrekpost werkt net als een heffingskorting. Omdat wij hetzelfde bedrag aan hypotheekrente aftrekken, levert die aftrekpost ons allebei evenveel belastingvoordeel op.'\nLeg uit waarom de stelling van Ruben niet klopt.",
+          "uitwerkbijlage": null,
+          "cv": {
+            "maximumscore": 2,
+            "model_answer": "Een aftrekpost verlaagt het belastbaar inkomen. Het belastingvoordeel is het afgetrokken bedrag maal het marginaal tarief. Ruben valt met zijn hogere inkomen in een hogere schijf / heeft een hoger marginaal tarief, dus dezelfde hypotheekrente levert hem meer belastingvoordeel op dan Mila. Een heffingskorting gaat als vast bedrag van de te betalen belasting af en levert daardoor iedereen hetzelfde bedrag op, ongeacht het tarief waartegen iemand belasting betaalt.",
+            "calc": [],
+            "scorepunten": [
+              {
+                "seq": 1,
+                "points": 1,
+                "text": "uitleg dat een aftrekpost het belastbaar inkomen verlaagt en daardoor bespaart tegen het marginaal tarief, dat voor Ruben hoger is, zodat zijn voordeel groter is",
+                "criterion_id": "H4.6-02-d",
+                "calc_ref": null
+              },
+              {
+                "seq": 2,
+                "points": 1,
+                "text": "uitleg dat een heffingskorting een vast bedrag van de te betalen belasting aftrekt en dus voor iedereen even groot is",
+                "criterion_id": "H4.6-02-d",
+                "calc_ref": null
+              }
+            ],
+            "rules": [],
+            "alternatives": [
+              "Een uitleg met een zelfgekozen getallenvoorbeeld (een aftrekpost maal twee verschillende marginale tarieven) is ook goed, als daarin beide schakels zichtbaar zijn."
+            ],
+            "follow_through": null
+          },
+          "noise_data": [],
+          "new_concepts": [],
+          "builds_on_vragen": [],
+          "pattern": "P03",
+          "knobs": {
+            "solo": "relationeel",
+            "route": null,
+            "steps": "2",
+            "sources": "in vraagtekst",
+            "noise": "nee",
+            "claim": "ja",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": "nee"
+          },
+          "label": {
+            "exam_id": null,
+            "question_id": "O2-V7",
+            "question_number": 7,
+            "opgave_id": "O2",
+            "first_of_opgave": false,
+            "points": 2,
+            "pattern": "P03",
+            "solo": "relationeel",
+            "route": null,
+            "steps": "2",
+            "sources": "in vraagtekst",
+            "noise": "nee",
+            "claim": "ja",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": "nee",
+            "example_quality": null,
+            "builds_on_questions": [],
+            "proposed_pattern": null,
+            "example_quality_reason": null,
+            "combination": 1,
+            "bloom": "begrijpen",
+            "scorepunt_bloom": [
+              {
+                "points": 1,
+                "bloom": "begrijpen",
+                "group_id": "H4.6-02"
+              },
+              {
+                "points": 1,
+                "bloom": "begrijpen",
+                "group_id": "H4.6-02"
+              }
+            ],
+            "confidence": {
+              "pattern": "high",
+              "solo": "high",
+              "route": "high",
+              "steps": "high",
+              "sources": "high",
+              "noise": "high",
+              "claim": "high",
+              "new_concept": "high",
+              "schema": "high",
+              "builds_on": "high"
+            },
+            "evidence": {
+              "pattern": "Leg uit waarom de stelling van Ruben niet klopt.",
+              "solo": "uitleg dat een aftrekpost het belastbaar inkomen verlaagt en daardoor bespaart tegen het marginaal tarief, dat voor Ruben hoger is",
+              "steps": "Het belastingvoordeel is het afgetrokken bedrag maal het marginaal tarief.",
+              "sources": "Zijn belastbaar inkomen valt ook na de aftrek van die hypotheekrente in de derde schijf.",
+              "noise": "Zijn belastbaar inkomen valt ook na de aftrek van die hypotheekrente in de derde schijf.",
+              "claim": "Ruben stelt: 'Een aftrekpost werkt net als een heffingskorting.",
+              "new_concept": "Leg uit waarom de stelling van Ruben niet klopt.",
+              "builds_on": "Leg uit waarom de stelling van Ruben niet klopt."
+            },
+            "repaired_fields": [],
+            "disagreements": {}
+          },
+          "scorepunten": [
+            {
+              "seq": 1,
+              "points": 1,
+              "criterion_id": "H4.6-02-d",
+              "group_id": "H4.6-02",
+              "bloom": "begrijpen"
+            },
+            {
+              "seq": 2,
+              "points": 1,
+              "criterion_id": "H4.6-02-d",
+              "group_id": "H4.6-02",
+              "bloom": "begrijpen"
+            }
+          ],
+          "open_findings": []
+        },
+        {
+          "vraag_id": "O2-V8",
+          "number": 8,
+          "points": 2,
+          "stem": "Mila wil weten hoe zwaar de inkomstenbelasting drukt bij verschillende inkomens. Zij vergelijkt zichzelf met haar collega's Noor en Joost (zie informatiebron 3).\nToon met een berekening aan of de inkomstenbelasting voor Mila, Noor en Joost progressief of degressief is. Gebruik je antwoord op vraag 6. Ga uit van het belastbaar inkomen. Rond percentages af op één decimaal.",
+          "uitwerkbijlage": null,
+          "cv": {
+            "maximumscore": 2,
+            "model_answer": "Gemiddeld tarief (inkomstenbelasting / belastbaar inkomen) Noor: 6.120 / 34.500 × 100% = 17,7%; Mila: 12.016 / 50.200 × 100% = 23,9%; Joost: 24.790 / 82.000 × 100% = 30,2%. Bij een hoger belastbaar inkomen is het gemiddeld tarief hoger, dus de inkomstenbelasting is progressief.",
+            "calc": [
+              {
+                "name": "gt_noor",
+                "expr": "ib_noor / bi_noor * 100",
+                "round": 1,
+                "rounding": null,
+                "shown": "17,7%"
+              },
+              {
+                "name": "gt_mila",
+                "expr": "ib_mila / belastbaar * 100",
+                "round": 1,
+                "rounding": null,
+                "shown": "23,9%"
+              },
+              {
+                "name": "gt_joost",
+                "expr": "ib_joost / bi_joost * 100",
+                "round": 1,
+                "rounding": null,
+                "shown": "30,2%"
+              }
+            ],
+            "scorepunten": [
+              {
+                "seq": 1,
+                "points": 1,
+                "text": "berekening van het gemiddeld tarief van Mila, Noor en Joost",
+                "criterion_id": "H4.6-01-b",
+                "calc_ref": "gt_mila"
+              },
+              {
+                "seq": 2,
+                "points": 1,
+                "text": "conclusie dat de inkomstenbelasting progressief is, omdat het gemiddeld tarief stijgt bij een hoger belastbaar inkomen",
+                "criterion_id": "H4.6-01-b",
+                "calc_ref": null
+              }
+            ],
+            "rules": [
+              "Het tweede scorepunt alleen toekennen als de conclusie volgt uit de berekende gemiddelde tarieven."
+            ],
+            "alternatives": [
+              "Gemiddelde tarieven zonder afronding of als decimaal getal (zoals 0,239 voor Mila) zijn ook goed."
+            ],
+            "follow_through": "Een doorrekenfout uit vraag 6 niet opnieuw aanrekenen."
+          },
+          "noise_data": [],
+          "new_concepts": [],
+          "builds_on_vragen": [
+            6
+          ],
+          "pattern": "P09",
+          "knobs": {
+            "solo": "multistructureel",
+            "route": "zelf vinden",
+            "steps": "2",
+            "sources": "één bron",
+            "noise": "ja",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": "ja"
+          },
+          "label": {
+            "exam_id": null,
+            "question_id": "O2-V8",
+            "question_number": 8,
+            "opgave_id": "O2",
+            "first_of_opgave": false,
+            "points": 2,
+            "pattern": "P09",
+            "solo": "relationeel",
+            "route": "zelf vinden",
+            "steps": "2",
+            "sources": "één bron",
+            "noise": "ja",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": "ja",
+            "example_quality": null,
+            "builds_on_questions": [
+              6
+            ],
+            "proposed_pattern": null,
+            "example_quality_reason": null,
+            "combination": 1,
+            "bloom": "toepassen",
+            "scorepunt_bloom": [
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "H4.6-01"
+              },
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "H4.6-01"
+              }
+            ],
+            "confidence": {
+              "pattern": "high",
+              "solo": "high",
+              "route": "high",
+              "steps": "high",
+              "sources": "high",
+              "noise": "high",
+              "claim": "high",
+              "new_concept": "high",
+              "schema": "high",
+              "builds_on": "high"
+            },
+            "evidence": {
+              "pattern": "Toon met een berekening aan of de inkomstenbelasting voor Mila, Noor en Joost progressief of degressief is.",
+              "solo": "Zij vergelijkt zichzelf met haar collega's Noor en Joost (zie informatiebron 3).",
+              "route": "Toon met een berekening aan of de inkomstenbelasting voor Mila, Noor en Joost progressief of degressief is.",
+              "steps": "conclusie dat de inkomstenbelasting progressief is, omdat het gemiddeld tarief stijgt bij een hoger belastbaar inkomen",
+              "sources": "Zij vergelijkt zichzelf met haar collega's Noor en Joost (zie informatiebron 3).",
+              "noise": "| Noor | € 36.000 | € 34.500 | € 6.120 |",
+              "claim": "Toon met een berekening aan of de inkomstenbelasting voor Mila, Noor en Joost progressief of degressief is.",
+              "new_concept": "Ga uit van het belastbaar inkomen.",
+              "builds_on": "Gebruik je antwoord op vraag 6."
+            },
+            "repaired_fields": [],
+            "disagreements": {}
+          },
+          "scorepunten": [
+            {
+              "seq": 1,
+              "points": 1,
+              "criterion_id": "H4.6-01-b",
+              "group_id": "H4.6-01",
+              "bloom": "toepassen"
+            },
+            {
+              "seq": 2,
+              "points": 1,
+              "criterion_id": "H4.6-01-b",
+              "group_id": "H4.6-01",
+              "bloom": "toepassen"
+            }
+          ],
+          "open_findings": []
+        }
+      ]
+    },
+    {
+      "opgave_id": "O3",
+      "title": "Rapport over ongelijkheid",
+      "context": "Een planbureau publiceert een rapport over de verdeling van inkomen en vermogen van Nederlandse huishoudens (percentielgrenzen, aandeel van de rijkste 10%, Gini-coëfficiënt in twee jaren). Het kabinet reageert met een plan voor een hogere arbeidskorting.",
+      "context_tags": [
+        "overheid",
+        "ongelijkheidsrapport"
+      ],
+      "reused_from": null,
+      "intro": "Een planbureau heeft een rapport gepubliceerd over de verdeling van inkomen en vermogen van Nederlandse huishoudens. De tabel hieronder geeft enkele uitkomsten uit dat rapport voor het jaar 2025.\n\nTabel  Besteedbaar inkomen en vermogen van huishoudens in Nederland, 2025\n\n| | besteedbaar inkomen per huishouden per jaar | vermogen per huishouden |\n|---|---|---|\n| grens van het 10e percentiel | € 19.500 | € 4.500 |\n| grens van het 50e percentiel (mediaan) | € 38.700 | € 81.000 |\n| grens van het 90e percentiel | € 74.100 | € 594.000 |\n| aandeel van de rijkste 10% van de huishoudens in het totaal | 24% | 61% |\n\nToelichting bij de tabel: de grens van het 10e percentiel is het bedrag waaronder de 10% huishoudens met het laagste inkomen (of het laagste vermogen) zitten. De grens van het 90e percentiel is het bedrag waarboven de 10% huishoudens met het hoogste inkomen (of het hoogste vermogen) zitten.\n\nHet kabinet reageert op het rapport met een plan om de arbeidskorting te verhogen. De arbeidskorting is een heffingskorting voor mensen die werken: hoe hoger de korting, hoe minder belasting zij betalen.",
+      "data": {
+        "pct_grens_hoog": 90,
+        "pct_grens_laag": 10,
+        "ink_p10": 19500,
+        "ink_p50": 38700,
+        "ink_p90": 74100,
+        "verm_p10": 4500,
+        "verm_p50": 81000,
+        "verm_p90": 594000,
+        "aandeel_top10_inkomen": 0.24,
+        "aandeel_top10_vermogen": 0.61,
+        "gini_2015": 0.3,
+        "gini_2025": 0.28,
+        "extra_arbeidskorting": 300,
+        "ink_a": 20000,
+        "ink_b": 75000,
+        "koopkracht_a": 0.015,
+        "koopkracht_b": 0.004
+      },
+      "sources": [],
+      "figures": [],
+      "vragen": [
+        {
+          "vraag_id": "O3-V9",
+          "number": 9,
+          "points": 3,
+          "stem": "Het planbureau wil laten zien hoeveel groter de ongelijkheid bij het vermogen is dan bij het besteedbaar inkomen. Gebruik de tabel.\nBereken met de 90/10-ratio hoeveel keer zo ongelijk het vermogen is verdeeld als het besteedbaar inkomen. Rond je antwoord af op één decimaal.",
+          "uitwerkbijlage": null,
+          "cv": {
+            "maximumscore": 3,
+            "model_answer": "Een voorbeeld van een juist antwoord is:\n• De 90/10-ratio van het besteedbaar inkomen is 74.100 / 19.500 = 3,8.\n• De 90/10-ratio van het vermogen is 594.000 / 4.500 = 132.\n• De ratio van het vermogen is dan 132 / 3,8 = 34,7 keer zo groot als die van het besteedbaar inkomen: het vermogen is veel ongelijker verdeeld dan het inkomen.",
+            "calc": [
+              {
+                "name": "ratio_ink",
+                "expr": "ink_p90 / ink_p10",
+                "round": 1,
+                "rounding": "half_up",
+                "shown": "3,8"
+              },
+              {
+                "name": "ratio_verm",
+                "expr": "verm_p90 / verm_p10",
+                "round": 0,
+                "rounding": "half_up",
+                "shown": "132"
+              },
+              {
+                "name": "factor",
+                "expr": "ratio_verm / ratio_ink",
+                "round": 1,
+                "rounding": "half_up",
+                "shown": "34,7"
+              }
+            ],
+            "scorepunten": [
+              {
+                "seq": 1,
+                "points": 1,
+                "text": "berekening van de 90/10-ratio van het besteedbaar inkomen",
+                "criterion_id": "H4.1-02-b",
+                "calc_ref": "ratio_ink"
+              },
+              {
+                "seq": 2,
+                "points": 1,
+                "text": "berekening van de 90/10-ratio van het vermogen als maatstaf voor de vermogensongelijkheid",
+                "criterion_id": "H4.3-01-c",
+                "calc_ref": "ratio_verm"
+              },
+              {
+                "seq": 3,
+                "points": 1,
+                "text": "vergelijking van beide ratio's (deling) met de juiste uitkomst",
+                "criterion_id": "H4.3-01-c",
+                "calc_ref": "factor"
+              }
+            ],
+            "rules": [
+              "Voor elke fout 1 scorepunt in mindering brengen.",
+              "Als de grenzen van het 50e percentiel of het aandeel van de rijkste 10% zijn gebruikt in plaats van de grenzen van het 10e en 90e percentiel: ten hoogste 1 scorepunt toekennen."
+            ],
+            "alternatives": [
+              "Eerst per percentielgrens het vermogen delen door het besteedbaar inkomen en daarna de uitkomst bij het 90e percentiel delen door die bij het 10e percentiel geeft dezelfde uitkomst en wordt goed gerekend.",
+              "Een antwoord dat afwijkt door een andere (juiste) afronding van tussenuitkomsten wordt goed gerekend."
+            ],
+            "follow_through": null
+          },
+          "noise_data": [],
+          "new_concepts": [],
+          "builds_on_vragen": [],
+          "pattern": "P08",
+          "knobs": {
+            "solo": "relationeel",
+            "route": "zelf vinden",
+            "steps": "3",
+            "sources": "in vraagtekst",
+            "noise": "ja",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": null
+          },
+          "label": {
+            "exam_id": null,
+            "question_id": "O3-V9",
+            "question_number": 9,
+            "opgave_id": "O3",
+            "first_of_opgave": true,
+            "points": 3,
+            "pattern": "P07",
+            "solo": "multistructureel",
+            "route": "gegeven",
+            "steps": "2",
+            "sources": "in vraagtekst",
+            "noise": "ja",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": null,
+            "example_quality": null,
+            "builds_on_questions": [],
+            "proposed_pattern": null,
+            "example_quality_reason": null,
+            "combination": 2,
+            "bloom": "toepassen",
+            "scorepunt_bloom": [
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "H4.1-02"
+              },
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "H4.3-01"
+              },
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "H4.3-01"
+              }
+            ],
+            "confidence": {
+              "pattern": "high",
+              "solo": "medium",
+              "route": "high",
+              "steps": "high",
+              "sources": "high",
+              "noise": "high",
+              "claim": "high",
+              "new_concept": "high",
+              "schema": "high",
+              "builds_on": "high"
+            },
+            "evidence": {
+              "pattern": "Bereken met de 90/10-ratio hoeveel keer zo ongelijk het vermogen is verdeeld als het besteedbaar inkomen.",
+              "solo": "De 90/10-ratio van het besteedbaar inkomen is 74.100 / 19.500 = 3,8.",
+              "route": "Bereken met de 90/10-ratio hoeveel keer zo ongelijk het vermogen is verdeeld als het besteedbaar inkomen.",
+              "steps": "vergelijking van beide ratio's (deling) met de juiste uitkomst",
+              "sources": "Het planbureau wil laten zien hoeveel groter de ongelijkheid bij het vermogen is dan bij het besteedbaar inkomen. Gebruik de tabel.",
+              "noise": "| grens van het 50e percentiel (mediaan) | € 38.700 | € 81.000 |",
+              "claim": "Het planbureau wil laten zien hoeveel groter de ongelijkheid bij het vermogen is dan bij het besteedbaar inkomen.",
+              "new_concept": "Bereken met de 90/10-ratio hoeveel keer zo ongelijk het vermogen is verdeeld als het besteedbaar inkomen."
+            },
+            "repaired_fields": [
+              "pattern",
+              "route",
+              "schema"
+            ],
+            "disagreements": {
+              "pattern": {
+                "A": "P08",
+                "B": "P07",
+                "R": "P07"
+              },
+              "solo": {
+                "A": "relationeel",
+                "B": "multistructureel"
+              },
+              "route": {
+                "A": "zelf vinden",
+                "B": "gegeven",
+                "R": "gegeven"
+              },
+              "schema": {
+                "A": null,
+                "B": null,
+                "R": null
+              }
+            }
+          },
+          "scorepunten": [
+            {
+              "seq": 1,
+              "points": 1,
+              "criterion_id": "H4.1-02-b",
+              "group_id": "H4.1-02",
+              "bloom": "toepassen"
+            },
+            {
+              "seq": 2,
+              "points": 1,
+              "criterion_id": "H4.3-01-c",
+              "group_id": "H4.3-01",
+              "bloom": "toepassen"
+            },
+            {
+              "seq": 3,
+              "points": 1,
+              "criterion_id": "H4.3-01-c",
+              "group_id": "H4.3-01",
+              "bloom": "toepassen"
+            }
+          ],
+          "open_findings": []
+        },
+        {
+          "vraag_id": "O3-V10",
+          "number": 10,
+          "points": 1,
+          "stem": "Volgens het rapport was de Gini-coëfficiënt van het besteedbaar inkomen van huishoudens 0,30 in 2015 en 0,28 in 2025.\nIs de ongelijkheid van het besteedbaar inkomen tussen 2015 en 2025 toegenomen of afgenomen? Licht je antwoord toe.",
+          "uitwerkbijlage": null,
+          "cv": {
+            "maximumscore": 1,
+            "model_answer": "Een voorbeeld van een juist antwoord is:\nAfgenomen, want de Gini-coëfficiënt is gedaald van 0,30 naar 0,28. Hoe dichter de Gini-coëfficiënt bij 0 ligt, hoe gelijker het inkomen over de huishoudens is verdeeld.",
+            "calc": [],
+            "scorepunten": [
+              {
+                "seq": 1,
+                "points": 1,
+                "text": "keuze 'afgenomen' met een toelichting die de daling van de Gini-coëfficiënt koppelt aan een gelijkere verdeling (0 = volledig gelijke verdeling)",
+                "criterion_id": "H4.1-01-c",
+                "calc_ref": null
+              }
+            ],
+            "rules": [
+              "Voor alleen de keuze zonder juiste toelichting geen scorepunt toekennen."
+            ],
+            "alternatives": [
+              "Afgenomen, omdat bij een lagere Gini-coëfficiënt de Lorenzcurve dichter bij de lijn van volledige gelijkheid ligt."
+            ],
+            "follow_through": null
+          },
+          "new_concepts": [],
+          "builds_on_vragen": [],
+          "pattern": "P05",
+          "knobs": {
+            "solo": "multistructureel",
+            "route": null,
+            "steps": "1",
+            "sources": "in vraagtekst",
+            "noise": "nee",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": "nee"
+          },
+          "label": {
+            "exam_id": null,
+            "question_id": "O3-V10",
+            "question_number": 10,
+            "opgave_id": "O3",
+            "first_of_opgave": false,
+            "points": 1,
+            "pattern": "P05",
+            "solo": "unistructureel",
+            "route": null,
+            "steps": "1",
+            "sources": "in vraagtekst",
+            "noise": "nee",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": "nee",
+            "example_quality": null,
+            "builds_on_questions": [],
+            "proposed_pattern": null,
+            "example_quality_reason": null,
+            "combination": 1,
+            "bloom": "begrijpen",
+            "scorepunt_bloom": [
+              {
+                "points": 1,
+                "bloom": "begrijpen",
+                "group_id": "H4.1-01"
+              }
+            ],
+            "confidence": {
+              "pattern": "high",
+              "solo": "high",
+              "route": "high",
+              "steps": "high",
+              "sources": "high",
+              "noise": "high",
+              "claim": "high",
+              "new_concept": "high",
+              "schema": "high",
+              "builds_on": "high"
+            },
+            "evidence": {
+              "pattern": "Is de ongelijkheid van het besteedbaar inkomen tussen 2015 en 2025 toegenomen of afgenomen? Licht je antwoord toe.",
+              "solo": "Afgenomen, want de Gini-coëfficiënt is gedaald van 0,30 naar 0,28.",
+              "steps": "Afgenomen, want de Gini-coëfficiënt is gedaald van 0,30 naar 0,28.",
+              "sources": "Volgens het rapport was de Gini-coëfficiënt van het besteedbaar inkomen van huishoudens 0,30 in 2015 en 0,28 in 2025.",
+              "noise": "Volgens het rapport was de Gini-coëfficiënt van het besteedbaar inkomen van huishoudens 0,30 in 2015 en 0,28 in 2025.",
+              "claim": "Is de ongelijkheid van het besteedbaar inkomen tussen 2015 en 2025 toegenomen of afgenomen?",
+              "new_concept": "Volgens het rapport was de Gini-coëfficiënt van het besteedbaar inkomen van huishoudens 0,30 in 2015 en 0,28 in 2025.",
+              "builds_on": "Is de ongelijkheid van het besteedbaar inkomen tussen 2015 en 2025 toegenomen of afgenomen? Licht je antwoord toe."
+            },
+            "repaired_fields": [],
+            "disagreements": {}
+          },
+          "scorepunten": [
+            {
+              "seq": 1,
+              "points": 1,
+              "criterion_id": "H4.1-01-c",
+              "group_id": "H4.1-01",
+              "bloom": "begrijpen"
+            }
+          ],
+          "open_findings": []
+        },
+        {
+          "vraag_id": "O3-V11",
+          "number": 11,
+          "points": 3,
+          "stem": "Het kabinet wil de arbeidskorting zo verhogen dat het besteedbaar inkomen van elke werkende met € 300 per jaar stijgt. Het planbureau beoordeelt het plan met een koopkrachtplaatje. Een koopkrachtplaatje is een overzicht van de procentuele verandering van het besteedbaar inkomen door een maatregel, voor een aantal voorbeeldhuishoudens met verschillende inkomens.\nTwee van die voorbeeldhuishoudens hebben elk één werkende: huishouden A heeft een besteedbaar inkomen van € 20.000 per jaar en huishouden B van € 75.000 per jaar. Volgens het koopkrachtplaatje stijgt door het plan het besteedbaar inkomen van huishouden A met 1,5% en dat van huishouden B met 0,4%. Ga ervan uit dat de prijzen en alle andere inkomensposten gelijk blijven.\nLeg met het koopkrachtplaatje voor huishouden A en B uit of het plan nivellerend of denivellerend werkt.\nLeg ook uit waarom het verschil in euro's tussen hun besteedbare inkomens toch gelijk blijft.",
+          "uitwerkbijlage": null,
+          "cv": {
+            "maximumscore": 3,
+            "model_answer": "Een voorbeeld van een juist antwoord is:\n• Het besteedbaar inkomen van huishouden A stijgt met 1,5% en dat van huishouden B met 0,4%. Het huishouden met het lage inkomen gaat er procentueel meer op vooruit, dus het plan werkt nivellerend.\n• Hetzelfde bedrag van € 300 is een groter deel van een laag inkomen dan van een hoog inkomen. Daardoor stijgt het lage inkomen relatief meer en wordt de verhouding tussen de inkomens van B en A kleiner: het relatieve inkomensverschil neemt af.\n• Beide huishoudens krijgen hetzelfde bedrag van € 300 erbij, dus het absolute verschil blijft gelijk: 75.300 − 20.300 = € 55.000, net als vóór het plan.",
+            "calc": [
+              {
+                "name": "ink_a_na",
+                "expr": "ink_a + extra_arbeidskorting",
+                "round": 0,
+                "rounding": "half_up",
+                "shown": "20.300"
+              },
+              {
+                "name": "ink_b_na",
+                "expr": "ink_b + extra_arbeidskorting",
+                "round": 0,
+                "rounding": "half_up",
+                "shown": "75.300"
+              },
+              {
+                "name": "verschil_na",
+                "expr": "ink_b_na - ink_a_na",
+                "round": 0,
+                "rounding": "half_up",
+                "shown": "€ 55.000"
+              }
+            ],
+            "scorepunten": [
+              {
+                "seq": 1,
+                "points": 1,
+                "text": "uit het koopkrachtplaatje afleiden dat het lage inkomen (A, 1,5%) procentueel meer stijgt dan het hoge inkomen (B, 0,4%), met de conclusie dat het plan nivellerend werkt",
+                "criterion_id": "H4.4-01-d",
+                "calc_ref": null
+              },
+              {
+                "seq": 2,
+                "points": 1,
+                "text": "uitleg dat een gelijk bedrag een groter deel is van een laag inkomen dan van een hoog inkomen, waardoor de verhouding tussen de inkomens (het relatieve inkomensverschil) kleiner wordt",
+                "criterion_id": "H4.4-01-b",
+                "calc_ref": null
+              },
+              {
+                "seq": 3,
+                "points": 1,
+                "text": "uitleg dat het absolute verschil gelijk blijft doordat beide huishoudens hetzelfde bedrag erbij krijgen",
+                "criterion_id": "H4.4-01-b",
+                "calc_ref": null
+              }
+            ],
+            "rules": [
+              "Het eerste scorepunt alleen toekennen als de conclusie (nivellerend) op de vergelijking van beide percentages uit het koopkrachtplaatje is gebaseerd.",
+              "Het tweede scorepunt niet toekennen voor alleen een herhaling van de percentages: de uitleg moet noemen dat het relatieve inkomensverschil (de verhouding tussen de inkomens) kleiner wordt. Een berekening is niet nodig als de uitleg juist is.",
+              "Het derde scorepunt mag ook zonder berekening worden toegekend als de uitleg juist is."
+            ],
+            "alternatives": [
+              "Voor het tweede scorepunt: met een berekening laten zien dat het inkomen van B als veelvoud (of percentage) van het inkomen van A na het plan kleiner is dan ervoor."
+            ],
+            "follow_through": null
+          },
+          "new_concepts": [
+            "koopkrachtplaatje"
+          ],
+          "builds_on_vragen": [],
+          "pattern": "P01",
+          "knobs": {
+            "solo": "relationeel",
+            "route": null,
+            "steps": "3",
+            "sources": "in vraagtekst",
+            "noise": "nee",
+            "claim": "nee",
+            "new_concept": "ja",
+            "schema": null,
+            "builds_on": "nee"
+          },
+          "label": {
+            "exam_id": null,
+            "question_id": "O3-V11",
+            "question_number": 11,
+            "opgave_id": "O3",
+            "first_of_opgave": false,
+            "points": 3,
+            "pattern": "P04",
+            "solo": "relationeel",
+            "route": null,
+            "steps": "2",
+            "sources": "in vraagtekst",
+            "noise": "nee",
+            "claim": "nee",
+            "new_concept": "ja",
+            "schema": null,
+            "builds_on": "nee",
+            "example_quality": null,
+            "builds_on_questions": [],
+            "proposed_pattern": null,
+            "example_quality_reason": null,
+            "combination": 1,
+            "bloom": "begrijpen",
+            "scorepunt_bloom": [
+              {
+                "points": 1,
+                "bloom": "begrijpen",
+                "group_id": "H4.4-01"
+              },
+              {
+                "points": 1,
+                "bloom": "begrijpen",
+                "group_id": "H4.4-01"
+              },
+              {
+                "points": 1,
+                "bloom": "begrijpen",
+                "group_id": "H4.4-01"
+              }
+            ],
+            "confidence": {
+              "pattern": "high",
+              "solo": "high",
+              "route": "high",
+              "steps": "medium",
+              "sources": "high",
+              "noise": "high",
+              "claim": "high",
+              "new_concept": "high",
+              "schema": "high",
+              "builds_on": "high"
+            },
+            "evidence": {
+              "pattern": "Leg met het koopkrachtplaatje voor huishouden A en B uit of het plan nivellerend of denivellerend werkt.",
+              "solo": "Hetzelfde bedrag van € 300 is een groter deel van een laag inkomen dan van een hoog inkomen.",
+              "steps": "waardoor de verhouding tussen de inkomens (het relatieve inkomensverschil) kleiner wordt",
+              "sources": "Volgens het koopkrachtplaatje stijgt door het plan het besteedbaar inkomen van huishouden A met 1,5% en dat van huishouden B met 0,4%.",
+              "noise": "huishouden A heeft een besteedbaar inkomen van € 20.000 per jaar en huishouden B van € 75.000 per jaar.",
+              "claim": "Leg met het koopkrachtplaatje voor huishouden A en B uit of het plan nivellerend of denivellerend werkt.",
+              "new_concept": "Een koopkrachtplaatje is een overzicht van de procentuele verandering van het besteedbaar inkomen door een maatregel",
+              "builds_on": "Leg ook uit waarom het verschil in euro's tussen hun besteedbare inkomens toch gelijk blijft."
+            },
+            "repaired_fields": [],
+            "disagreements": {
+              "steps": {
+                "A": "2",
+                "B": "3"
+              }
+            }
+          },
+          "scorepunten": [
+            {
+              "seq": 1,
+              "points": 1,
+              "criterion_id": "H4.4-01-d",
+              "group_id": "H4.4-01",
+              "bloom": "begrijpen"
+            },
+            {
+              "seq": 2,
+              "points": 1,
+              "criterion_id": "H4.4-01-b",
+              "group_id": "H4.4-01",
+              "bloom": "begrijpen"
+            },
+            {
+              "seq": 3,
+              "points": 1,
+              "criterion_id": "H4.4-01-b",
+              "group_id": "H4.4-01",
+              "bloom": "begrijpen"
+            }
+          ],
+          "open_findings": []
+        }
+      ]
+    },
+    {
+      "opgave_id": "O4",
+      "title": "Sparen of lenen bij de Groene Bank",
+      "context": "Sanne (19) zet haar bijbaangeld op een spaarrekening bij de Groene Bank; haar broer Daan sluit bij dezelfde bank een persoonlijke lening af voor een scooter. De opgavetekst geeft de consumentenprijsindex over enkele jaren en de spaarrente.",
+      "context_tags": [
+        "bank",
+        "sparen en lenen"
+      ],
+      "reused_from": null,
+      "intro": "Sanne werkt naast haar studie in een supermarkt. Sinds 2023 zet ze elke maand een deel van haar loon op een spaarrekening bij de Groene Bank. Over 2026 kreeg ze van de bank een spaarrente van 1,75%.\n\nHaar broer Daan wil niet wachten tot hij genoeg heeft gespaard voor een scooter. Hij sluit bij dezelfde bank een persoonlijke lening af van € 2.400 tegen een rente van 7,9% per jaar. De scooter rijdt hij meteen de winkel uit; de lening lost hij in twee jaar af.\n\nSanne zoekt op de website van het CBS op hoe de prijzen zich hebben ontwikkeld. Ze vindt de consumentenprijsindex (cpi) met 2020 als basisjaar (2020 = 100).\n\nConsumentenprijsindex (2020 = 100), jaargemiddelden\n\n| jaar | 2023 | 2024 | 2025 | 2026 |\n|---|---|---|---|---|\n| cpi | 117 | 121 | 125 | 128 |",
+      "data": {
+        "spaarrente": 0.0175,
+        "lening": 2400,
+        "rente_lening": 0.079,
+        "cpi_2023": 117,
+        "cpi_2024": 121,
+        "cpi_2025": 125,
+        "cpi_2026": 128,
+        "saldo_2026": 2870
+      },
+      "sources": [],
+      "figures": [],
+      "vragen": [
+        {
+          "vraag_id": "O4-V12",
+          "number": 12,
+          "points": 1,
+          "stem": "Haalt Daan met zijn persoonlijke lening koopkracht naar voren of verschuift hij koopkracht naar later? Licht je antwoord toe.",
+          "cv": {
+            "maximumscore": 1,
+            "model_answer": "Daan haalt koopkracht naar voren: hij koopt de scooter nu met geld dat hij pas later verdient. In de twee jaar daarna moet hij aflossen (en rente betalen), zodat hij dan minder kan besteden.",
+            "calc": [],
+            "scorepunten": [
+              {
+                "seq": 1,
+                "points": 1,
+                "criterion_id": "E1.2-01-b",
+                "text": "keuze 'naar voren' met de toelichting dat Daan nu besteedt wat hij later terugbetaalt uit toekomstig inkomen"
+              }
+            ],
+            "rules": [
+              "Alleen de keuze zonder toelichting levert geen scorepunt op."
+            ],
+            "alternatives": [
+              "Daan besteedt nu meer dan zijn inkomen toelaat; later besteedt hij minder dan zijn inkomen, omdat hij moet aflossen. Hij haalt dus koopkracht naar voren."
+            ],
+            "follow_through": null
+          },
+          "new_concepts": [],
+          "builds_on_vragen": [],
+          "pattern": "P05",
+          "knobs": {
+            "solo": "multistructureel",
+            "route": null,
+            "steps": "1",
+            "sources": "in vraagtekst",
+            "noise": "nee",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": null
+          },
+          "label": {
+            "exam_id": null,
+            "question_id": "O4-V12",
+            "question_number": 12,
+            "opgave_id": "O4",
+            "first_of_opgave": true,
+            "points": 1,
+            "pattern": "P05",
+            "solo": "unistructureel",
+            "route": null,
+            "steps": "1",
+            "sources": "in vraagtekst",
+            "noise": "nee",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": null,
+            "example_quality": null,
+            "builds_on_questions": [],
+            "proposed_pattern": null,
+            "example_quality_reason": null,
+            "combination": 1,
+            "bloom": "begrijpen",
+            "scorepunt_bloom": [
+              {
+                "points": 1,
+                "bloom": "begrijpen",
+                "group_id": "E1.2-01"
+              }
+            ],
+            "confidence": {
+              "pattern": "high",
+              "solo": "high",
+              "route": "high",
+              "steps": "high",
+              "sources": "high",
+              "noise": "high",
+              "claim": "high",
+              "new_concept": "high",
+              "schema": "high",
+              "builds_on": "high"
+            },
+            "evidence": {
+              "pattern": "Haalt Daan met zijn persoonlijke lening koopkracht naar voren of verschuift hij koopkracht naar later? Licht je antwoord toe.",
+              "solo": "keuze 'naar voren' met de toelichting dat Daan nu besteedt wat hij later terugbetaalt uit toekomstig inkomen",
+              "steps": "keuze 'naar voren' met de toelichting dat Daan nu besteedt wat hij later terugbetaalt uit toekomstig inkomen",
+              "sources": "De scooter rijdt hij meteen de winkel uit; de lening lost hij in twee jaar af.",
+              "noise": "De scooter rijdt hij meteen de winkel uit; de lening lost hij in twee jaar af.",
+              "claim": "Haalt Daan met zijn persoonlijke lening koopkracht naar voren of verschuift hij koopkracht naar later?",
+              "new_concept": "Haalt Daan met zijn persoonlijke lening koopkracht naar voren of verschuift hij koopkracht naar later?"
+            },
+            "repaired_fields": [],
+            "disagreements": {}
+          },
+          "scorepunten": [
+            {
+              "seq": 1,
+              "points": 1,
+              "criterion_id": "E1.2-01-b",
+              "group_id": "E1.2-01",
+              "bloom": "begrijpen"
+            }
+          ],
+          "open_findings": []
+        },
+        {
+          "vraag_id": "O4-V13",
+          "number": 13,
+          "points": 2,
+          "stem": "Sanne bewaart naast haar spaarrekening ook wat contant geld in een spaarpot. Daarover krijgt ze geen rente. Volgens de tabel was de inflatie in 2026 lager dan in 2025.\nLeg uit dat de koopkracht van het geld in Sannes spaarpot in 2026 toch is gedaald. Gebruik in je uitleg het begrip prijspeil.",
+          "cv": {
+            "maximumscore": 2,
+            "model_answer": "Een lagere inflatie betekent alleen dat de prijzen minder snel stijgen. Zolang de inflatie positief is, stijgt het prijspeil (de consumentenprijsindex) nog steeds. Met hetzelfde bedrag in de spaarpot kan Sanne in 2026 daardoor minder goederen en diensten kopen dan in 2025: de koopkracht van dat geld daalt.",
+            "calc": [],
+            "scorepunten": [
+              {
+                "seq": 1,
+                "points": 1,
+                "criterion_id": "I1.1-02-a",
+                "text": "inzicht dat bij een lagere maar positieve inflatie het prijspeil (de cpi) nog steeds stijgt"
+              },
+              {
+                "seq": 2,
+                "points": 1,
+                "criterion_id": "I1.4-01-a",
+                "text": "inzicht dat Sanne met hetzelfde geldbedrag daardoor minder kan kopen, zodat de koopkracht daalt"
+              }
+            ],
+            "rules": [],
+            "alternatives": [
+              "De cpi stijgt van 125 in 2025 naar 128 in 2026, dus het prijspeil stijgt; met hetzelfde bedrag kan Sanne minder kopen."
+            ],
+            "follow_through": null
+          },
+          "new_concepts": [],
+          "builds_on_vragen": [],
+          "pattern": "P01",
+          "knobs": {
+            "solo": "relationeel",
+            "route": null,
+            "steps": "2",
+            "sources": "in vraagtekst",
+            "noise": "nee",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": "nee"
+          },
+          "label": {
+            "exam_id": null,
+            "question_id": "O4-V13",
+            "question_number": 13,
+            "opgave_id": "O4",
+            "first_of_opgave": false,
+            "points": 2,
+            "pattern": "P01",
+            "solo": "multistructureel",
+            "route": null,
+            "steps": "2",
+            "sources": "in vraagtekst",
+            "noise": "ja",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": "nee",
+            "example_quality": null,
+            "builds_on_questions": [],
+            "proposed_pattern": null,
+            "example_quality_reason": null,
+            "combination": 2,
+            "bloom": "begrijpen",
+            "scorepunt_bloom": [
+              {
+                "points": 1,
+                "bloom": "begrijpen",
+                "group_id": "I1.1-02"
+              },
+              {
+                "points": 1,
+                "bloom": "begrijpen",
+                "group_id": "I1.4-01"
+              }
+            ],
+            "confidence": {
+              "pattern": "high",
+              "solo": "medium",
+              "route": "high",
+              "steps": "high",
+              "sources": "high",
+              "noise": "high",
+              "claim": "high",
+              "new_concept": "high",
+              "schema": "high",
+              "builds_on": "high"
+            },
+            "evidence": {
+              "pattern": "Leg uit dat de koopkracht van het geld in Sannes spaarpot in 2026 toch is gedaald. Gebruik in je uitleg het begrip prijspeil.",
+              "solo": "inzicht dat bij een lagere maar positieve inflatie het prijspeil (de cpi) nog steeds stijgt",
+              "steps": "inzicht dat Sanne met hetzelfde geldbedrag daardoor minder kan kopen, zodat de koopkracht daalt",
+              "sources": "Volgens de tabel was de inflatie in 2026 lager dan in 2025.",
+              "noise": "| cpi | 117 | 121 | 125 | 128 |",
+              "claim": "Leg uit dat de koopkracht van het geld in Sannes spaarpot in 2026 toch is gedaald.",
+              "new_concept": "Gebruik in je uitleg het begrip prijspeil.",
+              "builds_on": "Sanne bewaart naast haar spaarrekening ook wat contant geld in een spaarpot. Daarover krijgt ze geen rente."
+            },
+            "repaired_fields": [
+              "noise"
+            ],
+            "disagreements": {
+              "solo": {
+                "A": "multistructureel",
+                "B": "relationeel"
+              },
+              "noise": {
+                "A": "ja",
+                "B": "nee",
+                "R": "ja"
+              }
+            }
+          },
+          "scorepunten": [
+            {
+              "seq": 1,
+              "points": 1,
+              "criterion_id": "I1.1-02-a",
+              "group_id": "I1.1-02",
+              "bloom": "begrijpen"
+            },
+            {
+              "seq": 2,
+              "points": 1,
+              "criterion_id": "I1.4-01-a",
+              "group_id": "I1.4-01",
+              "bloom": "begrijpen"
+            }
+          ],
+          "open_findings": []
+        },
+        {
+          "vraag_id": "O4-V14",
+          "number": 14,
+          "points": 2,
+          "stem": "In 2026 staat er € 2.870 op Sannes spaarrekening. Sanne wil weten hoeveel dat saldo waard is in prijzen van 2023, het jaar waarin ze begon met sparen.\nBereken de koopkracht van Sannes saldo van 2026 in prijzen van 2023. Gebruik de cpi uit de tabel. Rond een tussenuitkomst in procenten af op één decimaal en je antwoord op hele euro's.",
+          "cv": {
+            "maximumscore": 2,
+            "model_answer": "Het prijspeil is tussen 2023 en 2026 gestegen met (128 − 117) / 117 × 100% = 9,4%. In prijzen van 2023 is Sannes saldo dan 100 / (100 + 9,4) × € 2.870 = € 2.623 waard.",
+            "calc": [
+              {
+                "name": "prijsstijging_23_26",
+                "expr": "(cpi_2026 / cpi_2023 - 1) * 100",
+                "round": 1,
+                "rounding": "half_up",
+                "shown": "9,4%"
+              },
+              {
+                "name": "koopkracht_26",
+                "expr": "saldo_2026 / (1 + prijsstijging_23_26 / 100)",
+                "round": 0,
+                "rounding": "half_up",
+                "shown": "€ 2.623"
+              }
+            ],
+            "scorepunten": [
+              {
+                "seq": 1,
+                "points": 1,
+                "criterion_id": "I1.4-01-b",
+                "calc_ref": "koopkracht_26",
+                "text": "berekening van de koopkracht van het saldo in prijzen van 2023 met de prijsstijging"
+              },
+              {
+                "seq": 2,
+                "points": 1,
+                "criterion_id": "I1.1-02-a",
+                "calc_ref": "prijsstijging_23_26",
+                "text": "berekening van de stijging van het prijspeil tussen 2023 en 2026 met de cpi"
+              }
+            ],
+            "rules": [
+              "Voor elke fout 1 scorepunt in mindering brengen."
+            ],
+            "alternatives": [
+              "Zonder de prijsstijging eerst af te ronden: 2.870 × 117 / 128 = € 2.623; ook goed."
+            ],
+            "follow_through": null
+          },
+          "new_concepts": [],
+          "builds_on_vragen": [],
+          "pattern": "P08",
+          "knobs": {
+            "solo": "multistructureel",
+            "route": "zelf vinden",
+            "steps": "2",
+            "sources": "in vraagtekst",
+            "noise": "ja",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": "nee"
+          },
+          "label": {
+            "exam_id": null,
+            "question_id": "O4-V14",
+            "question_number": 14,
+            "opgave_id": "O4",
+            "first_of_opgave": false,
+            "points": 2,
+            "pattern": "P08",
+            "solo": "multistructureel",
+            "route": "zelf vinden",
+            "steps": "2",
+            "sources": "in vraagtekst",
+            "noise": "ja",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": "nee",
+            "example_quality": null,
+            "builds_on_questions": [],
+            "proposed_pattern": null,
+            "example_quality_reason": null,
+            "combination": 2,
+            "bloom": "toepassen",
+            "scorepunt_bloom": [
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "I1.4-01"
+              },
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "I1.1-02"
+              }
+            ],
+            "confidence": {
+              "pattern": "high",
+              "solo": "high",
+              "route": "high",
+              "steps": "high",
+              "sources": "high",
+              "noise": "high",
+              "claim": "high",
+              "new_concept": "high",
+              "schema": "high",
+              "builds_on": "high"
+            },
+            "evidence": {
+              "pattern": "Bereken de koopkracht van Sannes saldo van 2026 in prijzen van 2023. Gebruik de cpi uit de tabel.",
+              "solo": "berekening van de koopkracht van het saldo in prijzen van 2023 met de prijsstijging",
+              "route": "Bereken de koopkracht van Sannes saldo van 2026 in prijzen van 2023. Gebruik de cpi uit de tabel.",
+              "steps": "berekening van de stijging van het prijspeil tussen 2023 en 2026 met de cpi",
+              "sources": "In 2026 staat er € 2.870 op Sannes spaarrekening.",
+              "noise": "| cpi | 117 | 121 | 125 | 128 |",
+              "claim": "Sanne wil weten hoeveel dat saldo waard is in prijzen van 2023, het jaar waarin ze begon met sparen.",
+              "new_concept": "Bereken de koopkracht van Sannes saldo van 2026 in prijzen van 2023.",
+              "builds_on": "In 2026 staat er € 2.870 op Sannes spaarrekening."
+            },
+            "repaired_fields": [],
+            "disagreements": {}
+          },
+          "scorepunten": [
+            {
+              "seq": 1,
+              "points": 1,
+              "criterion_id": "I1.4-01-b",
+              "group_id": "I1.4-01",
+              "bloom": "toepassen"
+            },
+            {
+              "seq": 2,
+              "points": 1,
+              "criterion_id": "I1.1-02-a",
+              "group_id": "I1.1-02",
+              "bloom": "toepassen"
+            }
+          ],
+          "open_findings": []
+        },
+        {
+          "vraag_id": "O4-V15",
+          "number": 15,
+          "points": 2,
+          "stem": "Gaat Sanne er in 2026 met het geld dat begin 2026 op haar spaarrekening stond in koopkracht op vooruit of achteruit? Licht je antwoord toe met een berekening. Rond tussenuitkomsten in procenten af op één decimaal.",
+          "cv": {
+            "maximumscore": 2,
+            "model_answer": "De inflatie in 2026 is (128 − 125) / 125 × 100% = 2,4%. De spaarrente van 1,75% is lager dan de inflatie van 2,4%: de rente die Sanne krijgt is lager dan de stijging van het prijspeil (de reële rente is negatief). Sanne gaat er in 2026 met dat geld in koopkracht dus op achteruit.",
+            "calc": [
+              {
+                "name": "infl_2026",
+                "expr": "(cpi_2026 / cpi_2025 - 1) * 100",
+                "round": 1,
+                "rounding": "half_up",
+                "shown": "2,4%"
+              }
+            ],
+            "scorepunten": [
+              {
+                "seq": 1,
+                "points": 1,
+                "criterion_id": "I1.1-02-a",
+                "calc_ref": "infl_2026",
+                "text": "berekening van de inflatie in 2026 als procentuele stijging van de cpi"
+              },
+              {
+                "seq": 2,
+                "points": 1,
+                "criterion_id": "I1.4-02-d",
+                "text": "vergelijking van de spaarrente met de inflatie en de conclusie dat Sanne er in koopkracht op achteruitgaat"
+              }
+            ],
+            "rules": [
+              "Een conclusie zonder vergelijking van spaarrente en inflatie levert voor het tweede scorepunt geen punt op.",
+              "Stortingen tijdens 2026 tellen niet mee; het gaat om het geld dat begin 2026 op de rekening stond."
+            ],
+            "alternatives": [
+              "Een berekening van de reële rente (benaderd als spaarrente min inflatie, of exact met de formule) die negatief uitkomt, met de conclusie dat Sanne er in koopkracht op achteruitgaat; ook goed voor het tweede scorepunt. Berekenen van de reële rente is niet vereist."
+            ],
+            "follow_through": null
+          },
+          "new_concepts": [],
+          "builds_on_vragen": [],
+          "pattern": "P05",
+          "knobs": {
+            "solo": "relationeel",
+            "route": null,
+            "steps": "3",
+            "sources": "in vraagtekst",
+            "noise": "ja",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": "nee"
+          },
+          "label": {
+            "exam_id": null,
+            "question_id": "O4-V15",
+            "question_number": 15,
+            "opgave_id": "O4",
+            "first_of_opgave": false,
+            "points": 2,
+            "pattern": "P09",
+            "solo": "relationeel",
+            "route": "zelf vinden",
+            "steps": "2",
+            "sources": "in vraagtekst",
+            "noise": "ja",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": "nee",
+            "example_quality": null,
+            "builds_on_questions": [],
+            "proposed_pattern": null,
+            "example_quality_reason": null,
+            "combination": 2,
+            "bloom": "toepassen",
+            "scorepunt_bloom": [
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "I1.1-02"
+              },
+              {
+                "points": 1,
+                "bloom": "begrijpen",
+                "group_id": "I1.4-02"
+              }
+            ],
+            "confidence": {
+              "pattern": "high",
+              "solo": "high",
+              "route": "high",
+              "steps": "high",
+              "sources": "high",
+              "noise": "high",
+              "claim": "high",
+              "new_concept": "high",
+              "schema": "high",
+              "builds_on": "high"
+            },
+            "evidence": {
+              "pattern": "in koopkracht op vooruit of achteruit? Licht je antwoord toe met een berekening.",
+              "solo": "vergelijking van de spaarrente met de inflatie en de conclusie dat Sanne er in koopkracht op achteruitgaat",
+              "route": "Licht je antwoord toe met een berekening. Rond tussenuitkomsten in procenten af op één decimaal.",
+              "steps": "berekening van de inflatie in 2026 als procentuele stijging van de cpi",
+              "sources": "Over 2026 kreeg ze van de bank een spaarrente van 1,75%.",
+              "noise": "| cpi | 117 | 121 | 125 | 128 |",
+              "claim": "Gaat Sanne er in 2026 met het geld dat begin 2026 op haar spaarrekening stond in koopkracht op vooruit of achteruit?",
+              "new_concept": "Gaat Sanne er in 2026 met het geld dat begin 2026 op haar spaarrekening stond in koopkracht op vooruit of achteruit?",
+              "builds_on": "Over 2026 kreeg ze van de bank een spaarrente van 1,75%."
+            },
+            "repaired_fields": [],
+            "disagreements": {}
+          },
+          "scorepunten": [
+            {
+              "seq": 1,
+              "points": 1,
+              "criterion_id": "I1.1-02-a",
+              "group_id": "I1.1-02",
+              "bloom": "toepassen"
+            },
+            {
+              "seq": 2,
+              "points": 1,
+              "criterion_id": "I1.4-02-d",
+              "group_id": "I1.4-02",
+              "bloom": "begrijpen"
+            }
+          ],
+          "open_findings": []
+        }
+      ]
+    },
+    {
+      "opgave_id": "O5",
+      "title": "Tandartsverzekering van ZorgSamen",
+      "context": "Zorgverzekeraar ZorgSamen biedt naast de verplichte basisverzekering een vrijwillige aanvullende tandartsverzekering aan; de verzekeraar kent de gebitstoestand van een nieuwe klant niet en rekent iedereen dezelfde premie.",
+      "context_tags": [
+        "zorgverzekeraar",
+        "aanvullende tandartsverzekering"
+      ],
+      "reused_from": null,
+      "intro": "Iedereen die in Nederland woont, heeft een basisverzekering voor zorg. Veel mensen sluiten daarnaast een aanvullende verzekering af, bijvoorbeeld voor de tandarts. Die aanvullende verzekering is vrijwillig: je kiest zelf of je hem afsluit.\n\nZorgverzekeraar ZorgSamen biedt zo'n vrijwillige tandartsverzekering aan. Wie zich aanmeldt, vult alleen zijn naam, adres en geboortedatum in. ZorgSamen weet dus niet of een nieuwe klant een gezond gebit heeft of juist veel gaatjes en ontstoken tandvlees. Daarom betaalt iedere klant dezelfde premie. Die premie is gebaseerd op de gemiddelde tandartskosten van alle klanten.",
+      "data": {},
+      "sources": [],
+      "figures": [],
+      "vragen": [
+        {
+          "vraag_id": "O5-V16",
+          "number": 16,
+          "points": 1,
+          "stem": "Bij het afsluiten van de tandartsverzekering is sprake van informatieasymmetrie.\nOmschrijf wat informatieasymmetrie is.",
+          "cv": {
+            "maximumscore": 1,
+            "model_answer": "Informatieasymmetrie is een situatie waarin de ene partij bij een transactie meer relevante informatie over die transactie heeft dan de andere partij.",
+            "calc": [],
+            "scorepunten": [
+              {
+                "seq": 1,
+                "points": 1,
+                "criterion_id": "G2.2-01-a",
+                "text": "omschrijving: de ene partij bij een transactie heeft meer (relevante) informatie dan de andere partij"
+              }
+            ],
+            "rules": [
+              "Een antwoord dat alleen zegt dat er informatie ontbreekt, zonder dat de ene partij meer weet dan de andere, levert geen scorepunt op."
+            ],
+            "alternatives": [
+              "Een omschrijving toegepast op de context: de klant weet meer over de toestand van zijn gebit dan ZorgSamen; ook goed, mits duidelijk is dat de ene partij meer weet dan de andere."
+            ],
+            "follow_through": null
+          },
+          "new_concepts": [],
+          "builds_on_vragen": [],
+          "pattern": "P16",
+          "knobs": {
+            "solo": "unistructureel",
+            "route": null,
+            "steps": "1",
+            "sources": "in vraagtekst",
+            "noise": "nee",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": null
+          },
+          "label": {
+            "exam_id": null,
+            "question_id": "O5-V16",
+            "question_number": 16,
+            "opgave_id": "O5",
+            "first_of_opgave": true,
+            "points": 1,
+            "pattern": "P16",
+            "solo": "unistructureel",
+            "route": null,
+            "steps": "1",
+            "sources": "in vraagtekst",
+            "noise": "nee",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": null,
+            "example_quality": null,
+            "builds_on_questions": [],
+            "proposed_pattern": null,
+            "example_quality_reason": null,
+            "combination": 1,
+            "bloom": "onthouden",
+            "scorepunt_bloom": [
+              {
+                "points": 1,
+                "bloom": "onthouden",
+                "group_id": "G2.2-01"
+              }
+            ],
+            "confidence": {
+              "pattern": "high",
+              "solo": "high",
+              "route": "high",
+              "steps": "high",
+              "sources": "high",
+              "noise": "high",
+              "claim": "high",
+              "new_concept": "high",
+              "schema": "high",
+              "builds_on": "high"
+            },
+            "evidence": {
+              "pattern": "Omschrijf wat informatieasymmetrie is.",
+              "solo": "omschrijving: de ene partij bij een transactie heeft meer (relevante) informatie dan de andere partij",
+              "steps": "omschrijving: de ene partij bij een transactie heeft meer (relevante) informatie dan de andere partij",
+              "sources": "Bij het afsluiten van de tandartsverzekering is sprake van informatieasymmetrie.",
+              "noise": "Omschrijf wat informatieasymmetrie is.",
+              "claim": "Omschrijf wat informatieasymmetrie is.",
+              "new_concept": "Omschrijf wat informatieasymmetrie is."
+            },
+            "repaired_fields": [],
+            "disagreements": {}
+          },
+          "scorepunten": [
+            {
+              "seq": 1,
+              "points": 1,
+              "criterion_id": "G2.2-01-a",
+              "group_id": "G2.2-01",
+              "bloom": "onthouden"
+            }
+          ],
+          "open_findings": []
+        },
+        {
+          "vraag_id": "O5-V17",
+          "number": 17,
+          "points": 2,
+          "stem": "Voor de basisverzekering gelden in Nederland twee regels. Ten eerste de verzekeringsplicht: iedereen die in Nederland woont, moet een basisverzekering hebben. Ten tweede de acceptatieplicht: een zorgverzekeraar moet iedereen die zich aanmeldt voor de basisverzekering accepteren en mag niemand een hogere premie laten betalen omdat hij meer zorg nodig heeft.\nBij de vrijwillige tandartsverzekering van ZorgSamen kan averechtse selectie ontstaan.\nLeg uit hoe die averechtse selectie bij de tandartsverzekering ontstaat en leg uit hoe de verzekeringsplicht averechtse selectie bij de basisverzekering voorkomt, ook al moet de verzekeraar door de acceptatieplicht iedereen accepteren.",
+          "cv": {
+            "maximumscore": 2,
+            "model_answer": "Een voorbeeld van een juist antwoord is: ZorgSamen kent het gebit van een klant niet en rekent iedereen een premie op basis van de gemiddelde kosten. Voor mensen met een slecht gebit is die premie laag ten opzichte van hun verwachte tandartskosten, dus zij sluiten de verzekering af; mensen met een gezond gebit vinden de premie te hoog en haken af. Bij de basisverzekering kunnen mensen met een laag risico niet afhaken, omdat iedereen verplicht verzekerd is. De groep verzekerden blijft daardoor gemengd, zodat de gemiddelde premie past bij de gemiddelde kosten, ook al moet de verzekeraar iedereen accepteren.",
+            "calc": [],
+            "scorepunten": [
+              {
+                "seq": 1,
+                "points": 1,
+                "criterion_id": "G4.4-01-a",
+                "text": "inzicht dat bij een gemiddelde premie vooral klanten met een slecht gebit (hoog risico) zich verzekeren en klanten met een gezond gebit (laag risico) afhaken"
+              },
+              {
+                "seq": 2,
+                "points": 1,
+                "criterion_id": "G4.4-01-c",
+                "text": "inzicht dat door de verzekeringsplicht ook de lage risico's verzekerd blijven, zodat de groep verzekerden gemengd blijft"
+              }
+            ],
+            "rules": [
+              "Voor het tweede scorepunt alleen de acceptatieplicht noemen (de verzekeraar moet iedereen accepteren) zonder de verplichting voor iedereen om zich te verzekeren, levert geen scorepunt op."
+            ],
+            "alternatives": [
+              "Voor het eerste scorepunt ook goed: doordat vooral mensen met een slecht gebit overblijven, stijgen de kosten en daarmee de premie, waardoor nog meer mensen met een gezond gebit afhaken.",
+              "Voor het tweede scorepunt ook goed: omdat gezonde mensen ook moeten meebetalen, blijft de premie betaalbaar en kan de verzekeraar iedereen tegen dezelfde premie accepteren."
+            ],
+            "follow_through": null
+          },
+          "new_concepts": [
+            "acceptatieplicht"
+          ],
+          "builds_on_vragen": [],
+          "pattern": "P01",
+          "knobs": {
+            "solo": "multistructureel",
+            "route": null,
+            "steps": "2",
+            "sources": "in vraagtekst",
+            "noise": "nee",
+            "claim": "nee",
+            "new_concept": "ja",
+            "schema": null,
+            "builds_on": "nee"
+          },
+          "label": {
+            "exam_id": null,
+            "question_id": "O5-V17",
+            "question_number": 17,
+            "opgave_id": "O5",
+            "first_of_opgave": false,
+            "points": 2,
+            "pattern": "P01",
+            "solo": "multistructureel",
+            "route": null,
+            "steps": "2",
+            "sources": "in vraagtekst",
+            "noise": "nee",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": "nee",
+            "example_quality": null,
+            "builds_on_questions": [],
+            "proposed_pattern": null,
+            "example_quality_reason": null,
+            "combination": 1,
+            "bloom": "begrijpen",
+            "scorepunt_bloom": [
+              {
+                "points": 1,
+                "bloom": "begrijpen",
+                "group_id": "G4.4-01"
+              },
+              {
+                "points": 1,
+                "bloom": "begrijpen",
+                "group_id": "G4.4-01"
+              }
+            ],
+            "confidence": {
+              "pattern": "high",
+              "solo": "medium",
+              "route": "high",
+              "steps": "high",
+              "sources": "high",
+              "noise": "high",
+              "claim": "high",
+              "new_concept": "high",
+              "schema": "high",
+              "builds_on": "high"
+            },
+            "evidence": {
+              "pattern": "Leg uit hoe die averechtse selectie bij de tandartsverzekering ontstaat en leg uit hoe de verzekeringsplicht averechtse selectie bij de basisverzekering voorkomt",
+              "solo": "inzicht dat door de verzekeringsplicht ook de lage risico's verzekerd blijven, zodat de groep verzekerden gemengd blijft",
+              "steps": "inzicht dat bij een gemiddelde premie vooral klanten met een slecht gebit (hoog risico) zich verzekeren en klanten met een gezond gebit (laag risico) afhaken",
+              "sources": "Daarom betaalt iedere klant dezelfde premie. Die premie is gebaseerd op de gemiddelde tandartskosten van alle klanten.",
+              "noise": "Die premie is gebaseerd op de gemiddelde tandartskosten van alle klanten.",
+              "claim": "Leg uit hoe die averechtse selectie bij de tandartsverzekering ontstaat",
+              "new_concept": "Ten eerste de verzekeringsplicht: iedereen die in Nederland woont, moet een basisverzekering hebben.",
+              "builds_on": "Leg uit hoe die averechtse selectie bij de tandartsverzekering ontstaat"
+            },
+            "repaired_fields": [
+              "pattern",
+              "route",
+              "new_concept",
+              "schema"
+            ],
+            "disagreements": {
+              "pattern": {
+                "A": "P02",
+                "B": "P01",
+                "R": "P01"
+              },
+              "solo": {
+                "A": "relationeel",
+                "B": "multistructureel"
+              },
+              "route": {
+                "A": null,
+                "B": null,
+                "R": null
+              },
+              "new_concept": {
+                "A": "ja",
+                "B": "nee",
+                "R": "nee"
+              },
+              "schema": {
+                "A": null,
+                "B": null,
+                "R": null
+              }
+            }
+          },
+          "scorepunten": [
+            {
+              "seq": 1,
+              "points": 1,
+              "criterion_id": "G4.4-01-a",
+              "group_id": "G4.4-01",
+              "bloom": "begrijpen"
+            },
+            {
+              "seq": 2,
+              "points": 1,
+              "criterion_id": "G4.4-01-c",
+              "group_id": "G4.4-01",
+              "bloom": "begrijpen"
+            }
+          ],
+          "open_findings": []
+        }
+      ]
+    }
+  ],
+  "realised": {
+    "matrix": [
+      {
+        "group_id": "E1.2-01",
+        "ordered": 1,
+        "realised": 1,
+        "ok": true
+      },
+      {
+        "group_id": "E1.6-01",
+        "ordered": 1,
+        "realised": 1,
+        "ok": true
+      },
+      {
+        "group_id": "E1.8-01",
+        "ordered": 2,
+        "realised": 2,
+        "ok": true
+      },
+      {
+        "group_id": "E2.1-01",
+        "ordered": 2,
+        "realised": 2,
+        "ok": true
+      },
+      {
+        "group_id": "E2.1-02",
+        "ordered": 3,
+        "realised": 3,
+        "ok": true
+      },
+      {
+        "group_id": "G2.2-01",
+        "ordered": 1,
+        "realised": 1,
+        "ok": true
+      },
+      {
+        "group_id": "G4.4-01",
+        "ordered": 2,
+        "realised": 2,
+        "ok": true
+      },
+      {
+        "group_id": "G5.2-01",
+        "ordered": 1,
+        "realised": 1,
+        "ok": true
+      },
+      {
+        "group_id": "H4.1-01",
+        "ordered": 1,
+        "realised": 1,
+        "ok": true
+      },
+      {
+        "group_id": "H4.1-02",
+        "ordered": 1,
+        "realised": 1,
+        "ok": true
+      },
+      {
+        "group_id": "H4.3-01",
+        "ordered": 2,
+        "realised": 2,
+        "ok": true
+      },
+      {
+        "group_id": "H4.4-01",
+        "ordered": 3,
+        "realised": 3,
+        "ok": true
+      },
+      {
+        "group_id": "H4.6-01",
+        "ordered": 2,
+        "realised": 2,
+        "ok": true
+      },
+      {
+        "group_id": "H4.6-02",
+        "ordered": 5,
+        "realised": 5,
+        "ok": true
+      },
+      {
+        "group_id": "I1.1-02",
+        "ordered": 3,
+        "realised": 3,
+        "ok": true
+      },
+      {
+        "group_id": "I1.4-01",
+        "ordered": 2,
+        "realised": 2,
+        "ok": true
+      },
+      {
+        "group_id": "I1.4-02",
+        "ordered": 1,
+        "realised": 1,
+        "ok": true
+      }
+    ],
+    "bloom": {
+      "onthouden": {
+        "ordered": null,
+        "planned": 0.03,
+        "realised": 0.03,
+        "planned_points": 1.0,
+        "realised_points": 1.0,
+        "outside": false
+      },
+      "begrijpen": {
+        "ordered": 0.4883720930232558,
+        "planned": 0.485,
+        "realised": 0.455,
+        "planned_points": 16.0,
+        "realised_points": 15.0,
+        "outside": false
+      },
+      "toepassen": {
+        "ordered": 0.5058139534883721,
+        "planned": 0.485,
+        "realised": 0.515,
+        "planned_points": 16.0,
+        "realised_points": 17.0,
+        "outside": false
+      },
+      "analyseren": {
+        "ordered": 0.005813953488372093,
+        "planned": 0.0,
+        "realised": 0.0,
+        "planned_points": 0.0,
+        "realised_points": 0.0,
+        "outside": false
+      }
+    },
+    "outside_tolerance": [
+      {
+        "what": "pattern",
+        "value": "P08",
+        "ordered": 0.41,
+        "share": 0.303,
+        "points": 10.0,
+        "of": 33.0,
+        "slack": false
+      },
+      {
+        "what": "solo",
+        "value": "multistructureel",
+        "ordered": 0.56,
+        "share": 0.455,
+        "points": 15.0,
+        "of": 33.0,
+        "slack": false
+      },
+      {
+        "what": "route",
+        "value": "gegeven",
+        "ordered": 0.0,
+        "share": 0.167,
+        "points": 3.0,
+        "of": 18.0,
+        "slack": false
+      },
+      {
+        "what": "route",
+        "value": "zelf vinden",
+        "ordered": 1,
+        "share": 0.833,
+        "points": 15.0,
+        "of": 18.0,
+        "slack": false
+      },
+      {
+        "what": "steps",
+        "value": "2",
+        "ordered": 0.46,
+        "share": 0.667,
+        "points": 22.0,
+        "of": 33.0,
+        "slack": false
+      },
+      {
+        "what": "steps",
+        "value": "3",
+        "ordered": 0.27,
+        "share": 0.152,
+        "points": 5.0,
+        "of": 33.0,
+        "slack": false
+      }
+    ]
+  },
+  "findings_left": []
+}

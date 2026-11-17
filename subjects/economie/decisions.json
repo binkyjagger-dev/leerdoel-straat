@@ -2956,6 +2956,134 @@
       "raised_by": "intake",
       "supersedes": null,
       "scope": null
+    },
+    {
+      "id": "economie-096",
+      "question": "Mag een scorepunt een reken- of tussenstap vragen die bij een in de order uitgesloten succescriterium hoort, als die stap de invoer is voor een wel gekozen criterium (bijv. gemiddeld tarief berekenen om progressief/degressief te bepalen, inflatie uit de cpi berekenen voor koopkracht)?",
+      "context": "In deze toets vragen O2-V8 (H4.6-01-a), O3-V11 (H4.4-01-c), O4-V14 en O4-V15 (I1.1-02-b, I1.4-02-b) een stap van een uitgesloten criterium, gekoppeld aan een gekozen criterium. De blueprint was goedgekeurd.",
+      "options": [
+        "1: ja, als invoerstap; het punt hoort bij het gekozen criterium",
+        "2: nee, de planner kiest een vraag zonder die stap of de stam geeft de tussenuitkomst",
+        "3: ja, maar het punt telt als het uitgesloten criterium (matrix aanpassen)"
+      ],
+      "proposed": "1",
+      "impact": "medium",
+      "applies_to": [
+        "generator",
+        "planner",
+        "verifier"
+      ],
+      "affects_units": null,
+      "status": "answered",
+      "answer": "1: ja, als invoerstap; het punt hoort bij het gekozen criterium",
+      "answered_by": "Martijn",
+      "answered_at": "2026-11-17T09:19:22Z",
+      "source_run": "20261115-2242-toets-economie",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": null
+    },
+    {
+      "id": "economie-097",
+      "question": "Hoe tellen we stappen in de blueprint, en wie beslist als beide labellers minder stappen tellen dan gepland?",
+      "context": "De planner telde twee parallelle ratio's of een slotconclusie als aparte stap (steps 3); labellers tellen volgens de knopdefinitie (parallel = 1 stap). Gevolg: steps buiten tolerantie, niet te herstellen met itemreparatie.",
+      "options": [
+        "1: de planner telt bij T2 al volgens de knopdefinitie; bij T5 gelden de labels en gaat een afwijking naar de verantwoording",
+        "2: een slotconclusie telt als stap",
+        "3: de verifier stelt de stappen per vraag vast"
+      ],
+      "proposed": "1",
+      "impact": "medium",
+      "applies_to": [
+        "item-labeller",
+        "planner",
+        "verifier"
+      ],
+      "affects_units": null,
+      "status": "answered",
+      "answer": "1: de planner telt bij T2 al volgens de knopdefinitie (parallelle delen = 1 stap); bij T5 gelden de labels en gaat een afwijking naar de verantwoording",
+      "answered_by": "Martijn",
+      "answered_at": "2026-11-17T09:19:22Z",
+      "source_run": "20261115-2242-toets-economie",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": null
+    },
+    {
+      "id": "economie-098",
+      "question": "Mag de schrijver een tussenstap noemen (om afronding of de basis eenduidig te maken) als de order route 'zelf vinden' vraagt?",
+      "context": "Solvers vragen om afronding en basis in de stam; schrijvers deden dat met 'Bereken hiervoor ...' of 'Bereken het gemiddeld tarief ...', waardoor de route 'gegeven' werd (O2-V8, O4-V15).",
+      "options": [
+        "1: nee; geef een algemene regel ('rond tussenuitkomsten af op één decimaal', 'ga uit van het belastbaar inkomen') zonder de stap te noemen",
+        "2: ja, eenduidigheid gaat voor de routeknop"
+      ],
+      "proposed": "1",
+      "impact": "low",
+      "applies_to": [
+        "generator",
+        "item-labeller"
+      ],
+      "affects_units": null,
+      "status": "answered",
+      "answer": "1: nee; geef een algemene regel ('rond tussenuitkomsten af op één decimaal', 'ga uit van het belastbaar inkomen') zonder de stap te noemen",
+      "answered_by": "Martijn",
+      "answered_at": "2026-11-17T09:19:22Z",
+      "source_run": "20261115-2242-toets-economie",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": null
+    },
+    {
+      "id": "economie-099",
+      "question": "Welke SOLO-waarde geldt als de planner een vraag multistructureel plant, maar de labellers volgens de knopdefinitie relationeel kiezen omdat de vraag gegevens uit twee bronnen of uit een eerdere vraag verbindt?",
+      "context": "In de toets Levensloop 4 VWO P2 plande de planner O2-V6 (bron 1 en 2) en O2-V8 (bron 3 en de uitkomst van vraag 6) als multistructureel; beide labellers kozen relationeel. Daardoor komt multistructureel 10,5 pp onder de bestelling (45% vs 56%), wat itemreparatie niet oplost zonder de vragen slechter te maken.",
+      "options": [
+        "1: de planner past de SOLO-definitie al bij T2 toe (meerdere bronnen of een eerdere uitkomst = relationeel); bij T5 gelden de labels en gaat een afwijking naar de verantwoording",
+        "2: een standaardberekening blijft multistructureel, ook met gegevens uit twee bronnen (definitie aanpassen)",
+        "3: de verifier stelt de SOLO-waarde per vraag vast"
+      ],
+      "proposed": "1",
+      "impact": "medium",
+      "applies_to": [
+        "item-labeller",
+        "planner",
+        "verifier"
+      ],
+      "affects_units": null,
+      "status": "answered",
+      "answer": "1: de planner past de SOLO-definitie al bij T2 toe (meerdere bronnen of een eerdere uitkomst = relationeel); bij T5 gelden de labels en gaat een afwijking naar de verantwoording",
+      "answered_by": "Martijn",
+      "answered_at": "2026-11-17T09:19:22Z",
+      "source_run": "20261115-2242-toets-economie",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": null
+    },
+    {
+      "id": "economie-100",
+      "question": "Welk patroon telt bij de gerealiseerde aandelen (34_realized.json) als de verifier bij V4 een ander patroon vaststelt dan de labellers (na R)?",
+      "context": "In deze toets besliste de verifier in ronde 2 en 3 dat O3-V9 ('Bereken met de 90/10-ratio ...') P08 is, route zelf vinden; labeller B en R houden P07, route gegeven. realized.py neemt wel bloom_realised van de verifier over, maar niet pattern_realised. Daardoor staan P08 (30% vs 41%) en route gegeven (17% vs 0%) buiten tolerantie, terwijl ze met de verifier-beslissing binnen liggen. Uitvoeren vraagt een aanpassing van realized.py.",
+      "options": [
+        "1: pattern_realised van de verifier overschrijft het label (met de patroon-vaste knoppen, zoals route) en realized.py rekent daarmee; de afwijking van het label komt in de verantwoording",
+        "2: het label (na R) blijft gelden; de verifier noteert alleen een should-bevinding",
+        "3: bij verschil tussen verifier en labellers beslist de docent in de blueprint-review"
+      ],
+      "proposed": "1",
+      "impact": "medium",
+      "applies_to": [
+        "item-labeller",
+        "planner",
+        "verifier"
+      ],
+      "affects_units": null,
+      "status": "open",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null,
+      "source_run": "20261115-2242-toets-economie",
+      "raised_by": "intake",
+      "supersedes": null,
+      "scope": null
     }
   ]
 }
