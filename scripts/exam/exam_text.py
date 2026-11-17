@@ -25,6 +25,9 @@ LEVELS = {"VW": "vwo", "HA": "havo", "VM": "vmbo"}
 CODE_RE = re.compile(r"^(VW|HA|VM)-(\d{4})-a-(\d{2})-(\d)-([ocbu])$", re.I)
 FILE_RE = re.compile(r"^([a-z]{2})-(\d{4})-a-(\d{2})-(\d)-([ocbu])\.pdf$", re.I)
 PAGE_NO = re.compile(r"^(\d+( / \d+)?|einde|lees verder.*|►+)$")
+# page furniture of SSL/alleexamens.nl copies and a bare "2 / 13" page number (specs/36 metrics: no stray words)
+FOOTER_RE = re.compile(r"^(Beschikbaar gesteld door Stichting Studiebegeleiding Leiden|Voor alle eindexamens, zie www\.alleexamens\.nl|\d+ / \d+$)", re.I)
+POINTS_LINE = re.compile(r"^\d+p(\s+\d+)?$")
 CV_HEADS = {"Vraag", "Antwoord", "Scores", "Vraag Antwoord", "Vraag Antwoord Scores"}
 PER_ITEM = re.compile(r"^per\s+(juist|juiste|goed|correct)", re.I)
 # "informatiebron 2", "informatiebronnen 2, 3 en 4", "informatiebronnen 1 tot en met 4", "informatiebron 3 en 4"
@@ -59,7 +62,7 @@ def pdf_lines(path: Path, issues: list, exam_id: str, code: str | None) -> tuple
                 while i < len(lines) and PAGE_NO.match(lines[i].strip() or "x") and lines[i].strip():
                     i += 1
                 continue
-            if PAGE_NO.match(s) and s.startswith(("lees", "►", "einde")):
+            if (PAGE_NO.match(s) and s.startswith(("lees", "►", "einde"))) or FOOTER_RE.match(s):
                 i += 1
                 continue
             out.append(lines[i])
@@ -168,7 +171,7 @@ def parse_opgaven(lines: list[str], exam_id: str, issues: list) -> list[dict]:
             ask: list[str] = []
             while j < len(lines) and not lines[j].strip():
                 j += 1
-            while j < len(lines) and lines[j].strip():
+            while j < len(lines) and lines[j].strip() and not POINTS_LINE.match(lines[j].strip()):
                 ask.append(lines[j].strip())
                 j += 1
             cur["questions"].append({"number": int(num), "points": points,

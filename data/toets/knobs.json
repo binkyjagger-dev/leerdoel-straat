@@ -1,5 +1,5 @@
 {
- "version": "2026-11-14-noise",
+ "version": "2026-11-17-direction",
  "knobs": [
   {
    "id": "pattern",
@@ -37,15 +37,32 @@
     "gegeven",
     "zelf vinden"
    ],
+   "applies_to_kinds": "all",
+   "settable": true,
+   "definition": {
+    "gegeven": "de stam noemt naast de gegevens en het gevraagde eindpunt een stap, methode, hulpmiddel, formule, tussengrootheid of een te gebruiken begrip ('bereken hiervoor eerst …', '(koers plus ontvangen dividend)', 'gebruik de cpi', 'gebruik in je uitleg het begrip prijspeil'); geen route: uitleg van een nieuw begrip dat niet getoetst wordt, 'gebruik informatiebron n', 'gebruik je antwoord op vraag n', een algemene afrond- of basisregel (specs/36 D4, economie-098)",
+    "zelf vinden": "de stam noemt alleen de gegevens en het eindpunt"
+   },
+   "label_evidence": "the stem phrase that gives the step, method, tool, formula, intermediate quantity or concept (for zelf vinden: the asking sentence)"
+  },
+  {
+   "id": "direction",
+   "label": "Richting",
+   "ordinal": true,
+   "values": [
+    "gegeven",
+    "open"
+   ],
    "applies_to_kinds": [
-    "calculation",
-    "schema"
+    "explanation",
+    "calculation"
    ],
    "settable": true,
    "definition": {
-    "gegeven": "de vraag noemt de tussenstappen ('bereken hiervoor eerst …') of het schema bevat de rijen",
-    "zelf vinden": "de vraag noemt alleen het eindpunt"
-   }
+    "gegeven": "de stam noemt de conclusie die de leerling moet uitleggen of aantonen ('leg uit dat …', 'toon aan dat …', '… toch …')",
+    "open": "de leerling moet de conclusie zelf bereiken ('leg uit of …', 'leg uit welk effect …', 'is … toegenomen of afgenomen?')"
+   },
+   "label_evidence": "the stem phrase that states the conclusion (for open: the asking sentence)"
   },
   {
    "id": "steps",

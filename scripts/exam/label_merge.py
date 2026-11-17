@@ -1,7 +1,12 @@
 #!/usr/bin/env python3
 """E7 / T4 — merge pattern and knob labels A/B (+R) into one record per question (specs/26 §3, specs/34 §4).
 
-Usage: label_merge.py <run_dir> [--toets] [--bank <dir>] [--subjects <dir>]
+Usage: label_merge.py <run_dir> [--toets] [--fields <f1,f2>] [--bank <dir>] [--subjects <dir>]
+
+--fields (exam mode, /examen --label --fields route,direction; specs/36 §3.3, §11 B7): the labellers give only those
+fields; every other field (value, confidence, evidence, repairs) is taken from the bank's labels/<exam_id>.json, so
+bank_labels_add.py --replace can write the full record. Applicability uses the bank's pattern; only the given fields
+are merged, disputed and sent to R.
 
 Exam mode (default, an /examen run): reads 26_labels.<A|B|R>/<opgave>.json, 21_exam_units.json (+ text/) and the
 links (24_mappings.json, or the bank's links/ when the run has none: /examen --label). Writes 26_labels.json,
@@ -43,6 +48,76 @@ def merge_field(field: str, a, b, order: list[str] | None) -> tuple[object, str]
     return None, "disputed"
 
 
+ITEM_KEYS = ("question_id", "question_number", "note")
+
+
+def partial_fields(argv: list[str], rep: Report) -> list[str] | None:
+    """--fields route,direction → ['route', 'direction'] (specs/36 §3.3); None without the flag."""
+    if "--fields" not in argv:
+        return None
+    raw = argv[argv.index("--fields") + 1] if argv.index("--fields") + 1 < len(argv) else ""
+    fields = [f.strip() for f in raw.split(",") if f.strip()]
+    bad = [f for f in fields if f not in LABEL_FIELDS]
+    if not fields or bad:
+        rep.fail("LB1", f"--fields needs a comma list of {', '.join(LABEL_FIELDS)}; got {raw!r}")
+        rep.print_and_exit()
+    return fields
+
+
+def bank_labels(run: Run, rep: Report) -> dict[str, dict]:
+    """question_id → the bank's merged label (B/labels/<exam_id>.json) for every question of the run."""
+    out = {}
+    for eid in sorted({q["exam_id"] for q in run.questions.values()}):
+        p = run.bank / "labels" / f"{eid}.json"
+        if not p.exists():
+            rep.fail("LB1", f"--fields: {eid} has no labels in the bank ({p}); label the whole exam first")
+            continue
+        for l in load_json(p)["questions"]:
+            out[l["question_id"]] = l
+    for qid in run.questions:
+        if qid not in out and run.questions[qid]["exam_id"] in {q["exam_id"] for q in out.values()}:
+            rep.fail("LB1", f"--fields: {qid} is not in the bank labels")
+    if rep.failed:
+        rep.print_and_exit()
+    return out
+
+
+def overlay(bank: dict, item: dict, partial: list[str]) -> dict:
+    """A full labeller item: the bank's values with this labeller's partial fields (and their evidence) on top."""
+    full = {k: bank.get(k) for k in LABEL_FIELDS + ["builds_on_questions", "proposed_pattern", "example_quality",
+                                                    "example_quality_reason"]}
+    full["evidence"] = {k: v for k, v in (bank.get("evidence") or {}).items() if k not in partial}
+    for k, v in item.items():
+        if k in partial or k in ITEM_KEYS or k.startswith("_"):
+            full[k] = v
+    full["evidence"].update({k: v for k, v in (item.get("evidence") or {}).items() if k in partial})
+    if "builds_on" in partial:
+        full["builds_on_questions"] = item.get("builds_on_questions") or []
+    return full
+
+
+def restore(rec: dict, bank: dict, partial: list[str]) -> None:
+    """Fields outside --fields keep the bank's value, confidence, evidence, repairs and disagreements."""
+    keep = [f for f in LABEL_FIELDS + ["example_quality"] if f not in partial]
+    for f in keep:
+        rec[f] = bank.get(f)
+        if f in (bank.get("confidence") or {}):
+            rec["confidence"][f] = bank["confidence"][f]
+        rec["evidence"].pop(f, None)
+        if f in (bank.get("evidence") or {}):
+            rec["evidence"][f] = bank["evidence"][f]
+        rec["disagreements"].pop(f, None)
+        if f in (bank.get("disagreements") or {}):
+            rec["disagreements"][f] = bank["disagreements"][f]
+    if "builds_on" not in partial:
+        rec["builds_on_questions"] = bank.get("builds_on_questions") or []
+    rec["example_quality_reason"] = bank.get("example_quality_reason")
+    if "pattern" not in partial:
+        rec["proposed_pattern"] = bank.get("proposed_pattern")
+    rec["repaired_fields"] = [f for f in bank.get("repaired_fields") or [] if f not in partial] + \
+        [f for f in rec["repaired_fields"] if f in partial]
+
+
 def main(argv: list[str]) -> None:
     if len(argv) < 2:
         print(__doc__)
@@ -66,6 +141,22 @@ def main(argv: list[str]) -> None:
                 rep.fail("LB1", f"labeller {letter}: unknown question {qid}")
     if rep.failed:
         rep.print_and_exit()
+    partial = partial_fields(argv, rep)
+    bank_lab = {}
+    if partial:
+        if mode != "exam":
+            rep.fail("LB1", "--fields is for /examen --label (exam mode) only")
+            rep.print_and_exit()
+        bank_lab = bank_labels(run, rep)
+        for letter, items in (("A", A), ("B", B)):
+            for qid, it in items.items():
+                miss = [f for f in partial if f not in it]
+                if miss:
+                    rep.fail("LB1", f"labeller {letter} {qid}: partial relabelling lacks field(s) {miss}")
+        if rep.failed:
+            rep.print_and_exit()
+        A = {qid: overlay(bank_lab[qid], it, partial) for qid, it in A.items()}
+        B = {qid: overlay(bank_lab[qid], it, partial) for qid, it in B.items()}
 
     orders = {k: (run.knobs[k]["values"] if run.knobs[k]["ordinal"] else None) for k in LABEL_KNOBS}
     orders["example_quality"] = EXAMPLE_QUALITY
@@ -95,7 +186,7 @@ def main(argv: list[str]) -> None:
         # applicability (specs/31 §2): a knob that does not apply to the merged pattern is null
         kinds = kinds_of(rec["pattern"], run.pidx)
         if rec["pattern"] is not None and rec["pattern"] != "NIEUW":
-            for k in ("route", "schema", "builds_on"):
+            for k in LABEL_KNOBS:
                 if not knob_applies(run.knobs[k], kinds, q["first_of_opgave"]) and rec[k] is not None:
                     rec[k], conf[k] = None, "high"
                     evidence.pop(k, None)
@@ -116,6 +207,8 @@ def main(argv: list[str]) -> None:
             src = r if r is not None and "pattern" in r else a
             rec["proposed_pattern"] = src.get("proposed_pattern")
         for letter, x in (("A", a), ("B", b), ("R", r)):
+            if partial and "pattern" not in partial:
+                break  # the pattern comes from the bank: no new proposals
             if x is not None and x.get("pattern") == "NIEUW" and x.get("proposed_pattern"):
                 proposals.append({"question_id": qid, "opgave_id": q["opgave_id"], "exam_id": q["exam_id"],
                                   "question_number": q["question_number"], "labeller": letter,
@@ -124,10 +217,16 @@ def main(argv: list[str]) -> None:
         rec["example_quality_reason"] = quality_src.get("example_quality_reason") if rec["example_quality"] else None
         rec.update(computed_fields(run.links_of(qid)))
         rec.update(confidence=conf, evidence=evidence, repaired_fields=repaired, disagreements=disagreements)
+        if partial:
+            restore(rec, bank_lab[qid], partial)
         labels.append(rec)
+    if partial:
+        findings = [f for f in findings if f["field"] in partial]
 
     labels.sort(key=lambda x: (x["exam_id"] or "", x["question_number"]))
     out = {"mode": mode, "run_id": run.run.get("run_id", run_dir.name), "labels": labels, "proposed_patterns": proposals}
+    if partial:
+        out["partial_fields"] = partial
     for e in validate_def(out, "item_labels.schema.json", "merged")[:5]:
         rep.fail("LB1", e)
     if rep.failed:

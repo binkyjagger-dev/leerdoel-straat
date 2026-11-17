@@ -86,7 +86,8 @@
    "vraag_id": "O2-V3",
    "number": 3,
    "points": 1,
-   "stem": "Bereken de omzet per week. Gebruik informatiebron 1.",
+   "lead": "",
+   "task": "Bereken de omzet per week. Gebruik informatiebron 1.",
    "uitwerkbijlage": null,
    "cv": {
     "maximumscore": 1,
@@ -120,7 +121,8 @@
    "vraag_id": "O2-V4",
    "number": 4,
    "points": 3,
-   "stem": "De eigenaar gaat alleen door als de winst per week hoger is dan € 1.000. Bereken met je antwoord op vraag 3 of Kruim doorgaat. Gebruik informatiebron 1 en 2.",
+   "lead": "De eigenaar gaat alleen door als de winst per week hoger is dan € 1.000.",
+   "task": "Bereken met je antwoord op vraag 3 of Kruim doorgaat. Gebruik informatiebron 1 en 2.",
    "uitwerkbijlage": null,
    "cv": {
     "maximumscore": 3,

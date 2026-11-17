@@ -6,6 +6,7 @@
  "n_opgaven": 5,
  "n_vragen": 13,
  "duration_minutes": 50,
+ "reading_budget_pct": 60,
  "matrix": [
   {
    "group_id": "X1.1-01",
@@ -42,6 +43,7 @@
    "gegeven": 0.6,
    "zelf vinden": 0.4
   },
+  "direction": "vrij",
   "steps": {
    "1": 0.5,
    "5": 0.5

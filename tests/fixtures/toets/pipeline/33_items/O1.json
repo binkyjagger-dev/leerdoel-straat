@@ -65,7 +65,8 @@
    "vraag_id": "O1-V1",
    "number": 1,
    "points": 3,
-   "stem": "Bereken de totale dekkingsbijdrage in maart. Bereken hiervoor eerst de prijs exclusief btw en de dekkingsbijdrage per reparatie. Gebruik informatiebron 1.",
+   "lead": "",
+   "task": "Bereken de totale dekkingsbijdrage in maart. Bereken hiervoor eerst de prijs exclusief btw en de dekkingsbijdrage per reparatie. Gebruik informatiebron 1.",
    "uitwerkbijlage": null,
    "cv": {
     "maximumscore": 3,
@@ -136,7 +137,8 @@
    "vraag_id": "O1-V2",
    "number": 2,
    "points": 2,
-   "stem": "Zool overweegt de prijs te verlagen. Leg uit hoe een lagere prijs tot een hogere omzet kan leiden.",
+   "lead": "Zool overweegt de prijs te verlagen.",
+   "task": "Leg uit hoe een lagere prijs tot een hogere omzet kan leiden.",
    "uitwerkbijlage": null,
    "cv": {
     "maximumscore": 2,

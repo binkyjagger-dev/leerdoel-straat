@@ -150,5 +150,6 @@ def load_labeller(run: Run, letter: str) -> tuple[dict[str, dict], list[str]]:
         if d["labeller"] != letter or d["mode"] != run.mode:
             errs.append(f"{Path(f).parent.name}/{Path(f).name}: labeller/mode {d['labeller']}/{d['mode']} != {letter}/{run.mode}")
         for it in d["items"]:
-            items[it["question_id"]] = {**it, "_opgave": d["opgave_id"], "_file": f"{Path(f).parent.name}/{Path(f).name}"}
+            items[it["question_id"]] = {**it, "_opgave": d["opgave_id"], "_file": f"{Path(f).parent.name}/{Path(f).name}",
+                                        "_fields": d.get("fields")}
     return items, errs

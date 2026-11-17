@@ -57,7 +57,7 @@ def sources_cases(tmp: Path) -> bool:
     """Question `sources` / `sources_from` (specs/21 §3): every form a question can name bronnen in,
     the opgave fallback, and never from the correctievoorschrift."""
     furn = ["VW-9999-a-31-1-o", "1 / 1", "einde"]
-    o = ["VW-9999-a-31-1-o", "Examen VWO", "Dit examen bestaat uit 7 vragen.", "Voor dit examen zijn maximaal 7 punten te behalen.", " ",
+    o = ["VW-9999-a-31-1-o", "Examen VWO", "tijdvak 1 dinsdag 13.30 - 16.30 uur", "Dit examen bestaat uit 7 vragen.", "Voor dit examen zijn maximaal 7 punten te behalen.", " ",
          "Opgave 1", " ", "Bij deze opgave horen de informatiebronnen 1 tot en met 4.", " ", "Camping Vogelhof heeft 280 standplaatsen.", " ",
          "1p", "1", "Bereken de omzet (zie informatiebron 2).", " ",
          "De kosten van het veld staan in de bijlage (zie informatiebronnen 2, 3 en", "4).", " ",
@@ -92,6 +92,22 @@ def sources_cases(tmp: Path) -> bool:
                 q[5] == ([1, 2, 3, 4], "opgave"))
     ok &= check("opgave without 'horen' sentence -> [] (question); bronnen in the cv are never used", q[6] == ([], "question"))
     ok &= check("'informatiebronnen 1 t/m 2' -> [1, 2]", q[7] == ([1, 2], "question"))
+    # exam_metrics on this exam (specs/36 §3.1): a bank register that points at the PDFs, no links, no labels
+    mb = tmp / "metrics_bank"
+    mb.mkdir()
+    (mb / "register.json").write_text(json.dumps({"subject": "fixturevak", "criteria_run": "x", "exams": [
+        {"exam_id": "vwo-2031-tv1", "n_questions": 7, "max_score": 7,
+         "files": {"o": str(ex / "2031 TV1" / "vw-9999-a-31-1-o.pdf"), "c": str(ex / "2031 TV1" / "vw-9999-a-31-1-c.pdf")}}]}),
+        encoding="utf-8")
+    ok &= run("exam_metrics (cover with '13.30 - 16.30 uur')", "scripts/exam/exam_metrics.py", "fixturevak", "--bank", str(mb))
+    mm = load(mb / "metrics" / "vwo-2031-tv1.json")
+    mv = {v["number"]: v for v in mm["vragen"]}
+    ok &= check("duration 180 from the cover; no duration question", mm["duration_minutes"] == 180
+                and mm["duration_source"] == "cover" and not (mb / "metrics" / "_proposed_decisions.json").exists())
+    ok &= check("numbers_lead: '€ 115.000' in the lead of q5 is new (1); q2's lead holds no number (0)",
+                mv[5]["numbers_lead"] == 1 and mv[2]["numbers_lead"] == 0 and mv[1]["words_lead"] == 0)
+    ok &= check("words_sources: the bronnen an opgave names (opgave 1: 1-4, 8 words; opgave 2 via vraag 7: 1-2, 4 words)",
+                mm["opgaven"][0]["words_sources"] == 8 and mm["opgaven"][1]["words_sources"] == 4)
     return ok
 
 
@@ -172,6 +188,38 @@ def main():
     ok &= check("bevindingen: X1.2-01-b never tested", "X1.2-01-b" in (out / "bevindingen.md").read_text(encoding="utf-8")
                 .split("## nooit getoetst")[1])
     ok &= check("bank keeps its own criteria copy", (bank / "criteria.json").exists() and (bank / "source_units.json").exists())
+
+    # exam_metrics + house rules (specs/36 §3.1, §11 B3)
+    ok &= run("exam_metrics (no duration on the cover)", f"{s}/exam_metrics.py", "fixturevak", "--bank", str(bank))
+    mf = bank / "metrics" / f"{E}.json"
+    mm = load(mf)
+    mv = {v["number"]: v for v in mm["vragen"]}
+    sys.path.insert(0, str(ROOT / "scripts"))
+    from common import validate_schema  # noqa: E402
+    pq = bank / "metrics" / "_proposed_decisions.json"
+    ok &= check("duration null and an intake-format question (proposal 180 min)",
+                mm["duration_minutes"] is None and pq.exists() and not validate_schema(load(pq), "intake_questions.schema.json")
+                and "180" in load(pq)["questions"][0]["proposed"])
+    ok &= check("'Bereken … en leg uit …' = 2 tasks; 'Noem …' = 1; q2 lead = 5 words; q1 lead empty (intro); counts only",
+                mv[1]["n_tasks"] == 2 and mv[2]["n_tasks"] == 1 and mv[2]["words_lead"] == 5 and mv[1]["words_lead"] == 0
+                and mm["opgaven"][0]["words_intro"] > 0 and mm["opgaven"][0]["n_groups"] == 2
+                and "Kruim" not in json.dumps(mm))
+    ok &= run("exam_metrics --duration with the decision", f"{s}/exam_metrics.py", "fixturevak", "--bank", str(bank),
+              "--duration", f"{E}=180", "--decision", "fixturevak-009")
+    mm = load(mf)
+    ok &= check("duration 180 from decision fixturevak-009; the open question is gone",
+                mm["duration_minutes"] == 180 and mm["duration_source"] == "decision fixturevak-009" and not pq.exists())
+    ok &= run("exam_metrics again: the decided duration is kept", f"{s}/exam_metrics.py", "fixturevak", "--bank", str(bank))
+    ok &= check("kept", load(mf)["duration_source"] == "decision fixturevak-009" and not pq.exists())
+    ok &= run("profile_build with metrics (house rules)", f"{s}/profile_build.py", "fixturevak", "--bank", str(bank),
+              "--subjects", str(tmp / "no_subjects"))
+    prof = load(bank / "profiel" / "referentieprofiel.json")
+    hr = prof.get("house_rules") or {}
+    ok &= check("house_rules: 30 min/punt (180/6), 2 opgaven, max 2 tasks seen, words_task p90 > 0",
+                hr.get("minutes_per_point") == 30.0 and hr["points_per_opgave"]["max"] == 6 and hr["words_task"]["p90"] > 0
+                and hr["groups_per_point"]["max"] is not None)
+    md = (bank / "profiel" / "referentieprofiel.md").read_text(encoding="utf-8")
+    ok &= check("referentieprofiel.md has the section Huisregels eindexamen", "## Huisregels eindexamen" in md and "| 2030-I | 180 |" in md)
 
     # domein-A skill points get their own row (bedrijfsecon-047, specs/25 §3)
     bank_a = tmp / "bank_skill"; shutil.copytree(bank, bank_a)

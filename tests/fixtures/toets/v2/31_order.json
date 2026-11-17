@@ -1,0 +1,41 @@
+{
+ "subject": "fixturevak",
+ "level": "5vwo",
+ "title": "Fixture toets huisregels",
+ "criteria_run": "fixture-generate",
+ "n_opgaven": 2,
+ "n_vragen": 6,
+ "duration_minutes": 30,
+ "reading_budget_pct": 60,
+ "matrix": [
+  {
+   "group_id": "X1.1-01",
+   "points": 7
+  },
+  {
+   "group_id": "X1.2-01",
+   "points": 2
+  }
+ ],
+ "criteria_include": null,
+ "criteria_exclude": null,
+ "bloom_mix": null,
+ "knobs": {
+  "pattern": "vrij",
+  "solo": "vrij",
+  "route": "vrij",
+  "direction": "vrij",
+  "steps": "vrij",
+  "sources": "vrij",
+  "noise": "vrij",
+  "claim": "vrij",
+  "new_concept": "vrij",
+  "schema": "vrij",
+  "builds_on": "vrij"
+ },
+ "contexts": null,
+ "avoid_contexts": null,
+ "reuse": [],
+ "reference": "bank-2-examens",
+ "conventions": null
+}

@@ -30,7 +30,7 @@ from collections import defaultdict
 from pathlib import Path
 
 from docmodel import write
-from tcommon import LABEL_KNOBS, MIX_LEVELS, Report, exam_label, load_json, pattern_codes, save_json
+from tcommon import LABEL_KNOBS, MIX_LEVELS, Report, exam_label, lead_task, load_json, pattern_codes, save_json
 from toetsrun import ToetsRun, subjects_opt
 
 LEVEL_NL = {"4vwo": "4 VWO", "5vwo": "5 VWO", "6vwo": "6 VWO"}
@@ -115,7 +115,10 @@ class Toets:
                 continue
             B += [("h2", f"Opgave {self.onum[og['opgave_id']]} {it['title']}"), ("p", it["intro"])]
             for v in sorted(it["vragen"], key=lambda x: x["number"]):
-                B.append(("p", f"{v['points']}p **{v['number']}** {v['stem']}"))
+                lead, task = lead_task(v)  # specs/36 §5.1, §8: the lead above the points line, as the CE prints it
+                if lead.strip():
+                    B.append(("p", lead))
+                B.append(("p", f"{v['points']}p **{v['number']}** {task}"))
         if any(it["sources"] for it in self.items.values()):
             B += [("pagebreak",), ("h2", "Informatiebronnen")]
             for og in self.opgaven:
@@ -298,6 +301,75 @@ class Toets:
         if acc:
             B += [("h3", "Geaccepteerde afwijkingen (pauze 2)"),
                   ("bullets", [f"{a['target']} {a['field']} = {a['value']}: {a.get('note') or ''}" for a in acc])]
+        B += self.huisregels()
+        return B
+
+    def huisregels(self) -> list[tuple]:
+        """8 Huisregels (specs/36 §8): per rule ordered, realised and the central exam."""
+        import house_checks
+        from tasks import load_rules
+        hr, o = self.run.house, self.order
+        pctb = o.get("reading_budget_pct")
+        gp = self.run.subjects / self.run.subject / "glossary.json"
+        gl = load_json(gp) if gp.exists() else None
+        bpv = {v["vraag_id"]: v for og in self.opgaven for v in og["vragen"]}
+        measured, per_op = {}, []
+
+        class Quiet:  # the checks' messages are in 33_checks; here only the numbers count
+            def __getattr__(self, _):
+                return lambda *a, **k: None
+        for og in self.opgaven:
+            it = self.items.get(og["opgave_id"])
+            if not it:
+                continue
+            bv = {v["vraag_id"]: bpv[v["vraag_id"]] for v in og["vragen"] if v["vraag_id"] in bpv}
+            measured[og["opgave_id"]] = house_checks.check_opgave(Quiet(), self.run, it, og, bv, gl, self.items)
+            groups = {(self.run.crit.get(s["criterion_id"]) or {}).get("group_id") for v in it["vragen"] for s in v["cv"]["scorepunten"]}
+            per_op.append((og, it, sum(v["points"] for v in it["vragen"]), len(groups)))
+        T = self.max_score
+        words_tot = sum(m["words"]["total"] for m in measured.values())
+        wpp = (hr or {}).get("words_per_point", {}).get("pooled")
+        ce = (lambda s: s) if hr else (lambda s: "geen huisregels gemeten")
+        rows = [["regel", "opdracht", "gerealiseerd", "eindexamen"]]
+        dur = o.get("duration_minutes")
+        rows.append(["minuten per punt", f"{num(dur / T)} ({dur} min / {T} p)" if dur and T else "–", "–",
+                     ce(num(hr["minutes_per_point"]) if hr and hr.get("minutes_per_point") else "–")])
+        budget = house_checks.budget(T, hr, pctb)
+        rows.append(["woorden (hele toets)", f"≤ {num(budget)} ({num(pctb)} %, met 10 % speling)" if budget else
+                     ("geen leesbudget" if pctb is None else "–"), num(words_tot),
+                     ce(f"{num(T * wpp)} voor {T} punten" if wpp else "–")])
+        for og, it, p, g in per_op:
+            b = house_checks.budget(p, hr, pctb)
+            rows.append([f"woorden {og['opgave_id']} ({p} p)", f"≤ {num(b)}" if b else "–", num(measured[og['opgave_id']]["words"]["total"]),
+                         ce(f"{num(p * wpp)}" if wpp else "–")])
+        ppo, vpo = (hr or {}).get("points_per_opgave"), (hr or {}).get("vragen_per_opgave")
+        rows.append(["punten per opgave", f"{o.get('n_opgaven')} opgaven", ", ".join(f"{og['opgave_id']} {p}" for og, _, p, _ in per_op),
+                     ce(f"gem. {num(ppo['mean'])} ({num(ppo['min'])}–{num(ppo['max'])})" if ppo else "–")])
+        rows.append(["vragen per opgave", "–", ", ".join(f"{og['opgave_id']} {len(it['vragen'])}" for og, it, _, _ in per_op),
+                     ce(f"gem. {num(vpo['mean'])} ({num(vpo['min'])}–{num(vpo['max'])})" if vpo else "–")])
+        gmax = ((hr or {}).get("groups_per_opgave") or {}).get("max")
+        rows.append(["leerdoelen per opgave", "–", ", ".join(f"{og['opgave_id']} {g}" for og, _, _, g in per_op),
+                     ce(f"max. {num(gmax)}" if gmax else "–")])
+        multi = [(vid, n) for m in measured.values() for vid, n in m["tasks"].items() if n > 1]
+        planned_multi = [v["vraag_id"] for v in bpv.values() if (v.get("n_tasks") or 1) > 1]
+        rows.append(["taken per vraag (2 of meer)", ", ".join(planned_multi) or "geen",
+                     ", ".join(f"{vid} ({n})" for vid, n in multi) or "geen",
+                     ce("max_tasks per patroon (referentieprofiel)")])
+        for k, label in (("route", "route gegeven"), ("direction", "richting gegeven")):
+            kd = (self.realized.get("knobs") or {}).get(k) or {}
+            d = (kd.get("values") or {}).get("gegeven") or {}
+            rows.append([label, "vrij" if kd.get("ordered") == "vrij" else (pct(d.get("ordered")) if d.get("ordered") is not None else "–"),
+                         pct(d.get("realised")) if d.get("realised") is not None else "–", self.ref_cell(k, "gegeven")])
+        gives = [h for m in measured.values() for h in m["giveaways"]]
+        rows.append(["term giveaway (IT10)", "0", str(len(gives)), "0"])
+        B = [("h2", "8. Huisregels"),
+             ("p", "De huisregels van het centraal examen (specs/36): leeslast, opgavegrootte, taken per vraag en "
+                   "aanwijzingen in de stam. " + (hr.get("label") or "") + "." if hr else
+              "Geen huisregels gemeten voor dit vak: alleen de toets zelf is gemeten."),
+             ("table", rows, True)]
+        if gives:
+            B.append(("bullets", [f"{h['vraag_id']} scorepunt {h['seq']}: '{h['concept']}' in {'/'.join(h['where'])} ({h['bloom']})"
+                                  for h in gives]))
         return B
 
     # ---------------------------------------------------------------- twijfellijst

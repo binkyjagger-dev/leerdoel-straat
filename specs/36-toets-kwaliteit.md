@@ -74,7 +74,9 @@ gemeten" and fall back to the seed (`subjects/<s>/toets/seed_profile.json` may c
 - **`direction` (new, label "Richting", values `open`, `gegeven`)**: *gegeven* = the stem states the conclusion the
   student must explain or show ("leg uit dat …", "toon aan dat …", "… toch …"); *open* = the student must reach the
   conclusion ("leg uit of", "leg uit welk effect", "is … toegenomen of afgenomen?"). Applies to explanation and
-  show-that patterns (`kind` in `["explanation", "show"]`), else `null`. Settable; two-valued (disputes go to R).
+  show-that patterns: `applies_to_kinds: ["explanation", "calculation"]` (there is no kind "show"; "toon aan dat" is
+  P09, a calculation pattern; a plain "Bereken" is *open*; decided 2026-11-17, §11 B1), else `null`. Settable;
+  two-valued (disputes go to R).
 - Labeller evidence: the stem phrase that gives route or direction.
 
 ### 3.3 Relabelling only the changed fields
@@ -171,10 +173,10 @@ index in `steps`). Planner rules:
 | Id | Script | Check |
 |---|---|---|
 | BP11 | blueprint_check | points per opgave within CE min–max (warning when the total does not allow it); groups per opgave ≤ CE max; every vraag has `story_step`; planned `n_tasks` ≤ `max_tasks` |
-| BP12 | blueprint_check | warning when planned knob shares already sit outside tolerance (CLAUDE.md, toets run 2) |
+| BP12 | blueprint_check | little margin (CLAUDE.md, toets run 2): warning when a planned share is within tolerance but ≥ 5 pp (knobs) or ≥ 3 pp (Bloom) from the order, or only the slack rule keeps it in; `bouwplan.md` marks that knob or level "weinig marge" so the teacher sees it at pause 2 (decided 2026-11-17) |
 | IT8 | items_check | form: `task` present, starts with an asking verb or is a question, ≤ `words_task` limit; `n_tasks` = planned and ≤ `max_tasks` |
-| IT9 | items_check | cue scan (advisory, goes to the verifier): stem phrases from `data/toets/cue_phrases.json` (route: "bereken hiervoor eerst", "gebruik de/het <term>", "(… plus …)", "met behulp van"; direction: "toch", "leg uit dat", "toon aan dat") where the vraag's planned `route`/`direction` is *zelf vinden*/*open*; D4 phrases are allowlisted |
-| IT10 | items_check | term giveaway (error when terms are known): a concept of the vraag's scorepunt criteria (group `concepts` ∪ glossary entries matching the criterion text) occurs in the intro, lead or task of the vraag while the scorepunt asks to name, describe, recognise or apply that concept; when the criteria have no concepts (economie restored run), advisory only |
+| IT9 | items_check | cue scan (advisory, goes to the verifier): stem phrases from `data/toets/cue_phrases.json` (route: "bereken hiervoor eerst", "gebruik de/het <term>", "(… plus …)", "met behulp van"; direction: "toch", "leg uit dat", "toon aan dat", and — decided 2026-11-17, because "waarom" presupposes the conclusion — "leg uit waarom … sprake is van", "leg uit waardoor …") where the vraag's planned `route`/`direction` is *zelf vinden*/*open*; D4 phrases are allowlisted |
+| IT10 | items_check | term giveaway (decided 2026-11-17): a hit when (1) a concept of a scorepunt's criterion (group `concepts` ∪ glossary terms that occur in the criterion text) occurs in the intro or the lead, or in the task but **not** in the object of the asking verb, **and** (2) the concept also occurs in that scorepunt's text or the model answer. Planned Bloom of the scorepunt onthouden → error; begrijpen or higher → warning (to the verifier, V11; decided 2026-11-17: a price question cannot avoid 'prijs', and many group concepts are generic). Concepts the writer lists in `new_concepts` are skipped (D4). When the criteria have no concepts and no glossary term matches, advisory only. *Object of the asking verb* (decided 2026-11-17 after the fixture showed "Leg uit hoe een lagere prijs tot een hogere omzet kan leiden" would fail): in a task sentence that starts with an asking verb, everything after the verb is its object ("Omschrijf wat X is", "Bereken de X", the whole hoe/waarom-clause), except a route hint — a route-cue match of `cue_phrases.json` plus the next five words ("met behulp van de cpi"). So a hit in the task is a concept in a sentence without an asking verb (a helper sentence like "Betrek X in je antwoord" included) or inside a route hint |
 | RB | items_check | reading budget: words of intro + sources + leads + tasks of the opgave ≤ opgave points × CE `words_per_point` × `reading_budget_pct` × 1.1; toets total likewise |
 | IT11 | items_check | lead: words ≤ limit, new numbers ≤ limit (§5.1) |
 
@@ -186,7 +188,9 @@ index in `steps`). Planner rules:
 - **V6 changed**: an ambiguity is fixed by making the situation precise; a `fix_hint` that adds a step, method,
   tool, concept or conclusion to the stem is not allowed (the verifier checks its own hints against IT9).
 - **V11 new — cueing**: route, direction and term giveaway realised vs plan; uses IT9/IT10 hits and the labels.
-  A term giveaway is `must`.
+  A term giveaway is `must`. An IT10 *warning* (begrijpen or higher) becomes `must` when the stem **defines** the concept
+  or **names the situation with it** while the scorepunt asks the student to recognise, choose or explain that concept
+  (run 3 vraag 2: "grijze druk" in the lead); otherwise it is `should` (decided 2026-11-17).
 - **V12 new — readability and storyline**: reading level fits `level`; the lead adds only what this step needs; the
   vraag belongs to the opgave's storyline; double tasks only within `max_tasks`.
 - V8 gains: facts must be realistic or marked as a simplification (§5.4).
@@ -234,3 +238,27 @@ index in `steps`). Planner rules:
 9. Acceptance run: the economie 4 VWO P2 order with `duration_minutes: 90`, `reading_budget_pct` as the teacher sets,
    `n_opgaven` as proposed. Compare with run 20261115-2242: total words, words per opgave, IT9/IT10 hits (target 0),
    double tasks (target ≤ CE), vragen per opgave, and the teacher's own ✓-rate (run 3: 9/17).
+
+## 11. Build decisions (2026-11-17, Martijn, while building §10 steps 1–7)
+
+| Id | Decision |
+|---|---|
+| B1 | `direction` applies to kinds `explanation` and `calculation` (§3.2). |
+| B2 | Bank labels made before this spec (no `direction`; `route` null on a question with a known pattern and no dispute) make `profile_build.py` put `route` and `direction` of that exam in `unknown_knobs` ("onbekend"), not fail; the rest of the profile stays usable until `--fields route,direction` relabels the exam. |
+| B3 | Duration not on the cover: `exam_metrics.py` writes `duration_minutes: null` and an intake-format question (proposal 180 min) to `B/metrics/_proposed_decisions.json`; the orchestrator runs `decisions.py add`; after the answer `exam_metrics.py <s> --duration <exam_id>=<min> --decision <id>` records the value and its source. |
+| B4 | Asking verbs and helper sentences live in `data/toets/asking_verbs.json` (subject overlay `subjects/<s>/toets/asking_verbs.json`): verbs = the first words of all `stem_forms` plus the CvTE verbs; helper sentences never count as a new task: "Licht (je antwoord) toe", "Motiveer", every sentence with "hiervoor", "Gebruik …", "Betrek … in je antwoord", "Ga uit van", "Rond … af". Added after a check on the five bank exams (2026-11-17): "Leg je antwoord/keuze uit", "Geef een argument voor je keuze", "Ga in je antwoord in op …", "Maak (hierbij) gebruik van …", "Ga ervan uit dat …", "Kies de juiste letter en motiveer …", "Stel dat …" (a lead sentence that an SSL copy without blank lines puts in the task). Real double tasks left: economie 2025-I v18, v24; bedrijfseconomie 2025-I v27, v29, 2026-I v1, v4. |
+| B5 | IT10 as in §6. |
+| B6 | BP12 as in §6. |
+| B7 | `/examen --label --fields`: `label_merge.py --fields route,direction` takes the other fields (with their confidence and evidence) from `B/labels/<exam_id>.json` into `R/26_labels.json`; `bank_labels_add.py --replace` writes the bank file (one script writes the bank). |
+| B8 | `reading_budget_pct` missing from the order → an ASK at pause 1 (as knobs and Bloom mix); `null` = deliberately no budget. |
+| B9 | Words = whitespace tokens, table cells included. Numbers (`numbers_lead`, IT11) with the IT3 scanner and exemptions (0, 1, 100, years, reference numbers). |
+| B10 | Exam text: everything before the first vraag of an opgave is intro (the lead of the first vraag is empty); task = the line(s) after "Np n"; lead = the text between the previous vraag and this one. |
+| B11 | RB and the lead word limit use the pooled `words_per_point` and `words_lead` p90; with `reading_budget_pct: null` RB and the lead word limit are off, the lead number limit stays. |
+| B12 | `story_step` is 1-based (step 1 = `steps[0]`). |
+| B13 | Reused opgaven (verbatim) need no `storyline`, `story_step` or `n_tasks` and are exempt from BP11, IT8–IT11 and the per-opgave RB; their words count in the toets total of RB. |
+| B14 | Without house rules (no metrics and no seed block), O7–O9, the BP11 limits, the IT8 length, IT11 and RB report `info: geen huisregels gemeten`, never a failure. |
+| B15 | Severity: BP11 error (warning only when the total does not allow CE min–max); IT8, IT11, RB error; IT9 warning (to V11); IT10 per §6. |
+| B16 | New schema `schemas/exam_metrics.schema.json` for `B/metrics/<exam_id>.json`. |
+| B17 | `direction` is two-valued: a difference is a dispute, R decides. |
+| B18 | Verifier `proposed_decisions`: `applies_to` from the roles of `schemas/decisions.schema.json`, `impact` high/medium/low, checked by `validate_toets.py verification`; finding ids gain V11 and V12. |
+

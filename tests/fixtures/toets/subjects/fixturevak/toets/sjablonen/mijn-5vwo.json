@@ -14,6 +14,8 @@
  "knobs": {
   "claim": {
    "nee": 1.0
-  }
- }
+  },
+  "direction": "vrij"
+ },
+ "reading_budget_pct": 60
 }

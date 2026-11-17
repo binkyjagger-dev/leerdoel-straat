@@ -20,8 +20,13 @@ BP7  Bloom mix ±5 pp, knob shares ±10 pp, with the slack rule (specs/32 §4); 
 BP8  no context_tags pair from the history, no avoid_contexts term, no two opgaven with the same first tag
 BP9  needs_figure patterns have a planned figure; P15 is the last vraag of its opgave
 BP10 coverage per group: tested and untested criteria (information)
+BP11 (specs/36 §5.3, §6) every opgave that is not reused has a storyline and every vraag a story_step in 1..steps and
+     an n_tasks <= the pattern's CE max_tasks; points per opgave within the CE min-max (a warning when the total does
+     not allow it); leerdoelen per opgave <= the CE maximum. Without house rules the CE limits are info (§11 B14)
+BP12 warning: a planned share within tolerance but >= 5 pp (knobs) / >= 3 pp (Bloom) from the order, or kept in only
+     by the slack rule ("weinig marge" in bouwplan.md)
 A teacher change accepted at pause 2 (`accept_deviation` in 32_blueprint_review.json, recorded by
-blueprint_apply.py in `accepted_deviations`) turns the BP5–BP9 failure it causes into a warning; BP1–BP4 and a
+blueprint_apply.py in `accepted_deviations`) turns the BP5–BP9 or BP11 failure it causes into a warning; BP1–BP4 and a
 scorepunt Bloom above criterion + 1 are never accepted (specs/33 T2b, bouwvraag 13).
 """
 from __future__ import annotations
@@ -31,7 +36,7 @@ import sys
 from collections import defaultdict
 from pathlib import Path
 
-from shares import as_shares, blueprint_records, group_points, ordered_levels, point_shares, tolerance_report
+from shares import as_shares, blueprint_records, group_points, margin_report, ordered_levels, point_shares, tolerance_report
 from tcommon import LABEL_KNOBS, Report, bloom_rank, kinds_of, knob_applies, load_json, pattern_codes, save_json, validate_schema
 from toetsrun import ToetsRun, opt, subjects_opt
 
@@ -41,7 +46,7 @@ class Checker:
         self.rep, self.accepted = rep, accepted
 
     def fail(self, code: str, msg: str, target: str | None = None, field: str | None = None, acceptable: bool = True) -> None:
-        if acceptable and code in ("BP5", "BP6", "BP7", "BP8", "BP9"):
+        if acceptable and code in ("BP5", "BP6", "BP7", "BP8", "BP9", "BP11"):
             for a in self.accepted:
                 t_ok = target is None or a["target"] == target or target.startswith(a["target"] + "-")
                 f_ok = field is None or a["field"] == field or a["field"].endswith("." + field)
@@ -241,6 +246,55 @@ def main(argv: list[str]) -> None:
                 C.fail("BP9", f"{v['vraag_id']}: pattern {v['pattern']} needs a figure but none is planned", v["vraag_id"], "pattern")
             if "P15" in codes and i != len(o["vragen"]) - 1:
                 C.fail("BP9", f"{v['vraag_id']}: P15 is not the last vraag of {o['opgave_id']}", v["vraag_id"], "pattern")
+
+    # BP11 storyline, opgave size, tasks (specs/36 §5.1, §5.3, §6, §11 B12-B15)
+    hr = run.house
+    total_pts = sum(r["points"] for r in recs)
+    own = [o for o in bp["opgaven"] if not o.get("reused_from")]
+    ppo = (hr or {}).get("points_per_opgave") or {}
+    gmax = ((hr or {}).get("groups_per_opgave") or {}).get("max")
+    n_op = len(bp["opgaven"])
+    fits = bool(ppo) and n_op * ppo["min"] <= total_pts <= n_op * ppo["max"]
+    if hr and ppo and not fits:
+        rep.warn("BP11", f"{total_pts} points over {n_op} opgaven cannot all lie within the CE {ppo['min']:g}-{ppo['max']:g} "
+                         f"points per opgave")
+    if not hr:
+        rep.info("BP11", "geen huisregels gemeten: points and leerdoelen per opgave and max_tasks are not checked (§11 B14)")
+    for o in own:
+        st = o.get("storyline")
+        if not st:
+            C.fail("BP11", f"{o['opgave_id']}: no storyline (problem, actors, shared_data, steps)", o["opgave_id"], "storyline")
+        n_steps = len((st or {}).get("steps") or [])
+        pts = sum(v["points"] for v in o["vragen"])
+        if hr and ppo and not ppo["min"] <= pts <= ppo["max"]:
+            msg = f"{o['opgave_id']}: {pts} points; the central exam has {ppo['min']:g}-{ppo['max']:g} points per opgave"
+            if fits:
+                C.fail("BP11", msg, o["opgave_id"], "points")
+            else:
+                rep.warn("BP11", msg + " (the total does not allow it)")
+        groups = {(run.crit.get(s["criterion_id"]) or {}).get("group_id") for v in o["vragen"] for s in v["scorepunten"]}
+        if hr and gmax and len(groups) > gmax:
+            C.fail("BP11", f"{o['opgave_id']}: {len(groups)} leerdoelen; the central exam has at most {gmax:g} per opgave "
+                           f"(cluster groups that belong together)", o["opgave_id"], "scorepunten")
+        for v in o["vragen"]:
+            ss = v.get("story_step")
+            if ss is None:
+                C.fail("BP11", f"{v['vraag_id']}: no story_step", v["vraag_id"], "story_step")
+            elif st and not 1 <= ss <= n_steps:
+                C.fail("BP11", f"{v['vraag_id']}: story_step {ss} not in 1-{n_steps}", v["vraag_id"], "story_step")
+            nt = v.get("n_tasks")
+            mt = run.max_tasks(v["pattern"])
+            if nt is None:
+                C.fail("BP11", f"{v['vraag_id']}: no n_tasks", v["vraag_id"], "n_tasks")
+            elif mt is not None and nt > mt:
+                C.fail("BP11", f"{v['vraag_id']}: n_tasks {nt} > max_tasks {mt} of {v['pattern']} in the central exam "
+                               f"(split the vraag)", v["vraag_id"], "n_tasks")
+
+    # BP12 little margin (specs/36 §6): within tolerance, but close to its edge
+    for d in margin_report(order, shares):
+        what = "Bloom-mix" if d["what"] == "bloom" else d["what"]
+        why = "only the slack rule keeps it in" if d["reason"] == "slack" else "little margin left"
+        rep.warn("BP12", f"{what} '{d['value']}': {d['share']:.0%} planned, ordered {d['ordered']:.0%} - {why} (weinig marge)")
 
     # BP10 coverage
     tested = defaultdict(set)

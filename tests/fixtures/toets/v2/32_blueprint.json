@@ -1,0 +1,262 @@
+{
+ "opgaven": [
+  {
+   "opgave_id": "O1",
+   "title": "Fietsenmaker Spaak",
+   "context": "fietsenmaker die een tweede vestiging overweegt",
+   "context_tags": [
+    "fietsen",
+    "werkplaats"
+   ],
+   "storyline": {
+    "problem": "Spaak overweegt een tweede vestiging",
+    "actors": [
+     "Spaak"
+    ],
+    "shared_data": [],
+    "steps": [
+     "Wat een tweede vestiging oplevert",
+     "Begrip uitleggen",
+     "Omzet berekenen"
+    ]
+   },
+   "sources_planned": 0,
+   "reused_from": null,
+   "vragen": [
+    {
+     "vraag_id": "O1-V1",
+     "number": 1,
+     "points": 1,
+     "pattern": "P16",
+     "knobs": {
+      "solo": "unistructureel",
+      "route": "zelf vinden",
+      "direction": null,
+      "steps": "1",
+      "sources": "in vraagtekst",
+      "noise": "nee",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": null
+     },
+     "builds_on_vragen": [],
+     "scorepunten": [
+      {
+       "seq": 1,
+       "points": 1,
+       "criterion_id": "X1.2-01-a",
+       "bloom": "onthouden"
+      }
+     ],
+     "intent": "Een voordeel van een filiaal noemen.",
+     "example_refs": [],
+     "story_step": 1,
+     "n_tasks": 1
+    },
+    {
+     "vraag_id": "O1-V2",
+     "number": 2,
+     "points": 1,
+     "pattern": "P16",
+     "knobs": {
+      "solo": "unistructureel",
+      "route": "zelf vinden",
+      "direction": null,
+      "steps": "1",
+      "sources": "in vraagtekst",
+      "noise": "nee",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": "nee"
+     },
+     "builds_on_vragen": [],
+     "scorepunten": [
+      {
+       "seq": 1,
+       "points": 1,
+       "criterion_id": "X1.2-01-a",
+       "bloom": "onthouden"
+      }
+     ],
+     "intent": "Omschrijven wat een filiaal is.",
+     "example_refs": [],
+     "story_step": 2,
+     "n_tasks": 1
+    },
+    {
+     "vraag_id": "O1-V3",
+     "number": 3,
+     "points": 2,
+     "pattern": "P08",
+     "knobs": {
+      "solo": "unistructureel",
+      "route": "zelf vinden",
+      "direction": "open",
+      "steps": "2",
+      "sources": "in vraagtekst",
+      "noise": "nee",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": "nee"
+     },
+     "builds_on_vragen": [],
+     "scorepunten": [
+      {
+       "seq": 1,
+       "points": 1,
+       "criterion_id": "X1.1-01-a",
+       "bloom": "toepassen"
+      },
+      {
+       "seq": 2,
+       "points": 1,
+       "criterion_id": "X1.1-01-a",
+       "bloom": "toepassen"
+      }
+     ],
+     "intent": "De omzet per week berekenen.",
+     "example_refs": [],
+     "story_step": 3,
+     "n_tasks": 1
+    }
+   ]
+  },
+  {
+   "opgave_id": "O2",
+   "title": "Bakkerij Kruim",
+   "context": "bakkerij die de prijs van brood verlaagt",
+   "context_tags": [
+    "voeding",
+    "bakkerij"
+   ],
+   "storyline": {
+    "problem": "Kruim verlaagt de prijs van brood",
+    "actors": [
+     "Bakkerij Kruim"
+    ],
+    "shared_data": [],
+    "steps": [
+     "Omzet en verklaring",
+     "Omzet daalt toch",
+     "Prijs en omzet"
+    ]
+   },
+   "sources_planned": 0,
+   "reused_from": null,
+   "vragen": [
+    {
+     "vraag_id": "O2-V4",
+     "number": 4,
+     "points": 2,
+     "pattern": "P01",
+     "knobs": {
+      "solo": "multistructureel",
+      "route": "zelf vinden",
+      "direction": "open",
+      "steps": "2",
+      "sources": "in vraagtekst",
+      "noise": "nee",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": null
+     },
+     "builds_on_vragen": [],
+     "scorepunten": [
+      {
+       "seq": 1,
+       "points": 1,
+       "criterion_id": "X1.1-01-a",
+       "bloom": "toepassen"
+      },
+      {
+       "seq": 2,
+       "points": 1,
+       "criterion_id": "X1.1-01-b",
+       "bloom": "begrijpen"
+      }
+     ],
+     "intent": "Uitleggen waarom de omzet stijgt.",
+     "example_refs": [],
+     "story_step": 1,
+     "n_tasks": 1
+    },
+    {
+     "vraag_id": "O2-V5",
+     "number": 5,
+     "points": 2,
+     "pattern": "P01",
+     "knobs": {
+      "solo": "multistructureel",
+      "route": "zelf vinden",
+      "direction": "open",
+      "steps": "2",
+      "sources": "in vraagtekst",
+      "noise": "nee",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": "nee"
+     },
+     "builds_on_vragen": [],
+     "scorepunten": [
+      {
+       "seq": 1,
+       "points": 1,
+       "criterion_id": "X1.1-01-b",
+       "bloom": "begrijpen"
+      },
+      {
+       "seq": 2,
+       "points": 1,
+       "criterion_id": "X1.1-01-b",
+       "bloom": "begrijpen"
+      }
+     ],
+     "intent": "Uitleggen hoe de omzet kan dalen (naar run 3 vraag 13).",
+     "example_refs": [],
+     "story_step": 2,
+     "n_tasks": 1
+    },
+    {
+     "vraag_id": "O2-V6",
+     "number": 6,
+     "points": 1,
+     "pattern": "P01",
+     "knobs": {
+      "solo": "unistructureel",
+      "route": "zelf vinden",
+      "direction": "open",
+      "steps": "1",
+      "sources": "in vraagtekst",
+      "noise": "nee",
+      "claim": "nee",
+      "new_concept": "nee",
+      "schema": null,
+      "builds_on": "nee"
+     },
+     "builds_on_vragen": [],
+     "scorepunten": [
+      {
+       "seq": 1,
+       "points": 1,
+       "criterion_id": "X1.1-01-b",
+       "bloom": "begrijpen"
+      }
+     ],
+     "intent": "Uitleggen hoe een lagere prijs de omzet verhoogt (naar run 3 vraag 2).",
+     "example_refs": [],
+     "story_step": 3,
+     "n_tasks": 1
+    }
+   ]
+  }
+ ],
+ "coverage": {
+  "per_group": []
+ },
+ "planner_notes": "fixture specs/36 stap 7"
+}

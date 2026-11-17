@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "ItemLabels",
-  "description": "Pattern and knob labels per question (specs/26 §2, §5; specs/34 §4). Root = one labeller file (R/26_labels.<A|B|R>/<opgave>.json or R/34_labels.<A|B|R>/<opgave>.json). #/$defs/merged = R/26_labels.json or R/34_labels.json (label_merge.py). #/$defs/bank_file = subjects/<vak>/examenbank/labels/<exam_id>.json (bank_labels_add.py).",
+  "description": "Pattern and knob labels per question (specs/26 §2, §5; specs/34 §4). Root = one labeller file (R/26_labels.<A|B|R>/<opgave>.json or R/34_labels.<A|B|R>/<opgave>.json). #/$defs/merged = R/26_labels.json or R/34_labels.json (label_merge.py). #/$defs/bank_file = subjects/<vak>/examenbank/labels/<exam_id>.json (bank_labels_add.py). With a root `fields` list (/examen --label --fields, specs/36 §3.3) the A/B items carry only those fields (#/$defs/partial_item).",
   "type": "object",
   "required": [
     "labeller",
@@ -28,11 +28,34 @@
     },
     "items": {
       "type": "array"
+    },
+    "fields": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "enum": [
+          "pattern",
+          "solo",
+          "route",
+          "direction",
+          "steps",
+          "sources",
+          "noise",
+          "claim",
+          "new_concept",
+          "schema",
+          "builds_on"
+        ]
+      },
+      "description": "partial relabelling: the fields this labeller was asked for; the other fields come from the bank (label_merge.py --fields)"
     }
   },
   "allOf": [
     {
       "if": {
+        "required": [
+          "fields"
+        ],
         "properties": {
           "labeller": {
             "enum": [
@@ -46,16 +69,37 @@
         "properties": {
           "items": {
             "items": {
-              "$ref": "#/$defs/label_item"
+              "$ref": "#/$defs/partial_item"
             }
           }
         }
       },
       "else": {
-        "properties": {
-          "items": {
+        "if": {
+          "properties": {
+            "labeller": {
+              "enum": [
+                "A",
+                "B"
+              ]
+            }
+          }
+        },
+        "then": {
+          "properties": {
             "items": {
-              "$ref": "#/$defs/repair_item"
+              "items": {
+                "$ref": "#/$defs/label_item"
+              }
+            }
+          }
+        },
+        "else": {
+          "properties": {
+            "items": {
+              "items": {
+                "$ref": "#/$defs/repair_item"
+              }
             }
           }
         }
@@ -183,6 +227,7 @@
         "pattern",
         "solo",
         "route",
+        "direction",
         "steps",
         "sources",
         "noise",
@@ -221,6 +266,9 @@
         },
         "route": {
           "$ref": "#/$defs/route"
+        },
+        "direction": {
+          "$ref": "#/$defs/direction"
         },
         "steps": {
           "$ref": "#/$defs/steps"
@@ -330,6 +378,9 @@
         "route": {
           "$ref": "#/$defs/route"
         },
+        "direction": {
+          "$ref": "#/$defs/direction"
+        },
         "steps": {
           "$ref": "#/$defs/steps"
         },
@@ -373,6 +424,90 @@
           "type": "string"
         }
       }
+    },
+    "partial_item": {
+      "type": "object",
+      "required": [
+        "question_id",
+        "question_number",
+        "evidence"
+      ],
+      "properties": {
+        "question_id": {
+          "type": "string"
+        },
+        "question_number": {
+          "type": "integer"
+        },
+        "pattern": {
+          "$ref": "#/$defs/pattern"
+        },
+        "proposed_pattern": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/$defs/proposed_pattern"
+            }
+          ]
+        },
+        "solo": {
+          "$ref": "#/$defs/solo"
+        },
+        "route": {
+          "$ref": "#/$defs/route"
+        },
+        "direction": {
+          "$ref": "#/$defs/direction"
+        },
+        "steps": {
+          "$ref": "#/$defs/steps"
+        },
+        "sources": {
+          "$ref": "#/$defs/sources"
+        },
+        "noise": {
+          "$ref": "#/$defs/yesno"
+        },
+        "claim": {
+          "$ref": "#/$defs/yesno"
+        },
+        "new_concept": {
+          "$ref": "#/$defs/yesno"
+        },
+        "schema": {
+          "$ref": "#/$defs/schema_value"
+        },
+        "builds_on": {
+          "$ref": "#/$defs/yesno_null"
+        },
+        "builds_on_questions": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "example_quality": {
+          "$ref": "#/$defs/example_quality"
+        },
+        "example_quality_reason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "evidence": {
+          "$ref": "#/$defs/evidence"
+        },
+        "note": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "description": "A/B item of a partial relabelling: only the fields named in the root `fields`"
     },
     "confidence": {
       "type": "object",
@@ -463,6 +598,9 @@
         },
         "route": {
           "$ref": "#/$defs/route"
+        },
+        "direction": {
+          "$ref": "#/$defs/direction"
         },
         "steps": {
           "oneOf": [
@@ -625,6 +763,13 @@
           }
         }
       }
+    },
+    "direction": {
+      "enum": [
+        "gegeven",
+        "open",
+        null
+      ]
     }
   }
 }

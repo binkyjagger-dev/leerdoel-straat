@@ -1,0 +1,8 @@
+{
+ "run_id": "fixture-v2",
+ "subject": "fixturevak",
+ "level": "5vwo",
+ "criteria_run": "fixture-generate",
+ "reference": "bank-2-examens",
+ "status": "blueprint-approved"
+}

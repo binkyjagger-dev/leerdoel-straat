@@ -3,7 +3,8 @@
 Used by blueprint_check.py (planned shares), blueprint_report.py and realized.py (realised shares), so the plan and
 the result are measured the same way. A record is one vraag:
   {vraag_id, opgave_id, number, first, points, pattern, knobs: {knob: value|None}, scorepunten: [{points, bloom, criterion_id}]}
-Shares are conditional on applicability: route over calculation/schema vragen, schema over schema vragen,
+Shares are conditional on applicability (data/toets/knobs.json): route over all vragen (specs/36), direction over
+explanation/calculation vragen, schema over schema vragen,
 builds_on over vragen that are not the first of their opgave. A combined pattern splits its points evenly
 (specs/26 §4, bouwvraag 2). A knob value of None on an applicable vraag (e.g. a disputed label) is left out.
 """
@@ -11,7 +12,7 @@ from __future__ import annotations
 
 from collections import defaultdict
 
-from tcommon import BLOOM_ORDER, LABEL_KNOBS, kinds_of, knob_applies, pattern_codes
+from tcommon import BLOOM_ORDER, LABEL_KNOBS, kind_dependent, kinds_of, knob_applies, pattern_codes
 
 KNOB_TOL = 0.10
 BLOOM_TOL = 0.05
@@ -47,7 +48,7 @@ def point_shares(recs: list[dict], pidx: dict, knobs: dict) -> dict:
                 units["pattern"][c].append(r["points"] / len(codes))
         kinds = kinds_of(r["pattern"], pidx)
         for k in LABEL_KNOBS:
-            if k in ("route", "schema") and (not codes or r["pattern"] == "NIEUW"):
+            if kind_dependent(knobs[k]) and (not codes or r["pattern"] == "NIEUW"):
                 continue
             if not knob_applies(knobs[k], kinds, r["first"]):
                 continue
@@ -108,6 +109,34 @@ def tolerance_report(order: dict, shares: dict) -> list[dict]:
         for d in deviations(target, shares["knobs"][k], shares["units"][k], KNOB_TOL):
             res.append({"what": k, **d})
     return res
+
+
+MARGIN_KNOB = 0.05   # BP12 (specs/36 §6): little margin left inside the tolerance
+MARGIN_BLOOM = 0.03
+
+
+def margin_report(order: dict, shares: dict) -> list[dict]:
+    """BP12: values within tolerance that already use much of it (>= 5 pp knobs, >= 3 pp Bloom from the order), and
+    values kept in only by the slack rule -- 'weinig marge' in the bouwplan (toets run 2: steps 3 planned 33 % vs 25 %
+    ordered ended at 48 %)."""
+    out = []
+    targets = []
+    if order.get("bloom_mix"):
+        targets.append(("bloom", order["bloom_mix"], shares["bloom"], shares["units"]["bloom"], BLOOM_TOL, MARGIN_BLOOM))
+    for k, target in (order.get("knobs") or {}).items():
+        if isinstance(target, dict) and k in shares["knobs"]:
+            targets.append((k, target, shares["knobs"][k], shares["units"][k], KNOB_TOL, MARGIN_KNOB))
+    for what, target, pts, units, tol, margin in targets:
+        D = sum(pts.values())
+        if not D:
+            continue
+        slack = {d["value"] for d in deviations(target, pts, units, tol) if d["slack"]}
+        for v in sorted(set(target) | set(pts), key=str):
+            diff = pts.get(v, 0.0) / D - target.get(v, 0.0)
+            if v in slack or (margin - 1e-9 <= abs(diff) <= tol + 1e-9):
+                out.append({"what": what, "value": v, "ordered": round(target.get(v, 0.0), 3),
+                            "share": round(pts.get(v, 0.0) / D, 3), "reason": "slack" if v in slack else "margin"})
+    return out
 
 
 def group_points(recs: list[dict], crit: dict) -> dict:

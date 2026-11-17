@@ -3,17 +3,21 @@
 
 Usage:
   validate_toets.py order <order.json> [--draft] [--run <R>] [--bank <dir>] [--toetsbank <dir>] [--subjects <dir>]
-                          [--ask-out <file>] [--json-out <file>]
+                          [--ask-out <file>] [--json-out <file>] [--summary-out <file>]
   validate_toets.py blueprint <R>        schema of 32_blueprint.json (+ 32_blueprint_review.json); content: blueprint_check.py
   validate_toets.py items <R> [--opgave <id>]   schema of 33_items/<opgave>.json, one file per blueprint opgave; content: items_check.py
   validate_toets.py verification <R> [--file <35_verification….json>]
                                          schema; one verdict per vraag of the blueprint (or of `only`); a repair verdict
                                          has a finding; a pass verdict has no `must` finding; finding vraag ids belong to
-                                         the vraag; proposed decisions have question/proposed/impact/applies_to
+                                         the vraag; proposed decisions follow the decisions format (question,
+                                         context, options, proposed, impact high|medium|low, applies_to = roles of
+                                         schemas/decisions.schema.json; specs/36 §7)
 
-order — checks O1–O6 of specs/34 §1 on the teacher's toetsopdracht.json (--draft) or the confirmed R/31_order.json.
-  O1 schema toets_order; without --draft also complete: title, level, n_opgaven, n_vragen, the bloom_mix key and
-     every settable knob present and not null (specs/32 §1: no implicit default)
+order — checks O1–O10 of specs/34 §1 and specs/36 §4 on the teacher's toetsopdracht.json (--draft) or the confirmed
+R/31_order.json.
+  O1 schema toets_order; without --draft also complete: title, level, n_opgaven, n_vragen, duration_minutes, the
+     bloom_mix and reading_budget_pct keys and every settable knob present and not null (specs/32 §1: no implicit
+     default; specs/36 §4, §11 B8)
   O2 every matrix group_id exists in the criteria, no group twice; criteria_include/exclude ids exist; the order's
      subject and criteria_run match the run / exam bank
   O3 each knob is "vrij" or a share map over valid values summing to 1 (± 0.001); pattern codes are active catalogue
@@ -22,8 +26,15 @@ order — checks O1–O6 of specs/34 §1 on the teacher's toetsopdracht.json (--
   O5 reuse entries exist in the toetsbank and belong to the same criteria run; their points per group do not exceed
      the matrix (warnings are not errors)
   O6 feasibility warnings: a Bloom level with points but no criterion in the matrix that allows it (criterion
-     Bloom + 1); route/schema shares while the pattern shares hold no pattern of an applicable kind; a group whose
-     criteria are all excluded
+     Bloom + 1); shares of a kind-dependent knob (schema, direction) while the pattern shares hold no pattern of an
+     applicable kind; a group whose criteria are all excluded
+  O7 duration: warning when minutes per point < 0.75 × or > 1.5 × the CE; error below half a minute per point
+  O8 warning when n_opgaven differs from round(points / CE points per opgave) (asked at pause 1)
+  O9 warning when the matrix's leerdoelen per point exceed the CE maximum over exams
+  O10 reading_budget_pct in 20–150 or null
+  (O7–O9 compare with the house rules of the reference profile; without them: info, specs/36 §11 B14)
+--summary-out writes the numbers of the pause-1 summary (duration and minutes per point, reading budget in words,
+opgaven, leerdoelen per point — each with the CE value — and the O7–O9 warnings with their options).
 With --draft, missing or null fields are not errors but questions for the dialogue (T1, specs/32 §3): they are
 printed as ASK lines and, with --ask-out, written as JSON with the reference shares per knob.
 Inputs: criteria, knobs, catalogue and reference from <R> (30_criteria.json, 30_knobs.json, 30_patterns.json,
@@ -37,10 +48,10 @@ import sys
 from collections import defaultdict
 from pathlib import Path
 
-from tcommon import (clean_reference, MIX_LEVELS, ROOT, SHARE_EPS, BLOOM_ORDER, Report, bloom_rank, kinds_of, knob_index, load_json,
+from tcommon import (validate_def, clean_reference, MIX_LEVELS, ROOT, SHARE_EPS, BLOOM_ORDER, Report, bloom_rank, kinds_of, knob_index, load_json,
                      load_knobs, merged_catalogue, pattern_index, save_json, validate_schema)
 
-REQUIRED = ["title", "level", "n_opgaven", "n_vragen"]
+REQUIRED = ["title", "level", "n_opgaven", "n_vragen", "duration_minutes"]  # duration required at pause 1 (specs/36 §4)
 
 
 def opt(argv: list[str], flag: str) -> str | None:
@@ -62,6 +73,64 @@ def reference_profile(run: Path | None, bank: Path, subjects: Path, subject: str
         if p.exists():
             return clean_reference(load_json(p), knob_index(load_knobs()))
     return None
+
+
+def nl(x: float, d: int = 0) -> str:
+    s = f"{x:,.{d}f}"
+    return s.replace(",", "§").replace(".", ",").replace("§", ".")
+
+
+def house_checks(rep: Report, order: dict, total: int, n_groups: int, ref: dict | None) -> dict:
+    """O7–O10 (specs/36 §4, §11 B14) and the numbers of the pause-1 summary (duration, reading budget, opgaven,
+    groups per point, each vs the central exam). Without house rules the CE comparisons are info lines."""
+    hr = (ref or {}).get("house_rules")
+    dur, pct, no = order.get("duration_minutes"), order.get("reading_budget_pct"), order.get("n_opgaven")
+    out = {"house_rules": (hr or {}).get("label") or (hr or {}).get("source"), "total_points": total,
+           "duration_minutes": dur, "minutes_per_point": round(dur / total, 2) if dur and total else None,
+           "ce_minutes_per_point": (hr or {}).get("minutes_per_point"), "reading_budget_pct": pct,
+           "reading_budget_words": None, "ce_words": None, "n_opgaven": no, "ce_n_opgaven": None,
+           "ce_points_per_opgave": None, "groups_per_point": round(n_groups / total, 3) if total else None,
+           "ce_groups_per_point_max": None, "warnings": []}
+    # O10 range (no house rules needed)
+    if pct is not None and not (isinstance(pct, (int, float)) and 20 <= pct <= 150):
+        rep.fail("O10", f"reading_budget_pct {pct}: must be 20–150 (% of the CE words per point) or null (no budget)")
+    # O7 hard floor (no house rules needed): a duration below half a minute per point is a typo (toets run 3: 33 for 90)
+    if dur is not None and total and dur < total * 0.5:
+        rep.fail("O7", f"duration_minutes {dur} < half a minute per point ({total} points): is this the number of points? "
+                       f"(toets run 3 had 33 for a 90-minute toets)")
+    if not hr:
+        rep.info("O7", "geen huisregels gemeten: minutes per point, number of opgaven, groups per point and the reading "
+                       "budget are not compared with the central exam (specs/36 §11 B14)")
+        return out
+    mpp = hr.get("minutes_per_point")
+    if dur and total and mpp:
+        r = dur / total
+        if r < 0.75 * mpp or r > 1.5 * mpp:
+            msg = (f"{nl(r, 2)} min per point ({dur} min / {total} p); central exam {nl(mpp, 2)} (allowed 0.75–1.5 ×)")
+            rep.warn("O7", msg)
+            out["warnings"].append({"id": "O7", "message": msg})
+    ppo = (hr.get("points_per_opgave") or {}).get("mean")
+    if ppo and total:
+        ce_n = max(1, round(total / ppo))
+        out["ce_n_opgaven"], out["ce_points_per_opgave"] = ce_n, ppo
+        if no is not None and no != ce_n:
+            msg = (f"n_opgaven {no}; the central exam has ≈ {nl(ppo, 1)} points per opgave → {ce_n} opgaven for {total} "
+                   f"points: ask at pause 1 'Zoals eindexamen ({ce_n})' / 'Houden ({no})'")
+            rep.warn("O8", msg)
+            out["warnings"].append({"id": "O8", "message": msg, "options": [f"Zoals eindexamen ({ce_n})", f"Houden ({no})"]})
+    gmax = (hr.get("groups_per_point") or {}).get("max")
+    out["ce_groups_per_point_max"] = gmax
+    if gmax and total and n_groups / total > gmax:
+        msg = (f"{n_groups} leerdoelen for {total} points = {nl(n_groups / total, 3)} per point; the central exam has at most "
+               f"{nl(gmax, 3)}: fewer leerdoelen, more points, or keep")
+        rep.warn("O9", msg)
+        out["warnings"].append({"id": "O9", "message": msg, "options": ["Minder leerdoelen", "Meer punten", "Houden"]})
+    wpp = (hr.get("words_per_point") or {}).get("pooled")
+    if wpp and total:
+        out["ce_words"] = round(total * wpp)
+        if isinstance(pct, (int, float)):
+            out["reading_budget_words"] = round(total * wpp * pct / 100)
+    return out
 
 
 def check_order(argv: list[str]) -> None:
@@ -89,6 +158,8 @@ def check_order(argv: list[str]) -> None:
             ask.append({"field": f})
     if "bloom_mix" not in order:
         ask.append({"field": "bloom_mix"})
+    if "reading_budget_pct" not in order:  # specs/36 §11 B8: absent = ask; null = deliberately no budget
+        ask.append({"field": "reading_budget_pct"})
     settable = [k for k, d in knobs.items() if d["settable"]]
     for k in settable:
         if (order.get("knobs") or {}).get(k) is None:
@@ -213,22 +284,30 @@ def check_order(argv: list[str]) -> None:
     pat = (order.get("knobs") or {}).get("pattern")
     if isinstance(pat, dict):
         kinds = set().union(*(kinds_of(c, pidx) for c, s in pat.items() if s > 0)) if pat else set()
-        for k in ("route", "schema"):
+        for k in [x for x, d in knobs.items() if isinstance(d["applies_to_kinds"], list)]:  # schema, direction
             if isinstance((order.get("knobs") or {}).get(k), dict):
                 ak = knobs[k]["applies_to_kinds"]
                 if isinstance(ak, list) and not kinds & set(ak):
                     rep.warn("O6", f"knobs.{k} has shares but the pattern shares hold no {'/'.join(ak)} pattern")
+    # O7–O10 house rules of the central exam (specs/36 §4)
+    ref = reference_profile(run, bank, subjects, subject)
+    summary = house_checks(rep, order, total, len(matrix), ref)
     rep.info("O1", f"order {path.name}: {len(matrix)} groups, {total} points, {no} opgaven, {nv} vragen"
                    + (f", {len(ask)} field(s) to ask" if draft else ""))
+    if opt(argv, "--summary-out"):
+        save_json(opt(argv, "--summary-out"), summary)
     if opt(argv, "--ask-out"):
-        ref = reference_profile(run, bank, subjects, subject)
         for a in ask:
             k = a["field"].split(".", 1)[1] if a["field"].startswith("knobs.") else ("bloom" if a["field"] == "bloom_mix" else None)
             if k and ref:
                 a["reference"] = None if k in ref.get("unknown_knobs", []) else {
                     v: d["share"] for v, d in (ref.get("pooled") or {}).get(k, {}).items()} or None
                 a["reference_label"] = ref.get("label") or ref.get("source")
-        save_json(opt(argv, "--ask-out"), {"order": str(path), "ask": ask})
+            if a["field"] == "n_opgaven" and summary.get("ce_n_opgaven"):
+                a["proposal"] = summary["ce_n_opgaven"]
+            if a["field"] == "reading_budget_pct":
+                a["template"] = (order.get("template") or None)
+        save_json(opt(argv, "--ask-out"), {"order": str(path), "ask": ask, "summary": summary})
     rep.print_and_exit(opt(argv, "--json-out"))
 
 
@@ -270,11 +349,16 @@ def check_verification(argv: list[str]) -> None:
     R = Path(argv[2])
     path = Path(opt(argv, "--file")) if opt(argv, "--file") else R / "35_verification.json"
     ver = load_json(path)
-    errs = validate_schema(ver, "toets_verification.schema.json")
+    # structure first (proposed decisions apart, so the verdict checks still run when only a proposal is wrong)
+    errs = validate_schema({**ver, "proposed_decisions": []}, "toets_verification.schema.json")
     for e in errs[:10]:
         rep.fail("VF", f"{path.name}: {e}")
     if errs:
         rep.print_and_exit()
+    for i, d in enumerate(ver.get("proposed_decisions") or []):
+        for e in validate_def(d, "toets_verification.schema.json", "proposed_decision")[:3]:
+            rep.fail("VF", f"proposed_decisions[{i}]: {e} (decisions format: question, context, options, proposed, "
+                           f"impact high|medium|low, applies_to = roles; specs/36 §7)")
     bp = load_json(R / "32_blueprint.json")
     vids = [v["vraag_id"] for o in bp["opgaven"] for v in o["vragen"]
             if (not ver.get("only") or o["opgave_id"] in ver["only"]) and not o.get("reused_from")]  # reused: not re-verified
@@ -297,10 +381,7 @@ def check_verification(argv: list[str]) -> None:
     for vid in vids:
         if vid not in seen:
             rep.fail("VF", f"{vid}: no verdict")
-    for i, d in enumerate(ver["proposed_decisions"]):
-        miss = [k for k in ("question", "proposed", "impact", "applies_to") if k not in d]
-        if miss:
-            rep.fail("VF", f"proposed_decisions[{i}]: missing {', '.join(miss)}")
+    # proposed_decisions: the schema checks the decisions format (roles, impact; specs/36 §7, §11 B18)
     n_rep = sum(1 for v in ver["vragen"] if v["verdict"] == "repair")
     rep.info("VF", f"{len(ver['vragen'])} verdicts, {n_rep} repair, {len(ver['toets_findings'])} toets-level findings, "
                    f"{len(ver['proposed_decisions'])} proposed decisions")

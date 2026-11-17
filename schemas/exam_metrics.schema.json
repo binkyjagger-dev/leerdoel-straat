@@ -1,0 +1,167 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ExamMetrics",
+  "description": "subjects/<vak>/examenbank/metrics/<exam_id>.json — deterministic text counts of one bank exam (scripts/exam/exam_metrics.py, specs/36 §3.1). Counts only: the bank holds no exam text.",
+  "type": "object",
+  "required": [
+    "exam_id",
+    "subject",
+    "duration_minutes",
+    "duration_source",
+    "max_score",
+    "n_opgaven",
+    "n_vragen",
+    "opgaven",
+    "vragen"
+  ],
+  "properties": {
+    "exam_id": {
+      "type": "string"
+    },
+    "subject": {
+      "type": "string"
+    },
+    "built_at": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "duration_minutes": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 1
+    },
+    "duration_source": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "'cover' (parsed from the cover page), 'decision <id>' (--duration with --decision), 'manual' or null"
+    },
+    "max_score": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "n_opgaven": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "n_vragen": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "n_groups": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "distinct group_ids over the exam's linked scorepunten (groups_per_point, O9)"
+    },
+    "opgaven": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "opgave_id",
+          "number",
+          "points",
+          "n_vragen",
+          "n_groups",
+          "words_intro",
+          "words_sources"
+        ],
+        "properties": {
+          "opgave_id": {
+            "type": "string"
+          },
+          "number": {
+            "type": "integer"
+          },
+          "points": {
+            "type": "integer"
+          },
+          "n_vragen": {
+            "type": "integer"
+          },
+          "n_groups": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "words_intro": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "words_sources": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "sources": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "vragen": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "question_id",
+          "number",
+          "opgave_id",
+          "points",
+          "words_lead",
+          "words_task",
+          "n_tasks",
+          "numbers_lead",
+          "pattern"
+        ],
+        "properties": {
+          "question_id": {
+            "type": "string"
+          },
+          "number": {
+            "type": "integer"
+          },
+          "opgave_id": {
+            "type": "string"
+          },
+          "points": {
+            "type": "integer"
+          },
+          "words_lead": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "words_task": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "n_tasks": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "numbers_lead": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "pattern": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

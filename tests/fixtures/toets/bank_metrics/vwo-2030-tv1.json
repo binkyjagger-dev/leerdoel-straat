@@ -1,0 +1,81 @@
+{
+ "exam_id": "vwo-2030-tv1",
+ "subject": "fixturevak",
+ "built_at": "2030-06-01",
+ "duration_minutes": 27,
+ "duration_source": "cover",
+ "max_score": 9,
+ "n_opgaven": 2,
+ "n_vragen": 4,
+ "n_groups": 1,
+ "opgaven": [
+  {
+   "opgave_id": "vwo-2030-tv1-o1",
+   "number": 1,
+   "points": 7,
+   "n_vragen": 3,
+   "n_groups": 2,
+   "words_intro": 40,
+   "words_sources": 30,
+   "sources": [
+    1
+   ]
+  },
+  {
+   "opgave_id": "vwo-2030-tv1-o2",
+   "number": 2,
+   "points": 2,
+   "n_vragen": 1,
+   "n_groups": 1,
+   "words_intro": 20,
+   "words_sources": 0,
+   "sources": []
+  }
+ ],
+ "vragen": [
+  {
+   "question_id": "vwo-2030-tv1-q1",
+   "number": 1,
+   "opgave_id": "vwo-2030-tv1-o1",
+   "points": 3,
+   "words_lead": 0,
+   "words_task": 8,
+   "n_tasks": 1,
+   "numbers_lead": 0,
+   "pattern": "P08"
+  },
+  {
+   "question_id": "vwo-2030-tv1-q2",
+   "number": 2,
+   "opgave_id": "vwo-2030-tv1-o1",
+   "points": 2,
+   "words_lead": 30,
+   "words_task": 12,
+   "n_tasks": 1,
+   "numbers_lead": 1,
+   "pattern": "P01"
+  },
+  {
+   "question_id": "vwo-2030-tv1-q3",
+   "number": 3,
+   "opgave_id": "vwo-2030-tv1-o1",
+   "points": 2,
+   "words_lead": 20,
+   "words_task": 14,
+   "n_tasks": 1,
+   "numbers_lead": 2,
+   "pattern": "P15"
+  },
+  {
+   "question_id": "vwo-2030-tv1-q4",
+   "number": 4,
+   "opgave_id": "vwo-2030-tv1-o2",
+   "points": 2,
+   "words_lead": 0,
+   "words_task": 10,
+   "n_tasks": 1,
+   "numbers_lead": 0,
+   "pattern": "P05"
+  }
+ ]
+}

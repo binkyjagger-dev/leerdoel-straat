@@ -16,10 +16,23 @@ KNOBS_PATH = DATA / "toets" / "knobs.json"
 BASE_PATTERNS_PATH = DATA / "toets" / "patterns_base.json"
 SHARE_EPS = 0.001
 # knobs the labeller sets per question (specs/26 §2); combination and bloom are computed
-LABEL_KNOBS = ["solo", "route", "steps", "sources", "noise", "claim", "new_concept", "schema", "builds_on"]
+LABEL_KNOBS = ["solo", "route", "direction", "steps", "sources", "noise", "claim", "new_concept", "schema", "builds_on"]
 LABEL_FIELDS = ["pattern"] + LABEL_KNOBS
 EXAMPLE_QUALITY = ["ongeschikt", "bruikbaar", "goed"]  # low → high
 MIX_LEVELS = [b for b in BLOOM_ORDER if b != "creëren"]  # creëren has no pattern (specs/31 §3)
+
+
+def lead_task(v: dict) -> tuple[str, str]:
+    """(lead, task) of an items vraag (specs/36 §5.1); a legacy vraag with only `stem` is lead '' + task = stem."""
+    if "task" in v:
+        return v.get("lead") or "", v["task"]
+    return "", v.get("stem") or ""
+
+
+def vraag_text(v: dict) -> str:
+    """lead + task as one text (for number scans and cue checks)."""
+    lead, task = lead_task(v)
+    return (lead + "\n" + task).strip()
 
 
 def validate_def(data, schema_name: str, definition: str) -> list[str]:
@@ -104,6 +117,12 @@ def knob_applies(knob: dict, kinds: set[str], first_of_opgave: bool) -> bool:
     if a == "all_but_first_of_opgave":
         return not first_of_opgave
     return bool(kinds & set(a))
+
+
+def kind_dependent(knob: dict) -> bool:
+    """True when the knob's applicability depends on the pattern's kind (applies_to_kinds is a list: schema,
+    direction); such a knob is null on, and left out for, a question whose pattern is undecided (NIEUW)."""
+    return isinstance(knob["applies_to_kinds"], list)
 
 
 def knob_values(knob: dict, pidx: dict[str, dict] | None = None, active_only: bool = True) -> list[str]:

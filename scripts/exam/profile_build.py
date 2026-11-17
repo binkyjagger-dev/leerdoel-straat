@@ -3,14 +3,18 @@
 
 Usage: profile_build.py <subject> [--bank <dir>] [--subjects <dir>] [--base <file>] [--knobs <file>]
 
-Reads the bank (register.json, labels/<exam_id>.json, links/<exam_id>.json) and writes profiel/:
+Reads the bank (register.json, labels/<exam_id>.json, links/<exam_id>.json, metrics/<exam_id>.json) and writes profiel/:
   referentieprofiel.json  per knob: per value points + share, pooled and per exam (schema reference_profile)
   referentieprofiel.md    the same as Dutch tables, with the exams it is based on and the points left out
   patronen_stats.json     per pattern: questions, points (sum, min, max), Bloom and SOLO spread, example candidates
-Shares are by points and conditional on applicability: route over calculation/schema patterns, schema over schema
-patterns, builds_on over questions that are not the first of their opgave. Disputed fields, not-applicable knobs,
+The house rules (specs/36 §3.1, scripts/exam/house_rules.py) come from metrics/ (exam_metrics.py), else from a
+`house_rules` block in the seed; without either the profile has no house_rules ("geen huisregels gemeten").
+Shares are by points and conditional on applicability (knobs.json): route over all questions (specs/36), direction over
+explanation/calculation patterns, schema over schema patterns, builds_on over questions that are not the first of their opgave. Disputed fields, not-applicable knobs,
 unlinked scorepunten (bloom, combination) and NIEUW patterns are left out of their knob's totals and reported as
-`excluded`; a NIEUW question is also left out of route and schema until its pattern is decided. A '+'-combination of two patterns splits the question's points evenly over both codes.
+`excluded`; a NIEUW question is also left out of the kind-dependent knobs (schema, direction) until its pattern is decided.
+An exam labelled before specs/36 (no direction, or route null on a known pattern) has route and direction excluded as
+'stale' (onbekend) until relabelled with --fields route,direction (§11 B2). A '+'-combination of two patterns splits the question's points evenly over both codes.
 `combination` and `bloom` are recomputed from the links (labels survive a bank --rebuild).
 Without labels for the subject, subjects/<s>/toets/seed_profile.json is used (source "seed-…"); without a seed the
 profile says that no reference exists (source "none"). Conservation: per exam and knob the counted plus excluded
@@ -24,15 +28,16 @@ import sys
 from collections import defaultdict
 from pathlib import Path
 
+import house_rules
 from lcommon import computed_fields
 from ecommon import BLOOM_ORDER, ROOT, Report, load_json, save_json, validate_def, validate_schema
-from tcommon import (BASE_PATTERNS_PATH, KNOBS_PATH, LABEL_KNOBS, exam_label, kinds_of, knob_applies, knob_index,
+from tcommon import (BASE_PATTERNS_PATH, KNOBS_PATH, LABEL_KNOBS, exam_label, kind_dependent, kinds_of, knob_applies, knob_index,
                      merged_catalogue, pattern_codes, shares_from_points)
 
 PROFILE_KNOBS = ["pattern", "bloom"] + LABEL_KNOBS + ["combination"]
 KNOB_LABEL_NL = {"bloom": "Bloom (per scorepunt)"}
 REASON_NL = {"disputed": "geschil", "not_applicable": "niet van toepassing", "unlinked": "geen koppeling",
-             "nieuw": "nieuw patroon"}
+             "nieuw": "nieuw patroon", "stale": "label van vóór specs/36 (opnieuw labelen)"}
 MONTHS = ["jan", "feb", "mrt", "apr", "mei", "jun", "jul", "aug", "sep", "okt", "nov", "dec"]
 EPS = 1e-6
 
@@ -54,11 +59,29 @@ def sort_values(d: dict, order: list[str]) -> dict:
     return dict(sorted(d.items(), key=lambda kv: (order.index(kv[0]) if kv[0] in order else len(order), kv[0])))
 
 
+SPEC36_KNOBS = ("route", "direction")  # changed / added on 2026-11-17 (specs/36 §3.2, §11 B2)
+
+
+def spec36_stale(lab: dict, pidx: dict) -> set[str]:
+    """specs/36 §11 B2: an exam labelled before route applied to every question and before `direction` existed.
+    Such an exam's route and direction are 'onbekend' (excluded as stale) until /examen --label --fields relabels it."""
+    qs = lab.get("questions", [])
+    if any("direction" not in q for q in qs):
+        return set(SPEC36_KNOBS)
+    for q in qs:
+        pat = q.get("pattern")
+        known = pat and pat != "NIEUW" and all(c in pidx for c in pattern_codes(pat))
+        if known and q.get("route") is None and (q.get("confidence") or {}).get("route") != "disputed":
+            return set(SPEC36_KNOBS)
+    return set()
+
+
 def stale_values(lab: dict, knobs: dict) -> list[str]:
-    """Labelled knob values that are not values of the current knobs.json, and knobs the label lacks."""
+    """Labelled knob values that are not values of the current knobs.json, and knobs the label lacks
+    (route/direction of an exam labelled before specs/36 are not failures: spec36_stale)."""
     out = []
     for q in lab.get("questions", []):
-        for k in LABEL_KNOBS:
+        for k in [x for x in LABEL_KNOBS if x not in SPEC36_KNOBS]:
             vals = knobs[k]["values"] if isinstance(knobs[k]["values"], list) else None
             if k not in q:
                 out.append(f"v{q.get('question_number')} {k} missing")
@@ -67,8 +90,8 @@ def stale_values(lab: dict, knobs: dict) -> list[str]:
     return out
 
 
-def question_values(l: dict, knobs: dict, pidx: dict) -> dict[str, list[tuple[str, float]]]:
-    """knob → [(value or '!reason', points)] for one labelled question."""
+def question_values(l: dict, knobs: dict, pidx: dict, stale: set[str] = frozenset()) -> dict[str, list[tuple[str, float]]]:
+    """knob → [(value or '!reason', points)] for one labelled question; `stale` knobs of the exam are excluded."""
     P, conf = l["points"], l["confidence"]
     out: dict[str, list[tuple[str, float]]] = {}
     pat = l.get("pattern")
@@ -81,7 +104,9 @@ def question_values(l: dict, knobs: dict, pidx: dict) -> dict[str, list[tuple[st
         out["pattern"] = [(c, P / len(codes)) for c in codes]
     for k in LABEL_KNOBS:
         v = l.get(k)
-        if k in ("route", "schema") and pat == "NIEUW":
+        if k in stale:
+            out[k] = [("!stale", P)]  # labelled before specs/36 (route/direction): unknown until --fields relabels
+        elif kind_dependent(knobs[k]) and pat == "NIEUW":
             out[k] = [("!nieuw", P)]  # applicability depends on the undecided pattern (specs/26 §4, bouwvraag 6)
         elif k == "builds_on" and l.get("first_of_opgave"):
             out[k] = [("!not_applicable", P)]
@@ -109,6 +134,11 @@ def from_labels(subject: str, bank: Path, reg: dict, files: dict, knobs: dict, c
         if eid not in files:
             continue
         lab = load_json(files[eid])
+        stale36 = spec36_stale(lab, pidx)
+        if stale36:
+            rep.warn("PB3", f"labels/{eid}.json was labelled before specs/36 (route on every question, direction): route "
+                            f"and direction of this exam are 'onbekend'; relabel with /examen --label --subject {subject} "
+                            f"--exam {eid} --fields route,direction")
         old = stale_values(lab, knobs)
         if old:
             rep.fail("PB3", f"labels/{eid}.json was labelled with knob values that no longer exist ({len(old)} fields, e.g. "
@@ -128,7 +158,7 @@ def from_labels(subject: str, bank: Path, reg: dict, files: dict, knobs: dict, c
         for l in lab["questions"]:
             l = {**l, **computed_fields(links.get(l["question_id"], []))} if lp.exists() else l
             total += l["points"]
-            vals = question_values(l, knobs, pidx)
+            vals = question_values(l, knobs, pidx, stale36)
             for k, pairs in vals.items():
                 for v, p in pairs:
                     if v.startswith("!"):
@@ -174,9 +204,10 @@ def from_labels(subject: str, bank: Path, reg: dict, files: dict, knobs: dict, c
                "label": f"referentie: {len(exams)} examen{'s' if len(exams) != 1 else ''} ({labels_nl})",
                "note": None, "n_exams": len(exams), "n_questions": n_questions,
                "points": sum(x["points"] for x in exams), "by": "points",
-               "pooled": {k: shares_from_points(sort_values(pooled[k], value_order(k, knobs, cat))) for k in PROFILE_KNOBS},
+               "pooled": {k: shares_from_points(sort_values(pooled[k], value_order(k, knobs, cat))) for k in PROFILE_KNOBS
+                          if pooled[k] or k not in SPEC36_KNOBS},
                "excluded": {k: {r: round(p, 3) for r, p in sorted(pooled_excl[k].items())} for k in PROFILE_KNOBS if pooled_excl[k]},
-               "unknown_knobs": [], "exams": exams}
+               "unknown_knobs": [k for k in SPEC36_KNOBS if not pooled[k]], "exams": exams}
     qrank = {"goed": 0, "bruikbaar": 1, "ongeschikt": 2}
     pstats = {}
     for code in [p["code"] for p in cat["patterns"]] + sorted(set(stats) - {p["code"] for p in cat["patterns"]}):
@@ -279,6 +310,7 @@ def render_md(profile: dict, stats: dict, knobs: dict, cat: dict) -> str:
         if excl:
             L += ["", "Weggelaten: " + ", ".join(f"{num(p)} p {REASON_NL.get(r, r)}" for r, p in excl.items()) + "."]
         L.append("")
+    L += house_rules.render_md(profile.get("house_rules"))
     if stats["patterns"]:
         L += ["## Patronen: voorbeelden", "", "| patroon | vragen | punten (min–max) | voorbeelden (goed eerst) |", "|---|---|---|---|"]
         for code, s in stats["patterns"].items():
@@ -316,6 +348,15 @@ def main(argv: list[str]) -> None:
     else:
         profile, stats = empty(subject, knobs)
         rep.warn("PB1", f"no labels and no seed profile for {subject}: the reference is empty")
+    hr = house_rules.compute(bank, reg)
+    if hr:
+        profile["house_rules"] = hr
+        rep.info("PB4", f"{hr['label']}: {hr['minutes_per_point']} min/punt, {hr['words_per_point']['pooled']} woorden/punt, "
+                        f"{hr['points_per_opgave']['mean']} punten/opgave")
+    elif profile.get("house_rules"):
+        rep.info("PB4", f"no metrics in {bank}/metrics: house rules from the seed ({profile['house_rules'].get('source')})")
+    else:
+        rep.info("PB4", f"no metrics in {bank}/metrics and no seed house rules: geen huisregels gemeten")
     for e in validate_schema(profile, "reference_profile.schema.json")[:5]:
         rep.fail("PB1", f"referentieprofiel.json: {e}")
     for e in validate_def(stats, "reference_profile.schema.json", "pattern_stats")[:5]:

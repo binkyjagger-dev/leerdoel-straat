@@ -10,6 +10,7 @@
    "proposed_pattern": null,
    "solo": "multistructureel",
    "route": "gegeven",
+   "direction": "open",
    "steps": "2",
    "sources": "in vraagtekst",
    "noise": "nee",
@@ -26,7 +27,8 @@
     "steps": "resultaat juist",
     "sources": "Kapsalon Knip stelt een resultatenbegroting op.",
     "route": "Vul de resultatenbegroting op de uitwerkbijlage in.",
-    "schema": "Vul de resultatenbegroting op de uitwerkbijlage in."
+    "schema": "Vul de resultatenbegroting op de uitwerkbijlage in.",
+    "direction": "Vul de resultatenbegroting op de uitwerkbijlage in."
    },
    "note": null,
    "points": 5
@@ -44,6 +46,7 @@
    },
    "solo": "multistructureel",
    "route": "gegeven",
+   "direction": null,
    "steps": "3",
    "sources": "in vraagtekst",
    "noise": "nee",

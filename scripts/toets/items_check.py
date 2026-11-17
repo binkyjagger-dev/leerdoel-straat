@@ -19,7 +19,17 @@ IT5 builds_on_vragen = blueprint; with builds_on = ja the cv has a follow_throug
 IT6 conventions: "€ " with a space; btw value = the order's / conventions.md default (warning: a context may need
     another rate); a stem names "informatiebron n" for every source whose data its calcs use; a schema vraag
     mentions the uitwerkbijlage
-IT7 the stem's asking verb fits the pattern's stem_forms (warning, like MB2)
+IT7 the task's asking verb fits the pattern's stem_forms (warning, like MB2)
+specs/36 §6 (house_checks.py; CE limits from the reference profile's house_rules, info without them):
+IT8 form: `task` present, starts with an asking verb or is a question, ≤ CE words_task p90; n_tasks = planned and
+    ≤ the pattern's max_tasks
+IT9 cue scan (warning, to the verifier V11): route/direction phrases of cue_phrases.json where the plan says
+    zelf vinden/open; D4 phrases allowlisted
+IT10 term giveaway: a criterion concept in the intro or lead, or in the task but not as the asking verb's object, that
+    the scorepunt text or model answer also holds — error at onthouden/begrijpen, warning higher
+IT11 lead: words ≤ CE words_lead p90 × reading_budget_pct; new numbers ≤ CE numbers_lead p90
+RB  reading budget: opgave words ≤ points × CE words_per_point × reading_budget_pct × 1,1; the toets total likewise
+A vraag has `lead` + `task` (specs/36 §5.1); a legacy `stem` is read as task. Reused opgaven skip IT8–IT11 and RB.
 Writes 33_checks/<opgave>.json.
 """
 from __future__ import annotations
@@ -28,8 +38,9 @@ import re
 import sys
 from pathlib import Path
 
+import house_checks
 from nlnum import REF_RE, close, names_in, scan_numbers, shown_value
-from tcommon import Report, kinds_of, load_json, pattern_codes, validate_schema
+from tcommon import Report, kinds_of, lead_task, load_json, pattern_codes, validate_schema, vraag_text
 from toetsrun import ToetsRun, opt, subjects_opt
 
 EXEMPT = {0.0, 1.0, 100.0}  # bouwvraag 11 (decided 2026-11-14): plus years 1900–2100, see is_year
@@ -64,6 +75,13 @@ def referenced_sources(stem: str) -> set[int]:
         if m.group(0).lower().startswith(("informatiebron", "bron")):
             out |= {int(x) for x in re.findall(r"\d+", m.group(0))}
     return out
+
+
+def save_measured(R: Path, oid: str, measured: dict) -> None:
+    """33_checks/<opgave>.house.json: words, tasks, cues and giveaways measured by IT8–IT11/RB (verantwoording)."""
+    import json
+    p = R / "33_checks" / f"{oid}.house.json"
+    p.write_text(json.dumps(measured, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
 
 
 def main(argv: list[str]) -> None:
@@ -119,7 +137,10 @@ def main(argv: list[str]) -> None:
                 shown.append(shown_value(c["shown"])[0])
             except ValueError:
                 pass
-    student_parts = [("intro", it["intro"])] + [(f"{v['vraag_id']} stem", v["stem"]) for v in it["vragen"]]
+    student_parts = [("intro", it["intro"])]
+    for v in it["vragen"]:
+        lead, task = lead_task(v)
+        student_parts += [(f"{v['vraag_id']} lead", lead), (f"{v['vraag_id']} task", task)]
     for s in it["sources"]:
         student_parts += [(f"informatiebron {s['n']}", t) for t in texts_of([s.get("title"), s.get("text"), s.get("table")])]
     for v in it["vragen"]:
@@ -164,7 +185,7 @@ def main(argv: list[str]) -> None:
             if own:
                 rep.fail("IT4", f"{vid}: noise = nee but the vraag has noise_data {own}")
             continue
-        used_src = referenced_sources(v["stem"]) | {s["n"] for s in it["sources"] if mine & set(s.get("uses_data", []))}
+        used_src = referenced_sources(vraag_text(v)) | {s["n"] for s in it["sources"] if mine & set(s.get("uses_data", []))}
         pool_n = own + opg_noise + [k for s in it["sources"] if s["n"] in used_src for k in s.get("noise_data", [])]
         if not [k for k in pool_n if k in data and k not in mine]:
             rep.fail("IT4", f"{vid}: noise = ja but no noise item in its own noise_data, the opgave's noise_data or a "
@@ -197,7 +218,7 @@ def main(argv: list[str]) -> None:
                 if not any(defined_in.get(n, v["number"]) < v["number"] for n in used):
                     rep.fail("IT5", f"{vid}: builds_on = ja but no calc uses a result of an earlier vraag")
             else:  # a vraag without calc builds on via "vraag n" in the stem (bouwvraag 17)
-                named = {int(n) for m in re.finditer(r"\b(?:vraag|vragen)\s+\d+(?:\s*(?:,|en)\s*\d+)*", v["stem"], re.I)
+                named = {int(n) for m in re.finditer(r"\b(?:vraag|vragen)\s+\d+(?:\s*(?:,|en)\s*\d+)*", vraag_text(v), re.I)
                          for n in re.findall(r"\d+", m.group(0))}
                 if not named & set(b["builds_on_vragen"]):
                     rep.fail("IT5", f"{vid}: builds_on = ja, no calc, and the stem names none of vraag "
@@ -217,11 +238,11 @@ def main(argv: list[str]) -> None:
     for vid, v in iv.items():
         used = set().union(*(names_in(c["expr"]) for c in v["cv"]["calc"])) if v["cv"]["calc"] else set()
         need = {s["n"] for s in it["sources"] if used & set(s.get("uses_data", []))}
-        missing = need - referenced_sources(v["stem"])
+        missing = need - referenced_sources(vraag_text(v))
         if missing:
             rep.fail("IT6", f"{vid}: the stem does not name informatiebron {', '.join(map(str, sorted(missing)))} whose data it uses")
         b = bv.get(vid)
-        if b and "schema" in kinds_of(b["pattern"], run.pidx) and "uitwerkbijlage" not in v["stem"].lower():
+        if b and "schema" in kinds_of(b["pattern"], run.pidx) and "uitwerkbijlage" not in vraag_text(v).lower():
             rep.fail("IT6", f"{vid}: schema vraag without the uitwerkbijlage sentence")
     # IT7
     for vid, v in iv.items():
@@ -230,8 +251,12 @@ def main(argv: list[str]) -> None:
             continue
         verbs = {f.split()[0].strip("….").lower() for c in pattern_codes(b["pattern"]) if c in run.pidx
                  for f in run.pidx[c]["stem_forms"] if f.split() and f.split()[0][0].isupper()}
-        if verbs and not any(re.search(rf"\b{re.escape(x)}\b", v["stem"].lower()) for x in verbs):
-            rep.warn("IT7", f"{vid}: stem has none of the asking verbs of {b['pattern']} ({', '.join(sorted(verbs))})")
+        if verbs and not any(re.search(rf"\b{re.escape(x)}\b", lead_task(v)[1].lower()) for x in verbs):
+            rep.warn("IT7", f"{vid}: task has none of the asking verbs of {b['pattern']} ({', '.join(sorted(verbs))})")
+    # IT8–IT11, RB (specs/36 §6)
+    gp = run.subjects / run.subject / "glossary.json"
+    measured = house_checks.check_opgave(rep, run, it, og, bv, load_json(gp) if gp.exists() else None, run.items())
+    save_measured(R, oid, measured)
     rep.info("IT1", f"{oid}: {len(it['vragen'])} vragen, {len(data)} data values, {len(it['sources'])} sources checked")
     rep.print_and_exit(out_json)
 
