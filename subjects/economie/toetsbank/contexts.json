@@ -54,6 +54,54 @@
       ],
       "level": "4vwo",
       "date": "2026-11-15"
+    },
+    {
+      "toets_id": "20261117-1624-toets-economie",
+      "opgave_id": "O1",
+      "title": "Henk stopt met werken",
+      "context_tags": [
+        "openbaar vervoer",
+        "pensionering buschauffeur",
+        "aow en vergrijzing"
+      ],
+      "level": "4vwo",
+      "date": "2026-11-17"
+    },
+    {
+      "toets_id": "20261117-1624-toets-economie",
+      "opgave_id": "O2",
+      "title": "Lottes spaargeld uit de fietsenwinkel",
+      "context_tags": [
+        "detailhandel",
+        "spaargeld scholier",
+        "inflatie en koopkracht"
+      ],
+      "level": "4vwo",
+      "date": "2026-11-17"
+    },
+    {
+      "toets_id": "20261117-1624-toets-economie",
+      "opgave_id": "O3",
+      "title": "Factcheck: wordt Nederland ongelijker?",
+      "context_tags": [
+        "media",
+        "factcheck verkiezingsdebat",
+        "inkomens- en vermogensverdeling"
+      ],
+      "level": "4vwo",
+      "date": "2026-11-17"
+    },
+    {
+      "toets_id": "20261117-1624-toets-economie",
+      "opgave_id": "O4",
+      "title": "Daan, zzp-hovenier",
+      "context_tags": [
+        "hoveniersbedrijf",
+        "zzp'er belasting en verzekering",
+        "arbeidsongeschiktheidsverzekering"
+      ],
+      "level": "4vwo",
+      "date": "2026-11-17"
     }
   ]
 }

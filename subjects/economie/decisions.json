@@ -3084,6 +3084,95 @@
       "raised_by": "intake",
       "supersedes": null,
       "scope": null
+    },
+    {
+      "id": "economie-101",
+      "question": "Telt de knop noise als ruis wanneer de intro of een gebruikte informatiebron gegevens bevat die deze vraag niet gebruikt, maar een andere vraag van de opgave wel (of die keuzemogelijkheden van een andere vraag zijn)?",
+      "context": "Toets 20261117-1624: de labellers labelden O1-V3 (spaargeld uit de intro, gebruikt in vraag 1), O2-V6 (huizenprijs en cao-lonen, de keuzemogelijkheden van vraag 5) en O4-V15 (omzet en heffingskorting in informatiebron 1) als noise ja; de planner plande nee. Daardoor noise ja 58% tegen 36% besteld. IT4 kent alleen noise_data die geen calc gebruikt.",
+      "options": [
+        "Ja: elke vraag die tekst met voor haar onnodige gegevens gebruikt heeft noise ja (lezing van de labellers)",
+        "Nee: alleen gegevens die geen enkele vraag van de opgave gebruikt, of ruis in de eigen lead/taak of in een bron die de vraag gebruikt",
+        "Alleen ruis in de eigen lead/taak of in een informatiebron die de vraag noemt"
+      ],
+      "proposed": "Nee: alleen gegevens die geen enkele vraag van de opgave gebruikt, of ruis in de eigen lead/taak of in een bron die de vraag gebruikt",
+      "impact": "medium",
+      "applies_to": [
+        "planner",
+        "item-labeller",
+        "verifier"
+      ],
+      "affects_units": [
+        "O1-V3",
+        "O2-V6",
+        "O4-V15"
+      ],
+      "status": "open",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null,
+      "source_run": "20261117-1624-toets-economie",
+      "raised_by": "verifier",
+      "supersedes": null,
+      "scope": null
+    },
+    {
+      "id": "economie-102",
+      "question": "Telt een begrip uit de syllabus dat de opgave (opnieuw of met een eigen definitie) uitlegt, zoals 'In deze opgave is de grijze druk …', als new_concept ja?",
+      "context": "Toets 20261117-1624: O1-V3 (grijze druk) en O3-V12 (vlaktaks) gepland met new_concept ja; de labellers (R) kozen nee omdat het syllabusbegrippen zijn. new_concept ja eindigde op 6% tegen 22% besteld.",
+      "options": [
+        "Nee: new_concept ja alleen voor een begrip buiten de syllabus dat in de vraag of bron wordt uitgelegd",
+        "Ja: elk begrip dat de opgave zelf uitlegt telt, ook uit de syllabus",
+        "Ja, als het begrip buiten de criteria van de order valt"
+      ],
+      "proposed": "Nee: new_concept ja alleen voor een begrip buiten de syllabus dat in de vraag of bron wordt uitgelegd; de planner kiest daar zulke begrippen voor",
+      "impact": "medium",
+      "applies_to": [
+        "planner",
+        "generator",
+        "item-labeller",
+        "verifier"
+      ],
+      "affects_units": [
+        "O1-V3",
+        "O3-V12"
+      ],
+      "status": "open",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null,
+      "source_run": "20261117-1624-toets-economie",
+      "raised_by": "verifier",
+      "supersedes": null,
+      "scope": null
+    },
+    {
+      "id": "economie-103",
+      "question": "Wie beslist over new_concept als beide labellers 'nee' kiezen bij een begrip dat in geen succescriterium staat, dat de opgave omschrijft en dat de leerling in het antwoord moet toepassen (ook als alleen de rekenregel nodig is)?",
+      "context": "Toets 20261117-1624, ronde 2: O3-V12 werd gerepareerd naar een vlaktaks met belastingvrije voet ('behalve over de eerste € 10.000 … (de belastingvrije voet)'). Dat begrip staat niet in 30_criteria. De verifier oordeelt dat new_concept ja volgens de knopdefinitie gerealiseerd is, maar beide labellers kozen nee. realized.py telt alleen labels, dus new_concept ja blijft 6,1% tegen 22% besteld (met O3-V12 zou het 12,1% zijn). Dit vult het voorstel van ronde 1 over syllabusbegrippen aan.",
+      "options": [
+        "De labels tellen; de afwijking gaat naar de verantwoording",
+        "Een R-labeller beslist met de knopdefinitie zodra de verifier een V5-oordeel geeft dat tegen beide labellers ingaat",
+        "Het V5-oordeel van de verifier telt in realized.py (zoals bloom_changed_by_verifier)",
+        "Een begrip dat alleen als rekenregel nodig is, telt niet als nieuw begrip; de planner kiest begrippen die de leerling in een uitleg moet gebruiken"
+      ],
+      "proposed": "Een R-labeller beslist met de knopdefinitie zodra de verifier een V5-oordeel geeft dat tegen beide labellers ingaat",
+      "impact": "medium",
+      "applies_to": [
+        "item-labeller",
+        "verifier",
+        "planner"
+      ],
+      "affects_units": [
+        "O3-V12"
+      ],
+      "status": "open",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null,
+      "source_run": "20261117-1624-toets-economie",
+      "raised_by": "verifier",
+      "supersedes": null,
+      "scope": null
     }
   ]
 }

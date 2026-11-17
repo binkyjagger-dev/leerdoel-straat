@@ -1,0 +1,15 @@
+{
+ "run_id": "20261117-1624-toets-economie",
+ "subject": "economie",
+ "level": "4vwo",
+ "criteria_run": "20261012-2220-economie-vwo-2026-run2",
+ "reference": "referentie: 3 examens (2025-I, 2025-II, 2026-I)",
+ "max_repair_rounds": 2,
+ "writer_batch": 4,
+ "status": "done",
+ "started_at": "2026-11-17T16:24:18",
+ "order_note": "pauze 1 bevestigd in het gesprek; O8: 4 opgaven gehouden (eindexamen 3)",
+ "examples_missing": [],
+ "finished_at": "2026-11-17T17:41",
+ "toets_id": "20261117-1624-toets-economie"
+}
