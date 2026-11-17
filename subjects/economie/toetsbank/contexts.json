@@ -1,0 +1,59 @@
+{
+  "contexts": [
+    {
+      "toets_id": "20261115-2242-toets-economie",
+      "opgave_id": "O1",
+      "title": "Pensioenfonds Horizon",
+      "context_tags": [
+        "pensioenfonds",
+        "aow en aanvullend pensioen"
+      ],
+      "level": "4vwo",
+      "date": "2026-11-15"
+    },
+    {
+      "toets_id": "20261115-2242-toets-economie",
+      "opgave_id": "O2",
+      "title": "Mila's eerste belastingaangifte",
+      "context_tags": [
+        "ict",
+        "inkomstenbelasting starter"
+      ],
+      "level": "4vwo",
+      "date": "2026-11-15"
+    },
+    {
+      "toets_id": "20261115-2242-toets-economie",
+      "opgave_id": "O3",
+      "title": "Rapport over ongelijkheid",
+      "context_tags": [
+        "overheid",
+        "ongelijkheidsrapport"
+      ],
+      "level": "4vwo",
+      "date": "2026-11-15"
+    },
+    {
+      "toets_id": "20261115-2242-toets-economie",
+      "opgave_id": "O4",
+      "title": "Sparen of lenen bij de Groene Bank",
+      "context_tags": [
+        "bank",
+        "sparen en lenen"
+      ],
+      "level": "4vwo",
+      "date": "2026-11-15"
+    },
+    {
+      "toets_id": "20261115-2242-toets-economie",
+      "opgave_id": "O5",
+      "title": "Tandartsverzekering van ZorgSamen",
+      "context_tags": [
+        "zorgverzekeraar",
+        "aanvullende tandartsverzekering"
+      ],
+      "level": "4vwo",
+      "date": "2026-11-15"
+    }
+  ]
+}

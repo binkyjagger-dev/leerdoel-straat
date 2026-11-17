@@ -1,0 +1,16 @@
+{
+  "run_id": "20261115-2242-toets-economie",
+  "subject": "economie",
+  "level": "4vwo",
+  "criteria_run": "20261012-2220-economie-vwo-2026-run2",
+  "reference": "referentie: 3 examens (2025-I, 2025-II, 2026-I)",
+  "max_repair_rounds": 2,
+  "writer_batch": 4,
+  "status": "done",
+  "started_at": "2026-11-15T22:42:42+01:00",
+  "examples_missing": [
+    "vwo-2025-tv2 v6"
+  ],
+  "finished_at": "2026-11-15T23:31:13+01:00",
+  "toets_id": "20261115-2242-toets-economie"
+}

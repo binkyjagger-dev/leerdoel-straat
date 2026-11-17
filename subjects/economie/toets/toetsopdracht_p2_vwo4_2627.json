@@ -1,0 +1,173 @@
+{
+  "subject": "economie",
+  "level": "4vwo",
+  "title": "Toetsweek 2 – 4 VWO – Levensloop",
+  "criteria_run": "20261012-2220-economie-vwo-2026-run2",
+  "n_opgaven": 5,
+  "n_vragen": 17,
+  "duration_minutes": 33,
+  "matrix": [
+    {
+      "group_id": "E1.2-01",
+      "points": 1
+    },
+    {
+      "group_id": "E1.6-01",
+      "points": 1
+    },
+    {
+      "group_id": "E1.8-01",
+      "points": 2
+    },
+    {
+      "group_id": "E2.1-01",
+      "points": 2
+    },
+    {
+      "group_id": "E2.1-02",
+      "points": 3
+    },
+    {
+      "group_id": "G2.2-01",
+      "points": 1
+    },
+    {
+      "group_id": "G4.4-01",
+      "points": 2
+    },
+    {
+      "group_id": "G5.2-01",
+      "points": 1
+    },
+    {
+      "group_id": "H4.1-01",
+      "points": 1
+    },
+    {
+      "group_id": "H4.1-02",
+      "points": 1
+    },
+    {
+      "group_id": "H4.3-01",
+      "points": 2
+    },
+    {
+      "group_id": "H4.4-01",
+      "points": 3
+    },
+    {
+      "group_id": "H4.6-01",
+      "points": 2
+    },
+    {
+      "group_id": "H4.6-02",
+      "points": 5
+    },
+    {
+      "group_id": "I1.1-02",
+      "points": 3
+    },
+    {
+      "group_id": "I1.4-01",
+      "points": 2
+    },
+    {
+      "group_id": "I1.4-02",
+      "points": 1
+    }
+  ],
+  "criteria_include": null,
+  "criteria_exclude": [
+    "E1.2-01-a",
+    "E1.2-01-c",
+    "E1.2-01-d",
+    "E1.6-01-a",
+    "E1.6-01-b",
+    "E1.6-01-d",
+    "E1.8-01-a",
+    "E1.8-01-c",
+    "E1.8-01-d",
+    "E2.1-01-b",
+    "E2.1-02-a",
+    "E2.1-02-c",
+    "G2.2-01-c",
+    "G4.4-01-b",
+    "G4.4-01-d",
+    "G5.2-01-a",
+    "G5.2-01-b",
+    "G5.2-01-d",
+    "H4.1-01-a",
+    "H4.1-01-b",
+    "H4.1-02-a",
+    "H4.1-02-c",
+    "H4.1-02-d",
+    "H4.3-01-b",
+    "H4.4-01-a",
+    "H4.4-01-c",
+    "H4.6-01-a",
+    "H4.6-01-c",
+    "H4.6-02-a",
+    "H4.6-02-c",
+    "I1.1-02-b",
+    "I1.1-02-c",
+    "I1.1-02-d",
+    "I1.4-01-c",
+    "I1.4-02-a",
+    "I1.4-02-b",
+    "I1.4-02-c"
+  ],
+  "knobs": {
+    "pattern": {
+      "P01": 0.14,
+      "P02": 0.03,
+      "P03": 0.05,
+      "P04": 0.03,
+      "P05": 0.2,
+      "P06": 0.02,
+      "P08": 0.41,
+      "P09": 0.07,
+      "P14": 0.02,
+      "P16": 0.03
+    },
+    "solo": {
+      "unistructureel": 0.03,
+      "multistructureel": 0.56,
+      "relationeel": 0.41
+    },
+    "route": {
+      "zelf vinden": 1
+    },
+    "steps": {
+      "1": 0.27,
+      "2": 0.46,
+      "3": 0.27
+    },
+    "sources": {
+      "in vraagtekst": 0.9,
+      "één bron": 0.07,
+      "meerdere bronnen": 0.03
+    },
+    "noise": {
+      "nee": 0.64,
+      "ja": 0.36
+    },
+    "claim": {
+      "nee": 0.92,
+      "ja": 0.08
+    },
+    "new_concept": {
+      "nee": 0.78,
+      "ja": 0.22
+    },
+    "schema": "vrij",
+    "builds_on": {
+      "nee": 0.95,
+      "ja": 0.05
+    }
+  },
+  "avoid_contexts": null,
+  "contexts": null,
+  "reuse": [],
+  "reference": "bank-3-examens",
+  "template": "Knoppen o.b.v. oude toetsen 4 VWO P2"
+}
