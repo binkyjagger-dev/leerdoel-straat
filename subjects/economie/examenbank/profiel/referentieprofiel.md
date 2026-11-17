@@ -43,9 +43,17 @@ Weggelaten: 5 p geen koppeling.
 
 | waarde | eindexamen (alle) | 2025-I | 2025-II | 2026-I |
 |---|---|---|---|---|
-| zelf vinden | 47 p · 100 % | 17 p · 100 % | 13 p · 100 % | 17 p · 100 % |
+| gegeven | 26 p · 15 % | 7 p · 12 % | 8 p · 14 % | 11 p · 19 % |
+| zelf vinden | 151 p · 85 % | 52 p · 88 % | 51 p · 86 % | 48 p · 81 % |
 
-Weggelaten: 130 p niet van toepassing.
+## Richting
+
+| waarde | eindexamen (alle) | 2025-I | 2025-II | 2026-I |
+|---|---|---|---|---|
+| gegeven | 68 p · 45 % | 22 p · 42 % | 28 p · 57 % | 18 p · 36 % |
+| open | 83 p · 55 % | 30 p · 58 % | 21 p · 43 % | 32 p · 64 % |
+
+Weggelaten: 26 p niet van toepassing.
 
 ## Stappen
 
@@ -106,6 +114,47 @@ Weggelaten: 35 p niet van toepassing.
 | 1 | 107 p · 60 % | 40 p · 68 % | 33 p · 56 % | 34 p · 58 % |
 | 2 | 64 p · 36 % | 19 p · 32 % | 23 p · 39 % | 22 p · 37 % |
 | 3 | 6 p · 3 % | 0 p · 0 % | 3 p · 5 % | 3 p · 5 % |
+
+## Huisregels eindexamen
+
+*huisregels: 3 examens (2025-I, 2025-II, 2026-I)* — gemeten met `scripts/exam/exam_metrics.py` (specs/36 §3).
+
+| regel | eindexamen |
+|---|---|
+| minuten per punt | 3,05 |
+| woorden per punt (alle opgaven) | 30,5 (per opgave p25 27,7, p50 29,2, p75 34) |
+| punten per opgave | gem. 9,8 (min 8, max 13) |
+| vragen per opgave | gem. 4,8 (min 4, max 6) |
+| leerdoelen per punt | 0,616 (max per examen 0,678) |
+| leerdoelen per opgave | gem. 6,3 (max 9) |
+| woorden in de taak | p50 16, p90 26 |
+| woorden in de lead | p50 24, p90 84; 38 % van de vragen zonder lead |
+| nieuwe getallen in de lead | p50 0, p90 2 |
+
+**Taken per vraag** (aandeel vragen met 1, 2, 3+ taken; max_tasks = hoogste waarde op ≥ 10 % van de vragen)
+
+| patroon | vragen | 1 | 2 | 3+ | max_tasks |
+|---|---|---|---|---|---|
+| P01 | 19 | 100 % | 0 % | 0 % | 1 |
+| P02 | 9 | 100 % | 0 % | 0 % | 1 |
+| P03 | 8 | 100 % | 0 % | 0 % | 1 |
+| P04 | 10 | 100 % | 0 % | 0 % | 1 |
+| P05 | 6 | 100 % | 0 % | 0 % | 1 |
+| P06 | 2 | 100 % | 0 % | 0 % | 1 |
+| P08 | 18 | 94 % | 6 % | 0 % | 1 |
+| P09 | 1 | 100 % | 0 % | 0 % | 1 |
+| P10 | 6 | 100 % | 0 % | 0 % | 1 |
+| P11 | 4 | 100 % | 0 % | 0 % | 1 |
+| P12 | 1 | 100 % | 0 % | 0 % | 1 |
+| P13 | 4 | 75 % | 25 % | 0 % | 2 |
+
+**Per examen**
+
+| examen | duur | max. score | min/punt | woorden | woorden/punt | opgaven | punten/opgave | leerdoelen/punt |
+|---|---|---|---|---|---|---|---|---|
+| 2025-I | 180 | 59 | 3,05 | 1.815 | 30,8 | 6 | 9,8 | 0,542 |
+| 2025-II | 180 | 59 | 3,05 | 1.867 | 31,6 | 6 | 9,8 | 0,627 |
+| 2026-I | 180 | 59 | 3,05 | 1.720 | 29,2 | 6 | 9,8 | 0,678 |
 
 ## Patronen: voorbeelden
 

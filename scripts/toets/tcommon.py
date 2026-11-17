@@ -109,8 +109,14 @@ def kinds_of(code: str | None, pidx: dict[str, dict]) -> set[str]:
     return {pidx[c]["kind"] for c in pattern_codes(code) if c in pidx}
 
 
-def knob_applies(knob: dict, kinds: set[str], first_of_opgave: bool) -> bool:
-    """specs/31 §2/§5: does a knob apply to a question with these pattern kinds?"""
+def knob_applies(knob: dict, kinds: set[str], first_of_opgave: bool, pattern: str | None = None) -> bool:
+    """specs/31 §2/§5: does a knob apply to a question with these pattern kinds? A knob's `excluded_patterns`
+    (direction: noem- and voorbeeld-patterns without a conclusion, specs/36 §11 B19) never applies to a question whose
+    pattern codes are all excluded."""
+    excl = set(knob.get("excluded_patterns") or [])
+    codes = [c for c in (pattern or "").split("+") if c]
+    if excl and codes and all(c in excl for c in codes):
+        return False
     a = knob["applies_to_kinds"]
     if a == "all":
         return True
@@ -122,7 +128,7 @@ def knob_applies(knob: dict, kinds: set[str], first_of_opgave: bool) -> bool:
 def kind_dependent(knob: dict) -> bool:
     """True when the knob's applicability depends on the pattern's kind (applies_to_kinds is a list: schema,
     direction); such a knob is null on, and left out for, a question whose pattern is undecided (NIEUW)."""
-    return isinstance(knob["applies_to_kinds"], list)
+    return isinstance(knob["applies_to_kinds"], list) or bool(knob.get("excluded_patterns"))
 
 
 def knob_values(knob: dict, pidx: dict[str, dict] | None = None, active_only: bool = True) -> list[str]:

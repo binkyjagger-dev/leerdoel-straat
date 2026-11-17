@@ -75,7 +75,8 @@ gemeten" and fall back to the seed (`subjects/<s>/toets/seed_profile.json` may c
   student must explain or show ("leg uit dat …", "toon aan dat …", "… toch …"); *open* = the student must reach the
   conclusion ("leg uit of", "leg uit welk effect", "is … toegenomen of afgenomen?"). Applies to explanation and
   show-that patterns: `applies_to_kinds: ["explanation", "calculation"]` (there is no kind "show"; "toon aan dat" is
-  P09, a calculation pattern; a plain "Bereken" is *open*; decided 2026-11-17, §11 B1), else `null`. Settable;
+  P09, a calculation pattern; a plain "Bereken" is *open*; decided 2026-11-17, §11 B1), not on the noem- and
+  voorbeeld-patterns P14 and P16 (§11 B19), else `null`. Settable;
   two-valued (disputes go to R).
 - Labeller evidence: the stem phrase that gives route or direction.
 
@@ -261,4 +262,7 @@ index in `steps`). Planner rules:
 | B16 | New schema `schemas/exam_metrics.schema.json` for `B/metrics/<exam_id>.json`. |
 | B17 | `direction` is two-valued: a difference is a dispute, R decides. |
 | B18 | Verifier `proposed_decisions`: `applies_to` from the roles of `schemas/decisions.schema.json`, `impact` high/medium/low, checked by `validate_toets.py verification`; finding ids gain V11 and V12. |
+| B19 | `direction` is `null` on noem- and voorbeeld-patterns without a conclusion: `excluded_patterns: ["P14", "P16"]` on the knob in `knobs.json` (applicability = kind in [explanation, calculation] and pattern not excluded). P06 (voorbeeld plus mechanisme) keeps direction: its mechanism can be stated ("leg uit dat"). Decided 2026-11-17 during the migration. |
+| B20 | `route` *gegeven* only for an instruction **in the lead or the task** that says how to do it: a step, method, tool or formula. A factual description of the situation in the opgave text, or a stelling the student must explain, is context, not route — also when it names a link the answer uses. The 9 bank questions labelled *gegeven* on such grounds were re-decided by R (decided 2026-11-17). |
+| B21 | "met behulp van de gegevens/getallen/tabel/informatiebron" is a data pointer (D4 allowlist in `cue_phrases.json`); "met behulp van" plus a concept or tool stays route. |
 

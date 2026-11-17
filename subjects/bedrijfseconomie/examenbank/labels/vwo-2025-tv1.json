@@ -1,7 +1,7 @@
 {
   "exam_id": "vwo-2025-tv1",
   "criteria_run": "20261021-1647-bedrijfseconomie-vwo-2028-run2",
-  "run_id": "20261114-0200-examen-bedrijfseconomie-label3",
+  "run_id": "20261117-1331-examen-bedrijfseconomie-label-fields",
   "questions": [
     {
       "exam_id": "vwo-2025-tv1",
@@ -12,7 +12,8 @@
       "points": 2,
       "pattern": "P14",
       "solo": "multistructureel",
-      "route": null,
+      "route": "zelf vinden",
+      "direction": null,
       "steps": "1",
       "sources": "in vraagtekst",
       "noise": "ja",
@@ -42,6 +43,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "medium",
         "sources": "high",
         "noise": "high",
@@ -52,6 +54,7 @@
         "example_quality": "medium"
       },
       "evidence": {
+        "route": "Noem twee verschillende maatschappelijke behoeften waarin Ahold Delhaize voorziet.",
         "pattern": "Motiveer beide antwoorden met een verwijzing naar het bovenstaande financiële overzicht.",
         "solo": "Noem twee verschillende maatschappelijke behoeften waarin Ahold Delhaize voorziet.",
         "steps": "per juist toegelicht antwoord 1",
@@ -72,6 +75,7 @@
       "pattern": "P09",
       "solo": "multistructureel",
       "route": "gegeven",
+      "direction": "open",
       "steps": "2",
       "sources": "in vraagtekst",
       "noise": "ja",
@@ -96,6 +100,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -106,9 +111,10 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Toon met een berekening van de resultaatmarge aan of er in 2022 sprake is geweest van graaiflatie.",
+        "direction": "Toon met een berekening van de resultaatmarge aan of er in 2022 sprake is geweest van graaiflatie.",
         "pattern": "Toon met een berekening van de resultaatmarge aan of er in 2022 sprake is geweest van graaiflatie.",
         "solo": "de resultaatmarge is niet gestegen, dus is er in 2022 geen sprake geweest van graaiflatie.",
-        "route": "Toon met een berekening van de resultaatmarge aan of er in 2022 sprake is geweest van graaiflatie.",
         "steps": "x 100% = 4,33% < 4,39 % / de resultaatmarge is niet gestegen",
         "sources": "noot 1 (EBIT / omzet) x 100%",
         "noise": "loonkosten 12.674 11.179",
@@ -128,6 +134,7 @@
       "pattern": "P08",
       "solo": "relationeel",
       "route": "zelf vinden",
+      "direction": "open",
       "steps": "3",
       "sources": "in vraagtekst",
       "noise": "ja",
@@ -157,6 +164,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -167,9 +175,10 @@
         "example_quality": "medium"
       },
       "evidence": {
+        "route": "Bereken met hoeveel eurocent het resultaat voor vennootschapsbelasting per aandeel in 2022 is gestegen ten opzichte van 2021",
+        "direction": "Bereken met hoeveel eurocent het resultaat voor vennootschapsbelasting per aandeel in 2022 is gestegen",
         "pattern": "Bereken met hoeveel eurocent het resultaat voor vennootschapsbelasting per aandeel in 2022 is gestegen",
         "solo": "Door de daling van het geplaatste aandelenkapitaal stijgt het resultaat per aandeel.",
-        "route": "Bereken met hoeveel eurocent het resultaat voor vennootschapsbelasting per aandeel in 2022 is gestegen",
         "steps": "stijging resultaat per aandeel als gevolg van inkoop eigen aandelen:",
         "sources": "resultaat voor vennootschapsbelasting per aandeel € 3,25 € 2,75",
         "noise": "afschrijvingskosten 3.433 3.007",
@@ -188,7 +197,8 @@
       "points": 2,
       "pattern": "P01",
       "solo": "multistructureel",
-      "route": null,
+      "route": "zelf vinden",
+      "direction": "gegeven",
       "steps": "2",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -218,6 +228,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -228,6 +239,8 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Leg op twee manieren uit hoe de aandeleninkoop van Ahold Delhaize gunstig kan zijn voor het beleggersrendement",
+        "direction": "Leg op twee manieren uit hoe de aandeleninkoop van Ahold Delhaize gunstig kan zijn voor het beleggersrendement",
         "pattern": "Leg op twee manieren uit hoe de aandeleninkoop van Ahold Delhaize gunstig kan zijn voor het beleggersrendement",
         "solo": "per juist toegelicht antwoord 1",
         "steps": "Door het inkopen van eigen aandelen kan het dividend per aandeel stijgen, (omdat het resultaat / dividend over minder aandelen verdeeld hoeft te worden).",
@@ -248,7 +261,8 @@
       "points": 1,
       "pattern": "P16",
       "solo": "unistructureel",
-      "route": null,
+      "route": "zelf vinden",
+      "direction": null,
       "steps": "1",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -273,6 +287,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -283,6 +298,7 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Noem de rechtsvorm van Camping Vogelhof.",
         "pattern": "Noem de rechtsvorm van Camping Vogelhof.",
         "solo": "vof / vennootschap onder firma",
         "steps": "vof / vennootschap onder firma",
@@ -303,6 +319,7 @@
       "pattern": "B02",
       "solo": "multistructureel",
       "route": "gegeven",
+      "direction": null,
       "steps": "4+",
       "sources": "één bron",
       "noise": "ja",
@@ -342,6 +359,7 @@
         "pattern": "high",
         "solo": "medium",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -352,9 +370,9 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Vul hiervoor de uitwerkbijlage bij deze vraag in.",
         "pattern": "Bereken voor Camping Vogelhof de omzet in 2024 uit de verhuur van standplaatsen. Vul hiervoor de uitwerkbijlage bij deze vraag in.",
         "solo": "Totale omzet heel 2024 voor aftrek van kortingen:",
-        "route": "Als de kandidaat in de tabel van de uitwerkbijlage de omzet per seizoen uitrekent, geen scorepunt in mindering brengen.",
         "steps": "0,75 x 1.464.380 + 0,95 x 0,25 x 1.464.380 = € 1.446.075,25",
         "sources": "Het verhuurtarief van een standplaats is afhankelijk van een aantal factoren (zie informatiebron 1).",
         "noise": "aantal standplaatsen: 280",
@@ -374,7 +392,8 @@
       "points": 1,
       "pattern": "P16",
       "solo": "unistructureel",
-      "route": null,
+      "route": "zelf vinden",
+      "direction": null,
       "steps": "1",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -399,6 +418,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -409,6 +429,7 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Noem het onderdeel van het ondernemingsplan waaronder een concurrentieanalyse valt.",
         "pattern": "Noem het onderdeel van het ondernemingsplan waaronder een concurrentieanalyse valt.",
         "solo": "marketingplan",
         "steps": "marketingplan",
@@ -429,7 +450,8 @@
       "points": 2,
       "pattern": "P16",
       "solo": "multistructureel",
-      "route": null,
+      "route": "zelf vinden",
+      "direction": null,
       "steps": "1",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -459,6 +481,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -469,6 +492,7 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Noem twee van deze bijkomende kosten.",
         "pattern": "Noem twee van deze bijkomende kosten.",
         "solo": "notariskosten",
         "steps": "Noem twee van deze bijkomende kosten.",
@@ -490,6 +514,7 @@
       "pattern": "P08",
       "solo": "relationeel",
       "route": "zelf vinden",
+      "direction": "open",
       "steps": "3",
       "sources": "meerdere bronnen",
       "noise": "ja",
@@ -514,6 +539,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -524,9 +550,10 @@
         "example_quality": "medium"
       },
       "evidence": {
+        "route": "Bereken de hoogte van de af te sluiten onderhandse lening bij de oom van Flohr (zie informatiebronnen 2 en 3).",
+        "direction": "Bereken de hoogte van de af te sluiten onderhandse lening bij de oom van Flohr",
         "pattern": "Bereken de hoogte van de af te sluiten onderhandse lening bij de oom van Flohr (zie informatiebronnen 2 en 3).",
         "solo": "40 x 75.000 x 0,6 = € 1.800.000",
-        "route": "Bereken de hoogte van de af te sluiten onderhandse lening bij de oom van Flohr (zie informatiebronnen 2 en 3).",
         "steps": "63.500 + 5.500 + 6.000 = 75.000",
         "sources": "Bereken de hoogte van de af te sluiten onderhandse lening bij de oom van Flohr (zie informatiebronnen 2 en 3).",
         "noise": "€ 3.000 exclusief 21% btw",
@@ -546,6 +573,7 @@
       "pattern": "P07",
       "solo": "multistructureel",
       "route": "gegeven",
+      "direction": "open",
       "steps": "2",
       "sources": "één bron",
       "noise": "ja",
@@ -577,6 +605,7 @@
         "pattern": "high",
         "solo": "medium",
         "route": "high",
+        "direction": "high",
         "steps": "medium",
         "sources": "high",
         "noise": "high",
@@ -587,9 +616,10 @@
         "example_quality": "medium"
       },
       "evidence": {
+        "route": "moet eerst worden berekend hoe vaak per week de chalets moeten worden schoongemaakt.",
+        "direction": "Bereken hoeveel uur per week de zzp’ers gemiddeld moeten worden ingezet",
         "pattern": "moet eerst worden berekend hoe vaak per week de chalets moeten worden schoongemaakt.",
         "solo": "63 x 40",
-        "route": "Om te bepalen hoeveel uur de zzp’ers moeten worden ingezet, moet eerst worden berekend hoe vaak per week de chalets moeten worden schoongemaakt.",
         "steps": "4 = 63 (keer per week een eindschoonmaak doen)",
         "sources": "Bereken hoeveel uur per week de zzp’ers gemiddeld moeten worden ingezet (zie informatiebron 2).",
         "noise": "Vogelhof betaalt de zzp’ers € 25 per gewerkt uur.",
@@ -599,9 +629,9 @@
       },
       "repaired_fields": [
         "pattern",
-        "route",
         "schema",
-        "builds_on"
+        "builds_on",
+        "route"
       ]
     },
     {
@@ -613,7 +643,8 @@
       "points": 2,
       "pattern": "P16",
       "solo": "multistructureel",
-      "route": null,
+      "route": "zelf vinden",
+      "direction": null,
       "steps": "1",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -643,6 +674,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -653,6 +685,7 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Noem twee verschillende bedrijfseconomische voordelen van het inhuren van zzp’ers ten opzichte van het aannemen van personeel in loondienst.",
         "pattern": "Noem twee verschillende bedrijfseconomische voordelen van het inhuren van zzp’ers ten opzichte van het aannemen van personeel in loondienst.",
         "solo": "zzp’ers hebben geen ontslagbescherming.",
         "steps": "Noem twee verschillende bedrijfseconomische voordelen van het inhuren van zzp’ers",
@@ -674,6 +707,7 @@
       "pattern": "B02",
       "solo": "relationeel",
       "route": "gegeven",
+      "direction": null,
       "steps": "4+",
       "sources": "meerdere bronnen",
       "noise": "ja",
@@ -716,6 +750,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -726,9 +761,9 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Vul hiervoor de uitwerkbijlage bij deze vraag in.",
         "pattern": "Bereken de totale verwachte kosten van het Toekanveld voor 2025 (zie informatiebronnen 2, 3 en 4). Vul hiervoor de uitwerkbijlage bij deze vraag in.",
         "solo": "42 (vraag 10) x 26 x 25",
-        "route": "Vul hiervoor de uitwerkbijlage bij deze vraag in.",
         "steps": "1.800.000 x 0,06 x 6",
         "sources": "Bereken de totale verwachte kosten van het Toekanveld voor 2025 (zie informatiebronnen 2, 3 en 4).",
         "noise": "een lening van maximaal € 2 miljoen",
@@ -749,6 +784,7 @@
       "pattern": "P15",
       "solo": "relationeel",
       "route": "gegeven",
+      "direction": "open",
       "steps": "4+",
       "sources": "meerdere bronnen",
       "noise": "ja",
@@ -797,6 +833,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -807,9 +844,10 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Vul hiervoor de uitwerkbijlage bij deze vraag in.",
+        "direction": "Analyseer of Flohr en Femke zullen besluiten tot het herinrichten en plaatsen van de chalets op het Toekanveld.",
         "pattern": "Analyseer of Flohr en Femke zullen besluiten tot het herinrichten en plaatsen van de chalets op het Toekanveld.",
         "solo": "Aan alle drie de voorwaarden is voldaan: het herinrichten gaat door.",
-        "route": "voorwaarde c berekening bedrag omzet verhuur",
         "steps": "1.048.320 + 131.040 – 585.500",
         "sources": "De financieringsbehoefte is € 1.800.000. Dit is minder dan € 2 miljoen, dus de financiering lukt.",
         "noise": "looptijd: 15 jaar",
@@ -819,7 +857,6 @@
       },
       "repaired_fields": [
         "pattern",
-        "route",
         "schema"
       ]
     },
@@ -832,7 +869,8 @@
       "points": 1,
       "pattern": "P16",
       "solo": "unistructureel",
-      "route": null,
+      "route": "zelf vinden",
+      "direction": null,
       "steps": "1",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -857,6 +895,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -867,6 +906,7 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Geef een voorbeeld van off-balance-financiering waardoor de omvang van de activa op de balans kan worden verlaagd.",
         "pattern": "Geef een voorbeeld van off-balance-financiering waardoor de omvang van de activa op de balans kan worden verlaagd.",
         "solo": "Voorbeelden van een juist antwoord zijn:",
         "steps": "Geef een voorbeeld van off-balance-financiering",
@@ -887,6 +927,7 @@
       "pattern": "P09",
       "solo": "relationeel",
       "route": "zelf vinden",
+      "direction": "gegeven",
       "steps": "3",
       "sources": "in vraagtekst",
       "noise": "ja",
@@ -911,6 +952,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -921,9 +963,10 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Toon met een berekening aan dat de inkopen in week 5 lager zijn dan in week 1. Maak gebruik van grafieken 1 en 2.",
+        "direction": "Toon met een berekening aan dat de inkopen in week 5 lager zijn dan in week 1.",
         "pattern": "Toon met een berekening aan dat de inkopen in week 5 lager zijn dan in week 1.",
         "solo": "Maak gebruik van grafieken 1 en 2.",
-        "route": "Toon met een berekening aan dat de inkopen in week 5 lager zijn dan in week 1. Maak gebruik van grafieken 1 en 2.",
         "steps": "inkopen in week 1: 6.800 – 5.000 + 1.200 = € 3.000",
         "sources": "Maak gebruik van grafieken 1 en 2.",
         "noise": "Gegeven zijn de onderstaande overzichten voor de eerste weken van het jaar 2024 (alle getallen x € 1.000).",
@@ -943,6 +986,7 @@
       "pattern": "P08",
       "solo": "relationeel",
       "route": "zelf vinden",
+      "direction": "open",
       "steps": "3",
       "sources": "in vraagtekst",
       "noise": "ja",
@@ -967,6 +1011,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -977,9 +1022,10 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Bereken de omvang van de balanspost Debiteuren aan het einde van week 9.",
+        "direction": "Bereken de omvang van de balanspost Debiteuren aan het einde van week 9.",
         "pattern": "Bereken de omvang van de balanspost Debiteuren aan het einde van week 9.",
         "solo": "De verkopen zijn voor 80% op rekening.",
-        "route": "Bereken de omvang van de balanspost Debiteuren aan het einde van week 9.",
         "steps": "(2.700 + 2.600) x 0,80 x 1,21 = € 5.130,40",
         "sources": "De verkopen zijn voor 80% op rekening.",
         "noise": "de krediettermijn voor debiteuren verkort van 4 weken naar 2 weken.",
@@ -999,6 +1045,7 @@
       "pattern": "P08",
       "solo": "multistructureel",
       "route": "zelf vinden",
+      "direction": "open",
       "steps": "3",
       "sources": "in vraagtekst",
       "noise": "ja",
@@ -1023,6 +1070,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -1033,9 +1081,10 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Bereken het bedrag dat Klaas na betaling van de erfbelasting overhoudt van zijn erfdeel.",
+        "direction": "Bereken het bedrag dat Klaas na betaling van de erfbelasting overhoudt van zijn erfdeel.",
         "pattern": "Bereken het bedrag dat Klaas na betaling van de erfbelasting overhoudt van zijn erfdeel.",
         "solo": "erfbelasting: 138.642 x 0,30 + (147.342 – 138.642) x 0,40 = 45.072",
-        "route": "Bereken het bedrag dat Klaas na betaling van de erfbelasting overhoudt van zijn erfdeel.",
         "steps": "belastbaar deel erfenis: 150.000 – 2.658 = 147.342",
         "sources": "Op de site van de Belastingdienst ziet hij onderstaande gegevens over de te betalen erfbelasting.",
         "noise": "kind met een beperking € 75.546 ouder € 59.643",
@@ -1044,7 +1093,6 @@
       },
       "repaired_fields": [
         "pattern",
-        "route",
         "schema"
       ]
     },
@@ -1057,7 +1105,8 @@
       "points": 1,
       "pattern": "P17",
       "solo": "multistructureel",
-      "route": null,
+      "route": "zelf vinden",
+      "direction": null,
       "steps": "1",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -1082,6 +1131,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -1092,6 +1142,7 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Zet de letters a tot en met d in de juiste volgorde van minst risicovol naar meest risicovol.",
         "pattern": "Zet de letters a tot en met d in de juiste volgorde van minst risicovol naar meest risicovol.",
         "solo": "d – c – a – b",
         "steps": "d – c – a – b",
@@ -1112,7 +1163,8 @@
       "points": 4,
       "pattern": "P09+B03",
       "solo": "relationeel",
-      "route": "zelf vinden",
+      "route": "gegeven",
+      "direction": "open",
       "steps": "4+",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -1147,6 +1199,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -1157,9 +1210,10 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Motiveer het antwoord met een berekening (zie formuleblad).",
+        "direction": "Kan Klaas 8 jaar lang maandelijks € 1.200 opnemen en op 31 december 2033 nog € 25.000 op de spaarrekening hebben staan,",
         "pattern": "Motiveer het antwoord met een berekening (zie formuleblad).",
         "solo": "spaarsaldo op 31 december 2033 na opnames: € 21.806,80",
-        "route": "Kan Klaas 8 jaar lang maandelijks € 1.200 opnemen en op 31 december 2033 nog € 25.000 op de spaarrekening hebben staan,",
         "steps": "eindwaarde opnames op 31 december 2033: 1.200 x 100,706264 = 120.847,52",
         "sources": "Samen met het bedrag van de erfenis bedraagt het spaarsaldo op deze datum dan € 128.441,92.",
         "noise": "De samengestelde interest op deze spaarrekening bedraagt 0,1% per maand.",
@@ -1178,7 +1232,8 @@
       "points": 1,
       "pattern": "P16",
       "solo": "unistructureel",
-      "route": null,
+      "route": "zelf vinden",
+      "direction": null,
       "steps": "1",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -1203,6 +1258,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -1213,6 +1269,7 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Noem een bedrijfseconomisch voordeel van deze overheidsgarantie voor Air France-KLM.",
         "pattern": "Noem een bedrijfseconomisch voordeel van deze overheidsgarantie voor Air France-KLM.",
         "solo": "goedkoper lenen / een lager interestpercentage",
         "steps": "Voorbeelden van een juist antwoord zijn:",
@@ -1233,6 +1290,7 @@
       "pattern": "P08",
       "solo": "multistructureel",
       "route": "zelf vinden",
+      "direction": "open",
       "steps": "2",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -1262,6 +1320,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -1272,9 +1331,10 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Bereken de toename van het resultaat in euro’s in het derde kwartaal van 2022",
+        "direction": "Bereken de toename van het resultaat in euro’s in het derde kwartaal van 2022",
         "pattern": "Bereken de toename van het resultaat in euro’s in het derde kwartaal van 2022 ten opzichte van het resultaat van het derde kwartaal van 2021.",
         "solo": "resultaat kwartaal 3 in 2022: 232 + 228 = 460 en resultaat kwartaal 3 in 2021: -3.164 + 2.971 = -193",
-        "route": "Bereken de toename van het resultaat in euro’s in het derde kwartaal van 2022",
         "steps": "toename resultaat kwartaal 3 2022 t.o.v. 2021: 460 + 193 = € 653 miljoen",
         "sources": "kwartaal 1 tot en met 3 totale resultaat (x € 1 miljoen)",
         "noise": "resultaat kwartaal 3 in 2022: 232 + 228 = 460 en resultaat kwartaal 3 in 2021: -3.164 + 2.971 = -193",
@@ -1294,6 +1354,7 @@
       "pattern": "P09",
       "solo": "multistructureel",
       "route": "zelf vinden",
+      "direction": "open",
       "steps": "3",
       "sources": "één bron",
       "noise": "ja",
@@ -1323,6 +1384,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -1333,9 +1395,10 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Toon aan met een berekening of de solvabiliteit van Air France-KLM op 30 september 2022 is verbeterd",
+        "direction": "Toon aan met een berekening of de solvabiliteit van Air France-KLM op 30 september 2022 is verbeterd",
         "pattern": "Toon aan met een berekening of de solvabiliteit van Air France-KLM op 30 september 2022 is verbeterd ten opzichte van 31 december 2021",
         "solo": "De verhouding EV/TV is gestegen, wat duidt op een verbetering van de solvabiliteit.",
-        "route": "Toon aan met een berekening of de solvabiliteit van Air France-KLM op 30 september 2022 is verbeterd",
         "steps": "-2.797 + 22.775 + 14.585",
         "sources": "is verbeterd ten opzichte van 31 december 2021 (zie informatiebron 5).",
         "noise": "waarvan liquide middelen 8.264 6.658",
@@ -1354,7 +1417,8 @@
       "points": 2,
       "pattern": "B01",
       "solo": "multistructureel",
-      "route": null,
+      "route": "zelf vinden",
+      "direction": "gegeven",
       "steps": "2",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -1384,6 +1448,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -1394,6 +1459,8 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Leg uit dat door een emissie van converteerbare obligaties op korte termijn de solvabiliteit verslechtert",
+        "direction": "Leg uit dat door een emissie van converteerbare obligaties op korte termijn de solvabiliteit verslechtert",
         "pattern": "Door uitgifte van converteerbare obligaties stijgt het vreemd vermogen op korte termijn (en blijft het eigen vermogen gelijk), waardoor de solvabiliteit verslechtert.",
         "solo": "waardoor na conversie het eigen vermogen stijgt, het vreemd vermogen daalt en de solvabiliteit verbetert.",
         "steps": "zullen bij een stijging van de aandelenkoers (boven conversieprijs) worden omgewisseld in aandelen, waardoor na conversie het eigen vermogen stijgt",
@@ -1405,7 +1472,6 @@
       },
       "repaired_fields": [
         "pattern",
-        "route",
         "schema"
       ]
     },
@@ -1419,6 +1485,7 @@
       "pattern": "P08",
       "solo": "relationeel",
       "route": "zelf vinden",
+      "direction": "open",
       "steps": "3",
       "sources": "één bron",
       "noise": "ja",
@@ -1443,6 +1510,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -1453,9 +1521,10 @@
         "example_quality": "medium"
       },
       "evidence": {
+        "route": "Bereken de totale interestopbrengst voor de Nederlandse staat over de gehele looptijd van de converteerbare obligatielening",
+        "direction": "Bereken de totale interestopbrengst voor de Nederlandse staat over de gehele looptijd van de converteerbare obligatielening",
         "pattern": "Bereken de totale interestopbrengst voor de Nederlandse staat over de gehele looptijd van de converteerbare obligatielening",
         "solo": "0,093 x 300 miljoen x 0,065 x 3 + 0,093 x 300 miljoen x (0,03 + 0,013) x 7",
-        "route": "Bereken de totale interestopbrengst voor de Nederlandse staat over de gehele looptijd van de converteerbare obligatielening",
         "steps": "0,093 x 300 miljoen x 0,065 x 3 + 0,093 x 300 miljoen x (0,03 + 0,013) x 7",
         "sources": "voordeel op (zie informatiebron 6).",
         "noise": "De opbrengst van de totale emissie bedraagt € 305,6 miljoen.",
@@ -1474,7 +1543,8 @@
       "points": 2,
       "pattern": "P03",
       "solo": "relationeel",
-      "route": null,
+      "route": "zelf vinden",
+      "direction": "gegeven",
       "steps": "2",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -1504,6 +1574,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -1514,6 +1585,8 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Leg de stelling van het Kamerlid uit.",
+        "direction": "Een Kamerlid stelt dat de werkgelegenheid wordt geschaad door niet deel te nemen aan de emissie.",
         "pattern": "Een Kamerlid stelt dat de werkgelegenheid wordt geschaad door niet deel te nemen aan de emissie.",
         "solo": "Hierdoor krijgt de Nederlandse staat minder zeggenschap waardoor die minder goed kan opkomen voor de werkgelegenheid.",
         "steps": "zal zijn aandelenbelang in Air France-KLM mogelijk dalen.",
@@ -1534,7 +1607,8 @@
       "points": 1,
       "pattern": "P16",
       "solo": "unistructureel",
-      "route": null,
+      "route": "zelf vinden",
+      "direction": null,
       "steps": "1",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -1559,6 +1633,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -1569,6 +1644,7 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Geef een financiële reden waarom sommige beleggers er in deze situatie voor hebben gekozen hun obligaties niet te converteren.",
         "pattern": "Geef een financiële reden waarom sommige beleggers er in deze situatie voor hebben gekozen hun obligaties niet te converteren.",
         "solo": "Het verwachte rendement op de obligaties (interest en/of koersresultaat) ligt volgens hen boven het verwachte rendement op aandelen",
         "steps": "Voorbeeld van een juist antwoord is:",
@@ -1578,7 +1654,9 @@
         "new_concept": "Geef een financiële reden waarom sommige beleggers er in deze situatie voor hebben gekozen hun obligaties niet te converteren.",
         "builds_on": "Geef een financiële reden waarom sommige beleggers er in deze situatie voor hebben gekozen"
       },
-      "repaired_fields": []
+      "repaired_fields": [
+        "direction"
+      ]
     },
     {
       "exam_id": "vwo-2025-tv1",
@@ -1590,6 +1668,7 @@
       "pattern": "P07",
       "solo": "multistructureel",
       "route": "gegeven",
+      "direction": "open",
       "steps": "3",
       "sources": "in vraagtekst",
       "noise": "ja",
@@ -1619,6 +1698,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -1629,9 +1709,10 @@
         "example_quality": "medium"
       },
       "evidence": {
+        "route": "Maak hierbij gebruik van het verkoopresultaat en het bezettingsresultaat.",
+        "direction": "Bereken het verwachte resultaat voor Uw Krant over de eerste periode van 4 weken in 2025.",
         "pattern": "Bereken het verwachte resultaat voor Uw Krant over de eerste periode van 4 weken in 2025. Maak hierbij gebruik van het verkoopresultaat en het bezettingsresultaat.",
         "solo": "verkoopresultaat: 34.500 x 4 x 6 x 0,05 + 25.000 x 4 x 6 x 0,22 = 173.400 voordelig / positief / +",
-        "route": "Maak hierbij gebruik van het verkoopresultaat en het bezettingsresultaat.",
         "steps": "resultaat: 173.400 – 9.000 = € 164.400 voordelig / positief / +",
         "sources": "Over de eerste periode van 4 weken in 2025 is het volgende van Uw Krant gegeven:",
         "noise": "abonnementsprijs per 4 weken € 48,00 € 25,68",
@@ -1649,7 +1730,8 @@
       "points": 2,
       "pattern": "P16",
       "solo": "multistructureel",
-      "route": null,
+      "route": "zelf vinden",
+      "direction": null,
       "steps": "1",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -1679,6 +1761,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -1689,6 +1772,7 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Noem twee voordelen voor Uw Krant van het inzetten van social media in plaats van traditionele media.",
         "pattern": "Noem twee voordelen voor Uw Krant van het inzetten van social media in plaats van traditionele media.",
         "solo": "per juist antwoord 1",
         "steps": "Noem twee voordelen voor Uw Krant van het inzetten van social media in plaats van traditionele media.",
@@ -1710,6 +1794,7 @@
       "pattern": "P09",
       "solo": "relationeel",
       "route": "gegeven",
+      "direction": "open",
       "steps": "3",
       "sources": "in vraagtekst",
       "noise": "ja",
@@ -1739,6 +1824,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -1749,9 +1835,10 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Leg dit uit met behulp van een berekening van de dekkingsbijdrage per type krant in de actieperiode.",
+        "direction": "Welke abonnementsvorm heeft dan de voorkeur: papier of digitaal?",
         "pattern": "Welke abonnementsvorm heeft dan de voorkeur: papier of digitaal? Leg dit uit met behulp van een berekening van de dekkingsbijdrage",
         "solo": "Het doel is het resultaat van Uw Krant te verbeteren op korte termijn.",
-        "route": "Leg dit uit met behulp van een berekening van de dekkingsbijdrage per type krant in de actieperiode.",
         "steps": "De abonnementsvorm digitaal heeft de voorkeur (aangezien de dekkingsbijdrage hierbij het hoogste is).",
         "sources": "Voor nieuwe abonnees geldt in de actieperiode een abonnementsprijs van € 27,60 voor 4 weken voor de papieren krant",
         "noise": "constante kosten per krant € 0,75 € 0,75",
@@ -1770,7 +1857,8 @@
       "points": 2,
       "pattern": "P05",
       "solo": "multistructureel",
-      "route": null,
+      "route": "zelf vinden",
+      "direction": null,
       "steps": "2",
       "sources": "in vraagtekst",
       "noise": "nee",
@@ -1800,6 +1888,7 @@
         "pattern": "high",
         "solo": "high",
         "route": "high",
+        "direction": "high",
         "steps": "high",
         "sources": "high",
         "noise": "high",
@@ -1810,6 +1899,7 @@
         "example_quality": "high"
       },
       "evidence": {
+        "route": "Leg uit welk instrument van de marketingmix kan worden gebruikt om de abonnee goed te informeren over de achtergrond van de prijsverhoging.",
         "pattern": "Leg uit welk instrument van de marketingmix kan worden gebruikt om de abonnee goed te informeren over de achtergrond van de prijsverhoging.",
         "solo": "Het tweede scorepunt alleen toekennen wanneer het eerste scorepunt is behaald.",
         "steps": "zal de klant eerder bereid zijn deze hogere prijs te betalen.",

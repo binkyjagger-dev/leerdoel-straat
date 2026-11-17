@@ -50,7 +50,7 @@ def point_shares(recs: list[dict], pidx: dict, knobs: dict) -> dict:
         for k in LABEL_KNOBS:
             if kind_dependent(knobs[k]) and (not codes or r["pattern"] == "NIEUW"):
                 continue
-            if not knob_applies(knobs[k], kinds, r["first"]):
+            if not knob_applies(knobs[k], kinds, r["first"], r["pattern"]):
                 continue
             v = (r["knobs"] or {}).get(k)
             if v is None:

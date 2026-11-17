@@ -18,6 +18,7 @@
     {"id": "gebruik-informatiebron", "pattern": "\\bgebruik\\s+(?:de\\s+)?informatiebron(?:nen)?\\s+\\d+", "example": "Gebruik informatiebron 2."},
     {"id": "gebruik-antwoord", "pattern": "\\bgebruik\\s+(?:je|jouw)\\s+antwoord\\s+(?:op|bij|van)\\s+vraag\\s+\\d+", "example": "Gebruik je antwoord op vraag 3."},
     {"id": "afronden", "pattern": "\\brond\\b[^.?]*?\\baf\\b", "example": "Rond af op hele euro's."},
-    {"id": "ga-uit-van", "pattern": "\\bga\\s+(?:er\\s+)?(?:bij\\s+)?uit\\s+van\\b", "example": "Ga uit van het belastbaar inkomen."}
+    {"id": "ga-uit-van", "pattern": "\\bga\\s+(?:er\\s+)?(?:bij\\s+)?uit\\s+van\\b", "example": "Ga uit van het belastbaar inkomen."},
+    {"id": "met-behulp-van-gegevens", "pattern": "\\bmet\\s+behulp\\s+van\\s+(?:de\\s+|het\\s+)?(?:\\w+\\s+)?(?:gegevens|getallen|tabel(?:len)?|informatiebron(?:nen)?|matrix)\\b", "example": "Leg met behulp van getallen uit … / met behulp van de gegevens uit de tabel (data pointer, not a route; decided 2026-11-17). 'Met behulp van' plus a concept or tool stays route."}
   ]
 }
