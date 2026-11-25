@@ -2263,11 +2263,150 @@
       "affects_units": [
         "O3-V11"
       ],
+      "status": "answered",
+      "answer": "Alleen lead/taak telt (B20); de planner plant B02-schema's als route zelf vinden",
+      "answered_by": "docent",
+      "answered_at": "2026-11-19T08:43:58Z",
+      "source_run": "20261119-0943-toets-bedrijfseconomie",
+      "raised_by": "verifier",
+      "supersedes": null,
+      "scope": null
+    },
+    {
+      "id": "bedrijfsecon-073",
+      "question": "Telt een noem-vraag naar oorzaken van waardedaling (slijtage, technische of economische veroudering) in een toets als toetsing van F1.28.1-02-b op niveau onthouden?",
+      "context": "O1-V1 (2 p, P16) vraagt twee oorzaken van waardedaling van een steenoven te noemen en is gekoppeld aan F1.28.1-02-b ('Berekent de afschrijving ... en verwerkt die'). Geen criterium van de run noemt oorzaken van waardedaling; het goedgekeurde bouwplan plande deze vraag zo. De verifier gaf V1 should, geen repair.",
+      "options": [
+        "Ja: kennis van waardedaling hoort als onthouden-onderdeel bij afschrijving (-b); zo laten",
+        "Nee: een P16-vraag op -b moet kennis uit de criteriumtekst vragen (afschrijvingskosten, boekwaarde); de planner plant zo",
+        "Ja, maar in de verantwoording markeren als voorkennis buiten de criteria"
+      ],
+      "proposed": "Ja, maar in de verantwoording markeren als voorkennis buiten de criteria",
+      "impact": "medium",
+      "applies_to": [
+        "planner",
+        "verifier"
+      ],
+      "affects_units": [
+        "O1-V1"
+      ],
       "status": "open",
       "answer": null,
       "answered_by": null,
       "answered_at": null,
-      "source_run": "20261117-1909-toets-bedrijfseconomie",
+      "source_run": "20261119-0943-toets-bedrijfseconomie",
+      "raised_by": "verifier",
+      "supersedes": null,
+      "scope": null
+    },
+    {
+      "id": "bedrijfsecon-074",
+      "question": "Mag een omschrijf-vraag (P16) naar begrippen in dezelfde opgave vóór een rekenvraag staan die met precies die begrippen wordt opgelost, nu route 'zelf vinden' gepland is?",
+      "context": "O3-V9 laat dekkingsbijdrage en break-evenafzet omschrijven (het cv aanvaardt de formule constante kosten / dekkingsbijdrage); O3-V11 vraagt direct daarna de break-evenafzet te berekenen, met route zelf vinden. Het bouwplan plande deze volgorde als verhaallijn.",
+      "options": [
+        "Toegestaan: het CE doet dit ook en de rekenvraag noemt het begrip niet",
+        "Niet toegestaan: de planner zet een omschrijf-vraag na de rekenvraag of op andere begrippen",
+        "Toegestaan, maar de omschrijf-vraag mag geen formule als goed antwoord aanvaarden"
+      ],
+      "proposed": "Niet toegestaan: de planner zet een omschrijf-vraag na de rekenvraag of op andere begrippen",
+      "impact": "low",
+      "applies_to": [
+        "planner",
+        "verifier"
+      ],
+      "affects_units": [
+        "O3-V9",
+        "O3-V11"
+      ],
+      "status": "open",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null,
+      "source_run": "20261119-0943-toets-bedrijfseconomie",
+      "raised_by": "verifier",
+      "supersedes": null,
+      "scope": null
+    },
+    {
+      "id": "bedrijfsecon-075",
+      "question": "Accepteert de docent een builds_on-afwijking buiten tolerantie als de vragen werkelijk op een eerdere uitkomst steunen en het plan 'nee' zei?",
+      "context": "Toets bedrijfseconomie periode 2: O3-V11 en O3-V12 gebruiken de constante kosten van € 252.000 die vraag 10 al laat berekenen; na het herstel van ronde 1 staat er een doorrekenregel en de labellers zetten builds_on op ja. Daardoor builds_on ja 39,3 % (order 29,1 %), buiten tolerantie. bedrijfsecon-070 regelt alleen steps en solo (accepteren) en Bloom en ruis (blauwdruk aanpassen).",
+      "options": [
+        "Accepteren met vermelding op de twijfellijst, zoals steps en solo (bedrijfsecon-070)",
+        "Blauwdruk aanpassen: builds_on van O3-V11 en O3-V12 op ja zetten en de order-tolerantie opnieuw toetsen",
+        "Items herschrijven zodat ze niet op vraag 10 steunen (andere kostenbasis per vraag)"
+      ],
+      "proposed": "Accepteren met vermelding op de twijfellijst, zoals steps en solo (bedrijfsecon-070)",
+      "impact": "low",
+      "applies_to": [
+        "planner",
+        "verifier"
+      ],
+      "affects_units": [
+        "O3-V11",
+        "O3-V12"
+      ],
+      "status": "open",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null,
+      "source_run": "20261119-0943-toets-bedrijfseconomie",
+      "raised_by": "verifier",
+      "supersedes": null,
+      "scope": null
+    },
+    {
+      "id": "bedrijfsecon-076",
+      "question": "Welke term gebruiken toetsen en opgaven van bedrijfseconomie voor het punt waarop de opbrengsten de kosten precies dekken?",
+      "context": "Docentreview run 20261119-0943 (O3-V11, O3-V13) en run 20261117-1909 (F1): de writer schreef 'quitte spelen'; de criteria gebruiken break-evenafzet, break-evenomzet (specs/37 D2).",
+      "options": [
+        "Break-even (break-evenafzet, break-evenomzet, break-evenpunt); 'quitte (spelen)' nooit gebruiken",
+        "Beide termen zijn goed"
+      ],
+      "proposed": "Break-even (break-evenafzet, break-evenomzet, break-evenpunt); 'quitte (spelen)' nooit gebruiken",
+      "impact": "medium",
+      "applies_to": [
+        "planner",
+        "generator",
+        "verifier"
+      ],
+      "affects_units": [
+        "O3-V11",
+        "O3-V13"
+      ],
+      "status": "answered",
+      "answer": "Break-even (break-evenafzet, break-evenomzet, break-evenpunt); 'quitte (spelen)' nooit gebruiken in toetstekst en correctievoorschrift",
+      "answered_by": "docent",
+      "answered_at": "2026-11-19T13:24:02Z",
+      "source_run": "20261119-0943-toets-bedrijfseconomie",
+      "raised_by": "human",
+      "supersedes": null,
+      "scope": null
+    },
+    {
+      "id": "bedrijfsecon-077",
+      "question": "Als de docent in een review om een vraag met n tussenstappen vraagt, tellen die tussenstappen dan als op elkaar voortbouwende schakels (knop steps, bedrijfsecon-066) of als het aantal tussenuitkomsten?",
+      "context": "Docentreview 2026-11-19: 'een pittige vraag waarbij 4 tussenstappen nodig zijn' werd O4-V17 (gepland steps 4+). Het antwoord heeft 5 tussenuitkomsten (616, 243.320, 84, 51.744, 152.500), maar de langste keten is 3 schakels; beide labellers: steps 3. De verifier gaf een must volgens de schakeltelling.",
+      "options": [
+        "Schakels volgens bedrijfsecon-066 (zoals de knop steps)",
+        "Aantal tussenuitkomsten in het antwoord",
+        "De orchestrator leest de wens terug met beide lezingen (F4) en legt de lezing vast"
+      ],
+      "proposed": "Schakels volgens bedrijfsecon-066 (zoals de knop steps)",
+      "impact": "medium",
+      "applies_to": [
+        "planner",
+        "verifier",
+        "item-labeller"
+      ],
+      "affects_units": [
+        "O4-V17"
+      ],
+      "status": "answered",
+      "answer": "Op elkaar voortbouwende stappen (telling bedrijfsecon-066), niet het aantal tussenuitkomsten (docent, 2026-11-19, bij O4-V17)",
+      "answered_by": "docent",
+      "answered_at": "2026-11-19T15:55:28Z",
+      "source_run": "20261119-0943-toets-bedrijfseconomie",
       "raised_by": "verifier",
       "supersedes": null,
       "scope": null

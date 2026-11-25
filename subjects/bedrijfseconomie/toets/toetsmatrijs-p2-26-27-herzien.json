@@ -1,0 +1,59 @@
+{
+  "note": "Docentwijziging van de toetsmatrijs voor de herhaalrun van 'Toets Regulier Periode 2 26_27 5 VWO', ingelezen uit toetsmatrijs-p2-26-27-controle.xlsx en bevestigd op 2026-11-19. Bij T1 van de herhaalrun overschrijven naar R/input/toetsopdracht.json (matrix, criteria_exclude) en teruglezen; het originele opdrachtbestand blijft ongewijzigd. focus: per leerdoel, voor de bedoeling van de vragen bij pauze 2 (de opdracht heeft daar nog geen veld voor; specs/37 D10).",
+  "source_order": "subjects/bedrijfseconomie/toets/toetsopdracht_v5_26_27 p2.json",
+  "confirmed_at": "2026-11-19",
+  "total_points": 36,
+  "matrix": [
+    {
+      "group_id": "F1.28.1-02",
+      "points": 9
+    },
+    {
+      "group_id": "F2.30.2-02",
+      "points": 6
+    },
+    {
+      "group_id": "F2.30.3-01",
+      "points": 3
+    },
+    {
+      "group_id": "F2.30.3-02",
+      "points": 4
+    },
+    {
+      "group_id": "F2.30.4-01",
+      "points": 8
+    },
+    {
+      "group_id": "F2.31.1-01",
+      "points": 6
+    }
+  ],
+  "criteria_exclude": [
+    "F1.28.1-02-a",
+    "F1.28.1-02-c",
+    "F1.28.1-02-d"
+  ],
+  "focus": [
+    {
+      "group_id": "F1.28.1-02",
+      "text": "Een belangrijk misconcept dat getoetst moet worden is dat de leerling correct de aanschafwaarde (aanschafprijs + installatiekosten) en de restwaarde (restwaarde - sloopkosten) toepast."
+    },
+    {
+      "group_id": "F2.30.3-02",
+      "text": "Een misconcept wil ik hier toetsen waarbij de winstopslag op basis van de kostprijs kan worden berekend en ook als de winstopslag reeds in de verkoopprijs is opgenomen."
+    }
+  ],
+  "changes_vs_order": {
+    "removed": [
+      "F2.30.1-02",
+      "F2.30.2-03",
+      "F2.30.4-02",
+      "F2.30.5-01",
+      "F2.30.6-02"
+    ],
+    "criteria_included_again": [
+      "F2.30.3-02-c"
+    ]
+  }
+}

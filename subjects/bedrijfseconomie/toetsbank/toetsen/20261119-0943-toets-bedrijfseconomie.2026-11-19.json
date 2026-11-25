@@ -1,0 +1,3344 @@
+{
+  "toets_id": "20261119-0943-toets-bedrijfseconomie",
+  "subject": "bedrijfseconomie",
+  "criteria_run": "20261021-1647-bedrijfseconomie-vwo-2028-run2",
+  "title": "Toets Regulier Periode 2 26_27_VWO5",
+  "level": "5vwo",
+  "run_id": "20261119-0943-toets-bedrijfseconomie",
+  "created_at": "2026-11-19",
+  "max_score": 36,
+  "reference": "bank-2-examens",
+  "opgaven": [
+    {
+      "opgave_id": "O1",
+      "title": "Bakkerij Korenaar",
+      "context": "Bakkerij Korenaar in Amersfoort bakt brood en gebak voor de eigen winkel. Eigenaar Sanne de Wit koopt op 1 april 2027 een nieuwe steenoven. De opgavetekst geeft de gegevens van de offerte: aanschafprijs, installatiekosten, verwachte opbrengst bij verkoop aan het einde van de gebruiksduur, de kosten om de oven dan te demonteren en af te voeren, de gebruiksduur en een onderhoudscontract.",
+      "context_tags": [
+        "bakkerijbranche",
+        "ambachtelijke bakkerij",
+        "steenoven"
+      ],
+      "reused_from": null,
+      "intro": "Sanne de Wit is eigenaar van Bakkerij Korenaar in Amersfoort. Korenaar bakt brood en gebak voor de eigen winkel. Op 1 april 2027 neemt Sanne een nieuwe steenoven in gebruik. De leverancier heeft haar daarvoor een offerte gestuurd:\n- prijs van de oven: € 46.500\n- installeren van de oven: € 3.900\n- onderhoudscontract: € 950 per jaar\n\nSanne verwacht de oven 8 jaar te gebruiken. Daarna kan zij de oven naar verwachting voor € 6.000 verkopen. Het demonteren en afvoeren van de oven kost dan € 1.200.\n\nKorenaar schrijft de oven af met gelijke bedragen per jaar. Alle bedragen in deze opgave zijn exclusief btw.",
+      "data": {
+        "prijs_oven": 46500,
+        "installatie": 3900,
+        "onderhoud_jaar": 950,
+        "jaren": 8,
+        "verkoop_eind": 6000,
+        "sloop_eind": 1200,
+        "res_voor_afschr": 64000,
+        "omzet_2027": 418000,
+        "balansdag": 31,
+        "maanden_jaar": 12
+      },
+      "sources": [],
+      "figures": [],
+      "vragen": [
+        {
+          "vraag_id": "O1-V1",
+          "number": 1,
+          "points": 2,
+          "lead": "",
+          "task": "Noem twee oorzaken waardoor de steenoven van Korenaar in de loop van de jaren minder waard wordt.",
+          "uitwerkbijlage": null,
+          "cv": {
+            "maximumscore": 2,
+            "model_answer": "Voorbeelden van juiste oorzaken zijn:\n- slijtage door het dagelijkse gebruik van de oven\n- technische veroudering: er komen nieuwe ovens op de markt die beter of zuiniger bakken\n- economische veroudering: de oven past niet meer bij wat Korenaar wil bakken, bijvoorbeeld omdat de vraag van klanten verandert",
+            "calc": [],
+            "scorepunten": [
+              {
+                "seq": 1,
+                "points": 1,
+                "text": "een juiste oorzaak, bijvoorbeeld slijtage door gebruik",
+                "criterion_id": "F1.28.1-02-b",
+                "calc_ref": null
+              },
+              {
+                "seq": 2,
+                "points": 1,
+                "text": "een tweede, andere juiste oorzaak, bijvoorbeeld technische of economische veroudering",
+                "criterion_id": "F1.28.1-02-b",
+                "calc_ref": null
+              }
+            ],
+            "rules": [
+              "Per juiste oorzaak 1 scorepunt toekennen, met een maximum van 2."
+            ],
+            "alternatives": [
+              "Een omschrijving zonder de term, zoals 'er komen betere ovens' voor technische veroudering, ook goed rekenen.",
+              "Ouderdom of slijtage door de hitte van het bakken telt als slijtage; niet twee keer toekennen."
+            ],
+            "follow_through": null
+          },
+          "new_concepts": [],
+          "builds_on_vragen": [],
+          "pattern": "P16",
+          "knobs": {
+            "solo": "multistructureel",
+            "route": "zelf vinden",
+            "direction": null,
+            "steps": "1",
+            "sources": "in vraagtekst",
+            "noise": "nee",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": null
+          },
+          "label": {
+            "exam_id": null,
+            "question_id": "O1-V1",
+            "question_number": 1,
+            "opgave_id": "O1",
+            "first_of_opgave": true,
+            "points": 2,
+            "pattern": "P16",
+            "solo": "multistructureel",
+            "route": "zelf vinden",
+            "direction": null,
+            "steps": "1",
+            "sources": "in vraagtekst",
+            "noise": "nee",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": null,
+            "example_quality": null,
+            "builds_on_questions": [],
+            "proposed_pattern": null,
+            "example_quality_reason": null,
+            "combination": 1,
+            "bloom": "onthouden",
+            "scorepunt_bloom": [
+              {
+                "points": 1,
+                "bloom": "onthouden",
+                "group_id": "F1.28.1-02"
+              },
+              {
+                "points": 1,
+                "bloom": "onthouden",
+                "group_id": "F1.28.1-02"
+              }
+            ],
+            "confidence": {
+              "pattern": "high",
+              "solo": "high",
+              "route": "high",
+              "direction": "high",
+              "steps": "high",
+              "sources": "high",
+              "noise": "high",
+              "claim": "high",
+              "new_concept": "high",
+              "schema": "high",
+              "builds_on": "high"
+            },
+            "evidence": {
+              "pattern": "Noem twee oorzaken waardoor de steenoven van Korenaar in de loop van de jaren minder waard wordt.",
+              "solo": "Per juiste oorzaak 1 scorepunt toekennen, met een maximum van 2.",
+              "route": "Noem twee oorzaken waardoor de steenoven van Korenaar in de loop van de jaren minder waard wordt.",
+              "steps": "Noem twee oorzaken",
+              "sources": "Noem twee oorzaken waardoor de steenoven van Korenaar in de loop van de jaren minder waard wordt.",
+              "noise": "Per juiste oorzaak 1 scorepunt toekennen, met een maximum van 2.",
+              "claim": "Noem twee oorzaken waardoor de steenoven van Korenaar in de loop van de jaren minder waard wordt.",
+              "new_concept": "Noem twee oorzaken waardoor de steenoven van Korenaar in de loop van de jaren minder waard wordt."
+            },
+            "repaired_fields": [],
+            "disagreements": {}
+          },
+          "scorepunten": [
+            {
+              "seq": 1,
+              "points": 1,
+              "criterion_id": "F1.28.1-02-b",
+              "group_id": "F1.28.1-02",
+              "bloom": "onthouden"
+            },
+            {
+              "seq": 2,
+              "points": 1,
+              "criterion_id": "F1.28.1-02-b",
+              "group_id": "F1.28.1-02",
+              "bloom": "onthouden"
+            }
+          ],
+          "open_findings": []
+        },
+        {
+          "vraag_id": "O1-V2",
+          "number": 2,
+          "points": 3,
+          "lead": "",
+          "task": "Bereken de afschrijvingskosten van de steenoven over 2027.",
+          "uitwerkbijlage": null,
+          "cv": {
+            "maximumscore": 3,
+            "model_answer": "De aanschafwaarde is de prijs plus het installeren: 46.500 + 3.900 = € 50.400. De restwaarde is de verkoopopbrengst min het demonteren en afvoeren: 6.000 - 1.200 = € 4.800. De afschrijving per jaar is dan (50.400 - 4.800) gedeeld door 8 jaar = € 5.700. De oven is in 2027 vanaf april in gebruik, dus 9 maanden. Afschrijvingskosten over 2027: 9 maanden van de 12 maal 5.700 = € 4.275.",
+            "calc": [
+              {
+                "name": "aw",
+                "expr": "prijs_oven + installatie",
+                "round": 0,
+                "rounding": null,
+                "shown": "€ 50.400"
+              },
+              {
+                "name": "rw",
+                "expr": "verkoop_eind - sloop_eind",
+                "round": 0,
+                "rounding": null,
+                "shown": "€ 4.800"
+              },
+              {
+                "name": "afschr_jaar",
+                "expr": "(aw - rw) / jaren",
+                "round": 0,
+                "rounding": null,
+                "shown": "€ 5.700"
+              },
+              {
+                "name": "mnd_2027",
+                "expr": "maanden_jaar - 3",
+                "round": 0,
+                "rounding": null,
+                "shown": "9"
+              },
+              {
+                "name": "afschr_2027",
+                "expr": "afschr_jaar * mnd_2027 / maanden_jaar",
+                "round": 0,
+                "rounding": null,
+                "shown": "€ 4.275"
+              }
+            ],
+            "scorepunten": [
+              {
+                "seq": 1,
+                "points": 1,
+                "text": "aanschafwaarde inclusief installatiekosten: € 50.400",
+                "criterion_id": "F1.28.1-02-b",
+                "calc_ref": "aw"
+              },
+              {
+                "seq": 2,
+                "points": 1,
+                "text": "restwaarde na aftrek van de demontage- en afvoerkosten: € 4.800",
+                "criterion_id": "F1.28.1-02-b",
+                "calc_ref": "rw"
+              },
+              {
+                "seq": 3,
+                "points": 1,
+                "text": "afschrijvingskosten over 9 maanden van 2027: € 4.275",
+                "criterion_id": "F1.28.1-02-b",
+                "calc_ref": "afschr_2027"
+              }
+            ],
+            "rules": [
+              "Voor elke fout 1 scorepunt in mindering brengen.",
+              "Als het onderhoudscontract in de aanschafwaarde is opgenomen, het eerste scorepunt niet toekennen."
+            ],
+            "alternatives": [
+              "Een berekening per maand (afschrijving per maand maal het aantal maanden in 2027) ook goed rekenen."
+            ],
+            "follow_through": null
+          },
+          "new_concepts": [],
+          "builds_on_vragen": [],
+          "pattern": "P08",
+          "knobs": {
+            "solo": "multistructureel",
+            "route": "zelf vinden",
+            "direction": "open",
+            "steps": "4+",
+            "sources": "in vraagtekst",
+            "noise": "ja",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": "nee"
+          },
+          "label": {
+            "exam_id": null,
+            "question_id": "O1-V2",
+            "question_number": 2,
+            "opgave_id": "O1",
+            "first_of_opgave": false,
+            "points": 3,
+            "pattern": "P08",
+            "solo": "multistructureel",
+            "route": "zelf vinden",
+            "direction": "open",
+            "steps": "3",
+            "sources": "in vraagtekst",
+            "noise": "ja",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": "nee",
+            "example_quality": null,
+            "builds_on_questions": [],
+            "proposed_pattern": null,
+            "example_quality_reason": null,
+            "combination": 1,
+            "bloom": "toepassen",
+            "scorepunt_bloom": [
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "F1.28.1-02"
+              },
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "F1.28.1-02"
+              },
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "F1.28.1-02"
+              }
+            ],
+            "confidence": {
+              "pattern": "high",
+              "solo": "high",
+              "route": "high",
+              "direction": "high",
+              "steps": "high",
+              "sources": "high",
+              "noise": "high",
+              "claim": "high",
+              "new_concept": "high",
+              "schema": "high",
+              "builds_on": "high"
+            },
+            "evidence": {
+              "pattern": "Bereken de afschrijvingskosten van de steenoven over 2027.",
+              "solo": "De aanschafwaarde is de prijs plus het installeren: 46.500 + 3.900",
+              "route": "Bereken de afschrijvingskosten van de steenoven over 2027.",
+              "direction": "Bereken de afschrijvingskosten van de steenoven over 2027.",
+              "steps": "De oven is in 2027 vanaf april in gebruik, dus 9 maanden.",
+              "sources": "Op 1 april 2027 neemt Sanne een nieuwe steenoven in gebruik.",
+              "noise": "onderhoudscontract: € 950 per jaar",
+              "claim": "Bereken de afschrijvingskosten van de steenoven over 2027.",
+              "new_concept": "Korenaar schrijft de oven af met gelijke bedragen per jaar.",
+              "builds_on": "Bereken de afschrijvingskosten van de steenoven over 2027."
+            },
+            "repaired_fields": [],
+            "disagreements": {}
+          },
+          "scorepunten": [
+            {
+              "seq": 1,
+              "points": 1,
+              "criterion_id": "F1.28.1-02-b",
+              "group_id": "F1.28.1-02",
+              "bloom": "toepassen"
+            },
+            {
+              "seq": 2,
+              "points": 1,
+              "criterion_id": "F1.28.1-02-b",
+              "group_id": "F1.28.1-02",
+              "bloom": "toepassen"
+            },
+            {
+              "seq": 3,
+              "points": 1,
+              "criterion_id": "F1.28.1-02-b",
+              "group_id": "F1.28.1-02",
+              "bloom": "toepassen"
+            }
+          ],
+          "open_findings": []
+        },
+        {
+          "vraag_id": "O1-V3",
+          "number": 3,
+          "points": 2,
+          "lead": "Sanne maakt een begroting voor 2027. De begrote omzet van Korenaar over 2027 is € 418.000. Het begrote resultaat over 2027 vóór de afschrijvingskosten van de nieuwe oven is € 64.000. Alle andere kosten, ook het onderhoudscontract, zitten al in dit bedrag.",
+          "task": "Stel het deel van de balans per 31 december 2027 en het deel van de begrote resultatenrekening over 2027 op. Vul hiervoor de uitwerkbijlage bij deze vraag in.",
+          "uitwerkbijlage": {
+            "kind": "table",
+            "rows": [
+              [
+                "Balans van Korenaar per 31 december 2027 (deel)",
+                ""
+              ],
+              [
+                "Steenoven",
+                "€ ..."
+              ],
+              [
+                "",
+                ""
+              ],
+              [
+                "Begrote resultatenrekening van Korenaar over 2027 (deel)",
+                ""
+              ],
+              [
+                "Resultaat vóór afschrijvingskosten nieuwe oven",
+                "€ 64.000"
+              ],
+              [
+                "Afschrijvingskosten nieuwe oven",
+                "€ ..."
+              ],
+              [
+                "Resultaat",
+                "€ ..."
+              ]
+            ]
+          },
+          "cv": {
+            "maximumscore": 2,
+            "model_answer": "Op de balans per 31 december 2027 staat de steenoven voor de aanschafwaarde min de afschrijving over 2027, dus 50.400 min 4.275 en dat is € 46.125. Op de begrote resultatenrekening over 2027 staan het resultaat vóór afschrijvingskosten nieuwe oven van € 64.000 en de afschrijvingskosten nieuwe oven van € 4.275, zodat het resultaat uitkomt op 64.000 min 4.275 en dat is € 59.725.",
+            "calc": [
+              {
+                "name": "bw_eind_2027",
+                "expr": "aw - afschr_2027",
+                "round": 0,
+                "rounding": null,
+                "shown": "€ 46.125"
+              },
+              {
+                "name": "res_2027",
+                "expr": "res_voor_afschr - afschr_2027",
+                "round": 0,
+                "rounding": null,
+                "shown": "€ 59.725"
+              }
+            ],
+            "scorepunten": [
+              {
+                "seq": 1,
+                "points": 1,
+                "text": "boekwaarde steenoven op de balans per 31 december 2027: € 46.125",
+                "criterion_id": "F1.28.1-02-b",
+                "calc_ref": "bw_eind_2027"
+              },
+              {
+                "seq": 2,
+                "points": 1,
+                "text": "afschrijvingskosten € 4.275 en resultaat over 2027: € 59.725",
+                "criterion_id": "F1.28.1-02-b",
+                "calc_ref": "res_2027"
+              }
+            ],
+            "rules": [
+              "Voor elke fout 1 scorepunt in mindering brengen."
+            ],
+            "alternatives": [],
+            "follow_through": "Een doorrekenfout uit vraag 2 niet opnieuw aanrekenen."
+          },
+          "noise_data": [
+            "omzet_2027"
+          ],
+          "new_concepts": [],
+          "builds_on_vragen": [
+            2
+          ],
+          "pattern": "B02",
+          "knobs": {
+            "solo": "multistructureel",
+            "route": "zelf vinden",
+            "direction": null,
+            "steps": "1",
+            "sources": "in vraagtekst",
+            "noise": "ja",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": "voorgestructureerd",
+            "builds_on": "ja"
+          },
+          "label": {
+            "exam_id": null,
+            "question_id": "O1-V3",
+            "question_number": 3,
+            "opgave_id": "O1",
+            "first_of_opgave": false,
+            "points": 2,
+            "pattern": "B02",
+            "solo": "relationeel",
+            "route": "zelf vinden",
+            "direction": null,
+            "steps": "1",
+            "sources": "in vraagtekst",
+            "noise": "ja",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": "voorgestructureerd",
+            "builds_on": "ja",
+            "example_quality": null,
+            "builds_on_questions": [
+              2
+            ],
+            "proposed_pattern": null,
+            "example_quality_reason": null,
+            "combination": 1,
+            "bloom": "toepassen",
+            "scorepunt_bloom": [
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "F1.28.1-02"
+              },
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "F1.28.1-02"
+              }
+            ],
+            "confidence": {
+              "pattern": "high",
+              "solo": "high",
+              "route": "high",
+              "direction": "high",
+              "steps": "high",
+              "sources": "high",
+              "noise": "high",
+              "claim": "high",
+              "new_concept": "high",
+              "schema": "high",
+              "builds_on": "high"
+            },
+            "evidence": {
+              "pattern": "Vul hiervoor de uitwerkbijlage bij deze vraag in.",
+              "solo": "Een doorrekenfout uit vraag 2 niet opnieuw aanrekenen.",
+              "route": "Stel het deel van de balans per 31 december 2027 en het deel van de begrote resultatenrekening over 2027 op.",
+              "steps": "dus 50.400 min 4.275 en dat is € 46.125.",
+              "sources": "Het begrote resultaat over 2027 vóór de afschrijvingskosten van de nieuwe oven is € 64.000.",
+              "noise": "De begrote omzet van Korenaar over 2027 is € 418.000.",
+              "claim": "Stel het deel van de balans per 31 december 2027 en het deel van de begrote resultatenrekening over 2027 op.",
+              "new_concept": "Alle andere kosten, ook het onderhoudscontract, zitten al in dit bedrag.",
+              "schema": "Resultaat vóór afschrijvingskosten nieuwe oven | € 64.000",
+              "builds_on": "Een doorrekenfout uit vraag 2 niet opnieuw aanrekenen."
+            },
+            "repaired_fields": [],
+            "disagreements": {}
+          },
+          "scorepunten": [
+            {
+              "seq": 1,
+              "points": 1,
+              "criterion_id": "F1.28.1-02-b",
+              "group_id": "F1.28.1-02",
+              "bloom": "toepassen"
+            },
+            {
+              "seq": 2,
+              "points": 1,
+              "criterion_id": "F1.28.1-02-b",
+              "group_id": "F1.28.1-02",
+              "bloom": "toepassen"
+            }
+          ],
+          "open_findings": []
+        },
+        {
+          "vraag_id": "O1-V4",
+          "number": 4,
+          "points": 2,
+          "lead": "Sanne overweegt de kosten van het installeren van de oven in 2027 meteen als kosten te boeken, in plaats van ze mee te tellen in de waarde van de oven.",
+          "task": "Leg uit welk effect dit heeft op het resultaat van Korenaar over 2027 en op de boekwaarde van de oven per 31 december 2027.",
+          "uitwerkbijlage": null,
+          "cv": {
+            "maximumscore": 2,
+            "model_answer": "Het resultaat over 2027 wordt lager. De kosten over 2027 stijgen met de hele € 3.900, terwijl de afschrijvingskosten maar een klein beetje dalen omdat de aanschafwaarde € 3.900 lager is en dat bedrag over 8 jaar wordt verdeeld.\nDe boekwaarde per 31 december 2027 wordt lager, omdat de aanschafwaarde € 3.900 lager is en er in 2027 maar een klein deel daarvan minder wordt afgeschreven.",
+            "calc": [],
+            "scorepunten": [
+              {
+                "seq": 1,
+                "points": 1,
+                "text": "resultaat 2027 lager: de installatiekosten komen volledig in 2027 ten laste van het resultaat en de afschrijvingskosten dalen maar met een klein deel daarvan",
+                "criterion_id": "F1.28.1-02-b",
+                "calc_ref": null
+              },
+              {
+                "seq": 2,
+                "points": 1,
+                "text": "boekwaarde per 31 december 2027 lager: de aanschafwaarde is lager",
+                "criterion_id": "F1.28.1-02-b",
+                "calc_ref": null
+              }
+            ],
+            "rules": [
+              "Alleen 'lager' zonder juiste uitleg levert geen scorepunt op."
+            ],
+            "alternatives": [
+              "Een juiste uitleg met bedragen (resultaat en boekwaarde elk ongeveer 3.534 lager) ook goed rekenen."
+            ],
+            "follow_through": null
+          },
+          "new_concepts": [],
+          "builds_on_vragen": [],
+          "pattern": "B01",
+          "knobs": {
+            "solo": "relationeel",
+            "route": "zelf vinden",
+            "direction": "open",
+            "steps": "2",
+            "sources": "in vraagtekst",
+            "noise": "nee",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": "nee"
+          },
+          "label": {
+            "exam_id": null,
+            "question_id": "O1-V4",
+            "question_number": 4,
+            "opgave_id": "O1",
+            "first_of_opgave": false,
+            "points": 2,
+            "pattern": "B01",
+            "solo": "relationeel",
+            "route": "zelf vinden",
+            "direction": "open",
+            "steps": "2",
+            "sources": "in vraagtekst",
+            "noise": "nee",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": "nee",
+            "example_quality": null,
+            "builds_on_questions": [],
+            "proposed_pattern": null,
+            "example_quality_reason": null,
+            "combination": 1,
+            "bloom": "begrijpen",
+            "scorepunt_bloom": [
+              {
+                "points": 1,
+                "bloom": "begrijpen",
+                "group_id": "F1.28.1-02"
+              },
+              {
+                "points": 1,
+                "bloom": "begrijpen",
+                "group_id": "F1.28.1-02"
+              }
+            ],
+            "confidence": {
+              "pattern": "high",
+              "solo": "high",
+              "route": "high",
+              "direction": "high",
+              "steps": "high",
+              "sources": "high",
+              "noise": "high",
+              "claim": "high",
+              "new_concept": "high",
+              "schema": "high",
+              "builds_on": "high"
+            },
+            "evidence": {
+              "pattern": "Leg uit welk effect dit heeft op het resultaat van Korenaar over 2027 en op de boekwaarde van de oven per 31 december 2027.",
+              "solo": "de installatiekosten komen volledig in 2027 ten laste van het resultaat en de afschrijvingskosten dalen maar met een klein deel daarvan",
+              "route": "Leg uit welk effect dit heeft op het resultaat van Korenaar over 2027 en op de boekwaarde van de oven per 31 december 2027.",
+              "direction": "Leg uit welk effect dit heeft op het resultaat van Korenaar over 2027",
+              "steps": "De kosten over 2027 stijgen met de hele € 3.900, terwijl de afschrijvingskosten maar een klein beetje dalen",
+              "sources": "Sanne overweegt de kosten van het installeren van de oven in 2027 meteen als kosten te boeken",
+              "noise": "Alleen 'lager' zonder juiste uitleg levert geen scorepunt op.",
+              "claim": "Sanne overweegt de kosten van het installeren van de oven in 2027 meteen als kosten te boeken",
+              "new_concept": "in plaats van ze mee te tellen in de waarde van de oven.",
+              "builds_on": "Leg uit welk effect dit heeft op het resultaat van Korenaar over 2027"
+            },
+            "repaired_fields": [
+              "noise"
+            ],
+            "disagreements": {
+              "noise": {
+                "A": "ja",
+                "B": "nee",
+                "R": "nee"
+              }
+            }
+          },
+          "scorepunten": [
+            {
+              "seq": 1,
+              "points": 1,
+              "criterion_id": "F1.28.1-02-b",
+              "group_id": "F1.28.1-02",
+              "bloom": "begrijpen"
+            },
+            {
+              "seq": 2,
+              "points": 1,
+              "criterion_id": "F1.28.1-02-b",
+              "group_id": "F1.28.1-02",
+              "bloom": "begrijpen"
+            }
+          ],
+          "open_findings": []
+        }
+      ]
+    },
+    {
+      "opgave_id": "O2",
+      "title": "Fietsenwinkel Trapkracht",
+      "context": "Fietsenwinkel Trapkracht in Utrecht verkoopt e-bikes en doet onderhoudsbeurten. Eigenaar Joris Hendriks berekent zijn verkoopprijzen met een winstopslag van 25% op de kostprijs; het btw-tarief is 21%. Informatiebron 1 geeft de kosten van een grote onderhoudsbeurt en de prijs die een concurrent ervoor vraagt.",
+      "context_tags": [
+        "fietsbranche",
+        "fietsenwinkel",
+        "e-bikes"
+      ],
+      "reused_from": null,
+      "intro": "Joris Hendriks is eigenaar van fietsenwinkel Trapkracht in Utrecht. Hij verkoopt e-bikes en voert onderhoudsbeurten uit. Joris bepaalt zijn prijzen exclusief btw door 25% van de kostprijs als winst bij de kostprijs op te tellen. Klanten betalen daarover 21% btw. In deze opgave geldt dit tarief voor alles wat Trapkracht verkoopt.",
+      "data": {
+        "opslag": 0.25,
+        "btw": 0.21,
+        "aantal_vorig_jaar": 184,
+        "prijs_incl_ebike": 3267,
+        "arbeid_beurt": 64,
+        "onderdelen_beurt": 48,
+        "prijs_concurrent_incl": 165
+      },
+      "sources": [
+        {
+          "n": 1,
+          "title": "Een grote onderhoudsbeurt van een e-bike",
+          "kind": "table",
+          "text": "De kosten zijn alle kosten die Trapkracht aan één grote onderhoudsbeurt toerekent.",
+          "table": [
+            [
+              "",
+              "bedrag"
+            ],
+            [
+              "kosten arbeid Trapkracht",
+              "€ 64"
+            ],
+            [
+              "kosten onderdelen Trapkracht",
+              "€ 48"
+            ],
+            [
+              "prijs bij de concurrent, inclusief btw",
+              "€ 165"
+            ]
+          ],
+          "figure_id": null,
+          "uses_data": [
+            "arbeid_beurt",
+            "onderdelen_beurt",
+            "prijs_concurrent_incl"
+          ],
+          "noise_data": []
+        }
+      ],
+      "figures": [],
+      "vragen": [
+        {
+          "vraag_id": "O2-V5",
+          "number": 5,
+          "points": 1,
+          "lead": "Joris koopt zijn e-bikes en onderdelen in bij een groothandel. Op de inkoopfacturen staat ook btw. Elk kwartaal doet Joris btw-aangifte.",
+          "task": "Is de btw op de inkoopfacturen een kostenpost voor Trapkracht? Licht je antwoord toe.",
+          "uitwerkbijlage": null,
+          "cv": {
+            "maximumscore": 1,
+            "model_answer": "Een voorbeeld van een juist antwoord is:\nNee. Bij de btw-aangifte trekt Joris de btw op zijn inkoopfacturen (te vorderen btw) af van de btw die hij over zijn verkopen heeft ontvangen (te betalen btw). Hij krijgt deze btw dus terug van de Belastingdienst; de btw drukt niet op het resultaat en is daarom geen kostenpost.",
+            "calc": [],
+            "scorepunten": [
+              {
+                "seq": 1,
+                "points": 1,
+                "text": "nee, met als toelichting dat de btw op de inkopen bij de btw-aangifte wordt verrekend met de btw over de verkopen (te vorderen btw) en dus niet ten laste van het resultaat komt",
+                "criterion_id": "F2.30.3-01-d",
+                "calc_ref": null
+              }
+            ],
+            "rules": [
+              "Voor alleen 'nee' zonder juiste toelichting geen scorepunt toekennen."
+            ],
+            "alternatives": [
+              "Ook goed: de btw wordt uiteindelijk door de consument betaald; Trapkracht int en verrekent de btw alleen voor de Belastingdienst."
+            ],
+            "follow_through": null
+          },
+          "new_concepts": [],
+          "builds_on_vragen": [],
+          "pattern": "P14",
+          "knobs": {
+            "solo": "unistructureel",
+            "route": "zelf vinden",
+            "direction": null,
+            "steps": "1",
+            "sources": "in vraagtekst",
+            "noise": "nee",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": null
+          },
+          "label": {
+            "exam_id": null,
+            "question_id": "O2-V5",
+            "question_number": 5,
+            "opgave_id": "O2",
+            "first_of_opgave": true,
+            "points": 1,
+            "pattern": "P04",
+            "solo": "unistructureel",
+            "route": "zelf vinden",
+            "direction": "open",
+            "steps": "1",
+            "sources": "in vraagtekst",
+            "noise": "nee",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": null,
+            "example_quality": null,
+            "builds_on_questions": [],
+            "proposed_pattern": null,
+            "example_quality_reason": null,
+            "combination": 1,
+            "bloom": "begrijpen",
+            "scorepunt_bloom": [
+              {
+                "points": 1,
+                "bloom": "begrijpen",
+                "group_id": "F2.30.3-01"
+              }
+            ],
+            "confidence": {
+              "pattern": "high",
+              "solo": "high",
+              "route": "high",
+              "direction": "high",
+              "steps": "high",
+              "sources": "high",
+              "noise": "high",
+              "claim": "high",
+              "new_concept": "high",
+              "schema": "high",
+              "builds_on": "high"
+            },
+            "evidence": {
+              "pattern": "Is de btw op de inkoopfacturen een kostenpost voor Trapkracht? Licht je antwoord toe.",
+              "solo": "de btw op de inkopen bij de btw-aangifte wordt verrekend met de btw over de verkopen (te vorderen btw)",
+              "route": "Is de btw op de inkoopfacturen een kostenpost voor Trapkracht? Licht je antwoord toe.",
+              "direction": "Is de btw op de inkoopfacturen een kostenpost voor Trapkracht?",
+              "steps": "nee, met als toelichting dat de btw op de inkopen bij de btw-aangifte wordt verrekend met de btw over de verkopen",
+              "sources": "Op de inkoopfacturen staat ook btw. Elk kwartaal doet Joris btw-aangifte.",
+              "noise": "Is de btw op de inkoopfacturen een kostenpost voor Trapkracht? Licht je antwoord toe.",
+              "claim": "Is de btw op de inkoopfacturen een kostenpost voor Trapkracht?",
+              "new_concept": "Op de inkoopfacturen staat ook btw. Elk kwartaal doet Joris btw-aangifte."
+            },
+            "repaired_fields": [],
+            "disagreements": {}
+          },
+          "scorepunten": [
+            {
+              "seq": 1,
+              "points": 1,
+              "criterion_id": "F2.30.3-01-d",
+              "group_id": "F2.30.3-01",
+              "bloom": "begrijpen"
+            }
+          ],
+          "open_findings": []
+        },
+        {
+          "vraag_id": "O2-V6",
+          "number": 6,
+          "points": 2,
+          "lead": "Trapkracht verkocht vorig jaar 184 e-bikes van het type Stadsflyer. Een klant betaalt voor een Stadsflyer € 3.267 inclusief btw.",
+          "task": "Bereken hoeveel winst Joris maakt op de verkoop van één Stadsflyer.",
+          "uitwerkbijlage": null,
+          "cv": {
+            "maximumscore": 2,
+            "model_answer": "Een voorbeeld van een juiste berekening is:\n• verkoopprijs exclusief btw: 3.267 / 1,21 = € 2.700\n• kostprijs: 2.700 / 1,25 = € 2.160; winst: 2.700 − 2.160 = € 540",
+            "calc": [
+              {
+                "name": "factor_btw",
+                "expr": "1 + btw",
+                "round": 2,
+                "rounding": null,
+                "shown": "1,21"
+              },
+              {
+                "name": "factor_opslag",
+                "expr": "1 + opslag",
+                "round": 2,
+                "rounding": null,
+                "shown": "1,25"
+              },
+              {
+                "name": "prijs_excl_ebike",
+                "expr": "prijs_incl_ebike / factor_btw",
+                "round": 0,
+                "rounding": "half_up",
+                "shown": "€ 2.700"
+              },
+              {
+                "name": "kostprijs_ebike",
+                "expr": "prijs_excl_ebike / factor_opslag",
+                "round": 0,
+                "rounding": "half_up",
+                "shown": "€ 2.160"
+              },
+              {
+                "name": "winst_ebike",
+                "expr": "prijs_excl_ebike - kostprijs_ebike",
+                "round": 0,
+                "rounding": "half_up",
+                "shown": "€ 540"
+              }
+            ],
+            "scorepunten": [
+              {
+                "seq": 1,
+                "points": 1,
+                "text": "berekening verkoopprijs exclusief btw uit de prijs inclusief btw",
+                "criterion_id": "F2.30.3-01-b",
+                "calc_ref": "prijs_excl_ebike"
+              },
+              {
+                "seq": 2,
+                "points": 1,
+                "text": "berekening kostprijs als verkoopprijs exclusief btw gedeeld door 1,25 en daarmee de winst",
+                "criterion_id": "F2.30.3-02-a",
+                "calc_ref": "winst_ebike"
+              }
+            ],
+            "rules": [
+              "Voor elke fout 1 scorepunt in mindering brengen.",
+              "Als de winst is berekend als 25% van de verkoopprijs exclusief btw (€ 675), het tweede scorepunt niet toekennen."
+            ],
+            "alternatives": [
+              "Ook goed: winst = 2.700 / 1,25 × 0,25 = € 540."
+            ],
+            "follow_through": null
+          },
+          "noise_data": [
+            "aantal_vorig_jaar"
+          ],
+          "new_concepts": [],
+          "builds_on_vragen": [],
+          "pattern": "P08",
+          "knobs": {
+            "solo": "multistructureel",
+            "route": "zelf vinden",
+            "direction": "open",
+            "steps": "3",
+            "sources": "in vraagtekst",
+            "noise": "ja",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": "nee"
+          },
+          "label": {
+            "exam_id": null,
+            "question_id": "O2-V6",
+            "question_number": 6,
+            "opgave_id": "O2",
+            "first_of_opgave": false,
+            "points": 2,
+            "pattern": "P08",
+            "solo": "multistructureel",
+            "route": "zelf vinden",
+            "direction": "open",
+            "steps": "3",
+            "sources": "in vraagtekst",
+            "noise": "ja",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": "nee",
+            "example_quality": null,
+            "builds_on_questions": [],
+            "proposed_pattern": null,
+            "example_quality_reason": null,
+            "combination": 2,
+            "bloom": "toepassen",
+            "scorepunt_bloom": [
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "F2.30.3-01"
+              },
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "F2.30.3-02"
+              }
+            ],
+            "confidence": {
+              "pattern": "high",
+              "solo": "high",
+              "route": "high",
+              "direction": "high",
+              "steps": "high",
+              "sources": "high",
+              "noise": "high",
+              "claim": "high",
+              "new_concept": "high",
+              "schema": "high",
+              "builds_on": "high"
+            },
+            "evidence": {
+              "pattern": "Bereken hoeveel winst Joris maakt op de verkoop van één Stadsflyer.",
+              "solo": "kostprijs: 2.700 / 1,25 = € 2.160; winst: 2.700 − 2.160 = € 540",
+              "route": "Bereken hoeveel winst Joris maakt op de verkoop van één Stadsflyer.",
+              "direction": "Bereken hoeveel winst Joris maakt op de verkoop van één Stadsflyer.",
+              "steps": "verkoopprijs exclusief btw: 3.267 / 1,21 = € 2.700",
+              "sources": "Een klant betaalt voor een Stadsflyer € 3.267 inclusief btw.",
+              "noise": "Trapkracht verkocht vorig jaar 184 e-bikes van het type Stadsflyer.",
+              "claim": "Bereken hoeveel winst Joris maakt op de verkoop van één Stadsflyer.",
+              "new_concept": "door 25% van de kostprijs als winst bij de kostprijs op te tellen"
+            },
+            "repaired_fields": [],
+            "disagreements": {}
+          },
+          "scorepunten": [
+            {
+              "seq": 1,
+              "points": 1,
+              "criterion_id": "F2.30.3-01-b",
+              "group_id": "F2.30.3-01",
+              "bloom": "toepassen"
+            },
+            {
+              "seq": 2,
+              "points": 1,
+              "criterion_id": "F2.30.3-02-a",
+              "group_id": "F2.30.3-02",
+              "bloom": "toepassen"
+            }
+          ],
+          "open_findings": []
+        },
+        {
+          "vraag_id": "O2-V7",
+          "number": 7,
+          "points": 2,
+          "lead": "Joris wil ook een grote onderhoudsbeurt voor e-bikes aanbieden. Een concurrent in Utrecht biedt deze beurt al aan.",
+          "task": "Toon met een berekening aan of Trapkracht een grote onderhoudsbeurt inclusief btw goedkoper kan aanbieden dan de concurrent. Gebruik informatiebron 1.",
+          "uitwerkbijlage": null,
+          "cv": {
+            "maximumscore": 2,
+            "model_answer": "Een voorbeeld van een juiste berekening is:\n• kostprijs: 64 + 48 = € 112\n• verkoopprijs exclusief btw: 112 × 1,25 = € 140\n• verkoopprijs inclusief btw: 140 × 1,21 = € 169,40; dit is meer dan € 165, dus Trapkracht kan de beurt niet goedkoper aanbieden dan de concurrent (Trapkracht is € 4,40 duurder).",
+            "calc": [
+              {
+                "name": "kostprijs_beurt",
+                "expr": "arbeid_beurt + onderdelen_beurt",
+                "round": 0,
+                "rounding": "half_up",
+                "shown": "€ 112"
+              },
+              {
+                "name": "prijs_excl_beurt",
+                "expr": "kostprijs_beurt * factor_opslag",
+                "round": 0,
+                "rounding": "half_up",
+                "shown": "€ 140"
+              },
+              {
+                "name": "prijs_incl_beurt",
+                "expr": "prijs_excl_beurt * factor_btw",
+                "round": 2,
+                "rounding": "half_up",
+                "shown": "€ 169,40"
+              },
+              {
+                "name": "verschil_beurt",
+                "expr": "prijs_incl_beurt - prijs_concurrent_incl",
+                "round": 2,
+                "rounding": "half_up",
+                "shown": "€ 4,40"
+              }
+            ],
+            "scorepunten": [
+              {
+                "seq": 1,
+                "points": 1,
+                "text": "berekening verkoopprijs exclusief btw als kostprijs (arbeid plus onderdelen) plus 25% winstopslag op de kostprijs",
+                "criterion_id": "F2.30.3-02-a",
+                "calc_ref": "prijs_excl_beurt"
+              },
+              {
+                "seq": 2,
+                "points": 1,
+                "text": "berekening verkoopprijs inclusief btw en juiste conclusie: niet goedkoper dan de concurrent",
+                "criterion_id": "F2.30.3-01-a",
+                "calc_ref": "prijs_incl_beurt"
+              }
+            ],
+            "rules": [
+              "Voor elke fout 1 scorepunt in mindering brengen.",
+              "Een conclusie die past bij een eigen onjuiste berekening goed rekenen."
+            ],
+            "alternatives": [
+              "Ook goed: de prijs van de concurrent exclusief btw (165 / 1,21) vergelijken met € 140."
+            ],
+            "follow_through": null
+          },
+          "new_concepts": [],
+          "builds_on_vragen": [],
+          "pattern": "P09",
+          "knobs": {
+            "solo": "multistructureel",
+            "route": "zelf vinden",
+            "direction": "open",
+            "steps": "3",
+            "sources": "één bron",
+            "noise": "nee",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": "nee"
+          },
+          "label": {
+            "exam_id": null,
+            "question_id": "O2-V7",
+            "question_number": 7,
+            "opgave_id": "O2",
+            "first_of_opgave": false,
+            "points": 2,
+            "pattern": "P09",
+            "solo": "multistructureel",
+            "route": "zelf vinden",
+            "direction": "open",
+            "steps": "3",
+            "sources": "één bron",
+            "noise": "nee",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": "nee",
+            "example_quality": null,
+            "builds_on_questions": [],
+            "proposed_pattern": null,
+            "example_quality_reason": null,
+            "combination": 2,
+            "bloom": "toepassen",
+            "scorepunt_bloom": [
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "F2.30.3-02"
+              },
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "F2.30.3-01"
+              }
+            ],
+            "confidence": {
+              "pattern": "high",
+              "solo": "high",
+              "route": "high",
+              "direction": "high",
+              "steps": "high",
+              "sources": "high",
+              "noise": "high",
+              "claim": "high",
+              "new_concept": "high",
+              "schema": "high",
+              "builds_on": "high"
+            },
+            "evidence": {
+              "pattern": "Toon met een berekening aan of Trapkracht een grote onderhoudsbeurt inclusief btw goedkoper kan aanbieden dan de concurrent.",
+              "solo": "berekening verkoopprijs exclusief btw als kostprijs (arbeid plus onderdelen) plus 25% winstopslag op de kostprijs",
+              "route": "Toon met een berekening aan of Trapkracht een grote onderhoudsbeurt inclusief btw goedkoper kan aanbieden dan de concurrent. Gebruik informatiebron 1.",
+              "direction": "Toon met een berekening aan of Trapkracht een grote onderhoudsbeurt inclusief btw goedkoper kan aanbieden dan de concurrent.",
+              "steps": "kostprijs: 64 + 48 = € 112",
+              "sources": "Gebruik informatiebron 1.",
+              "noise": "verkoopprijs inclusief btw: 140 × 1,21 = € 169,40; dit is meer dan € 165",
+              "claim": "Toon met een berekening aan of Trapkracht een grote onderhoudsbeurt inclusief btw goedkoper kan aanbieden dan de concurrent.",
+              "new_concept": "De kosten zijn alle kosten die Trapkracht aan één grote onderhoudsbeurt toerekent."
+            },
+            "repaired_fields": [],
+            "disagreements": {}
+          },
+          "scorepunten": [
+            {
+              "seq": 1,
+              "points": 1,
+              "criterion_id": "F2.30.3-02-a",
+              "group_id": "F2.30.3-02",
+              "bloom": "toepassen"
+            },
+            {
+              "seq": 2,
+              "points": 1,
+              "criterion_id": "F2.30.3-01-a",
+              "group_id": "F2.30.3-01",
+              "bloom": "toepassen"
+            }
+          ],
+          "open_findings": []
+        },
+        {
+          "vraag_id": "O2-V8",
+          "number": 8,
+          "points": 2,
+          "lead": "Joris zegt tegen een nieuwe medewerker: \"Op alles wat ik verkoop, maak ik 25% winst. Van elke euro die een klant exclusief btw betaalt, is dus een kwart winst voor mij.\"",
+          "task": "Leg uit of Joris gelijk heeft.",
+          "uitwerkbijlage": null,
+          "cv": {
+            "maximumscore": 2,
+            "model_answer": "Een voorbeeld van een juist antwoord is:\n• De winst is 25% van de kostprijs. De verkoopprijs exclusief btw is 125% van de kostprijs. De winst is dus 25 / 125 × 100% = 20% van de verkoopprijs exclusief btw.\n• Dat percentage is lager dan 25%, omdat dezelfde winst wordt vergeleken met een groter bedrag: de verkoopprijs is hoger dan de kostprijs. Joris heeft dus ongelijk.",
+            "calc": [
+              {
+                "name": "opslag_pct",
+                "expr": "opslag * 100",
+                "round": 0,
+                "rounding": "half_up",
+                "shown": "25"
+              },
+              {
+                "name": "factor_pct",
+                "expr": "factor_opslag * 100",
+                "round": 0,
+                "rounding": "half_up",
+                "shown": "125"
+              },
+              {
+                "name": "marge_pct",
+                "expr": "opslag_pct / factor_pct * 100",
+                "round": 0,
+                "rounding": "half_up",
+                "shown": "20%"
+              }
+            ],
+            "scorepunten": [
+              {
+                "seq": 1,
+                "points": 1,
+                "text": "de winst is 20% van de verkoopprijs exclusief btw (winstmarge), niet 25%",
+                "criterion_id": "F2.30.3-02-b",
+                "calc_ref": "marge_pct"
+              },
+              {
+                "seq": 2,
+                "points": 1,
+                "text": "uitleg dat de winstopslag over de kostprijs wordt berekend en de winstmarge over de hogere verkoopprijs, zodat het percentage lager is; Joris heeft ongelijk",
+                "criterion_id": "F2.30.3-02-c",
+                "calc_ref": null
+              }
+            ],
+            "rules": [
+              "Voor alleen 'Joris heeft ongelijk' zonder juiste uitleg geen scorepunten toekennen."
+            ],
+            "alternatives": [
+              "Ook goed voor het eerste scorepunt: met de Stadsflyer uit vraag 6: 540 / 2.700 × 100% = 20%."
+            ],
+            "follow_through": null
+          },
+          "new_concepts": [],
+          "builds_on_vragen": [],
+          "pattern": "P03",
+          "knobs": {
+            "solo": "relationeel",
+            "route": "zelf vinden",
+            "direction": "open",
+            "steps": "2",
+            "sources": "in vraagtekst",
+            "noise": "nee",
+            "claim": "ja",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": "nee"
+          },
+          "label": {
+            "exam_id": null,
+            "question_id": "O2-V8",
+            "question_number": 8,
+            "opgave_id": "O2",
+            "first_of_opgave": false,
+            "points": 2,
+            "pattern": "P04",
+            "solo": "relationeel",
+            "route": "zelf vinden",
+            "direction": "open",
+            "steps": "2",
+            "sources": "in vraagtekst",
+            "noise": "nee",
+            "claim": "ja",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": "nee",
+            "example_quality": null,
+            "builds_on_questions": [],
+            "proposed_pattern": null,
+            "example_quality_reason": null,
+            "combination": 1,
+            "bloom": "begrijpen",
+            "scorepunt_bloom": [
+              {
+                "points": 1,
+                "bloom": "begrijpen",
+                "group_id": "F2.30.3-02"
+              },
+              {
+                "points": 1,
+                "bloom": "begrijpen",
+                "group_id": "F2.30.3-02"
+              }
+            ],
+            "confidence": {
+              "pattern": "high",
+              "solo": "high",
+              "route": "high",
+              "direction": "high",
+              "steps": "high",
+              "sources": "high",
+              "noise": "high",
+              "claim": "high",
+              "new_concept": "high",
+              "schema": "high",
+              "builds_on": "high"
+            },
+            "evidence": {
+              "pattern": "Leg uit of Joris gelijk heeft.",
+              "solo": "uitleg dat de winstopslag over de kostprijs wordt berekend en de winstmarge over de hogere verkoopprijs, zodat het percentage lager is",
+              "route": "Leg uit of Joris gelijk heeft.",
+              "direction": "Leg uit of Joris gelijk heeft.",
+              "steps": "De winst is dus 25 / 125 × 100% = 20% van de verkoopprijs exclusief btw.",
+              "sources": "Op alles wat ik verkoop, maak ik 25% winst.",
+              "noise": "Op alles wat ik verkoop, maak ik 25% winst.",
+              "claim": "Van elke euro die een klant exclusief btw betaalt, is dus een kwart winst voor mij.",
+              "new_concept": "Leg uit of Joris gelijk heeft."
+            },
+            "repaired_fields": [
+              "pattern",
+              "route",
+              "schema"
+            ],
+            "disagreements": {
+              "pattern": {
+                "A": "P03",
+                "B": "P04",
+                "R": "P04"
+              },
+              "route": {
+                "A": "zelf vinden",
+                "B": "zelf vinden",
+                "R": "zelf vinden"
+              },
+              "schema": {
+                "A": null,
+                "B": null,
+                "R": null
+              }
+            }
+          },
+          "scorepunten": [
+            {
+              "seq": 1,
+              "points": 1,
+              "criterion_id": "F2.30.3-02-b",
+              "group_id": "F2.30.3-02",
+              "bloom": "begrijpen"
+            },
+            {
+              "seq": 2,
+              "points": 1,
+              "criterion_id": "F2.30.3-02-c",
+              "group_id": "F2.30.3-02",
+              "bloom": "begrijpen"
+            }
+          ],
+          "open_findings": []
+        }
+      ]
+    },
+    {
+      "opgave_id": "O3",
+      "title": "Fysiotherapiepraktijk Beweegpunt",
+      "context": "Fysiotherapiepraktijk Beweegpunt in Zwolle geeft reguliere behandelingen. Eigenaar Lotte Vos kent het tarief en de variabele kosten per behandeling en de constante kosten per jaar (huur per maand, vaste salarissen, overige kosten); die staan in een tabel in de opgavetekst. Fysiotherapie is vrijgesteld van btw. Informatiebron 1 geeft de prognose voor 2027 met twee soorten behandelingen (regulier en sportmassage), informatiebron 2 de offerte voor een tweede behandelkamer.",
+      "context_tags": [
+        "paramedische zorg",
+        "fysiotherapiepraktijk",
+        "behandelingen"
+      ],
+      "reused_from": null,
+      "intro": "Lotte Vos is eigenaar van fysiotherapiepraktijk Beweegpunt in Zwolle. In 2026 geeft Beweegpunt alleen behandelingen in de praktijk. Fysiotherapie is vrijgesteld van btw. In de tabel staan gegevens van Beweegpunt over 2026.\n\n| gegevens Beweegpunt 2026 | |\n|---|---|\n| tarief per behandeling | € 45 |\n| materiaal- en wasserijkosten per behandeling | € 5 |\n| huur praktijkruimte per maand | € 3.000 |\n| salarissen personeel in loondienst per jaar | € 174.000 |\n| overige vaste kosten per jaar | € 42.000 |\n| aantal fysiotherapeuten (inclusief Lotte) | 3 |",
+      "data": {
+        "tarief_regulier": 45,
+        "vk_regulier": 5,
+        "huur_maand": 3000,
+        "salarissen": 174000,
+        "overige_ck": 42000,
+        "aantal_fysio": 3,
+        "maanden_jaar": 12,
+        "aantal_2026": 8400,
+        "aantal_reg_2027": 7800,
+        "aantal_huis_2027": 650,
+        "tarief_huis": 60,
+        "vk_huis": 15,
+        "duur_reg": 30,
+        "duur_huis": 45,
+        "inrichting": 24000,
+        "duur_inrichting": 8,
+        "extra_huur_maand": 750,
+        "extra_salaris": 30000,
+        "extra_beh": 1000,
+        "oppervlakte": 14,
+        "tarief_reg_2027": 45,
+        "vk_reg_2027": 5
+      },
+      "sources": [
+        {
+          "n": 1,
+          "title": "Prognose van Beweegpunt voor 2027",
+          "kind": "table",
+          "text": "Vanaf 1 januari 2027 geeft Beweegpunt ook behandelingen aan huis. Lotte verwacht dat de huur, de salarissen en de overige vaste kosten in 2027 gelijk blijven aan die in 2026.",
+          "table": [
+            [
+              "",
+              "reguliere behandeling",
+              "behandeling aan huis"
+            ],
+            [
+              "verwacht aantal behandelingen in 2027",
+              "7.800",
+              "650"
+            ],
+            [
+              "tarief per behandeling",
+              "€ 45",
+              "€ 60"
+            ],
+            [
+              "materiaal- en reiskosten per behandeling",
+              "€ 5",
+              "€ 15"
+            ],
+            [
+              "gemiddelde duur van een behandeling",
+              "30 minuten",
+              "45 minuten"
+            ]
+          ],
+          "figure_id": null,
+          "uses_data": [
+            "aantal_reg_2027",
+            "aantal_huis_2027",
+            "tarief_reg_2027",
+            "tarief_huis",
+            "vk_reg_2027",
+            "vk_huis"
+          ],
+          "noise_data": [
+            "duur_reg",
+            "duur_huis"
+          ]
+        },
+        {
+          "n": 2,
+          "title": "Offerte voor een extra behandelkamer vanaf 1 januari 2027",
+          "kind": "text",
+          "text": "- inrichting van de kamer (behandelbank en apparatuur): € 24.000; Beweegpunt schrijft de inrichting af in 8 jaar met gelijke bedragen per jaar, zonder restwaarde\n- extra huur: € 750 per maand\n- een extra fysiotherapeut in loondienst (parttime): € 30.000 salaris per jaar\n- extra reguliere behandelingen: 1.000 per jaar\n- oppervlakte van de kamer: 14 vierkante meter\n\nLotte betaalt de inrichting met eigen geld. In deze opgave blijft interest buiten beschouwing.",
+          "table": null,
+          "figure_id": null,
+          "uses_data": [
+            "inrichting",
+            "duur_inrichting",
+            "extra_huur_maand",
+            "extra_salaris",
+            "extra_beh"
+          ],
+          "noise_data": [
+            "oppervlakte"
+          ]
+        }
+      ],
+      "figures": [],
+      "vragen": [
+        {
+          "vraag_id": "O3-V9",
+          "number": 9,
+          "points": 2,
+          "lead": "Lotte wil een break-evenanalyse van Beweegpunt maken. Zij zet eerst twee begrippen op een rij.",
+          "task": "Omschrijf wat de dekkingsbijdrage per behandeling is en wat de break-evenafzet is.",
+          "uitwerkbijlage": null,
+          "cv": {
+            "maximumscore": 2,
+            "model_answer": "De dekkingsbijdrage per behandeling is het tarief van een behandeling min de variabele kosten van die behandeling: het bedrag per behandeling dat overblijft om de constante kosten te dekken. De break-evenafzet is het aantal behandelingen waarbij de omzet gelijk is aan de totale kosten, zodat het resultaat nul is.",
+            "calc": [],
+            "scorepunten": [
+              {
+                "seq": 1,
+                "points": 1,
+                "text": "dekkingsbijdrage per behandeling: tarief min variabele kosten per behandeling",
+                "criterion_id": "F2.30.4-01-a",
+                "calc_ref": null
+              },
+              {
+                "seq": 2,
+                "points": 1,
+                "text": "break-evenafzet: aantal behandelingen waarbij de omzet gelijk is aan de totale kosten (resultaat nul)",
+                "criterion_id": "F2.30.4-01-b",
+                "calc_ref": null
+              }
+            ],
+            "rules": [
+              "Een omschrijving als formule ook goed rekenen, bijvoorbeeld: dekkingsbijdrage per behandeling = tarief − variabele kosten per behandeling; break-evenafzet = constante kosten / dekkingsbijdrage per behandeling."
+            ],
+            "alternatives": [
+              "Voor dekkingsbijdrage ook goed rekenen: het deel van het tarief dat bijdraagt aan het dekken van de constante kosten (en daarna aan het resultaat).",
+              "Voor break-evenafzet ook goed rekenen: het aantal behandelingen waarbij Beweegpunt geen winst en geen verlies maakt / waarbij de totale dekkingsbijdrage gelijk is aan de constante kosten."
+            ],
+            "follow_through": null
+          },
+          "new_concepts": [],
+          "builds_on_vragen": [],
+          "pattern": "P16",
+          "knobs": {
+            "solo": "multistructureel",
+            "route": "zelf vinden",
+            "direction": null,
+            "steps": "1",
+            "sources": "in vraagtekst",
+            "noise": "nee",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": null
+          },
+          "label": {
+            "exam_id": null,
+            "question_id": "O3-V9",
+            "question_number": 9,
+            "opgave_id": "O3",
+            "first_of_opgave": true,
+            "points": 2,
+            "pattern": "P16",
+            "solo": "multistructureel",
+            "route": "zelf vinden",
+            "direction": null,
+            "steps": "1",
+            "sources": "in vraagtekst",
+            "noise": "nee",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": null,
+            "example_quality": null,
+            "builds_on_questions": [],
+            "proposed_pattern": null,
+            "example_quality_reason": null,
+            "combination": 1,
+            "bloom": "onthouden",
+            "scorepunt_bloom": [
+              {
+                "points": 1,
+                "bloom": "onthouden",
+                "group_id": "F2.30.4-01"
+              },
+              {
+                "points": 1,
+                "bloom": "onthouden",
+                "group_id": "F2.30.4-01"
+              }
+            ],
+            "confidence": {
+              "pattern": "high",
+              "solo": "high",
+              "route": "high",
+              "direction": "high",
+              "steps": "high",
+              "sources": "high",
+              "noise": "high",
+              "claim": "high",
+              "new_concept": "high",
+              "schema": "high",
+              "builds_on": "high"
+            },
+            "evidence": {
+              "pattern": "Omschrijf wat de dekkingsbijdrage per behandeling is en wat de break-evenafzet is.",
+              "solo": "dekkingsbijdrage per behandeling: tarief min variabele kosten per behandeling",
+              "route": "Omschrijf wat de dekkingsbijdrage per behandeling is en wat de break-evenafzet is.",
+              "steps": "Omschrijf wat de dekkingsbijdrage per behandeling is en wat de break-evenafzet is.",
+              "sources": "Omschrijf wat de dekkingsbijdrage per behandeling is en wat de break-evenafzet is.",
+              "noise": "Omschrijf wat de dekkingsbijdrage per behandeling is en wat de break-evenafzet is.",
+              "claim": "Omschrijf wat de dekkingsbijdrage per behandeling is en wat de break-evenafzet is.",
+              "new_concept": "Zij zet eerst twee begrippen op een rij."
+            },
+            "repaired_fields": [],
+            "disagreements": {}
+          },
+          "scorepunten": [
+            {
+              "seq": 1,
+              "points": 1,
+              "criterion_id": "F2.30.4-01-a",
+              "group_id": "F2.30.4-01",
+              "bloom": "onthouden"
+            },
+            {
+              "seq": 2,
+              "points": 1,
+              "criterion_id": "F2.30.4-01-b",
+              "group_id": "F2.30.4-01",
+              "bloom": "onthouden"
+            }
+          ],
+          "open_findings": []
+        },
+        {
+          "vraag_id": "O3-V10",
+          "number": 10,
+          "points": 2,
+          "lead": "In 2026 heeft Beweegpunt 8.400 behandelingen gegeven.",
+          "task": "Stel de resultatenrekening van Beweegpunt over 2026 op. Vul hiervoor de uitwerkbijlage bij deze vraag in.",
+          "uitwerkbijlage": {
+            "kind": "table",
+            "rows": [
+              [
+                "Resultatenrekening van Beweegpunt over 2026",
+                "bedrag"
+              ],
+              [
+                "Omzet",
+                "€ ..."
+              ],
+              [
+                "Variabele kosten",
+                "€ ..."
+              ],
+              [
+                "Constante kosten",
+                "€ ..."
+              ],
+              [
+                "Resultaat",
+                "€ ..."
+              ]
+            ]
+          },
+          "cv": {
+            "maximumscore": 2,
+            "model_answer": "Omzet: 8.400 × € 45 = € 378.000. Variabele kosten: 8.400 × € 5 = € 42.000. Constante kosten: de huur van 12 maanden van € 3.000, de salarissen van € 174.000 en de overige vaste kosten van € 42.000, samen € 252.000. Het resultaat is de omzet min de variabele kosten min de constante kosten, dus een positief resultaat van € 84.000.",
+            "calc": [
+              {
+                "name": "omzet_2026",
+                "expr": "aantal_2026 * tarief_regulier",
+                "round": 0,
+                "rounding": null,
+                "shown": "€ 378.000"
+              },
+              {
+                "name": "vk_2026",
+                "expr": "aantal_2026 * vk_regulier",
+                "round": 0,
+                "rounding": null,
+                "shown": "€ 42.000"
+              },
+              {
+                "name": "ck_2026",
+                "expr": "huur_maand * maanden_jaar + salarissen + overige_ck",
+                "round": 0,
+                "rounding": null,
+                "shown": "€ 252.000"
+              },
+              {
+                "name": "resultaat_2026",
+                "expr": "omzet_2026 - vk_2026 - ck_2026",
+                "round": 0,
+                "rounding": null,
+                "shown": "€ 84.000"
+              }
+            ],
+            "scorepunten": [
+              {
+                "seq": 1,
+                "points": 1,
+                "text": "variabele kosten: 8.400 × € 5 = € 42.000",
+                "criterion_id": "F2.30.2-02-a",
+                "calc_ref": "vk_2026"
+              },
+              {
+                "seq": 2,
+                "points": 1,
+                "text": "omzet € 378.000, constante kosten € 252.000 en resultaat € 84.000",
+                "criterion_id": "F2.30.2-02-b",
+                "calc_ref": "resultaat_2026"
+              }
+            ],
+            "rules": [
+              "Voor elke fout 1 scorepunt in mindering brengen.",
+              "Het tweede scorepunt alleen toekennen als omzet, constante kosten en resultaat alle drie juist zijn; een resultaat dat juist volgt uit een fout bedrag in de rij variabele kosten wel goed rekenen."
+            ],
+            "alternatives": [],
+            "follow_through": null
+          },
+          "new_concepts": [],
+          "builds_on_vragen": [],
+          "pattern": "B02",
+          "knobs": {
+            "solo": "multistructureel",
+            "route": "zelf vinden",
+            "direction": null,
+            "steps": "2",
+            "sources": "in vraagtekst",
+            "noise": "ja",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": "voorgestructureerd",
+            "builds_on": "nee"
+          },
+          "label": {
+            "exam_id": null,
+            "question_id": "O3-V10",
+            "question_number": 10,
+            "opgave_id": "O3",
+            "first_of_opgave": false,
+            "points": 2,
+            "pattern": "B02",
+            "solo": "multistructureel",
+            "route": "zelf vinden",
+            "direction": null,
+            "steps": "2",
+            "sources": "in vraagtekst",
+            "noise": "ja",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": "voorgestructureerd",
+            "builds_on": "nee",
+            "example_quality": null,
+            "builds_on_questions": [],
+            "proposed_pattern": null,
+            "example_quality_reason": null,
+            "combination": 1,
+            "bloom": "toepassen",
+            "scorepunt_bloom": [
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "F2.30.2-02"
+              },
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "F2.30.2-02"
+              }
+            ],
+            "confidence": {
+              "pattern": "high",
+              "solo": "high",
+              "route": "high",
+              "direction": "high",
+              "steps": "high",
+              "sources": "high",
+              "noise": "high",
+              "claim": "high",
+              "new_concept": "high",
+              "schema": "high",
+              "builds_on": "high"
+            },
+            "evidence": {
+              "pattern": "Stel de resultatenrekening van Beweegpunt over 2026 op. Vul hiervoor de uitwerkbijlage bij deze vraag in.",
+              "solo": "Het resultaat is de omzet min de variabele kosten min de constante kosten",
+              "route": "Stel de resultatenrekening van Beweegpunt over 2026 op.",
+              "steps": "Het resultaat is de omzet min de variabele kosten min de constante kosten, dus een positief resultaat van € 84.000.",
+              "sources": "In de tabel staan gegevens van Beweegpunt over 2026.",
+              "noise": "aantal fysiotherapeuten (inclusief Lotte) | 3",
+              "claim": "Stel de resultatenrekening van Beweegpunt over 2026 op.",
+              "new_concept": "Stel de resultatenrekening van Beweegpunt over 2026 op.",
+              "schema": "| Omzet | € ... |",
+              "builds_on": "In 2026 heeft Beweegpunt 8.400 behandelingen gegeven."
+            },
+            "repaired_fields": [],
+            "disagreements": {}
+          },
+          "scorepunten": [
+            {
+              "seq": 1,
+              "points": 1,
+              "criterion_id": "F2.30.2-02-a",
+              "group_id": "F2.30.2-02",
+              "bloom": "toepassen"
+            },
+            {
+              "seq": 2,
+              "points": 1,
+              "criterion_id": "F2.30.2-02-b",
+              "group_id": "F2.30.2-02",
+              "bloom": "toepassen"
+            }
+          ],
+          "open_findings": []
+        },
+        {
+          "vraag_id": "O3-V11",
+          "number": 11,
+          "points": 2,
+          "lead": "",
+          "task": "Bereken hoeveel behandelingen Beweegpunt per jaar moet geven om quitte te spelen. Ga uit van de gegevens in de tabel.",
+          "uitwerkbijlage": null,
+          "cv": {
+            "maximumscore": 2,
+            "model_answer": "Dekkingsbijdrage per behandeling: € 45 − € 5 = € 40. Constante kosten per jaar: huur 12 maanden van € 3.000, salarissen € 174.000 en overige vaste kosten € 42.000, samen € 252.000. Break-evenafzet: € 252.000 / € 40 = 6.300 behandelingen per jaar.",
+            "calc": [
+              {
+                "name": "db_regulier",
+                "expr": "tarief_regulier - vk_regulier",
+                "round": 0,
+                "rounding": null,
+                "shown": "€ 40"
+              },
+              {
+                "name": "ck_jaar",
+                "expr": "huur_maand * maanden_jaar + salarissen + overige_ck",
+                "round": 0,
+                "rounding": null,
+                "shown": "€ 252.000"
+              },
+              {
+                "name": "bea",
+                "expr": "ck_jaar / db_regulier",
+                "round": 0,
+                "rounding": "up",
+                "shown": "6.300"
+              }
+            ],
+            "scorepunten": [
+              {
+                "seq": 1,
+                "points": 1,
+                "text": "dekkingsbijdrage per behandeling: € 45 − € 5 = € 40",
+                "criterion_id": "F2.30.4-01-a",
+                "calc_ref": "db_regulier"
+              },
+              {
+                "seq": 2,
+                "points": 1,
+                "text": "break-evenafzet: € 252.000 / € 40 = 6.300 behandelingen",
+                "criterion_id": "F2.30.4-01-b",
+                "calc_ref": "bea"
+              }
+            ],
+            "rules": [
+              "Voor elke fout 1 scorepunt in mindering brengen.",
+              "Een fout in de constante kosten die al in vraag 10 is aangerekend, niet opnieuw aanrekenen."
+            ],
+            "alternatives": [
+              "Een berekening via de totale kosten (€ 252.000 + aantal × € 5 = aantal × € 45) die uitkomt op 6.300 ook goed rekenen."
+            ],
+            "follow_through": null
+          },
+          "noise_data": [
+            "aantal_2026"
+          ],
+          "new_concepts": [],
+          "builds_on_vragen": [],
+          "pattern": "P08",
+          "knobs": {
+            "solo": "multistructureel",
+            "route": "zelf vinden",
+            "direction": "open",
+            "steps": "2",
+            "sources": "in vraagtekst",
+            "noise": "ja",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": "nee"
+          },
+          "label": {
+            "exam_id": null,
+            "question_id": "O3-V11",
+            "question_number": 11,
+            "opgave_id": "O3",
+            "first_of_opgave": false,
+            "points": 2,
+            "pattern": "P08",
+            "solo": "multistructureel",
+            "route": "zelf vinden",
+            "direction": "open",
+            "steps": "2",
+            "sources": "in vraagtekst",
+            "noise": "ja",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": "ja",
+            "example_quality": null,
+            "builds_on_questions": [
+              10
+            ],
+            "proposed_pattern": null,
+            "example_quality_reason": null,
+            "combination": 1,
+            "bloom": "toepassen",
+            "scorepunt_bloom": [
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "F2.30.4-01"
+              },
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "F2.30.4-01"
+              }
+            ],
+            "confidence": {
+              "pattern": "high",
+              "solo": "high",
+              "route": "high",
+              "direction": "high",
+              "steps": "high",
+              "sources": "high",
+              "noise": "high",
+              "claim": "high",
+              "new_concept": "high",
+              "schema": "high",
+              "builds_on": "high"
+            },
+            "evidence": {
+              "pattern": "Bereken hoeveel behandelingen Beweegpunt per jaar moet geven om quitte te spelen.",
+              "solo": "Break-evenafzet: € 252.000 / € 40 = 6.300 behandelingen per jaar.",
+              "route": "Bereken hoeveel behandelingen Beweegpunt per jaar moet geven om quitte te spelen. Ga uit van de gegevens in de tabel.",
+              "direction": "Bereken hoeveel behandelingen Beweegpunt per jaar moet geven om quitte te spelen.",
+              "steps": "Break-evenafzet: € 252.000 / € 40 = 6.300 behandelingen per jaar.",
+              "sources": "Ga uit van de gegevens in de tabel.",
+              "noise": "aantal fysiotherapeuten (inclusief Lotte) | 3",
+              "claim": "Bereken hoeveel behandelingen Beweegpunt per jaar moet geven om quitte te spelen.",
+              "new_concept": "Bereken hoeveel behandelingen Beweegpunt per jaar moet geven om quitte te spelen.",
+              "builds_on": "Een fout in de constante kosten die al in vraag 10 is aangerekend, niet opnieuw aanrekenen."
+            },
+            "repaired_fields": [
+              "builds_on"
+            ],
+            "disagreements": {
+              "builds_on": {
+                "A": "ja",
+                "B": "nee",
+                "R": "ja"
+              }
+            }
+          },
+          "scorepunten": [
+            {
+              "seq": 1,
+              "points": 1,
+              "criterion_id": "F2.30.4-01-a",
+              "group_id": "F2.30.4-01",
+              "bloom": "toepassen"
+            },
+            {
+              "seq": 2,
+              "points": 1,
+              "criterion_id": "F2.30.4-01-b",
+              "group_id": "F2.30.4-01",
+              "bloom": "toepassen"
+            }
+          ],
+          "open_findings": []
+        },
+        {
+          "vraag_id": "O3-V12",
+          "number": 12,
+          "points": 2,
+          "lead": "Lotte heeft een prognose voor 2027 gemaakt. Ga uit van de verwachte verhouding tussen beide soorten behandelingen.",
+          "task": "Bereken of de verwachte omzet van Beweegpunt over 2027 hoger is dan de break-evenomzet over 2027. Gebruik informatiebron 1.",
+          "uitwerkbijlage": null,
+          "cv": {
+            "maximumscore": 2,
+            "model_answer": "Verwachte omzet 2027: 7.800 × € 45 + 650 × € 60 = € 390.000. Totale dekkingsbijdrage 2027: 7.800 × (€ 45 − € 5) + 650 × (€ 60 − € 15) = € 341.250. Dekkingsbijdrage in perunage van de omzet: € 341.250 / € 390.000 = 0,875. Constante kosten 2027: huur 12 maanden van € 3.000, salarissen € 174.000 en overige vaste kosten € 42.000, samen € 252.000. Break-evenomzet: € 252.000 / 0,875 = € 288.000. De verwachte omzet van € 390.000 is hoger dan de break-evenomzet van € 288.000.",
+            "calc": [
+              {
+                "name": "omzet_2027",
+                "expr": "aantal_reg_2027 * tarief_reg_2027 + aantal_huis_2027 * tarief_huis",
+                "round": 0,
+                "rounding": null,
+                "shown": "€ 390.000"
+              },
+              {
+                "name": "db_2027",
+                "expr": "aantal_reg_2027 * (tarief_reg_2027 - vk_reg_2027) + aantal_huis_2027 * (tarief_huis - vk_huis)",
+                "round": 0,
+                "rounding": null,
+                "shown": "€ 341.250"
+              },
+              {
+                "name": "db_perunage",
+                "expr": "db_2027 / omzet_2027",
+                "round": 3,
+                "rounding": null,
+                "shown": "0,875"
+              },
+              {
+                "name": "ck_2027",
+                "expr": "huur_maand * maanden_jaar + salarissen + overige_ck",
+                "round": 0,
+                "rounding": null,
+                "shown": "€ 252.000"
+              },
+              {
+                "name": "beo",
+                "expr": "ck_2027 / db_perunage",
+                "round": 0,
+                "rounding": null,
+                "shown": "€ 288.000"
+              },
+              {
+                "name": "verhouding_2027",
+                "expr": "aantal_reg_2027 / aantal_huis_2027",
+                "round": 0,
+                "rounding": null,
+                "shown": "12"
+              },
+              {
+                "name": "db_pakket",
+                "expr": "verhouding_2027 * (tarief_reg_2027 - vk_reg_2027) + (tarief_huis - vk_huis)",
+                "round": 0,
+                "rounding": null,
+                "shown": "€ 525"
+              },
+              {
+                "name": "omzet_pakket",
+                "expr": "verhouding_2027 * tarief_reg_2027 + tarief_huis",
+                "round": 0,
+                "rounding": null,
+                "shown": "€ 600"
+              },
+              {
+                "name": "be_pakketten",
+                "expr": "ck_2027 / db_pakket",
+                "round": 0,
+                "rounding": null,
+                "shown": "480"
+              },
+              {
+                "name": "beo_pakket",
+                "expr": "be_pakketten * omzet_pakket",
+                "round": 0,
+                "rounding": null,
+                "shown": "€ 288.000"
+              }
+            ],
+            "scorepunten": [
+              {
+                "seq": 1,
+                "points": 1,
+                "text": "dekkingsbijdrage in perunage van de omzet: € 341.250 / € 390.000 = 0,875",
+                "criterion_id": "F2.30.4-01-c",
+                "calc_ref": "db_perunage"
+              },
+              {
+                "seq": 2,
+                "points": 1,
+                "text": "break-evenomzet € 252.000 / 0,875 = € 288.000 en de conclusie dat de verwachte omzet van € 390.000 hoger is",
+                "criterion_id": "F2.30.4-01-c",
+                "calc_ref": "beo"
+              }
+            ],
+            "rules": [
+              "Voor elke fout 1 scorepunt in mindering brengen.",
+              "Het tweede scorepunt alleen toekennen als een break-evenomzet is berekend en de conclusie daarmee in overeenstemming is.",
+              "Een dekkingsbijdrage in perunage van alleen de reguliere behandelingen (€ 40 / € 45) geen scorepunt voor het eerste scorepunt; daarmee verder juist gerekend: het tweede scorepunt wel toekennen.",
+              "Een fout in de constante kosten die al in vraag 10 is aangerekend, niet opnieuw aanrekenen.",
+              "Als de leerling zonder break-evenomzet laat zien dat de totale dekkingsbijdrage van € 341.250 hoger is dan de constante kosten van € 252.000 en daaruit concludeert dat de verwachte omzet hoger is dan de break-evenomzet: maximaal 1 scorepunt toekennen."
+            ],
+            "alternatives": [
+              "De dekkingsbijdrage als percentage van de omzet (87,5%) ook goed rekenen.",
+              "Een berekening via een pakket in de verwachte verhouding van 12 reguliere behandelingen op 1 behandeling aan huis ook goed rekenen: dekkingsbijdrage per pakket 12 × € 40 + € 45 = € 525 en omzet per pakket 12 × € 45 + € 60 = € 600; break-evenafzet € 252.000 / € 525 = 480 pakketten; break-evenomzet 480 × € 600 = € 288.000. De verhouding € 525 / € 600 (of de dekkingsbijdrage en omzet per pakket samen) geeft het eerste scorepunt; de break-evenomzet van € 288.000 met de juiste conclusie geeft het tweede scorepunt.",
+              "Elke andere berekening via de verwachte verhouding tussen beide soorten behandelingen (bijvoorbeeld met een gewogen gemiddelde dekkingsbijdrage en een gewogen gemiddeld tarief per behandeling) die uitkomt op een break-evenomzet van € 288.000 ook goed rekenen; de dekkingsbijdrage in verhouding tot de omzet (of de gewogen gemiddelde dekkingsbijdrage en het gewogen gemiddelde tarief samen) geeft het eerste scorepunt."
+            ],
+            "follow_through": null
+          },
+          "new_concepts": [],
+          "builds_on_vragen": [],
+          "pattern": "P09",
+          "knobs": {
+            "solo": "relationeel",
+            "route": "zelf vinden",
+            "direction": "open",
+            "steps": "3",
+            "sources": "één bron",
+            "noise": "ja",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": "nee"
+          },
+          "label": {
+            "exam_id": null,
+            "question_id": "O3-V12",
+            "question_number": 12,
+            "opgave_id": "O3",
+            "first_of_opgave": false,
+            "points": 2,
+            "pattern": "P09",
+            "solo": "multistructureel",
+            "route": "zelf vinden",
+            "direction": "open",
+            "steps": "3",
+            "sources": "één bron",
+            "noise": "ja",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": "ja",
+            "example_quality": null,
+            "builds_on_questions": [
+              10
+            ],
+            "proposed_pattern": null,
+            "example_quality_reason": null,
+            "combination": 1,
+            "bloom": "toepassen",
+            "scorepunt_bloom": [
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "F2.30.4-01"
+              },
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "F2.30.4-01"
+              }
+            ],
+            "confidence": {
+              "pattern": "high",
+              "solo": "high",
+              "route": "high",
+              "direction": "high",
+              "steps": "high",
+              "sources": "high",
+              "noise": "high",
+              "claim": "high",
+              "new_concept": "high",
+              "schema": "high",
+              "builds_on": "high"
+            },
+            "evidence": {
+              "pattern": "Bereken of de verwachte omzet van Beweegpunt over 2027 hoger is dan de break-evenomzet over 2027.",
+              "solo": "Break-evenomzet: € 252.000 / 0,875 = € 288.000.",
+              "route": "Bereken of de verwachte omzet van Beweegpunt over 2027 hoger is dan de break-evenomzet over 2027.",
+              "direction": "Bereken of de verwachte omzet van Beweegpunt over 2027 hoger is dan de break-evenomzet over 2027.",
+              "steps": "Dekkingsbijdrage in perunage van de omzet: € 341.250 / € 390.000 = 0,875.",
+              "sources": "Gebruik informatiebron 1.",
+              "noise": "gemiddelde duur van een behandeling | 30 minuten | 45 minuten",
+              "claim": "Bereken of de verwachte omzet van Beweegpunt over 2027 hoger is dan de break-evenomzet over 2027.",
+              "new_concept": "Bereken of de verwachte omzet van Beweegpunt over 2027 hoger is dan de break-evenomzet over 2027.",
+              "builds_on": "Een fout in de constante kosten die al in vraag 10 is aangerekend, niet opnieuw aanrekenen."
+            },
+            "repaired_fields": [
+              "route",
+              "builds_on"
+            ],
+            "disagreements": {
+              "route": {
+                "A": "zelf vinden",
+                "B": "gegeven",
+                "R": "zelf vinden"
+              },
+              "builds_on": {
+                "A": "ja",
+                "B": "nee",
+                "R": "ja"
+              }
+            }
+          },
+          "scorepunten": [
+            {
+              "seq": 1,
+              "points": 1,
+              "criterion_id": "F2.30.4-01-c",
+              "group_id": "F2.30.4-01",
+              "bloom": "toepassen"
+            },
+            {
+              "seq": 2,
+              "points": 1,
+              "criterion_id": "F2.30.4-01-c",
+              "group_id": "F2.30.4-01",
+              "bloom": "toepassen"
+            }
+          ],
+          "open_findings": []
+        },
+        {
+          "vraag_id": "O3-V13",
+          "number": 13,
+          "points": 3,
+          "lead": "Lotte overweegt vanaf 1 januari 2027 een extra behandelkamer te huren. Het aantal behandelingen aan huis verandert daardoor niet. Lotte huurt de kamer alleen als aan beide voorwaarden is voldaan:\na. Met alleen de reguliere behandelingen die Beweegpunt in 2027 met de extra kamer verwacht, speelt Beweegpunt minstens quitte.\nb. De winst van Beweegpunt over 2027 is met de extra kamer hoger dan zonder de extra kamer.",
+          "task": "Beoordeel of de extra behandelkamer aan beide voorwaarden van Lotte voldoet. Gebruik informatiebron 1 en 2.",
+          "uitwerkbijlage": null,
+          "cv": {
+            "maximumscore": 3,
+            "model_answer": "Afschrijving inrichting: € 24.000 / 8 = € 3.000 per jaar. Extra constante kosten: afschrijving € 3.000, extra huur 12 maanden van € 750 en extra salaris € 30.000, samen € 42.000. Constante kosten met de extra kamer: € 252.000 plus de extra € 42.000 is € 294.000. Break-evenafzet met de extra kamer: € 294.000 / € 40 = 7.350 reguliere behandelingen. Verwacht aantal reguliere behandelingen met de extra kamer: 7.800 + 1.000 = 8.800. Dat is meer dan 7.350, dus aan voorwaarde a is voldaan. Extra omzet: 1.000 × € 45 = € 45.000; extra variabele kosten: 1.000 × € 5 = € 5.000. De extra omzet min de extra variabele kosten is lager dan de extra constante kosten van € 42.000: het resultaat daalt met € 2.000, dus aan voorwaarde b is niet voldaan. De extra behandelkamer voldoet niet aan beide voorwaarden.",
+            "calc": [
+              {
+                "name": "afschr_kamer",
+                "expr": "inrichting / duur_inrichting",
+                "round": 0,
+                "rounding": null,
+                "shown": "€ 3.000"
+              },
+              {
+                "name": "extra_ck",
+                "expr": "afschr_kamer + extra_huur_maand * maanden_jaar + extra_salaris",
+                "round": 0,
+                "rounding": null,
+                "shown": "€ 42.000"
+              },
+              {
+                "name": "ck_nieuw",
+                "expr": "ck_jaar + extra_ck",
+                "round": 0,
+                "rounding": null,
+                "shown": "€ 294.000"
+              },
+              {
+                "name": "bea_nieuw",
+                "expr": "ck_nieuw / db_regulier",
+                "round": 0,
+                "rounding": "up",
+                "shown": "7.350"
+              },
+              {
+                "name": "aantal_reg_nieuw",
+                "expr": "aantal_reg_2027 + extra_beh",
+                "round": 0,
+                "rounding": null,
+                "shown": "8.800"
+              },
+              {
+                "name": "extra_omzet",
+                "expr": "extra_beh * tarief_reg_2027",
+                "round": 0,
+                "rounding": null,
+                "shown": "€ 45.000"
+              },
+              {
+                "name": "extra_vk",
+                "expr": "extra_beh * vk_reg_2027",
+                "round": 0,
+                "rounding": null,
+                "shown": "€ 5.000"
+              },
+              {
+                "name": "daling_resultaat",
+                "expr": "extra_ck - (extra_omzet - extra_vk)",
+                "round": 0,
+                "rounding": null,
+                "shown": "€ 2.000"
+              }
+            ],
+            "scorepunten": [
+              {
+                "seq": 1,
+                "points": 1,
+                "text": "break-evenafzet met de extra kamer: € 294.000 / € 40 = 7.350",
+                "criterion_id": "F2.30.4-01-b",
+                "calc_ref": "bea_nieuw"
+              },
+              {
+                "seq": 2,
+                "points": 1,
+                "text": "verandering van het resultaat: extra omzet € 45.000 min extra variabele kosten € 5.000 min extra constante kosten € 42.000, het resultaat daalt met € 2.000",
+                "criterion_id": "F2.30.2-02-b",
+                "calc_ref": "daling_resultaat"
+              },
+              {
+                "seq": 3,
+                "points": 1,
+                "text": "vergelijking 8.800 > 7.350 (voorwaarde a wel) en de conclusie dat niet aan beide voorwaarden is voldaan (voorwaarde b niet)",
+                "criterion_id": "F2.30.4-01-b",
+                "calc_ref": "aantal_reg_nieuw"
+              }
+            ],
+            "rules": [
+              "Voor elke fout 1 scorepunt in mindering brengen.",
+              "Het derde scorepunt alleen toekennen als beide voorwaarden zijn beoordeeld en de eindconclusie in overeenstemming is met de berekeningen."
+            ],
+            "alternatives": [
+              "Voorwaarde a ook goed rekenen via de dekkingsbijdrage: 8.800 × € 40 = € 352.000 is meer dan de constante kosten van € 294.000.",
+              "Voorwaarde b ook goed rekenen via het resultaat over 2027 zonder en met de extra kamer."
+            ],
+            "follow_through": "Een doorrekenfout uit vraag 11 niet opnieuw aanrekenen."
+          },
+          "noise_data": [],
+          "new_concepts": [],
+          "builds_on_vragen": [
+            11
+          ],
+          "pattern": "P15",
+          "knobs": {
+            "solo": "relationeel",
+            "route": "zelf vinden",
+            "direction": "open",
+            "steps": "4+",
+            "sources": "meerdere bronnen",
+            "noise": "ja",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": "ja"
+          },
+          "label": {
+            "exam_id": null,
+            "question_id": "O3-V13",
+            "question_number": 13,
+            "opgave_id": "O3",
+            "first_of_opgave": false,
+            "points": 3,
+            "pattern": "P15",
+            "solo": "relationeel",
+            "route": "zelf vinden",
+            "direction": "open",
+            "steps": "4+",
+            "sources": "meerdere bronnen",
+            "noise": "ja",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": "ja",
+            "example_quality": null,
+            "builds_on_questions": [
+              10,
+              11
+            ],
+            "proposed_pattern": null,
+            "example_quality_reason": null,
+            "combination": 2,
+            "bloom": "toepassen",
+            "scorepunt_bloom": [
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "F2.30.4-01"
+              },
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "F2.30.2-02"
+              },
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "F2.30.4-01"
+              }
+            ],
+            "confidence": {
+              "pattern": "high",
+              "solo": "high",
+              "route": "high",
+              "direction": "high",
+              "steps": "high",
+              "sources": "high",
+              "noise": "high",
+              "claim": "high",
+              "new_concept": "high",
+              "schema": "high",
+              "builds_on": "high"
+            },
+            "evidence": {
+              "pattern": "Beoordeel of de extra behandelkamer aan beide voorwaarden van Lotte voldoet.",
+              "solo": "vergelijking 8.800 > 7.350 (voorwaarde a wel) en de conclusie dat niet aan beide voorwaarden is voldaan (voorwaarde b niet)",
+              "route": "Beoordeel of de extra behandelkamer aan beide voorwaarden van Lotte voldoet. Gebruik informatiebron 1 en 2.",
+              "direction": "Beoordeel of de extra behandelkamer aan beide voorwaarden van Lotte voldoet.",
+              "steps": "Constante kosten met de extra kamer: € 252.000 plus de extra € 42.000 is € 294.000.",
+              "sources": "Gebruik informatiebron 1 en 2.",
+              "noise": "oppervlakte van de kamer: 14 vierkante meter",
+              "claim": "Lotte huurt de kamer alleen als aan beide voorwaarden is voldaan:",
+              "new_concept": "Beoordeel of de extra behandelkamer aan beide voorwaarden van Lotte voldoet.",
+              "builds_on": "Een doorrekenfout uit vraag 11 niet opnieuw aanrekenen."
+            },
+            "repaired_fields": [],
+            "disagreements": {}
+          },
+          "scorepunten": [
+            {
+              "seq": 1,
+              "points": 1,
+              "criterion_id": "F2.30.4-01-b",
+              "group_id": "F2.30.4-01",
+              "bloom": "toepassen"
+            },
+            {
+              "seq": 2,
+              "points": 1,
+              "criterion_id": "F2.30.2-02-b",
+              "group_id": "F2.30.2-02",
+              "bloom": "toepassen"
+            },
+            {
+              "seq": 3,
+              "points": 1,
+              "criterion_id": "F2.30.4-01-b",
+              "group_id": "F2.30.4-01",
+              "bloom": "toepassen"
+            }
+          ],
+          "open_findings": []
+        }
+      ]
+    },
+    {
+      "opgave_id": "O4",
+      "title": "Zeilschool Wind & Water",
+      "context": "Zeilschool Wind & Water aan het Veluwemeer geeft zeilcursussen van een week. Eigenaar Bram Kok maakt voor elk seizoen een begroting en vergelijkt die na het seizoen met de werkelijke uitkomsten. Informatiebron 1 geeft de begroting voor seizoen 2026, informatiebron 2 de werkelijke cijfers. Alle bedragen zijn zonder btw.",
+      "context_tags": [
+        "watersport",
+        "zeilschool",
+        "zeilcursussen"
+      ],
+      "reused_from": null,
+      "intro": "Zeilschool Wind & Water aan het Veluwemeer geeft zeilcursussen van een week. Eigenaar Bram Kok maakt voor elk seizoen een begroting en vergelijkt die na het seizoen met de werkelijke uitkomsten. Informatiebron 1 geeft de begroting voor seizoen 2026, informatiebron 2 de werkelijke cijfers. In deze opgave volgt elke cursist één cursus. Alle bedragen zijn zonder btw.",
+      "data": {
+        "aantal_begr": 600,
+        "prijs_begr": 395,
+        "vk_begr": 85,
+        "lonen_begr": 92000,
+        "boten_begr": 31000,
+        "terrein_begr": 27000,
+        "aantal_boten_begr": 20,
+        "aantal_werk": 560,
+        "prijs_werk": 395,
+        "vk_werk": 80,
+        "prijs_extra": 395,
+        "vk_extra": 80,
+        "lonen_werk": 92000,
+        "boten_werk": 33500,
+        "terrein_werk": 27000,
+        "aantal_boten_werk": 22
+      },
+      "sources": [
+        {
+          "n": 1,
+          "title": "Begroting van Wind & Water voor seizoen 2026",
+          "kind": "table",
+          "text": null,
+          "table": [
+            [
+              "",
+              "begroting seizoen 2026"
+            ],
+            [
+              "aantal cursisten",
+              "600"
+            ],
+            [
+              "cursusprijs per cursist",
+              "€ 395"
+            ],
+            [
+              "variabele kosten per cursist (lesmateriaal, verzekering, lunch)",
+              "€ 85"
+            ],
+            [
+              "constante kosten:",
+              ""
+            ],
+            [
+              "- lonen vaste instructeurs",
+              "€ 92.000"
+            ],
+            [
+              "- afschrijving en onderhoud zeilboten",
+              "€ 31.000"
+            ],
+            [
+              "- huur terrein en overige kosten",
+              "€ 27.000"
+            ],
+            [
+              "aantal zeilboten",
+              "20"
+            ]
+          ],
+          "figure_id": null,
+          "uses_data": [
+            "aantal_begr",
+            "prijs_begr",
+            "vk_begr",
+            "lonen_begr",
+            "boten_begr",
+            "terrein_begr"
+          ],
+          "noise_data": [
+            "aantal_boten_begr"
+          ]
+        },
+        {
+          "n": 2,
+          "title": "Werkelijke cijfers van Wind & Water over seizoen 2026",
+          "kind": "table",
+          "text": null,
+          "table": [
+            [
+              "",
+              "werkelijk seizoen 2026"
+            ],
+            [
+              "aantal cursisten",
+              "560"
+            ],
+            [
+              "cursusprijs per cursist",
+              "€ 395"
+            ],
+            [
+              "variabele kosten per cursist (lesmateriaal, verzekering, lunch)",
+              "€ 80"
+            ],
+            [
+              "constante kosten:",
+              ""
+            ],
+            [
+              "- lonen vaste instructeurs",
+              "€ 92.000"
+            ],
+            [
+              "- afschrijving en onderhoud zeilboten",
+              "€ 33.500"
+            ],
+            [
+              "- huur terrein en overige kosten",
+              "€ 27.000"
+            ],
+            [
+              "aantal zeilboten",
+              "22"
+            ]
+          ],
+          "figure_id": null,
+          "uses_data": [
+            "aantal_werk",
+            "prijs_werk",
+            "vk_werk",
+            "lonen_werk",
+            "boten_werk",
+            "terrein_werk"
+          ],
+          "noise_data": [
+            "aantal_boten_werk"
+          ]
+        }
+      ],
+      "figures": [],
+      "vragen": [
+        {
+          "vraag_id": "O4-V14",
+          "number": 14,
+          "points": 3,
+          "lead": "",
+          "task": "Stel de begrote resultatenrekening van Wind & Water over seizoen 2026 op (zie informatiebron 1). Vul hiervoor de uitwerkbijlage bij deze vraag in.",
+          "uitwerkbijlage": {
+            "kind": "table",
+            "rows": [
+              [
+                "Begrote resultatenrekening van Wind & Water over seizoen 2026",
+                ""
+              ],
+              [
+                "Omzet",
+                "€ ..."
+              ],
+              [
+                "Variabele kosten",
+                "€ ..."
+              ],
+              [
+                "Constante kosten",
+                "€ ..."
+              ],
+              [
+                "Begroot resultaat",
+                "€ ..."
+              ]
+            ]
+          },
+          "cv": {
+            "maximumscore": 3,
+            "model_answer": "Omzet: 600 × € 395 = € 237.000. Variabele kosten: 600 × € 85 = € 51.000. Constante kosten: lonen € 92.000 plus zeilboten € 31.000 plus terrein en overig € 27.000 = € 150.000. Begroot resultaat: omzet € 237.000 min variabele kosten € 51.000 min constante kosten € 150.000 = € 36.000 (positief).",
+            "calc": [
+              {
+                "name": "omzet_begr",
+                "expr": "aantal_begr * prijs_begr",
+                "round": 0,
+                "rounding": null,
+                "shown": "€ 237.000"
+              },
+              {
+                "name": "vk_tot_begr",
+                "expr": "aantal_begr * vk_begr",
+                "round": 0,
+                "rounding": null,
+                "shown": "€ 51.000"
+              },
+              {
+                "name": "ck_begr",
+                "expr": "lonen_begr + boten_begr + terrein_begr",
+                "round": 0,
+                "rounding": null,
+                "shown": "€ 150.000"
+              },
+              {
+                "name": "res_begr",
+                "expr": "omzet_begr - vk_tot_begr - ck_begr",
+                "round": 0,
+                "rounding": null,
+                "shown": "€ 36.000"
+              }
+            ],
+            "scorepunten": [
+              {
+                "seq": 1,
+                "points": 1,
+                "text": "omzet € 237.000",
+                "criterion_id": "F2.31.1-01-a",
+                "calc_ref": "omzet_begr"
+              },
+              {
+                "seq": 2,
+                "points": 1,
+                "text": "variabele kosten € 51.000",
+                "criterion_id": "F2.30.2-02-a",
+                "calc_ref": "vk_tot_begr"
+              },
+              {
+                "seq": 3,
+                "points": 1,
+                "text": "constante kosten € 150.000 en begroot resultaat € 36.000",
+                "criterion_id": "F2.31.1-01-a",
+                "calc_ref": "res_begr"
+              }
+            ],
+            "rules": [
+              "Voor elke fout 1 scorepunt in mindering brengen.",
+              "Het derde scorepunt alleen toekennen als zowel de constante kosten als het resultaat juist zijn, gegeven de ingevulde omzet en variabele kosten."
+            ],
+            "alternatives": [
+              "De constante kosten per post (€ 92.000, € 31.000 en € 27.000) in plaats van als totaal ook goed rekenen."
+            ],
+            "follow_through": null
+          },
+          "noise_data": [
+            "aantal_boten_begr"
+          ],
+          "new_concepts": [],
+          "builds_on_vragen": [],
+          "pattern": "B02",
+          "knobs": {
+            "solo": "multistructureel",
+            "route": "zelf vinden",
+            "direction": null,
+            "steps": "3",
+            "sources": "één bron",
+            "noise": "ja",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": "voorgestructureerd",
+            "builds_on": null
+          },
+          "label": {
+            "exam_id": null,
+            "question_id": "O4-V14",
+            "question_number": 14,
+            "opgave_id": "O4",
+            "first_of_opgave": true,
+            "points": 3,
+            "pattern": "B02",
+            "solo": "multistructureel",
+            "route": "zelf vinden",
+            "direction": null,
+            "steps": "2",
+            "sources": "één bron",
+            "noise": "ja",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": "voorgestructureerd",
+            "builds_on": null,
+            "example_quality": null,
+            "builds_on_questions": [],
+            "proposed_pattern": null,
+            "example_quality_reason": null,
+            "combination": 2,
+            "bloom": "toepassen",
+            "scorepunt_bloom": [
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "F2.31.1-01"
+              },
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "F2.30.2-02"
+              },
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "F2.31.1-01"
+              }
+            ],
+            "confidence": {
+              "pattern": "high",
+              "solo": "high",
+              "route": "high",
+              "direction": "high",
+              "steps": "high",
+              "sources": "high",
+              "noise": "high",
+              "claim": "high",
+              "new_concept": "high",
+              "schema": "high",
+              "builds_on": "high"
+            },
+            "evidence": {
+              "pattern": "Stel de begrote resultatenrekening van Wind & Water over seizoen 2026 op (zie informatiebron 1). Vul hiervoor de uitwerkbijlage bij deze vraag in.",
+              "solo": "omzet € 237.000 min variabele kosten € 51.000 min constante kosten € 150.000 = € 36.000",
+              "route": "Stel de begrote resultatenrekening van Wind & Water over seizoen 2026 op (zie informatiebron 1).",
+              "steps": "Begroot resultaat: omzet € 237.000 min variabele kosten € 51.000 min constante kosten € 150.000 = € 36.000 (positief).",
+              "sources": "Stel de begrote resultatenrekening van Wind & Water over seizoen 2026 op (zie informatiebron 1).",
+              "noise": "aantal zeilboten | 20",
+              "claim": "Stel de begrote resultatenrekening van Wind & Water over seizoen 2026 op (zie informatiebron 1).",
+              "new_concept": "Vul hiervoor de uitwerkbijlage bij deze vraag in.",
+              "schema": "| Variabele kosten | € ... | | Constante kosten | € ... | | Begroot resultaat | € ... |"
+            },
+            "repaired_fields": [],
+            "disagreements": {}
+          },
+          "scorepunten": [
+            {
+              "seq": 1,
+              "points": 1,
+              "criterion_id": "F2.31.1-01-a",
+              "group_id": "F2.31.1-01",
+              "bloom": "toepassen"
+            },
+            {
+              "seq": 2,
+              "points": 1,
+              "criterion_id": "F2.30.2-02-a",
+              "group_id": "F2.30.2-02",
+              "bloom": "toepassen"
+            },
+            {
+              "seq": 3,
+              "points": 1,
+              "criterion_id": "F2.31.1-01-a",
+              "group_id": "F2.31.1-01",
+              "bloom": "toepassen"
+            }
+          ],
+          "open_findings": []
+        },
+        {
+          "vraag_id": "O4-V15",
+          "number": 15,
+          "points": 2,
+          "lead": "Na afloop van het seizoen zet Bram de werkelijke cijfers op een rij.",
+          "task": "Bereken het verschil tussen het begrote en het werkelijke resultaat van seizoen 2026 (zie informatiebronnen 1 en 2). Vermeld daarbij of het verschil voordelig of nadelig is.",
+          "uitwerkbijlage": null,
+          "cv": {
+            "maximumscore": 2,
+            "model_answer": "Werkelijke omzet: 560 × € 395 = € 221.200. Werkelijke variabele kosten: 560 × € 80 = € 44.800. Werkelijke constante kosten: lonen € 92.000 plus zeilboten € 33.500 plus terrein en overig € 27.000 = € 152.500. Werkelijk resultaat: omzet € 221.200 min variabele kosten € 44.800 min constante kosten € 152.500 = € 23.900. Verschil: begroot € 36.000 min werkelijk € 23.900 = € 12.100 nadelig.",
+            "calc": [
+              {
+                "name": "omzet_werk",
+                "expr": "aantal_werk * prijs_werk",
+                "round": 0,
+                "rounding": null,
+                "shown": "€ 221.200"
+              },
+              {
+                "name": "vk_tot_werk",
+                "expr": "aantal_werk * vk_werk",
+                "round": 0,
+                "rounding": null,
+                "shown": "€ 44.800"
+              },
+              {
+                "name": "ck_werk",
+                "expr": "lonen_werk + boten_werk + terrein_werk",
+                "round": 0,
+                "rounding": null,
+                "shown": "€ 152.500"
+              },
+              {
+                "name": "res_werk",
+                "expr": "omzet_werk - vk_tot_werk - ck_werk",
+                "round": 0,
+                "rounding": null,
+                "shown": "€ 23.900"
+              },
+              {
+                "name": "verschil_res",
+                "expr": "res_begr - res_werk",
+                "round": 0,
+                "rounding": null,
+                "shown": "€ 12.100"
+              }
+            ],
+            "scorepunten": [
+              {
+                "seq": 1,
+                "points": 1,
+                "text": "berekening werkelijk resultaat € 23.900",
+                "criterion_id": "F2.31.1-01-b",
+                "calc_ref": "res_werk"
+              },
+              {
+                "seq": 2,
+                "points": 1,
+                "text": "berekening verschil € 12.100 en de vermelding nadelig",
+                "criterion_id": "F2.31.1-01-c",
+                "calc_ref": "verschil_res"
+              }
+            ],
+            "rules": [
+              "Voor elke fout 1 scorepunt in mindering brengen.",
+              "Het tweede scorepunt alleen toekennen als zowel het bedrag als 'nadelig' juist zijn, gegeven het werkelijke en het begrote resultaat van de kandidaat."
+            ],
+            "alternatives": [
+              "Een berekening per post (minder cursisten € 12.400 nadelig, lagere variabele kosten per cursist € 2.800 voordelig, hogere constante kosten € 2.500 nadelig; totaal € 12.100 nadelig) ook goed rekenen.",
+              "'Negatief verschil van € 12.100' ook goed rekenen in plaats van nadelig."
+            ],
+            "follow_through": "Een doorrekenfout uit vraag 14 niet opnieuw aanrekenen."
+          },
+          "noise_data": [
+            "aantal_boten_begr",
+            "aantal_boten_werk"
+          ],
+          "new_concepts": [],
+          "builds_on_vragen": [
+            14
+          ],
+          "pattern": "P09",
+          "knobs": {
+            "solo": "relationeel",
+            "route": "zelf vinden",
+            "direction": "open",
+            "steps": "3",
+            "sources": "meerdere bronnen",
+            "noise": "ja",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": "ja"
+          },
+          "label": {
+            "exam_id": null,
+            "question_id": "O4-V15",
+            "question_number": 15,
+            "opgave_id": "O4",
+            "first_of_opgave": false,
+            "points": 2,
+            "pattern": "P08",
+            "solo": "relationeel",
+            "route": "zelf vinden",
+            "direction": "open",
+            "steps": "3",
+            "sources": "meerdere bronnen",
+            "noise": "ja",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": "ja",
+            "example_quality": null,
+            "builds_on_questions": [
+              14
+            ],
+            "proposed_pattern": null,
+            "example_quality_reason": null,
+            "combination": 1,
+            "bloom": "toepassen",
+            "scorepunt_bloom": [
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "F2.31.1-01"
+              },
+              {
+                "points": 1,
+                "bloom": "toepassen",
+                "group_id": "F2.31.1-01"
+              }
+            ],
+            "confidence": {
+              "pattern": "high",
+              "solo": "high",
+              "route": "high",
+              "direction": "high",
+              "steps": "high",
+              "sources": "high",
+              "noise": "high",
+              "claim": "high",
+              "new_concept": "high",
+              "schema": "high",
+              "builds_on": "high"
+            },
+            "evidence": {
+              "pattern": "Bereken het verschil tussen het begrote en het werkelijke resultaat van seizoen 2026 (zie informatiebronnen 1 en 2).",
+              "solo": "Verschil: begroot € 36.000 min werkelijk € 23.900 = € 12.100 nadelig.",
+              "route": "Bereken het verschil tussen het begrote en het werkelijke resultaat van seizoen 2026 (zie informatiebronnen 1 en 2).",
+              "direction": "Vermeld daarbij of het verschil voordelig of nadelig is.",
+              "steps": "Werkelijk resultaat: omzet € 221.200 min variabele kosten € 44.800 min constante kosten € 152.500 = € 23.900.",
+              "sources": "Bereken het verschil tussen het begrote en het werkelijke resultaat van seizoen 2026 (zie informatiebronnen 1 en 2).",
+              "noise": "aantal zeilboten | 22",
+              "claim": "Bereken het verschil tussen het begrote en het werkelijke resultaat van seizoen 2026 (zie informatiebronnen 1 en 2).",
+              "new_concept": "Vermeld daarbij of het verschil voordelig of nadelig is.",
+              "builds_on": "Een doorrekenfout uit vraag 14 niet opnieuw aanrekenen."
+            },
+            "repaired_fields": [],
+            "disagreements": {}
+          },
+          "scorepunten": [
+            {
+              "seq": 1,
+              "points": 1,
+              "criterion_id": "F2.31.1-01-b",
+              "group_id": "F2.31.1-01",
+              "bloom": "toepassen"
+            },
+            {
+              "seq": 2,
+              "points": 1,
+              "criterion_id": "F2.31.1-01-c",
+              "group_id": "F2.31.1-01",
+              "bloom": "toepassen"
+            }
+          ],
+          "open_findings": []
+        },
+        {
+          "vraag_id": "O4-V16",
+          "number": 16,
+          "points": 2,
+          "lead": "Bram zoekt per post de oorzaak van het verschil met de begroting.",
+          "task": "Noem voor het aantal cursisten en voor de variabele kosten per cursist of de afwijking voordelig of nadelig is (zie informatiebronnen 1 en 2). Licht elk antwoord toe.",
+          "uitwerkbijlage": null,
+          "cv": {
+            "maximumscore": 2,
+            "model_answer": "Aantal cursisten: nadelig. Er zijn 560 in plaats van 600 cursisten. Elke cursist levert meer op (€ 395) dan hij aan variabele kosten veroorzaakt (€ 85), dus door minder cursisten daalt het resultaat. Variabele kosten per cursist: voordelig. Ze zijn € 80 in plaats van € 85, dus de kosten per cursist zijn lager en het resultaat is hoger.",
+            "calc": [],
+            "scorepunten": [
+              {
+                "seq": 1,
+                "points": 1,
+                "text": "aantal cursisten: nadelig, met de toelichting dat er minder cursisten zijn, zodat de omzet (meer dan de variabele kosten) daalt en het resultaat lager is",
+                "criterion_id": "F2.31.1-01-d",
+                "calc_ref": null
+              },
+              {
+                "seq": 2,
+                "points": 1,
+                "text": "variabele kosten per cursist: voordelig, met de toelichting dat deze kosten per cursist lager zijn dan begroot, zodat het resultaat hoger is",
+                "criterion_id": "F2.31.1-01-d",
+                "calc_ref": null
+              }
+            ],
+            "rules": [
+              "Per post alleen 'voordelig' of 'nadelig' zonder juiste toelichting: 0 scorepunten voor die post."
+            ],
+            "alternatives": [
+              "Een toelichting met een berekening ook goed rekenen, bijvoorbeeld: 40 cursisten minder × (€ 395 − € 85) = € 12.400 nadelig; € 5 lagere variabele kosten × 560 cursisten = € 2.800 voordelig."
+            ],
+            "follow_through": null
+          },
+          "noise_data": [
+            "prijs_begr",
+            "prijs_werk",
+            "lonen_begr",
+            "boten_begr",
+            "terrein_begr",
+            "lonen_werk",
+            "boten_werk",
+            "terrein_werk",
+            "aantal_boten_begr",
+            "aantal_boten_werk"
+          ],
+          "new_concepts": [],
+          "builds_on_vragen": [],
+          "pattern": "P05",
+          "knobs": {
+            "solo": "relationeel",
+            "route": "zelf vinden",
+            "direction": null,
+            "steps": "1",
+            "sources": "meerdere bronnen",
+            "noise": "ja",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": "nee"
+          },
+          "label": {
+            "exam_id": null,
+            "question_id": "O4-V16",
+            "question_number": 16,
+            "opgave_id": "O4",
+            "first_of_opgave": false,
+            "points": 2,
+            "pattern": "P05",
+            "solo": "multistructureel",
+            "route": "zelf vinden",
+            "direction": null,
+            "steps": "2",
+            "sources": "meerdere bronnen",
+            "noise": "ja",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": "nee",
+            "example_quality": null,
+            "builds_on_questions": [],
+            "proposed_pattern": null,
+            "example_quality_reason": null,
+            "combination": 1,
+            "bloom": "begrijpen",
+            "scorepunt_bloom": [
+              {
+                "points": 1,
+                "bloom": "begrijpen",
+                "group_id": "F2.31.1-01"
+              },
+              {
+                "points": 1,
+                "bloom": "begrijpen",
+                "group_id": "F2.31.1-01"
+              }
+            ],
+            "confidence": {
+              "pattern": "high",
+              "solo": "medium",
+              "route": "high",
+              "direction": "high",
+              "steps": "high",
+              "sources": "high",
+              "noise": "high",
+              "claim": "high",
+              "new_concept": "high",
+              "schema": "high",
+              "builds_on": "high"
+            },
+            "evidence": {
+              "pattern": "variabele kosten per cursist of de afwijking voordelig of nadelig is (zie informatiebronnen 1 en 2). Licht elk antwoord toe.",
+              "solo": "Aantal cursisten: nadelig. Er zijn 560 in plaats van 600 cursisten.",
+              "route": "Noem voor het aantal cursisten en voor de variabele kosten per cursist of de afwijking voordelig of nadelig is",
+              "steps": "zodat de omzet (meer dan de variabele kosten) daalt en het resultaat lager is",
+              "sources": "of de afwijking voordelig of nadelig is (zie informatiebronnen 1 en 2). Licht elk antwoord toe.",
+              "noise": "afschrijving en onderhoud zeilboten | € 33.500",
+              "claim": "Noem voor het aantal cursisten en voor de variabele kosten per cursist of de afwijking voordelig of nadelig is",
+              "new_concept": "Licht elk antwoord toe.",
+              "builds_on": "Noem voor het aantal cursisten en voor de variabele kosten per cursist of de afwijking voordelig of nadelig is"
+            },
+            "repaired_fields": [],
+            "disagreements": {
+              "solo": {
+                "A": "relationeel",
+                "B": "multistructureel"
+              }
+            }
+          },
+          "scorepunten": [
+            {
+              "seq": 1,
+              "points": 1,
+              "criterion_id": "F2.31.1-01-d",
+              "group_id": "F2.31.1-01",
+              "bloom": "begrijpen"
+            },
+            {
+              "seq": 2,
+              "points": 1,
+              "criterion_id": "F2.31.1-01-d",
+              "group_id": "F2.31.1-01",
+              "bloom": "begrijpen"
+            }
+          ],
+          "open_findings": []
+        },
+        {
+          "vraag_id": "O4-V17",
+          "number": 17,
+          "points": 2,
+          "lead": "Stel dat er in seizoen 2026 één cursist meer had meegedaan dan werkelijk het geval was. In de laatste cursusweek was in een groep nog één plek vrij. Deze cursist had € 395 betaald. Per cursist maakt de zeilschool € 80 kosten voor lesmateriaal, verzekering en lunch.",
+          "task": "Leg uit hoe het resultaat van Wind & Water over seizoen 2026 door deze cursist zou zijn veranderd.",
+          "uitwerkbijlage": null,
+          "cv": {
+            "maximumscore": 2,
+            "model_answer": "De cursist levert € 395 op en veroorzaakt € 80 kosten voor lesmateriaal, verzekering en lunch; dit zijn variabele kosten. Het resultaat stijgt dus met het verschil: € 395 − € 80 = € 315. De constante kosten (lonen, zeilboten, huur terrein) blijven gelijk, omdat de cursist een vrije plek in een groep inneemt die toch al doorgaat; die kosten veranderen dus niet door één extra cursist.",
+            "calc": [
+              {
+                "name": "extra_res",
+                "expr": "prijs_extra - vk_extra",
+                "round": 0,
+                "rounding": null,
+                "shown": "€ 315"
+              }
+            ],
+            "scorepunten": [
+              {
+                "seq": 1,
+                "points": 1,
+                "text": "het resultaat stijgt met het verschil tussen de opbrengst en de variabele kosten van deze cursist (€ 395 − € 80)",
+                "criterion_id": "F2.30.2-02-c",
+                "calc_ref": "extra_res"
+              },
+              {
+                "seq": 2,
+                "points": 1,
+                "text": "uitleg dat de constante kosten gelijk blijven bij één extra cursist",
+                "criterion_id": "F2.30.2-02-c",
+                "calc_ref": null
+              }
+            ],
+            "rules": [
+              "Het bedrag van de stijging (€ 315) hoeft niet genoemd te worden; de uitleg in woorden is voldoende.",
+              "Alleen de stijging met opbrengst min variabele kosten zonder uitleg dat de constante kosten gelijk blijven: 1 scorepunt."
+            ],
+            "alternatives": [
+              "Een antwoord dat het nieuwe werkelijke resultaat van seizoen 2026 noemt (het werkelijke resultaat plus de stijging), met dezelfde uitleg, ook goed rekenen."
+            ],
+            "follow_through": null
+          },
+          "new_concepts": [],
+          "builds_on_vragen": [],
+          "pattern": "P01",
+          "knobs": {
+            "solo": "relationeel",
+            "route": "zelf vinden",
+            "direction": "open",
+            "steps": "2",
+            "sources": "in vraagtekst",
+            "noise": "nee",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": "nee"
+          },
+          "label": {
+            "exam_id": null,
+            "question_id": "O4-V17",
+            "question_number": 17,
+            "opgave_id": "O4",
+            "first_of_opgave": false,
+            "points": 2,
+            "pattern": "P02",
+            "solo": "multistructureel",
+            "route": "zelf vinden",
+            "direction": "open",
+            "steps": "2",
+            "sources": "in vraagtekst",
+            "noise": "nee",
+            "claim": "nee",
+            "new_concept": "nee",
+            "schema": null,
+            "builds_on": "nee",
+            "example_quality": null,
+            "builds_on_questions": [],
+            "proposed_pattern": null,
+            "example_quality_reason": null,
+            "combination": 1,
+            "bloom": "begrijpen",
+            "scorepunt_bloom": [
+              {
+                "points": 1,
+                "bloom": "begrijpen",
+                "group_id": "F2.30.2-02"
+              },
+              {
+                "points": 1,
+                "bloom": "begrijpen",
+                "group_id": "F2.30.2-02"
+              }
+            ],
+            "confidence": {
+              "pattern": "high",
+              "solo": "medium",
+              "route": "high",
+              "direction": "high",
+              "steps": "high",
+              "sources": "high",
+              "noise": "high",
+              "claim": "high",
+              "new_concept": "high",
+              "schema": "high",
+              "builds_on": "high"
+            },
+            "evidence": {
+              "pattern": "In de laatste cursusweek was in een groep nog één plek vrij.",
+              "solo": "het resultaat stijgt met het verschil tussen de opbrengst en de variabele kosten van deze cursist (€ 395 − € 80)",
+              "route": "Leg uit hoe het resultaat van Wind & Water over seizoen 2026 door deze cursist zou zijn veranderd.",
+              "direction": "Leg uit hoe het resultaat van Wind & Water over seizoen 2026 door deze cursist zou zijn veranderd.",
+              "steps": "Het resultaat stijgt dus met het verschil: € 395 − € 80 = € 315.",
+              "sources": "Deze cursist had € 395 betaald. Per cursist maakt de zeilschool € 80 kosten voor lesmateriaal, verzekering en lunch.",
+              "noise": "Deze cursist had € 395 betaald. Per cursist maakt de zeilschool € 80 kosten voor lesmateriaal, verzekering en lunch.",
+              "claim": "Leg uit hoe het resultaat van Wind & Water over seizoen 2026 door deze cursist zou zijn veranderd.",
+              "new_concept": "Per cursist maakt de zeilschool € 80 kosten voor lesmateriaal, verzekering en lunch.",
+              "builds_on": "Leg uit hoe het resultaat van Wind & Water over seizoen 2026 door deze cursist zou zijn veranderd."
+            },
+            "repaired_fields": [],
+            "disagreements": {
+              "solo": {
+                "A": "relationeel",
+                "B": "multistructureel"
+              }
+            }
+          },
+          "scorepunten": [
+            {
+              "seq": 1,
+              "points": 1,
+              "criterion_id": "F2.30.2-02-c",
+              "group_id": "F2.30.2-02",
+              "bloom": "begrijpen"
+            },
+            {
+              "seq": 2,
+              "points": 1,
+              "criterion_id": "F2.30.2-02-c",
+              "group_id": "F2.30.2-02",
+              "bloom": "begrijpen"
+            }
+          ],
+          "open_findings": []
+        }
+      ]
+    }
+  ],
+  "realised": {
+    "matrix": [
+      {
+        "group_id": "F1.28.1-02",
+        "ordered": 9,
+        "realised": 9,
+        "ok": true
+      },
+      {
+        "group_id": "F2.30.2-02",
+        "ordered": 6,
+        "realised": 6,
+        "ok": true
+      },
+      {
+        "group_id": "F2.30.3-01",
+        "ordered": 3,
+        "realised": 3,
+        "ok": true
+      },
+      {
+        "group_id": "F2.30.3-02",
+        "ordered": 4,
+        "realised": 4,
+        "ok": true
+      },
+      {
+        "group_id": "F2.30.4-01",
+        "ordered": 8,
+        "realised": 8,
+        "ok": true
+      },
+      {
+        "group_id": "F2.31.1-01",
+        "ordered": 6,
+        "realised": 6,
+        "ok": true
+      }
+    ],
+    "bloom": {
+      "onthouden": {
+        "ordered": 0.115385,
+        "planned": 0.111,
+        "realised": 0.111,
+        "planned_points": 4.0,
+        "realised_points": 4.0,
+        "outside": false
+      },
+      "begrijpen": {
+        "ordered": 0.240385,
+        "planned": 0.25,
+        "realised": 0.25,
+        "planned_points": 9.0,
+        "realised_points": 9.0,
+        "outside": false
+      },
+      "toepassen": {
+        "ordered": 0.615384,
+        "planned": 0.639,
+        "realised": 0.639,
+        "planned_points": 23.0,
+        "realised_points": 23.0,
+        "outside": false
+      },
+      "analyseren": {
+        "ordered": 0.028846,
+        "planned": 0.0,
+        "realised": 0.0,
+        "planned_points": 0.0,
+        "realised_points": 0.0,
+        "outside": false
+      }
+    },
+    "outside_tolerance": [
+      {
+        "what": "solo",
+        "value": "multistructureel",
+        "ordered": 0.492,
+        "share": 0.667,
+        "points": 24.0,
+        "of": 36.0,
+        "slack": false
+      },
+      {
+        "what": "solo",
+        "value": "relationeel",
+        "ordered": 0.435,
+        "share": 0.306,
+        "points": 11.0,
+        "of": 36.0,
+        "slack": false
+      },
+      {
+        "what": "steps",
+        "value": "2",
+        "ordered": 0.25,
+        "share": 0.417,
+        "points": 15.0,
+        "of": 36.0,
+        "slack": false
+      },
+      {
+        "what": "steps",
+        "value": "4+",
+        "ordered": 0.226,
+        "share": 0.083,
+        "points": 3.0,
+        "of": 36.0,
+        "slack": false
+      },
+      {
+        "what": "builds_on",
+        "value": "ja",
+        "ordered": 0.291,
+        "share": 0.393,
+        "points": 11.0,
+        "of": 28.0,
+        "slack": false
+      },
+      {
+        "what": "builds_on",
+        "value": "nee",
+        "ordered": 0.709,
+        "share": 0.607,
+        "points": 17.0,
+        "of": 28.0,
+        "slack": false
+      }
+    ]
+  },
+  "findings_left": []
+}
