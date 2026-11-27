@@ -215,6 +215,54 @@
       ],
       "level": "5vwo",
       "date": "2026-11-19"
+    },
+    {
+      "toets_id": "20261125-2236-proef-kennis-bedrijfseconomie",
+      "opgave_id": "O1",
+      "title": "Wasstraat Blinkend",
+      "context_tags": [
+        "autobranche",
+        "autowasstraat",
+        "wasinstallatie"
+      ],
+      "level": "5vwo",
+      "date": "2026-11-27"
+    },
+    {
+      "toets_id": "20261125-2236-proef-kennis-bedrijfseconomie",
+      "opgave_id": "O2",
+      "title": "Spellenwinkel Dobbelsteen",
+      "context_tags": [
+        "spellenbranche",
+        "spellenwinkel",
+        "bordspellen"
+      ],
+      "level": "5vwo",
+      "date": "2026-11-27"
+    },
+    {
+      "toets_id": "20261125-2236-proef-kennis-bedrijfseconomie",
+      "opgave_id": "O3",
+      "title": "Trimsalon Vachtwerk",
+      "context_tags": [
+        "dierenverzorging",
+        "trimsalon",
+        "trimbeurten"
+      ],
+      "level": "5vwo",
+      "date": "2026-11-27"
+    },
+    {
+      "toets_id": "20261125-2236-proef-kennis-bedrijfseconomie",
+      "opgave_id": "O4",
+      "title": "Kookstudio Pit & Pan",
+      "context_tags": [
+        "culinaire workshops",
+        "kookstudio",
+        "kookworkshops"
+      ],
+      "level": "5vwo",
+      "date": "2026-11-27"
     }
   ]
 }

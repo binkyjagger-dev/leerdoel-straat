@@ -2410,6 +2410,93 @@
       "raised_by": "verifier",
       "supersedes": null,
       "scope": null
+    },
+    {
+      "id": "bedrijfsecon-078",
+      "question": "Telt ongebruikte data in de gedeelde opgavetekst als ruis (noise = ja) voor elke vraag van die opgave, of alleen voor de vraag waarbij de data als afleider bedoeld is?",
+      "context": "Toets 20261125 (bedrijfseconomie): labellers zetten noise ja bij O1-V2, O2-V5 en O4-V17 door tabellen of regels in de intro of een bron die voor een andere vraag bedoeld zijn; noise ja komt uit op 89% tegen 65% besteld. Ook steps: labellers tellen parallelle delen als een stap (economie-097), de planner niet (stappen 2 = 56% tegen 25%).",
+      "options": [
+        "Ruis per vraag: alleen data die de vraag zelf aanbiedt (lead, eigen tabel, genoemde bron)",
+        "Ruis per opgave: alle ongebruikte data in intro en bronnen telt voor elke vraag",
+        "Per vraag, en de planner plant ruis en stappen met dezelfde telregels als de labellers; blueprint_check rekent dat na"
+      ],
+      "proposed": "Per vraag, en de planner plant ruis en stappen met dezelfde telregels als de labellers; blueprint_check rekent dat na",
+      "impact": "medium",
+      "applies_to": [
+        "planner",
+        "item-labeller",
+        "verifier"
+      ],
+      "affects_units": [
+        "O1-V2",
+        "O2-V5",
+        "O4-V17",
+        "O1-V1",
+        "O3-V9"
+      ],
+      "status": "open",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null,
+      "source_run": "20261125-2236-proef-kennis-bedrijfseconomie",
+      "raised_by": "verifier",
+      "supersedes": null,
+      "scope": null
+    },
+    {
+      "id": "bedrijfsecon-079",
+      "question": "Mag een vraag bij F2.31.1-01-d eisen dat de leerling de interest als financieringsresultaat onder het bedrijfsresultaat plaatst?",
+      "context": "O4-V16: het cv eist 'financieringsresultaat onder het bedrijfsresultaat'; F2.31.1-01-d noemt alleen posten (afzet, verkoopprijs, variabele en constante kosten) en F1.28.1-02-a (interest) is in deze bestelling uitgesloten.",
+      "options": [
+        "Nee: interest telt alleen als (constante) kostenpost die bijdraagt aan het verschil",
+        "Ja: het onderscheid bedrijfsresultaat/financieringsresultaat hoort bij -d",
+        "Alleen als de stam het onderscheid als nieuw begrip uitlegt (new_concept)"
+      ],
+      "proposed": "Nee: interest telt alleen als (constante) kostenpost die bijdraagt aan het verschil",
+      "impact": "low",
+      "applies_to": [
+        "planner",
+        "verifier"
+      ],
+      "affects_units": [
+        "O4-V16"
+      ],
+      "status": "open",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null,
+      "source_run": "20261125-2236-proef-kennis-bedrijfseconomie",
+      "raised_by": "verifier",
+      "supersedes": null,
+      "scope": null
+    },
+    {
+      "id": "bedrijfsecon-080",
+      "question": "Mag de planner patroon P01 (de vraag geeft het effect, 'leg uit dat') plannen bij een vraag met richting open, en hoe telt het patroonaandeel als de labellers daardoor een ander patroon toekennen?",
+      "context": "Toets 20261125 (bedrijfseconomie): O4-V16 en O4-V17 zijn als P01 gepland met direction open; beide labellers kennen B01 toe, waardoor B01 op 16,7% uitkomt tegen 3,2% besteld. Itemreparatie kan dit alleen oplossen door de richting te geven (cueing).",
+      "options": [
+        "Nee: blueprint_check weigert P01 met direction open; de planner kiest B01 of P04",
+        "Ja, en de docent accepteert zo'n patroonafwijking bij pauze V",
+        "Patroonaandelen niet meer op tolerantie toetsen, alleen melden"
+      ],
+      "proposed": "Nee: blueprint_check weigert P01 met direction open; de planner kiest B01 of P04",
+      "impact": "low",
+      "applies_to": [
+        "planner",
+        "verifier"
+      ],
+      "affects_units": [
+        "O4-V16",
+        "O4-V17"
+      ],
+      "status": "open",
+      "answer": null,
+      "answered_by": null,
+      "answered_at": null,
+      "source_run": "20261125-2236-proef-kennis-bedrijfseconomie",
+      "raised_by": "verifier",
+      "supersedes": null,
+      "scope": null
     }
   ]
 }
