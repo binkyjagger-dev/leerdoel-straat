@@ -1,10 +1,10 @@
 # 38 — Toets-straat v3: knowledge-driven toets (misconceptions, exam mechanisms, variants)
 
-**Status:** draft 2026-11-27 (Martijn to approve §2.2). Amends specs/06, 26, 30, 31, 32, 33, 34 and 35. Where this
+**Status:** approved 2026-11-27 (§2.1 and §2.2 decided by Martijn; one open question in §11). Amends specs/06, 26, 30, 31, 32, 33, 34 and 35. Where this
 spec and an older one differ, this spec wins. It takes over specs/37 D10 (`focus` per leerdoel, §5.4). The rest of
 specs/37 stays a separate spec, still on hold. Domain language is English; teacher-facing text is Dutch.
 
-**Order of work.** First the spec, then **stop** until §2.2 is approved. After that, build in the order of §10.
+**Order of work.** Spec approved 2026-11-27; build in the order of §10.
 
 ## 1. Why: the proef of 2026-11-25/27
 
@@ -41,9 +41,9 @@ repair still ran T4 in full.
 | K3 | **Pause V** (two variants per vraag) is an order setting, **on by default**, that the form can switch off. |
 | K4 | Specs/38 takes over specs/37 D10 (`focus`); the rest of specs/37 stays separate. |
 
-### 2.2 Proposals to approve
+### 2.2 Decided (Martijn, 2026-11-27; all ten as proposed)
 
-| Id | Proposal | § |
+| Id | Decision | § |
 |---|---|---|
 | D1 | A misconception card's status changes only through `kennis.py review` against a transcribed teacher review, never through an agent (as teacher review in specs/14 §5.1). Status: `voorstel` → `goedgekeurd` / `afgewezen` / `vervallen`. | 3.2 |
 | D2 | Mechanism names come from a **controlled vocabulary** `data/toets/mechanisms.json` (base) plus `subjects/<vak>/kennis/mechanismen_vak.json` (subject). A name outside it is a proposal (`NIEUW`), added only through `kennis.py mechanism-add` against an answered decision, the same route as patterns (specs/31 §6). | 3.3 |
@@ -82,7 +82,7 @@ Exam text and old-toets text never enter `kennis/`. A card may quote a few words
  "misconception": "De leerling denkt dat …", "typical_wrong_answer": "(aanschafprijs incl. btw − restwaarde) / n …",
  "catching_question": "Bereken-vraag waarbij de bron een factuur incl. btw en aparte installatiekosten geeft …",
  "sources": [{"kind": "docent|examen|cv|oude_toets", "ref": "vwo-2024-tv1 v22", "p_value": 0.20}],
- "evidence_strength": "sterk|matig|zwak", "status": "voorstel|goedgekeurd|afgewezen|vervallen",
+ "evidence_strength": "sterk|matig|zwak", "levels": null, "status": "voorstel|goedgekeurd|afgewezen|vervallen",
  "criteria_version": "<criteria_run>", "proposed_in": "<run_id>", "reviewed_at": "2026-11-26",
  "review_note": "…", "used_in": [{"toets_id": "…", "vraag_id": "O1-V1", "catches": "ja|deels|nee", "teacher": "goed|aanpassen|weg|null"}]}
 ```
@@ -91,6 +91,7 @@ Exam text and old-toets text never enter `kennis/`. A card may quote a few words
   becomes `vervallen` with `replaced_by`.
 - `used_in` is appended by `toetsbank_add.py` (catch result from `34_misconcept_check.json`) and by the teacher
   review (teacher verdict, specs/37 T7 once it is built). Over time this shows which cards make good vragen.
+- `levels` null = the card applies to every toets of the subject; else a list (`["5vwo"]`) limits it (decided 2026-11-27).
 - Cards are bound to `criteria_version`. When the bank moves to another criteria run, `kennis.py rebind` maps them
   by criterion id and marks the unmapped ones `vervallen`.
 
@@ -302,11 +303,10 @@ Variants off: ≈ 28.
 8. Test run: the same order again (bedrijfseconomie 5 VWO P2), from the migrated knowledge; pause K should not
    be needed. Compare cost and result with the proef.
 
-## 11. Open questions (for the intake, not blocking)
+## 11. Open questions
 
 - Economie has no TIA import yet and no old toetsen. Does E8 run on the five economie exams before the first economie
   toets with cards?
-- Does a card apply only within its level (5 vwo / 6 vwo), or within the subject? Proposal: within the subject, with
-  an optional `levels`.
-- Should `used_in.teacher` (from a teacher review) ever retire a card on its own (e.g. 3× *weg*)? Proposal: no, it
-  only shows in the overview.
+- *Decided 2026-11-27:* a card applies within the subject, with an optional `levels` (§3.2).
+- *Decided 2026-11-27:* `used_in.teacher` never retires a card on its own; the overview shows the tally, and only the
+  teacher sets `vervallen` (via pause K).
