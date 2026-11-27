@@ -160,6 +160,8 @@ Een voorbeeld van een juist ingevulde uitwerkbijlage is:
 
 *Als de te vorderen btw is berekend als 21% van de inkopen inclusief btw, het tweede scorepunt niet toekennen.*
 
+*Als de te vorderen btw is berekend over de inkoopwaarde van de omzet, het tweede scorepunt niet toekennen.*
+
 Ook goed:
 
 - Ook goed: te betalen btw: 117.370 × 21/121, dat is € 20.370.

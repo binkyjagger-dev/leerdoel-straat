@@ -50,6 +50,7 @@ Van het vierde kwartaal van 2026 is gegeven:
 | kassa-ontvangsten, inclusief btw | € 117.370 |
 | inkopen bij leveranciers, inclusief btw | € 74.415 |
 | aantal verkochte spellen | 3.240 |
+| inkoopwaarde van de omzet, exclusief btw | € 69.000 |
 | huur van de winkel | € 5.400 |
 
 Fatima gaat het bordspel Kanaalrace verkopen. Zij koopt het in bij een uitgever in de Verenigde Staten voor € 30,00 per stuk. Op de inkoopprijs komt 10% invoerkosten en op de kostprijs 40% winstopslag.

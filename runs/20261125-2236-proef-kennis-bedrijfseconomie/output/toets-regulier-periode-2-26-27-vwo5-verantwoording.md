@@ -137,8 +137,8 @@ Per punt, alleen over de vragen waar de knop telt; tolerantie ±10 procentpunt, 
 | waarde | gepland (opdracht) | bouwplan | gerealiseerd (gelabeld) | centraal examen |
 |---|---|---|---|---|
 | unistructureel | 7 % | 1 p · 3 % | 1 p · 3 % | 7 % (2025-I 8 %, 2026-I 7 %) |
-| multistructureel | 49 % | 17 p · 47 % | 18 p · 50 % | 49 % (2025-I 49 %, 2026-I 49 %) |
-| relationeel | 44 % | 18 p · 50 % | 17 p · 47 % | 44 % (2025-I 43 %, 2026-I 44 %) |
+| multistructureel | 49 % | 17 p · 47 % | 19 p · 53 % | 49 % (2025-I 49 %, 2026-I 49 %) |
+| relationeel | 44 % | 18 p · 50 % | 16 p · 44 % | 44 % (2025-I 43 %, 2026-I 44 %) |
 
 ### Route
 
@@ -216,7 +216,7 @@ Per punt, alleen over de vragen waar de knop telt; tolerantie ±10 procentpunt, 
 | 5 | 2 | P08 → P08 | F2.30.3-02-a (toepassen); F2.30.3-02-b (toepassen) | noise: nee → ja | Spellenwinkel Dobbelsteen | – |
 | 6 | 2 | P09 → P09 | F2.30.3-02-a (toepassen); F2.30.3-02-a (toepassen) | steps: 3 → 2 | Spellenwinkel Dobbelsteen | – |
 | 7 | 2 | B02 → B02 | F2.30.3-01-b (toepassen); F2.30.3-01-c (toepassen) | steps: 2 → 3 | Spellenwinkel Dobbelsteen | – |
-| 8 | 1 | P14 → P14 | F2.30.3-01-d (begrijpen) | solo: unistructureel → relationeel; steps: 1 → 2 | Spellenwinkel Dobbelsteen | – |
+| 8 | 1 | P14 → P14 | F2.30.3-01-d (begrijpen) | solo: unistructureel → multistructureel; steps: 1 → 2 | Spellenwinkel Dobbelsteen | – |
 | 9 | 3 | P08 → P08 | F2.30.4-01-a (toepassen); F2.30.4-01-b (toepassen); F2.30.4-01-b (toepassen) | steps: 4+ → 3 | Trimsalon Vachtwerk | – |
 | 10 | 2 | P09 → P09 | F2.30.4-01-c (toepassen); F2.30.4-01-c (analyseren) | steps: 3 → 2 | Trimsalon Vachtwerk | – |
 | 11 | 2 | P09 → P09 | F2.30.4-01-c (toepassen); F2.30.4-01-c (toepassen) | solo: relationeel → multistructureel; steps: 3 → 2 | Trimsalon Vachtwerk | – |
@@ -257,9 +257,9 @@ Niet-examenpatroon: 0 punten.
 | O3 | geslaagd | nagerekend | geslaagd | geslaagd |
 | O4 | geslaagd | nagerekend | geslaagd | geslaagd |
 
-- Blinde oplosser: match 4, partial 1
-- Verifier: 3 ronde(n); open bevindingen: 0
-- Twijfellijst: 35 punt(en) (twijfellijst.md)
+- Blinde oplosser: match 3, explanation 1
+- Verifier: 4 ronde(n); open bevindingen: 0
+- Twijfellijst: 37 punt(en) (twijfellijst.md)
 
 ### Geaccepteerde afwijkingen (pauze 2)
 
@@ -275,9 +275,9 @@ De huisregels van het centraal examen (specs/36): leeslast, opgavegrootte, taken
 | regel | opdracht | gerealiseerd | eindexamen |
 |---|---|---|---|
 | minuten per punt | 2,5 (90 min / 36 p) | – | 2,9 |
-| woorden (hele toets) | ≤ 1761,4 (80 %, met 10 % speling) | 1387 | 2001,6 voor 36 punten |
+| woorden (hele toets) | ≤ 1761,4 (80 %, met 10 % speling) | 1398 | 2001,6 voor 36 punten |
 | woorden O1 (9 p) | ≤ 440,4 | 321 | 500,4 |
-| woorden O2 (7 p) | ≤ 342,5 | 283 | 389,2 |
+| woorden O2 (7 p) | ≤ 342,5 | 294 | 389,2 |
 | woorden O3 (12 p) | ≤ 587,1 | 496 | 667,2 |
 | woorden O4 (8 p) | ≤ 391,4 | 287 | 444,8 |
 | punten per opgave | 4 opgaven | O1 9, O2 7, O3 12, O4 8 | gem. 10,3 (5–23) |

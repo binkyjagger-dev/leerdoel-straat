@@ -773,7 +773,7 @@
         "bordspellen"
       ],
       "reused_from": null,
-      "intro": "Fatima El Amrani is eigenaar van spellenwinkel Dobbelsteen in Leiden. Zij verkoopt bordspellen en kaartspellen. Fatima berekent de verkoopprijs exclusief btw van een spel door 40% winstopslag bij de kostprijs op te tellen. Op spellen geldt een btw-tarief van 21%.\n\nVan het vierde kwartaal van 2026 is gegeven:\n\n| gegeven | bedrag of aantal |\n|---|---|\n| kassa-ontvangsten, inclusief btw | € 117.370 |\n| inkopen bij leveranciers, inclusief btw | € 74.415 |\n| aantal verkochte spellen | 3.240 |\n| huur van de winkel | € 5.400 |",
+      "intro": "Fatima El Amrani is eigenaar van spellenwinkel Dobbelsteen in Leiden. Zij verkoopt bordspellen en kaartspellen. Fatima berekent de verkoopprijs exclusief btw van een spel door 40% winstopslag bij de kostprijs op te tellen. Op spellen geldt een btw-tarief van 21%.\n\nVan het vierde kwartaal van 2026 is gegeven:\n\n| gegeven | bedrag of aantal |\n|---|---|\n| kassa-ontvangsten, inclusief btw | € 117.370 |\n| inkopen bij leveranciers, inclusief btw | € 74.415 |\n| aantal verkochte spellen | 3.240 |\n| inkoopwaarde van de omzet, exclusief btw | € 69.000 |\n| huur van de winkel | € 5.400 |",
       "data": {
         "opslag": 0.4,
         "btw": 0.21,
@@ -785,7 +785,8 @@
         "invoer": 0.1,
         "inkoop_q4_incl": 74415,
         "prijs_ander_incl": 10.89,
-        "btw_laag": 0.09
+        "btw_laag": 0.09,
+        "iwo_q4": 69000
       },
       "sources": [],
       "figures": [],
@@ -940,10 +941,10 @@
               "route": "Bereken de winstmarge van Kanaalrace in procenten van de verkoopprijs exclusief btw. Rond af op één decimaal.",
               "direction": "Bereken de winstmarge van Kanaalrace in procenten van de verkoopprijs exclusief btw.",
               "steps": "De winst per spel is 46,20 − 33,00, dat is € 13,20. De winstmarge is dan 13,20 / 46,20 × 100% = 28,6%.",
-              "sources": "Zij koopt het in bij een uitgever in de Verenigde Staten voor € 30,00 per stuk.",
+              "sources": "Op de inkoopprijs komt 10% invoerkosten en op de kostprijs 40% winstopslag.",
               "noise": "Op spellen geldt een btw-tarief van 21%.",
               "claim": "Bereken de winstmarge van Kanaalrace in procenten van de verkoopprijs exclusief btw.",
-              "new_concept": "berekening winstmarge als winst in procenten van de verkoopprijs exclusief btw"
+              "new_concept": "Op de inkoopprijs komt 10% invoerkosten en op de kostprijs 40% winstopslag."
             },
             "repaired_fields": [],
             "disagreements": {}
@@ -1116,11 +1117,11 @@
               "solo": "Bij de andere leverancier wordt dat 10,89 / 1,21, dat is € 9,00, want de btw kan zij terugvorderen.",
               "route": "Toon met een berekening aan of Fatima per kaartspel meer winst maakt als zij Vossenjacht bij de andere leverancier inkoopt.",
               "direction": "Toon met een berekening aan of Fatima per kaartspel meer winst maakt",
-              "steps": "berekening winst per kaartspel bij beide leveranciers en de conclusie dat Fatima bij de andere leverancier meer winst maakt",
+              "steps": "Haar winst per kaartspel is nu 14,00 − 10,00, dat is € 4,00 en bij de andere leverancier 14,00 − 9,00, dat is € 5,00.",
               "sources": "Een andere leverancier biedt Fatima Vossenjacht aan voor € 10,89 per stuk inclusief btw.",
-              "noise": "huur van de winkel | € 5.400",
+              "noise": "huur van de winkel",
               "claim": "Toon met een berekening aan of Fatima per kaartspel meer winst maakt",
-              "new_concept": "berekening huidige inkoopprijs door de verkoopprijs exclusief btw te delen door 1,40",
+              "new_concept": "Bij dit spel is de kostprijs gelijk aan de inkoopprijs.",
               "builds_on": "Fatima koopt het kaartspel Vossenjacht in bij haar vaste leverancier en verkoopt het voor € 14,00 exclusief btw."
             },
             "repaired_fields": [],
@@ -1234,7 +1235,8 @@
             "rules": [
               "Voor elke fout 1 scorepunt in mindering brengen.",
               "Als de te betalen btw is berekend als 21% van de kassa-ontvangsten of de omzet als 79% van de kassa-ontvangsten, het eerste scorepunt niet toekennen.",
-              "Als de te vorderen btw is berekend als 21% van de inkopen inclusief btw, het tweede scorepunt niet toekennen."
+              "Als de te vorderen btw is berekend als 21% van de inkopen inclusief btw, het tweede scorepunt niet toekennen.",
+              "Als de te vorderen btw is berekend over de inkoopwaarde van de omzet, het tweede scorepunt niet toekennen."
             ],
             "alternatives": [
               "Ook goed: te betalen btw: 117.370 × 21/121, dat is € 20.370."
@@ -1310,12 +1312,12 @@
               "solo": "De omzet exclusief btw is 117.370 gedeeld door 1,21, dat is € 97.000.",
               "route": "Stel de btw-aangifte van Dobbelsteen over het vierde kwartaal van 2026 op.",
               "steps": "Fatima moet dus 20.370 − 12.915, dat is € 7.455 aan de Belastingdienst betalen.",
-              "sources": "kassa-ontvangsten, inclusief btw | € 117.370",
-              "noise": "aantal verkochte spellen | 3.240",
+              "sources": "kassa-ontvangsten, inclusief btw",
+              "noise": "aantal verkochte spellen",
               "claim": "Stel de btw-aangifte van Dobbelsteen over het vierde kwartaal van 2026 op.",
-              "new_concept": "te vorderen btw en af te dragen btw als te betalen btw min te vorderen btw",
-              "schema": "| omzet exclusief btw | € ... | | btw over de omzet (te betalen btw) | € ... |",
-              "builds_on": "Fatima doet na afloop van elk kwartaal aangifte van de btw."
+              "new_concept": "Fatima doet na afloop van elk kwartaal aangifte van de btw.",
+              "schema": "btw over de inkopen (te vorderen btw)",
+              "builds_on": "Van het vierde kwartaal van 2026 is gegeven:"
             },
             "repaired_fields": [],
             "disagreements": {}
@@ -1388,7 +1390,7 @@
             "first_of_opgave": false,
             "points": 1,
             "pattern": "P14",
-            "solo": "relationeel",
+            "solo": "multistructureel",
             "route": "zelf vinden",
             "direction": null,
             "steps": "2",
@@ -1413,7 +1415,7 @@
             ],
             "confidence": {
               "pattern": "high",
-              "solo": "high",
+              "solo": "medium",
               "route": "high",
               "direction": "high",
               "steps": "high",
@@ -1426,17 +1428,22 @@
             },
             "evidence": {
               "pattern": "Noem wat er hierdoor met het resultaat van Dobbelsteen gebeurt. Licht je antwoord toe.",
-              "solo": "Van dezelfde prijs inclusief btw blijft bij een lager tarief een hogere prijs exclusief btw over, dus de omzet exclusief btw stijgt.",
+              "solo": "Fatima draagt de btw af die de klanten betalen, dus de btw is voor haar geen opbrengst.",
               "route": "Noem wat er hierdoor met het resultaat van Dobbelsteen gebeurt. Licht je antwoord toe.",
               "steps": "Fatima draagt de btw af die de klanten betalen, dus de btw is voor haar geen opbrengst.",
               "sources": "Stel dat de overheid het btw-tarief op spellen verlaagt naar 9%.",
-              "noise": "Stel dat de overheid het btw-tarief op spellen verlaagt naar 9%.",
+              "noise": "Fatima houdt haar verkoopprijzen inclusief btw en haar inkoopprijzen exclusief btw gelijk.",
               "claim": "Noem wat er hierdoor met het resultaat van Dobbelsteen gebeurt.",
-              "new_concept": "Fatima houdt haar verkoopprijzen inclusief btw en haar inkoopprijzen exclusief btw gelijk.",
-              "builds_on": "Noem wat er hierdoor met het resultaat van Dobbelsteen gebeurt."
+              "new_concept": "Stel dat de overheid het btw-tarief op spellen verlaagt naar 9%.",
+              "builds_on": "De klanten kopen evenveel spellen als eerst."
             },
             "repaired_fields": [],
-            "disagreements": {}
+            "disagreements": {
+              "solo": {
+                "A": "relationeel",
+                "B": "multistructureel"
+              }
+            }
           },
           "scorepunten": [
             {
