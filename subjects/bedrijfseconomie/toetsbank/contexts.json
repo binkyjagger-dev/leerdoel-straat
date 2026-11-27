@@ -167,6 +167,102 @@
       ],
       "level": "5vwo",
       "date": "2026-11-17"
+    },
+    {
+      "toets_id": "20261119-0943-toets-bedrijfseconomie",
+      "opgave_id": "O1",
+      "title": "Bakkerij Korenaar",
+      "context_tags": [
+        "bakkerijbranche",
+        "ambachtelijke bakkerij",
+        "steenoven"
+      ],
+      "level": "5vwo",
+      "date": "2026-11-19"
+    },
+    {
+      "toets_id": "20261119-0943-toets-bedrijfseconomie",
+      "opgave_id": "O2",
+      "title": "Fietsenwinkel Trapkracht",
+      "context_tags": [
+        "fietsbranche",
+        "fietsenwinkel",
+        "e-bikes"
+      ],
+      "level": "5vwo",
+      "date": "2026-11-19"
+    },
+    {
+      "toets_id": "20261119-0943-toets-bedrijfseconomie",
+      "opgave_id": "O3",
+      "title": "Fysiotherapiepraktijk Beweegpunt",
+      "context_tags": [
+        "paramedische zorg",
+        "fysiotherapiepraktijk",
+        "behandelingen"
+      ],
+      "level": "5vwo",
+      "date": "2026-11-19"
+    },
+    {
+      "toets_id": "20261119-0943-toets-bedrijfseconomie",
+      "opgave_id": "O4",
+      "title": "Zeilschool Wind & Water",
+      "context_tags": [
+        "watersport",
+        "zeilschool",
+        "zeilcursussen"
+      ],
+      "level": "5vwo",
+      "date": "2026-11-19"
+    },
+    {
+      "toets_id": "20261125-2236-proef-kennis-bedrijfseconomie",
+      "opgave_id": "O1",
+      "title": "Wasstraat Blinkend",
+      "context_tags": [
+        "autobranche",
+        "autowasstraat",
+        "wasinstallatie"
+      ],
+      "level": "5vwo",
+      "date": "2026-11-27"
+    },
+    {
+      "toets_id": "20261125-2236-proef-kennis-bedrijfseconomie",
+      "opgave_id": "O2",
+      "title": "Spellenwinkel Dobbelsteen",
+      "context_tags": [
+        "spellenbranche",
+        "spellenwinkel",
+        "bordspellen"
+      ],
+      "level": "5vwo",
+      "date": "2026-11-27"
+    },
+    {
+      "toets_id": "20261125-2236-proef-kennis-bedrijfseconomie",
+      "opgave_id": "O3",
+      "title": "Trimsalon Vachtwerk",
+      "context_tags": [
+        "dierenverzorging",
+        "trimsalon",
+        "trimbeurten"
+      ],
+      "level": "5vwo",
+      "date": "2026-11-27"
+    },
+    {
+      "toets_id": "20261125-2236-proef-kennis-bedrijfseconomie",
+      "opgave_id": "O4",
+      "title": "Kookstudio Pit & Pan",
+      "context_tags": [
+        "culinaire workshops",
+        "kookstudio",
+        "kookworkshops"
+      ],
+      "level": "5vwo",
+      "date": "2026-11-27"
     }
   ]
 }
